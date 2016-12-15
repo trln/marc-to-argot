@@ -305,7 +305,7 @@ module Traject::Macros
                     vernacular = vernacular_bag[field.tag + marc_match_suffix]
 
                     gvo[:value] = str
-                    gvo[:marc] = field.tag
+                    gvo[:marc_source] = field.tag
                     gvo[:vernacular] = vernacular if vernacular
 
                     if !gvo.empty?

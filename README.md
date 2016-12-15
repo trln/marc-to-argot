@@ -8,7 +8,7 @@ Run command
 ```traject -c marc-to-argot/argot.rb <marc-file>```
 
 Optionally, add in an institutional config
-```traject -c marc-to-argot/<inst>.rb -c marc-to-argot/argot.rb <marc-file>```
+```traject -c marc-to-argot/config/<inst>.rb -c marc-to-argot/argot.rb <marc-file>```
 
 Note:
 This was a first attempt at getting vernacular to play nice. Essentially,

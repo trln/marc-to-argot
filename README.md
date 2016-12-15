@@ -5,10 +5,16 @@ Marc to Argot transformer
 [Traject](https://github.com/traject/traject)
 
 Run command 
-```traject -c marc-to-argot/argot.rb <marc-file>```
+`traject -c argot.rb <marc-file>`
 
 Optionally, add in an institutional config
-```traject -c marc-to-argot/config/<inst>.rb -c marc-to-argot/argot.rb <marc-file>```
+`traject -c config/<inst>.rb -c marc-to-argot/argot.rb <marc-file>`
+
+Prevent pretty printed json, add:
+`-s argot_writer.pretty_print=false`
+
+Change the output file, add:
+`-s output_file=<path/to/file>`
 
 Note:
 This was a first attempt at getting vernacular to play nice. Essentially,

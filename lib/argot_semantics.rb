@@ -44,36 +44,22 @@ module Traject::Macros
 
                 case field.tag
                 when '245'
-                    titleobject[:main] = {
-                        :value => str,
-                        :marc => field.tag,
-                        :vernacular => vernacular
-                    }
+                    key = 'main';
                 when '210'
-                    titleobject[:abbrv] = {
-                        :value => str,
-                        :marc => field.tag,
-                        :vernacular => vernacular
-                    }
+                    key = 'abbrv'
                 when '130'
-                    titleobject[:journal] = {
-                        :value => str,
-                        :marc => field.tag,
-                        :vernacular => vernacular
-                    }
+                    key = 'journal'
                 when '242'
-                    titleobject[:translation] = {
-                        :value => str,
-                        :marc => field.tag,
-                        :vernacular => vernacular
-                    }
+                    key = 'translation'
                 else
-                    titleobject[:alt] << {
-                        :value => str,
-                        :marc => field.tag,
-                        :vernacular => vernacular
-                    }
+                    key = 'alt'
                 end
+
+                titleobject[key] = {
+                    :value => str,
+                    :marc => field.tag
+                }
+                titleobject[:key][:vernacular] = vernacular if vernacular
             end
 
             titleobject
@@ -96,10 +82,10 @@ module Traject::Macros
         def self.get_authors(record,extract_fields = "100")
              authors = {
                 :sort => Marc21Semantics.get_sortable_author(record),
-                :main => [],
+                'main' => [],
                 :director => [],
-                :other => [],
-                :uncontrolled => [],
+                'other' => [],
+                'uncontrolled' => [],
             }
 
             vernacular_bag = ArgotSemantics.create_vernacular_bag(record,extract_fields)
@@ -119,35 +105,24 @@ module Traject::Macros
                     end
                 end
 
-                vernacular = vernacular_bag[field.tag + marc_match_suffix]
+                author_hash = {
+                    :name => str,
+                    :marc_source => field.tag
+                }
 
-                if has_director
-                    authors[:director] << {
-                        :name => str,
-                        :vernacular => vernacular,
-                        :marc_source => field.tag
-                    }
-                end
+                vernacular = vernacular_bag[field.tag + marc_match_suffix]
+                author_hash[:vernacular] = vernacular if vernacular
 
                 if field.tag.to_i < 700
-                    authors[:main] << {
-                        :name => str,
-                        :vernacular => vernacular,
-                        :marc_source => field.tag
-                    }
+                    key = 'main'
                 elsif field.tag == '720'
-                    authors[:uncontrolled] << {
-                        :name => str,
-                        :vernacular => vernacular,
-                        :marc_source => field.tag
-                    }
+                    key = 'uncontrolled'
                 else
-                    authors[:other] << {
-                        :name => str,
-                        :vernacular => vernacular,
-                        :marc_source => field.tag
-                    }
+                    key = 'other'
                 end
+
+                authors[:director] << author_hash if has_director   
+                authors[key] << author_hash
             end
 
             #cleanup
@@ -334,7 +309,7 @@ module Traject::Macros
                     gvo[:vernacular] = vernacular if vernacular
 
                     if !gvo.empty?
-                        accumulator << gvo
+                        accumulator << gvo if str
                     end
                 end
 

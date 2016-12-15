@@ -33,6 +33,8 @@ flatten_attributes = %w(
     local_id
     source
     id
+    lang
+    lang_code
 )
 
 # In this case for simplicity we provide all our settings, including
@@ -62,13 +64,12 @@ title_specs = %w(
     785abcdghikmnstxz
 )
 to_field "title", argot_title_object(title_specs.join(":"))
-
 to_field "statement_of_responsibility", argot_gvo("245c")
 to_field "edition", argot_gvo("250ab:775abdghint")
-
 to_field "publication_year", marc_publication_date
-
 to_field "authors", argot_get_authors("100abcdegq:110abcdefgn:111abcdefngq:700abcdeq:710abcde:711abcdeq:720a")
+to_field "lang_code", extract_marc("008[35-37]")
+to_field "lang", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
 
 ######
 # Series

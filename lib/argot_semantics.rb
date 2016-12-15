@@ -350,7 +350,7 @@ module Traject::Macros
 
 
                         vernacular_bag[marc_match] = {
-                            :lang => lang,
+                            :lang_code => lang,
                             :value => str
                         }
                     end

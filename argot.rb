@@ -64,12 +64,13 @@ title_specs = %w(
     785abcdghikmnstxz
 )
 to_field "title", argot_title_object(title_specs.join(":"))
-to_field "statement_of_responsibility", argot_gvo("245c")
-to_field "edition", argot_gvo("250ab:775abdghint")
-to_field "publication_year", marc_publication_date
 to_field "authors", argot_get_authors("100abcdegq:110abcdefgn:111abcdefngq:700abcdeq:710abcde:711abcdeq:720a")
 to_field "lang_code", extract_marc("008[35-37]")
 to_field "lang", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
+to_field "statement_of_responsibility", argot_gvo("245c")
+to_field "edition", argot_gvo("250ab:775abdghint")
+to_field "publication_year", marc_publication_date
+
 
 ######
 # Series
@@ -77,7 +78,7 @@ to_field "lang", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_
 to_field "series_statement", argot_series("440anpvx")
 to_field "series_statement", argot_series("490avx")
 to_field "series", extract_marc("800abcdefhklmnopqrstv:810abcdefhklmnoprstv:811acdefhklnpqstv:830adfghklmnoprsv")
-to_field "series_title_index", extract_marc("800tnpfkl:810tnoprlsm:811tnpls:830ahnpv")
+to_field "series_title", extract_marc("800tnpfkl:810tnoprlsm:811tnpls:830ahnpv")
 
 #####
 

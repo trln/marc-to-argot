@@ -35,6 +35,7 @@ flatten_attributes = %w(
     id
     lang
     lang_code
+    linking
 )
 
 # In this case for simplicity we provide all our settings, including
@@ -290,15 +291,20 @@ end
 
 
 ######
-# Linking (leaving this flat as an additional option to the nested structure)
+# Linking 
 ######
-to_field "linking_main_series", extract_marc("760abcdghimnostwxy")
-to_field "linking_subseries", extract_marc("762abcdghimnostwxy")
-to_field "linking_translation_of_title", extract_marc("765abcdghikmnorstuwxyz")
-to_field "linking_translated_as_title", extract_marc("767abcdghikmnorstuwxyz")
-to_field "linking_has_supplement", extract_marc("770abcdghikmnorstuwxyz")
-to_field "linkint_supplement_to", extract_marc("772abcdghikmnorstuwxyz")
-to_field "linking_host_item_title", extract_marc("773abdghikmnopqrstuwxyz")
-to_field "linking_constituent_unit_title", extract_marc("774abcdghikmnorstuwxyz")
-to_field "linking_isn", extract_marc("765xz:767xz:773xz:774xz:780xz:785xz")
-to_field "linking_added_entry", extract_marc("790a:791ab")
+linking_specs = %w(
+  760abcdghimnostwxy
+  762abcdghimnostwxy
+  765abcdghikmnorstuwxyz
+  767abcdghikmnorstuwxyz
+  770abcdghikmnorstuwxyz
+  772abcdghikmnorstuwxyz
+  773abdghikmnopqrstuwxyz
+  774abcdghikmnorstuwxyz
+  780xz
+  785xz
+  790a
+  791ab
+)
+to_field "linking", argot_linking_object(linking_specs.join(":"))

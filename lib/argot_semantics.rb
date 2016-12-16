@@ -55,11 +55,16 @@ module Traject::Macros
                     key = 'alt'
                 end
 
-                titleobject[key] = {
+                titlehash = {
                     :value => str,
                     :marc => field.tag
                 }
-                titleobject[:key][:vernacular] = vernacular if vernacular
+                titlehash[:vernacular] = vernacular if vernacular
+
+                if !titleobject.key?(key)
+                    titleobject[key] = []
+                end
+                titleobject[key] << titlehash
             end
 
             titleobject
@@ -82,10 +87,7 @@ module Traject::Macros
         def self.get_authors(record,extract_fields = "100")
              authors = {
                 :sort => Marc21Semantics.get_sortable_author(record),
-                'main' => [],
-                :director => [],
-                'other' => [],
-                'uncontrolled' => [],
+                :director => []
             }
 
             vernacular_bag = ArgotSemantics.create_vernacular_bag(record,extract_fields)
@@ -107,9 +109,8 @@ module Traject::Macros
 
                 author_hash = {
                     :name => str,
-                    :marc_source => field.tag
-                }
-
+                    :marc => field.tag
+                } 
                 vernacular = vernacular_bag[field.tag + marc_match_suffix]
                 author_hash[:vernacular] = vernacular if vernacular
 
@@ -121,7 +122,11 @@ module Traject::Macros
                     key = 'other'
                 end
 
-                authors[:director] << author_hash if has_director   
+                authors[:director] << author_hash if has_director  
+
+                if !authors.key?(key)
+                    authors[key] = []
+                end
                 authors[key] << author_hash
             end
 
@@ -154,8 +159,7 @@ module Traject::Macros
                 :number => '',
                 :name => '',
                 :imprint => '',
-                :vernacular => '',
-                :marc_source => '',
+                :marc => '',
             }
 
             number = Traject::MarcExtractor.cached('028ab', :alternate_script => false, :first => true).extract(record)
@@ -188,14 +192,12 @@ module Traject::Macros
                     end
 
                     vernacular = vernacular_bag[field.tag + marc_match_suffix];
-                    if vernacular
-                        publisher[:vernacular] = vernacular
-                    end
+                    publisher[:vernacular] = vernacular if vernacular
 
                     if imprint != ''
                         publisher[name] = name.join(" ")
                         publisher[imprint] = imprint.join(" ")
-                        publisher[marc_source] = '264'
+                        publisher[marc] = '264'
                     end
                 end
             end
@@ -226,7 +228,7 @@ module Traject::Macros
                     if imprint != ''
                         publisher[:name] = name.join(" ")
                         publisher[:imprint] = imprint.join(" ")
-                        publisher[:marc_source] = '260'
+                        publisher[:marc] = '260'
                     end
 
                 end
@@ -305,7 +307,7 @@ module Traject::Macros
                     vernacular = vernacular_bag[field.tag + marc_match_suffix]
 
                     gvo[:value] = str
-                    gvo[:marc_source] = field.tag
+                    gvo[:marc] = field.tag
                     gvo[:vernacular] = vernacular if vernacular
 
                     if !gvo.empty?
@@ -314,6 +316,63 @@ module Traject::Macros
                 end
 
             end
+        end
+
+        ################################################
+        # Lambda for Title
+        ######
+        def argot_linking_object(spec)
+            lambda do |record,accumulator|
+                st = ArgotSemantics.get_linking_object(record,spec)
+                accumulator << st if st
+            end
+        end
+
+        ################################################
+        # Create a nested title object
+        ######
+        def self.get_linking_object(record,extract_fields = "765")
+            linkingObject = {}
+
+            Traject::MarcExtractor.cached(extract_fields, :alternate_script => false).each_matching_line(record) do |field, spec, extractor|
+                str = extractor.collect_subfields(field, spec).first
+
+                case field.tag
+                when '760'
+                    key = 'main_series';
+                when '762'
+                    key = 'subseries'
+                when '765'
+                    key = 'translation_of_title'
+                when '767'
+                    key = 'translated_as_title'
+                when '770'
+                    key = 'has_supplement'
+                when '772'
+                    key = 'supplement_to'
+                when '773'
+                    key = 'host_item_title'
+                when '774'
+                    key = 'constituent_unit_title'
+                else
+                    key = 'added_entry'
+                end
+
+                isn = field.select { |subfield| subfield.code == 'x' or subfield.code == 'z' }
+
+
+                linkHash = {
+                    :value => str,
+                    :marc => field.tag
+                }
+                linkHash[:isn] = isn if isn
+                if !linkingObject.key?(key)
+                    linkingObject[key] = []    
+                end
+                linkingObject[key] << linkHash
+            end
+
+            linkingObject
         end
 
 

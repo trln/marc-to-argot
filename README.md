@@ -9,8 +9,8 @@ Run command
 Optionally, add in an institutional config
 `traject -c config/<inst>.rb -c marc-to-argot/argot.rb <marc-file>`
 
-Prevent pretty printed json, add:
-`-s argot_writer.pretty_print=false`
+Pretty printed json, add:
+`-s argot_writer.pretty_print=true`
 
 Change the output file, add:
 `-s output_file=<path/to/file>`

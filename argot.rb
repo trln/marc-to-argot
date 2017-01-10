@@ -47,7 +47,7 @@ settings do
   provide "writer_class_name", "Traject::ArgotWriter"
   provide "output_file", "argot_out.json"
   provide 'processing_thread_pool', 3
-  provide "argot_writer.pretty_print", true
+  provide "argot_writer.pretty_print", false
   provide "argot_writer.flatten_attributes", flatten_attributes
 end
 

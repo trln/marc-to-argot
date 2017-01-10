@@ -1,5 +1,4 @@
-# Scytale
-Marc to Argot transformer
+# Marc to Argot transformer
  
 ## Requirements
 [Traject](https://github.com/traject/traject)

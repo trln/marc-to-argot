@@ -375,6 +375,27 @@ module Traject::Macros
             linkingObject
         end
 
+        ################################################
+        # Lambda for Holdings (Items)
+        ######
+        def argot_holdings_object(extract_fields,mappings)
+            lambda do |record,accumulator|
+                Traject::MarcExtractor.cached(extract_fields, :alternate_script => false).each_matching_line(record) do |field, spec, extractor|
+                    item = {}
+
+                    field.subfields.each do |subfield|
+                        if mappings.key?(subfield.code)
+                            if !item.key?(subfield.code)
+                                item[mappings[subfield.code]] = []
+                            end
+                            item[mappings[subfield.code]] << subfield.value
+                        end
+                    end
+
+                    accumulator << item.each_key {|x| item[x] = item[x].join('--')  } if item
+                end
+            end
+        end
 
         ################################################
         # Create a bag of vernacular strings to pair with other marc fields

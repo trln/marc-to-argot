@@ -392,7 +392,7 @@ module Traject::Macros
                         end
                     end
 
-                    accumulator << item.each_key {|x| item[x] = item[x].join('--')  } if item
+                    accumulator << item.each_key {|x| item[x] = item[x].join(';')  } if item
                 end
             end
         end

@@ -7,7 +7,7 @@ Run command
 `traject -c argot.rb <marc-file>`
 
 Optionally, add in an institutional config
-`traject -c config/<inst>.rb -c marc-to-argot/argot.rb <marc-file>`
+`traject -c argot.rb -c config/<inst>.rb <marc-file>`
 
 Pretty printed json, add:
 `-s argot_writer.pretty_print=true`

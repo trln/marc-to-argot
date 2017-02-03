@@ -1,41 +1,24 @@
-$LOAD_PATH.unshift File.expand_path(File.join(File.dirname(__FILE__), './lib'))
-
-
-# A sample traject configuration, save as say `traject_config.rb`, then
-# run `traject -c traject_config.rb marc_file.marc` to index to
-# solr specified in config file, according to rules specified in
-# config file
-
-
-# To have access to various built-in logic
-# for pulling things out of MARC21, like `marc_languages`
-require 'traject/macros/marc21_semantics'
-extend  Traject::Macros::Marc21Semantics
-
-# To have access to the traject marc format/carrier classifier
-require 'traject/macros/marc_format_classifier'
-extend Traject::Macros::MarcFormats
-
-require 'argot_semantics'
-extend Traject::Macros::ArgotSemantics
-
-require 'argot_writer'
-
-# list of attributes to "de-arrayify"
+# list of top-level hashes in the argot model, they should be "de-arrayified"
 # Traject treats all attributes as an array
 # but we want a nested, readable, JSON structure for some attributes (like title and id)
 # anything in the array below will have the attribute array become a standard object/hash
 
 flatten_attributes = %w(
-    title
-    authors
-    publication_year
-    local_id
-    source
     id
-    lang
-    lang_code
+    oclc_number
+    local_id
+    rollup_id
+    ead_id
+    isbn
+    issn
+    authors
+    title
+    notes
+    url
     linking
+    frequency
+    description
+    series
 )
 
 # In this case for simplicity we provide all our settings, including
@@ -44,267 +27,207 @@ flatten_attributes = %w(
 # files however you like, you can call traject with as many
 # config files as you like, `traject -c one.rb -c two.rb -c etc.rb`
 settings do
-  provide "writer_class_name", "Traject::ArgotWriter"
-  provide "output_file", "argot_out.json"
-  provide 'processing_thread_pool', 3
-  provide "argot_writer.pretty_print", false
   provide "argot_writer.flatten_attributes", flatten_attributes
+  provide "writer_class_name", "Traject::ArgotWriter"
 end
 
 
-title_specs = %w(
-    245abnp
-    210ab
-    130adfghklmnoprs
-    242abhnp
-    246abhnp
-    247abhnp
-    730adfghklmnoprst
-    740ahnp
-    780abcdghnkstxz
-    785abcdghikmnstxz
-)
-to_field "title", argot_title_object(title_specs.join(":"))
-to_field "authors", argot_get_authors("100abcdegq:110abcdefgn:111abcdefngq:700abcdeq:710abcde:711abcdeq:720a")
-to_field "lang_code", extract_marc("008[35-37]")
-to_field "lang", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
-to_field "statement_of_responsibility", argot_gvo("245c")
-to_field "edition", argot_gvo("250ab:775abdghint")
-to_field "publication_year", marc_publication_date
-
-
+################################################
+# IDs and Standard Numbers
 ######
-# Series
-######
-to_field "series_statement", argot_series("440anpvx")
-to_field "series_statement", argot_series("490avx")
-to_field "series", extract_marc("800abcdefhklmnopqrstv:810abcdefhklmnoprstv:811acdefhklnpqstv:830adfghklmnoprsv")
-to_field "series_title", extract_marc("800tnpfkl:810tnoprlsm:811tnpls:830ahnpv")
 
-#####
-
-######
-# Notes
-######
-notes_indexed_specs = %w(
-    500a
-    501a
-    502a
-    504a
-    505argt
-    507ab
-    522a
-    533cf
-    534abcefnpt
-    536abcdefgh
-    544abcden
-    545abu
-    581a
-    585a
-    586a
-)
-to_field "notes_indexed", argot_gvo(notes_indexed_specs.join(":"))
-
-notes_additional_specs = %w(
-    506abcdeu
-    508a
-    510abcx
-    511a
-    513ab
-    514abcdefghijkmuz
-    515a
-    516a
-    518a
-    520abu
-    521ab
-    524a
-    525a
-    530abcu
-    533abcdefmn
-    535abdcdg
-    540abu3
-    541abcdefhno
-    541a
-    546ab
-    547a
-    550a
-    555abcdu
-    556a
-    561a
-    563a
-    565abdce
-    567a
-    580a
-    588a
-    590a
-    599ab
-    752abcd
-)
-to_field "notes_additional", argot_gvo(notes_additional_specs.join(":"))
-
-subjects_specs = %w(
-    600abcdefghijklmnopqrstvxyz
-    610abcdefghijklmnopqrstvxyz
-    611acdefghijklmnopqrstvxyz
-    630adfghklmnoprstvxyz
-    650abcdevxyz
-    651avxyz
-    653a
-    655abvxyz
-    690ax
-    691abvxyz
-    695a
-)
-to_field "subjects", marc_lcsh_formatted({:spec => subjects_specs.join(":"), :subdivison_separator => " -- "})
-
-######
-# ISBN / ISSN / UPC
-#####
-to_field "isbn", extract_marc("020az:024a")
-to_field "syndetics_isbn", extract_marc("020a")
-to_field "issn", extract_marc("022ayz")
-to_field "upc" do |record, acc|
-    Traject::MarcExtractor.cached("024a").each_matching_line(record) do |field, spec, extractor|
-        if field.indicator1 == '1'
-            acc << extractor.collect_subfields(field,spec).first
-        end
-    end
+if !settings["override"].include?("id")
+  to_field "id", oclcnum("035a:035z")
 end
 
+if !settings["override"].include?("oclc_number")
+  to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc])
+end
+
+if !settings["override"].include?("syndetics_id")
+  to_field "syndetics_id", extract_marc(settings["specs"][:syndetics_id], :separator=>nil) do |rec, acc|
+    orig = acc.dup
+    acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)}
+    acc.flatten!
+    acc.uniq!
+  end
+end
+
+if !settings["override"].include?("ead_id")
+  # to_field "ead_id", literal("")
+end
+
+if !settings["override"].include?("rollup_id")
+  to_field "id", oclcnum("035a:035z")
+end
+
+if !settings["override"].include?("isbn")
+  to_field "isbn", argot_isbn(settings["specs"][:isbn])
+end
+
+if !settings["override"].include?("issn")
+  to_field "issn", argot_issn(settings["specs"][:issn])
+end
+
+################################################
+# Dates
 ######
+
+if !settings["override"].include?("publication_year")
+  to_field "publication_year", marc_publication_date
+end
+
+if !settings["override"].include?("copyright_date")
+  to_field "copyright_date" do |record, acc|
+     Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
+         if field.indicator2 == '4'
+             acc << extractor.collect_subfields(field,spec).first
+         end
+     end
+  end
+end
+
+################################################
+# Language
+######
+
+if !settings["override"].include?("lang")
+  to_field "lang", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
+end
+
+if !settings["override"].include?("lang_code")
+  to_field "lang_code", extract_marc("008[35-37]")
+end
+
+################################################
 # Publisher
 ######
-to_field "publisher", argot_publisher_object
 
-######
-# Frequency
-######
-to_field "frequency_current", extract_marc("310ab")
-to_field "frequency_former", extract_marc("321ab")
-
-######
-# URLS
-######
-to_field "url" do |record, acc|
-    Traject::MarcExtractor.cached("856uyz3").each_matching_line(record) do |field, spec, extractor|
-        url = {}
-        if field.indicator2.to_i > 1
-            url[:rel] = 'secondary'
-        else
-            url[:rel] = 'primary'
-        end
-
-        field.subfields.each do |subfield|
-            if subfield.code == 'u'
-                url[:href] = subfield.value
-            elsif subfield.code == '3' && subfield.value == 'Finding Aid'
-                url[:rel] = 'finding_aid'
-            else
-                url[:text] = subfield.value
-            end
-        end
-
-        acc << url
-   end
+if !settings["override"].include?("publisher_number")
+  to_field "publisher_number", extract_marc(settings["specs"][:publisher_number])
 end
 
-######
-# MISC
-######
-to_field "cartographic_data", extract_marc("255abcdefg")
-to_field "sound_recording_display", extract_marc("262abcde")
-to_field "sound_recording_indexed", extract_marc("262b")
-to_field "characteristics_sound", extract_marc("344abcdefgh3")
-to_field "characteristics_projection", extract_marc("345ab3")
-to_field "characteristics_video", extract_marc("346ab3")
-to_field "characteristics_digital_file", extract_marc("347abcdef3")
-to_field "organization_arrangement", extract_marc("351a")
-to_field "volume_date_range", extract_marc("362a")
-to_field "data_cataloged", extract_marc("909")
-
-######
-# Additional 264 RDA
-######
-to_field "production_statement" do |record, acc|
-   Traject::MarcExtractor.cached("264abc").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '0'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "production_statement" do |record, acc|
-   Traject::MarcExtractor.cached("264abc").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '0'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "producer" do |record, acc|
-   Traject::MarcExtractor.cached("264b").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '0'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "distribution_statement" do |record, acc|
-   Traject::MarcExtractor.cached("264abc").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '2'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "distributor" do |record, acc|
-   Traject::MarcExtractor.cached("264b").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '2'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "manufacturer_statement" do |record, acc|
-   Traject::MarcExtractor.cached("264abc").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '3'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "manufacturer" do |record, acc|
-   Traject::MarcExtractor.cached("264b").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '3'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "copyright_statement" do |record, acc|
-   Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '4'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
-end
-to_field "copyright" do |record, acc|
-   Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '4'
-           acc << extractor.collect_subfields(field,spec).first
-       end
-   end
+if !settings["override"].include?("publisher_etc")
+  to_field "publisher_etc", argot_publisher(settings["specs"][:publisher_etc])
 end
 
+if !settings["override"].include?("imprint")
+  to_field "imprint", argot_imprint(settings["specs"][:imprint])
+end
 
+################################################
+# Authors
 ######
-# Linking 
+
+if !settings["override"].include?("authors")
+  to_field "authors", argot_authors(settings["specs"][:authors])
+end
+
+################################################
+# Title
 ######
-linking_specs = %w(
-  760abcdghimnostwxy
-  762abcdghimnostwxy
-  765abcdghikmnorstuwxyz
-  767abcdghikmnorstuwxyz
-  770abcdghikmnorstuwxyz
-  772abcdghikmnorstuwxyz
-  773abdghikmnopqrstuwxyz
-  774abcdghikmnorstuwxyz
-  780xz
-  785xz
-  790a
-  791ab
-)
-to_field "linking", argot_linking_object(linking_specs.join(":"))
+
+if !settings["override"].include?("title")
+  to_field "title", argot_title(settings["specs"][:title])
+end
+
+################################################
+# Notes
+######
+
+if !settings["override"].include?("notes")
+  to_field "notes", argot_notes(settings["specs"][:notes])
+end
+
+################################################
+# URLs
+######
+
+if !settings["override"].include?("url")
+  to_field "url" do |rec, acc|
+      Traject::MarcExtractor.cached("856uyz3").each_matching_line(rec) do |field, spec, extractor|
+          url = {}
+          if field.indicator2.to_i > 1
+              url[:rel] = 'secondary'
+          else
+              url[:rel] = 'primary'
+          end
+
+          field.subfields.each do |subfield|
+              if subfield.code == 'u'
+                  url[:href] = subfield.value
+              elsif subfield.code == '3' && subfield.value == 'Finding Aid'
+                  url[:rel] = 'finding_aid'
+              else
+                  url[:text] = subfield.value
+              end
+          end
+
+          acc << url
+     end
+  end
+end
+
+################################################
+# Linking
+######
+
+if !settings["override"].include?("linking")
+  to_field "linking", argot_linking_attributes(settings["specs"][:linking])
+end
+
+################################################
+# Format
+######
+
+if !settings["override"].include?("format")
+  to_field "format", marc_formats
+end
+
+################################################
+# Subjects
+######
+
+if !settings["override"].include?("subjects")
+  to_field "subjects", marc_lcsh_formatted({:spec => settings["specs"][:subjects], :subdivison_separator => " -- "})
+end
+
+################################################
+# Additional
+######
+
+if !settings["override"].include?("statement_of_responsibility")
+  to_field "statement_of_responsibility", argot_gvo(settings["specs"][:statement_of_responsibility])
+end
+
+if !settings["override"].include?("edition")
+  to_field "edition", argot_gvo(settings["specs"][:edition])
+end
+
+if !settings["override"].include?("frequency")
+  to_field "frequency", argot_frequency(settings["specs"][:frequency])
+end
+
+if !settings["override"].include?("description")
+  to_field "description", argot_description(settings["specs"][:description])
+end
+
+if !settings["override"].include?("series")
+  to_field "series", argot_series(settings["specs"][:description])
+end
+
+if !settings["override"].include?("institution")
+  to_field "institution" do |rec, acc|
+    inst = %w(unc duke nccu ncsu)
+    acc.concat(inst)
+  end
+end
+
+
+# Other fields in endeca model that we're unsure how to map to
+# source_of_acquisition
+# related_collections
+# biographical_sketch
+# most_recent
+# holdings_note
+

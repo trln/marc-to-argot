@@ -2,24 +2,68 @@
  
 ## Requirements
 [Traject](https://github.com/traject/traject)
+[Library Std Nums](https://github.com/billdueber/library_stdnums)
 
-Run command 
-`traject -c argot.rb <marc-file>`
+## Basic Use
+`traject -c configs/<inst>/config.rb argot.rb <marc_file>`
+This will place a Argot file (argot_out.json) in your home directory
 
-Optionally, add in an institutional config
-`traject -c config/<inst>.rb -c marc-to-argot/argot.rb <marc-file>`
+## Common options
 
-Pretty printed json, add:
-`-s argot_writer.pretty_print=true`
+* Change output file, `-s output_file=<path/to/file>`
+* Pretty print the json, `-s argot_writer.pretty_print=true`
+* Use Marc XML, `-s marc_source.type=xml`
 
-Change the output file, add:
-`-s output_file=<path/to/file>`
 
-Note:
-This was a first attempt at getting vernacular to play nice. Essentially,
-the "create_vernacular_bag" makes a hash for all matching 880 fields.
+## Configurations
 
-When the fields are processed into a nested structure (i.e., create_title_object)
-it reaches into that bag and pulls out the matching vernacular object, utilizing
-subfield 6 to create a match.
+## Settings
+In addition to command-line options, you can permanently set these defaults in the **settings* block of your institution's config file.
+```
+```
+
+### Insitutuional Specs
+Spec files define the map between MARC fields and the Argot model. Each institution will manage their own spec file, located in `configs/<inst>/spec.yml`.
+Alternatively, you can pass a spec file as a traject setting: `-s spec_file=<path/to/file>`
+**NOTE:** Each attribute in the yaml file should either be an array of Marc specs **OR** a hash of nested attributes
+
+* Array of marc values:
+```
+imprint:
+  - 260abcefg
+  - 262abcde
+  - 264abc
+```
+* Nested values:
+```
+isbn:
+  primary:
+    - 020a
+  other: 
+    - 020z
+    - 776z
+```
+* **INCORRECT!!!**
+```
+isbn: 020a
+```
+
+These spec files are uniquely configured to work with the argot.rb traject configuration. Essentially, these are centralized, agreed upon conventions for each institution.
+
+### Overriding default conventions
+The institutional (or collection) configs can override default argot.rb behavior by adding and argot attribute to the "override" setting. Then provide you're own logic for that attribute. For example, default behavior for the institution attribute is to add each institutuion to the record:
+
+```
+to_field "institution" do |rec, acc|
+  inst = %w(unc duke nccu ncsu)
+  acc.concat(inst)
+end
+```
+
+But you can override this for you own config:
+```
+provide "override", %w(institution)
+
+to_field "institution", literal("unc")
+```
 

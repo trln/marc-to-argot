@@ -11,6 +11,7 @@ flatten_attributes = %w(
     ead_id
     isbn
     issn
+    lang_code
     authors
     title
     notes

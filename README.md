@@ -17,9 +17,23 @@ This will place a Argot file (argot_out.json) in your home directory
 
 ## Configurations
 
-## Settings
+### Settings
 In addition to command-line options, you can permanently set these defaults in the **settings* block of your institution's config file.
 ```
+# threads
+provide 'processing_thread_pool', 3
+
+# default output file (placed into the directory where you run the script)
+provide "output_file", "~/argot_out.json"
+
+# set to true for pretty JSON output
+provide "argot_writer.pretty_print", false
+
+# Comment out/remove if using marc binary
+provide "marc_source.type", "xml"
+
+# Prevent argot.rb from processing these fields (you will need to provide your own logic)
+provide "override", %w(id local_id institution cataloged_date items)
 ```
 
 ### Insitutuional Specs

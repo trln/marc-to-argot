@@ -93,7 +93,7 @@ end
 ######
 
 if !settings["override"].include?("lang")
-  to_field "lang", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
+  to_field "language", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
 end
 
 if !settings["override"].include?("lang_code")

@@ -18,7 +18,7 @@ This will place a Argot file (argot_out.json) in your home directory
 ## Configurations
 
 ### Settings
-In addition to command-line options, you can permanently set these defaults in the **settings* block of your institution's config file.
+In addition to command-line options, you can permanently set the settings in the **settings* block of your institution's config file.
 ```
 # threads
 provide 'processing_thread_pool', 3

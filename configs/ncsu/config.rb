@@ -39,7 +39,7 @@ settings do
   provide "argot_writer.pretty_print", false
 
   # Comment out/remove if using marc binary
-  provide "marc_source.type", "xml"
+  # provide "marc_source.type", "xml"
 
   # Prevent argot.rb from processing these fields (you will need to provide your own logic)
   provide "override", %w(institution)

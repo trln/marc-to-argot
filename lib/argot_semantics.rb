@@ -284,7 +284,7 @@ module Traject::Macros
         ######
         def self.get_title(rec, spec = "245", is_journal = false)
             title_hash = {
-                :sort => Marc21Semantics.get_sortable_title(rec),
+                :sort => [],
                 :main => [],
                 :abbreviation => [],
                 :translation => [],
@@ -296,6 +296,8 @@ module Traject::Macros
                 :alternate => [],
                 :journal => [],
             }
+
+            title_hash[:sort] << Marc21Semantics.get_sortable_title(rec)
 
             vernacular_bag = ArgotSemantics.create_vernacular_bag(rec, spec)
 
@@ -338,7 +340,7 @@ module Traject::Macros
                 end
 
                 title = {
-                    :value => str,
+                    :value => str
                 }
                 title[:vernacular] = vernacular if vernacular
 

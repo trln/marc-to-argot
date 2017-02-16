@@ -21,7 +21,7 @@ require 'argot_writer'
 if settings["spec_file"]
   spec_config = SpecGenerator::generate_spec_file(settings["spec_file"])
 else
-  spec_config = SpecGenerator::generate_spec_file(File.join(File.dirname(__FILE__), "specs.yml"))
+  spec_config = SpecGenerator::generate_spec_file(File.join(File.dirname(__FILE__), "../unc/specs.yml"))
 end
 
 settings do
@@ -42,7 +42,7 @@ settings do
   provide "marc_source.type", "xml"
 
   # Prevent argot.rb from processing these fields (you will need to provide your own logic)
-  provide "override", %w(id local_id institution cataloged_date items)
+  provide "override", %w(id local_id cataloged_date items)
 
 end
 
@@ -50,7 +50,7 @@ end
 # Primary ID
 ######
 to_field "id", extract_marc(settings["specs"][:id], :first => true) do |rec, acc|
-  acc.collect! {|s| "UNC#{s.delete("b.")}"}
+  acc.collect! {|s| "ASP#{s.delete("b.")}"}
 end
 
 ################################################
@@ -69,11 +69,6 @@ to_field "local_id" do |rec, acc|
 
   acc << local_id
 end
-
-################################################
-# Institutiuon
-######\
-to_field "institution", literal("unc")
 
 ################################################
 # Catalog Date

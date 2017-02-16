@@ -81,7 +81,10 @@ to_field "institution", literal("unc")
 # Catalog Date
 ######
 
-to_field "cataloged_date", extract_marc("909")
+to_field "cataloged_date" do |rec, acc|
+  cataloged = Traject::MarcExtractor.cached("909").extract(rec).first
+  acc << Time.parse(cataloged).utc.iso8601 if cataloged
+end
 
 ################################################
 # Items
@@ -146,7 +149,11 @@ to_field "items" do |rec, acc|
           #change dates to ISO8601
           if code == :d 
             subfield.value = Time.parse(subfield.value).utc.iso8601
-          end  
+          end
+          #change checkouts to int
+          if code == :o
+            subfield.value = subfield.value.to_i
+          end
           
           item[item_map[code][:key]] << subfield.value
 

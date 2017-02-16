@@ -78,11 +78,12 @@ if !settings["override"].include?("publication_year")
   to_field "publication_year", marc_publication_date
 end
 
-if !settings["override"].include?("copyright_date")
-  to_field "copyright_date" do |record, acc|
+if !settings["override"].include?("copyright_year")
+  to_field "copyright_year" do |record, acc|
      Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
          if field.indicator2 == '4'
-             acc << extractor.collect_subfields(field,spec).first
+            str = extractor.collect_subfields(field,spec).first.gsub!(/[^\d]/,'').to_i
+            acc << str if str
          end
      end
   end

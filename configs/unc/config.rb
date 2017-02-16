@@ -1,5 +1,7 @@
 $LOAD_PATH.unshift File.expand_path(File.join(File.dirname(__FILE__), './../../lib'))
 
+require 'time'
+
 # To have access to various built-in logic
 # for pulling things out of MARC21, like `marc_languages`
 require 'traject/macros/marc21_semantics'
@@ -137,15 +139,23 @@ to_field "items" do |rec, acc|
           if !item.key?(code)
               item[item_map[code][:key]] = []
           end
+          # Translation map can't use a dash as a key, so change to string 'dash'
           if code == :s && subfield.value == "-"
             subfield.value = "dash"
           end
+          #change dates to ISO8601
+          if code == :d 
+            subfield.value = Time.parse(subfield.value).utc.iso8601
+          end  
+          
           item[item_map[code][:key]] << subfield.value
 
           if item_map[code][:translation_map]
             translation_map = Traject::TranslationMap.new(item_map[code][:translation_map])
             translation_map.translate_array!(item[item_map[code][:key]])
           end
+
+
         end
       end
     end

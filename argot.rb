@@ -80,12 +80,12 @@ end
 
 if !settings["override"].include?("copyright_year")
   to_field "copyright_year" do |record, acc|
-     Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
-         if field.indicator2 == '4'
-            str = extractor.collect_subfields(field,spec).first.gsub!(/[^\d]/,'').to_i
-            acc << str if str
-         end
-     end
+    Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
+       if field.indicator2 == '4'
+            str = extractor.collect_subfields(field,spec).first
+            acc << str.gsub!(/[^\d]/,'').to_i if str
+       end
+    end
   end
 end
 

@@ -39,7 +39,10 @@ settings do
   provide "argot_writer.pretty_print", false
 
   # Comment out/remove if using marc binary
-  provide "marc_source.type", "xml"
+  # provide "marc_source.type", "xml"
+
+  # Encoding type (only used if source is marc binary)
+  provide "marc_source.encoding", "MARC-8"
 
   # Prevent argot.rb from processing these fields (you will need to provide your own logic)
   provide "override", %w(id institution items)

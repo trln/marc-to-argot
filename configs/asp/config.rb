@@ -78,6 +78,7 @@ to_field "cataloged_date", extract_marc("909")
 
 ################################################
 # Items
+# https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
 ######
 item_map = {
   :b => {
@@ -106,7 +107,7 @@ item_map = {
     :key => "call_number_tag",
   },
   :q => {
-    :key => "classification_number", 
+    :key => "call_number", 
   },
   :s => {
     :key => "status",
@@ -124,7 +125,8 @@ to_field "items" do |rec, acc|
 
   Traject::MarcExtractor.cached("999", :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
     if field.indicator2 == "1"
-      item = {}
+      item = Hash.new
+      class_number = false
 
       field.subfields.each do |subfield|
         code = subfield.code.to_sym
@@ -132,9 +134,27 @@ to_field "items" do |rec, acc|
           if !item.key?(code)
               item[item_map[code][:key]] = []
           end
+          # Translation map can't use a dash as a key, so change to string 'dash'
           if code == :s && subfield.value == "-"
             subfield.value = "dash"
           end
+          #change dates to ISO8601
+          if code == :d 
+            subfield.value = Time.parse(subfield.value).utc.iso8601
+          end
+          #change checkouts to int
+          if code == :o
+            subfield.value = subfield.value.to_i
+          end
+          #remove vertical pipe-codes in call number
+          if code == :q
+            subfield.value = subfield.value.gsub(/\|[a-z]/,' ')
+            subfield.value = subfield.value.strip
+          end
+          if code == :p
+            class_number = subfield.value
+          end
+          
           item[item_map[code][:key]] << subfield.value
 
           if item_map[code][:translation_map]
@@ -143,6 +163,10 @@ to_field "items" do |rec, acc|
           end
         end
       end
+    end
+
+    if class_number and class_number == "090"
+      item["lcc_top"] = [item["call_number"].first[0,1]]
     end
 
     acc << item.each_key {|x| item[x] = item[x].join(';')  } if item

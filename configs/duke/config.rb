@@ -96,7 +96,7 @@ item_map = {
     :key => "call_number_tag",
   },
   :q => {
-    :key => "classification_number", 
+    :key => "call_number", 
   },
   :s => {
     :key => "status",

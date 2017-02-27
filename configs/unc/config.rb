@@ -114,7 +114,7 @@ item_map = {
     :key => "checkouts",
   },
   :p => {
-    :key => "call_number_tag",
+    :key => "call_number_scheme",
   },
   :q => {
     :key => "call_number", 
@@ -135,8 +135,7 @@ to_field "items" do |rec, acc|
 
   Traject::MarcExtractor.cached("999", :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
     if field.indicator2 == "1"
-      item = Hash.new
-      class_number = false
+      item = {}
 
       field.subfields.each do |subfield|
         code = subfield.code.to_sym
@@ -161,9 +160,6 @@ to_field "items" do |rec, acc|
             subfield.value = subfield.value.gsub(/\|[a-z]/,' ')
             subfield.value = subfield.value.strip
           end
-          if code == :p
-            class_number = subfield.value
-          end
           
           item[item_map[code][:key]] << subfield.value
 
@@ -173,10 +169,11 @@ to_field "items" do |rec, acc|
           end
         end
       end
-    end
 
-    if class_number and class_number == "090"
-      item["lcc_top"] = [item["call_number"].first[0,1]]
+      if item["call_number_scheme"] and item["call_number_scheme"].first == "090"
+        item["lcc_top"] = [item["call_number"].first[0,1]]
+      end
+
     end
 
     acc << item.each_key {|x| item[x] = item[x].join(';')  } if item

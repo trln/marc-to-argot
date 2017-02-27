@@ -93,7 +93,7 @@ item_map = {
     :key => "checkouts",
   },
   :p => {
-    :key => "call_number_tag",
+    :key => "call_number_scheme",
   },
   :q => {
     :key => "call_number", 
@@ -133,6 +133,9 @@ to_field "items" do |rec, acc|
         if code == :o
           subfield.value = subfield.value.to_i
         end
+        if code == :p
+          class_number = subfield.value
+        end
         
         item[item_map[code][:key]] << subfield.value
 
@@ -140,9 +143,11 @@ to_field "items" do |rec, acc|
           translation_map = Traject::TranslationMap.new(item_map[code][:translation_map])
           translation_map.translate_array!(item[item_map[code][:key]])
         end
-
-
       end
+    end
+
+    if item["call_number_scheme"] and item["call_number_scheme"].first == "0"
+      item["lcc_top"] = [item["call_number"].first[0,1]]
     end
 
     acc << item.each_key {|x| item[x] = item[x].join(';')  } if item

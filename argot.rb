@@ -9,7 +9,6 @@ flatten_attributes = %w(
     local_id
     rollup_id
     ead_id
-    isbn
     issn
     lang_code
     authors
@@ -63,7 +62,23 @@ if !settings["override"].include?("rollup_id")
 end
 
 if !settings["override"].include?("isbn")
-  to_field "isbn", argot_isbn(settings["specs"][:isbn])
+  to_field "isbn" do |rec, acc|
+    Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
+        str = extractor.collect_subfields(field, spec).first
+        isbn = {}
+        if str
+            explode = str.split
+            if(StdNum::ISBN.checkdigit(explode[0]))
+
+                isbn = {
+                    :number => explode[0],
+                    :qualifying_info => explode[1..-1].join(" ")
+                }
+            end
+        end
+        acc << isbn if !isbn.empty?
+    end
+  end
 end
 
 if !settings["override"].include?("issn")

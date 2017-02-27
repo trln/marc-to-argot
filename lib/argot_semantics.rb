@@ -38,49 +38,6 @@ module Traject::Macros
         end
 
         ################################################
-        # Lambda for ISBN
-        ######
-        def argot_isbn(config)
-            lambda do |rec, acc|
-                st = {}
-                config.each do |key, spec|
-                    isbn = ArgotSemantics.get_isbn_hash(rec, spec)
-                    st[key] = isbn if isbn
-                end
-
-                acc << st if !st.empty?
-            end
-        end
-
-        ################################################
-        # Get an ISBN hash
-        ######
-        def self.get_isbn_hash(record,extract_fields)
-
-            isbn_array = []
-
-            Traject::MarcExtractor.new(extract_fields, :alternate_script => false).each_matching_line(record) do |field, spec, extractor|
-
-                str = extractor.collect_subfields(field, spec).first
-                isbn = {}
-
-                if str
-                    explode = str.split
-                    if(StdNum::ISBN.checkdigit(explode[0]))
-
-                        isbn = {
-                            :number => explode[0],
-                            :qualifying_info => explode[1..-1].join(" ")
-                        }
-                    
-                        isbn_array << isbn
-                    end
-                end
-            end
-            isbn_array if !isbn_array.empty?
-        end
-
-        ################################################
         # Lambda for ISSN
         ######
         def argot_issn(config)
@@ -438,8 +395,8 @@ module Traject::Macros
                 st = {}
                 config.each do |key, spec|
                     extractor = MarcExtractor.cached(spec, :separator => nil)
-                    frequency = extractor.extract(rec)
-                    st[key] = frequency if !frequency.empty?
+                    description = extractor.extract(rec)
+                    st[key] = description if !description.empty?
                 end
                 acc << st if !st.empty?
             end

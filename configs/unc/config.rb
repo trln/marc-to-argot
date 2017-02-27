@@ -88,6 +88,7 @@ end
 
 ################################################
 # Items
+# https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
 ######
 item_map = {
   :b => {
@@ -113,10 +114,10 @@ item_map = {
     :key => "checkouts",
   },
   :p => {
-    :key => "call_number_tag",
+    :key => "call_number_scheme",
   },
   :q => {
-    :key => "classification_number", 
+    :key => "call_number", 
   },
   :s => {
     :key => "status",
@@ -154,6 +155,11 @@ to_field "items" do |rec, acc|
           if code == :o
             subfield.value = subfield.value.to_i
           end
+          #remove vertical pipe-codes in call number
+          if code == :q
+            subfield.value = subfield.value.gsub(/\|[a-z]/,' ')
+            subfield.value = subfield.value.strip
+          end
           
           item[item_map[code][:key]] << subfield.value
 
@@ -161,10 +167,13 @@ to_field "items" do |rec, acc|
             translation_map = Traject::TranslationMap.new(item_map[code][:translation_map])
             translation_map.translate_array!(item[item_map[code][:key]])
           end
-
-
         end
       end
+
+      if item["call_number_scheme"] and item["call_number_scheme"].first == "090"
+        item["lcc_top"] = [item["call_number"].first[0,1]]
+      end
+
     end
 
     acc << item.each_key {|x| item[x] = item[x].join(';')  } if item

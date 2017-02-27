@@ -97,6 +97,9 @@ item_map = {
   },
   :v => {
     :key => "volume",
+  },
+  :w => {
+    :key => "call_number_scheme"
   }
 }
 
@@ -125,6 +128,10 @@ to_field "items" do |rec, acc|
           translation_map.translate_array!(item[item_map[code][:key]])
         end
       end
+    end
+
+    if item["call_number_scheme"] and item["call_number_scheme"].first == "LC"
+      item["lcc_top"] = [item["call_number"].first[0,1]]
     end
 
     acc << item.each_key {|x| item[x] = item[x].join(';')  } if item

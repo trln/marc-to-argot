@@ -1,12 +1,16 @@
 # Marc to Argot transformer
  
-## Requirements
-[Traject](https://github.com/traject/traject)
-[Library Std Nums](https://github.com/billdueber/library_stdnums)
+## Installation
+1. Clone repo
+2. `bundle install`
+3. `rake install`
 
 ## Basic Use
-`traject -c configs/<inst>/config.rb argot.rb <marc_file>`
-This will place a Argot file (argot_out.json) in your home directory
+`mta help create`
+List of options for the create command
+
+`mta create <collection> <input> <output>`
+1. Collection 
 
 ## Common options
 

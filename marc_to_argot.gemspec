@@ -37,8 +37,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 10.0"
   s.add_development_dependency "rspec", "~> 3.0"
 
-  s.add_runtime_dependency 'rubyzip', [ '~> 1.2' ]
-
   # pick our JSON library to install depending on the platform
   if is_java
     s.platform = 'java'

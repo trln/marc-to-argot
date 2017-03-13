@@ -1,0 +1,16 @@
+# List of top-level argot attributes that should only have 1 value
+- id
+- oclc_number
+- local_id
+- rollup_id
+- ead_id
+- issn    
+- lang_code
+- authors
+- title
+- notes
+- url
+- linking
+- frequency
+- description
+- series

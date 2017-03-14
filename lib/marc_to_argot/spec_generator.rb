@@ -6,7 +6,14 @@ require 'marc_to_argot'
 module MarcToArgot
    
     class SpecGenerator
+
+        @specs = {}
+        @data_dir = File.expand_path("../data",File.dirname(__FILE__))
             
+        def initialize(spec_file = nil)
+            puts Dir.entries("#{data_dir}")
+        end
+
         def self.generate_spec_file(spec_file)
             spec_config = YAML.load_file(spec_file)
             config = transform_spec(spec_config)

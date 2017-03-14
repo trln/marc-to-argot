@@ -14,11 +14,11 @@ module MarcToArgot
                     :default => false,
                     :aliases => "-p",
                     :desc => "pretty print resulting json"
-    method_option   :spec_file,
+    method_option   :spec_option,
                     :type => :string,
                     :default => "",
                     :aliases => "-s",
-                    :desc => "use a different marc spec file"
+                    :desc => "use a different marc spec file, can either be a path to a spec file, or the name of an existing collection"
     method_option   :thread_pool,
                     :type => :numeric,
                     :default => 3,
@@ -38,6 +38,8 @@ module MarcToArgot
     def create(collection, input, output)
 
       data_dir = File.expand_path("../data",File.dirname(__FILE__))
+      spec = MarcToArgot::SpecGenerator.new options.spec_option
+      exit
       
       if !File.exist?(input)
 
@@ -46,6 +48,10 @@ module MarcToArgot
       else
 
         flatten_attributes = YAML.load_file("#{data_dir}/flatten_attributes.yml")
+
+        spec = MarcToArgot::SpecGenerator.new options.spec_option
+
+
         spec_file_path = options.spec_file.empty? ? "#{data_dir}/#{collection}/marc_specs.yml" : options.spec_file
         spec_yaml = File.exist?(spec_file_path) ? YAML.load_file(spec_file_path) : YAML.load_file("#{data_dir}/argot/marc_specs.yml")
         specs = MarcToArgot::SpecGenerator::transform_spec(spec_yaml)

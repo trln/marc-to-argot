@@ -17,7 +17,7 @@ List of options for the create command
 ### Options
 
 | Name | Flag | Type | Default | Options |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- | ---- | ---- |
 | Marc file type | -t | string | xml | xml, json, binary |
 | Marc encoding | -e | string | UTF-8 | UTF-8, MARC-8 |
 | Pretty print | -p | boolean | false | |

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+
+# If we're loading from source instead of a gem, rubygems
+# isn't setting load paths for us, so we need to set it ourselves
+self_load_path = File.expand_path("../lib", File.dirname(__FILE__))
+unless $LOAD_PATH.include? self_load_path
+  $LOAD_PATH << self_load_path
+end
+
+require 'marc_to_argot/command_line'
+
+result = MarcToArgot::CommandLine.start( ARGV )
+
+exit 1 unless result # non-zero exit status on process telling us there's problems.

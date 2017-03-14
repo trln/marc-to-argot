@@ -1,5 +1,5 @@
 id:
-  - 907a
+  - '001'
 oclc:
   value: 
     - 035a
@@ -9,7 +9,9 @@ syndetics_id:
   - 020a
   - 024a
 isbn:
+  primary:
     - 020a
+  other: 
     - 020z
     - 776z
 issn: 
@@ -28,7 +30,6 @@ issn:
     - 785xz
   series:
     - 490x
-
 copyright_data:
   - 264c
 publisher_number:

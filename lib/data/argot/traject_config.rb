@@ -6,6 +6,10 @@ if !settings["override"].include?("id")
   to_field "id", oclcnum("035a:035z")
 end
 
+if !settings["override"].include?("local_id")
+  to_field "local_id", oclcnum("035a:035z")
+end
+
 if !settings["override"].include?("oclc_number")
   to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc])
 end

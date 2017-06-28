@@ -10,7 +10,7 @@ unless settings["override"].include?("local_id")
   to_field "local_id" do |rec,acc,context|
 
     local_id = {
-      :value => context.output_hash["id"],
+      :value => context.output_hash["id"].first,
       :other => []
     }
     acc << local_id

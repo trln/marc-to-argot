@@ -2,19 +2,27 @@
 # IDs and Standard Numbers
 ######
 
-if !settings["override"].include?("id")
+unless settings["override"].include?("id")
   to_field "id", oclcnum("035a:035z")
 end
 
-if !settings["override"].include?("local_id")
-  to_field "local_id", oclcnum("035a:035z")
+unless settings["override"].include?("local_id")
+  to_field "local_id" do |rec,acc,context|
+
+    local_id = {
+      :value => context.output_hash["id"],
+      :other => []
+    }
+    acc << local_id
+
+  end
 end
 
-if !settings["override"].include?("oclc_number")
+unless settings["override"].include?("oclc_number")
   to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc])
 end
 
-if !settings["override"].include?("syndetics_id")
+unless settings["override"].include?("syndetics_id")
   to_field "syndetics_id", extract_marc(settings["specs"][:syndetics_id], :separator=>nil) do |rec, acc|
     orig = acc.dup
     acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)}
@@ -23,15 +31,15 @@ if !settings["override"].include?("syndetics_id")
   end
 end
 
-if !settings["override"].include?("ead_id")
+unless settings["override"].include?("ead_id")
   # to_field "ead_id", literal("")
 end
 
-if !settings["override"].include?("rollup_id")
+unless settings["override"].include?("rollup_id")
   to_field "id", oclcnum("035a:035z")
 end
 
-if !settings["override"].include?("isbn")
+unless settings["override"].include?("isbn")
   to_field "isbn" do |rec, acc|
     Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
         str = extractor.collect_subfields(field, spec).first
@@ -51,7 +59,7 @@ if !settings["override"].include?("isbn")
   end
 end
 
-if !settings["override"].include?("issn")
+unless settings["override"].include?("issn")
   to_field "issn", argot_issn(settings["specs"][:issn])
 end
 
@@ -59,11 +67,11 @@ end
 # Dates
 ######
 
-if !settings["override"].include?("publication_year")
+unless settings["override"].include?("publication_year")
   to_field "publication_year", marc_publication_date
 end
 
-if !settings["override"].include?("copyright_year")
+unless settings["override"].include?("copyright_year")
   to_field "copyright_year" do |record, acc|
     Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
        if field.indicator2 == '4'
@@ -78,11 +86,11 @@ end
 # Language
 ######
 
-if !settings["override"].include?("lang")
+unless settings["override"].include?("lang")
   to_field "language", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
 end
 
-if !settings["override"].include?("lang_code")
+unless settings["override"].include?("lang_code")
   to_field "lang_code", extract_marc("008[35-37]")
 end
 
@@ -90,15 +98,15 @@ end
 # Publisher
 ######
 
-if !settings["override"].include?("publisher_number")
+unless settings["override"].include?("publisher_number")
   to_field "publisher_number", extract_marc(settings["specs"][:publisher_number])
 end
 
-if !settings["override"].include?("publisher_etc")
+unless settings["override"].include?("publisher_etc")
   to_field "publisher_etc", argot_publisher(settings["specs"][:publisher_etc])
 end
 
-if !settings["override"].include?("imprint")
+unless settings["override"].include?("imprint")
   to_field "imprint", argot_imprint(settings["specs"][:imprint])
 end
 
@@ -106,7 +114,7 @@ end
 # Authors
 ######
 
-if !settings["override"].include?("authors")
+unless settings["override"].include?("authors")
   to_field "authors", argot_authors(settings["specs"][:authors])
 end
 
@@ -114,7 +122,7 @@ end
 # Title
 ######
 
-if !settings["override"].include?("title")
+unless settings["override"].include?("title")
   to_field "title", argot_title(settings["specs"][:title])
 end
 
@@ -122,7 +130,7 @@ end
 # Notes
 ######
 
-if !settings["override"].include?("notes")
+unless settings["override"].include?("notes")
   to_field "notes", argot_notes(settings["specs"][:notes])
 end
 
@@ -130,7 +138,7 @@ end
 # URLs
 ######
 
-if !settings["override"].include?("url")
+unless settings["override"].include?("url")
   to_field "url" do |rec, acc|
       Traject::MarcExtractor.cached("856uyz3").each_matching_line(rec) do |field, spec, extractor|
           url = {}
@@ -159,7 +167,7 @@ end
 # Linking
 ######
 
-if !settings["override"].include?("linking")
+unless settings["override"].include?("linking")
   to_field "linking", argot_linking_attributes(settings["specs"][:linking])
 end
 
@@ -167,7 +175,7 @@ end
 # Format
 ######
 
-if !settings["override"].include?("format")
+unless settings["override"].include?("format")
   to_field "format", marc_formats
 end
 
@@ -175,7 +183,7 @@ end
 # Subjects
 ######
 
-if !settings["override"].include?("subjects")
+unless settings["override"].include?("subjects")
   to_field "subjects", marc_lcsh_formatted({:spec => settings["specs"][:subjects], :subdivison_separator => " -- "})
 end
 
@@ -183,27 +191,27 @@ end
 # Additional
 ######
 
-if !settings["override"].include?("statement_of_responsibility")
+unless settings["override"].include?("statement_of_responsibility")
   to_field "statement_of_responsibility", argot_gvo(settings["specs"][:statement_of_responsibility])
 end
 
-if !settings["override"].include?("edition")
+unless settings["override"].include?("edition")
   to_field "edition", argot_gvo(settings["specs"][:edition])
 end
 
-if !settings["override"].include?("frequency")
+unless settings["override"].include?("frequency")
   to_field "frequency", argot_frequency(settings["specs"][:frequency])
 end
 
-if !settings["override"].include?("description")
+unless settings["override"].include?("description")
   to_field "description", argot_description(settings["specs"][:description])
 end
 
-if !settings["override"].include?("series")
+unless settings["override"].include?("series")
   to_field "series", argot_series(settings["specs"][:description])
 end
 
-if !settings["override"].include?("institution")
+unless settings["override"].include?("institution")
   to_field "institution" do |rec, acc|
     inst = %w(unc duke nccu ncsu)
     acc.concat(inst)

@@ -8,7 +8,9 @@ end
 
 ################################################
 # Local ID
-######
+#####
+#
+to_field 'local_id', extract_marc(settings['specs'][:id], first: true)
 
 ################################################
 # Institutiuon

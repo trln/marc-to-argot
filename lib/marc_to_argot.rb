@@ -16,6 +16,6 @@ require 'json'
 require 'yaml'
 require 'time'
 
+# Top-level module for conversion to Argot
 module MarcToArgot
-    
 end

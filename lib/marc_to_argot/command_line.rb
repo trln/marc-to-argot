@@ -2,18 +2,37 @@ require 'marc_to_argot'
 
 module MarcToArgot
   # The class that executes for the Argot command line utility.
-
   class CommandLine < Thor
-
     ###############
     # Flatten
     ###############
-    desc "create <collection> <input> <output> ", "Create an argot file"
-    method_option   :pretty,
-                    :type => :boolean,
-                    :default => false,
-                    :aliases => "-p",
-                    :desc => "pretty print resulting json"
+    desc 'create <collection> [<input>] [<output>]', 'Create an argot file'
+    long_desc <<-LONGDESC
+      Creates Argot (JSON) formatted output  from MARC21/MARCXML formatted input.
+      <input> and <output> filenames are both optional, if omitted, input will be read from 
+      STDIN and output sent to STDOUT.  
+
+      For the case where you want to read from STDIN and send output to a named file, specify - (a single dash) 
+      for <input>.
+
+     Traject configuration is achieved through the use of 'spec' files, which are in YAML format and specify common mappings.
+     Each collection also uses a standard `traject` configuration file.
+
+     By default, the configuration files are loaded from directories stored along with the gem's library files.  Usually this will 
+     be somewhere like 
+
+     `$HOME/.gem/ruby/[ruby version]/gems/marc_to_argot_${VERSION}/lib/data/[collection]`
+
+     but that can change depending on how you installed the gem.
+     LONGDESC
+
+    method_option(pretty: {
+                            type: :boolean,
+                    default: false,
+                    aliases: '-p',
+                    desc:  'pretty print resulting json'
+                      }
+                                                                  )
     method_option   :spec_option,
                     :type => :string,
                     :default => "",
@@ -34,23 +53,21 @@ module MarcToArgot
                     :default => "UTF-8",
                     :aliases => "-e",
                     :desc => "UTF-8 or MARC-8. MARC-8 only used if type = binary"
-
-    def create(collection, input, output)
+    def create(collection, input=$stdin, output=$stdout)
+      # allow traditional '-' to designate stdin as input, so you can specify just an output filename
+      input = $stdin if input == '-'
 
       data_dir = File.expand_path("../data",File.dirname(__FILE__))
       spec = MarcToArgot::SpecGenerator.new options.spec_option.empty? ? collection : options.spec_option
       marc_specs = spec.generate_spec
-
       if collection.empty?
         coll_opt = spec.instance_variable_get(:@collections).join("\n")
         abort("Plesae specify a collection \n Available options: \n #{coll_opt}")
       end
       
-      if !File.exist?(input)
-        abort('Could not find the input file at #{input}')
-      end
+      abort('Could not find the input file at #{input}') unless File.exist?(input)
 
-      if output.empty?
+      if output.nil?
         abort('Please provide an output file')
       end
 
@@ -64,11 +81,13 @@ module MarcToArgot
         "writer_class_name" => "Traject::ArgotWriter",
         "specs" => marc_specs,
         "processing_thread_pool" => options.thread_pool,
-        "output_file" => output,
         "marc_source.type" => options.type,
         "marc_source.encoding" => options.encoding,
         "override" => override
       }
+
+      # only set the output file if ''output' doesn't look like an IO object already.
+      settings["output_file"]= output unless output.respond_to?(:read)
 
       conf_files = ["#{data_dir}/extensions.rb","#{data_dir}/#{collection}/traject_config.rb","#{data_dir}/argot/traject_config.rb"]
 
@@ -91,8 +110,8 @@ module MarcToArgot
 
       traject_indexer.logger.info("traject (#{Traject::VERSION}) executing with: ")
 
-      io = File.open(input, 'r')
-      filename = input
+      io = input.respond_to?(:read) ? input : File.open(input, 'r')
+      filename = input.to_s
       traject_indexer.settings['command_line.filename'] = filename if filename
 
       result = traject_indexer.process(io)

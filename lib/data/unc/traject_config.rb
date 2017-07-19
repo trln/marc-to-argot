@@ -41,44 +41,23 @@ end
 # https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
 ######
 item_map = {
-  :b => {
-    :key => "barcode"
-  },
-  :c => {
-    :key => "copy_number",
-  },
-  :d => {
-    :key => "due_date",
-  },
   :i => {
-    :key => "ils_id",
+    :key => "id",
   },
   :l => {
-    :key => "location",
+    :key => "library",
     #:translation_map => "unc/locations_map",
-  },
-  :n => {
-    :key => "note",
-  },
-  :o => {
-    :key => "checkouts",
   },
   :p => {
     :key => "call_number_scheme",
   },
   :q => {
-    :key => "call_number", 
+    :key => "call_number",
   },
   :s => {
     :key => "status",
-    :translation_map => "unc/status_map"
+    #:translation_map => "unc/status_map"
   },
-  :t => {
-    :key => "type",
-  },
-  :v => {
-    :key => "volume",
-  }
 }
 
 to_field "items" do |rec, acc|

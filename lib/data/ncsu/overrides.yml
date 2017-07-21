@@ -1,4 +1,5 @@
 # Argot attributes you do not want parsed by the default argot configuration
 - id
+- local_id
 - institution
 - items

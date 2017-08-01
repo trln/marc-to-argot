@@ -72,8 +72,8 @@ to_field 'items' do |rec, acc|
     home = item['shelving_location']
     item['status'] = item_status(current, home)
 
-    if item.fetch(:call_number_scheme, '') == 'LC'
-      item[:lcc_top] = item[:call_number][0, 1]
+    if item.fetch('call_number_scheme', '') == 'LC'
+      item['lcc_top'] = item['call_number'][0, 1]
     end
     acc << item.to_json if item
   end

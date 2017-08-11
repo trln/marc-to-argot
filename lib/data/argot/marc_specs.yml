@@ -146,6 +146,12 @@ subjects:
   - 690ax
   - 691abvxyz
   - 695a
+subject_genre:
+  - 655a
+subject_medical:
+  - 650|*2|a
+subject_time_period:
+  - 648a
 statement_of_responsibility:
   - 245c
 edition:

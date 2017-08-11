@@ -187,6 +187,22 @@ unless settings["override"].include?("subjects")
   to_field "subjects", marc_lcsh_formatted({:spec => settings["specs"][:subjects], :subdivison_separator => " -- "})
 end
 
+unless settings["override"].include?("subject_genre")
+  to_field "subject_genre", marc_lcsh_formatted({:spec => settings["specs"][:subject_genre], :subdivison_separator => " -- "})
+end
+
+unless settings["override"].include?("subject_medical")
+  to_field "subject_medical", marc_lcsh_formatted({:spec => settings["specs"][:subject_medical], :subdivison_separator => " -- "})
+end
+
+unless settings["override"].include?("subject_region")
+    to_field "subject_region", extract_marc("651a")
+end
+
+unless settings["override"].include?("subject_time_period")
+  to_field "subject_time_period", marc_lcsh_formatted({:spec => settings["specs"][:subject_time_period], :subdivison_separator => " -- "})
+end
+
 ################################################
 # Additional
 ######

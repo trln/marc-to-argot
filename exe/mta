@@ -8,7 +8,7 @@ unless $LOAD_PATH.include? self_load_path
   $LOAD_PATH << self_load_path
 end
 
-require 'marc_to_argot/command_line'
+require 'marc_to_argot'
 
 result = MarcToArgot::CommandLine.start( ARGV )
 

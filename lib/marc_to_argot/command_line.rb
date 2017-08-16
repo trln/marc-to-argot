@@ -1,8 +1,14 @@
 require 'marc_to_argot'
+require 'trln'
+require 'logger'
+
+
 
 module MarcToArgot
+
   # The class that executes for the Argot command line utility.
   class CommandLine < Thor
+
     ###############
     # Flatten
     ###############
@@ -57,6 +63,8 @@ module MarcToArgot
       # allow traditional '-' to designate stdin as input, so you can specify just an output filename
       input = $stdin if input == '-'
 
+    logger = Logger.new(STDERR)
+
       data_dir = File.expand_path("../data",File.dirname(__FILE__))
       spec = MarcToArgot::SpecGenerator.new options.spec_option.empty? ? collection : options.spec_option
       marc_specs = spec.generate_spec
@@ -99,13 +107,21 @@ module MarcToArgot
           puts "Could not read configuration file '#{conf_path}', exiting..."
           exit 2
         rescue Traject::Indexer::ConfigLoadError => e
+          logger.fatal("Unable to read configuration: #{e.original.message}")
+          e.original.backtrace.each { |line| 
+            logger.error "\t#{line}"
+          }
           puts "\n"
           puts e.message
-          puts e.config_file_backtrace
+          e.backtrace.each { |l| puts "\t#{l}" }
           puts "\n"
           puts "Exiting..."
           exit 3
+        rescue StandardError => e
+          puts "OH NO YOU DI'INT"
+          log.fatal e.message
         end
+
       end
 
       traject_indexer.logger.info("traject (#{Traject::VERSION}) executing with: ")
@@ -120,7 +136,8 @@ module MarcToArgot
 
     rescue Exception => e
       # Try to log unexpected exceptions if possible
-      traject_indexer && traject_indexer.logger &&  traject_indexer.logger.fatal("Traject::CommandLine: Unexpected exception, terminating execution: #{e.inspect}") rescue nil
+      puts "WHAT?  #{e.message}"
+      traject_indexer && traject_indexer.logger &&  traject_indexer.logger.fatal("Traject::CommandLine: Unexpected exception, terminating execution: #{e.backtrace}") rescue nil
       raise e
     end
   end

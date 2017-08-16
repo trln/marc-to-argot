@@ -77,3 +77,13 @@ to_field "institution", literal("duke")
 - institution
 - items
 ```
+
+### Writing Tests
+
+Tests that involve checking that the results of transforming your institutional MARC to Argot are correct involve:
+
+  * Selecting a file containing representative record(s) in MARC format.
+  * copying that file with a meaningful name to `spec/[collecttion]/[name].[extension]`
+  * in your test (in `spec/marc_to_argot_spec.rb` for now, we should probably break this into multiple files as the number of tests grow), call `TrajectRunTest.run_traject([collection], [name], [extension])` -- this will load the MARC file, run your Traject configuration over it, and return the result as a String, which you can then parse and have expectations about.  We'll probably need to write some utility classes for doing that stuff, and e.g. hook in the validator from the `argot-ruby` gem.
+
+Run tests with `rake spec`

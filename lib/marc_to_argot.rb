@@ -9,7 +9,7 @@ require 'traject/argot_semantics'
 require 'traject/argot_writer'
 
 # Other Helpers
-require 'marc_to_argot/spec_generator'
+
 require 'library_stdnums'
 require 'thor'
 require 'json'
@@ -18,4 +18,8 @@ require 'time'
 
 # Top-level module for conversion to Argot
 module MarcToArgot
+  autoload :VERSION, 'marc_to_argot/version'
+  autoload :CommandLine, 'marc_to_argot/command_line'
+  autoload :SpecGenerator, 'marc_to_argot/spec_generator'
+  autoload :CallNumbers, 'marc_to_argot/call_numbers'
 end

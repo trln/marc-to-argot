@@ -392,6 +392,117 @@ module Traject::Macros
     end
 
     ################################################
+    # Lambda for Subjects
+    ######
+
+    def argot_subjects(options={})
+      spec            = options[:spec] || '600|*0|abcdfghjklmnopqrstu'
+      subd_separator  = options[:subdivison_separator] || ' '
+      classifications = options[:classifications] || nil
+      filter_method   = options[:filter_method] || nil
+
+      lambda do |rec, acc|
+        acc.concat ArgotSemantics.subject_extractor(rec,
+                                                    spec,
+                                                    subd_separator,
+                                                    classifications,
+                                                    filter_method)
+      end
+    end
+
+    def self.subject_extractor(rec, spec, separator, classifications=nil, filter=nil)
+      subjects = []
+      Traject::MarcExtractor.cached(spec, alternate_script: false, separator: separator).each_matching_line(rec) do |field, spec, extractor|
+        if classifications.nil? || subfield_2_classification_constraint(field, classifications)
+          subfields = collect_subject_subfields(field, spec, separator, filter)
+          subjects.concat(subfields)
+        end
+      end
+      subjects.uniq
+    end
+
+    def self.collect_subject_subfields(field, spec, separator, filter)
+      subfields = field.subfields.collect do |subfield|
+        subfield_value = subfield.value if spec.includes_subfield_code?(subfield.code)
+        subfield_value = method(filter).call(subfield) if filter && subfield_value
+        Traject::Macros::Marc21.trim_punctuation(subfield_value)
+      end.compact
+
+      return subfields if subfields.empty?
+
+      if separator && spec.joinable?
+        subfields = [subfields.join(separator)]
+      end
+
+      subfields
+    end
+
+    def self.subfield_2_classification_constraint(field, classifications)
+      class_scheme = field.subfields.select { |subfield| subfield.code == '2' }.first
+      class_scheme && class_scheme.value =~ classifications
+    end
+
+    def self.strip_provenance(subfield)
+      if subfield.code == 'a'
+        subfield.value.gsub(' (Provenance)', '')
+      else
+        subfield.value
+      end
+    end
+
+    def argot_genre_special_cases(options={})
+      spec        = options[:spec] || '008[33]:008[34]'
+      mapped_byte = options[:mapped_byte] || 33
+      bio_byte    = options[:bio_byte] || 34
+      constraint  = options[:constraint] || nil
+
+      lambda do |rec, acc|
+
+        Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+          if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
+            if constraint.nil? || ArgotSemantics.method(constraint).call(field)
+              field_value = field.value.byteslice(spec.bytes)
+              mapped_values = []
+              if spec.bytes == mapped_byte
+                mapped_values << case field_value
+                                 when '0'
+                                   'Nonfiction'
+                                 when '1'
+                                   'Fiction'
+                                 when 'd'
+                                   'Drama'
+                                 when 'e'
+                                   'Essays'
+                                 when 'f'
+                                   'Novels'
+                                 when 'h'
+                                   'Humor, satire, etc'
+                                 when 'i'
+                                   'Letters'
+                                 when 'j'
+                                   'Short stories'
+                                 when 'p'
+                                   'Poetry'
+                                 when 's'
+                                   'Speeches, addresses, etc'
+                                 end
+              end
+
+              if spec.bytes == bio_byte
+                mapped_values << 'Biography' if field_value =~ /[abcd]/
+              end
+              acc.concat mapped_values unless mapped_values.empty?
+            end
+          end
+        end
+      end
+    end
+
+    def self.field_006_byte_00_at(field)
+      field.value.byteslice(0) =~ /[at]/
+    end
+
+    ################################################
     # Lambda for Generic Vernacular Object
     ######
     def argot_gvo(spec)

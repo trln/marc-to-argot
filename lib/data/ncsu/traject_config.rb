@@ -1,3 +1,6 @@
+require 'set'
+extend MarcToArgot::CallNumbers
+
 ################################################
 # Primary ID
 ######
@@ -37,10 +40,6 @@ item_map = {
   w: { key: 'call_number_scheme' }
 }
 
-to_field 'holdings_library', extract_marc('999m') do |_rec, acc|
-  acc.uniq!
-end
-
 # rubocop:disable MethodLength
 def item_status(current, home)
   if current.nil? || current.empty?
@@ -56,25 +55,31 @@ def item_status(current, home)
   end
 end
 
-to_field 'items' do |rec, acc|
+# ru#bocop:disable Metrics/BlockLength
+to_field 'items' do |rec, acc, ctx|
+  lcc_top = Set.new
+  formats = marc_formats.call(rec, [])
+  items = []
   Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
     item = {}
-
     field.subfields.each do |subfield|
       code = subfield.code.to_sym
       mapped = item_map.fetch(code, key: nil)[:key]
       item[mapped] = subfield.value unless mapped.nil?
     end
-
-    # $k is only present if current != hom
+    # $k is only present if current != home
     # needs refinement for reserves etc. and non-lending items
     current = item['current_location']
     home = item['shelving_location']
     item['status'] = item_status(current, home)
 
     if item.fetch('call_number_scheme', '') == 'LC'
-      item['lcc_top'] = item['call_number'][0, 1]
+      lcc_top.add(item['call_number'][0, 1])
     end
+    items << item
     acc << item.to_json if item
   end
+  ctx.output_hash['lcc_top'] = lcc_top.to_a
+  #map_holdings(rec, items, ctx) if formats.include?('Journal/Newspaper')
+  map_call_numbers(ctx, items)
 end

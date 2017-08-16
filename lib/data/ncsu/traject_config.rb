@@ -57,6 +57,7 @@ end
 
 # ru#bocop:disable Metrics/BlockLength
 to_field 'items' do |rec, acc, ctx|
+  lcc_top = Set.new
   formats = marc_formats.call(rec, [])
   items = []
   Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
@@ -73,11 +74,12 @@ to_field 'items' do |rec, acc, ctx|
     item['status'] = item_status(current, home)
 
     if item.fetch('call_number_scheme', '') == 'LC'
-      (ctx.output_hash['lcc_top'] ||= Set.new). << item['call_number'][0, 1]
+      lcc_top.add(item['call_number'][0, 1])
     end
     items << item
     acc << item.to_json if item
   end
-  map_holdings(rec, items, ctx) if formats.include?('Journal/Newspaper')
+  ctx.output_hash['lcc_top'] = lcc_top.to_a
+  #map_holdings(rec, items, ctx) if formats.include?('Journal/Newspaper')
   map_call_numbers(ctx, items)
 end

@@ -37,7 +37,7 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
-  it 'generates base results for DUke' do
+  it 'generates base results for Duke' do
     expect(true).to be(false)
   end
 

@@ -55,56 +55,6 @@ def item_status(current, home)
   end
 end
 
-def map_holdings(_rec, items, ctx)
-  raw_holdings = Hash[
-      items.reject { |i| i['library'] == 'ONLINE' }
-           .group_by { |i| i['library'] }
-           .map do |lib, libitems|
-        [lib, libitems.group_by { |j| j['shelving_location'] }]
-      end]
-  result = raw_holdings.collect do |lib, item_coll|
-    item_coll.map do |loc, loc_items|
-      cns = loc_items.select { |i| i['call_number_scheme'] == 'LC' }
-                     .map { |i| i['call_number'] }
-      if cns.empty?
-        {}
-      else
-        summary = NCSU.summary(cns)
-        summary[:library] = lib
-        summary[:location] = loc
-        summary
-      end
-    end
-  end.reject(&:empty?).flatten.map!(&:to_json)
-  ctx.output_hash['holdings'] = result
-end
-
-# def map_call_numbers(ctx, items)
-#   call_numbers = items.each_with_object({}) do |i, cns|
-#     scheme = i['call_number_scheme']
-#     next unless %w[LC SUDOC].include?(scheme)
-#     numbers = (cns[scheme] ||= [])
-#     numbers << if scheme == 'LC'
-#                  LCC.get_normalized(i['call_number'])
-#                else
-#                  i['call_number']
-#                end
-#   end
-#   ctx.output_hash['call_number_schemes'] = call_numbers.keys
-#   ctx.output_hash['normalized_call_numbers'] = call_numbers.collect do |scheme, values|
-#     s = scheme.downcase
-#     values.collect { |v| "#{s}:#{v}" }
-#   end.flatten.uniq
-
-#   return unless call_numbers.key?('LC')
-#   res = []
-#   LCC.find_path(call_numbers['LC'].first).each_with_object([]) do |part, acc|
-#     acc << part
-#     res << acc.join(':')
-#   end
-#   ctx.output_hash['lcc_callnum_classification'] = res
-# end
-
 # ru#bocop:disable Metrics/BlockLength
 to_field 'items' do |rec, acc, ctx|
   formats = marc_formats.call(rec, [])

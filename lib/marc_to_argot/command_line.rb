@@ -1,5 +1,4 @@
 require 'marc_to_argot'
-require 'trln'
 require 'logger'
 
 

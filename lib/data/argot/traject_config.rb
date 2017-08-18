@@ -86,8 +86,8 @@ end
 # Language
 ######
 
-unless settings["override"].include?("lang")
-  to_field "language", extract_marc("008[35-37]:041a:041d", :translation_map => "marc_languages")
+unless settings['override'].include?('lang')
+  to_field 'language', argot_languages
 end
 
 unless settings["override"].include?("lang_code")

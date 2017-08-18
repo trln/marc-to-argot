@@ -507,5 +507,52 @@ module Traject::Macros
       end
       ctx.output_hash['lcc_callnum_classification'] = res
     end
+
+    # maps languages, by default out of 008[35-37] and 041a and 041d
+    #
+    # de-dups values so you don't get the same one twice.
+    #
+    # Note: major issue with legacy marc records
+    #   Legacy records would jam all langs into 041 indicator1
+    #   E.g., an material translated from latin -> french -> english, would have all
+    #   3 languages in 041a, though the material may not have any french text
+    #
+    #   To remedy, any 041a indicator 1, with a value of 6 or more
+    #   alpha characters will be thrown out
+
+    def argot_languages(spec = "008[35-37]:041")
+      translation_map = Traject::TranslationMap.new("marc_languages")
+
+      extractor = MarcExtractor.new(spec, :separator => nil)
+
+      lambda do |record, accumulator|
+        codes = extractor.collect_matching_lines(record) do |field, spec, extractor|
+          if extractor.control_field?(field)
+            (spec.bytes ? field.value.byteslice(spec.bytes) : field.value)
+          else
+            # the following 2 lines are used to skip legacy records with
+            # potential dirty data, see note above
+            subfield_a = field.subfields.find { |subfield| subfield.code == 'a' }
+            check_subfield_a = subfield_a.nil? ? '' : subfield_a.value
+            next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length > 6
+            extractor.collect_subfields(field, spec).collect do |value|
+              # sometimes multiple language codes are jammed together in one subfield, and
+              # we need to separate ourselves. sigh.
+              unless value.length == 3
+                # split into an array of 3-length substrs; JRuby has problems with regexes
+                # across threads, which is why we don't use String#scan here.
+                value = value.chars.each_slice(3).map(&:join)
+              end
+              value
+            end.flatten
+          end
+        end
+        codes = codes.uniq
+
+        translation_map.translate_array!(codes)
+
+        accumulator.concat codes
+      end
+    end
   end
 end

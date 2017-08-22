@@ -187,6 +187,80 @@ unless settings["override"].include?("subjects")
   to_field "subjects", marc_lcsh_formatted({:spec => settings["specs"][:subjects], :subdivison_separator => " -- "})
 end
 
+unless settings['override'].include?('subject_topic_lcsh')
+  to_field 'subject_topic_lcsh', argot_subjects({ spec: '600|*0|abcdfghjklmnopqrstu:600|*0|x:'\
+                                                        '610|*0|abcdfghklmnoprstu:610|*0|x:'\
+                                                        '611|*0|acdefghklnpqstu:611|*0|x:'\
+                                                        '630|*0|adfghklmnoprst:630|*0|x:'\
+                                                        '647|*0|acdg:647|*0|x:'\
+                                                        '648|*0|x:'\
+                                                        '650|*0|abcdg:650|*0|x:'\
+                                                        '651|*0|x' })
+
+  to_field 'subject_topic_lcsh', argot_subjects({ spec: '600|*7|abcdfghjklmnopqrstu:600|*7|x:'\
+                                                        '610|*7|abcdfghklmnoprstu:610|*7|x:'\
+                                                        '611|*7|acdefghklnpqstu:611|*7|x:'\
+                                                        '630|*7|adfghklmnoprst:630|*7|x:'\
+                                                        '647|*7|acdg:647|*7|x:'\
+                                                        '648|*7|x:'\
+                                                        '650|*7|abcdg:650|*7|x:'\
+                                                        '651|*7|x:'\
+                                                        '656|*7|x:656|*7|a:'\
+                                                        '657|*7|x:657|*7|a',
+                                                  classifications: /lcsh/ })
+end
+
+unless settings['override'].include?('subject_chronological')
+  to_field 'subject_chronological', argot_subjects({ spec: '600|*0|y:610|*0|y:611|*0|y:630|*0|y:'\
+                                                           '648|*0|a:650|*0|y:651|*0|y:655|*0|y' })
+
+  to_field 'subject_chronological', argot_subjects({ spec: '600|*7|y:610|*7|y:611|*7|y:630|*7|y:'\
+                                                           '650|*7|y:651|*7|y:655|*7|y',
+                                                     classifications: /lcsh/ })
+
+  to_field 'subject_chronological', argot_subjects({ spec: '648|*7|a',
+                                                     classifications: /lcsh|fast/ })
+end
+
+unless settings['override'].include?('subject_geographic')
+  to_field 'subject_geographic', argot_subjects({ spec: '600|*0|z:610|*0|z:611|*0|z:630|*0|z:'\
+                                                        '648|*0|z:650|*0|z:651|*0|z:655|*0|z'})
+
+  to_field 'subject_geographic', argot_subjects({ spec: '600|*7|z:610|*7|z:611|*7|z:630|*7|z:'\
+                                                        '650|*7|z:651|*7|z:655|*7|z',
+                                                  classifications: /lcsh/ })
+
+  to_field 'subject_geographic', argot_subjects({ spec: '648|*7|z',
+                                                  classifications: /lcsh|fast/ })
+end
+
+unless settings['override'].include?('subject_genre')
+  to_field 'subject_genre', argot_subjects({ spec: '600|*0|v:610|*0|v:611|*0|v:630|*0|v:647|*0|v:'\
+                                                   '648|*0|v:650|*0|v:651|*0|v:655|*0|v'})
+
+  to_field 'subject_genre', argot_subjects({ spec: '600|*7|v:610|*7|v:611|*7|v:630|*7|v:647|*7|v:'\
+                                                   '648|*7|v:650|*7|v:651|*7|v:656|*7|v:656|*7|k:657|*7|v',
+                                             classifications: /lcsh/})
+
+  to_field 'subject_genre', argot_subjects({ spec: '655|*7|v',
+                                             classifications: /lcsh|lcgft|rbbin|rbgenr|rbprov/})
+
+  to_field 'subject_genre', argot_subjects({ spec: '655|*7|ax:655|*0|ax',
+                                             classifications: /lcsh|lcgft|rbbin|rbgenr/,
+                                             subdivison_separator: ' -- ' })
+
+  to_field 'subject_genre', argot_subjects({ spec: '655|*7|ax',
+                                             classifications: /rbprov/,
+                                             subdivison_separator: ' -- ',
+                                             filter_method: :strip_provenance })
+
+  to_field 'subject_genre', argot_genre_special_cases()
+  to_field 'subject_genre', argot_genre_special_cases({ spec: '006[16]:006[17]',
+                                                        mapped_byte: 16,
+                                                        bio_byte: 17,
+                                                        constraint: :field_006_byte_00_at })
+end
+
 ################################################
 # Additional
 ######

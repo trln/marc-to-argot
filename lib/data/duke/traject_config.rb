@@ -46,7 +46,10 @@ item_map = {
   d: { key: 'call_number_scheme' }
 }
 
-to_field 'items' do |rec, acc|
+to_field 'items' do |rec, acc, ctx|
+
+  lcc_top = Set.new
+  items = []
 
   Traject::MarcExtractor.cached('940', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
     item = {}
@@ -58,11 +61,14 @@ to_field 'items' do |rec, acc|
     end
 
     if item.fetch('call_number_scheme', '') == '0'
-      item['lcc_top'] = item['call_number'][0,1]
+      item['call_number_scheme'] = 'LC'
+      lcc_top.add(item['call_number'][0, 1])
     end
 
+    items << item
     acc << item.to_json if item
-
   end
+  ctx.output_hash['lcc_top'] = lcc_top.to_a
+  map_call_numbers(ctx, items)
 end
 

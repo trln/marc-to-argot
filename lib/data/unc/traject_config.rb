@@ -28,15 +28,6 @@ end
 to_field "institution", literal("unc")
 
 ################################################
-# Catalog Date
-######
-
-to_field "cataloged_date" do |rec, acc|
-  cataloged = Traject::MarcExtractor.cached("909").extract(rec).first
-  acc << Time.parse(cataloged).utc.iso8601 if cataloged
-end
-
-################################################
 # Items
 # https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
 ######

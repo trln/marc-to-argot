@@ -1,5 +1,12 @@
 # Marc to Argot transformer
- 
+
+Converts MARC input to Argot, TRLN Discovery's shared ingest format.
+
+
+## CI Status
+
+![branch master](https://travis-ci.org/trln/marc-to-argot.svg?branch=master)
+
 ## Installation
 1. Clone repo
 2. `bundle install` - make sure you have the necessary repos

@@ -1,0 +1,54 @@
+AR: On Order
+AP: On Order
+BD: Being Repaired
+CA: suppressed
+CB: Being Repaired
+CD: On Order
+CL: On Order
+DD: On Order
+DP: Available
+EX: suppressed
+FM: On Order
+GW: Ask at Circulation Desk
+HO: On Hold
+IB: Being Repaired
+IL: In Transit
+IT: In Transit
+LC: Ask at Circulation Desk
+LM: Lost/Missing
+LO: suppressed
+MI: Lost/Missing
+NA: suppressed
+ND: On Order
+NP: suppressed
+OB: On Order
+OI: On Order
+OO: On Order
+OP: suppressed
+OS: suppressed
+P3: Ask at Reference Desk
+PA: On Order
+PB: Being Repaired
+PC: On Order
+PD: On Order
+PM: On Order
+PR: Being Repaired
+PS: Being Repaired
+PT: On Order
+PV: Being Repaired
+PX: Being Repaired
+RB: Being Repaired
+RC: On Order
+RL: Ask at Circulation Desk
+RM: Available
+RO: In Transit
+RP: Ask at Circulation Desk
+SC: Being Repaired
+SU: suppressed
+TR: Ask at Circulation Desk
+TS: Being Repaired
+UA: Not Available
+UR: Ask at Circulation Desk
+WI: suppressed
+WT: Ask at Circulation Desk
+XB: Not Available

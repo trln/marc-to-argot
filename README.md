@@ -5,7 +5,7 @@ Converts MARC input to Argot, TRLN Discovery's shared ingest format.
 
 ## CI Status
 
-![branch master](https://travis-ci.org/trln/marc-to-argot.svg?branch=master)
+[![branch master](https://travis-ci.org/trln/marc-to-argot.svg?branch=master)](https://travis-ci.org/trln/marc-to-argot)
 
 ## Installation
 1. Clone repo

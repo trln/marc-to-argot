@@ -6,7 +6,7 @@ require 'json'
 describe MarcToArgot do
   class TrajectRunTest 
     def self.run_traject(collection, file, extension = 'xml')
-      indexer = Util::TrajectLoader.load(collection)
+      indexer = Util::TrajectLoader.load(collection, extension)
       test_file = Util.find_marc(collection, file, extension)
       Util.capture_stdout do |_|
         indexer.process(File.open(test_file))
@@ -37,8 +37,15 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
+  it 'loads Duke spec without a problem' do
+    spec = MarcToArgot::SpecGenerator.new('duke')
+    result = spec.generate_spec
+    expect(result['id']).to eq('001')
+  end
+
   it 'generates base results for Duke' do
-    expect(true).to be(false)
+    result = TrajectRunTest.run_traject('duke', 'base', 'mrc')
+    expect(result).not_to be_empty
   end
 
   it 'generates base results for UNC' do

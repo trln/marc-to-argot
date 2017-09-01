@@ -26,9 +26,10 @@ module Util
 
   # Loads a traject configuration
   class TrajectLoader
-    def self.load(collection = 'argot')
+    def self.load(collection = 'argot', extension = 'xml')
       data_dir = File.expand_path('../lib/data',File.dirname(__FILE__))
       spec = MarcToArgot::SpecGenerator.new(collection)
+      marc_source_type = extension == 'mrc' ? 'binary' : 'xml'
       flatten_attributes = YAML.load_file("#{data_dir}/flatten_attributes.yml")
       override = File.exist?("#{data_dir}/#{collection}/overrides.yml") ? YAML.load_file("#{data_dir}/#{collection}/overrides.yml") : []
 
@@ -38,7 +39,7 @@ module Util
         'writer_class_name' => 'Traject::ArgotWriter',
         'specs' => spec.generate_spec,
         'processing_thread_pool' => 1,
-        'marc_source.type' => 'xml',
+        'marc_source.type' => marc_source_type,
         'marc_source.encoding' => 'utf-8',
         'override' => override
       }

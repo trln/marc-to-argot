@@ -48,6 +48,17 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
+  it 'generates holdings data for Duke' do
+    result = TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
+    expect(JSON.parse(result)['holdings']).to(
+      eq(["{\"library\":\"LAW\"," \
+          "\"location\":\"LGEN\"," \
+          "\"notes\":[\"Currently received\"]," \
+          "\"call_number\":\"KD135 .H3 4th\"," \
+          "\"summary\":\"v.1-v.52; Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
+    )
+  end
+
   it 'generates base results for UNC' do
     expect(true).to be(false)
   end

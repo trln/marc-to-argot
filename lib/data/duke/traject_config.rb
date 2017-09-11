@@ -173,9 +173,9 @@ def item_status(rec, item)
     elsif location_map[location_code] == 'N'
       status = 'Not Available'
     else
-      # NOTE! There's a whole set of additional elsif conditions in the Perl script
-      # The result of which seems to be to set the status to 'Ask at Circulation Desk'
-      # no matter whehther any of the condition is met.
+      # NOTE! There's a whole set of additional elsif conditions in the Perl script,
+      # the result of which seems to be to set the status to 'Ask at Circulation Desk'
+      # no matter whether any condition is met.
       # It also sets %serieshash and $hasLocNote vars.
       # Skipping all that for now.
       # See line 5014 of aleph_to_endeca.pl
@@ -192,7 +192,7 @@ def item_status(rec, item)
   if online?(rec) && status == 'Ask at Circulation Desk'
     status = 'Available'
     # NOTE! In the aleph_to_endeca.pl script (line 5082) there's some code
-    #       here about switching the location to PEI. But let's pretend
+    #       about switching the location to PEI. But let's pretend
     #       that's not happening for now.
   end
 
@@ -228,3 +228,49 @@ to_field 'items' do |rec, acc, ctx|
   map_call_numbers(ctx, items)
 end
 
+################################################
+# Holdings
+######
+
+to_field 'holdings' do |rec, acc|
+  Traject::MarcExtractor.cached('852', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    holding = {}
+    field.subfields.each do |sf|
+      case sf.code
+      when 'b'
+        holding['library'] = sf.value
+      when 'c'
+        holding['location'] = sf.value
+      when 'h'
+        holding['class_number'] = sf.value
+      when 'i'
+        holding['cutter_number'] = sf.value
+      when 'A'
+        holding['summary'] = sf.value
+      when 'B'
+        holding['supplement'] = sf.value
+      when 'C'
+        holding['index'] = sf.value
+      when 'z'
+        holding['notes'] ||= []
+        holding['notes'] << sf.value
+      when 'E'
+        holding['notes'] ||= []
+        holding['notes'] << sf.value
+      end
+    end
+
+    call_number = [holding.delete('class_number'),
+                   holding.delete('cutter_number')].compact.join(' ')
+
+    holding['call_number'] = call_number unless call_number.empty?
+
+    summary = [holding.delete('summary'),
+               holding.delete('index'),
+               holding.delete('supplement')].compact.join('; ')
+
+    holding['summary'] = summary unless summary.empty?
+
+    acc << holding.to_json if holding.any?
+  end
+end

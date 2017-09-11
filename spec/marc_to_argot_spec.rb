@@ -69,4 +69,14 @@ describe MarcToArgot do
     result = TrajectRunTest.run_traject('unc', 'base')
     expect(result).not_to be_empty
   end
+
+  it 'generates holdings data for UNC' do
+    result = TrajectRunTest.run_traject('unc', 'holdings')
+    expect(JSON.parse(result)['holdings']).to(
+        eq(["{\"record_id\":\"c5125146\",\"library\":\"UNC:Library "\
+          "Service Center\",\"location\":\"Library Service Center -- Use Request "\
+          "Form\",\"summary\":\"v.42(1992)-v.45(1993)\"}"])
+    )
+  end
+
 end

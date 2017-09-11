@@ -1,16 +1,16 @@
 ################################################
 # Primary ID
 ######
-to_field "id", extract_marc(settings["specs"][:id], :first => true) do |rec, acc|
-  acc.collect! {|s| "UNC#{s.delete("b.")}"}
+to_field 'id', extract_marc(settings['specs'][:id], :first => true) do |rec, acc|
+  acc.collect! {|s| "UNC#{s.delete('b.')}"}
 end
 
 ################################################
 # Local ID
 ######
-to_field "local_id" do |rec, acc|
-  primary = Traject::MarcExtractor.cached("907a").extract(rec).first
-  primary = primary.delete(".") if primary
+to_field 'local_id' do |rec, acc|
+  primary = Traject::MarcExtractor.cached('907a').extract(rec).first
+  primary = primary.delete('.') if primary
 
   local_id = {
     :value => primary,
@@ -25,7 +25,7 @@ end
 ################################################
 # Institutiuon
 ######\
-to_field "institution", literal("unc")
+to_field 'institution', literal('unc')
 
 ################################################
 # Items
@@ -80,4 +80,58 @@ to_field 'items' do |rec, acc, ctx|
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
   end
+end
+
+################################################
+# Holdings
+######
+
+def location_shelf_display
+  @location_shelf_display ||=Traject::TranslationMap.new('unc/location_shelf_code_to_display')
+end
+
+def location_library
+  @location_library ||=Traject::TranslationMap.new('unc/location_shelf_to_location_library')
+end
+
+to_field 'holdings' do |rec, acc|
+  holding = {}
+  nine_twos = []
+  nine_threes = {
+    info: [],   # $2 = 852
+    summary: [] # $2 = 866
+  }
+
+  Traject::MarcExtractor.cached('999|9*|', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    nine_twos << field if field.indicator2 == '2'
+    if field.indicator2 == '3'
+      nine_threes[:info] << { id: field.subfields_with_code('0').first.value, field: field } if field.subfield_with_value_of_code?('852','2')
+      nine_threes[:summary] << { id: field.subfields_with_code('0').first.value, field: field } if field.subfield_with_value_of_code?('866','2')
+    end
+  end
+
+  nine_twos.each do |field|
+    field.subfields.each do |sf|
+      case sf.code
+      when 'a'
+        holding['record_id'] = sf.value
+      when 'b'
+        holding['library'] = location_library[sf.value]
+        holding['location'] = location_shelf_display[sf.value]
+      end
+    end
+  end
+
+  nine_threes[:info].select { |i| i[:id] == holding['record_id'] }.each do |info|
+    call_number_h = info[:field].subfield_values_from_code('h').join(' ')
+    call_number_i = info[:field].subfield_values_from_code('i').join(' ')
+    holding['call_number'] = call_number_h + call_number_i if call_number_h && call_number_i
+    holding['notes'] = info[:field].subfield_values_from_code('z')
+  end
+
+  nine_threes[:summary].select { |i| i[:id] == holding['record_id'] }.each do |summary|
+    holding['summary'] = summary[:field].subfield_values_from_code('a').first
+  end
+
+  acc << holding.to_json if holding.any?
 end

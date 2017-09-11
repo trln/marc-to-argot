@@ -48,7 +48,14 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
+  it 'loads UNC spec without a problem' do
+    spec = MarcToArgot::SpecGenerator.new('unc')
+    result = spec.generate_spec
+    expect(result['id']).to eq('907a')
+  end
+
   it 'generates base results for UNC' do
-    expect(true).to be(false)
+    result = TrajectRunTest.run_traject('unc', 'base')
+    expect(result).not_to be_empty
   end
 end

@@ -1,0 +1,834 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200253Li 4500</leader>
+    <controlfield tag='007'>hgraob---bzcu</controlfield>
+    <controlfield tag='008'>841221s1814    pau     c     000 0 eng d</controlfield>
+    <controlfield tag='001'>15454290</controlfield>
+    <controlfield tag='005'>19960618132912.0</controlfield>
+    <datafield ind1=' ' ind2=' ' tag='040'>
+      <subfield code='a'>STF</subfield>
+      <subfield code='c'>STF</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='100'>
+      <subfield code='a'>Robinson, John,</subfield>
+      <subfield code='d'>1774-1840.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2='3' tag='245'>
+      <subfield code='a'>An easy grammar of history, ancient and modern</subfield>
+      <subfield code='h'>[microform] :</subfield>
+      <subfield code='b'>containing a brief expression of the leading facts in history ... /</subfield>
+      <subfield code='c'>by John Robinson ; considerably enlarged and improved by Benjamin Davies.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='260'>
+      <subfield code='a'>Philadelphia :</subfield>
+      <subfield code='b'>Bennett &amp; Walton,</subfield>
+      <subfield code='c'>1814</subfield>
+      <subfield code='e'>([Philadelphia] :</subfield>
+      <subfield code='f'>J. Rakestraw)</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='300'>
+      <subfield code='a'>180 p.</subfield>
+    </datafield>
+    <datafield ind1='4' ind2=' ' tag='510'>
+      <subfield code='a'>Shaw &amp; Shoemaker,</subfield>
+      <subfield code='c'>32664.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='533'>
+      <subfield code='a'>Microopaque.</subfield>
+      <subfield code='b'>New York, N.Y. :</subfield>
+      <subfield code='c'>Readex Microprint, courtesy of American Antiquarian Society,</subfield>
+      <subfield code='d'>1975.</subfield>
+      <subfield code='e'>2 microopaques ; 23 x 15 cm.</subfield>
+      <subfield code='f'>(Early American imprints.  Second series ; no. 32664). Photographed from imperfect copy: p. 69-70 mutilated.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='539'>
+      <subfield code='a'>s</subfield>
+      <subfield code='b'>1975</subfield>
+      <subfield code='d'>pau</subfield>
+      <subfield code='e'>n</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='0' tag='650'>
+      <subfield code='a'>World history.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Davies, Benjamin.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='752'>
+      <subfield code='a'>United States</subfield>
+      <subfield code='b'>Pennsylvania</subfield>
+      <subfield code='d'>Philadelphia.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='0' tag='830'>
+      <subfield code='a'>Early American imprints.</subfield>
+      <subfield code='n'>Second series ;</subfield>
+      <subfield code='v'>no. 32664.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='907'>
+      <subfield code='a'>b2878474</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i4116584</subfield>
+      <subfield code='l'>dgdaf</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>26</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>HATG-8299-00001</subfield>
+      <subfield code='p'>099</subfield>
+      <subfield code='q'>|a1-3 no. 32664.</subfield>
+    </datafield>
+  </record>
+  <record>
+    <leader>00000cam  2200373Ia 4500</leader>
+    <controlfield tag='006'>m        d</controlfield>
+    <controlfield tag='008'>960923r19951891inu     s     000 0 eng d</controlfield>
+    <controlfield tag='007'>cr bnu||||||||</controlfield>
+    <controlfield tag='001'>35619500</controlfield>
+    <controlfield tag='003'>OCoLC</controlfield>
+    <controlfield tag='005'>20090113124134.0</controlfield>
+    <datafield ind1=' ' ind2=' ' tag='035'>
+      <subfield code='a'>(OCoLC)35619500</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='040'>
+      <subfield code='a'>IUL</subfield>
+      <subfield code='c'>IUL</subfield>
+      <subfield code='d'>OCL</subfield>
+      <subfield code='d'>OCLCQ</subfield>
+      <subfield code='d'>OCLCG</subfield>
+      <subfield code='d'>NOC</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='049'>
+      <subfield code='a'>NOCC</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='4' tag='050'>
+      <subfield code='a'>PR4149.B55</subfield>
+      <subfield code='b'>D7eb</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='100'>
+      <subfield code='a'>Blind, Mathilde,</subfield>
+      <subfield code='d'>1841-1896.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2='0' tag='245'>
+      <subfield code='a'>Dramas in miniature (1891)</subfield>
+      <subfield code='h'>[electronic resource] :</subfield>
+      <subfield code='b'>a machine-readable transcription /</subfield>
+      <subfield code='c'>Mathilde Blind ; transcribed and encoded by Robert Chavez ; edited by Perry Willett.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='256'>
+      <subfield code='a'>Electronic data.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='260'>
+      <subfield code='a'>Bloomington, IN :</subfield>
+      <subfield code='b'>LETRS, Indiana University,</subfield>
+      <subfield code='c'>1995.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>&quot;TEI formatted filesize uncompressed: approx. 124 kbytes.&quot;</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='505'>
+      <subfield code='a'>Dramas In Miniature -- Lyrics.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='506'>
+      <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+      <subfield code='f'>Unlimited simultaneous users</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='520'>
+      <subfield code='a'>Collection of poetry.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='534'>
+      <subfield code='p'>Electronic text of:</subfield>
+      <subfield code='a'>Blind, Mathilde, 1841-1896.</subfield>
+      <subfield code='t'>Dramas in miniature / by Mathilde Blind.</subfield>
+      <subfield code='c'>London : Chatto &amp; Windus, 1891.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='538'>
+      <subfield code='a'>System requirements: World Wide Web access.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='538'>
+      <subfield code='a'>Mode of access: World Wide Web.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Willett, Perry,</subfield>
+      <subfield code='d'>1959-</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Chavez, Robert.</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='773'>
+      <subfield code='t'>Victorian women writers project (online collection)</subfield>
+    </datafield>
+    <datafield ind1='4' ind2='0' tag='856'>
+      <subfield code='u'>http://purl.oclc.org/NET/oluc/35619500/1</subfield>
+      <subfield code='y'>Full text available via UNC-Chapel Hill Libraries</subfield>
+      <subfield code='x'>VWWP electronic book</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='907'>
+      <subfield code='a'>b5807024</subfield>
+    </datafield>
+  </record>
+  <record>
+    <leader>00000cam a2200541Ia 4500</leader>
+    <controlfield tag='008'>761216s1933    fr            000 j fre d</controlfield>
+    <controlfield tag='001'>2626748</controlfield>
+    <controlfield tag='003'>OCoLC</controlfield>
+    <controlfield tag='005'>20110713021240.0</controlfield>
+    <datafield ind1=' ' ind2=' ' tag='035'>
+      <subfield code='a'>(OCoLC)2626748</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='040'>
+      <subfield code='a'>MDY</subfield>
+      <subfield code='c'>MDY</subfield>
+      <subfield code='d'>OCLCG</subfield>
+      <subfield code='d'>STF</subfield>
+      <subfield code='d'>NOC</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='049'>
+      <subfield code='a'>OFD0</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='4' tag='050'>
+      <subfield code='a'>PQ1276.M33</subfield>
+      <subfield code='b'>I53 1933</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='4' tag='245'>
+      <subfield code='a'>Les Incarnations de Madame Bovary /</subfield>
+      <subfield code='c'>d&apos;après Odette Pannetier, Francis Carco, G. de la Fouchardière, J. De Lacretelle, J. Sennep.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='260'>
+      <subfield code='a'>Paris :</subfield>
+      <subfield code='b'>Roger Dacosta, pour le Laboratoire de l&apos;Hépatrol,</subfield>
+      <subfield code='c'>[1933]</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='300'>
+      <subfield code='a'>80, [3] p. :</subfield>
+      <subfield code='b'>col. ill. ;</subfield>
+      <subfield code='c'>24 cm.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>Title in green and black; green line border around text; half-title.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>&quot;Achevé d&apos;imprimer pour le Laboratoire de l&apos;Hépatrol le 20 Mai 1933, par les soins de Roger Dacosta, éditeur, 22, rue de Marignan à Paris&quot;--Printing statement at end of text.</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='505'>
+      <subfield code='a'>Mme. Bovary, ou, Le sexe-appeal en Province, par G. de la Fouchardière--Un drame de la vie provinciale, par Odette Pannetier--Miss Normandie, par J. Sennep--Une arrière-petite-cousine de Mme. Bovary, par Francis Carco--Emmeline, ou L&apos;autre Bovary, par J. de Lacretelle.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2='0' tag='600'>
+      <subfield code='a'>Flaubert, Gustave,</subfield>
+      <subfield code='d'>1821-1880.</subfield>
+      <subfield code='t'>Madame Bovary.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2='0' tag='600'>
+      <subfield code='a'>Flaubert, Gustave,</subfield>
+      <subfield code='d'>1821-1880</subfield>
+      <subfield code='v'>Parodies, imitations, etc.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='7' tag='655'>
+      <subfield code='a'>Authors&apos; inscriptions (Provenance)</subfield>
+      <subfield code='z'>France</subfield>
+      <subfield code='z'>Paris</subfield>
+      <subfield code='y'>20th century.</subfield>
+      <subfield code='2'>rbprov</subfield>
+      <subfield code='5'>NcU</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='7' tag='655'>
+      <subfield code='a'>Publishers&apos; paper bindings (Binding)</subfield>
+      <subfield code='z'>France</subfield>
+      <subfield code='z'>Paris</subfield>
+      <subfield code='y'>20th century.</subfield>
+      <subfield code='2'>rbbin</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Carco, Francis,</subfield>
+      <subfield code='d'>1886-1958.</subfield>
+      <subfield code='4'>ctb</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Carco, Francis,</subfield>
+      <subfield code='d'>1886-1958.</subfield>
+      <subfield code='t'>Arrière-petite-cousine de Madame Bovary.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Dacosta, Roger.</subfield>
+      <subfield code='4'>edt</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Gallard, A.</subfield>
+      <subfield code='4'>ill</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Hémard, Joseph,</subfield>
+      <subfield code='d'>1880-1961.</subfield>
+      <subfield code='4'>ill</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Hamon, Hellé.</subfield>
+      <subfield code='4'>ill</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Lacretelle, Jacques de,</subfield>
+      <subfield code='d'>1888-1985.</subfield>
+      <subfield code='4'>ctb</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>La Fouchardiere, Georges de,</subfield>
+      <subfield code='d'>1874-1946.</subfield>
+      <subfield code='4'>ctb</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Pannetier, Odette.</subfield>
+      <subfield code='4'>ctb</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Roubille, Jacques.</subfield>
+      <subfield code='4'>ill</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Sennep, Jean,</subfield>
+      <subfield code='d'>1894-1982.</subfield>
+      <subfield code='4'>ctb</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='740'>
+      <subfield code='a'>Francis Carco Collection.</subfield>
+    </datafield>
+    <datafield ind1='2' ind2=' ' tag='791'>
+      <subfield code='a'>Hanes Family Library Fund.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='919'>
+      <subfield code='a'>590 touched / wkg</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='907'>
+      <subfield code='a'>b6788640</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i9095905</subfield>
+      <subfield code='l'>wcbb</subfield>
+      <subfield code='s'>o</subfield>
+      <subfield code='t'>0</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00033599133</subfield>
+      <subfield code='p'>050</subfield>
+      <subfield code='q'>|aPQ1276.M33|bI53 1933</subfield>
+      <subfield code='n'>Bound in publisher&apos;s original stiff paper wrappers with vignette in black and printing in green on front cover; in protective glassine wrapper, as issued;  imperfect copy: p. 33-48, &quot;Miss Normandie&quot; by Jean Sennep wanting; 17 gatherings, printed on Japanese vellum, laid-in publisher&apos;s wrapper; signed at table of contents by all authors.</subfield>
+    </datafield>
+  </record>
+  <record>
+    <leader>00000cas  2200709 a 4500</leader>
+    <controlfield tag='008'>771214c19779999caumn p   o   0   a0eng d</controlfield>
+    <controlfield tag='001'>3489884</controlfield>
+    <controlfield tag='003'>OCoLC</controlfield>
+    <controlfield tag='005'>20091027070346.0</controlfield>
+    <datafield ind1=' ' ind2=' ' tag='010'>
+      <subfield code='a'>87642851</subfield>
+      <subfield code='z'>sc 78000279</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='022'>
+      <subfield code='a'>0149-4244</subfield>
+      <subfield code='2'>1</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='035'>
+      <subfield code='a'>(OCoLC)3489884</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='037'>
+      <subfield code='b'>New Oxford Review Inc., 1069 Kains Ave., Berkeley, CA 94706</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='040'>
+      <subfield code='a'>NSD</subfield>
+      <subfield code='c'>NSD</subfield>
+      <subfield code='d'>DLC</subfield>
+      <subfield code='d'>NSD</subfield>
+      <subfield code='d'>OCL</subfield>
+      <subfield code='d'>NSD</subfield>
+      <subfield code='d'>DLC</subfield>
+      <subfield code='d'>NST</subfield>
+      <subfield code='d'>NSD</subfield>
+      <subfield code='d'>NST</subfield>
+      <subfield code='d'>DLC</subfield>
+      <subfield code='d'>NST</subfield>
+      <subfield code='d'>DLC</subfield>
+      <subfield code='d'>NST</subfield>
+      <subfield code='d'>IUL</subfield>
+      <subfield code='d'>SYS</subfield>
+      <subfield code='d'>OCLCQ</subfield>
+      <subfield code='d'>DLC</subfield>
+      <subfield code='d'>CUS</subfield>
+      <subfield code='d'>CUI</subfield>
+      <subfield code='d'>NOC</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='042'>
+      <subfield code='a'>nsdp</subfield>
+      <subfield code='a'>lc</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='049'>
+      <subfield code='a'>NOCC</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='0' tag='050'>
+      <subfield code='a'>BR1</subfield>
+      <subfield code='b'>.N66</subfield>
+    </datafield>
+    <datafield ind1='1' ind2='4' tag='050'>
+      <subfield code='a'>BX5800 N48</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='210'>
+      <subfield code='a'>New Oxford rev.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='0' tag='222'>
+      <subfield code='a'>New Oxford review</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='0' tag='245'>
+      <subfield code='a'>New Oxford review</subfield>
+      <subfield code='h'>[serial].</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='260'>
+      <subfield code='a'>[Oakland, Calif. :</subfield>
+      <subfield code='b'>American Church Union,</subfield>
+      <subfield code='c'>c1977-</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='300'>
+      <subfield code='a'>v. :</subfield>
+      <subfield code='b'>ill. ;</subfield>
+      <subfield code='c'>27-28 cm.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='310'>
+      <subfield code='a'>Monthly (except combined July/Aug.),</subfield>
+      <subfield code='b'>&lt;2004-&gt;</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='321'>
+      <subfield code='a'>Monthly (except combined Jan./Feb. and July/Aug.),</subfield>
+      <subfield code='b'>1979-</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='321'>
+      <subfield code='a'>Monthly (except July and Aug.),</subfield>
+      <subfield code='b'>1977-1979</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='362'>
+      <subfield code='a'>Vol. 44, no. 2 (Feb. 1977)-</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>Published: Berkeley, CA : New Oxford Review Inc., &lt;1990-&gt;</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>Latest issue consulted: Vol. 57, no. 10 (Dec. 1990).</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='530'>
+      <subfield code='a'>Issued also in microfilm from University Microfilms.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='550'>
+      <subfield code='a'>Official publication of the American Church Union, 1977-&lt;Nov. 1985&gt;</subfield>
+    </datafield>
+    <datafield ind1='2' ind2='0' tag='610'>
+      <subfield code='a'>Catholic Church</subfield>
+      <subfield code='v'>Periodicals.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='0' tag='650'>
+      <subfield code='a'>Theology</subfield>
+      <subfield code='v'>Periodicals.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='0' tag='650'>
+      <subfield code='a'>Church and social problems</subfield>
+      <subfield code='v'>Periodicals.</subfield>
+    </datafield>
+    <datafield ind1='2' ind2=' ' tag='710'>
+      <subfield code='a'>American Church Union.</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='8' tag='776'>
+      <subfield code='i'>Online version:</subfield>
+      <subfield code='t'>New Oxford review (Online)</subfield>
+      <subfield code='w'>(OCoLC)45309761</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='0' tag='780'>
+      <subfield code='t'>American church news</subfield>
+      <subfield code='w'>(OCoLC)1780751</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='907'>
+      <subfield code='a'>b1500183</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i2108570</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>0</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767410</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800 .N4</subfield>
+      <subfield code='v'>v.60(1993)</subfield>
+      <subfield code='n'>damaged, some contents lost</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i2108569</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767839</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800 .N4</subfield>
+      <subfield code='v'>v.44-45(1977-1978)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893635</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767429</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.46-47(1979-1980)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893636</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767438</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.48-49(1981-1982)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893637</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767447</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.50-51(1983-1984)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893638</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767456</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.52-53(1985-1986)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893639</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767465</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.54-55(1987-1988)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893640</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767474</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.56-57(1989-1990)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893641</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767483</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.58(1991)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893642</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767492</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.59(1992)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893643</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767508</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.61(1994)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893644</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767517</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.62(1995)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893645</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767526</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.63(1996)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893646</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767642</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.64(1997)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893647</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767633</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.65(1998)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893648</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767624</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.66:no.1-8(Jan.-Sept.1999)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i7893649</subfield>
+      <subfield code='l'>trln</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>3</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00035767615</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aBX5800|b.N4</subfield>
+      <subfield code='v'>v.66:no.10-11(Nov.-Dec.1999)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='2' tag='999'>
+      <subfield code='a'>c2784314</subfield>
+      <subfield code='b'>trln</subfield>
+      <subfield code='c'>0</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='3' tag='999'>
+      <subfield code='0'>c2784314</subfield>
+      <subfield code='2'>852</subfield>
+      <subfield code='3'>c</subfield>
+      <subfield code='b'>555521</subfield>
+      <subfield code='h'>BX5800</subfield>
+      <subfield code='i'>.N4</subfield>
+      <subfield code='x'>Earlier titles exist.</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='3' tag='999'>
+      <subfield code='0'>c2784314</subfield>
+      <subfield code='2'>853</subfield>
+      <subfield code='3'>y</subfield>
+      <subfield code='8'>1</subfield>
+      <subfield code='a'>v.</subfield>
+      <subfield code='b'>no.</subfield>
+      <subfield code='i'>(year)</subfield>
+      <subfield code='j'>(month)</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='3' tag='999'>
+      <subfield code='0'>c2784314</subfield>
+      <subfield code='2'>866</subfield>
+      <subfield code='3'>h</subfield>
+      <subfield code='8'>1</subfield>
+      <subfield code='a'>v.44:no.2(Feb. 1977)-v.66:no.8(Sept. 1999), v.66:no.10(Nov. 1999)-v.66:no.11(Dec. 1999) </subfield>
+    </datafield>
+  </record>
+  <record>
+    <leader>00000nam a2200337Ia 4500</leader>
+    <controlfield tag='008'>120518s2012    pr            000 p spa d</controlfield>
+    <controlfield tag='001'>793912600</controlfield>
+    <controlfield tag='003'>OCoLC</controlfield>
+    <controlfield tag='005'>20120606010530.0</controlfield>
+    <datafield ind1=' ' ind2=' ' tag='020'>
+      <subfield code='a'>9780984711611</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='020'>
+      <subfield code='a'>0984711619</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='020'>
+      <subfield code='a'>0983454531</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='020'>
+      <subfield code='a'>9780983454533</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='035'>
+      <subfield code='a'>(OCoLC)793912600</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='040'>
+      <subfield code='a'>CGU</subfield>
+      <subfield code='c'>CGU</subfield>
+      <subfield code='d'>NOC</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='049'>
+      <subfield code='a'>NOCC</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='100'>
+      <subfield code='a'>Jiménez Corretjer, Zoé,</subfield>
+      <subfield code='d'>1963-</subfield>
+    </datafield>
+    <datafield ind1='1' ind2='3' tag='245'>
+      <subfield code='a'>El cantar de la memoria :</subfield>
+      <subfield code='b'>rapsodia /</subfield>
+      <subfield code='c'>Zoé Jiménez Corretjer.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='260'>
+      <subfield code='a'>San Juan, P.R. :</subfield>
+      <subfield code='b'>Casa de los Poetas,</subfield>
+      <subfield code='c'>2012.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='300'>
+      <subfield code='a'>246 p. ;</subfield>
+      <subfield code='c'>18 cm.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>Poems.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='0' tag='830'>
+      <subfield code='a'>Colección del fauno.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='907'>
+      <subfield code='a'>b7086759</subfield>
+    </datafield>
+    <datafield ind1='9' ind2='1' tag='999'>
+      <subfield code='i'>i9608179</subfield>
+      <subfield code='l'>ddda</subfield>
+      <subfield code='s'>-</subfield>
+      <subfield code='t'>0</subfield>
+      <subfield code='c'>1</subfield>
+      <subfield code='o'>0</subfield>
+      <subfield code='b'>00044442317</subfield>
+      <subfield code='p'>090</subfield>
+      <subfield code='q'>|aPQ7442.J56|bC35 2012</subfield>
+    </datafield>
+  </record>
+  <record>
+    <leader>00000cam a22003851a 4500</leader>
+    <controlfield tag='006'>m    |   d |</controlfield>
+    <controlfield tag='008'>860108s1772    ctu     o    s000 0 eng d</controlfield>
+    <controlfield tag='007'>cr mn mmmmabba</controlfield>
+    <controlfield tag='001'>aas03009688</controlfield>
+    <controlfield tag='005'>20021212170846.0</controlfield>
+    <datafield ind1=' ' ind2=' ' tag='040'>
+      <subfield code='a'>MWA</subfield>
+      <subfield code='c'>MWA</subfield>
+      <subfield code='e'>bdrb</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='110'>
+      <subfield code='a'>Connecticut.</subfield>
+      <subfield code='b'>Governor (1769-1784 : Trumbull)</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='0' tag='245'>
+      <subfield code='a'>By the Honorable Jonathan Trumbull, Esquire; governor and commander in chief of the English colony of Connecticut, in New-England, in America. A proclamation.</subfield>
+      <subfield code='h'>[electronic resource] :</subfield>
+      <subfield code='b'>Whereas I have received His Majesty&apos;s royal instruction ... where the royal family is appointed to be particularly prayed for; the following form and order should be observed, viz. Our Gracious Queen Charlotte, His Royal Highness George Prince of Wales, and all the royal family ... Given under my hand, in the Council chamber in Hartford, the twenty-sixth day of May, 1772 ...</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='260'>
+      <subfield code='a'>[Connecticut :</subfield>
+      <subfield code='b'>s.n.,</subfield>
+      <subfield code='c'>1772]</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='300'>
+      <subfield code='a'>1 online resource (1 sheet ([1] p.))</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>Signed: Jonathan Trumbull. God save the King.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='500'>
+      <subfield code='a'>Bristol suggests New London as the place of publication, but this is not listed in H.A. Johnson&apos;s Checklist of New London, Connecticut, imprints.</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='506'>
+      <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+      <subfield code='f'>Unlimited simultaneous users</subfield>
+    </datafield>
+    <datafield ind1='4' ind2=' ' tag='510'>
+      <subfield code='a'>Bristol</subfield>
+      <subfield code='c'>B3440</subfield>
+    </datafield>
+    <datafield ind1='4' ind2=' ' tag='510'>
+      <subfield code='a'>Shipton &amp; Mooney</subfield>
+      <subfield code='c'>42329</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='588'>
+      <subfield code='a'>Description based on microform record.</subfield>
+    </datafield>
+    <datafield ind1='0' ind2='0' tag='600'>
+      <subfield code='a'>George</subfield>
+      <subfield code='b'>III,</subfield>
+      <subfield code='c'>King of Great Britain,</subfield>
+      <subfield code='d'>1738-1820.</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='7' tag='655'>
+      <subfield code='a'>Broadsides.</subfield>
+      <subfield code='2'>rbgenr</subfield>
+    </datafield>
+    <datafield ind1='1' ind2=' ' tag='700'>
+      <subfield code='a'>Trumbull, Jonathan,</subfield>
+      <subfield code='d'>1710-1785.</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='740'>
+      <subfield code='a'>By the Honorable Jonathan Trumbull, Esquire; governor and commander in chief of the English colony of Connecticut ...</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2=' ' tag='752'>
+      <subfield code='a'>United States</subfield>
+      <subfield code='b'>Connecticut.</subfield>
+    </datafield>
+    <datafield ind1='0' ind2=' ' tag='773'>
+      <subfield code='t'>Early American imprints, series 1: Evans (online collection)</subfield>
+    </datafield>
+    <datafield ind1='4' ind2='0' tag='856'>
+      <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+      <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://opac.newsbank.com/select/evans/42329</subfield>
+    </datafield>
+    <datafield ind1=' ' ind2='1' tag='907'>
+      <subfield code='a'>b6664108</subfield>
+    </datafield>
+  </record>
+</collection>

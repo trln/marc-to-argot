@@ -48,12 +48,6 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
-<<<<<<< HEAD
-  it 'loads UNC spec without a problem' do
-    spec = MarcToArgot::SpecGenerator.new('unc')
-    result = spec.generate_spec
-    expect(result['id']).to eq('907a')
-=======
   it 'generates holdings data for Duke' do
     result = TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
     expect(JSON.parse(result)['holdings']).to(
@@ -63,7 +57,12 @@ describe MarcToArgot do
           "\"call_number\":\"KD135 .H3 4th\"," \
           "\"summary\":\"v.1-v.52; Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
     )
->>>>>>> master
+  end
+
+  it 'loads UNC spec without a problem' do
+    spec = MarcToArgot::SpecGenerator.new('unc')
+    result = spec.generate_spec
+    expect(result['id']).to eq('907a')
   end
 
   it 'generates base results for UNC' do

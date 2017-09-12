@@ -133,7 +133,7 @@ module Traject::Macros
                                'manufacturer'
                              else
                                'publication'
-                                                end
+                             end
                            else
                              'publication'
                            end
@@ -153,6 +153,103 @@ module Traject::Macros
       lambda do |rec, acc|
         st = ArgotSemantics.get_authors(rec, spec)
         acc << st if st
+      end
+    end
+
+    def argot_author_facet(spec)
+      lambda do |rec, acc|
+        authors = ArgotSemantics.get_author_facet(rec, spec)
+        acc.concat authors if authors.any?
+      end
+    end
+
+    def self.get_author_facet(rec, spec='100abcdgjqa')
+      authors = []
+
+      Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+        special_subfield_codes = field.subfields.select do |subfield|
+          /^[gntke4]$/ =~ subfield.code
+        end.map(&:code)
+
+        if field.tag != '700' ||
+          (field.tag == '700' &&
+            (field.indicator2 == '2' ||
+              (field.indicator2 != '2' &&
+                (subfield_tk_absent(special_subfield_codes) &&
+                  (subfield_e4_absent(special_subfield_codes) ||
+                   e4_maps_to_creator(field) ||
+                   has_allowable_e4_value(field))))))
+
+          allowable_subfields = field.subfields.select do |subfield|
+            spec.includes_subfield_code?(subfield.code)
+          end
+
+          # Remove gn subfields if occurs after t or k
+          %w(g n).each { |code| remove_subfield_after_tk(allowable_subfields, special_subfield_codes, code) }
+
+          # Join the values of each subfield.
+          author = allowable_subfields.map(&:value).join(' ') if allowable_subfields.any?
+
+          # Trim punctation from the string of joined subfields
+          author = Traject::Macros::Marc21.trim_punctuation(author) unless author.nil? || author.empty?
+
+          # Accumulate author string in array if present
+          authors << author unless author.nil? || author.empty?
+        end
+      end
+
+      authors
+    end
+
+    def self.relator_categories
+      @relator_categories ||= Traject::TranslationMap.new('shared/relator_categories')
+    end
+
+    def self.subfield_tk_absent(codes)
+      codes.select { |i| /^[tk]$/ =~ i }.empty?
+    end
+
+    def self.subfield_e4_absent(codes)
+      codes.select { |i| /^[e4]$/ =~ i }.empty?
+    end
+
+    def self.has_allowable_e4_value(field)
+      has_allowable_e_value(field) || has_allowable_4_value(field)
+    end
+
+    def self.has_allowable_e_value(field)
+      field.subfields.select do |sf|
+        sf.code == 'e' && sf.value =~ /^(editor|editor of compilation|director|film director)$/
+      end.any?
+    end
+
+    def self.has_allowable_4_value(field)
+      field.subfields.select do |sf|
+        sf.code == '4' && sf.value =~ /^(edt|edc|drt|fmd)$/
+      end.any?
+    end
+
+    def self.e4_maps_to_creator(field)
+      field.subfields.select do |sf|
+        sf.code =~ /^(e|4)$/ && relator_categories[sf.value] == 'creator'
+      end.any?
+    end
+
+    def self.subfield_before_t_and_k(subfield, codes)
+      if codes.include?('t') && codes.include?('k')
+        codes.index(subfield) < codes.index('t') && codes.index(subfield) < codes.index('k')
+      elsif codes.include?('t')
+        codes.index(subfield) < codes.index('t')
+      elsif codes.include?('k')
+        codes.index(subfield) < codes.index('k')
+      end
+    end
+
+    def self.remove_subfield_after_tk(subfields, special_subfield_codes, code)
+      unless special_subfield_codes.include?(code) &&
+         (subfield_tk_absent(special_subfield_codes) ||
+         subfield_before_t_and_k(code, special_subfield_codes))
+        subfields.delete_if { |sf| sf.code == code }
       end
     end
 

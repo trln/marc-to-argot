@@ -59,6 +59,20 @@ describe MarcToArgot do
     )
   end
 
+  it 'generates author_facet values for Duke' do
+    result = TrajectRunTest.run_traject('duke', 'author_facet', 'mrc')
+    expect(JSON.parse(result)['author_facet']).to(
+      eq(["Author (100 field), 1874-1943",
+          "Author (700 field, second indicator is 2), 1874-1943",
+          "Author (700 field, no subfield e or 4), 1874-1943",
+          "Author (700 field, subfield 4 value maps to creator) 1874-1943",
+          "Author (700 field, subfield e allowable value) 1874-1943",
+          "Author (700 field, t before g should display without g Value), 1874-1943",
+          "Author (700 field, g before t should display with g Value) 1874-1943. Value",
+          "Cornford, Francis Macdonald, 1874-1943"])
+      )
+  end
+
   it 'generates base results for UNC' do
     expect(true).to be(false)
   end

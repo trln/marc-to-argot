@@ -125,6 +125,10 @@ unless settings["override"].include?("authors")
   to_field "authors", argot_authors(settings["specs"][:authors])
 end
 
+unless settings["override"].include?("author_facet")
+  to_field "author_facet", argot_author_facet(settings["specs"][:author_facet])
+end
+
 ################################################
 # Title
 ######

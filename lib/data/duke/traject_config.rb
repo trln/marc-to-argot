@@ -106,7 +106,9 @@ def microform?(rec)
 end
 
 def online?(rec)
-  indicator_2_has_value?(rec, '856', '0') || indicator_2_has_value?(rec, '856', '1')
+  indicator_2_has_value?(rec, '856', ' ') ||
+  indicator_2_has_value?(rec, '856', '0') ||
+  indicator_2_has_value?(rec, '856', '1')
 end
 
 # TODO! Aleph makes it challenging to determine item status.

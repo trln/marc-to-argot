@@ -2,7 +2,7 @@
 # Primary ID
 ######
 to_field 'id', extract_marc(settings['specs'][:id], :first => true) do |rec, acc|
-  acc.collect! {|s| "UNC#{s.delete('b.')}"}
+  acc.collect! {|s| "UNC#{s}"}
 end
 
 ################################################

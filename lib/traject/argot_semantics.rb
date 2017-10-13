@@ -35,6 +35,19 @@ module Traject::Macros
     end
 
     ################################################
+    # Lambda for Rollup ID
+    ######
+    def argot_rollup_id(spec)
+      lambda do |rec, acc|
+        extractor = MarcExtractor.cached(spec, separator: nil)
+        oclc_num = extractor.extract(rec).collect! do |o|
+          Marc21Semantics.oclcnum_extract(o)
+        end.compact
+        acc << "OCLC#{oclc_num.first}"
+      end
+    end
+
+    ################################################
     # Lambda for ISSN
     ######
     def argot_issn(config)

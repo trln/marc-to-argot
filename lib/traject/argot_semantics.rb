@@ -698,6 +698,24 @@ module Traject::Macros
       false
     end
 
+    #####
+    # Converts an array of string to a delimited hierarchical facet
+    # value as expected by blacklight-hierarchy.
+    # e.g. [foo, bar, baz] => [ foo, foo:bar, foo:bar:baz ]
+    def array_to_hierarchy_facet(args, delimiter = ':')
+      result = []
+      args.each_with_object([]) do |part, acc|
+       acc << part
+       result << acc.join(delimiter)
+      end
+      result
+    end
+
+    def arrays_to_hierarchy(values)
+      values.collect { |v| array_to_hierarchy_facet(v) }.flatten!.uniq
+    end
+
+
     # extracts call numbers from an items
     # and maps them into the output_hash
     # populates: `call_number_schemes`,

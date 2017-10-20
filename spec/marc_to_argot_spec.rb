@@ -73,6 +73,13 @@ describe MarcToArgot do
       )
   end
 
+  it 'generates rollup_id for Duke' do
+    result = TrajectRunTest.run_traject('duke', 'rollup_id', 'mrc')
+    expect(JSON.parse(result)['rollup_id']).to(
+      eq('OCLC12420922')
+    )
+  end
+
   it 'loads UNC spec without a problem' do
     spec = MarcToArgot::SpecGenerator.new('unc')
     result = spec.generate_spec

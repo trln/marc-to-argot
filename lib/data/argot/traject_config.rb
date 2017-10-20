@@ -36,7 +36,7 @@ unless settings["override"].include?("ead_id")
 end
 
 unless settings["override"].include?("rollup_id")
-  to_field "id", oclcnum("035a:035z")
+  to_field "rollup_id", argot_rollup_id("035a")
 end
 
 unless settings["override"].include?("isbn")

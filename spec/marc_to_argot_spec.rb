@@ -46,6 +46,13 @@ describe MarcToArgot do
     )
   end
 
+  it 'generates the location hierarchy for Duke' do
+    result = Util::TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
+    expect(JSON.parse(result)['location_hierarchy']).to(
+      eq(['duke', 'duke:dukelaww', 'law', 'law:lawdukw'])
+    )
+  end
+
   it 'generates author_facet values for Duke' do
     result = Util::TrajectRunTest.run_traject('duke', 'author_facet', 'mrc')
     expect(JSON.parse(result)['author_facet']).to(

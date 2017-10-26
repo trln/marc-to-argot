@@ -64,8 +64,12 @@ def status_map
   @status_map ||= Traject::TranslationMap.new('duke/process_state')
 end
 
-def location_map
-  @location_map ||= Traject::TranslationMap.new('duke/location_default_state')
+def location_state_map
+  @location_state_map ||= Traject::TranslationMap.new('duke/location_default_state')
+end
+
+def location_hierarchy_map
+  @location_hierarchy_map ||= Traject::TranslationMap.new('duke/location_hierarchy')
 end
 
 def select_fields(rec, field_tag)
@@ -152,13 +156,13 @@ def item_status(rec, item)
         status = 'Ask at Circulation Desk'
       elsif item_id =~ /^B\d{6}/
         status = 'Ask at Circulation Desk'
-      elsif location_map[location_code] == 'C' || location_map[location_code] == 'B'
+      elsif location_state_map[location_code] == 'C' || location_state_map[location_code] == 'B'
         if status_code == '03' || status_code == '08' || status_code == '02'
           status = 'Available - Library Use Only'
         else
           status = 'Available'
         end
-      elsif location_map[location_code] == 'N'
+      elsif location_state_map[location_code] == 'N'
         status = 'Not Available'
       else
         if status_code == '03' || status_code == '08' || status_code == '02'
@@ -177,13 +181,13 @@ def item_status(rec, item)
   elsif status_code == 'NI' || item_id =~ /^B\d{6}/
     if type == 'MAP' && status_code != 'NI'
       status = 'Available'
-    elsif location_map[location_code] == 'A' || location_map[location_code] == 'B'
+    elsif location_state_map[location_code] == 'A' || location_state_map[location_code] == 'B'
       if status_code == '03' || status_code == '08' || status_code == '02'
         status = 'Available - Library Use Only'
       else
         status = 'Available'
       end
-    elsif location_map[location_code] == 'N'
+    elsif location_state_map[location_code] == 'N'
       status = 'Not Available'
     else
       # NOTE! There's a whole set of additional elsif conditions in the Perl script,
@@ -212,6 +216,18 @@ def item_status(rec, item)
   status
 end
 
+def map_locations_to_hierarchy(items)
+  locations = ['duke']
+  items.each do |item|
+    loc_b = item.fetch('loc_b', nil)
+    loc_n = item.fetch('loc_n', nil)
+    locations << location_hierarchy_map[loc_b] if loc_b
+    locations << location_hierarchy_map[loc_n] if loc_n
+  end
+
+  locations.map { |loc| loc.split('|') if loc }.flatten.map { |c| c.split(';') if c }.compact
+end
+
 to_field 'items' do |rec, acc, ctx|
   lcc_top = Set.new
   items = []
@@ -238,8 +254,12 @@ to_field 'items' do |rec, acc, ctx|
     items << item
     acc << item.to_json if item
   end
+
+  locations = map_locations_to_hierarchy(items)
+
   ctx.output_hash['lcc_top'] = lcc_top.to_a
   ctx.output_hash['available'] = 'Available' if is_available?(items)
+  ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(locations) if locations
 
   map_call_numbers(ctx, items)
 end

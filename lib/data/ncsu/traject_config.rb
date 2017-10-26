@@ -28,16 +28,16 @@ to_field 'institution', literal('ncsu')
 # Items
 ######
 item_map = {
-  i: { key: 'barcode' },
-  c: { key: 'copy_number' },
-  m: { key: 'library' },
-  o: { key: 'note' },
-  a: { key: 'call_number' },
-  k: { key: 'current_location' },
-  l: { key: 'shelving_location' },
+  i: { key: 'item_id' },
+  c: { key: 'copy_no' },
+  m: { key: 'loc_b' },
+  o: { key: 'notes' },
+  a: { key: 'call_no' },
+  k: { key: 'loc_current' },
+  l: { key: 'loc_n' },
   t: { key: 'type' },
   v: { key: 'volume' },
-  w: { key: 'call_number_scheme' }
+  w: { key: 'cn_scheme' }
 }
 
 # rubocop:disable MethodLength
@@ -69,12 +69,12 @@ to_field 'items' do |rec, acc, ctx|
     end
     # $k is only present if current != home
     # needs refinement for reserves etc. and non-lending items
-    current = item['current_location']
-    home = item['shelving_location']
+    current = item['loc_current']
+    home = item['loc_n']
     item['status'] = item_status(current, home)
 
-    if item.fetch('call_number_scheme', '') == 'LC'
-      lcc_top.add(item['call_number'][0, 1])
+    if item.fetch('cn_scheme', '') == 'LC'
+      lcc_top.add(item['call_no'][0, 1])
     end
     items << item
     acc << item.to_json if item

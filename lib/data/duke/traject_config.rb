@@ -43,17 +43,17 @@ to_field 'institution', literal('duke')
 # Items
 ######
 item_map = {
-  p: { key: 'barcode' },
-  n: { key: 'copy_number' },
-  b: { key: 'library' },
-  z: { key: 'note' },
-  h: { key: 'call_number' },
+  p: { key: 'item_id' },
+  n: { key: 'copy_no' },
+  b: { key: 'loc_b' },
+  z: { key: 'notes' },
+  h: { key: 'call_no' },
   o: { key: 'status_code' },
   q: { key: 'process_state' },
-  x: { key: 'date_due' },
-  c: { key: 'shelving_location' },
+  x: { key: 'due_date' },
+  c: { key: 'loc_n' },
   r: { key: 'type' },
-  d: { key: 'call_number_scheme' }
+  d: { key: 'cn_scheme' }
 }
 
 def is_available?(items)
@@ -129,12 +129,12 @@ end
 def item_status(rec, item)
   status_code = item['status_code'].to_s
   process_state = item['process_state'].to_s
-  date_due = item['date_due'].to_s
-  barcode = item['barcode'].to_s
+  due_date = item['due_date'].to_s
+  item_id = item['item_id'].to_s
   location_code = item['location_code'].to_s
   type = item['type'].to_s
 
-  if !date_due.empty? && process_state != 'IT'
+  if !due_date.empty? && process_state != 'IT'
     status = 'Checked Out'
   elsif status_code == '00'
     status = 'Not Available'
@@ -150,7 +150,7 @@ def item_status(rec, item)
         end
       elsif microform?(rec)
         status = 'Ask at Circulation Desk'
-      elsif barcode =~ /^B\d{6}/
+      elsif item_id =~ /^B\d{6}/
         status = 'Ask at Circulation Desk'
       elsif location_map[location_code] == 'C' || location_map[location_code] == 'B'
         if status_code == '03' || status_code == '08' || status_code == '02'
@@ -174,7 +174,7 @@ def item_status(rec, item)
         status = 'UNKNOWN'
       end
     end
-  elsif status_code == 'NI' || barcode =~ /^B\d{6}/
+  elsif status_code == 'NI' || item_id =~ /^B\d{6}/
     if type == 'MAP' && status_code != 'NI'
       status = 'Available'
     elsif location_map[location_code] == 'A' || location_map[location_code] == 'B'
@@ -227,10 +227,13 @@ to_field 'items' do |rec, acc, ctx|
 
     item['status'] = item_status(rec, item)
 
-    if item.fetch('call_number_scheme', '') == '0'
-      item['call_number_scheme'] = 'LC'
-      lcc_top.add(item['call_number'][0, 1])
+    if item.fetch('cn_scheme', '') == '0'
+      item['cn_scheme'] = 'LC'
+      lcc_top.add(item['call_no'][0, 1])
     end
+
+    item.delete('process_state')
+    item.delete('status_code')
 
     items << item
     acc << item.to_json if item
@@ -251,9 +254,9 @@ to_field 'holdings' do |rec, acc|
     field.subfields.each do |sf|
       case sf.code
       when 'b'
-        holding['library'] = sf.value
+        holding['loc_b'] = sf.value
       when 'c'
-        holding['location'] = sf.value
+        holding['loc_n'] = sf.value
       when 'h'
         holding['class_number'] = sf.value
       when 'i'
@@ -276,7 +279,7 @@ to_field 'holdings' do |rec, acc|
     call_number = [holding.delete('class_number'),
                    holding.delete('cutter_number')].compact.join(' ')
 
-    holding['call_number'] = call_number unless call_number.empty?
+    holding['call_no'] = call_number unless call_number.empty?
 
     summary = [holding.delete('summary'),
                holding.delete('index'),

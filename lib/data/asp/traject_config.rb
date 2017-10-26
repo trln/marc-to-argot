@@ -34,7 +34,7 @@ to_field "cataloged_date", extract_marc("909")
 ######
 item_map = {
   :b => {
-    :key => "barcode"
+    :key => "item_id"
   },
   :c => {
     :key => "copy_number",
@@ -46,20 +46,20 @@ item_map = {
     :key => "ils_id",
   },
   :l => {
-    :key => "location",
+    :key => "loc_b",
     #:translation_map => "unc/locations_map",
   },
   :n => {
-    :key => "note",
+    :key => "notes",
   },
   :o => {
     :key => "checkouts",
   },
   :p => {
-    :key => "call_number_scheme",
+    :key => "cn_scheme",
   },
   :q => {
-    :key => "call_number", 
+    :key => "call_no",
   },
   :s => {
     :key => "status",

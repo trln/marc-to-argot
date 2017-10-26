@@ -723,13 +723,13 @@ module Traject::Macros
     # and `lcc_callnum_classification`
     def map_call_numbers(ctx, items)
       call_numbers = items.each_with_object({}) do |i, cns|
-        scheme = i['call_number_scheme']
+        scheme = i['cn_scheme']
         next unless %w[LC SUDOC].include?(scheme)
         numbers = (cns[scheme] ||= [])
         numbers << if scheme == 'LC'
-                     LCC.normalize(i['call_number'])
+                     LCC.normalize(i['call_no'])
                    else
-                     i['call_number']
+                     i['call_no']
                    end
       end
       ctx.output_hash['call_number_schemes'] = call_numbers.keys

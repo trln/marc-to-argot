@@ -37,7 +37,7 @@ item_map = {
     :key => "item_id"
   },
   :c => {
-    :key => "copy_number",
+    :key => "copy_no",
   },
   :d => {
     :key => "due_date",
@@ -69,7 +69,7 @@ item_map = {
     :key => "type",
   },
   :v => {
-    :key => "volume",
+    :key => "vol",
   }
 }
 

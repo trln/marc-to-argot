@@ -36,7 +36,7 @@ item_map = {
   k: { key: 'loc_current' },
   l: { key: 'loc_n' },
   t: { key: 'type' },
-  v: { key: 'volume' },
+  v: { key: 'vol' },
   w: { key: 'cn_scheme' }
 }
 

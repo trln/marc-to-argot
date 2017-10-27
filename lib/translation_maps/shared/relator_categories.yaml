@@ -1,528 +1,542 @@
-clb: contributor
-collaborator: contributor
 voc: contributor
 vocalist: contributor
-grt: contributor
-graphic technician: contributor
-anm: contributor
-animator: contributor
-arr: contributor
-arranger: contributor
-auc: uncategorized
-auctioneer: uncategorized
-ard: uncategorized
-artistic director: uncategorized
-abr: contributor
-abridger: contributor
-act: contributor
-actor: contributor
-bnd: other
-binder: other
-lit: uncategorized
-libelant-appellant: uncategorized
-pbl: publisher
-publisher: publisher
-aqt: contributor
-author in quotations or text abstracts: contributor
-dfd: other
-defendant: other
-sgd: contributor
-stage director: contributor
-ive: contributor
-interviewee: contributor
-cng: contributor
-cinematographer: contributor
-lse: uncategorized
-licensee: uncategorized
-bsl: uncategorized
-bookseller: uncategorized
-cou: contributor
-court governed: contributor
-lgd: contributor
-lighting designer: contributor
-anl: uncategorized
-analyst: uncategorized
-pta: uncategorized
-patent applicant: uncategorized
-dft: uncategorized
-defendant-appellant: uncategorized
-rcd: contributor
-recordist: contributor
-lbr: uncategorized
-laboratory: uncategorized
-cmp: contributor
-composer: contributor
-adp: contributor
-adapter: contributor
-hnr: other
-honoree: other
-drt: contributor
-director: contributor
-osp: contributor
-onscreen presenter: contributor
-ltg: contributor
-lithographer: contributor
-elg: uncategorized
-electrician: uncategorized
-msd: contributor
-musical director: contributor
-blw: uncategorized
-blurb writer: uncategorized
-rsr: contributor
-restorationist: contributor
-clt: contributor
-collotyper: contributor
-dub: uncategorized
-dubious author: uncategorized
-tyd: uncategorized
-type designer: uncategorized
-cov: uncategorized
-cover designer: uncategorized
-evp: uncategorized
-event place: uncategorized
-sht: uncategorized
-supporting host: uncategorized
-itr: contributor
-instrumentalist: contributor
-frg: contributor
-forger: contributor
-lso: uncategorized
-licensor: uncategorized
-cte: uncategorized
-contestee-appellee: uncategorized
-plt: contributor
-platemaker: contributor
-led: uncategorized
-lead: uncategorized
-brd: contributor
-broadcaster: contributor
-dto: other
-dedicator: other
-len: uncategorized
-lender: uncategorized
-fmd: contributor
-film director: contributor
-ldr: uncategorized
-laboratory director: uncategorized
-dgg: other
-degree granting institution: other
-scl: contributor
-sculptor: contributor
-pre: contributor
-presenter: contributor
-csl: contributor
-consultant: contributor
-asn: uncategorized
-associated name: uncategorized
-rtm: contributor
-research team member: contributor
-dtc: uncategorized
-data contributor: uncategorized
-stn: contributor
-standards body: contributor
-prc: uncategorized
-process contact: uncategorized
-pat: uncategorized
-patron: uncategorized
-pop: uncategorized
-printer of plates: uncategorized
-srv: contributor
-surveyor: contributor
-inv: contributor
-inventor: contributor
-sgn: uncategorized
-signer: uncategorized
-dst: publisher
-distributor: publisher
-tyg: uncategorized
-typographer: uncategorized
-mrb: uncategorized
-marbler: uncategorized
-etr: contributor
-etcher: contributor
-sad: contributor
-scientific advisor: contributor
-mfr: contributor
-manufacturer: contributor
-app: uncategorized
-applicant: uncategorized
-cnd: contributor
-conductor: contributor
-prt: manufacturer
-printer: manufacturer
-edt: contributor
-editor: contributor
-orm: contributor
-organizer of meeting: contributor
-prg: contributor
-programmer: contributor
-cre: contributor
-creator: contributor
-dpc: uncategorized
-depicted: uncategorized
-own: owner
-owner: owner
-cph: uncategorized
-copyright holder: uncategorized
-sce: contributor
-scenarist: contributor
-mrk: uncategorized
-markup editor: uncategorized
-pro: contributor
-producer: contributor
-cos: uncategorized
-contestant: uncategorized
-ilu: contributor
-illuminator: contributor
-ctg: contributor
-cartographer: contributor
-fds: contributor
-film distributor: contributor
-lbt: contributor
-librettist: contributor
-prp: uncategorized
-production place: uncategorized
-pmn: uncategorized
-production manager: uncategorized
-tch: contributor
-teacher: contributor
-sec: contributor
-secretary: contributor
-aud: contributor
-author of dialog: contributor
-lel: uncategorized
-libelee: uncategorized
-aui: contributor
-author of introduction, etc.: contributor
-mod: contributor
-moderator: contributor
-opn: uncategorized
-opponent: uncategorized
-ato: contributor
-autographer: contributor
-bdd: uncategorized
-binding designer: uncategorized
-spk: contributor
-speaker: contributor
-std: contributor
-set designer: contributor
-red: uncategorized
-redaktor: uncategorized
-crp: contributor
-correspondent: contributor
-adi: contributor
-art director: contributor
-wam: contributor
-writer of accompanying material: contributor
-wat: contributor
-writer of added text: contributor
-cot: uncategorized
-contestant-appellant: uncategorized
-acp: uncategorized
-art copyist: uncategorized
-ann: contributor
-annotator: contributor
-hst: contributor
-host: contributor
-gis: uncategorized
-geographic information specialist: uncategorized
-crr: uncategorized
-corrector: uncategorized
-trl: contributor
-translator: contributor
-aut: contributor
-author: contributor
-bkp: uncategorized
-book producer: uncategorized
-ctb: contributor
-contributor: contributor
-wit: uncategorized
-witness: uncategorized
-scr: contributor
-scribe: contributor
-flm: contributor
-film editor: contributor
-clr: uncategorized
-colorist: uncategorized
-isb: contributor
-issuing body: contributor
-ppm: uncategorized
-papermaker: uncategorized
-mte: contributor
-metal-engraver: contributor
-prn: contributor
-production company: contributor
-jug: contributor
-jurisdiction governed: contributor
-cmt: uncategorized
-compositor: uncategorized
-wal: contributor
-writer of added lyrics: contributor
-cpt: uncategorized
-complainant-appellant: uncategorized
-nrt: contributor
-narrator: contributor
-uvp: uncategorized
-university place: uncategorized
-dsr: contributor
-designer: contributor
-dte: other
-dedicatee: other
-lee: uncategorized
-libelee-appellee: uncategorized
-aus: contributor
-screenwriter: contributor
-fmk: contributor
-filmmaker: contributor
-pte: uncategorized
-plaintiff-appellee: uncategorized
-pth: uncategorized
-patent holder: uncategorized
-chr: contributor
-choreographer: contributor
-sds: uncategorized
-sound designer: uncategorized
-prd: contributor
-production personnel: contributor
-rsp: creator
-respondent: creator
-com: contributor
-compiler: contributor
-bpd: uncategorized
-bookplate designer: uncategorized
-cmm: contributor
-commentator: contributor
-ape: contributor
-appellee: contributor
-cpe: uncategorized
-complainant-appellee: uncategorized
-his: contributor
-host institution: contributor
-ill: contributor
-illustrator: contributor
-aft: contributor
-author of afterword, colophon, etc.: contributor
-cll: contributor
-calligrapher: contributor
-coe: uncategorized
-contestant-appellee: uncategorized
-edc: contributor
-editor of compilation: contributor
-arc: contributor
-architect: contributor
-csp: contributor
-consultant to a project: contributor
-org: contributor
-originator: contributor
-wac: contributor
-writer of added commentary: contributor
-elt: uncategorized
-electrotyper: uncategorized
-fmp: contributor
-film producer: contributor
-exp: uncategorized
-expert: uncategorized
-tld: contributor
-television director: contributor
-dln: contributor
-delineator: contributor
-ptf: other
-plaintiff: other
-rth: contributor
-research team head: contributor
-prm: contributor
-printmaker: contributor
-sll: contributor
-seller: contributor
-rps: uncategorized
-repository: uncategorized
-mus: contributor
-musician: contributor
-tlp: contributor
-television producer: contributor
-asg: uncategorized
-assignee: uncategorized
-dis: contributor
-dissertant: contributor
-rcp: other
-addressee: other
-cas: contributor
-caster: contributor
-drm: contributor
-draftsman: contributor
-prv: uncategorized
-provider: uncategorized
-rse: uncategorized
-respondent-appellee: uncategorized
-tcd: uncategorized
-technical director: uncategorized
-cpl: uncategorized
-complainant: uncategorized
-egr: contributor
-engraver: contributor
-fac: contributor
-facsimilist: contributor
-pdr: uncategorized
-project director: uncategorized
-con: uncategorized
-conservator: uncategorized
-dnr: owner
-donor: owner
-art: contributor
-artist: contributor
-col: other
-collector: other
-cst: contributor
-costume designer: contributor
-wde: contributor
-wood engraver: contributor
-prs: contributor
-production designer: contributor
-rbr: uncategorized
-rubricator: uncategorized
-oth: other
-other: other
-dpt: owner
-depositor: owner
-trc: contributor
-transcriber: contributor
-mfp: uncategorized
-manufacture place: uncategorized
-dtm: uncategorized
-data manager: uncategorized
-ant: uncategorized
-bibliographic antecedent: uncategorized
-bkd: uncategorized
-book designer: uncategorized
-edm: contributor
-editor of moving image work: contributor
-cwt: contributor
-commentator for written text: contributor
-cpc: uncategorized
-copyright claimant: uncategorized
-dbp: uncategorized
-distribution place: uncategorized
-brl: contributor
-braille embosser: contributor
-cor: contributor
-collection registrar: contributor
-ths: uncategorized
-thesis advisor: uncategorized
-let: uncategorized
-libelee-appellant: uncategorized
-ins: other
-inscriber: other
-rpt: contributor
-reporter: contributor
-jud: contributor
-judge: contributor
-stg: uncategorized
-setting: uncategorized
-bjd: uncategorized
-bookjacket designer: uncategorized
-ccp: contributor
-conceptor: contributor
-stl: contributor
-storyteller: contributor
-ptt: uncategorized
-plaintiff-appellant: uncategorized
-spn: other
-sponsor: other
-res: contributor
-researcher: contributor
-rce: contributor
-recording engineer: contributor
-eng: contributor
-engineer: contributor
-pbd: uncategorized
-publishing director: uncategorized
-sng: contributor
-singer: contributor
-pra: contributor
-praeses: contributor
-cts: uncategorized
-contestee: uncategorized
-pfr: uncategorized
-proofreader: uncategorized
-stm: uncategorized
-stage manager: uncategorized
-crt: contributor
-court reporter: contributor
-rev: contributor
-reviewer: contributor
-ivr: contributor
-interviewer: contributor
-pup: uncategorized
-publication place: uncategorized
-cns: uncategorized
-censor: uncategorized
-pma: uncategorized
-permitting agency: uncategorized
-mon: uncategorized
-monitor: uncategorized
-rdd: contributor
-radio director: contributor
-cli: uncategorized
-client: uncategorized
-apl: contributor
-appellant: contributor
-pan: contributor
-panelist: contributor
-att: uncategorized
-attributed name: uncategorized
-rpy: contributor
-responsible party: contributor
-rpc: contributor
-radio producer: contributor
-mcp: uncategorized
-music copyist: uncategorized
-prf: contributor
-performer: contributor
-pht: contributor
-photographer: contributor
-enj: contributor
-enacting jurisdiction: contributor
-rsg: contributor
-restager: contributor
-str: uncategorized
-stereotyper: uncategorized
-lsa: contributor
-landscape architect: contributor
-lie: uncategorized
-libelant-appellee: uncategorized
-fpy: uncategorized
-first party: uncategorized
-ctt: uncategorized
-contestee-appellant: uncategorized
-lyr: contributor
-lyricist: contributor
+clb: contributor
+collaborator: contributor
+grt: creator
+graphic technician: creator
 ppt: contributor
 puppeteer: contributor
+stm: uncategorized
+stage manager: uncategorized
+stg: uncategorized
+setting: uncategorized
+sce: contributor
+scenarist: contributor
+prv: uncategorized
+provider: uncategorized
+pra: creator
+praeses: creator
+pte: uncategorized
+plaintiff-appellee: uncategorized
+spk: contributor
+speaker: contributor
+rce: contributor
+recording engineer: contributor
+pro: contributor
+producer: contributor
+wac: contributor
+writer of added commentary: contributor
+win: contributor
+writer of introduction: contributor
+tlp: other
+television producer: other
+sgd: contributor
+stage director: contributor
+ptf: other
+plaintiff: other
+tyd: uncategorized
+type designer: uncategorized
+sds: uncategorized
+sound designer: uncategorized
+sgn: uncategorized
+signer: uncategorized
+rcp: other
+addressee: other
+srv: contributor
+surveyor: contributor
+rsg: contributor
+restager: contributor
+pmn: uncategorized
+production manager: uncategorized
+sng: contributor
+singer: contributor
+res: contributor
+researcher: contributor
+pup: uncategorized
+publication place: uncategorized
+wat: contributor
+writer of added text: contributor
+rpc: other
+radio producer: other
+ivr: creator
+interviewer: creator
+mod: contributor
+moderator: contributor
+prs: contributor
+production designer: contributor
+csp: contributor
+consultant to a project: contributor
+dpc: uncategorized
+depicted: uncategorized
+lse: uncategorized
+licensee: uncategorized
+brd: publisher
+broadcaster: publisher
 fnd: uncategorized
 funder: uncategorized
+edt: contributor
+editor: contributor
+bkp: uncategorized
+book producer: uncategorized
+egr: manufacturer
+engraver: manufacturer
+ccp: contributor
+conceptor: contributor
+opn: uncategorized
+opponent: uncategorized
+cmm: contributor
+commentator: contributor
+orm: other
+organizer: other
+cov: uncategorized
+cover designer: uncategorized
+vac: contributor
+voice actor: contributor
+rcd: contributor
+recordist: contributor
+dtc: uncategorized
+data contributor: uncategorized
+cur: other
+curator: other
+lee: uncategorized
+libelee-appellee: uncategorized
+edc: contributor
+editor of compilation: contributor
+cou: other
+court governed: other
+com: creator
+compiler: creator
+mrb: uncategorized
+marbler: uncategorized
+osp: contributor
+onscreen presenter: contributor
+drt: other
+director: other
+fpy: uncategorized
+first party: uncategorized
+rps: uncategorized
+repository: uncategorized
+cns: uncategorized
+censor: uncategorized
+pat: uncategorized
+patron: uncategorized
+lel: uncategorized
+libelee: uncategorized
+aft: contributor
+author of afterword, colophon, etc.: contributor
+mtk: contributor
+minute taker: contributor
+isb: other
+issuing body: other
+lbr: uncategorized
+laboratory: uncategorized
+ann: other
+annotator: other
+dnr: owner
+donor: owner
+ape: other
+appellee: other
+lsa: creator
+landscape architect: creator
+cpc: uncategorized
+copyright claimant: uncategorized
+elt: uncategorized
+electrotyper: uncategorized
+tcd: uncategorized
+technical director: uncategorized
+pbd: uncategorized
+publishing director: uncategorized
+sll: owner
+seller: owner
+bdd: uncategorized
+binding designer: uncategorized
+pan: contributor
+panelist: contributor
+cmp: creator
+composer: creator
+asg: uncategorized
+assignee: uncategorized
+wde: contributor
+wood engraver: contributor
+spn: other
+sponsor: other
+ptt: uncategorized
+plaintiff-appellant: uncategorized
+crr: uncategorized
+corrector: uncategorized
+enj: creator
+enacting jurisdiction: creator
+cnd: contributor
+conductor: contributor
+lso: uncategorized
+licensor: uncategorized
+cpt: uncategorized
+complainant-appellant: uncategorized
+rth: contributor
+research team head: contributor
+lit: uncategorized
+libelant-appellant: uncategorized
+rse: uncategorized
+respondent-appellee: uncategorized
+cpl: uncategorized
+complainant: uncategorized
 rst: uncategorized
 respondent-appellant: uncategorized
-dfe: uncategorized
-defendant-appellee: uncategorized
-wdc: contributor
-woodcutter: contributor
-ctr: contributor
-contractor: contributor
-dnc: contributor
-dancer: contributor
-fmo: owner
-former owner: owner
-mdc: uncategorized
-metadata contact: uncategorized
-cur: contributor
-curator: contributor
-ren: contributor
-renderer: contributor
-vdg: contributor
-videographer: contributor
-lil: uncategorized
-libelant: uncategorized
+rsr: other
+restorationist: other
+exp: uncategorized
+expert: uncategorized
+prm: manufacturer
+printmaker: manufacturer
+eng: contributor
+engineer: contributor
+rbr: uncategorized
+rubricator: uncategorized
+col: other
+collector: other
+elg: uncategorized
+electrician: uncategorized
+dfd: other
+defendant: other
+arr: contributor
+arranger: contributor
+chr: creator
+choreographer: creator
+str: uncategorized
+stereotyper: uncategorized
+fac: contributor
+facsimilist: contributor
+mrk: uncategorized
+markup editor: uncategorized
+tyg: uncategorized
+typographer: uncategorized
+ctb: contributor
+contributor: contributor
+dis: contributor
+dissertant: contributor
+brl: manufacturer
+braille embosser: manufacturer
+ilu: other
+illuminator: other
+aud: contributor
+author of dialog: contributor
+auc: uncategorized
+auctioneer: uncategorized
+aus: creator
+screenwriter: creator
+lbt: creator
+librettist: creator
+cpe: uncategorized
+complainant-appellee: uncategorized
+prc: uncategorized
+process contact: uncategorized
+pth: uncategorized
+patent holder: uncategorized
+dgg: other
+degree granting institution: other
+ths: uncategorized
+thesis advisor: uncategorized
+med: other
+medium: other
+mus: contributor
+musician: contributor
+bpd: uncategorized
+bookplate designer: uncategorized
+lyr: creator
+lyricist: creator
+scl: creator
+sculptor: creator
+ill: contributor
+illustrator: contributor
+bsl: uncategorized
+bookseller: uncategorized
+abr: contributor
+abridger: contributor
+wit: uncategorized
+witness: uncategorized
+mfr: contributor
+manufacturer: contributor
+hst: contributor
+host: contributor
+edm: contributor
+editor of moving image work: contributor
+org: contributor
+originator: contributor
+mte: contributor
+metal-engraver: contributor
+pht: creator
+photographer: creator
+cot: uncategorized
+contestant-appellant: uncategorized
+cph: uncategorized
+copyright holder: uncategorized
 fld: uncategorized
 field director: uncategorized
+scr: contributor
+scribe: contributor
+sht: uncategorized
+supporting host: uncategorized
+prd: contributor
+production personnel: contributor
+anm: contributor
+animator: contributor
+prt: manufacturer
+printer: manufacturer
+ppm: uncategorized
+papermaker: uncategorized
+led: uncategorized
+lead: uncategorized
+ren: contributor
+renderer: contributor
+prf: contributor
+performer: contributor
+fmd: other
+film director: other
+jug: other
+jurisdiction governed: other
+ctg: creator
+cartographer: creator
+std: contributor
+set designer: contributor
+aui: contributor
+author of introduction, etc.: contributor
+rsp: creator
+respondent: creator
+pta: uncategorized
+patent applicant: uncategorized
+fmo: owner
+former owner: owner
+ive: creator
+interviewee: creator
+cli: uncategorized
+client: uncategorized
+pma: uncategorized
+permitting agency: uncategorized
+dte: other
+dedicatee: other
+trl: contributor
+translator: contributor
+his: other
+host institution: other
+vdg: contributor
+videographer: contributor
+itr: contributor
+instrumentalist: contributor
+dfe: uncategorized
+defendant-appellee: uncategorized
+ato: other
+autographer: other
+dgs: other
+degree supervisor: other
+nrt: contributor
+narrator: contributor
+ctr: contributor
+contractor: contributor
+adi: contributor
+art director: contributor
+lil: uncategorized
+libelant: uncategorized
+ant: uncategorized
+bibliographic antecedent: uncategorized
+prn: other
+production company: other
+dbp: uncategorized
+distribution place: uncategorized
+inv: creator
+inventor: creator
+sad: contributor
+scientific advisor: contributor
+ins: other
+inscriber: other
+wam: contributor
+writer of accompanying material: contributor
+hnr: other
+honoree: other
+lie: uncategorized
+libelant-appellee: uncategorized
+dto: other
+dedicator: other
+att: uncategorized
+attributed name: uncategorized
+fmp: other
+film producer: other
+pfr: uncategorized
+proofreader: uncategorized
+csl: other
+consultant: other
+pbl: publisher
+publisher: publisher
+asn: uncategorized
+associated name: uncategorized
+cts: uncategorized
+contestee: uncategorized
+wal: contributor
+writer of added lyrics: contributor
+rtm: contributor
+research team member: contributor
+fds: distributor
+film distributor: distributor
+prp: uncategorized
+production place: uncategorized
+dft: uncategorized
+defendant-appellant: uncategorized
+cwt: contributor
+commentator for written text: contributor
+sec: contributor
+secretary: contributor
+drm: contributor
+draftsman: contributor
 spy: uncategorized
 second party: uncategorized
+cst: contributor
+costume designer: contributor
+dsr: creator
+designer: creator
+acp: uncategorized
+art copyist: uncategorized
+blw: uncategorized
+blurb writer: uncategorized
+ldr: uncategorized
+laboratory director: uncategorized
+len: uncategorized
+lender: uncategorized
+cte: uncategorized
+contestee-appellee: uncategorized
+lgd: contributor
+lighting designer: contributor
+cre: creator
+creator: creator
+own: owner
+owner: owner
+bkd: uncategorized
+book designer: uncategorized
+con: uncategorized
+conservator: uncategorized
+gis: uncategorized
+geographic information specialist: uncategorized
+art: creator
+artist: creator
+mcp: uncategorized
+music copyist: uncategorized
+evp: uncategorized
+event place: uncategorized
+pre: contributor
+presenter: contributor
+mfp: uncategorized
+manufacture place: uncategorized
+cor: other
+collection registrar: other
+oth: other
+other: other
+wst: contributor
+writer of supplementary textual content: contributor
+rev: contributor
+reviewer: contributor
+stn: contributor
+standards body: contributor
+let: uncategorized
+libelee-appellant: uncategorized
+mon: uncategorized
+monitor: uncategorized
+uvp: uncategorized
+university place: uncategorized
+etr: manufacturer
+etcher: manufacturer
+ard: uncategorized
+artistic director: uncategorized
+rdd: other
+radio director: other
+wdc: contributor
+woodcutter: contributor
+wpr: contributor
+writer of preface: contributor
+stl: contributor
+storyteller: contributor
+bnd: other
+binder: other
+dst: publisher
+distributor: publisher
+aqt: contributor
+author in quotations or text abstracts: contributor
+cll: contributor
+calligrapher: contributor
+dtm: uncategorized
+data manager: uncategorized
+frg: contributor
+forger: contributor
+clr: uncategorized
+colorist: uncategorized
+crp: contributor
+correspondent: contributor
+msd: contributor
+musical director: contributor
+mdc: uncategorized
+metadata contact: uncategorized
+arc: creator
+architect: creator
+tld: other
+television director: other
+crt: contributor
+court reporter: contributor
+apl: other
+appellant: other
+ctt: uncategorized
+contestee-appellant: uncategorized
+dpt: owner
+depositor: owner
+adp: contributor
+adapter: contributor
+pdr: uncategorized
+project director: uncategorized
+act: contributor
+actor: contributor
+cmt: uncategorized
+compositor: uncategorized
+pop: uncategorized
+printer of plates: uncategorized
+dub: uncategorized
+dubious author: uncategorized
+prg: creator
+programmer: creator
+jud: other
+judge: other
+cng: other
+cinematographer: other
+tch: contributor
+teacher: contributor
+trc: contributor
+transcriber: contributor
+coe: uncategorized
+contestant-appellee: uncategorized
+cos: uncategorized
+contestant: uncategorized
+dnc: contributor
+dancer: contributor
+dln: contributor
+delineator: contributor
+rpt: contributor
+reporter: contributor
+anl: uncategorized
+analyst: uncategorized
+red: uncategorized
+redaktor: uncategorized
+aut: creator
+author: creator
+clt: manufacturer
+collotyper: manufacturer
+ltg: manufacturer
+lithographer: manufacturer
+plt: manufacturer
+platemaker: manufacturer
+cas: manufacturer
+caster: manufacturer
+fmk: creator
+filmmaker: creator
+flm: contributor
+film editor: contributor
+rpy: contributor
+responsible party: contributor
+app: uncategorized
+applicant: uncategorized
+bjd: uncategorized
+bookjacket designer: uncategorized

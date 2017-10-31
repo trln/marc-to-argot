@@ -23,4 +23,5 @@ module MarcToArgot
   autoload :CommandLine, 'marc_to_argot/command_line'
   autoload :SpecGenerator, 'marc_to_argot/spec_generator'
   autoload :CallNumbers, 'marc_to_argot/call_numbers'
+  autoload :Macros, 'marc_to_argot/macros'
 end

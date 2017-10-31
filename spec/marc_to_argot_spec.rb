@@ -51,10 +51,10 @@ describe MarcToArgot do
   it 'generates holdings data for Duke' do
     result = TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
     expect(JSON.parse(result)['holdings']).to(
-      eq(["{\"library\":\"LAW\"," \
-          "\"location\":\"LGEN\"," \
+      eq(["{\"loc_b\":\"LAW\"," \
+          "\"loc_n\":\"LGEN\"," \
           "\"notes\":[\"Currently received\"]," \
-          "\"call_number\":\"KD135 .H3 4th\"," \
+          "\"call_no\":\"KD135 .H3 4th\"," \
           "\"summary\":\"v.1-v.52; Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
     )
   end
@@ -94,8 +94,8 @@ describe MarcToArgot do
   it 'generates holdings data for UNC' do
     result = TrajectRunTest.run_traject('unc', 'holdings')
     expect(JSON.parse(result)['holdings']).to(
-        eq(["{\"record_id\":\"c5125146\",\"library\":\"UNC:Library "\
-          "Service Center\",\"location\":\"Library Service Center -- Use Request "\
+        eq(["{\"holdings_id\":\"c5125146\",\"loc_b\":\"UNC:Library "\
+          "Service Center\",\"loc_n\":\"Library Service Center -- Use Request "\
           "Form\",\"summary\":\"v.42(1992)-v.45(1993)\"}"])
     )
   end

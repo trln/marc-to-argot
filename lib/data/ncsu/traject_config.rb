@@ -1,5 +1,6 @@
 require 'set'
 extend MarcToArgot::CallNumbers
+extend MarcToArgot::Macros::NCSU
 
 ################################################
 # Primary ID
@@ -19,6 +20,8 @@ end
 # Institutiuon
 ######
 to_field 'institution', literal('ncsu')
+
+to_field 'rollup_id', ncsu_rollup_id
 
 ################################################
 # Catalog Date
@@ -51,14 +54,12 @@ def item_status(current, home)
   elsif current == home
     'Available'
   else
-    'Unknown'
+    "Unknown (#{current})"
   end
 end
 
 # ru#bocop:disable Metrics/BlockLength
 to_field 'items' do |rec, acc, ctx|
-  lcc_top = Set.new
-  formats = marc_formats.call(rec, [])
   items = []
   Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
     item = {}
@@ -72,14 +73,8 @@ to_field 'items' do |rec, acc, ctx|
     current = item['loc_current']
     home = item['loc_n']
     item['status'] = item_status(current, home)
-
-    if item.fetch('cn_scheme', '') == 'LC'
-      lcc_top.add(item['call_no'][0, 1])
-    end
     items << item
     acc << item.to_json if item
   end
-  ctx.output_hash['lcc_top'] = lcc_top.to_a
-  #map_holdings(rec, items, ctx) if formats.include?('Journal/Newspaper')
   map_call_numbers(ctx, items)
 end

@@ -774,14 +774,13 @@
     </marcxml:datafield>
   </marcxml:record>
   <marcxml:record>
+    <!-- no 035a but has 001 that is an OCLC number  -->
     <marcxml:leader>01283cam a2200301Ka 4500</marcxml:leader>
+    <marcxml:controlfield tag="001">ocm30104535</marcxml:controlfield>
     <marcxml:controlfield tag="003">OCoLC</marcxml:controlfield>
     <marcxml:controlfield tag="005">19940408100648.0</marcxml:controlfield>
     <marcxml:controlfield tag="007">he-bmu---bbca</marcxml:controlfield>
     <marcxml:controlfield tag="008">940408s1985    gaua    b    f000 0 eng d</marcxml:controlfield>
-    <marcxml:datafield tag="035" ind1=" " ind2=" ">
-      <marcxml:subfield code="a">(OCoLC)30104535</marcxml:subfield>
-    </marcxml:datafield>
     <marcxml:datafield tag="040" ind1=" " ind2=" ">
       <marcxml:subfield code="a">NRC</marcxml:subfield>
       <marcxml:subfield code="c">NRC</marcxml:subfield>

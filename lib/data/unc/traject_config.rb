@@ -23,7 +23,7 @@ to_field 'local_id' do |rec, acc|
 end
 
 ################################################
-# Institutiuon
+# Institution
 ######\
 to_field 'institution', literal('unc')
 

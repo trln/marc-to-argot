@@ -23,7 +23,7 @@ to_field 'local_id' do |rec, acc|
 end
 
 ################################################
-# Institutiuon
+# Institution
 ######\
 to_field 'institution', literal('unc')
 
@@ -36,47 +36,84 @@ def status_map
 end
 
 def is_available?(items)
-  items.any? { |i| i['status'].downcase.start_with?('available') rescue false }
+  available_statuses = ['Ask the MRC', 'Available', 'Contact library for status', 'In-Library Use Only']
+  items.any? { |i| available_statuses.include?(i['status']) rescue false }
 end
 
-item_map = {
-  i: { key: 'item_id' },
-  l: { key: 'loc_b' },
-  p: { key: 'cn_scheme' },
-  q: { key: 'call_no' },
-  s: { key: 'status', translation_map: status_map }
-}
-
+def set_cn_scheme(marc_tag, i1, i2)
+  case marc_tag
+  when '050'
+    'LC'
+  when '060'
+    'NLM'
+  when '070'
+    'NAL'
+  when '082'
+    'DDC'
+  when '083'
+    'DDC'
+  when '090'
+    'LC'
+  when '092'
+    'DDC'
+  when '086'
+    if i1 == '0'
+      'SUDOC'
+    else
+      'OTHERGOVDOC'
+    end
+  when '099'
+    'ALPHANUM'
+  end
+end
 
 to_field 'items' do |rec, acc, ctx|
 
-  lcc_top = Set.new
   formats = marc_formats.call(rec, [])
-  lcc_scheme_codes = %w[090 050]
   items = []
 
-  Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    if field.indicator2 == '1'
-      item = {}
+  Traject::MarcExtractor.cached('999|*1|cdilnpqsv', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
 
-      field.subfields.each do |subfield|
-        code = subfield.code.to_sym
-        map_hash = item_map.fetch(code, key: nil)
-        unless map_hash.nil?
-          item[map_hash[:key]] = map_hash[:translation_map] ? map_hash[:translation_map][subfield.value] : subfield.value
-        end
+    item = {}
+    public_notes = []
+
+    field.subfields.each do |subfield|
+      sf = subfield.code
+      subfield.value.gsub!(/\|./, ' ') #remove subfield delimiters and
+      subfield.value.strip! #delet leading/trailing spaces
+      case sf
+      when 'c'
+        item['copy_no'] = subfield.value if subfield.value != '1'
+      when 'd'
+        item['due_date'] = subfield.value
+      when 'i'
+        item['id'] = subfield.value
+      when 'l'
+        item['loc_b'] = subfield.value
+        item['loc_n'] = subfield.value
+      when 'n'
+        public_notes << subfield.value
+      when 'p'
+        item['cn_scheme'] = set_cn_scheme(subfield.value[0, 3], subfield.value[3], subfield.value[4])
+      when 'q'
+        item['call_no'] = subfield.value
+      when 's'
+        item['status'] = status_map[subfield.value]
+      when 'v'
+        item['vol'] = subfield.value
       end
-
-
-      if lcc_scheme_codes.include?(item.fetch('cn_scheme', ''))
-        item['cn_scheme'] = 'LC'
-        lcc_top.add(item['call_no'].gsub!(/\|\w/, '')[0, 1])
-      end
-      items << item
-      acc << item.to_json if item
-
     end
-    ctx.output_hash['lcc_top'] = lcc_top.to_a
+
+    #add notes to item
+    item['notes'] = public_notes if public_notes.size > 0
+
+    #set checked out status
+    item['status'] = 'Checked out' if item['due_date']
+
+    items << item
+    acc << item.to_json if item
+
+    #set Availability facet value affirmatively
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
   end
@@ -114,22 +151,22 @@ to_field 'holdings' do |rec, acc|
     field.subfields.each do |sf|
       case sf.code
       when 'a'
-        holding['holdings_id'] = sf.value
+        holding['record_id'] = sf.value
       when 'b'
-        holding['loc_b'] = location_library[sf.value]
-        holding['loc_n'] = location_shelf_display[sf.value]
+        holding['library'] = location_library[sf.value]
+        holding['location'] = location_shelf_display[sf.value]
       end
     end
   end
 
-  nine_threes[:info].select { |i| i[:id] == holding['holdings_id'] }.each do |info|
+  nine_threes[:info].select { |i| i[:id] == holding['record_id'] }.each do |info|
     call_number_h = info[:field].subfield_values_from_code('h').join(' ')
     call_number_i = info[:field].subfield_values_from_code('i').join(' ')
-    holding['call_no'] = call_number_h + call_number_i if call_number_h && call_number_i
+    holding['call_number'] = call_number_h + call_number_i if call_number_h && call_number_i
     holding['notes'] = info[:field].subfield_values_from_code('z')
   end
 
-  nine_threes[:summary].select { |i| i[:id] == holding['holdings_id'] }.each do |summary|
+  nine_threes[:summary].select { |i| i[:id] == holding['record_id'] }.each do |summary|
     holding['summary'] = summary[:field].subfield_values_from_code('a').first
   end
 

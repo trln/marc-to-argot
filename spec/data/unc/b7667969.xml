@@ -1,0 +1,127 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200445Ii 4500</leader>
+      <controlfield tag='008'>120512s2012    mx a   b      000 p spa d</controlfield>
+      <controlfield tag='001'>793579125</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20140127103620.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9786077661375</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>6077661376</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)793579125</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>BTCTA</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>BTCTA</subfield>
+        <subfield code='d'>CGP</subfield>
+        <subfield code='d'>SAP</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>868.7</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Villar, Pedro,</subfield>
+        <subfield code='d'>1960-</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Tres veces tres la mar /</subfield>
+        <subfield code='c'>Pedro Villar Sánchez ; Leonor Pérez, ilustración.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>Primera edición.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>México, D.F. :</subfield>
+        <subfield code='b'>Ediciones El Naranjo S.A. de C.V.,</subfield>
+        <subfield code='c'>[2012]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 volume (unpaged) :</subfield>
+        <subfield code='b'>color illustrations ;</subfield>
+        <subfield code='c'>18 x 25 cm</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>unmediated</subfield>
+        <subfield code='b'>n</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>volume</subfield>
+        <subfield code='b'>nc</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;Al leer Tres veces tres la mar te sentirás como pez en el agua. Sumérgete en las loas, respira hondo el aroma de la sal, cierra los ojos y experimenta la sensación de la brisa al golpear tu cara y revolver tus cabellos, muévete entre caracolas y estrellas de mar, enrédate entre las redes de los pescadores y súbete a sus barcas, juega con almejas, delfines, caballitos de mar y toda clase de seres marinos-- Y sigue, una a una, las sílabas, forma con ellas las palabras, canta los versos y consigue la rima perfecta.&quot;--Cover.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='521'>
+        <subfield code='a'>006-008.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Children&apos;s poetry, Spanish.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='650'>
+        <subfield code='a'>Spanish poetry.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='650'>
+        <subfield code='a'>Sea poetry.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Poesía del mar</subfield>
+        <subfield code='v'>Literatura juvenil.</subfield>
+        <subfield code='2'>bidex</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Poesía en español</subfield>
+        <subfield code='v'>Literatura juvenil.</subfield>
+        <subfield code='2'>bidex</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Sea poetry.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Pérez, Leonor</subfield>
+        <subfield code='c'>(Illustrator),</subfield>
+        <subfield code='e'>illustrator.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b7667969</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i10202491</subfield>
+        <subfield code='l'>lljd</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>22</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00047641015</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|aJ|aVillar</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2014-01-27 00:00:00-05</subfield>
+        <subfield code='c'>2014-01-14 14:17:00-05</subfield>
+        <subfield code='u'>2016-10-23 07:15:36-04</subfield>
+      </datafield>
+  </record>
+</collection>

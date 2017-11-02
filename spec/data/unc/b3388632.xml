@@ -1,0 +1,129 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200409 a 4500</leader>
+      <controlfield tag='008'>991213s1996    cau    fbb   f000 0 eng d</controlfield>
+      <controlfield tag='007'>he bmb024bbca</controlfield>
+      <controlfield tag='001'>42996885</controlfield>
+      <controlfield tag='005'>20000214093444.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1881010015</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(GPO)99044024</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>MvI</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>n-us---</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='074'>
+        <subfield code='a'>0447-A-03 (MF)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='086'>
+        <subfield code='a'>HE 1.1008:H 75/5</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Pynoos, Jon.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Home modification resource guide</subfield>
+        <subfield code='h'>[microform] /</subfield>
+        <subfield code='c'>project staff, Jon Pynoos, Julie Overton, Marian R. De Meire.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>2nd ed.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Los Angeles, Calif. :</subfield>
+        <subfield code='b'>National Resource and Policy Center on Housing and Long Term Care, Andrus Gerontology Center, University of Southern California,</subfield>
+        <subfield code='c'>[1996]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>63 leaves ;</subfield>
+        <subfield code='c'>28 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;August, 1996.&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Shipping list no.: 2000-0074-M.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2=' ' tag='521'>
+        <subfield code='a'>Older adults</subfield>
+        <subfield code='a'>younger persons with disabilities.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='533'>
+        <subfield code='a'>Microfiche.</subfield>
+        <subfield code='b'>[Washington, D.C.] :</subfield>
+        <subfield code='c'>Supt. of Docs., U.S. G.P.O.,</subfield>
+        <subfield code='d'>1999.</subfield>
+        <subfield code='e'>1 microfiche : negative.</subfield>
+        <subfield code='7'>s1999    dcun b</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='536'>
+        <subfield code='a'>Supported in part by the U.S. Administration on Aging.</subfield>
+        <subfield code='c'>90AM0498/02</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Older people</subfield>
+        <subfield code='x'>Dwellings</subfield>
+        <subfield code='x'>Remodeling</subfield>
+        <subfield code='z'>United States</subfield>
+        <subfield code='v'>Bibliography.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Dwellings</subfield>
+        <subfield code='x'>Barrier-free design</subfield>
+        <subfield code='z'>United States</subfield>
+        <subfield code='v'>Bibliography.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Dwellings</subfield>
+        <subfield code='x'>Remodeling</subfield>
+        <subfield code='z'>United States</subfield>
+        <subfield code='v'>Bibliography.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Overton, Julie</subfield>
+        <subfield code='q'>(Julie Hultman)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>De Meire, Marian R.</subfield>
+        <subfield code='q'>(Marian Rae)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='710'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Administration on Aging.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>National Resource and Policy Center on Housing and Long Term Care.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='776'>
+        <subfield code='c'>Original</subfield>
+        <subfield code='w'>(OCoLC) 35978818.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b3388632</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i4808951</subfield>
+        <subfield code='l'>dcpf</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>20</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HAYZ-5955-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aHE 1.1008:H 75/5</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-05 07:55:32-04</subfield>
+        <subfield code='u'>2013-10-11 10:35:40-04</subfield>
+      </datafield>
+  </record>
+</collection>

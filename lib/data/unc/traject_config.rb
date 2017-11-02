@@ -35,49 +35,57 @@ def status_map
   @status_map ||=Traject::TranslationMap.new('unc/status_map')
 end
 
-def class_scheme_map
-  @class_scheme_map ||=Traject::TranslationMap.new('unc/class_scheme_map')
-end
-
 def is_available?(items)
-  items.any? { |i| i['status'].downcase.start_with?('available') rescue false }
+  available_statuses = ['Ask the MRC', 'Available', 'Contact library for status', 'In-Library Use Only']
+  items.any? { |i| available_statuses.include?(i['status']) rescue false }
 end
 
-item_map = {
-  i: { key: 'id' },
-  l: { key: 'library' },
-  p: { key: 'call_number_scheme' },
-  q: { key: 'call_number' },
-  s: { key: 'status', translation_map: status_map }
-}
+def set_cn_scheme(marc_tag, i1, i2)
+  case marc_tag
+  when '050'
+    'LC'
+  when '060'
+    'NLM'
+  when '070'
+    'NAL'
+  when '082'
+    'DDC'
+  when '083'
+    'DDC'
+  when '090'
+    'LC'
+  when '092'
+    'DDC'
+  when '086'
+    if i1 == '0'
+      'SUDOC'
+    else
+      'OTHERGOVDOC'
+    end
+  when '099'
+    'ALPHANUM'
+  end
+end
 
 to_field 'items' do |rec, acc, ctx|
 
   formats = marc_formats.call(rec, [])
-  lcc_scheme_codes = %w[090 050]
   items = []
 
   Traject::MarcExtractor.cached('999|*1|cdilnpqsv', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
 
     item = {}
-    call_number = ''
-    volume = ''
-    copy_number = ''
     public_notes = []
-    has_due_date = ''
-    cn_scheme_tag = ''
-    cn_scheme_i1 = ''
-    cn_scheme_i2 = ''
 
     field.subfields.each do |subfield|
       sf = subfield.code
-      subfield.value.gsub!(/\|./, '') #remove subfield delimiters from the data
+      subfield.value.gsub!(/\|./, ' ') #remove subfield delimiters and
+      subfield.value.strip! #delet leading/trailing spaces
       case sf
       when 'c'
-        copy_number = "c. #{subfield.value}" if subfield.value != '1'
+        item['copy_no'] = subfield.value if subfield.value != '1'
       when 'd'
         item['due_date'] = subfield.value
-        has_due_date = 'y'
       when 'i'
         item['id'] = subfield.value
       when 'l'
@@ -86,61 +94,26 @@ to_field 'items' do |rec, acc, ctx|
       when 'n'
         public_notes << subfield.value
       when 'p'
-        cn_scheme_tag = subfield.value[0, 3]
-        cn_scheme_i1 = subfield.value[3]
-        cn_scheme_i2 = subfield.value[4]
+        item['cn_scheme'] = set_cn_scheme(subfield.value[0, 3], subfield.value[3], subfield.value[4])
       when 'q'
-        call_number = subfield.value
+        item['call_no'] = subfield.value
       when 's'
         item['status'] = status_map[subfield.value]
       when 'v'
-        volume = subfield.value
+        item['vol'] = subfield.value
       end
     end
 
-    if lcc_scheme_codes.include?(item.fetch('call_number_scheme', ''))
-      item['call_number_scheme'] = 'LC'
-    end
-    
-    #build call number
-    built_call_number = call_number + ' ' + volume + ' ' + copy_number
-    built_call_number.strip!
-    item['call_number'] = built_call_number if built_call_number.length > 0
-
-    #assign class scheme
-    case cn_scheme_tag
-    when '050'
-      item['call_number_scheme'] = 'LC'
-    when '060'
-      item['call_number_scheme'] = 'NLM'
-    when '070'
-      item['call_number_scheme'] = 'NAL'
-    when '082'
-      item['call_number_scheme'] = 'DDC'
-    when '083'
-      item['call_number_scheme'] = 'DDC'
-    when '090'
-      item['call_number_scheme'] = 'LC'
-    when '092'
-      item['call_number_scheme'] = 'DDC'
-    when '086'
-      if cn_scheme_i1 == '0'
-        item['call_number_scheme'] = 'SUDOC'
-      else
-        item['call_number_scheme'] = 'OTHERGOVDOC'
-      end
-    when '099'
-      item['call_number_scheme'] = 'ALPHANUM'      
-    end
-    
     #add notes to item
-    item['notes'] = public_notes
+    item['notes'] = public_notes if public_notes.size > 0
 
     #set checked out status
-    item['status'] = 'Checked out' if has_due_date == 'y'
+    item['status'] = 'Checked out' if item['due_date']
+
     items << item
     acc << item.to_json if item
 
+    #set Availability facet value affirmatively
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
   end

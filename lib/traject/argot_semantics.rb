@@ -712,9 +712,8 @@ module Traject::Macros
     end
 
     def arrays_to_hierarchy(values)
-      values.collect { |v| array_to_hierarchy_facet(v) }.flatten!.uniq
+      values.collect { |v| array_to_hierarchy_facet(v) }.flatten.uniq
     end
-
 
     # extracts call numbers from an items
     # and maps them into the output_hash

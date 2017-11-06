@@ -10,4 +10,9 @@ b1246383argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1246383') )
     )
     end
 
+    it 'sets holdings_id if checkout card count > 0' do
+    expect(b1246383argot['holdings'][0]).to(
+        include("\"holdings_id\":\"c1287725\"")
+    )
+    end
 end

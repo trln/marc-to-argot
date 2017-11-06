@@ -143,7 +143,7 @@ to_field 'holdings' do |rec, acc|
     field.subfields.each do |sf|
       case sf.code
       when 'a'
-        holding['record_id'] = sf.value
+        holding['holdings_id'] = sf.value
       when 'b'
         holding['loc_b'] = sf.value
         holding['loc_n'] = sf.value

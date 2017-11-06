@@ -13,9 +13,9 @@ to_field 'local_id' do |rec, acc|
   primary = primary.delete('.') if primary
 
   local_id = {
-    :value => primary,
-    :other => []
-  }
+              :value => primary,
+              :other => []
+             }
 
   # do things here for "Other"
 
@@ -124,43 +124,81 @@ end
 ######
 
 to_field 'holdings' do |rec, acc|
-  holding = {}
-  nine_twos = []
-  nine_threes = {
-    info: [],   # $2 = 852
-    summary: [] # $2 = 866
-  }
+  holdings = []
+  holdings_ff = [] #fixed field level info from holdings records
+  holdings_vf = {} #variable field level info from holdings records
+  # holdings_vf = {'c1234567' => [
+  #                               {'marctag' => '852',
+  #                                'iiitag' => 'c',
+  #                                'otherfields' => [['h', 'HC102'], ['i', '.D8'], ['z', 'Does not circulate']]
+  #                                },
+  #                               {'marctag' => '866',
+  #                                'iiitag' => 'h',
+  #                                'linkid' => '0',
+  #                                'other_fields' => [['a', '1979:v.1, 1980 - 1987:A-F, 1987:P-2011']]
+  #                                },
+  #                               ]
+  #                }
 
-  Traject::MarcExtractor.cached('999|9*|', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    nine_twos << field if field.indicator2 == '2'
-    if field.indicator2 == '3'
-      nine_threes[:info] << { id: field.subfields_with_code('0').first.value, field: field } if field.subfield_with_value_of_code?('852','2')
-      nine_threes[:summary] << { id: field.subfields_with_code('0').first.value, field: field } if field.subfield_with_value_of_code?('866','2')
-    end
-  end
+  Traject::MarcExtractor.cached('999|*2|abc', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    this_holding = {}
+    field.subfields.each do |subfield|
+      sf = subfield.code
+      val = subfield.value
+      val.gsub!(/\|./, ' ') #remove subfield delimiters and
+      val.strip! #delete leading/trailing spaces
 
-  nine_twos.each do |field|
-    field.subfields.each do |sf|
-      case sf.code
+      case sf
       when 'a'
-        holding['holdings_id'] = sf.value
+        this_holding['holdings_id'] = val
+        holdings_vf[val] = []
       when 'b'
-        holding['loc_b'] = sf.value
-        holding['loc_n'] = sf.value
+        this_holding['loc'] = val
+      when 'c'
+        this_holding['checkin_card_ct'] = val.to_i
       end
     end
+    holdings_ff << this_holding
   end
 
-  nine_threes[:info].select { |i| i[:id] == holding['record_id'] }.each do |info|
-    call_number_h = info[:field].subfield_values_from_code('h').join(' ')
-    call_number_i = info[:field].subfield_values_from_code('i').join(' ')
-    holding['call_number'] = call_number_h + call_number_i if call_number_h && call_number_i
-    holding['notes'] = info[:field].subfield_values_from_code('z')
+  Traject::MarcExtractor.cached('999|*3|', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+
+    keep_fields = ['852', '866']
+    this_field = {}
+    other_fields = []
+
+    field.subfields.each do |subfield|
+      sf = subfield.code
+      val = subfield.value
+      val.gsub!(/\|./, ' ') #remove subfield delimiters and
+      val.strip! #delet leading/trailing spaces
+      case sf
+      when '0'
+        this_field['hrec'] = val
+      when '2'
+        this_field['marctag'] = val
+      when '3'
+        this_field['iiitag'] = val
+      when '8'
+        this_field['linkid'] = val
+      else
+        other_fields << [sf, val]
+      end
+    end
+
+    if keep_fields.include?(this_field['marctag'])
+      this_field['other_fields'] = other_fields
+      holdings_vf[this_field['hrec']] << this_field
+    end
   end
 
-  nine_threes[:summary].select { |i| i[:id] == holding['record_id'] }.each do |summary|
-    holding['summary'] = summary[:field].subfield_values_from_code('a').first
-  end
+  holdings_ff.each do |hrec|
+    holding = {}
+    holding['holdings_id'] = hrec['holdings_id'] if hrec['checkin_card_ct'] > 0
+    holding['loc_b'] = hrec['loc']
+    holding['loc_n'] = hrec['loc']
 
-  acc << holding.to_json if holding.any?
+    acc << holding.to_json if holding
+  end
+ 
 end

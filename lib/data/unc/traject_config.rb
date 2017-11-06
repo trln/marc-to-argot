@@ -123,14 +123,6 @@ end
 # Holdings
 ######
 
-def location_shelf_display
-  @location_shelf_display ||=Traject::TranslationMap.new('unc/location_shelf_code_to_display')
-end
-
-def location_library
-  @location_library ||=Traject::TranslationMap.new('unc/location_shelf_to_location_library')
-end
-
 to_field 'holdings' do |rec, acc|
   holding = {}
   nine_twos = []
@@ -153,8 +145,8 @@ to_field 'holdings' do |rec, acc|
       when 'a'
         holding['record_id'] = sf.value
       when 'b'
-        holding['library'] = location_library[sf.value]
-        holding['location'] = location_shelf_display[sf.value]
+        holding['loc_b'] = sf.value
+        holding['loc_n'] = sf.value
       end
     end
   end

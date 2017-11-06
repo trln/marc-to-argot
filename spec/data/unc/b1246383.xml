@@ -264,6 +264,11 @@
         <subfield code='8'>0</subfield>
         <subfield code='a'>1979:v.1, 1980 - 1987:A-F, 1987:P-2011 </subfield>
       </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c1111111</subfield>
+        <subfield code='b'>trln</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
       <datafield ind1='0' ind2='0' tag='999'>
         <subfield code='a'>2010-02-02 00:00:00-05</subfield>
         <subfield code='c'>2004-09-27 16:30:00-04</subfield>

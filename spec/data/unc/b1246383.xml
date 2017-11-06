@@ -269,6 +269,21 @@
         <subfield code='b'>trln</subfield>
         <subfield code='c'>0</subfield>
       </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1111111</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>XC102</subfield>
+        <subfield code='i'>.D8</subfield>
+        <subfield code='z'>Test note 1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1111111</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>DQ102</subfield>
+        <subfield code='i'>.D8</subfield>
+      </datafield>
       <datafield ind1='0' ind2='0' tag='999'>
         <subfield code='a'>2010-02-02 00:00:00-05</subfield>
         <subfield code='c'>2004-09-27 16:30:00-04</subfield>

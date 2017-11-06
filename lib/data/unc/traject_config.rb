@@ -150,12 +150,12 @@ to_field 'holdings' do |rec, acc|
 
       case sf
       when 'a'
-        this_holding['holdings_id'] = val
+        this_holding[:holdings_id] = val
         holdings_vf[val] = []
       when 'b'
-        this_holding['loc'] = val
+        this_holding[:loc] = val
       when 'c'
-        this_holding['checkin_card_ct'] = val.to_i
+        this_holding[:checkin_card_ct] = val.to_i
       end
     end
     holdings_ff << this_holding
@@ -171,34 +171,51 @@ to_field 'holdings' do |rec, acc|
       sf = subfield.code
       val = subfield.value
       val.gsub!(/\|./, ' ') #remove subfield delimiters and
-      val.strip! #delet leading/trailing spaces
+      val.strip! #delete leading/trailing spaces
       case sf
       when '0'
-        this_field['hrec'] = val
+        this_field[:hrec] = val
       when '2'
-        this_field['marctag'] = val
+        this_field[:marctag] = val
       when '3'
-        this_field['iiitag'] = val
+        this_field[:iiitag] = val
       when '8'
-        this_field['linkid'] = val
+        this_field[:linkid] = val
       else
         other_fields << [sf, val]
       end
     end
 
-    if keep_fields.include?(this_field['marctag'])
-      this_field['other_fields'] = other_fields
-      holdings_vf[this_field['hrec']] << this_field
+    if keep_fields.include?(this_field[:marctag])
+      this_field[:other_fields] = other_fields
+      holdings_vf[this_field[:hrec]] << this_field
     end
   end
 
   holdings_ff.each do |hrec|
     holding = {}
-    holding['holdings_id'] = hrec['holdings_id'] if hrec['checkin_card_ct'] > 0
-    holding['loc_b'] = hrec['loc']
-    holding['loc_n'] = hrec['loc']
+    holding['holdings_id'] = hrec[:holdings_id] if hrec[:checkin_card_ct] > 0
+    holding['loc_b'] = hrec[:loc]
+    holding['loc_n'] = hrec[:loc]
 
+    varfields = holdings_vf[hrec[:holdings_id]]
+    notes = []
+
+    #set call number from 852 with iiitag c
+    cn_f = varfields.select { |f| f[:marctag] == '852' && f[:iiitag] == 'c' }
+    if cn_f.size > 0
+      cns = []
+      cn_f.each do |cnf|
+        this_cn = []
+        cnf[:other_fields].each do |e|
+          this_cn << e[1] if e[0] =~ /[hi]/
+          notes << e[1] if e[0] == 'z'
+        end
+        cns << this_cn.join(' ')
+      end
+      holding['call_no'] = cns.join('; ')
+    end
     acc << holding.to_json if holding
   end
- 
+  
 end

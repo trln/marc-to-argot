@@ -289,5 +289,17 @@
         <subfield code='c'>2004-09-27 16:30:00-04</subfield>
         <subfield code='u'>2016-09-24 20:56:44-04</subfield>
       </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c2222222</subfield>
+        <subfield code='b'>blah</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2222222</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>q</subfield>
+        <subfield code='h'>DQ102</subfield>
+        <subfield code='i'>.D8</subfield>
+      </datafield>
   </record>
 </collection>

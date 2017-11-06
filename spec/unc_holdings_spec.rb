@@ -33,4 +33,10 @@ b1246383argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1246383') )
         include("\"call_no\":\"XC102 .D8; DQ102 .D8\"")
     )
     end
+
+    it 'does NOT set call number from 852 when iii!=c' do
+    expect(b1246383argot['holdings'][2]).not_to(
+        include("\"call_no\":")
+    )
+    end
 end

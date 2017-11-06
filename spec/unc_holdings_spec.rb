@@ -39,4 +39,10 @@ b1246383argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1246383') )
         include("\"call_no\":")
     )
     end
+
+    it 'sets notes from 852 when iii=c' do
+    expect(b1246383argot['holdings'][2]).not_to(
+      include("\"notes\":[\"Test note 1\"]")
+    )
+    end
 end

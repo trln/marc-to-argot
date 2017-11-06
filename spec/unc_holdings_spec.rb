@@ -21,4 +21,10 @@ b1246383argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1246383') )
         include("\"holdings_id\":\"c1111111\"")
     )
     end
+
+    it 'sets call number from 852, iii=c' do
+    expect(b1246383argot['holdings'][0]).to(
+        include("\"call_no\":\"HC102 .D8\"")
+    )
+    end
 end

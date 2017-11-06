@@ -95,12 +95,14 @@ describe MarcToArgot do
   b1082803argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1082803') )
   b1082803items = b1082803argot['items'][0]
 
+  # test scope: shared config
   it 'generates author facet value if relators include punctuation' do
     expect(b1082803argot['author_facet']).to(
       include('Gregory, Lady, 1852-1932')
     )
   end
 
+  # subsequent tests scope: unc config
   it 'sets item id for UNC (single item record)' do
     expect(b1082803items).to(
       include("\"id\":\"i1147335\"")

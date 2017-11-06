@@ -232,7 +232,7 @@ module Traject::Macros
 
     def self.has_allowable_e_value(field)
       field.subfields.select do |sf|
-        sf.code == 'e' && sf.value =~ /^(editor|editor of compilation|director|film director)$/
+        sf.code == 'e' && sf.value =~ /^\W*(editor|editor of compilation|director|film director)\W*$/
       end.any?
     end
 

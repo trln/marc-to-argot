@@ -315,5 +315,37 @@
         <subfield code='8'>0</subfield>
         <subfield code='a'>v.1/32(1895/1928) Name Index </subfield>
       </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c3</subfield>
+        <subfield code='b'>test</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>866</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='a'>H1</subfield>
+        <subfield code='a'>H2</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>866</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='a'>H3</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>867</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>SH </subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>868</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>IH </subfield>
+      </datafield>
   </record>
 </collection>

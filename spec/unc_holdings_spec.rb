@@ -64,4 +64,9 @@ b1246383argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1246383') )
     )
     end
 
+    it 'sets multi summary holdings from 866, 867, 868' do
+    expect(b1246383argot['holdings'][3]).to(
+      include("\"summary\":\"H1, H2; H3; Supplementary holdings: SH; Index holdings: IH\"")
+    )
+    end
 end

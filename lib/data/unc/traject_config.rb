@@ -214,7 +214,7 @@ to_field 'holdings' do |rec, acc|
         cns << this_cn.join(' ')
       end
       holding['call_no'] = cns.join('; ')
-      holding['notes'] = notes
+      holding['notes'] = notes if notes.size > 0
     end
     acc << holding.to_json if holding
   end

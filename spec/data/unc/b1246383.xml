@@ -326,12 +326,15 @@
         <subfield code='3'>h</subfield>
         <subfield code='a'>H1</subfield>
         <subfield code='a'>H2</subfield>
+        <subfield code='z'>N1</subfield>
+        <subfield code='z'>N2</subfield>
       </datafield>
       <datafield ind1='9' ind2='3' tag='999'>
         <subfield code='0'>c3</subfield>
         <subfield code='2'>866</subfield>
         <subfield code='3'>h</subfield>
         <subfield code='a'>H3</subfield>
+        <subfield code='z'>N1</subfield>
       </datafield>
       <datafield ind1='9' ind2='3' tag='999'>
         <subfield code='0'>c3</subfield>
@@ -339,6 +342,7 @@
         <subfield code='3'>h</subfield>
         <subfield code='8'>0</subfield>
         <subfield code='a'>SH </subfield>
+        <subfield code='z'>N4</subfield>
       </datafield>
       <datafield ind1='9' ind2='3' tag='999'>
         <subfield code='0'>c3</subfield>
@@ -346,6 +350,7 @@
         <subfield code='3'>h</subfield>
         <subfield code='8'>0</subfield>
         <subfield code='a'>IH </subfield>
+        <subfield code='z'>N3</subfield>
       </datafield>
   </record>
 </collection>

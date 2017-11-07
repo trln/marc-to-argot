@@ -239,7 +239,7 @@ to_field 'holdings' do |rec, acc|
       end
 
       holding['summary'] = sums.join('; ')
-      holding['notes'] = notes if notes.size > 0
+      holding['notes'] = notes.uniq if notes.size > 0
     end
 
     acc << holding.to_json if holding

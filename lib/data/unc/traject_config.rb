@@ -35,6 +35,10 @@ def status_map
   @status_map ||=Traject::TranslationMap.new('unc/status_map')
 end
 
+def loc_hierarchy_map
+  @loc_hierarchy_map ||=Traject::TranslationMap.new('unc/loc_b_to_location_hierarchy')
+end
+
 def is_available?(items)
   available_statuses = ['Ask the MRC', 'Available', 'Contact library for status', 'In-Library Use Only']
   items.any? { |i| available_statuses.include?(i['status']) rescue false }
@@ -116,6 +120,17 @@ to_field 'items' do |rec, acc, ctx|
     #set Availability facet value affirmatively
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
+
+
+    loc_facet_mess = []
+    ilocs = items.collect { |it| it['loc_b'] }
+    ilocs.uniq.each do |loc|
+      rawloc = loc_hierarchy_map[loc]
+      rawloc.each do |e|
+        loc_facet_mess << array_to_hierarcy_facet(e.split(':'))
+      end
+    end
+    ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(loc_facet_mess)
   end
 end
 
@@ -244,6 +259,5 @@ to_field 'holdings' do |rec, acc|
 
     acc << holding.to_json if holding
   end
-
   
 end

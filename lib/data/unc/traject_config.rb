@@ -227,8 +227,17 @@ to_field 'holdings' do |rec, acc|
           this_sum << e[1] if e[0] == 'a'
           notes << e[1] if e[0] == 'z'
         end
-        sums << this_sum.join(', ')
+        
+        case sumf[:marctag]
+        when '867'
+          sums << "Supplementary holdings: #{this_sum.join(', ')}"
+        when '868'
+          sums << "Index holdings: #{this_sum.join(', ')}"
+        else
+          sums << this_sum.join(', ')
+        end
       end
+
       holding['summary'] = sums.join('; ')
       holding['notes'] = notes if notes.size > 0
     end

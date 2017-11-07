@@ -201,14 +201,14 @@ to_field 'holdings' do |rec, acc|
     varfields = holdings_vf[hrec[:holdings_id]]
     notes = []
 
-    #set call number from 852 with iiitag c
+    #set call number and holdings notes from 852 with iiitag c
     cn_f = varfields.select { |f| f[:marctag] == '852' && f[:iiitag] == 'c' }
     if cn_f.size > 0
       cns = []
       cn_f.each do |cnf|
         this_cn = []
         cnf[:other_fields].each do |e|
-          this_cn << e[1] if e[0] =~ /[hi]/
+          this_cn << e[1] if e[0] =~ /[hijk]/
           notes << e[1] if e[0] == 'z'
         end
         cns << this_cn.join(' ')

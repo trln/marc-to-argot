@@ -308,5 +308,12 @@
         <subfield code='h'>DQ102</subfield>
         <subfield code='i'>.D8</subfield>
       </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2222222</subfield>
+        <subfield code='2'>868</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>v.1/32(1895/1928) Name Index </subfield>
+      </datafield>
   </record>
 </collection>

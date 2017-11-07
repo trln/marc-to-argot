@@ -58,4 +58,10 @@ b1246383argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1246383') )
     )
     end
 
+    it 'sets index content summary holdings from 868' do
+    expect(b1246383argot['holdings'][2]).to(
+      include("\"summary\":\"Index holdings: v.1/32(1895/1928) Name Index\"")
+    )
+    end
+
 end

@@ -216,7 +216,25 @@ to_field 'holdings' do |rec, acc|
       holding['call_no'] = cns.join('; ')
       holding['notes'] = notes if notes.size > 0
     end
+
+    #set summary holdings and notes from 866, 867, 868
+    sum_f = varfields.select { |f| f[:marctag] =~ /86[678]/ }
+    if sum_f.size > 0
+      sums = []
+      sum_f.each do |sumf|
+        this_sum = []
+        sumf[:other_fields].each do |e|
+          this_sum << e[1] if e[0] == 'a'
+          notes << e[1] if e[0] == 'z'
+        end
+        sums << this_sum.join(', ')
+      end
+      holding['summary'] = sums.join('; ')
+      holding['notes'] = notes if notes.size > 0
+    end
+
     acc << holding.to_json if holding
   end
+
   
 end

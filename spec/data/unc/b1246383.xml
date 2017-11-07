@@ -279,6 +279,13 @@
       </datafield>
       <datafield ind1='9' ind2='3' tag='999'>
         <subfield code='0'>c1111111</subfield>
+        <subfield code='2'>867</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>1970/1977 retrospective volume </subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1111111</subfield>
         <subfield code='2'>852</subfield>
         <subfield code='3'>c</subfield>
         <subfield code='h'>DQ102</subfield>

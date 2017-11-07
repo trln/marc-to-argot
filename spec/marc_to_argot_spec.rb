@@ -92,47 +92,55 @@ describe MarcToArgot do
   end
 
   # test on b1082803
-  b1082803argot = TrajectRunTest.run_traject('unc', 'b1082803')
-  b1082803result = JSON.parse(b1082803argot)['items'][0]
+  b1082803argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1082803') )
+  b1082803items = b1082803argot['items'][0]
 
+  # test scope: shared config
+  it 'generates author facet value if relators include punctuation' do
+    expect(b1082803argot['author_facet']).to(
+      include('Gregory, Lady, 1852-1932')
+    )
+  end
+
+  # subsequent tests scope: unc config
   it 'sets item id for UNC (single item record)' do
-    expect(b1082803result).to(
+    expect(b1082803items).to(
       include("\"id\":\"i1147335\"")
     )
   end
 
   it 'sets item loc_b and loc_n for UNC (single item record)' do
-    expect(b1082803result).to(
+    expect(b1082803items).to(
       include("\"loc_b\":\"ddda\",\"loc_n\":\"ddda\"")
     )
   end
 
   it 'sets item status to Available for UNC (single item record)' do
-    expect(b1082803result).to(
+    expect(b1082803items).to(
       include("\"status\":\"Available\"")
     )
   end
 
   it 'does NOT set item due date when status is Available for UNC (single item record)' do
-    expect(b1082803result).not_to(
+    expect(b1082803items).not_to(
       include("\"due_date\":")
     )
   end
 
   it 'does NOT set item copy_no when it equals 1 for UNC (single item record)' do
-    expect(b1082803result).not_to(
+    expect(b1082803items).not_to(
       include("\"copy_no\":")
     )
   end
 
   it 'sets item cn_scheme to LC when call_no is in 090 for UNC (single item record)' do
-    expect(b1082803result).to(
+    expect(b1082803items).to(
       include("\"cn_scheme\":\"LC\"")
     )
   end
 
   it 'sets item call_no for normal LC for UNC (single item record)' do
-    expect(b1082803result).to(
+    expect(b1082803items).to(
       include("\"call_no\":\"PB1423.C8 G7\"")
     )
   end

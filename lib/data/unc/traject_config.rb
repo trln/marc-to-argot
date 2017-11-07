@@ -163,7 +163,7 @@ to_field 'holdings' do |rec, acc|
 
   Traject::MarcExtractor.cached('999|*3|', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
 
-    keep_fields = ['852', '866']
+    keep_fields = ['852', '866', '867', '868']
     this_field = {}
     other_fields = []
 
@@ -214,6 +214,7 @@ to_field 'holdings' do |rec, acc|
         cns << this_cn.join(' ')
       end
       holding['call_no'] = cns.join('; ')
+      holding['notes'] = notes
     end
     acc << holding.to_json if holding
   end

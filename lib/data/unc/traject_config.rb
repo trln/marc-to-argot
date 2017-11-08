@@ -36,7 +36,7 @@ def status_map
 end
 
 def loc_hierarchy_map
-  @loc_hierarchy_map ||=Traject::TranslationMap.new('unc/loc_b_to_location_hierarchy')
+  @loc_hierarchy_map ||=Traject::TranslationMap.new('unc/loc_b_to_hierarchy')
 end
 
 def is_available?(items)
@@ -84,7 +84,7 @@ to_field 'items' do |rec, acc, ctx|
     field.subfields.each do |subfield|
       sf = subfield.code
       subfield.value.gsub!(/\|./, ' ') #remove subfield delimiters and
-      subfield.value.strip! #delet leading/trailing spaces
+      subfield.value.strip! #delete leading/trailing spaces
       case sf
       when 'c'
         item['copy_no'] = subfield.value if subfield.value != '1'
@@ -121,16 +121,9 @@ to_field 'items' do |rec, acc, ctx|
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
 
-
-    loc_facet_mess = []
     ilocs = items.collect { |it| it['loc_b'] }
-    ilocs.uniq.each do |loc|
-      rawloc = loc_hierarchy_map[loc]
-      rawloc.each do |e|
-        loc_facet_mess << array_to_hierarcy_facet(e.split(':'))
-      end
-    end
-    ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(loc_facet_mess)
+    hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten
+    ctx.output_hash['location_hierarchy'] = explode_hierarchical_strings(hier_loc_code_strings)
   end
 end
 

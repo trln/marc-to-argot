@@ -18,7 +18,7 @@ describe Traject::Macros::ArgotSemantics do
     expect(@context.array_to_hierarchy_facet(data)).to eq(expected)
   end
 
-  it 'hiearchicalizes multiple arrays properly' do
+  it 'Hierarchicalizes multiple arrays properly' do
     data = [
         %w[first second third],
         %w[first second fourth ]
@@ -28,6 +28,12 @@ describe Traject::Macros::ArgotSemantics do
     expect(result).to eq(expected)
   end
 
+  it 'Splits array of delimited strings and hierarchicalizes' do
+    data = ['a:b:c', 'a:b:d']
+    expected = ['a', 'a:b', 'a:b:c', 'a:b:d']
+    result = @context.explode_hierarchical_strings(data).sort!
+    expect(result).to eq(expected)
+  end
 end
 
 

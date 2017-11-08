@@ -715,6 +715,16 @@ module Traject::Macros
       values.collect { |v| array_to_hierarchy_facet(v) }.flatten.uniq
     end
 
+    # Converts array of strings representing a hierarchical values
+    #  to delimited hierarchical facet values as expected by
+    #  blacklight-hierarchy
+    #  ['a:b:c', 'a:b:d'] => ['a', 'a:b', 'a:b:c', 'a:b:d']
+    def explode_hierarchical_strings(array_of_strings, delimiter = ':')
+      split_arrays = array_of_strings.map { |s| s.split(delimiter) }
+      result = arrays_to_hierarchy(split_arrays)
+      result.flatten.uniq
+    end
+
     # extracts call numbers from an items
     # and maps them into the output_hash
     # populates: `call_number_schemes`,

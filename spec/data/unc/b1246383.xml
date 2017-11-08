@@ -1,0 +1,356 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cas  2201021 a 4500</leader>
+      <controlfield tag='008'>750211d19591996nyuar    r    0   a0eng d</controlfield>
+      <controlfield tag='001'>1167732</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20100202125547.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>59003033</subfield>
+        <subfield code='z'>sn 82022248</subfield>
+        <subfield code='z'>sc 80001582</subfield>
+        <subfield code='z'>sn 85012418</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>303003</subfield>
+        <subfield code='a'>1118730</subfield>
+        <subfield code='a'>1567091</subfield>
+        <subfield code='a'>4227611</subfield>
+        <subfield code='a'>7430781</subfield>
+        <subfield code='a'>9612372</subfield>
+        <subfield code='a'>10662662</subfield>
+        <subfield code='a'>10995013</subfield>
+        <subfield code='a'>11047185</subfield>
+        <subfield code='a'>11797288</subfield>
+        <subfield code='a'>185058328</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='022'>
+        <subfield code='a'>0070-7619</subfield>
+        <subfield code='z'>0734-2861</subfield>
+        <subfield code='2'>1</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1167732</subfield>
+        <subfield code='z'>(OCoLC)303003</subfield>
+        <subfield code='z'>(OCoLC)1118730</subfield>
+        <subfield code='z'>(OCoLC)1567091</subfield>
+        <subfield code='z'>(OCoLC)4227611</subfield>
+        <subfield code='z'>(OCoLC)7430781</subfield>
+        <subfield code='z'>(OCoLC)9612372</subfield>
+        <subfield code='z'>(OCoLC)10662662</subfield>
+        <subfield code='z'>(OCoLC)10995013</subfield>
+        <subfield code='z'>(OCoLC)11047185</subfield>
+        <subfield code='z'>(OCoLC)11797288</subfield>
+        <subfield code='z'>(OCoLC)185058328</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='037'>
+        <subfield code='b'>Dun&apos;s Marketing Services, 3 Sylvan Way, Parsippany, N.J. 07054</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>UDI</subfield>
+        <subfield code='c'>UDI</subfield>
+        <subfield code='d'>YUS</subfield>
+        <subfield code='d'>COO</subfield>
+        <subfield code='d'>FUG</subfield>
+        <subfield code='d'>YUS</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>UCU</subfield>
+        <subfield code='d'>FUG</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>NSD</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>HUL</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>NST</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>NSD</subfield>
+        <subfield code='d'>EYM</subfield>
+        <subfield code='d'>NST</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>IUL</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>NST</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>NST</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>NSD</subfield>
+        <subfield code='d'>NST</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>IUL</subfield>
+        <subfield code='d'>NYG</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>HUL</subfield>
+        <subfield code='d'>AGL</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>INU</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>LVB</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>lc</subfield>
+        <subfield code='a'>nsdp</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>n-us---</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>HC102</subfield>
+        <subfield code='b'>.D8</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='082'>
+        <subfield code='a'>338.7/4/0973</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='210'>
+        <subfield code='a'>Million dollar dir.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='222'>
+        <subfield code='a'>Million dollar directory</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Million dollar directory</subfield>
+        <subfield code='h'>[serial] /</subfield>
+        <subfield code='c'>Dun &amp; Bradstreet.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2=' ' tag='246'>
+        <subfield code='a'>Dun and Bradstreet million dollar directory</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York, N.Y. :</subfield>
+        <subfield code='b'>Dun &amp; Bradstreet, Inc.,</subfield>
+        <subfield code='c'>1959-1996.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>38 v. ;</subfield>
+        <subfield code='c'>32 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='310'>
+        <subfield code='a'>Annual</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='362'>
+        <subfield code='a'>1959-1996.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='515'>
+        <subfield code='a'>Issues for 1979-1980 published in 2 vols.: v. 2 called &quot;The Middle market&quot;; 1981-1984 in 3 vols.; 1985-1986 in 4 vols.: 3 vols. called Series A-Z, fourth vol. called Series cross-reference; 1987-1996 in 5 vols.: 3 vols. called Series A-Z, fourth and fifth vols. called Series cross-reference by geography, and Series cross-reference by industry.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also issued online.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='550'>
+        <subfield code='a'>Vols. for 1959-1978 issued by Dun &amp; Bradstreet, Inc.; 1979-&lt;1990-&gt; by Dun&apos;s Marketing Services.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='580'>
+        <subfield code='a'>Also available as part of computer file: Million dollar disc.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Industries</subfield>
+        <subfield code='z'>United States</subfield>
+        <subfield code='v'>Directories.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='691'>
+        <subfield code='a'>United States</subfield>
+        <subfield code='x'>Commerce</subfield>
+        <subfield code='v'>Directories.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Dun and Bradstreet, inc.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Dun&apos;s Marketing Services.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='5' tag='780'>
+        <subfield code='a'>Dun and Bradstreet, inc.</subfield>
+        <subfield code='t'>Dun &amp; Bradstreet middle market directory</subfield>
+        <subfield code='x'>0070-7600</subfield>
+        <subfield code='w'>(DLC)   64000275</subfield>
+        <subfield code='w'>(OCoLC)1567090</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='785'>
+        <subfield code='t'>D &amp; B million dollar directory</subfield>
+        <subfield code='x'>1093-4812</subfield>
+        <subfield code='w'>(DLC)   97660611</subfield>
+        <subfield code='w'>(OCoLC)36258942</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='787'>
+        <subfield code='i'>Has companion publication:</subfield>
+        <subfield code='t'>Million dollar directory. Top 50,000 companies</subfield>
+        <subfield code='x'>1051-3442</subfield>
+        <subfield code='w'>(OCoLC)11959332</subfield>
+        <subfield code='w'>(DLC)   90656230</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='787'>
+        <subfield code='t'>Million dollar disc</subfield>
+        <subfield code='x'>1066-0852</subfield>
+        <subfield code='w'>(DLC)   92660656</subfield>
+        <subfield code='w'>(OCoLC)22038744</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1246383</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1430977</subfield>
+        <subfield code='l'>trln</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>1</subfield>
+        <subfield code='b'>00036388532</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aHC102|b.D8</subfield>
+        <subfield code='v'>1993:A-F</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1430974</subfield>
+        <subfield code='l'>trln</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00036429481</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aHC102 .D8</subfield>
+        <subfield code='v'>1979:v.1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1430975</subfield>
+        <subfield code='l'>trln</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00036429490</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aHC102 .D8</subfield>
+        <subfield code='v'>1980:v.1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c1287725</subfield>
+        <subfield code='b'>trln</subfield>
+        <subfield code='c'>2</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1287725</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>HC102</subfield>
+        <subfield code='i'>.D8</subfield>
+        <subfield code='x'>Leased: do not circulate</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1287725</subfield>
+        <subfield code='2'>853</subfield>
+        <subfield code='3'>y</subfield>
+        <subfield code='8'>1</subfield>
+        <subfield code='a'>(year)</subfield>
+        <subfield code='b'>v.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1287725</subfield>
+        <subfield code='2'>853</subfield>
+        <subfield code='3'>y</subfield>
+        <subfield code='8'>2</subfield>
+        <subfield code='a'>(year)</subfield>
+        <subfield code='b'>(*)</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1287725</subfield>
+        <subfield code='2'>866</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>1979:v.1, 1980 - 1987:A-F, 1987:P-2011 </subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c1111111</subfield>
+        <subfield code='b'>trln</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1111111</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>XC102</subfield>
+        <subfield code='i'>.D8</subfield>
+        <subfield code='z'>Test note 1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1111111</subfield>
+        <subfield code='2'>867</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>1970/1977 retrospective volume </subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1111111</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>DQ102</subfield>
+        <subfield code='i'>.D8</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2010-02-02 00:00:00-05</subfield>
+        <subfield code='c'>2004-09-27 16:30:00-04</subfield>
+        <subfield code='u'>2016-09-24 20:56:44-04</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c2222222</subfield>
+        <subfield code='b'>blah</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2222222</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>q</subfield>
+        <subfield code='h'>DQ102</subfield>
+        <subfield code='i'>.D8</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2222222</subfield>
+        <subfield code='2'>868</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>v.1/32(1895/1928) Name Index </subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c3</subfield>
+        <subfield code='b'>test</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>866</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='a'>H1</subfield>
+        <subfield code='a'>H2</subfield>
+        <subfield code='z'>N1</subfield>
+        <subfield code='z'>N2</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>866</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='a'>H3</subfield>
+        <subfield code='z'>N1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>867</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>SH </subfield>
+        <subfield code='z'>N4</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c3</subfield>
+        <subfield code='2'>868</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='8'>0</subfield>
+        <subfield code='a'>IH </subfield>
+        <subfield code='z'>N3</subfield>
+      </datafield>
+  </record>
+</collection>

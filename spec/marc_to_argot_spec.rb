@@ -73,6 +73,13 @@ describe MarcToArgot do
       )
   end
 
+  it 'generates author facet value if relators include punctuation' do
+    b1082803argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1082803') )
+    expect(b1082803argot['author_facet']).to(
+      include('Gregory, Lady, 1852-1932')
+    )
+  end
+
   it 'generates rollup_id for Duke' do
     result = TrajectRunTest.run_traject('duke', 'rollup_id', 'mrc')
     expect(JSON.parse(result)['rollup_id']).to(
@@ -90,161 +97,5 @@ describe MarcToArgot do
     result = TrajectRunTest.run_traject('unc', 'base')
     expect(result).not_to be_empty
   end
-
-  # test on b1082803
-  b1082803argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1082803') )
-  b1082803items = b1082803argot['items'][0]
-
-  # test scope: shared config
-  it 'generates author facet value if relators include punctuation' do
-    expect(b1082803argot['author_facet']).to(
-      include('Gregory, Lady, 1852-1932')
-    )
-  end
-
-  # subsequent tests scope: unc config
-  it 'sets item id for UNC (single item record)' do
-    expect(b1082803items).to(
-      include("\"id\":\"i1147335\"")
-    )
-  end
-
-  it 'sets item loc_b and loc_n for UNC (single item record)' do
-    expect(b1082803items).to(
-      include("\"loc_b\":\"ddda\",\"loc_n\":\"ddda\"")
-    )
-  end
-
-  it 'sets item status to Available for UNC (single item record)' do
-    expect(b1082803items).to(
-      include("\"status\":\"Available\"")
-    )
-  end
-
-  it 'does NOT set item due date when status is Available for UNC (single item record)' do
-    expect(b1082803items).not_to(
-      include("\"due_date\":")
-    )
-  end
-
-  it 'does NOT set item copy_no when it equals 1 for UNC (single item record)' do
-    expect(b1082803items).not_to(
-      include("\"copy_no\":")
-    )
-  end
-
-  it 'sets item cn_scheme to LC when call_no is in 090 for UNC (single item record)' do
-    expect(b1082803items).to(
-      include("\"cn_scheme\":\"LC\"")
-    )
-  end
-
-  it 'sets item call_no for normal LC for UNC (single item record)' do
-    expect(b1082803items).to(
-      include("\"call_no\":\"PB1423.C8 G7\"")
-    )
-  end
-
-  # test on b3388632
-  b3388632argot = TrajectRunTest.run_traject('unc', 'b3388632')
-  b3388632result = JSON.parse(b3388632argot)['items'][0]
-
-  it 'sets item cn_scheme to SUDOC when call_no is in 086 w/i1 = 0 for UNC (single item record)' do
-    expect(b3388632result).to(
-      include("\"cn_scheme\":\"SUDOC\"")
-    )
-  end
-
-  # test on b7667969
-  b7667969argot = TrajectRunTest.run_traject('unc', 'b7667969')
-  b7667969result = JSON.parse(b7667969argot)['items'][0]
-
-  it 'sets item cn_scheme to ALPHANUM when call_no is in 099 for UNC (single item record)' do
-    expect(b7667969result).to(
-      include("\"cn_scheme\":\"ALPHANUM\"")
-    )
-  end
-
-  it 'sets item call_no (alphanumeric) from multiple subfield a values for UNC (single item record)' do
-    expect(b7667969result).to(
-      include("\"call_no\":\"J Villar\"")
-    )
-  end
-
-  # test on b1319986
-  b1319986argot = TrajectRunTest.run_traject('unc', 'b1319986')
-  b1319986result0 = JSON.parse(b1319986argot)['items'][0]
-  b1319986result1 = JSON.parse(b1319986argot)['items'][1]
-
-  it 'sets item cn_scheme to LC when call_no is in 050 for UNC' do
-    expect(b1319986result0).to(
-      include("\"cn_scheme\":\"LC\"")
-    )
-  end
-
-  it 'sets item vol for UNC' do
-    expect(b1319986result0).to(
-      include("\"vol\":\"Bd.2\"")
-    )
-  end
-
-  it 'sets copy_no when greater than 1 for UNC' do
-    expect(b1319986result1).to(
-      include("\"copy_no\":\"2\"")
-    )
-  end
-
-  #test on b4069204
-  b4069204argot = TrajectRunTest.run_traject('unc', 'b4069204')
-  b4069204result0 = JSON.parse(b4069204argot)['items'][0]
-
-  it 'sets item cn_scheme to DDC when call_no is in 092 for UNC' do
-    expect(b4069204result0).to(
-      include("\"cn_scheme\":\"DDC\"")
-    )
-  end
-
-  #test on b2975416
-  b2975416argot = TrajectRunTest.run_traject('unc', 'b2975416')
-  b2975416result = JSON.parse(b2975416argot)['items']
-
-  it 'sets due date for UNC' do
-    expect(b2975416result[1]).to(
-      include("\"due_date\":\"2018-01-30\"")
-    )
-  end
-
-  it 'sets status to Checked out for UNC' do
-    expect(b2975416result[1]).to(
-      include("\"status\":\"Checked out\"")
-    )
-  end
-
-    it 'sets multiple item notes in correct order for UNC' do
-    expect(b2975416result[1]).to(
-      include("\"notes\":[\"zzTest note\",\"aaTest note\"]")
-    )
-  end
-
-    it 'does NOT set item notes when there are none for UNC' do
-    expect(b2975416result[0]).not_to(
-      include("\"notes\":[]")
-    )
-    end
-
-    it 'sets available to Available if status is In-Library Use Only for UNC' do
-    expect(JSON.parse(b2975416argot)['available']).to(
-      eq("Available")
-    )
-  end
-
-    # it 'generates holdings data for UNC' do
-  #   result = TrajectRunTest.run_traject('unc', 'holdings')
-  #   expect(JSON.parse(result)['holdings']).to(
-  #       eq(["{\"holdings_id\":\"c5125146\",\"loc_b\":\"UNC:Library "\
-  #         "Service Center\",\"loc_n\":\"Library Service Center -- Use Request "\
-  #         "Form\",\"summary\":\"v.42(1992)-v.45(1993)\"}"])
-  #   )
-  # end
 
 end

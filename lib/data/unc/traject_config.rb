@@ -13,9 +13,9 @@ to_field 'local_id' do |rec, acc|
   primary = primary.delete('.') if primary
 
   local_id = {
-    :value => primary,
-    :other => []
-  }
+              :value => primary,
+              :other => []
+             }
 
   # do things here for "Other"
 
@@ -33,6 +33,10 @@ to_field 'institution', literal('unc')
 ######
 def status_map
   @status_map ||=Traject::TranslationMap.new('unc/status_map')
+end
+
+def loc_hierarchy_map
+  @loc_hierarchy_map ||=Traject::TranslationMap.new('unc/loc_b_to_hierarchy')
 end
 
 def is_available?(items)
@@ -80,7 +84,7 @@ to_field 'items' do |rec, acc, ctx|
     field.subfields.each do |subfield|
       sf = subfield.code
       subfield.value.gsub!(/\|./, ' ') #remove subfield delimiters and
-      subfield.value.strip! #delet leading/trailing spaces
+      subfield.value.strip! #delete leading/trailing spaces
       case sf
       when 'c'
         item['copy_no'] = subfield.value if subfield.value != '1'
@@ -116,6 +120,10 @@ to_field 'items' do |rec, acc, ctx|
     #set Availability facet value affirmatively
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
+
+    ilocs = items.collect { |it| it['loc_b'] }
+    hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten
+    ctx.output_hash['location_hierarchy'] = explode_hierarchical_strings(hier_loc_code_strings)
   end
 end
 
@@ -123,52 +131,126 @@ end
 # Holdings
 ######
 
-def location_shelf_display
-  @location_shelf_display ||=Traject::TranslationMap.new('unc/location_shelf_code_to_display')
-end
-
-def location_library
-  @location_library ||=Traject::TranslationMap.new('unc/location_shelf_to_location_library')
-end
-
 to_field 'holdings' do |rec, acc|
-  holding = {}
-  nine_twos = []
-  nine_threes = {
-    info: [],   # $2 = 852
-    summary: [] # $2 = 866
-  }
+  holdings = []
+  holdings_ff = [] #fixed field level info from holdings records
+  holdings_vf = {} #variable field level info from holdings records
+  # holdings_vf = {'c1234567' => [
+  #                               {'marctag' => '852',
+  #                                'iiitag' => 'c',
+  #                                'otherfields' => [['h', 'HC102'], ['i', '.D8'], ['z', 'Does not circulate']]
+  #                                },
+  #                               {'marctag' => '866',
+  #                                'iiitag' => 'h',
+  #                                'linkid' => '0',
+  #                                'other_fields' => [['a', '1979:v.1, 1980 - 1987:A-F, 1987:P-2011']]
+  #                                },
+  #                               ]
+  #                }
 
-  Traject::MarcExtractor.cached('999|9*|', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    nine_twos << field if field.indicator2 == '2'
-    if field.indicator2 == '3'
-      nine_threes[:info] << { id: field.subfields_with_code('0').first.value, field: field } if field.subfield_with_value_of_code?('852','2')
-      nine_threes[:summary] << { id: field.subfields_with_code('0').first.value, field: field } if field.subfield_with_value_of_code?('866','2')
-    end
-  end
+  Traject::MarcExtractor.cached('999|*2|abc', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    this_holding = {}
+    field.subfields.each do |subfield|
+      sf = subfield.code
+      val = subfield.value
+      val.gsub!(/\|./, ' ') #remove subfield delimiters and
+      val.strip! #delete leading/trailing spaces
 
-  nine_twos.each do |field|
-    field.subfields.each do |sf|
-      case sf.code
+      case sf
       when 'a'
-        holding['record_id'] = sf.value
+        this_holding[:holdings_id] = val
+        holdings_vf[val] = []
       when 'b'
-        holding['library'] = location_library[sf.value]
-        holding['location'] = location_shelf_display[sf.value]
+        this_holding[:loc] = val
+      when 'c'
+        this_holding[:checkin_card_ct] = val.to_i
       end
     end
+    holdings_ff << this_holding
   end
 
-  nine_threes[:info].select { |i| i[:id] == holding['record_id'] }.each do |info|
-    call_number_h = info[:field].subfield_values_from_code('h').join(' ')
-    call_number_i = info[:field].subfield_values_from_code('i').join(' ')
-    holding['call_number'] = call_number_h + call_number_i if call_number_h && call_number_i
-    holding['notes'] = info[:field].subfield_values_from_code('z')
+  Traject::MarcExtractor.cached('999|*3|', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+
+    keep_fields = ['852', '866', '867', '868']
+    this_field = {}
+    other_fields = []
+
+    field.subfields.each do |subfield|
+      sf = subfield.code
+      val = subfield.value
+      val.gsub!(/\|./, ' ') #remove subfield delimiters and
+      val.strip! #delete leading/trailing spaces
+      case sf
+      when '0'
+        this_field[:hrec] = val
+      when '2'
+        this_field[:marctag] = val
+      when '3'
+        this_field[:iiitag] = val
+      when '8'
+        this_field[:linkid] = val
+      else
+        other_fields << [sf, val]
+      end
+    end
+
+    if keep_fields.include?(this_field[:marctag])
+      this_field[:other_fields] = other_fields
+      holdings_vf[this_field[:hrec]] << this_field
+    end
   end
 
-  nine_threes[:summary].select { |i| i[:id] == holding['record_id'] }.each do |summary|
-    holding['summary'] = summary[:field].subfield_values_from_code('a').first
-  end
+  holdings_ff.each do |hrec|
+    holding = {}
+    holding['holdings_id'] = hrec[:holdings_id] if hrec[:checkin_card_ct] > 0
+    holding['loc_b'] = hrec[:loc]
+    holding['loc_n'] = hrec[:loc]
 
-  acc << holding.to_json if holding.any?
+    varfields = holdings_vf[hrec[:holdings_id]]
+    notes = []
+
+    #set call number and holdings notes from 852 with iiitag c
+    cn_f = varfields.select { |f| f[:marctag] == '852' && f[:iiitag] == 'c' }
+    if cn_f.size > 0
+      cns = []
+      cn_f.each do |cnf|
+        this_cn = []
+        cnf[:other_fields].each do |e|
+          this_cn << e[1] if e[0] =~ /[hijk]/
+          notes << e[1] if e[0] == 'z'
+        end
+        cns << this_cn.join(' ')
+      end
+      holding['call_no'] = cns.join('; ')
+      holding['notes'] = notes if notes.size > 0
+    end
+
+    #set summary holdings and notes from 866, 867, 868
+    sum_f = varfields.select { |f| f[:marctag] =~ /86[678]/ }
+    if sum_f.size > 0
+      sums = []
+      sum_f.each do |sumf|
+        this_sum = []
+        sumf[:other_fields].each do |e|
+          this_sum << e[1] if e[0] == 'a'
+          notes << e[1] if e[0] == 'z'
+        end
+        
+        case sumf[:marctag]
+        when '867'
+          sums << "Supplementary holdings: #{this_sum.join(', ')}"
+        when '868'
+          sums << "Index holdings: #{this_sum.join(', ')}"
+        else
+          sums << this_sum.join(', ')
+        end
+      end
+
+      holding['summary'] = sums.join('; ')
+      holding['notes'] = notes.uniq if notes.size > 0
+    end
+
+    acc << holding.to_json if holding
+  end
+  
 end

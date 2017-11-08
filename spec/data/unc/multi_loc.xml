@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200253I  4500</leader>
+      <controlfield tag='008'>890805s1902    enk           000 0 engm </controlfield>
+      <controlfield tag='001'>312466</controlfield>
+      <controlfield tag='005'>19900208145717.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>03002086</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>WSU</subfield>
+        <subfield code='d'>SER</subfield>
+        <subfield code='d'>m.c.</subfield>
+        <subfield code='d'>CLU</subfield>
+        <subfield code='d'>m/c</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='041'>
+        <subfield code='a'>engiri</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>e-ie---</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='050'>
+        <subfield code='a'>PB1423.C8</subfield>
+        <subfield code='b'>G7</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='130'>
+        <subfield code='a'>Cuchulain.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Cuchulain of Muirthemme:</subfield>
+        <subfield code='b'>the story of the men of the Red Branch of Ulster;</subfield>
+        <subfield code='c'>arranged and put into English by Lady Gregory. With a preface by W. B. Yeats.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1082803</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1147335</subfield>
+        <subfield code='l'>wcsna</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>18</subfield>
+        <subfield code='b'>00007525537</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPB1423.C8 G7</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1147765</subfield>
+        <subfield code='l'>nohbb</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>18</subfield>
+        <subfield code='b'>00007525537</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPB1423.C8 G7</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 13:12:21-04</subfield>
+        <subfield code='u'>2016-09-23 12:57:41-04</subfield>
+      </datafield>
+  </record>
+</collection>

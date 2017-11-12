@@ -49,7 +49,7 @@ def get_rollup_related_ids(my001, my003, my019s, my035s)
   elsif my001 =~ /^(hsl|tmp)\d+$/ && oclcnum_003s.include?(my003)
     oclcnum = my001.gsub('tmp', '').gsub('hsl', '')
   elsif my001 =~ /^\d+\D\w+$/i
-    oclcnum = my001.gsub(/^(\d+)\D\w+$/, '\1')
+    oclcnum = clean_ocn_suffixes(my001)
   elsif my001 =~ /^ss([ej]|[ie]b)\d+$/
     ssnum = my001.gsub('sseb', 'ssib').gsub('sse', 'ssj')
   end

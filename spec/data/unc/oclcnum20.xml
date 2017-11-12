@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000nam  22003013i 4500</leader>
+      <controlfield tag='006'>m||||||||d| ||||||</controlfield>
+      <controlfield tag='008'>080405s2007    vau|||||s|||||||| ||eng|d</controlfield>
+      <controlfield tag='007'>cr||n||||||||a</controlfield>
+      <controlfield tag='001'>ASP1000005106/psyc</controlfield>
+      <controlfield tag='003'>VaAlASP</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)593657737</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>VaAlASP</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Cassalis, Ernest.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Autobiography of a schizophrenic</subfield>
+        <subfield code='h'>[electronic resource] /</subfield>
+        <subfield code='c'>by Ernest Cassalis.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>[1st electronic ed.]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Alexandria, VA</subfield>
+        <subfield code='b'>Alexander Street Press</subfield>
+        <subfield code='c'>2007.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Title from HTML t.p. (viewed Aug. 5, 2008)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Unlimited simultaneous users</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>Mode of access: World Wide Web.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>Counseling and psychotherapy transcripts, client narratives, and reference works (online collection)</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://www.aspresolver.com/aspresolver.asp?PSYC;1000005106</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='x'>Counseling &amp; psychotherapy transcripts</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b6053922</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2010-01-12 00:00:00-05</subfield>
+        <subfield code='c'>2010-01-12 14:02:43-05</subfield>
+        <subfield code='u'>2016-11-30 12:28:13-05</subfield>
+      </datafield>
+  </record>
+</collection>

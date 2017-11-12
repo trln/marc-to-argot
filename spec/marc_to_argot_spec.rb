@@ -1,19 +1,6 @@
 require 'spec_helper'
-require 'util'
-require 'marc_to_argot'
-require 'json'
 
 describe MarcToArgot do
-  class TrajectRunTest
-    def self.run_traject(collection, file, extension = 'xml')
-      indexer = Util::TrajectLoader.load(collection, extension)
-      test_file = Util.find_marc(collection, file, extension)
-      Util.capture_stdout do |_|
-        indexer.process(File.open(test_file))
-      end
-    end
-  end
-
   it 'has a version number' do
     expect(MarcToArgot::VERSION).not_to be nil
   end
@@ -33,7 +20,7 @@ describe MarcToArgot do
   end
 
   it 'generates base results for NCSU' do
-    result = TrajectRunTest.run_traject('ncsu', 'base')
+    result = Util::TrajectRunTest.run_traject('ncsu', 'base')
     expect(result).not_to be_empty
   end
 
@@ -44,12 +31,12 @@ describe MarcToArgot do
   end
 
   it 'generates base results for Duke' do
-    result = TrajectRunTest.run_traject('duke', 'base', 'mrc')
+    result = Util::TrajectRunTest.run_traject('duke', 'base', 'mrc')
     expect(result).not_to be_empty
   end
 
   it 'generates holdings data for Duke' do
-    result = TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
+    result = Util::TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
     expect(JSON.parse(result)['holdings']).to(
       eq(["{\"loc_b\":\"LAW\"," \
           "\"loc_n\":\"LGEN\"," \
@@ -60,7 +47,7 @@ describe MarcToArgot do
   end
 
   it 'generates author_facet values for Duke' do
-    result = TrajectRunTest.run_traject('duke', 'author_facet', 'mrc')
+    result = Util::TrajectRunTest.run_traject('duke', 'author_facet', 'mrc')
     expect(JSON.parse(result)['author_facet']).to(
       eq(["Author (100 field), 1874-1943",
           "Author (700 field, second indicator is 2), 1874-1943",
@@ -74,14 +61,14 @@ describe MarcToArgot do
   end
 
   it 'generates author facet value if relators include punctuation' do
-    b1082803argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1082803') )
+    b1082803argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'b1082803') )
     expect(b1082803argot['author_facet']).to(
       include('Gregory, Lady, 1852-1932')
     )
   end
 
   it 'generates rollup_id for Duke' do
-    result = TrajectRunTest.run_traject('duke', 'rollup_id', 'mrc')
+    result = Util::TrajectRunTest.run_traject('duke', 'rollup_id', 'mrc')
     expect(JSON.parse(result)['rollup_id']).to(
       eq('OCLC12420922')
     )
@@ -94,7 +81,7 @@ describe MarcToArgot do
   end
 
   it 'generates base results for UNC' do
-    result = TrajectRunTest.run_traject('unc', 'base')
+    result = Util::TrajectRunTest.run_traject('unc', 'base')
     expect(result).not_to be_empty
   end
 

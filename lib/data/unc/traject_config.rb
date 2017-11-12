@@ -28,6 +28,92 @@ end
 to_field 'institution', literal('unc')
 
 ################################################
+# oclc_number, sersol_number, rollup_id
+# 001, 003, 035
+######\
+
+def clean_ocn_suffixes(value)
+  value.gsub(/^(\d+)\D\w+$/, '\1')
+end
+
+def get_rollup_related_ids(my001, my003, my019s, my035s)
+  oclcnum_003s = ['', 'OCoLC', 'NhCcYBP']
+  oclcnum = ''
+  ssnum = ''
+  rollup = ''
+  oclc_old = []
+  vendor_id = []
+
+  if my001 =~ /^\d+$/ && oclcnum_003s.include?(my003)
+    oclcnum = my001
+  elsif my001 =~ /^(hsl|tmp)\d+$/ && oclcnum_003s.include?(my003)
+    oclcnum = my001.gsub('tmp', '').gsub('hsl', '')
+  elsif my001 =~ /^\d+\D\w+$/i
+    oclcnum = my001.gsub(/^(\d+)\D\w+$/, '\1')
+  elsif my001 =~ /^ss([ej]|[ie]b)\d+$/
+    ssnum = my001.gsub('sseb', 'ssib').gsub('sse', 'ssj')
+  end
+
+  vendor_id << my001 if my001.length > 0 && oclcnum == '' && ssnum == ''
+
+  if oclcnum == '' && ssnum == '' && my035s.size > 0
+    oclc035s = my035s.flatten.select { |f| f.value =~ /^\(OCoLC\)\d+$/ }
+    oclcnum = oclc035s[0].value.gsub(/\(OCoLC\)0*/,'') if oclc035s.size > 0
+  end
+
+  if my019s.size > 0
+    my019s.flatten.each do |sf|
+      oclc_old << clean_ocn_suffixes(sf.value) if sf.value =~ /^\d+/
+    end
+  end
+  
+  if oclcnum.length > 0
+    rollup = "OCLC#{oclcnum}"
+  elsif oclcnum == '' && oclc_old.size > 0
+    rollup = "OCLC#{oclc_old[0]}"
+  elsif ssnum.length > 0
+    rollup = ssnum
+  end
+
+  final_onum = oclcnum if oclcnum.length > 0
+  final_snum = ssnum if ssnum.length > 0
+  final_rollup = rollup if rollup.length > 0
+  final_oclc_old = oclc_old if oclc_old.size > 0
+  final_vendor_id = vendor_id if vendor_id.size > 0
+
+  {:oclc => final_onum, :ss => final_snum,
+   :rollup => final_rollup, :oclc_old => final_oclc_old,
+   :vendor_id => final_vendor_id}
+end
+
+each_record do |rec, cxt|
+    my001 = ''
+    my003 = ''
+    my019s = []
+    my035s = []
+    
+  Traject::MarcExtractor.cached('001:003:019:035a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    case field.tag
+    when '001'
+      my001 = field.value
+    when '003'
+      my003 = field.value
+    when '019'
+      my019s << field.subfields
+    when '035'
+      my035s << field.subfields
+    end
+  end
+
+  results = get_rollup_related_ids(my001, my003, my019s, my035s)
+  cxt.output_hash['oclc_number'] = results[:oclc] if results[:oclc]
+  cxt.output_hash['sersol_number'] = results[:ss] if results[:ss]
+  cxt.output_hash['rollup_id'] = results[:rollup] if results[:rollup]
+  cxt.output_hash['oclc_number_old'] = results[:oclc_old] if results[:oclc_old]
+  cxt.output_hash['vendor_marc_id'] = results[:vendor_id] if results[:vendor_id]
+end
+
+################################################
 # Items
 # https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
 ######

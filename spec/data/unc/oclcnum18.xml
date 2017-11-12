@@ -1,0 +1,54 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a22002413u 4500</leader>
+      <controlfield tag='006'>m     o  d</controlfield>
+      <controlfield tag='007'>cr |n |||||||a</controlfield>
+      <controlfield tag='008'>170407s1997    xx |||||o|||||||| ||    d</controlfield>
+      <controlfield tag='001'>sseb026568724</controlfield>
+      <controlfield tag='003'>WaSeSS</controlfield>
+      <controlfield tag='005'>20170407180148.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>WaSeSS</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>WaSeSS</subfield>
+        <subfield code='d'>WaSeSS</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>IEE Colloquium on Artificial Intelligence Techniques in Power Systems (Digest No</subfield>
+        <subfield code='h'>[electronic resource] :</subfield>
+        <subfield code='b'>1997/354).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>[S.l.] :</subfield>
+        <subfield code='b'>IET,</subfield>
+        <subfield code='c'>1997.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Limited to seventy-five (75) concurrent users</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='588'>
+        <subfield code='a'>Title from content provider.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>IEEE Xplore (online collection). Conference Proceedings</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://VB3LK7EB4T.search.serialssolutions.com/?V=1.0&amp;L=VB3LK7EB4T&amp;S=JCs&amp;C=TC_026568724&amp;T=marc</subfield>
+        <subfield code='x'>IEEE Xplore All Conference Proceedings</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='907'>
+        <subfield code='a'>b8760672</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2017-04-19 00:00:00-04</subfield>
+        <subfield code='c'>2017-02-13 08:45:32-05</subfield>
+        <subfield code='u'>2017-04-19 11:11:36-04</subfield>
+      </datafield>
+  </record>
+</collection>

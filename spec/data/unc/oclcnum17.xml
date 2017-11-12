@@ -1,0 +1,149 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000nam a2200505 i 4500</leader>
+      <controlfield tag='006'>m     o  d</controlfield>
+      <controlfield tag='007'>cr |n |||||||a</controlfield>
+      <controlfield tag='008'>160622t20152015fr a    ob   i000 0 eng d</controlfield>
+      <controlfield tag='001'>sse0001830521</controlfield>
+      <controlfield tag='003'>WaSeSS</controlfield>
+      <controlfield tag='005'>20170907180205.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2016434499</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>9264229345</subfield>
+        <subfield code='q'>print</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>9789264229341</subfield>
+        <subfield code='q'>print</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>NLE</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>NLE</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>BTCTA</subfield>
+        <subfield code='d'>YDXCP</subfield>
+        <subfield code='d'>BDX</subfield>
+        <subfield code='d'>CHVBK</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>ZCU</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>AAU</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>WaSeSS</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>lccopycat</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>QA76</subfield>
+        <subfield code='b'>.D3153 2015</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Data-driven innovation</subfield>
+        <subfield code='h'>[electronic resource] :</subfield>
+        <subfield code='b'>big data for growth and well-being /</subfield>
+        <subfield code='c'>OECD ; [edited by Randall Holden ; authored by Mr. Reimsback-Konatze and six others]</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='246'>
+        <subfield code='a'>Big data for growth and well-being</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Paris :</subfield>
+        <subfield code='b'>OECD Publishing,</subfield>
+        <subfield code='c'>[2015]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource (452 pages) :</subfield>
+        <subfield code='b'>illustrations</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>computer</subfield>
+        <subfield code='b'>c</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='b'>cr</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>The phenomenon of data-driven innovation -- Mapping the global data ecosystem and its points of control -- How data now drive innovation -- Drawing value from data as an infrastructure -- Building trust for data-driven innovation -- Skills and employment in a data-driven economy -- Promoting data-driven scientific research -- The evolution of health care in a data-rich environment -- Cities as hubs for data-driven innovation -- Governments leading by example with public sector data.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Unlimited simultaneous users</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;This report focuses on digital data and analytics and their effects on innovation, growth and well-being. It aims to improve the evidence bases on the role of data-driven innovation (DDI) in boosting productivity growth and contributing to well-being. It also offers policy guidance for maximizing the benefits of DDI and mitigating the associated economic and societal risks. The insights in the report are intended to help policy makers better understand DDI, incorporate its multidimensionality into policy design and &apos;identify trade-offs, complementarities and unintended consequences of policy choices.&apos; This report contributes to the goal of building and maintaining &apos;resilient economies and inclusive societies&apos; while enhancing the productivity and competitiveness of industries, as articulated in the OECD Ministerial Council Statements of 2014 and 2015&quot;--Foreword.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Big data</subfield>
+        <subfield code='x'>Economic aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Big data</subfield>
+        <subfield code='x'>Social aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Data mining</subfield>
+        <subfield code='x'>Economic aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Data mining</subfield>
+        <subfield code='x'>Social aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Information technology</subfield>
+        <subfield code='x'>Economic aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Information technology</subfield>
+        <subfield code='x'>Social aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Technological innovations</subfield>
+        <subfield code='x'>Economic aspects.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Technological innovations</subfield>
+        <subfield code='x'>Social aspects.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Holden, Randy</subfield>
+        <subfield code='c'>(Editor)</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Organisation for Economic Co-operation and Development.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>OECD iLibrary (online collection)</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://VB3LK7EB4T.search.serialssolutions.com/?V=1.0&amp;L=VB3LK7EB4T&amp;S=JCs&amp;C=TC0001830521&amp;T=marc</subfield>
+        <subfield code='x'>OECD iLibrary</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+      </datafield>
+      <datafield ind1='8' ind2='9' tag='907'>
+        <subfield code='a'>b8958965</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2017-09-19 00:00:00-04</subfield>
+        <subfield code='c'>2017-09-19 08:11:17-04</subfield>
+        <subfield code='u'>2017-09-20 06:38:29-04</subfield>
+      </datafield>
+  </record>
+</collection>

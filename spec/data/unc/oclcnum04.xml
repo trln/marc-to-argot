@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000nam a22003017i 4500</leader>
+      <controlfield tag='008'>170530e201709  it            000 1 ita d</controlfield>
+      <controlfield tag='001'>4140888</controlfield>
+      <controlfield tag='003'>ItFiC</controlfield>
+      <controlfield tag='005'>20171012140534.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9788893442909 :</subfield>
+        <subfield code='c'>17.00 EUR</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1006424359</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(EBR)12345</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>ItFiC</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>ItFiC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>PQ</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='082'>
+        <subfield code='a'>853</subfield>
+        <subfield code='2'>14</subfield>
+      </datafield>
+  </record>
+</collection>

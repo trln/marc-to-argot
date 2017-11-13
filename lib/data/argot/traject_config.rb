@@ -293,13 +293,32 @@ unless settings["override"].include?("description")
 end
 
 unless settings["override"].include?("series")
-  to_field "series", argot_series(settings["specs"][:description])
+  to_field "series", argot_series(settings["specs"][:series])
 end
 
 unless settings["override"].include?("institution")
   to_field "institution" do |rec, acc|
     inst = %w(unc duke nccu ncsu)
     acc.concat(inst)
+  end
+end
+
+unless settings["override"].include?("misc_id")
+  to_field "misc_id" do |rec, acc|
+    Traject::MarcExtractor.cached('010ab').each_matching_line(rec) do |field, spec, extractor|
+      case field.tag
+      when '010'
+        field.subfields.each do |sf|
+          case sf.code
+          when 'a'
+            acc << {'id' => sf.value, 'qual' => '', 'type' => 'LCCN'}
+          when 'b'
+            acc << {'id' => sf.value, 'qual' => '', 'type' => 'NUCMC'}
+          end
+        end
+      end
+    end
+    acc.uniq!
   end
 end
 

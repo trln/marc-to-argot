@@ -6,9 +6,9 @@ describe MarcToArgot do
   # 010 tests
   # -=-=-=-=-=-=-=-  
   it '(MTA) sets LCCN' do
-    result = [ids01['misc_id'][0], ids01['misc_id_qualifier'][0], ids01['misc_id_type'][0]]
+    result = ids01['misc_id'][0]
     expect(result).to(
-      eq(['sn 78003579', '', 'LCCN'])
+      eq({'id' => 'sn 78003579', 'qual' => '', 'type' => 'LCCN'})
     )
   end
 end

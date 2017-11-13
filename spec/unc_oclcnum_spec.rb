@@ -25,25 +25,26 @@ describe MarcToArgot do
   # OCLC_NUMBER TESTS
   # -=-=-=-=-=-=-=-  
   it '(UNC) sets oclc_number when 001 is digits only and there is no 003' do
-    expect(rec01['oclc_number']).to(
+    expect(rec01['oclc_number']['value']).to(
       eq("825431")
     )
   end
 
   it '(UNC) sets oclc_number when 001 is digits only and 003 = OCoLC' do
-    expect(rec02['oclc_number']).to(
+    expect(rec02['oclc_number']['value']).to(
       eq("1001910954")
     )
   end
 
   it '(UNC) does NOT set oclc_number when 001 is digits only and 003 = ItFiC' do
-    expect(rec03['oclc_number']).to(
+    result = rec03['oclc_number']
+    expect(result).to(
       eq(nil)
     )
   end
 
   it '(UNC) sets oclc_number from 035 with (OCoLC) when not set from 001' do
-    result = [rec04['oclc_number'], rec19['oclc_number'], rec20['oclc_number']]
+    result = [rec04['oclc_number']['value'], rec19['oclc_number']['value'], rec20['oclc_number']['value']]
     expect(result).to(
       eq(['1006424359', '560404564', '593657737'])
     )
@@ -56,7 +57,7 @@ describe MarcToArgot do
   end
 
   it '(UNC) strips leading zero(s) from oclc_number set from 035' do
-    expect(rec06['oclc_number']).to(
+    expect(rec06['oclc_number']['value']).to(
       eq('863862720')
     )
   end
@@ -68,19 +69,19 @@ describe MarcToArgot do
   end
 
   it '(UNC) sets oclc_number when 001 is digits only and 003 = NhCcYBP' do
-    expect(rec08['oclc_number']).to(
+    expect(rec08['oclc_number']['value']).to(
       eq('56651314')
     )
   end
 
   it '(UNC) sets oclc_number when 001 has prefix tmp and 003 = OCoLC' do
-    expect(rec09['oclc_number']).to(
+    expect(rec09['oclc_number']['value']).to(
       eq('54543095')
     )
   end
 
   it '(UNC) sets oclc_number when 001 is digits with alphanum suffix' do
-    expect(rec10['oclc_number']).to(
+    expect(rec10['oclc_number']['value']).to(
       eq('186568905')
     )
   end
@@ -98,13 +99,13 @@ describe MarcToArgot do
   end
 
   it '(UNC) sets oclc_number when 001 has hsl prefix and 003 = OCoLC' do
-    expect(rec13['oclc_number']).to(
+    expect(rec13['oclc_number']['value']).to(
       eq('228308541')
     )
   end
 
   it '(UNC) does NOT set oclc_number when 001 has WHO prefix and 003 = OCoLC' do
-    expect(rec14['oclc_number']).to(
+    expect(rec14['oclc_number']['value']).to(
       eq(nil)
     )
   end
@@ -170,9 +171,9 @@ describe MarcToArgot do
   # -=-=-=-=-=-=-=-  
   it '(UNC) sets oclc_number_old from 019 with no cleanup' do
     result = [
-              rec01['oclc_number_old'],
-              rec09['oclc_number_old'],
-              rec14['oclc_number_old']
+              rec01['oclc_number']['old'],
+              rec09['oclc_number']['old'],
+              rec14['oclc_number']['old']
     ]
     expect(result).to(
       eq([
@@ -185,7 +186,7 @@ describe MarcToArgot do
 
   it '(UNC) sets oclc_number_old from 019 with suffix cleanup' do
     result = [
-               rec10['oclc_number_old']
+               rec10['oclc_number']['old']
              ]
     expect(result).to(
       eq([
@@ -196,7 +197,7 @@ describe MarcToArgot do
 
   it '(UNC) do NOT set oclc_number_old from 019s with alpha prefixes' do
     result = [
-               rec19['oclc_number_old']
+               rec19['oclc_number']['old']
              ]
     expect(result).to(
       eq([

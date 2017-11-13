@@ -106,10 +106,14 @@ each_record do |rec, cxt|
   end
 
   results = get_rollup_related_ids(my001, my003, my019s, my035s)
-  cxt.output_hash['oclc_number'] = results[:oclc] if results[:oclc]
+  oclc_hash = {}
+  oclc_hash['value'] = results[:oclc] if results[:oclc]
+  oclc_hash['old'] = results[:oclc_old] if results[:oclc_old]
+  cxt.output_hash['oclc_number'] = oclc_hash if oclc_hash.size > 0
+  #cxt.output_hash['oclc_number'] = results[:oclc] if results[:oclc]
   cxt.output_hash['sersol_number'] = results[:ss] if results[:ss]
   cxt.output_hash['rollup_id'] = results[:rollup] if results[:rollup]
-  cxt.output_hash['oclc_number_old'] = results[:oclc_old] if results[:oclc_old]
+  #cxt.output_hash['oclc_number_old'] = results[:oclc_old] if results[:oclc_old]
   cxt.output_hash['vendor_marc_id'] = results[:vendor_id] if results[:vendor_id]
 end
 

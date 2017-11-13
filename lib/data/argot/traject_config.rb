@@ -303,9 +303,49 @@ unless settings["override"].include?("institution")
   end
 end
 
+
 unless settings["override"].include?("misc_id")
+  def national_bibliography_codes
+    @national_bibliography_codes ||=Traject::TranslationMap.new('shared/national_bibliography_codes')
+  end
+
+  def clean_qualifier_sf(value)
+    value.gsub!(/[()]/, '')
+  end
+
+  def split_qualifier(value)
+    m = /^(.+?) ?\((.+)\)/.match(value)
+    [m[1], m[2]]
+  end
+  
+  def process_015(field, acc)
+    sf_a = field.select { |sf| sf.code == 'a' }
+    sf_q = field.select { |sf| sf.code == 'q' }
+    sf_2 = field.select { |sf| sf.code == '2' }
+    type = 'National Bibliography Number'
+
+    if sf_2.size > 0
+      type = national_bibliography_codes[sf_2[0].value]
+    end
+
+    if sf_a.size == 1 && sf_q.size == 1
+      id = sf_a[0].value
+      qual = clean_qualifier_sf(sf_q[0].value)
+      acc << {'id' => id, 'qual' => qual, 'type' => type}
+    elsif sf_a.size > 0 && sf_q.size == 0
+      sf_a.each do |sf|
+        if sf.value =~ /\(.+\)/
+          split = split_qualifier(sf.value)
+          acc << {'id' => split[0], 'qual' => split[1], 'type' => type}
+        else
+          acc << {'id' => sf.value, 'qual' => '', 'type' => type}
+        end
+      end
+    end
+  end
+
   to_field "misc_id" do |rec, acc|
-    Traject::MarcExtractor.cached('010ab').each_matching_line(rec) do |field, spec, extractor|
+    Traject::MarcExtractor.cached('010ab:015aq2').each_matching_line(rec) do |field, spec, extractor|
       case field.tag
       when '010'
         field.subfields.each do |sf|
@@ -316,6 +356,8 @@ unless settings["override"].include?("misc_id")
             acc << {'id' => sf.value, 'qual' => '', 'type' => 'NUCMC'}
           end
         end
+      when '015'
+        process_015(field, acc)
       end
     end
     acc.uniq!

@@ -9,14 +9,14 @@ describe MarcToArgot do
   it '(MTA) sets LCCN' do
     result = ids01['misc_id'][0]
     expect(result).to(
-      eq({'id' => 'sn 78003579', 'qual' => '', 'type' => 'LCCN'})
+      eq({'value' => 'sn 78003579', 'qual' => '', 'type' => 'LCCN'})
     )
   end
 
   it '(MTA) sets NUCMC' do
     result = ids01['misc_id'][2]
     expect(result).to(
-      eq({'id' => 'ms 69001649 ', 'qual' => '', 'type' => 'NUCMC'})
+      eq({'value' => 'ms 69001649 ', 'qual' => '', 'type' => 'NUCMC'})
     )
   end
 
@@ -26,7 +26,7 @@ describe MarcToArgot do
   it '(MTA) sets national bib number (1 a, 1 q, 2 lookup)' do
     result = ids01['misc_id'][3]
     expect(result).to(
-      eq({'id' => '123', 'qual' => 'v. 1', 'type' => "Bibliografía d'Andorra"})
+      eq({'value' => '123', 'qual' => 'v. 1', 'type' => "Bibliografía d'Andorra"})
     )
   end
 
@@ -38,9 +38,9 @@ describe MarcToArgot do
     ]
     expect(result).to(
       eq([
-           {'id' => '123', 'qual' => 'v. 1', 'type' => "National Bibliography Number"},
-           {'id' => '789', 'qual' => 'v. 2', 'type' => "National Bibliography Number"},
-           {'id' => '1010', 'qual' => '', 'type' => "National Bibliography Number"}
+           {'value' => '123', 'qual' => 'v. 1', 'type' => "National Bibliography Number"},
+           {'value' => '789', 'qual' => 'v. 2', 'type' => "National Bibliography Number"},
+           {'value' => '1010', 'qual' => '', 'type' => "National Bibliography Number"}
          ])
     )
   end

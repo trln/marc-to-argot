@@ -15,7 +15,7 @@ describe MarcToArgot do
   it '(MTA) sets NUCMC' do
     result = ids01['misc_id'][2]
     expect(result).to(
-      eq({'id' => 'ms 69001649', 'qual' => '', 'type' => 'NUCMC'})
+      eq({'id' => 'ms 69001649 ', 'qual' => '', 'type' => 'NUCMC'})
     )
   end
 end

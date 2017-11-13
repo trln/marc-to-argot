@@ -6,6 +6,12 @@ unless settings["override"].include?("id")
   to_field "id", oclcnum("035a:035z")
 end
 
+unless settings["override"].include?("record_data_source")
+  to_field "record_data_source" do |rec, acc|
+    acc << 'ILSMARC'
+  end
+end
+
 unless settings["override"].include?("local_id")
   to_field "local_id" do |rec,acc,context|
 

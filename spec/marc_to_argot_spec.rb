@@ -85,4 +85,18 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
+  it 'generates record_data_source value for UNC' do
+    b1082803argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'b1082803') )
+    expect(b1082803argot['record_data_source']).to(
+      eq(['ILSMARC'])
+    )
+  end
+
+  it 'generates record_data_source value for Duke' do
+    result = JSON.parse( Util::TrajectRunTest.run_traject('duke', 'rollup_id', 'mrc') )
+    expect(result['record_data_source']).to(
+      eq(['ILSMARC'])
+    )
+  end
+
 end

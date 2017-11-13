@@ -8,6 +8,11 @@
       <datafield ind1=' ' ind2=' ' tag='010'>
         <subfield code='a'>sn 78003579</subfield>
       </datafield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>mic68000194</subfield>
+        <subfield code='b'>ms 69001649 </subfield>
+        <subfield code='z'>mm 80054700</subfield>
+      </datafield>
       <datafield ind1=' ' ind2=' ' tag='019'>
         <subfield code='a'>1460998</subfield>
       </datafield>

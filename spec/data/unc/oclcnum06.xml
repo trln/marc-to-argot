@@ -1,0 +1,162 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000nam a2200625 i 4500</leader>
+      <controlfield tag='006'>m    eo  d</controlfield>
+      <controlfield tag='008'>131118s2013    enka    ob    001 0 eng d</controlfield>
+      <controlfield tag='007'>cr cn |||m|||a</controlfield>
+      <controlfield tag='001'>9781909453760</controlfield>
+      <controlfield tag='003'>LOFM</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>9781909453777 (print)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781909453753 (ePub)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781909453760 (eISBN)</subfield>
+      </datafield>
+      <datafield ind1='7' ind2=' ' tag='024'>
+        <subfield code='a'>10.4155/9781909453760</subfield>
+        <subfield code='2'>doi</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)0863862720</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(CaBNVSL)thg00909803</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>CaBNVSL</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>CaBNVSL</subfield>
+        <subfield code='d'>CaBNVSL</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>RS189</subfield>
+        <subfield code='b'>.B567 2013eb</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='060'>
+        <subfield code='a'>QV 25</subfield>
+        <subfield code='b'>B567 2013eb</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>615/.1901</subfield>
+        <subfield code='2'>22</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Bioanalysis for service users /</subfield>
+        <subfield code='c'>[edited and] foreword by Anne-Françoise Aubry, Jim X. Shen.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>London, England :</subfield>
+        <subfield code='b'>Future Science Ltd (Unitec House, 2 Albert Place, London N3 1QB, UK),</subfield>
+        <subfield code='c'>[2013]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 PDF (117 pages) :</subfield>
+        <subfield code='b'>color illustrations, digital file.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>electronic</subfield>
+        <subfield code='2'>isbdmedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Page 117 is blank.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Bioanalysis for service users / Anne-Françoise Aubry &amp; Jim X. Shen -- Bioanalysis and where does it fit into the drug development process? / Anne-Françoise Aubry &amp; Jim X. Shen -- Perspectives of bioanalysis in drug development / Yan G. Ni, Johanna R. Mora &amp; Lora L. Hamuro -- Practical decision-making for selection of bioanalytical CROs / Patrick Bennett &amp; Barbara Duncan -- LC techniques for bioanalysis : recent trends and developments / Efthimia Papastavros, Cong Bi, Erika L. Pfaunmiller &amp; David S. Hage -- Immunoassay bioanalysis for nonbioanalysts / James Lawrence, Howard Hill &amp; Graeme Smith -- LC-MS/MS bioanalysis for nonbioanalysts / Graeme Smith &amp; Howard Hill -- Practical considerations for outsourcing ligand-binding assays in a regulated environment / Andreea Halford, Yi Qun Xiao, Roger Hayes &amp; Marian Kelley -- A thoughtful scientific discourse on guidelines and method validations / Leif D. Svensson -- Index.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='506'>
+        <subfield code='a'>Restricted to subscribers or individual electronic text purchasers.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also available in print.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>System requirements: Adobe Acrobat Reader.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>Mode of access: World Wide Web.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='588'>
+        <subfield code='a'>Title from PDF title page (Future Science eBooks Web site, viewed November 18, 2013).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Drug development.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Drug Discovery.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Biomolecules</subfield>
+        <subfield code='x'>Analysis.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Molecular Biology.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Biophysics.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Drugs</subfield>
+        <subfield code='x'>Analysis.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Pharmaceutical Preparations</subfield>
+        <subfield code='x'>analysis.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Electronic books.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Shen, Jim X.,</subfield>
+        <subfield code='e'>editor.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Aubry, Anne-Françoise,</subfield>
+        <subfield code='e'>editor.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Future Science Ltd.,</subfield>
+        <subfield code='e'>publisher.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='776'>
+        <subfield code='i'>Print version:</subfield>
+        <subfield code='z'>9781909453777</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='830'>
+        <subfield code='a'>Future Science Group eBook collection.</subfield>
+        <subfield code='x'>2047-332X.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://www.futuremedicine.com/doi/pdf/10.4155/9781909453760</subfield>
+        <subfield code='x'>Future Medicine ebooks</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='919'>
+        <subfield code='a'>590 touched / wkg</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b7842583</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'></subfield>
+        <subfield code='c'>2014-06-12 18:04:30-04</subfield>
+        <subfield code='u'>2016-10-22 22:25:59-04</subfield>
+      </datafield>
+  </record>
+</collection>

@@ -1,0 +1,66 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cas a2201321I  4500</leader>
+      <controlfield tag='008'>870324c19619999dk mrzp       0   a0eng u</controlfield>
+      <controlfield tag='001'>825431</controlfield>
+      <controlfield tag='005'>19870324000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>sn 78003579</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>mic68000194</subfield>
+        <subfield code='b'>ms 69001649 </subfield>
+        <subfield code='z'>mm 80054700</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='015'>
+        <subfield code='a'>123</subfield>
+        <subfield code='q'>(v. 1)</subfield>
+        <subfield code='2'>ba</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='015'>
+        <subfield code='a'>123 (v. 1)</subfield>
+	<subfield code='a'>789(v. 2) </subfield>
+	<subfield code='a'>1010</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='015'>
+        <subfield code='a'>123 (v. 1)</subfield>
+	<subfield code='a'>789(v. 2) </subfield>
+	<subfield code='a'>1010</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>1460998</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='022'>
+        <subfield code='a'>0001-690X</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='030'>
+        <subfield code='a'>APYSA9</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='c'>OUN</subfield>
+        <subfield code='d'>SUL</subfield>
+        <subfield code='d'>NSD</subfield>
+        <subfield code='d'>IUL</subfield>
+        <subfield code='d'>HUL</subfield>
+        <subfield code='d'>NSD</subfield>
+        <subfield code='d'>MUL</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>SER</subfield>
+        <subfield code='d'>AIP</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>AIP</subfield>
+        <subfield code='d'>NOH</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='041'>
+        <subfield code='a'>engfreger</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>nsdp</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Acta psychiatrica Scandinavica</subfield>
+        <subfield code='h'>[serial].</subfield>
+      </datafield>
+  </record>
+</collection>

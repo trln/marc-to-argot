@@ -1,0 +1,51 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200385Mi 4500</leader>
+      <controlfield tag='008'>170828s2017    orua     b    001 0 eng d</controlfield>
+      <controlfield tag='001'>1001910954</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20171011153550.5</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>1001948063</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781498243179</subfield>
+        <subfield code='q'>hardcover</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1498243177</subfield>
+        <subfield code='q'>hardcover</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781532618000</subfield>
+        <subfield code='q'>paperback</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>153261800X</subfield>
+        <subfield code='q'>paperback</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1001910954</subfield>
+        <subfield code='z'>(OCoLC)1001948063</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>YDX</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>YDX</subfield>
+        <subfield code='d'>NhCcYBP</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>n-usn--</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>PS153.P87</subfield>
+        <subfield code='b'>P69 2017</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>252/.0590974</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+  </record>
+</collection>

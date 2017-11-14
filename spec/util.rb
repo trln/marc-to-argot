@@ -4,6 +4,16 @@ require 'marc_to_argot'
 
 # Utilities for specs
 module Util
+  class TrajectRunTest
+    def self.run_traject(collection, file, extension = 'xml')
+      indexer = Util::TrajectLoader.load(collection, extension)
+      test_file = Util.find_marc(collection, file, extension)
+      Util.capture_stdout do |_|
+        indexer.process(File.open(test_file))
+      end
+    end
+  end
+
   # utility method for loading MARC data for testing
   def self.find_marc(collection, file, extension = 'xml')
     data = File.expand_path('data', File.dirname(__FILE__))

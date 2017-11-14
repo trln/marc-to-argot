@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000nam  2200253Ka 4500</leader>
+      <controlfield tag='008'>080519s1948    dcu      s   f000 0 eng d</controlfield>
+      <controlfield tag='001'>hsl228308541</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20100928134506.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>WAU</subfield>
+        <subfield code='c'>WAU</subfield>
+        <subfield code='d'>WAU</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>n-us---</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='086'>
+        <subfield code='a'>C 3.186:P-25/11</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Estimates of the population of Hawaii, Puerto Rico, the Panama Canal zone, and the Virgin Islands, 1940 to 1947.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Washington, D.C. :</subfield>
+        <subfield code='b'>U.S. Dept. of Commerce, Bureau of the Census,</subfield>
+        <subfield code='c'>[1948]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>2 p. ;</subfield>
+        <subfield code='c'>27 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Caption title.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;August 6, 1948.&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>FDLP Pilot Project Historic Shelflist record.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='710'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Bureau of the Census.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='830'>
+        <subfield code='a'>Current population reports.</subfield>
+        <subfield code='n'>Series P-25,</subfield>
+        <subfield code='p'>Population estimates and projections ;</subfield>
+        <subfield code='v'>no. 11.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b6446651</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i8442836</subfield>
+        <subfield code='l'>dcpf</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>20</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aC 3.186:P-25/11</subfield>
+        <subfield code='n'>Need Help? Ask at Davis RefDesk</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2010-10-09 00:00:00-04</subfield>
+        <subfield code='c'>2010-10-09 21:35:17-04</subfield>
+        <subfield code='u'>2016-05-06 10:41:35-04</subfield>
+      </datafield>
+  </record>
+</collection>

@@ -1,0 +1,148 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000pam  2200421 i 4500</leader>
+      <controlfield tag='008'>141124p20152014nyu           000 1 eng  </controlfield>
+      <controlfield tag='001'>2014043145</controlfield>
+      <controlfield tag='003'>DLC</controlfield>
+      <controlfield tag='005'>20150806095612.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2014043145</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1501106783 :</subfield>
+        <subfield code='c'>$26.00</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>DLC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>pcc</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>a-cc---</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>PR6102.A7635</subfield>
+        <subfield code='b'>I53 2015</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='082'>
+        <subfield code='a'>823/.92</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='084'>
+        <subfield code='a'>FIC019000</subfield>
+        <subfield code='a'>FIC014000</subfield>
+        <subfield code='a'>FIC008000</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Barker, Susan,</subfield>
+        <subfield code='d'>1978-</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The incarnations /</subfield>
+        <subfield code='c'>Susan Barker.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>First Touchstone hardcover edition.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>New York :</subfield>
+        <subfield code='b'>Touchstone,</subfield>
+        <subfield code='c'>2015.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>viii, 371 pages ;</subfield>
+        <subfield code='c'>24 cm</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>unmediated</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>volume</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;Originally published in Great Britain in 2014 by Doubleday.&quot;</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='510'>
+        <subfield code='a'>Booklist,</subfield>
+        <subfield code='c'>July 01, 2015</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='510'>
+        <subfield code='a'>Kirkus Reviews,</subfield>
+        <subfield code='c'>June 01, 2015</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='510'>
+        <subfield code='a'>Publishers Weekly,</subfield>
+        <subfield code='c'>May 18, 2015</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='510'>
+        <subfield code='a'>BookPage,</subfield>
+        <subfield code='c'>August 01, 2015</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;Hailed as &quot;China&apos;s Midnight&apos;s Children,&quot; a gripping new novel about a Beijing taxi driver whose past incarnations haunt him through searing letters sent by his mysterious soulmate&quot;--</subfield>
+        <subfield code='c'>Provided by publisher.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='521'>
+        <subfield code='a'>Adult.</subfield>
+        <subfield code='b'>Brodart</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='521'>
+        <subfield code='a'>Adult.</subfield>
+        <subfield code='b'>Brodart</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Reincarnation</subfield>
+        <subfield code='v'>Fiction.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='651'>
+        <subfield code='a'>China</subfield>
+        <subfield code='x'>History</subfield>
+        <subfield code='v'>Fiction.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Historical fiction.</subfield>
+        <subfield code='2'>gsafd</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Mystery fiction.</subfield>
+        <subfield code='2'>gsafd</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='852'>
+        <subfield code='h'>FICTION Bar</subfield>
+        <subfield code='p'>5494</subfield>
+        <subfield code='9'>p26.00usd</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8323826</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i10847215</subfield>
+        <subfield code='l'>uadai</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>62</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>7</subfield>
+        <subfield code='b'>00049284843</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|aFICTION Bar</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2015-08-18 00:00:00-04</subfield>
+        <subfield code='c'>2015-08-18 14:17:00-04</subfield>
+        <subfield code='u'>2015-08-18 14:17:36-04</subfield>
+      </datafield>
+  </record>
+</collection>

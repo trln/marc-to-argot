@@ -1,0 +1,212 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2201477 a 4500</leader>
+      <controlfield tag='006'>m     o  d</controlfield>
+      <controlfield tag='007'>cr  n</controlfield>
+      <controlfield tag='001'>WHO669756139</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2011418726</subfield>
+      </datafield>
+      <datafield ind1='7' ind2=' ' tag='016'>
+        <subfield code='a'>101581628</subfield>
+        <subfield code='2'>DNLM</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>761853943</subfield>
+        <subfield code='a'>773174833</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781843393108</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1843393107</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9789241564281 (WHO)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9241564288 (WHO)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='z'>669756139</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>NLM</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>NLM</subfield>
+        <subfield code='d'>BTCTA</subfield>
+        <subfield code='d'>YDXCP</subfield>
+        <subfield code='d'>CKM</subfield>
+        <subfield code='d'>UAB</subfield>
+        <subfield code='d'>HPH</subfield>
+        <subfield code='d'>SDB</subfield>
+        <subfield code='d'>AGL</subfield>
+        <subfield code='d'>IXA</subfield>
+        <subfield code='d'>BWX</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>NLE</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>BEDGE</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>OCLCO</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>nlmcopyc</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>d------</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>TD327</subfield>
+        <subfield code='b'>.V358 2011</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='060'>
+        <subfield code='a'>2012 C-636</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='060'>
+        <subfield code='a'>WA 675</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='070'>
+        <subfield code='a'>TD327</subfield>
+        <subfield code='b'>.V358 2011</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>333.9122</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Valuing water, valuing livelihoods</subfield>
+        <subfield code='h'>[electronic resource] :</subfield>
+        <subfield code='b'>guidance on social cost-benefit analysis of drinking-water interventions, with special reference to small community water supplies /</subfield>
+        <subfield code='c'>edited by John Cameron [and others].</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>London :</subfield>
+        <subfield code='b'>IWA Pub.,</subfield>
+        <subfield code='c'>2011.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource (xii, 248 pages) :</subfield>
+        <subfield code='b'>illustrations</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>computer</subfield>
+        <subfield code='b'>c</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='b'>cr</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>The practice of economic assessment of small-scale drinking-water interventions / John Cameron and Paul Jagals -- Economic assessments of improvements in drinking-water supply : the global evidence / Chris Edwards and John Cameron -- Current situation in access to drinking-water / Katherine Pond and Stephen Pedley -- Defining the current situation : epidemiology / Paul R. Hunter and Helen Risebro -- Defining the current situation : observing livelihoods / John Cameron -- Interventions for water provision / Stephen Pedley, Katherine Pond, and Eadaoin Joyce -- Estimating the costs of small-scale water-supply interventions/ Paul Jagals and Luuk Rietveld -- Estimating health impacts of interventions with a focus on small-scale drinking-water interventions / Helen Risebro and Paul R. Hunter -- Cost-effectiveness analysis in practice / Chris Edwards -- Social cost-benefit analysis : principles / John Cameron -- Social cost-benefit analysis : summarizing the available global evidence on drinking-water interventions / Chris Edwards.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;This publication addresses the broader issues of social cost-benefit analysis performed on options to invest in drinking-water supplies, with a focus on small community suppliers&quot;--Cover page 4.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Issued also online.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Drinking water.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Water Supply</subfield>
+        <subfield code='x'>economics.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Water Supply</subfield>
+        <subfield code='x'>standards.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Water-supply</subfield>
+        <subfield code='z'>Developing countries.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Sanitation</subfield>
+        <subfield code='z'>Developing countries.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='2' tag='650'>
+        <subfield code='a'>Cost-Benefit Analysis.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Drinking water</subfield>
+        <subfield code='x'>Standards.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='2' tag='650'>
+        <subfield code='a'>Risk Assessment.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Distribution de l&apos;eau.</subfield>
+        <subfield code='2'>eclas</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Analyse des risques.</subfield>
+        <subfield code='2'>eclas</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Eau potable.</subfield>
+        <subfield code='2'>eclas</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Analyse coût-bénéfice.</subfield>
+        <subfield code='2'>eclas</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Pays en développement.</subfield>
+        <subfield code='2'>eclas</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Drinking water.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Drinking water</subfield>
+        <subfield code='x'>Standards.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Sanitation.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Water-supply.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='651'>
+        <subfield code='a'>Developing countries.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Cameron, John,</subfield>
+        <subfield code='d'>1947-</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>World Health Organization.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://whqlibdoc.who.int/publications/2011/9781843393108_eng.pdf</subfield>
+        <subfield code='x'>World Health Organization</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8264076</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'></subfield>
+        <subfield code='c'>2015-06-29 12:04:00-04</subfield>
+        <subfield code='u'>2016-06-14 11:41:24-04</subfield>
+      </datafield>
+    </record>
+  </collection>

@@ -1,10 +1,9 @@
 id:
   - '001'
-oclc:
-  value: 
-    - 035a
-  old: 
-    - 035z
+oclc_number:
+  - 035a
+oclc_number_old: 
+  - 035z
 syndetics_id: 
   - 020a
   - 024a
@@ -188,7 +187,5 @@ series:
     - 811tnpls
   uniform:
     - 830ahnpv
-
-
-    
-  
+misc_id:
+  - 010ab

@@ -1,8 +1,7 @@
 require 'spec_helper'
-require 'marc_to_argot'
 
 describe MarcToArgot do
-  b1082803argot = JSON.parse( TrajectRunTest.run_traject('unc', 'b1082803') )
+  b1082803argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'b1082803') )
 
   it '(UNC) sets item id (single item record)' do
     expect(b1082803argot['items'][0]).to(
@@ -53,7 +52,7 @@ describe MarcToArgot do
   end
 
   # test on b3388632
-  b3388632argot = TrajectRunTest.run_traject('unc', 'b3388632')
+  b3388632argot = Util::TrajectRunTest.run_traject('unc', 'b3388632')
   b3388632result = JSON.parse(b3388632argot)['items'][0]
 
   it '(UNC) sets item cn_scheme to SUDOC when call_no is in 086 w/i1 = 0 (single item record)' do
@@ -63,7 +62,7 @@ describe MarcToArgot do
   end
 
   # test on b7667969
-  b7667969argot = TrajectRunTest.run_traject('unc', 'b7667969')
+  b7667969argot = Util::TrajectRunTest.run_traject('unc', 'b7667969')
   b7667969result = JSON.parse(b7667969argot)['items'][0]
 
   it '(UNC) sets item cn_scheme to ALPHANUM when call_no is in 099 (single item record)' do
@@ -79,7 +78,7 @@ describe MarcToArgot do
   end
 
   # test on b1319986
-  b1319986argot = TrajectRunTest.run_traject('unc', 'b1319986')
+  b1319986argot = Util::TrajectRunTest.run_traject('unc', 'b1319986')
   b1319986result0 = JSON.parse(b1319986argot)['items'][0]
   b1319986result1 = JSON.parse(b1319986argot)['items'][1]
 
@@ -102,7 +101,7 @@ describe MarcToArgot do
   end
 
   #test on b4069204
-  b4069204argot = TrajectRunTest.run_traject('unc', 'b4069204')
+  b4069204argot = Util::TrajectRunTest.run_traject('unc', 'b4069204')
   b4069204result0 = JSON.parse(b4069204argot)['items'][0]
 
   it '(UNC) sets item cn_scheme to DDC when call_no is in 092' do
@@ -112,7 +111,7 @@ describe MarcToArgot do
   end
 
   #test on b2975416
-  b2975416argot = TrajectRunTest.run_traject('unc', 'b2975416')
+  b2975416argot = Util::TrajectRunTest.run_traject('unc', 'b2975416')
   b2975416result = JSON.parse(b2975416argot)['items']
 
   it '(UNC) sets due date' do
@@ -145,14 +144,14 @@ describe MarcToArgot do
     )
     end
 
-    wilson_loc_argot = JSON.parse( TrajectRunTest.run_traject('unc', 'wilson_loc') )
+    wilson_loc_argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'wilson_loc') )
     it '(UNC) sets multi location_hierarchy from one loc_b (single loc)' do
     expect(wilson_loc_argot['location_hierarchy']).to(
       eq(['unc', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])
     )
     end
     
-    multi_loc_argot = JSON.parse( TrajectRunTest.run_traject('unc', 'multi_loc') )
+    multi_loc_argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'multi_loc') )
     it '(UNC) sets multi location_hierarchy from multi loc_bs in multiple item records' do
     expect(multi_loc_argot['location_hierarchy'].sort).to(
       eq(['hsl', 'hsl:hsluncy', 'unc', 'unc:unchsl', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])

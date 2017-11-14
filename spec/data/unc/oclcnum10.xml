@@ -1,0 +1,259 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200733Ia 4500</leader>
+      <controlfield tag='006'>m     o  d</controlfield>
+      <controlfield tag='007'>cr cn||||||||a</controlfield>
+      <controlfield tag='008'>080102s2007    nyua    ob    001 0 eng d</controlfield>
+      <controlfield tag='001'>186568905wcmSPR2016</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20170728053104.8</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='z'>2006934109</subfield>
+      </datafield>
+      <datafield ind1='7' ind2=' ' tag='016'>
+        <subfield code='a'>101302310</subfield>
+        <subfield code='2'>DNLM</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>163280471wcmSPRolder</subfield>
+        <subfield code='a'>171120795wcmSPR2016</subfield>
+        <subfield code='a'>228150779whatever</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>0387475095</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9780387475097</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>0387475087</subfield>
+        <subfield code='q'>Cloth</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>9780387475080</subfield>
+        <subfield code='q'>Cloth</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>GW5XE</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>pn</subfield>
+        <subfield code='c'>GW5XE</subfield>
+        <subfield code='d'>GW5XE</subfield>
+        <subfield code='d'>YDXCP</subfield>
+        <subfield code='d'>TEX</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>MHW</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>N$T</subfield>
+        <subfield code='d'>CEF</subfield>
+        <subfield code='d'>UAB</subfield>
+        <subfield code='d'>CNTRU</subfield>
+        <subfield code='d'>E7B</subfield>
+        <subfield code='d'>IDEBK</subfield>
+        <subfield code='d'>YNG</subfield>
+        <subfield code='d'>EBLCP</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>A7U</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>DEBSZ</subfield>
+        <subfield code='d'>BEDGE</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>AZU</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>SLY</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>LVT</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>Z5A</subfield>
+        <subfield code='d'>OTZ</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>QH452.7</subfield>
+        <subfield code='b'>.F85 2007eb</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='060'>
+        <subfield code='a'>2007 C-980</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='060'>
+        <subfield code='a'>QU 58.5</subfield>
+        <subfield code='b'>F981 2007</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='070'>
+        <subfield code='a'>QH452.7</subfield>
+        <subfield code='b'>.F85 2007</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='072'>
+        <subfield code='a'>SCI</subfield>
+        <subfield code='x'>029000</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>572.8/6</subfield>
+        <subfield code='2'>22</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='084'>
+        <subfield code='a'>Q343. 2-37</subfield>
+        <subfield code='2'>clc</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Fundamentals of data mining in genomics and proteomics /</subfield>
+        <subfield code='c'>edited by Werner Dubitzky, Martin Granzow, Daniel Berrar.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York :</subfield>
+        <subfield code='b'>Springer,</subfield>
+        <subfield code='c'>©2007.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource (xxii, 281 pages) :</subfield>
+        <subfield code='b'>illustrations</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>computer</subfield>
+        <subfield code='b'>c</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='b'>cr</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Front Matter; Introduction to Genomic and Proteomic Data Analysis; Design Principles for Microarray Investigations; Pre-Processing DNA Microarray Data; Pre-Processing Mass Spectrometry Data; Visualization in Genomics and Proteomics; Clustering -- Class Discovery in the Post-Genomic Era; Feature Selection and Dimensionality Reduction in Genomics and Proteomics; Resampling Strategies for Model Assessment and Selection; Classification of Genomic and Proteomic Data Using Support Vector Machines; Networks in Cell Biology; Identifying Important Explanatory Variables for Time-Varying Outcomes.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Unlimited simultaneous users</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>To exploit data obtained from experimental and observational studies, life scientists need to understand the analytical techniques and methods from statistics and data mining. These techniques are not easily accessible to life scientists working on genomics and proteomics problems. This book aims to present these analytical methods.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='588'>
+        <subfield code='a'>Print version record.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Data mining.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Genomics.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='2' tag='650'>
+        <subfield code='a'>Computational Biology</subfield>
+        <subfield code='x'>methods.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Genomics</subfield>
+        <subfield code='x'>Data processing.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='2' tag='650'>
+        <subfield code='a'>Information Storage and Retrieval</subfield>
+        <subfield code='x'>methods.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Proteomics</subfield>
+        <subfield code='x'>Data processing.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Bioinformatics.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00832181</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='2' tag='650'>
+        <subfield code='a'>Proteomics.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Biology</subfield>
+        <subfield code='x'>Data processing.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00832406</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Biotechnology.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00832729</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Data mining.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00887946</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Genomics</subfield>
+        <subfield code='x'>Data processing.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00940229</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Human genetics.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00963075</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Oncology.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01045739</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Proteomics.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01079785</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Berrar, Daniel P.,</subfield>
+        <subfield code='d'>1972-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Dubitzky, Werner,</subfield>
+        <subfield code='d'>1958-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Granzow, Martin,</subfield>
+        <subfield code='d'>1970-</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>OCLC WorldShare Collection Manager managed collection. SPRolder</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>Springer e-books (online collection). Biomedical and life sciences. 2007</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='776'>
+        <subfield code='i'>Print version:</subfield>
+        <subfield code='t'>Fundamentals of data mining in genomics and proteomics.</subfield>
+        <subfield code='d'>New York : Springer, ©2007</subfield>
+        <subfield code='z'>9780387475080</subfield>
+        <subfield code='z'>0387475087</subfield>
+        <subfield code='w'>(DLC) 2006934109</subfield>
+        <subfield code='w'>(OCoLC)84922989</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://link.springer.com/10.1007/978-0-387-47509-7</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b5197072</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='4' tag='999'>
+        <subfield code='a'>o2221763</subfield>
+        <subfield code='b'> </subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='d'>2008-07-23</subfield>
+        <subfield code='e'>2008-07-23</subfield>
+        <subfield code='f'>noheb</subfield>
+        <subfield code='g'>z</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2016-05-25 00:00:00-04</subfield>
+        <subfield code='c'>2007-06-07 16:57:00-04</subfield>
+        <subfield code='u'>2017-08-03 18:48:18-04</subfield>
+      </datafield>
+  </record>
+</collection>

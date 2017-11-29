@@ -132,7 +132,7 @@ to_field 'items' do |rec, acc, ctx|
   access_types = []
   access_types << 'Online' if online_access?(rec, libs)
   access_types << 'At the Library' if physical_access?(rec, libs)
-  ctx.output_hash['access_type_facet'] = access_types
+  ctx.output_hash['access_type'] = access_types
 
   ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(items.map { |x| ['ncsu', x['loc_b']] })
   map_call_numbers(ctx, items)

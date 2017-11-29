@@ -1,16 +1,15 @@
 module MarcToArgot
   module Macros
-    # Macros and useful functions for UNC records
+    # Macros and useful functions for Duke records
     module Duke
-      # expansive interpretation; 856ind2 blank, 0, or 1
-      # see documentation of this constant in Shared module
-      ELOC_IND2 = ['', '0', '1'].freeze
       include MarcToArgot::Macros::Shared
 
-      # tests whether there are any physical items
-      # attached to the record
+      # Check for physical item record returns true unless it
+      # has an 856 where the first indicator is 0.
       def physical_access?(rec, _ctx = {})
-        !rec['940'].nil?
+        l = rec.fields('856')
+        return false if !l.find { |f| ['0'].include?(f.indicator2) }.nil?
+        true
       end
     end
   end

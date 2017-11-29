@@ -385,7 +385,7 @@ unless settings['override'].include?('institution')
   end
 end
 
-unless settings['override'].include?('access_type_facet')
+unless settings['override'].include?('access_type')
   to_field 'access_type' do |rec, acc|
     acc << 'Online' if online_access?(rec)
     acc << 'At the Library' if physical_access?(rec)

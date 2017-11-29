@@ -6,9 +6,8 @@ module MarcToArgot
     # defined here, and overriden in institution-specific modules in the
     # same namespace.
     module Shared
-      # default values to look for in the 856 that indicate
-      # a record has online access.  Redefine this in your class
-      # if you have a more expansive definition.
+      # values to look for in the 856 that indicate
+      # a record has online access.
       ELOC_IND2 = Set.new(%w[0 1])
 
       # tests whether the record has an 856[ind2] that matches
@@ -19,7 +18,7 @@ module MarcToArgot
       def online_access?(rec, _ctx = {})
         l = rec.fields('856')
         return false if l.nil?
-        !l.find { |f| self.class.ELOC_IND2.include?(f.indicator2) }.nil?
+        !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
       end
 
       # tests whether the record has any physical items

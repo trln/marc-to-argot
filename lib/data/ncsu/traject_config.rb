@@ -10,14 +10,14 @@ end
 
 ################################################
 # Local ID
-# rubocop:disable LineLength
+
 to_field 'local_id', extract_marc(settings['specs'][:id], first: true) do |_rec, acc|
   acc.map! { |x| { value: x, other: [] } }
 end
 
 to_field 'institution', literal('ncsu')
 
-to_field 'rollup_id', ncsu_rollup_id
+to_field 'rollup_id', rollup_id
 
 ################################################
 # Items
@@ -44,21 +44,22 @@ MAINS = Set.new(%w[DHILL HUNT])
 
 def remap_item_locations!(item)
   lib, loc = get_location(item)
-  if 'BOOKBOT' == lib
+  if lib == 'BOOKBOT'
     item['loc_b'] = 'HUNT'
     item['loc_n'] = 'BOOKBOT' if loc == 'STACKS'
   end
   if loc == 'TEXTBOOK'
     item['loc_b'] = 'TEXTBOOK' if MAINS.include?(lib)
   end
-  item['loc_b'] = 'BBR'      if 'PRINTDDA' == loc && 'DHHILL' == lib
-  item['loc_b'] = 'GAME'     if 'FLOATGAME' == loc
-  item['loc_b'] = 'DVD'      if 'FLOATDVD' == loc
-  item['loc_b'] = 'PRAGUE'   if 'PRAGUE' == loc
-  item['loc_b'] = "SPECCOLL-#{loc}" if 'SPECCOLL' == lib
+
+  item['loc_b'] = 'BBR'      if loc == 'PRINTDDA' && lib == 'DHHILL'
+  item['loc_b'] = 'GAME'     if loc == 'FLOATGAME'
+  item['loc_b'] = 'DVD'      if loc == 'FLOATDVD'
+  item['loc_b'] = 'PRAGUE'   if loc == 'PRAGUE'
+  item['loc_b'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
 
   # now some remappings based on item type
-  item['loc_b'] = 'GAME' if 'GAME-4HR' == item['type']
+  item['loc_b'] = 'GAME' if item['type'] == 'GAME-4HR'
 end
 
 LOCATION_AVAILABILITY = {
@@ -73,9 +74,8 @@ LOCATION_AVAILABILITY = {
   'PRESERV' => 'Preservation',
   'RESHELVING' => 'Just retruned',
   'CATALOGING' => 'In Process'
-}
+}.freeze
 
-# rubocop:disable MethodLength
 def library_use_only?(item)
   lib, loc = get_location(item)
   lib_cases = lib == 'SPECCOLL'
@@ -107,9 +107,9 @@ def item_status(current, home)
   )
 end
 
-# ru#bocop:disable Metrics/BlockLength
 to_field 'items' do |rec, acc, ctx|
   items = []
+  libs = Set.new
   Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
     item = {}
     field.subfields.each do |subfield|
@@ -117,11 +117,9 @@ to_field 'items' do |rec, acc, ctx|
       mapped = item_map.fetch(code, key: nil)[:key]
       item[mapped] = subfield.value unless mapped.nil?
     end
-    # $k is only present if current != home
-    # needs refinement for reserves etc. and non-lending items
+    libs << item.fetch('loc_b', '')
     current = item.fetch('loc_current', '')
     home = item.fetch('loc_n', '')
-    cn_scheme = item.fetch('cn_scheme', '')
     item['status'] = item_status(current, home)
     remap_item_locations!(item)
     if library_use_only?(item)
@@ -131,6 +129,11 @@ to_field 'items' do |rec, acc, ctx|
     items << item
     acc << item.to_json if item
   end
-  ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(items.map { |x| ['ncsu', x['loc_b']] } )
+  access_types = []
+  access_types << 'Online' if online_access?(rec, libs)
+  access_types << 'At the Library' if physical_access?(rec, libs)
+  ctx.output_hash['access_type_facet'] = access_types
+
+  ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(items.map { |x| ['ncsu', x['loc_b']] })
   map_call_numbers(ctx, items)
 end

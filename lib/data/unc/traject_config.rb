@@ -1,3 +1,5 @@
+extend MarcToArgot::Macros::UNC
+
 ################################################
 # Primary ID
 ######

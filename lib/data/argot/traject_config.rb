@@ -14,13 +14,11 @@ end
 
 unless settings["override"].include?("local_id")
   to_field "local_id" do |rec,acc,context|
-
     local_id = {
-      :value => context.output_hash["id"].first,
-      :other => []
+      value: context.output_hash["id"].first,
+      other: []
     }
     acc << local_id
-
   end
 end
 
@@ -380,10 +378,17 @@ unless settings["override"].include?("series")
   to_field "series", argot_series(settings["specs"][:series])
 end
 
-unless settings["override"].include?("institution")
-  to_field "institution" do |rec, acc|
-    inst = %w(unc duke nccu ncsu)
+unless settings['override'].include?('institution')
+  to_field 'institution' do |rec, acc|
+    inst = %w[unc duke nccu ncsu]
     acc.concat(inst)
+  end
+end
+
+unless settings['override'].include?('access_type_facet')
+  to_field 'access_type' do |rec, acc|
+    acc << 'Online' if online_access?(rec)
+    acc << 'At the Library' if physical_access?(rec)
   end
 end
 
@@ -393,4 +398,3 @@ end
 # biographical_sketch
 # most_recent
 # holdings_note
-

@@ -81,6 +81,11 @@ describe MarcToArgot do
     )
   end
 
+  it 'does NOT generate a rollup_id for Duke special collections records' do
+    result = Util::TrajectRunTest.run_traject('duke', 'special_collections', 'mrc')
+    expect(JSON.parse(result)['rollup_id']).to(be_nil)
+  end
+
   it 'loads UNC spec without a problem' do
     spec = MarcToArgot::SpecGenerator.new('unc')
     result = spec.generate_spec

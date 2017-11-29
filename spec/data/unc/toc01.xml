@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cgm a2201009Ia 4500</leader>
+      <controlfield tag='008'>960711r19961987gr 924            vlger d</controlfield>
+      <controlfield tag='007'>vfumbaho-</controlfield>
+      <controlfield tag='001'>35058198</controlfield>
+      <controlfield tag='005'>19970211103946.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1565800842 (set)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>CUY</subfield>
+        <subfield code='c'>CUY</subfield>
+        <subfield code='d'>XTA</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='041'>
+        <subfield code='a'>ger</subfield>
+        <subfield code='b'>eng</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Heimat</subfield>
+        <subfield code='h'>[videocassette] /</subfield>
+        <subfield code='c'>a chronicle by Edgar Reitz ; [presented by] WGBH Boston ; Edgar Reitz Filmproduktion mbH, Munich ; in coproduktion mit dem SFB und dem WDR.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Tape 1. Pt. 1. Fernweh (The call of far away places, 1919)--Tape 2. Pt. 2. Die mitte der welt (The centre of the world, 1929)--Tape 3. Pt. 3. Weihnacht (The best Christmas ever, 1934)--Tape 4. Pt. 4. Reichshoherstrabe (The highway, 1938).</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-03 08:01:00-04</subfield>
+        <subfield code='u'>2017-07-10 20:55:05-04</subfield>
+      </datafield>
+  </record>
+</collection>

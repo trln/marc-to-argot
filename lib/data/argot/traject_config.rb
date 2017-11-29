@@ -149,6 +149,12 @@ unless settings["override"].include?("notes")
   to_field "notes", argot_notes(settings["specs"][:notes])
 end
 
+unless settings['override'].include?('note_toc')
+  Traject::MarcExtractor.cached("505agrt").each_matching_line(rec) do |field, spec, extractor|
+
+  end
+end
+
 ################################################
 # URLs
 ######

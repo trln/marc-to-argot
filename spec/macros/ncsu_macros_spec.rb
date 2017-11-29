@@ -11,7 +11,7 @@ describe MarcToArgot::Macros::NCSU do
 
   it 'extracts a correct rollup id' do
     indexer.instance_eval do
-      to_field 'rollup_id', ncsu_rollup_id
+      to_field 'rollup_id', rollup_id
     end
     records.each_with_index do |rec, idx|
       output = indexer.map_record(rec)

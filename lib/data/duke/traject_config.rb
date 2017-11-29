@@ -270,7 +270,7 @@ end
 # Holdings
 ######
 
-to_field 'holdings' do |rec, acc|
+to_field 'holdings' do |rec, acc, context|
   Traject::MarcExtractor.cached('852', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
     holding = {}
     field.subfields.each do |sf|
@@ -308,6 +308,12 @@ to_field 'holdings' do |rec, acc|
                holding.delete('supplement')].compact.join('; ')
 
     holding['summary'] = summary unless summary.empty?
+
+    # Remove rollup_id from output_hash if loc_b is SCL or ARCH
+    # so that we don't rollup special collections records.
+    if holding['loc_b'] =~ /^(SCL|ARCH)$/
+      context.output_hash.delete('rollup_id')
+    end
 
     acc << holding.to_json if holding.any?
   end

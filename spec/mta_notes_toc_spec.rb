@@ -2,12 +2,27 @@
 require 'spec_helper'
 describe MarcToArgot do
   toc01 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'toc01') )
+  toc02 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'toc02') )
+  toc03 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'toc03') )  
 
-  it '(MTA) sets single TOC note with 1st ind = 0' do
-    result = toc01['note_toc'][0]
+  it '(MTA) sets single basic TOC note' do
+    result = toc01['note_toc']
     expect(result).to(
-      eq({'value' => 'Tape 1. Pt. 1. Fernweh (The call of far away places, 1919)--Tape 2. Pt. 2. Die mitte der welt (The centre of the world, 1929)--Tape 3. Pt. 3. Weihnacht (The best Christmas ever, 1934)--Tape 4. Pt. 4. Reichshoherstrabe (The highway, 1938).', 'label' => ''})
+      eq(['Basic 505 with i1=0.'])
     )
   end
 
+  it '(MTA) sets single enhanced incomplete TOC note' do
+    result = toc02['note_toc']
+    expect(result).to(
+      eq(['Incomplete contents: Non-indexed contextual info: Chapter 1 title / Chapter 1 author -- Chapter 2 title / Chapter 2 author.'])
+    )
+  end
+
+  it '(MTA) sets multiple enhanced partial TOC notes' do
+    result = toc03['note_toc']
+    expect(result).to(
+      eq(['Partial contents: Non-indexed contextual info: Chapter 1 title / Chapter 1 author -- Chapter 2 title / Chapter 2 author --', 'Round 2: Chapter 3 title / Chapter 3 author -- Chapter 4 title / Chapter 4 author.'])
+    )
+  end
 end

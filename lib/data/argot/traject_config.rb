@@ -150,8 +150,18 @@ unless settings["override"].include?("notes")
 end
 
 unless settings['override'].include?('note_toc')
-  Traject::MarcExtractor.cached("505agrt").each_matching_line(rec) do |field, spec, extractor|
-
+  to_field "note_toc" do |rec, acc|
+    Traject::MarcExtractor.cached("505agrt").each_matching_line(rec) do |field, spec, extractor|
+      keep_sfs = field.subfields.select {|sf| sf.code =~ /[agrt]/ }
+      note_text = keep_sfs.map {|sf| sf.value.strip}
+      case field.indicator1
+      when '1'
+        note_text.unshift('Incomplete contents:')
+      when '2'
+        note_text.unshift('Partial contents:')
+      end
+      acc << note_text.join(' ')
+    end
   end
 end
 

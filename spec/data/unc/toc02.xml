@@ -25,9 +25,12 @@
         <subfield code='h'>[videocassette] /</subfield>
         <subfield code='c'>a chronicle by Edgar Reitz ; [presented by] WGBH Boston ; Edgar Reitz Filmproduktion mbH, Munich ; in coproduktion mit dem SFB und dem WDR.</subfield>
       </datafield>
-      <datafield ind1='0' ind2=' ' tag='505'>
-        <subfield code='a'>Basic 505 with i1=0.</subfield>
-        <subfield code='z'>I should not be here.</subfield>
+      <datafield ind1='1' ind2='0' tag='505'>
+        <subfield code='g'>Non-indexed contextual info:</subfield>
+        <subfield code='t'>Chapter 1 title /</subfield>
+        <subfield code='r'>Chapter 1 author --</subfield>
+        <subfield code='t'>Chapter 2 title /</subfield>
+        <subfield code='r'>Chapter 2 author.</subfield>
       </datafield>
       <datafield ind1='0' ind2='0' tag='999'>
         <subfield code='a'>2004-10-01 00:00:00-04</subfield>

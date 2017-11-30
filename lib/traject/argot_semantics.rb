@@ -436,7 +436,7 @@ module Traject::Macros
           end
           note_array << note_text.join(' ') unless note_text.empty?
         end
-        acc << note_array
+        note_array.each {|e| acc << e} unless note_array.empty?
       end
     end
 
@@ -478,7 +478,7 @@ module Traject::Macros
           note_text.unshift(material_specified) if material_specified.length > 0
           note_array << note_text.join(' ') unless note_text.empty?
         end
-        note_array.each { |e| acc << e }
+        note_array.each { |e| acc << e } unless note_array.empty?
       end
     end
     

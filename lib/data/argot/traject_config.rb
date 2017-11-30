@@ -393,12 +393,12 @@ unless settings['override'].include?('institution')
   end
 end
 
-# unless settings['override'].include?('access_type_facet')
-#   to_field 'access_type' do |rec, acc|
-#     acc << 'Online' if online_access?(rec)
-#     acc << 'At the Library' if physical_access?(rec)
-#   end
-# end
+unless settings['override'].include?('access_type_facet')
+  to_field 'access_type' do |rec, acc|
+    acc << 'Online' if online_access?(rec)
+    acc << 'At the Library' if physical_access?(rec)
+  end
+end
 
 # Other fields in endeca model that we're unsure how to map to
 # source_of_acquisition

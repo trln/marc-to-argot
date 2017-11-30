@@ -1,0 +1,86 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200277 a 4500</leader>
+      <controlfield tag='008'>860219c19851977nyu           000 1 eng  </controlfield>
+      <controlfield tag='001'>12103347</controlfield>
+      <controlfield tag='005'>19860219000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>85011246</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>0877957681 :</subfield>
+        <subfield code='c'>$22.50</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='082'>
+        <subfield code='a'>813/.54</subfield>
+        <subfield code='2'>19</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Leonard, Elmore,</subfield>
+        <subfield code='d'>1925-2013.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='240'>
+        <subfield code='a'>Dutch treat</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Elmore Leonard&apos;s Dutch treat :</subfield>
+        <subfield code='b'>3 novels /</subfield>
+        <subfield code='c'>introduction by George F. Will.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York :</subfield>
+        <subfield code='b'>Arbor House,</subfield>
+        <subfield code='c'>[1985] c1977.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>xiv, 568 p. ;</subfield>
+        <subfield code='c'>24 cm.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>The hunted -- Swag -- Mr. Majestyk.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='520'>
+        <subfield code='a'>Here from Elmore, a review.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='700'>
+        <subfield code='a'>Leonard, Elmore,</subfield>
+        <subfield code='d'>1925-2013.</subfield>
+        <subfield code='t'>Hunted.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='700'>
+        <subfield code='a'>Leonard, Elmore,</subfield>
+        <subfield code='d'>1925-2013.</subfield>
+        <subfield code='t'>Ryan&apos;s rules.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='700'>
+        <subfield code='a'>Leonard, Elmore,</subfield>
+        <subfield code='d'>1925-2013.</subfield>
+        <subfield code='t'>Mr. Majestyk.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b2037604</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2944588</subfield>
+        <subfield code='l'>uada</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>6</subfield>
+        <subfield code='b'>00003213141</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPS3562.E55 A6 1985</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-01 08:34:00-04</subfield>
+        <subfield code='u'>2014-07-19 13:57:17-04</subfield>
+      </datafield>
+  </record>
+</collection>

@@ -23,7 +23,7 @@ unless settings["override"].include?("local_id")
 end
 
 unless settings["override"].include?("oclc_number")
-  to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc])
+  to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc_number])
 end
 
 unless settings["override"].include?("syndetics_id")
@@ -147,6 +147,14 @@ end
 
 unless settings["override"].include?("notes")
   to_field "notes", argot_notes(settings["specs"][:notes])
+end
+
+unless settings["override"].include?("note_toc")
+  to_field "note_toc", argot_note_toc(settings["specs"][:note_toc]) 
+end
+
+unless settings["override"].include?("note_summary")
+  to_field "note_summary", argot_note_summary(settings["specs"][:note_summary]) 
 end
 
 ################################################

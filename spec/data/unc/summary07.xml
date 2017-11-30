@@ -1,0 +1,121 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200421Ii 4500</leader>
+      <controlfield tag='008'>750228s1974    dcua         f000 0 eng d</controlfield>
+      <controlfield tag='001'>1194197</controlfield>
+      <controlfield tag='005'>19920918091901.5</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='c'>STU</subfield>
+        <subfield code='d'>NOH</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Marshall, Harold E.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Analysis of cost sharing programs for pollution abatement of municipal wastewater,</subfield>
+        <subfield code='c'>by Harold E. Marshall, Rosalie T. Ruegg; Project Officer: Marshall Rose, Washington Environmental Research Center...; prepared for Office of Research and Development...</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Washington,</subfield>
+        <subfield code='b'>Office of Research and Development, U.S. Environmental Protection Agency; [for sale by the Supt. of Docs., U.S. Govt. Print. Off.]</subfield>
+        <subfield code='c'>1974.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>vii, 137 p.</subfield>
+        <subfield code='b'>illus.</subfield>
+        <subfield code='c'>27 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;Project officer, Dr. Marshall Rose, Washington Environmental Research Center, Environmental Protection Agency.&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;November 1974&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Figures: Combined and separate municipal sewer systems -- Alternative approaches to reduction of wastewater pollution -- Indifference curves and budget constraints -- Demand for pollution abatement -- Demand for pollution abatement, with and without enforcement -- Insufficient demand for pollution abatement -- Cost share for efficient technique(s) -- Cost share for efficient scale -- Average cost and efficient scale of pollution abatement -- Efficient scale with regional abatement.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Tables: Cost of some alternative techniques for meeting the dissolved oxygen objectives of 4 PPM in the Potomac Estuary -- Eligibility for EPA construction grants of alternative techniques by cost category -- Grants by EPA and other federal agencies as a share of eligibale and total project costs as of December 31, 1972 -- Maximum federal cost shares for sewer facilities provided by HUD, FHA, and EDA -- Impact on local project cost of different cost-sharing rules : an illustration -- Impact on choice of techniques of a cost-sharing rule which does not apply equally to all categories of cost -- Determination of cost-sharing constraint to reduce potential bias in selection of abatement techniques -- federal and nonfederal expenditure requirements of alternative cost-sharing rules viewed historically -- Illustration of a grantee&apos;s costs for a hypothetical abatement project with and without retention of user fees -- Application of pollution abatement techniques to major problems of municipal waste treatment systems -- Some waste treatment plant operations and processes applicable to treatment of wastewater.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references (pages 135-137).</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Executive summary -- Introduction -- Description of existing cost-sharing program and institutional contraints. Construction grant program. Eligibility for grants as defined in legislation ; Eligibility for grants in practice -- Cost sharing by other agencies -- Institutional constraints to abatement -- Theoretical relationships. Selective survey of the literature ; Derivation of demand ; Conditions for efficiency. Techniques ; Scale -- Characteristics of equity -- Efficiency implications of existing and alternative cost sharing programs. Techniques ; Scale -- Effects of user fees on cost shares/ Legislated user fees ; Alternative interpretations ; Interest charges in user fees ; User fee implications -- Summary, findings and suggestions for further research. Summary ; Findings ; Suggestions for further research.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;This study haz an abstract.&quot;--P. iv.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Sewage disposal</subfield>
+        <subfield code='z'>United States</subfield>
+        <subfield code='x'>Finance.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='2' tag='650'>
+        <subfield code='a'>Sewage</subfield>
+        <subfield code='x'>economics.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Sewage disposal plants</subfield>
+        <subfield code='x'>Costs.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Sewage disposal</subfield>
+        <subfield code='x'>Finance.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01113879</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='2' tag='650'>
+        <subfield code='a'>Water Pollution</subfield>
+        <subfield code='x'>economics.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Sewage disposal plants</subfield>
+        <subfield code='x'>Costs.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01113941</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='2' tag='651'>
+        <subfield code='a'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='651'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01204155</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Ruegg, Rosalie T.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='710'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Environmental Protection Agency.</subfield>
+        <subfield code='b'>Office of Research and Development.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='830'>
+        <subfield code='a'>Research reporting series.</subfield>
+        <subfield code='n'>5,</subfield>
+        <subfield code='p'>Socioeconomic environmental studies series ;</subfield>
+        <subfield code='v'>EPA-600/5-74-031.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1250594</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1439152</subfield>
+        <subfield code='l'>nohh</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>H00129864U</subfield>
+        <subfield code='p'>096##</subfield>
+        <subfield code='q'>|aWA 689|bM368a 1974</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 16:30:00-04</subfield>
+        <subfield code='u'>2016-09-24 19:23:43-04</subfield>
+      </datafield>
+  </record>
+  </collection>

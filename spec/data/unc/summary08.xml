@@ -1,0 +1,272 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cgm  2200925Ia 4500</leader>
+      <controlfield tag='008'>130104s2013    cau108            vleng d</controlfield>
+      <controlfield tag='007'>vd cvaizq</controlfield>
+      <controlfield tag='001'>823344527</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20130314105008.0</controlfield>
+      <datafield ind1='1' ind2=' ' tag='024'>
+        <subfield code='a'>025192107696</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='024'>
+        <subfield code='a'>025192143199</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='028'>
+        <subfield code='a'>61119169</subfield>
+        <subfield code='b'>Universal Studios Home Entertainment (container)</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='028'>
+        <subfield code='a'>61122471</subfield>
+        <subfield code='b'>Universal Studios Home Entertainment</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='028'>
+        <subfield code='a'>495374</subfield>
+        <subfield code='b'>Universal Studios Home Entertainment (disc)</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='028'>
+        <subfield code='a'>2025862</subfield>
+        <subfield code='b'>Universal Studios Home Entertainment (disc)</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='028'>
+        <subfield code='a'>2025648</subfield>
+        <subfield code='b'>Universal Studios Home Entertainment (container)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)823344527</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='037'>
+        <subfield code='b'>Midwest Tape</subfield>
+        <subfield code='n'>http://www.midwesttapes.com</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>TEFMT</subfield>
+        <subfield code='c'>TEFMT</subfield>
+        <subfield code='d'>TEF</subfield>
+        <subfield code='d'>IHY</subfield>
+        <subfield code='d'>IEU</subfield>
+        <subfield code='d'>JP3</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='041'>
+        <subfield code='a'>eng</subfield>
+        <subfield code='a'>fre</subfield>
+        <subfield code='a'>spa</subfield>
+        <subfield code='j'>eng</subfield>
+        <subfield code='j'>fre</subfield>
+        <subfield code='j'>spa</subfield>
+        <subfield code='h'>eng</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>[Digital][Video][Disc]NOC3</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>PN1997.2</subfield>
+        <subfield code='b'>.M36 2013</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>791.43/72</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='245'>
+        <subfield code='a'>The man with the iron fists</subfield>
+        <subfield code='h'>[videorecording] /</subfield>
+        <subfield code='c'>Universal Pictures and Quentin Tarantino present ; Strike Entertainment ; Arcade Pictures ; produced by Marc Abraham, Eric Newman, Eli Roth ; screenplay by The RZA and Eli Roth ; story and directed by RZA.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='246'>
+        <subfield code='i'>French title :</subfield>
+        <subfield code='a'>Homme aux poings de fer</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>Unrated extended ed.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Universal City, Calif. :</subfield>
+        <subfield code='b'>Universal Studios Home Entertainment,</subfield>
+        <subfield code='c'>c2013.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 videodisc (108 min.) :</subfield>
+        <subfield code='b'>sd., col. ;</subfield>
+        <subfield code='c'>4 3/4 in.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Title from container.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Originally released as a motion picture in 2012.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Run time: approx. 108 min.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Includes both unrated version (108 min.) and theatrical version (96 min.)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Special features: deleted scenes; a path to the East; a look inside The man with the iron fists; on the set with RZA.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='508'>
+        <subfield code='a'>Editor, Joe D&apos;Augustine; director of photography Chang Chi Ying; music by RZA and Howard Drossin.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='511'>
+        <subfield code='a'>RZA, Russell Crowe, Lucy Liu, Rick Yune, Dave Bautista, Jamie Chung, Cung Le, Byron Mann.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='520'>
+        <subfield code='a'>Bloody violence, strong sexuality, language, and brief drug use.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>On the hunt for a fabled treasure of gold, a band of warriors, assassins, and a rogue British soldier descend upon a village in feudal China, where a humble blacksmith looks to defend himself and his fellow villagers.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>DVD, NTSC, region 1, widescreen (2.40:1) presentation; Dolby Digital 5.1.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='546'>
+        <subfield code='a'>English, French or Spanish dialogue; Spanish or French subtitles; English subtitles for the deaf and hard of hearing. English described video (DVS) on theatrical version only.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Martial arts</subfield>
+        <subfield code='v'>Drama.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Blacksmiths</subfield>
+        <subfield code='v'>Drama.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Treasure troves</subfield>
+        <subfield code='v'>Drama.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Artes marciales</subfield>
+        <subfield code='v'>Teatro.</subfield>
+        <subfield code='2'>bidex</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Herreros</subfield>
+        <subfield code='v'>Teatro.</subfield>
+        <subfield code='2'>bidex</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Martial arts films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Action and adventure films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Fiction films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Feature films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Video recordings for the hearing impaired.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Video recordings for people with visual disabilities.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Action &amp; Adventure.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Martial Arts &amp; Kung Fu.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='691'>
+        <subfield code='a'>USA.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Roth, Eli,</subfield>
+        <subfield code='d'>1972-</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='700'>
+        <subfield code='a'>RZA</subfield>
+        <subfield code='c'>(Rapper)</subfield>
+        <subfield code='4'>drt</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Abraham, Marc,</subfield>
+        <subfield code='d'>1949 May 28-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Newman, Eric.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Tarantino, Quentin.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Crowe, Russell,</subfield>
+        <subfield code='d'>1964-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Liu, Lucy,</subfield>
+        <subfield code='d'>1968-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Yune, Rick,</subfield>
+        <subfield code='d'>1971-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Batista, Dave,</subfield>
+        <subfield code='d'>1969-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Chung, Jamie,</subfield>
+        <subfield code='d'>1983-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Le, Cung,</subfield>
+        <subfield code='d'>1972-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Mann, Byron.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Strike Entertainment (Firm)</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Arcade Pictures (Firm)</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Universal Pictures (Firm)</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Universal Studios Home Entertainment (Firm)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b7325791</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i9923997</subfield>
+        <subfield code='l'>uldag</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>60</subfield>
+        <subfield code='c'>2</subfield>
+        <subfield code='o'>30</subfield>
+        <subfield code='b'>00045225326</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a65-DVD15729</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i9923996</subfield>
+        <subfield code='l'>uldal</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>60</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>1</subfield>
+        <subfield code='b'>00045225317</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a65-DVD15729</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2013-03-14 00:00:00-04</subfield>
+        <subfield code='c'>2013-02-13 11:34:00-05</subfield>
+        <subfield code='u'>2013-10-31 19:25:31-04</subfield>
+      </datafield>
+  </record>
+  </collection>

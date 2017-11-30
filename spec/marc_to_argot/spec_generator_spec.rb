@@ -64,7 +64,7 @@ describe MarcToArgot::SpecGenerator do
   it 'provides correct oclc_number spec from default when not specified in override spec' do
     spec = MarcToArgot::SpecGenerator.new('spec/data/test_marc_spec.yaml')
     result = spec.generate_spec
-    expect(result['oclc_number']).to eq('035a')
+    expect(result['oclc_number']['value']).to eq('035a')
   end
 
   it 'provides correct fake spec from override spec when that field is not specified in default spec' do

@@ -1,10 +1,11 @@
 id:
   - '001'
 oclc_number:
-  - 035a
-oclc_number_old: 
-  - 035z
-syndetics_id: 
+  value:
+    - 035a
+  old:
+    - 035z
+syndetics_id:
   - 020a
   - 024a
 isbn:

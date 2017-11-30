@@ -23,7 +23,7 @@ unless settings["override"].include?("local_id")
 end
 
 unless settings["override"].include?("oclc_number")
-  to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc])
+  to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc_number])
 end
 
 unless settings["override"].include?("syndetics_id")

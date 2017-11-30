@@ -1,0 +1,189 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cgm a2200649Ia 4500</leader>
+      <controlfield tag='008'>861120p19861950cau094 g          vlfre d</controlfield>
+      <controlfield tag='007'>vf bbahom</controlfield>
+      <controlfield tag='001'>14777570</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20120503012716.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>15265418</subfield>
+        <subfield code='a'>21821302</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)14777570</subfield>
+        <subfield code='z'>(OCoLC)15265418</subfield>
+        <subfield code='z'>(OCoLC)21821302</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>PNX</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>PNX</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>VA@</subfield>
+        <subfield code='d'>CUY</subfield>
+        <subfield code='d'>TAI</subfield>
+        <subfield code='d'>INT</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>OCLCG</subfield>
+        <subfield code='d'>TXJ</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='041'>
+        <subfield code='a'>fre</subfield>
+        <subfield code='j'>eng</subfield>
+        <subfield code='h'>fre</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>[Video-][cassette]NOC3</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>PQ2605.O15</subfield>
+        <subfield code='b'>O7</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>791.4372</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Orphée</subfield>
+        <subfield code='h'>[videocassette] /</subfield>
+        <subfield code='c'>a Janus Films presentation ; André Paulvé presents.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='246'>
+        <subfield code='i'>Title on tape label:</subfield>
+        <subfield code='a'>Orpheus</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='257'>
+        <subfield code='a'>France.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Los Angeles, Calif. :</subfield>
+        <subfield code='b'>Embassy Home Entertainment,</subfield>
+        <subfield code='c'>c1986.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 videocassette (94 min.) :</subfield>
+        <subfield code='b'>sd., b&amp;w ;</subfield>
+        <subfield code='c'>1/2 in.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Run time: approx. 94 min.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;3.5&quot; --Tape label.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Videocassette release of the 1950 motion picture.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='508'>
+        <subfield code='a'>Director and screenplay, Jean Cocteau ; cinematographer, Nicholas Hayer ; music, Georges Auric.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='511'>
+        <subfield code='a'>Jean Marais, Maria Casarès, Marie Dea, François Périer.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='3'>Feature</subfield>
+        <subfield code='a'>&quot;Depicts the love of a poet for a princess who travels constantly from this world to the next. A legendary tale in a modern Parisian setting&quot;--</subfield>
+        <subfield code='c'>Video source book.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>VHS, Hi-fi mono.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='546'>
+        <subfield code='a'>French with English subtitles.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Feature films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Fiction films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Fantasy films.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Drama.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>French Cinema.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Foreign films</subfield>
+        <subfield code='z'>France.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='691'>
+        <subfield code='a'>France.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Marais, Jean,</subfield>
+        <subfield code='d'>1913-1998.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Casarès, Maria.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Déa, Marie.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Cocteau, Jean,</subfield>
+        <subfield code='d'>1889-1963.</subfield>
+        <subfield code='4'>drt</subfield>
+        <subfield code='4'>aus</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Paulvé, André.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Périer, François.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Janus Films.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Embassy Home Entertainment (Firm)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='830'>
+        <subfield code='a'>International collection (Los Angeles, Calif.)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b2458126</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i9559175</subfield>
+        <subfield code='l'>truls</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>57</subfield>
+        <subfield code='c'>2</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00041297943</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a65-V582</subfield>
+        <subfield code='n'>Ask at Media Resources Desk for assistance. Phone: (919)-962-2559. Email address: mrc@unc.edu</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i3528468</subfield>
+        <subfield code='l'>uldaz</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>57</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>56</subfield>
+        <subfield code='b'>00006505338</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a65-V582</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2012-05-03 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-02 08:17:00-04</subfield>
+        <subfield code='u'>2017-11-15 15:50:34-05</subfield>
+      </datafield>
+    </record>
+  </collection>

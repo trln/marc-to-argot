@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000ngm a2200481Ia 4500</leader>
+      <controlfield tag='008'>110429p198u1963mou093            vleng d</controlfield>
+      <controlfield tag='007'>vf bbaho|</controlfield>
+      <controlfield tag='001'>717282809</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20110429091535.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)717282809</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>NOC</subfield>
+        <subfield code='c'>NOC</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='041'>
+        <subfield code='a'>eng</subfield>
+        <subfield code='h'>ger</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>[Video-][cassette]NOC3</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='130'>
+        <subfield code='a'>Zinker (Motion picture)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The squeaker</subfield>
+        <subfield code='h'>[videocassette] /</subfield>
+        <subfield code='c'>an Alfred Vohrer film.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Jamestown, Mo. :</subfield>
+        <subfield code='b'>The Incredibly Strange Filmworks,</subfield>
+        <subfield code='c'>[198-?]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 videocassette (93 min.) :</subfield>
+        <subfield code='b'>sd., b&amp;w ;</subfield>
+        <subfield code='c'>1/2 in.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Based on the novel by Edgar Wallace.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Originally released as a motion picture in 1963.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Run time: approx. 93 min.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='508'>
+        <subfield code='a'>Screenplay, H. G. Petersson ; camera, Karl Lob ; music, Peter Thomas.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='511'>
+        <subfield code='a'>Heinz Drache, Barbara Rütting.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;The tracking down of a master criminal in London leads to bitter fighting among the crooks.&quot;</subfield>
+        <subfield code='c'>Film Index International website.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>VHS.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='546'>
+        <subfield code='a'>English dubbed soundtrack from the original German.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Crime</subfield>
+        <subfield code='z'>England</subfield>
+        <subfield code='z'>London</subfield>
+        <subfield code='v'>Drama.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Film Adaptations.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Crime &amp; Police Drama.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>German Cinema.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Foreign films</subfield>
+        <subfield code='z'>Germany.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Drama.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='691'>
+        <subfield code='a'>Germany.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Drache, Heinz,</subfield>
+        <subfield code='d'>1923-2002.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Rütting, Barbara,</subfield>
+        <subfield code='d'>1927-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Wallace, Edgar,</subfield>
+        <subfield code='d'>1875-1932.</subfield>
+        <subfield code='t'>Zinker.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Vohrer, Alfred,</subfield>
+        <subfield code='d'>1918-</subfield>
+        <subfield code='4'>drt</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Incredibly Strange Filmworks.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b4724937</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i8904375</subfield>
+        <subfield code='l'>truls</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>57</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00024829296</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a65-V9447</subfield>
+        <subfield code='n'>Ask at Media Resources Desk for assistance. Phone: (919)-962-2559. Email address: mrc@unc.edu</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2011-04-29 00:00:00-04</subfield>
+        <subfield code='c'>2005-05-09 15:27:00-04</subfield>
+        <subfield code='u'>2016-10-23 22:19:36-04</subfield>
+      </datafield>
+  </record>
+  </collection>

@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200277Ia 4500</leader>
+      <controlfield tag='008'>900710s1988    flua   j      000 1 eng d</controlfield>
+      <controlfield tag='001'>19583588</controlfield>
+      <controlfield tag='005'>19900710000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>0897777018</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>UUZ</subfield>
+        <subfield code='c'>UUZ</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Weingarten, Elaine.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The robin who was afraid to fly /</subfield>
+        <subfield code='c'>by Elaine Weingarten ; ill. by Phyllis Sweeney.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Boca Raton, Fla. :</subfield>
+        <subfield code='b'>Social Issues Resources Series,</subfield>
+        <subfield code='c'>c1988.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>[50] p. :</subfield>
+        <subfield code='b'>col. ill. ;</subfield>
+        <subfield code='c'>26 cm.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='520'>
+        <subfield code='a'>SUMMARY: A young robin fears to leave the nest, but finds courage and realizes he will never again be afraid to try a new experience.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Children&apos;s stories, American.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='650'>
+        <subfield code='a'>Stories in rhyme.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='650'>
+        <subfield code='a'>Birds</subfield>
+        <subfield code='v'>Fiction.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Sweeney, Phyllis,</subfield>
+        <subfield code='e'>illustrator.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Social Issues Resources Series, inc.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='800'>
+        <subfield code='a'>Weingarten, Elaine.</subfield>
+        <subfield code='t'>SIRS stories in rhyme.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b2296659</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i3306142</subfield>
+        <subfield code='l'>lljd</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>22</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>6</subfield>
+        <subfield code='b'>00004928617</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|aJE Weingarten</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-01 09:18:04-04</subfield>
+        <subfield code='u'>2013-10-04 11:02:20-04</subfield>
+      </datafield>
+  </record>
+</collection>

@@ -1,18 +1,17 @@
 id:
   - '001'
 oclc_number:
-  - 035a
-oclc_number_old: 
-  - 035z
-syndetics_id: 
+  value:
+    - 035a
+  old:
+    - 035z
+syndetics_id:
   - 020a
   - 024a
 isbn:
-  primary:
-    - 020a
-  other: 
-    - 020z
-    - 776z
+  - 020a
+  - 020z
+  - 776z
 issn: 
   primary:
     - 440x
@@ -70,7 +69,6 @@ notes:
     - 501a
     - 502a
     - 504a
-    - 505argt
     - 507ab
     - 522a
     - 533cf
@@ -94,7 +92,6 @@ notes:
     - 515a
     - 516a
     - 518a
-    - 520abu
     - 521ab
     - 524a
     - 525a
@@ -118,6 +115,10 @@ notes:
     - 590a
     - 599ab
     - 752abcd
+note_toc:
+  - 505agrt
+note_summary:
+  - 520abc3
 linking: 
   main_series:
     - 760

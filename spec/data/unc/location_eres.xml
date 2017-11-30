@@ -1,0 +1,100 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  22003017a 4500</leader>
+      <controlfield tag='006'>m        d f</controlfield>
+      <controlfield tag='008'>001129s2000    oru     s    f000 0 eng d</controlfield>
+      <controlfield tag='007'>cr an</controlfield>
+      <controlfield tag='001'>45440841</controlfield>
+      <controlfield tag='005'>20001214145905.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(GPO)99062816</subfield>
+      </datafield>
+  <datafield ind1=' ' ind2=' ' tag='037'>
+        <subfield code='a'>ED 438593</subfield>
+        <subfield code='b'>ERIC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>GPO</subfield>
+        <subfield code='c'>GPO</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>MvI</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='074'>
+        <subfield code='a'>0466-A-03 (online)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='086'>
+        <subfield code='a'>ED 1.310/2:436593</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Slowinski, Joseph.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Becoming a technologically savvy administrator</subfield>
+        <subfield code='h'>[electronic resource] /</subfield>
+        <subfield code='c'>Slowinski, Joseph.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Eugene, OR :</subfield>
+        <subfield code='b'>ERIC Clearinghouse on Educational Management,</subfield>
+        <subfield code='c'>[2000]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Title from title screen.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>Mode of access: Internet from the ERIC web site. Address as 
+of 11/29/00: http://www.ed.gov/databases/ERIC%5FDigests/ed438593.html; current access i
+s available via PURL.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>School administrators</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Educational technology</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+  <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>ERIC Clearinghouse on Educational Management.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='830'>
+        <subfield code='a'>ERIC digest series ;</subfield>
+        <subfield code='v'>no. 135.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='u'>http://purl.access.gpo.gov/GPO/LPS7362</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b3772173</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i5240881</subfield>
+        <subfield code='l'>dcpf</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>20</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HBDU-3600-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aED 1.310/2:438593</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i5240882</subfield>
+        <subfield code='l'>erra</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>11</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HBCG-9697-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aED 1.310/2:436593</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-06 10:11:59-04</subfield>
+        <subfield code='u'>2013-10-23 08:02:15-04</subfield>
+      </datafield>
+  </record>
+
+</collection>

@@ -144,6 +144,13 @@ describe MarcToArgot do
     )
     end
 
+    eresloc = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'location_eres') )
+    it '(UNC) sets location_hierarchy for record with unsuppressed e-items' do
+    expect(eresloc['location_hierarchy']).to(
+      eq(['unc', 'unc:uncdavy', 'unc:uncdavy:uncdavdoc'])
+    )
+    end
+    
     wilson_loc_argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'wilson_loc') )
     it '(UNC) sets multi location_hierarchy from one loc_b (single loc)' do
     expect(wilson_loc_argot['location_hierarchy']).to(

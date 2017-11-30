@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200265K  4500</leader>
+      <controlfield tag='008'>910612s1928    nyu           000 0 eng d</controlfield>
+      <controlfield tag='001'>279594</controlfield>
+      <controlfield tag='005'>19910612000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>28031116</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>WSU</subfield>
+        <subfield code='c'>WSU</subfield>
+        <subfield code='d'>OCL</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Benchley, Robert,</subfield>
+        <subfield code='d'>1889-1945.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>20,000 leagues under the sea, or, David Copperfield /</subfield>
+        <subfield code='c'>by Robert Benchley, with illustrations by Gluyas Williams.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='246'>
+        <subfield code='a'>20,000 leagues under the sea</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='246'>
+        <subfield code='a'>David Copperfield</subfield>
+      </datafield>
+      <datafield ind1='3' ind2=' ' tag='246'>
+        <subfield code='a'>Twenty thousand leagues under the sea, or, David Copperfield</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York :</subfield>
+        <subfield code='b'>H. Holt and company,</subfield>
+        <subfield code='c'>[c1928].</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>vi, 233 p. :</subfield>
+        <subfield code='b'>ill. ;</subfield>
+        <subfield code='c'>20 cm.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Political parties and their growth -- The low state of whippet racing -- Add folk plays -- Meeting the boats -- &quot;In this corner--&quot; -- &apos;Round and &apos;round and &apos;round -- The cooper cycle in American folk songs -- Hockey tonight! -- &quot;I am in the book&quot; -- A short history of American politics -- The bridge of sans Gene -- Try-outs -- African sculpture -- Football sagas -- Mr. Mencken reviews Mr. Nathan and vice versa -- Clinical notes -- The new social blight -- Passport dope -- &quot;Island Irish&quot; -- On the air -- Fascinating crimes -- The problems of the used car -- Checking up -- A short (what there is of it) history of American political problems -- Cease firing! -- The great American folly -- Junior drama -- The passing of the cow -- Back to the game -- It seems there were a couple of cells -- No results whatever in our own straw vote -- Two editorials for &quot;The Nation&quot; -- Mr. Kellogg&apos;s dilemma -- The four-in-hand outrage -- Significant results in second week of our own straw vote -- The packer&apos;s assistant -- The birth of a college comic paper -- A Christmas garland of books -- The woolen mitten situation -- The typical New Yorker.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='520'>
+        <subfield code='a'>40 Benchley essays previously published in The Bookman, The Detroit Athletic Club News, The Forum, Life, The New Yorker, and The Yale Review.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>American wit and humor.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Williams, Gluyas,</subfield>
+        <subfield code='d'>1888-1982.</subfield>
+        <subfield code='4'>ill</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1073901</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1129170</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>1</subfield>
+        <subfield code='b'>10001649156</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPS3503.E49 T8 1928</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 13:11:00-04</subfield>
+        <subfield code='u'>2016-09-23 12:26:14-04</subfield>
+      </datafield>
+    </record>
+  </collection>

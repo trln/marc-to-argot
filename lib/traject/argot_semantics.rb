@@ -79,7 +79,7 @@ module Traject::Macros
           field.subfields.each do |subfield|
             if subfield.code == '6'
               marc_match_suffix = subfield.value[subfield.value.index('-')..-1]
-              end
+            end
 
             next unless field.tag == '264'
             publisher[:name] = subfield.value if subfield.code == 'b'
@@ -101,7 +101,7 @@ module Traject::Macros
               publisher[:type] = 'manufacturer'
             else
               publisher = {}
-              end
+            end
           else
             publisher[:type] = 'publisher'
           end
@@ -127,7 +127,7 @@ module Traject::Macros
           field.subfields.each do |subfield|
             if subfield.code == '6'
               marc_match_suffix = subfield.value[subfield.value.index('-')..-1]
-              end
+            end
           end
 
           imprint[:value] = extractor.collect_subfields(field, spec).first
@@ -185,13 +185,13 @@ module Traject::Macros
         end.map(&:code)
 
         if field.tag != '700' ||
-          (field.tag == '700' &&
+           (field.tag == '700' &&
             (field.indicator2 == '2' ||
-              (field.indicator2 != '2' &&
-                (subfield_tk_absent(special_subfield_codes) &&
-                  (subfield_e4_absent(special_subfield_codes) ||
-                   e4_maps_to_creator(field) ||
-                   has_allowable_e4_value(field))))))
+             (field.indicator2 != '2' &&
+              (subfield_tk_absent(special_subfield_codes) &&
+               (subfield_e4_absent(special_subfield_codes) ||
+                e4_maps_to_creator(field) ||
+                has_allowable_e4_value(field))))))
 
           allowable_subfields = field.subfields.select do |subfield|
             spec.includes_subfield_code?(subfield.code)
@@ -260,8 +260,8 @@ module Traject::Macros
 
     def self.remove_subfield_after_tk(subfields, special_subfield_codes, code)
       unless special_subfield_codes.include?(code) &&
-         (subfield_tk_absent(special_subfield_codes) ||
-         subfield_before_t_and_k(code, special_subfield_codes))
+             (subfield_tk_absent(special_subfield_codes) ||
+              subfield_before_t_and_k(code, special_subfield_codes))
         subfields.delete_if { |sf| sf.code == code }
       end
     end
@@ -425,21 +425,63 @@ module Traject::Macros
     def argot_note_toc(config)
       lambda do |rec, acc|
         note_array = []
-    Traject::MarcExtractor.cached(config).each_matching_line(rec) do |field, spec, extractor|
-      keep_sfs = field.subfields.select {|sf| sf.code =~ /[agrt]/ }
-      note_text = keep_sfs.map {|sf| sf.value.strip}
-      case field.indicator1
-      when '1'
-        note_text.unshift('Incomplete contents:')
-      when '2'
-        note_text.unshift('Partial contents:')
+        Traject::MarcExtractor.cached(config).each_matching_line(rec) do |field, spec, extractor|
+          keep_sfs = field.subfields.select {|sf| sf.code =~ /[agrt]/ }
+          note_text = keep_sfs.map {|sf| sf.value.strip}
+          case field.indicator1
+          when '1'
+            note_text.unshift('Incomplete contents:')
+          when '2'
+            note_text.unshift('Partial contents:')
+          end
+          note_array << note_text.join(' ') unless note_text.empty?
+        end
+        acc << note_array
       end
-        note_array << note_text.join(' ') unless note_text.empty?
-    end
-    acc << note_array
-       end
     end
 
+    def argot_note_summary(config)
+      lambda do |rec, acc|
+        note_array = []
+        Traject::MarcExtractor.cached(config).each_matching_line(rec) do |field, spec, extractor|
+          # material_specified is grabbed separately and added to beginning of field
+          #  after any field type label is set using indicators
+          material_specified = ''
+          note_text = []
+          field.subfields.each do |sf|
+            value = sf.value.strip
+            if sf.code =~ /[ab]/
+              value.gsub!(/^Summary: /i, '')
+              value.gsub!(/--$/, '')
+              note_text << value
+            elsif sf.code == 'c'
+              value = "--#{value}"
+              note_text << value
+            elsif sf.code == '3'
+              value.gsub!(/:$/, '')
+              value = "(#{value}):"
+              material_specified = value
+            end
+          end
+          
+          case field.indicator1
+          when '1'
+            note_text.unshift('Review:')
+          when '2'
+            note_text.unshift('Scope and content:')
+          when '3'
+            note_text.unshift('Abstract:')
+          when '4'
+            note_text.unshift('Content advice:')
+          end
+
+          note_text.unshift(material_specified) if material_specified.length > 0
+          note_array << note_text.join(' ') unless note_text.empty?
+        end
+        note_array.each { |e| acc << e }
+      end
+    end
+    
     ################################################
     # Lambda for Linking
     ######
@@ -723,8 +765,8 @@ module Traject::Macros
     def array_to_hierarchy_facet(args, delimiter = ':')
       result = []
       args.each_with_object([]) do |part, acc|
-       acc << part
-       result << acc.join(delimiter)
+        acc << part
+        result << acc.join(delimiter)
       end
       result
     end
@@ -754,71 +796,71 @@ module Traject::Macros
         next unless %w[LC SUDOC].include?(scheme)
         numbers = (cns[scheme] ||= [])
         numbers << if scheme == 'LC'
-                     LCC.normalize(i['call_no'])
-                   else
-                     i['call_no']
-                   end
+        LCC.normalize(i['call_no'])
+      else
+        i['call_no']
       end
-      ctx.output_hash['call_number_schemes'] = call_numbers.keys
-      ctx.output_hash['normalized_call_numbers'] = call_numbers.collect do |scheme, values|
-        s = scheme.downcase
-        values.collect { |v| "#{s}:#{v}" }
-      end.flatten.uniq
-
-      return unless call_numbers.key?('LC')
-      res = []
-      LCC.find_path(call_numbers['LC'].first).each_with_object([]) do |part, acc|
-        acc << part
-        res << acc.join(':')
-      end
-      ctx.output_hash['lcc_callnum_classification'] = res
     end
+    ctx.output_hash['call_number_schemes'] = call_numbers.keys
+    ctx.output_hash['normalized_call_numbers'] = call_numbers.collect do |scheme, values|
+      s = scheme.downcase
+      values.collect { |v| "#{s}:#{v}" }
+    end.flatten.uniq
 
-    # maps languages, by default out of 008[35-37] and 041a and 041d
-    #
-    # de-dups values so you don't get the same one twice.
-    #
-    # Note: major issue with legacy marc records
-    #   Legacy records would jam all langs into 041 indicator1
-    #   E.g., an material translated from latin -> french -> english, would have all
-    #   3 languages in 041a, though the material may not have any french text
-    #
-    #   To remedy, any 041a indicator 1, with a value of 6 or more
-    #   alpha characters will be thrown out
+    return unless call_numbers.key?('LC')
+    res = []
+    LCC.find_path(call_numbers['LC'].first).each_with_object([]) do |part, acc|
+      acc << part
+      res << acc.join(':')
+    end
+    ctx.output_hash['lcc_callnum_classification'] = res
+  end
 
-    def argot_languages(spec = "008[35-37]:041")
-      translation_map = Traject::TranslationMap.new("marc_languages")
+  # maps languages, by default out of 008[35-37] and 041a and 041d
+  #
+  # de-dups values so you don't get the same one twice.
+  #
+  # Note: major issue with legacy marc records
+  #   Legacy records would jam all langs into 041 indicator1
+  #   E.g., an material translated from latin -> french -> english, would have all
+  #   3 languages in 041a, though the material may not have any french text
+  #
+  #   To remedy, any 041a indicator 1, with a value of 6 or more
+  #   alpha characters will be thrown out
 
-      extractor = MarcExtractor.new(spec, :separator => nil)
+  def argot_languages(spec = "008[35-37]:041")
+    translation_map = Traject::TranslationMap.new("marc_languages")
 
-      lambda do |record, accumulator|
-        codes = extractor.collect_matching_lines(record) do |field, spec, extractor|
-          if extractor.control_field?(field)
-            (spec.bytes ? field.value.byteslice(spec.bytes) : field.value)
-          else
-            # the following 2 lines are used to skip legacy records with
-            # potential dirty data, see note above
-            subfield_a = field.subfields.find { |subfield| subfield.code == 'a' }
-            check_subfield_a = subfield_a.nil? ? '' : subfield_a.value
-            next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length > 6
-            extractor.collect_subfields(field, spec).collect do |value|
-              # sometimes multiple language codes are jammed together in one subfield, and
-              # we need to separate ourselves. sigh.
-              unless value.length == 3
-                # split into an array of 3-length substrs; JRuby has problems with regexes
-                # across threads, which is why we don't use String#scan here.
-                value = value.chars.each_slice(3).map(&:join)
-              end
-              value
-            end.flatten
-          end
+    extractor = MarcExtractor.new(spec, :separator => nil)
+
+    lambda do |record, accumulator|
+      codes = extractor.collect_matching_lines(record) do |field, spec, extractor|
+        if extractor.control_field?(field)
+          (spec.bytes ? field.value.byteslice(spec.bytes) : field.value)
+        else
+          # the following 2 lines are used to skip legacy records with
+          # potential dirty data, see note above
+          subfield_a = field.subfields.find { |subfield| subfield.code == 'a' }
+          check_subfield_a = subfield_a.nil? ? '' : subfield_a.value
+          next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length > 6
+          extractor.collect_subfields(field, spec).collect do |value|
+            # sometimes multiple language codes are jammed together in one subfield, and
+            # we need to separate ourselves. sigh.
+            unless value.length == 3
+              # split into an array of 3-length substrs; JRuby has problems with regexes
+              # across threads, which is why we don't use String#scan here.
+              value = value.chars.each_slice(3).map(&:join)
+            end
+            value
+          end.flatten
         end
-        codes = codes.uniq
-
-        translation_map.translate_array!(codes)
-
-        accumulator.concat codes
       end
+      codes = codes.uniq
+
+      translation_map.translate_array!(codes)
+
+      accumulator.concat codes
     end
   end
+end
 end

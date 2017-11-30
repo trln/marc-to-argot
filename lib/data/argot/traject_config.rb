@@ -153,6 +153,10 @@ unless settings["override"].include?("note_toc")
   to_field "note_toc", argot_note_toc(settings["specs"][:note_toc]) 
 end
 
+unless settings["override"].include?("note_summary")
+  to_field "note_summary", argot_note_summary(settings["specs"][:note_summary]) 
+end
+
 ################################################
 # URLs
 ######

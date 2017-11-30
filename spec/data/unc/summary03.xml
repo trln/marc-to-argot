@@ -1,0 +1,159 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200493 i 4500</leader>
+      <controlfield tag='008'>150803s2015    dcua          000 1 eng  </controlfield>
+      <controlfield tag='001'>910334287</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20151120114826.6</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2015029841</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781563686030</subfield>
+        <subfield code='q'>paperback</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1563686031</subfield>
+        <subfield code='q'>paperback</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>9781563686047</subfield>
+        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)910334287</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>YDX</subfield>
+        <subfield code='d'>YDXCP</subfield>
+        <subfield code='d'>BTCTA</subfield>
+        <subfield code='d'>BDX</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>CDX</subfield>
+        <subfield code='d'>TMK</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>pcc</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>PS3603.O536</subfield>
+        <subfield code='b'>D43 2015</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='082'>
+        <subfield code='a'>813/.6</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='084'>
+        <subfield code='a'>FIC043000</subfield>
+        <subfield code='a'>FIC000000</subfield>
+        <subfield code='a'>FIC029000</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Conley, Willy,</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The deaf heart :</subfield>
+        <subfield code='b'>a novel /</subfield>
+        <subfield code='c'>Willy Conley.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>Washington, DC :</subfield>
+        <subfield code='b'>Gallaudet University Press,</subfield>
+        <subfield code='c'>[2015]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>xviii, 233 pages ;</subfield>
+        <subfield code='c'>22 cm</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>unmediated</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>volume</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;Told through a series of quirky, irreverent short stories and letters home during the early 1980s, The Deaf Heart chronicles a year in the life of Dempsey &quot;Max&quot; McCall, a Deaf biomedical photography resident at a teaching hospital on the island of Galveston, Texas. Max strives to become certified as a Registered Biological Photographer while straddling the deaf and hearing worlds. He befriends Reynaldo, an impoverished Deaf Mexican, and they go on a number of unusual escapades around the island. At the hospital, Max has to contend with hearing doctors, nurses, scientists, and teachers. While struggling through the rigors of his residency and running into bad luck in meeting women, Max discovers an ally in his hearing housemate Zag, a fellow resident who is also vying for certification. Toward the end of his residency, Max meets Maddy, a Deaf woman who helps bring balance to his life. Author Willy Conley&apos;s stories, some humorous, some poignant, reveal Max&apos;s struggles and triumphs as he attempts to succeed in the hearing world while at the same time navigating the multicultural and linguistic diversity within the Deaf world&quot;--</subfield>
+        <subfield code='c'>Provided by publisher.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;Chronicles a year in the life of Dempsey McCall, a deaf biomedical photography resident living in Galveston, Texas&quot;--</subfield>
+        <subfield code='c'>Provided by publisher.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Deaf culture</subfield>
+        <subfield code='v'>Fiction.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>People with disabilities</subfield>
+        <subfield code='v'>Fiction.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Interpersonal relations</subfield>
+        <subfield code='v'>Fiction.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>FICTION / Coming of Age.</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>FICTION / General.</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>FICTION / Short Stories (single author).</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Deaf culture.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01764313</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Interpersonal relations.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00977397</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>People with disabilities.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01057245</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Fiction.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01423787</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8389707</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i10908357</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00049578269</subfield>
+        <subfield code='p'>05000</subfield>
+        <subfield code='q'>|aPS3603.O536|bD43 2015</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2015-12-09 00:00:00-05</subfield>
+        <subfield code='c'>2015-12-09 10:37:18-05</subfield>
+        <subfield code='u'>2015-12-17 19:54:46-05</subfield>
+      </datafield>
+  </record>
+  </collection>

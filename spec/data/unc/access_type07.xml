@@ -1,0 +1,107 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200361Ii 4500</leader>
+      <controlfield tag='008'>160503s2105    hu a     b    001 0 hun d</controlfield>
+      <controlfield tag='001'>948782767</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20161213012930.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9789637082559</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9637082557</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)948782767</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>HUL</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>HUL</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>ZCU</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>PH3281.M15</subfield>
+        <subfield code='b'>Z46 2015</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Madách Imre napjai a magyar irodalomban, 1861-1864 /</subfield>
+        <subfield code='c'>gyűjtötte, sajtó alá rendezte, és a jegyzeteket írta Praznovszky Mihály.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>Budapest :</subfield>
+        <subfield code='b'>SikerX BT,</subfield>
+        <subfield code='c'>2015.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>432 pages :</subfield>
+        <subfield code='b'>illustrations ;</subfield>
+        <subfield code='c'>25 cm</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>unmediated</subfield>
+        <subfield code='b'>n</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>volume</subfield>
+        <subfield code='b'>nc</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='600'>
+        <subfield code='a'>Madách, Imre,</subfield>
+        <subfield code='d'>1823-1864</subfield>
+        <subfield code='x'>Criticism and interpretation.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='7' tag='600'>
+        <subfield code='a'>Madách, Imre,</subfield>
+        <subfield code='d'>1823-1864.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00067548</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Criticism, interpretation, etc.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01411635</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Praznovszky, Mihály,</subfield>
+        <subfield code='e'>editor.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8598539</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i11216497</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00050963590</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPH3281.M15|bZ82 2015</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2016-12-13 00:00:00-05</subfield>
+        <subfield code='c'>2016-10-04 16:42:25-04</subfield>
+        <subfield code='u'>2017-01-09 19:17:59-05</subfield>
+      </datafield>
+  </record>
+</collection>

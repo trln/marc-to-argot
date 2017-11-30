@@ -1,0 +1,101 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200385Mi 4500</leader>
+      <controlfield tag='006'>m        d</controlfield>
+      <controlfield tag='007'>cr |n|||||||||</controlfield>
+      <controlfield tag='008'>171124s2015    xx      o     000 0 eng d</controlfield>
+      <controlfield tag='001'>1012851705deg</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20171129111324.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1934078492</subfield>
+        <subfield code='q'>(ebk)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781934078495</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1012851705</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='037'>
+        <subfield code='a'>1050154</subfield>
+        <subfield code='b'>MIL</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>IDEBK</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>IDEBK</subfield>
+        <subfield code='d'>EBLCP</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>DG221</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>937.5</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Naso, Alessandro,</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Etruscology /</subfield>
+        <subfield code='c'>edited by Alessandro Naso.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>Boston, US :</subfield>
+        <subfield code='b'>De Gruyter,</subfield>
+        <subfield code='c'>2015.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource (1856 p.)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>computer</subfield>
+        <subfield code='b'>c</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='b'>cr</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Unlimited simultaneous users</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>This handbook has two purposes: it is intended (1) as a handbook of Etruscology or Etruscan Studies, offering a state-of-the-art and comprehensive overview of the history of the discipline and its development, and (2) it serves as an authoritative reference work representing the current state of knowledge on Etruscan civilization. The organization of the volume reflects this dual purpose. The first part of the volume is dedicated to methodology and leading themes in current research, organized thematically, whereas the second part offers a diachronic account of Etruscan history, culture, religion, art &amp; archaeology, and social and political relations and structures, as well as a systematic treatment of the topography of the Etruscan civilization and sphere of influence.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='588'>
+        <subfield code='a'>Description based on print version record.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>De Gruyter ebooks (online collection). Title-by-title via OCLC</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://www.degruyter.com/isbn/9781934078495</subfield>
+        <subfield code='x'>De Gruyter ebooks</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8983658</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2017-11-29 00:00:00-05</subfield>
+        <subfield code='c'>2017-11-16 10:03:17-05</subfield>
+        <subfield code='u'>2017-11-29 11:19:05-05</subfield>
+      </datafield>
+  </record>
+</collection>

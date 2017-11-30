@@ -1,0 +1,144 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2201057 i 4500</leader>
+      <controlfield tag='008'>151029s2017    caua     b    001 0 eng  </controlfield>
+      <controlfield tag='001'>927241453</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2015040051</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>918925075</subfield>
+        <subfield code='a'>968690973</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781483340401</subfield>
+        <subfield code='q'>(pbk. ;</subfield>
+        <subfield code='q'>alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1483340406</subfield>
+        <subfield code='q'>(pbk. ;</subfield>
+        <subfield code='q'>alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>YDXCP</subfield>
+        <subfield code='d'>IUL</subfield>
+        <subfield code='d'>BDX</subfield>
+        <subfield code='d'>CDX</subfield>
+        <subfield code='d'>P4A</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>pcc</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>H62</subfield>
+        <subfield code='b'>.R344 2017</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='082'>
+        <subfield code='a'>001.4/2</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Ravitch, Sharon M.,</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Reason &amp; rigor :</subfield>
+        <subfield code='b'>how conceptual frameworks guide research /</subfield>
+        <subfield code='c'>Sharon M. Ravitch, Matthew Riggan.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2=' ' tag='246'>
+        <subfield code='a'>Reason and rigor</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>Second edition.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>Los Angeles :</subfield>
+        <subfield code='b'>SAGE,</subfield>
+        <subfield code='c'>[2017]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>xxiv, 234 pages :</subfield>
+        <subfield code='b'>illustrations ;</subfield>
+        <subfield code='c'>24 cm</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>unmediated</subfield>
+        <subfield code='b'>n</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>volume</subfield>
+        <subfield code='b'>nc</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references (pages 219-225) and index.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Introduction to conceptual frameworks -- Why conceptual frameworks? -- Origins of a conceptual framework: the birth of grit -- Excavating questions: conceptual frameworks, research questions, and research design -- The role of the conceptual framework in data collection and fieldwork -- Conceptual frameworks and the analysis of data -- Expanding the conversation, extending the argument: the role of conceptual frameworks in presenting, explaining, and contextualizing findings -- Reflections on the making and re-making of a conceptual framework -- The conceptual framework as guide and ballast.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Social sciences</subfield>
+        <subfield code='x'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Qualitative research.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Qualitative research.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Social sciences</subfield>
+        <subfield code='x'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Riggan, Matthew,</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='907'>
+        <subfield code='a'>b8985389</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='4' tag='999'>
+        <subfield code='a'>o1839065</subfield>
+        <subfield code='b'> </subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='d'></subfield>
+        <subfield code='e'></subfield>
+        <subfield code='f'>dd</subfield>
+        <subfield code='g'>o</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'></subfield>
+        <subfield code='c'>2017-11-28 11:36:33-05</subfield>
+        <subfield code='u'>2017-11-28 11:38:52-05</subfield>
+      </datafield>
+  </record>
+</collection>

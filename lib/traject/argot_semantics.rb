@@ -422,6 +422,24 @@ module Traject::Macros
       end
     end
 
+    def argot_note_toc(config)
+      lambda do |rec, acc|
+        note_array = []
+    Traject::MarcExtractor.cached(config).each_matching_line(rec) do |field, spec, extractor|
+      keep_sfs = field.subfields.select {|sf| sf.code =~ /[agrt]/ }
+      note_text = keep_sfs.map {|sf| sf.value.strip}
+      case field.indicator1
+      when '1'
+        note_text.unshift('Incomplete contents:')
+      when '2'
+        note_text.unshift('Partial contents:')
+      end
+        note_array << note_text.join(' ') unless note_text.empty?
+    end
+    acc << note_array
+       end
+    end
+
     ################################################
     # Lambda for Linking
     ######

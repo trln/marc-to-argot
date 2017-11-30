@@ -149,20 +149,8 @@ unless settings["override"].include?("notes")
   to_field "notes", argot_notes(settings["specs"][:notes])
 end
 
-unless settings['override'].include?('note_toc')
-  to_field "note_toc" do |rec, acc|
-    Traject::MarcExtractor.cached("505agrt").each_matching_line(rec) do |field, spec, extractor|
-      keep_sfs = field.subfields.select {|sf| sf.code =~ /[agrt]/ }
-      note_text = keep_sfs.map {|sf| sf.value.strip}
-      case field.indicator1
-      when '1'
-        note_text.unshift('Incomplete contents:')
-      when '2'
-        note_text.unshift('Partial contents:')
-      end
-      acc << note_text.join(' ')
-    end
-  end
+unless settings["override"].include?("note_toc")
+  to_field "note_toc", argot_note_toc(settings["specs"][:note_toc]) 
 end
 
 ################################################
@@ -401,12 +389,12 @@ unless settings['override'].include?('institution')
   end
 end
 
-unless settings['override'].include?('access_type_facet')
-  to_field 'access_type' do |rec, acc|
-    acc << 'Online' if online_access?(rec)
-    acc << 'At the Library' if physical_access?(rec)
-  end
-end
+# unless settings['override'].include?('access_type_facet')
+#   to_field 'access_type' do |rec, acc|
+#     acc << 'Online' if online_access?(rec)
+#     acc << 'At the Library' if physical_access?(rec)
+#   end
+# end
 
 # Other fields in endeca model that we're unsure how to map to
 # source_of_acquisition

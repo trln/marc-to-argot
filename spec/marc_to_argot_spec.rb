@@ -5,29 +5,9 @@ describe MarcToArgot do
     expect(MarcToArgot::VERSION).not_to be nil
   end
 
-  it 'loads base spec successfully' do
-    spec = MarcToArgot::SpecGenerator.new('argot')
-    result = spec.generate_spec
-    expect(result).to be_kind_of(Hash)
-    expect(result).not_to be_empty
-    expect(result['id']).to eq('001')
-  end
-
-  it 'loads NCSU spec without a problem' do
-    spec = MarcToArgot::SpecGenerator.new('ncsu')
-    result = spec.generate_spec
-    expect(result['id']).to eq('918a')
-  end
-
   it 'generates base results for NCSU' do
     result = Util::TrajectRunTest.run_traject('ncsu', 'base')
     expect(result).not_to be_empty
-  end
-
-  it 'loads Duke spec without a problem' do
-    spec = MarcToArgot::SpecGenerator.new('duke')
-    result = spec.generate_spec
-    expect(result['id']).to eq('001')
   end
 
   it 'generates base results for Duke' do
@@ -84,12 +64,6 @@ describe MarcToArgot do
   it 'does NOT generate a rollup_id for Duke special collections records' do
     result = Util::TrajectRunTest.run_traject('duke', 'special_collections', 'mrc')
     expect(JSON.parse(result)['rollup_id']).to(be_nil)
-  end
-
-  it 'loads UNC spec without a problem' do
-    spec = MarcToArgot::SpecGenerator.new('unc')
-    result = spec.generate_spec
-    expect(result['id']).to eq('907a')
   end
 
   it 'generates base results for UNC' do

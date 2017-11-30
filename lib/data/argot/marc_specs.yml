@@ -8,11 +8,9 @@ syndetics_id:
   - 020a
   - 024a
 isbn:
-  primary:
-    - 020a
-  other: 
-    - 020z
-    - 776z
+  - 020a
+  - 020z
+  - 776z
 issn: 
   primary:
     - 440x
@@ -117,6 +115,8 @@ notes:
     - 590a
     - 599ab
     - 752abcd
+note_toc:
+  - 505agrt
 linking: 
   main_series:
     - 760

@@ -4,46 +4,21 @@ require 'marc_to_argot'
 
 # Utilities for specs
 module Util
-  class TrajectRunTest
-    def self.run_traject(collection, file, extension = 'xml')
-      indexer = Util::TrajectLoader.load(collection, extension)
-      test_file = Util.find_marc(collection, file, extension)
-      Util.capture_stdout do |_|
-        indexer.process(File.open(test_file))
-      end
-    end
-  end
-
   # utility method for loading MARC data for testing
-  def self.find_marc(collection, file, extension = 'xml')
+  def find_marc(collection, file, extension = 'xml')
     data = File.expand_path('data', File.dirname(__FILE__))
     File.join(data, collection, "#{file}.#{extension}")
   end
 
-  # resets stdout and executes a block, returning
-  # all output as a string
-  def self.capture_stdout
-    io = StringIO.new
-    old_stdout = $stdout
-    $stdout = io
-    begin
-      yield io
-    ensure
-      $stdout = old_stdout
-    end
-    io.string
-  end
-
   # Loads a traject configuration
-  class TrajectLoader
-    def self.load(collection = 'argot', extension = 'xml')
-      data_dir = File.expand_path('../lib/data',File.dirname(__FILE__))
+  module TrajectLoader
+    def create_settings(collection, data_dir, extension)
       spec = MarcToArgot::SpecGenerator.new(collection)
       marc_source_type = extension == 'mrc' ? 'binary' : 'xml'
       flatten_attributes = YAML.load_file("#{data_dir}/flatten_attributes.yml")
       override = File.exist?("#{data_dir}/#{collection}/overrides.yml") ? YAML.load_file("#{data_dir}/#{collection}/overrides.yml") : []
 
-      settings = {
+      {
         'argot_writer.flatten_attributes' => flatten_attributes,
         'argot_writer.pretty_print' => false,
         'writer_class_name' => 'Traject::ArgotWriter',
@@ -53,10 +28,13 @@ module Util
         'marc_source.encoding' => 'utf-8',
         'override' => override
       }
+    end
 
+    def load_indexer(collection = 'argot', extension = 'xml')
+      data_dir = File.expand_path('../lib/data',File.dirname(__FILE__))     
       conf_files = ["#{data_dir}/extensions.rb", "#{data_dir}/#{collection}/traject_config.rb", "#{data_dir}/argot/traject_config.rb"]
-
-      traject_indexer = Traject::Indexer.new settings
+      indexer_class = MarcToArgot::Indexers.find(collection.to_sym)
+      traject_indexer = indexer_class.new create_settings(collection, data_dir, extension)
       conf_files.each do |conf_path|
         begin
           traject_indexer.load_config_file(conf_path)
@@ -71,4 +49,42 @@ module Util
       traject_indexer
     end
   end
+
+  module TrajectRunTest
+    include Util
+    include Util::TrajectLoader
+
+    # resets stdout and executes a block, returning
+    # all output as a string
+    def capture_stdout
+      io = StringIO.new
+      err_io = StringIO.new
+      old_stdout = $stdout
+      old_stderr = $stderr
+      $stdout = io
+      $stderr = err_io
+      begin
+        yield io
+      ensure
+        $stdout = old_stdout
+        $stderr = old_stderr
+      end
+      io.string
+    end
+
+    def run_traject(collection, file, extension = 'xml')
+      indexer = load_indexer(collection, extension)
+      test_file = find_marc(collection, file, extension)
+      capture_stdout do |_|
+        indexer.process(File.open(test_file))
+      end
+    end
+
+    # Runs traject and parses the results as JSON.
+    def run_traject_json(collection, file, extension = 'xml')
+      JSON.parse(run_traject(collection, file, extension))
+    end
+  end
+
+  
 end

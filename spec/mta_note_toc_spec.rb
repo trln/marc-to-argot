@@ -1,12 +1,14 @@
 # coding: utf-8
 require 'spec_helper'
 describe MarcToArgot do
-  toc01 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'toc01') )
-  toc02 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'toc02') )
-  toc03 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'toc03') )  
+  include Util::TrajectRunTest
+  
+  let(:toc01) { run_traject_json('unc', 'toc01') }
+  let(:toc02) { run_traject_json('unc', 'toc02') }
+  let(:toc03) { run_traject_json('unc', 'toc03') }
 
   # only subfields agrt will be kept/displayed.
-  # subfield u allows a URL to be put in the field. Do we want that? 
+  # subfield u allows a URL to be put in the field. Do we want that?
   it '(MTA) sets single basic TOC note' do
     result = toc01['note_toc']
     expect(result).to(

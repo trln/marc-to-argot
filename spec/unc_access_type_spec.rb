@@ -1,12 +1,13 @@
 require 'spec_helper'
 
 describe MarcToArgot do
-  at01 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'access_type01') )
-  at02 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'access_type02') )
-  at03 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'access_type03') )
-  at04 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'access_type04') )
-  at05 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'access_type05') )
-  at06 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'access_type06') )
+  include Util::TrajectRunTest
+  let(:at01) { run_traject_json('unc', 'access_type01') }
+  let(:at02) { run_traject_json('unc', 'access_type02') }
+  let(:at03) { run_traject_json('unc', 'access_type03') }
+  let(:at04) { run_traject_json('unc', 'access_type04') }
+  let(:at05) { run_traject_json('unc', 'access_type05') }
+  let(:at06) { run_traject_json('unc', 'access_type06') }
 
     it '(UNC) access type = Online if 856 i2=0' do
     expect(at01['access_type']).to(

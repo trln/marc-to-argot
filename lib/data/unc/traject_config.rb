@@ -1,5 +1,3 @@
-extend MarcToArgot::Macros::UNC
-
 ################################################
 # Primary ID
 ######
@@ -24,7 +22,6 @@ to_field 'local_id' do |rec, acc|
   acc << local_id
 end
 
-################################################
 # Institution
 ######\
 to_field 'institution', literal('unc')

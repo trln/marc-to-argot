@@ -1,26 +1,27 @@
 require 'spec_helper'
 describe MarcToArgot do
-  rec01 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum01') )
-  rec02 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum02') )
-  rec03 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum03') )  
-  rec04 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum04') )  
-  rec05 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum05') )  
-  rec06 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum06') )  
-  rec07 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum07') )  
-  rec08 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum08') )  
-  rec09 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum09') )  
-  rec10 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum10') )  
-  rec11 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum11') )  
-  rec12 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum12') )  
-  rec13 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum13') )  
-  rec14 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum14') )  
-  rec15 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum15') )  
-  rec16 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum16') )
-  rec17 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum17') )
-  rec18 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum18') )
-  rec19 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum19') )
-  rec20 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'oclcnum20') )
-  
+  include Util::TrajectRunTest
+  let(:rec01) { run_traject_json('unc', 'oclcnum01') }
+  let(:rec02) { run_traject_json('unc', 'oclcnum02') }
+  let(:rec03) { run_traject_json('unc', 'oclcnum03') }
+  let(:rec04) { run_traject_json('unc', 'oclcnum04') }
+  let(:rec05) { run_traject_json('unc', 'oclcnum05') }
+  let(:rec06) { run_traject_json('unc', 'oclcnum06') }
+  let(:rec07) { run_traject_json('unc', 'oclcnum07') }
+  let(:rec08) { run_traject_json('unc', 'oclcnum08') }
+  let(:rec09) { run_traject_json('unc', 'oclcnum09') }
+  let(:rec10) { run_traject_json('unc', 'oclcnum10') }
+  let(:rec11) { run_traject_json('unc', 'oclcnum11') }
+  let(:rec12) { run_traject_json('unc', 'oclcnum12') }
+  let(:rec13) { run_traject_json('unc', 'oclcnum13') }
+  let(:rec14) { run_traject_json('unc', 'oclcnum14') }
+  let(:rec15) { run_traject_json('unc', 'oclcnum15') }
+  let(:rec16) { run_traject_json('unc', 'oclcnum16') }
+  let(:rec17) { run_traject_json('unc', 'oclcnum17') }
+  let(:rec18) { run_traject_json('unc', 'oclcnum18') }
+  let(:rec19) { run_traject_json('unc', 'oclcnum19') }
+  let(:rec20) { run_traject_json('unc', 'oclcnum20') }
+
   # -=-=-=-=-=-=-=-
   # OCLC_NUMBER TESTS
   # -=-=-=-=-=-=-=-  

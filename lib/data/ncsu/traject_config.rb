@@ -1,5 +1,5 @@
 require 'set'
-extend MarcToArgot::Macros::NCSU
+#extend MarcToArgot::Macros::NCSU
 
 ################################################
 # Primary ID

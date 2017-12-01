@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe MarcToArgot do
-b1246383argot = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'b1246383') )
+  include Util::TrajectRunTest
+  let(:b1246383argot) { run_traject_json('unc', 'b1246383') }
 
     it '(UNC) sets holdings locations' do
     expect(b1246383argot['holdings'][0]).to(

@@ -1,10 +1,8 @@
-require 'spec_helper'
-
 describe MarcToArgot::Macros::NCSU do
   include Util
-  Traject::Indexer.include(described_class)
-  let(:indexer) { Traject::Indexer.new }
-  let(:records) { MARC::XMLReader.new(Util.find_marc('ncsu', 'base')).to_a }
+
+  let(:indexer) { MarcToArgot::Indexers::NCSU.new }
+  let(:records) { MARC::XMLReader.new(find_marc('ncsu', 'base')).to_a }
   let(:expected_rollups) {
     [%w[OCLC521064822], %w[OCLC21338035], nil, %w[OCLC65355424], %w[OCLC30104535]]
   }

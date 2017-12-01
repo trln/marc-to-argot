@@ -1,5 +1,3 @@
-extend MarcToArgot::Macros::Duke
-
 ################################################
 # Primary ID
 ######

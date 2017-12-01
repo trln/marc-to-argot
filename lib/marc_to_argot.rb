@@ -24,4 +24,5 @@ module MarcToArgot
   autoload :SpecGenerator, 'marc_to_argot/spec_generator'
   autoload :CallNumbers, 'marc_to_argot/call_numbers'
   autoload :Macros, 'marc_to_argot/macros'
+  autoload :Indexers, 'marc_to_argot/indexers'
 end

@@ -98,7 +98,7 @@ module MarcToArgot
 
       conf_files = ["#{data_dir}/extensions.rb","#{data_dir}/#{collection}/traject_config.rb","#{data_dir}/argot/traject_config.rb"]
 
-      traject_indexer = Traject::Indexer.new settings
+      traject_indexer = MarcToArgot::Indexers.find(collection).new settings
       conf_files.each do |conf_path|
         begin
           traject_indexer.load_config_file(conf_path)

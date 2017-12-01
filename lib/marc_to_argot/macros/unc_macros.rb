@@ -7,6 +7,10 @@ module MarcToArgot
       # a record has online access.
       ELOC_IND2 = Set.new(%w[0 1])
 
+      # TODO: This method (and ELOC_IND2) can be remove
+      #       once the tests are updated to load the correct
+      #       Macro override. It is duplicates the method
+      #       in MarcToArgot::Marcos::Shared.
       # tests whether the record has an 856[ind2] that matches
       # any of the values in ELOC_IND2
       # @param rec [MARC::Record] the record to be checked.

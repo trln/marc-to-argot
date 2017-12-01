@@ -1,5 +1,4 @@
 # Argot attributes you do not want parsed by the default argot configuration
-- access_type
 - id
 - local_id
 - institution

@@ -25,14 +25,6 @@ to_field 'local_id' do |rec, acc|
 end
 
 ################################################
-# Access Type field
-######
-  to_field 'access_type' do |rec, acc|
-    acc << 'Online' if online_access?(rec)
-    acc << 'At the Library' if physical_access?(rec)
-  end
-  
-################################################
 # Institution
 ######\
 to_field 'institution', literal('unc')

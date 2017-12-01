@@ -1,0 +1,121 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200277Ia 4500</leader>
+      <controlfield tag='008'>850731s1859    sp            000 0 spa d</controlfield>
+      <controlfield tag='001'>12328204</controlfield>
+      <controlfield tag='005'>19910918152549.2</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>NOC</subfield>
+        <subfield code='c'>NOC</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Rossi, Lauro,</subfield>
+        <subfield code='d'>1812-1885.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>Los monederos falsos :</subfield>
+        <subfield code='b'>zarzuela en cuatro actos y en verso /</subfield>
+        <subfield code='c'>acomodada la letra a la música del maestro Rossi.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Madrid :</subfield>
+        <subfield code='b'>Impr. de J.M. Ducazcal,</subfield>
+        <subfield code='c'>1859.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>70 p. ;</subfield>
+        <subfield code='c'>20 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also available via the World Wide Web.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Pastorfido, Miguel.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='u'>https://archive.org/search.php?sort=publicdate&amp;query=scanningcenter%3Achapelhill+AND+mediatype%3Atexts+AND+call_number%3Ab2050091</subfield>
+        <subfield code='x'>https://archive.org/details/tributestomyfath00batt</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='u'>https://archive.org/details/losmonederosfals00ross</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b2050091</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i7640809</subfield>
+        <subfield code='l'>trln</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00032875372</subfield>
+        <subfield code='p'>092##</subfield>
+        <subfield code='q'>|a862.8 O12 v.44</subfield>
+        <subfield code='n'>Spine title: Obras dramáticas</subfield>
+        <subfield code='n'>Bound together</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2962296</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HAKI-1447-00001</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPQ6217 .T44 v. 363, no. 6</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2962297</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>2</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HAKI-1447-00002</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPQ6217.T443 v. 182, no. 20</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c2287901</subfield>
+        <subfield code='b'>wcda</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2287901</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='b'>572211</subfield>
+        <subfield code='h'>PQ6217</subfield>
+        <subfield code='i'>.T44 v. 363, no. 6</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2287901</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>e</subfield>
+        <subfield code='p'>HAKI-1447-00001</subfield>
+        <subfield code='t'>1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c4698905</subfield>
+        <subfield code='b'>wcda</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c4698905</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>PQ6217</subfield>
+        <subfield code='i'>.T443 v. 182, no. 20</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-01 08:35:00-04</subfield>
+        <subfield code='u'>2017-11-21 17:03:57-05</subfield>
+      </datafield>
+  </record>
+</collection>

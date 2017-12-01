@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Jobe, Henry R.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Henry R. Jobe papers  ,</subfield>
+        <subfield code='f'>1944-2010.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>3</subfield>
+        <subfield code='f'>linear feet</subfield>
+        <subfield code='a'></subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='506'>
+        <subfield code='a'>This summary description was created to provide information about unprocessed materials in Wilson Special Collections Library. This collection is not available for immediate or same day access. Please contact Research and Instructional Service staff at wilsonlibrary@unc.edu to discuss options for consulting this collection.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>Papers of Henry R. Lobe are primarily letters, March 1944-September 1945 from Lobe to his wife, Sylvia Shellenbenger, while he served in the United States Army and was stationed in China, India, and other locations. The collection also contains photographs, photograph albums, postcards, and a self-published memoir.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='2' tag='856'>
+        <subfield code='3'>Finding aid:</subfield>
+        <subfield code='u'>http://finding-aids.lib.unc.edu/05636</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8986781</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i11501854</subfield>
+        <subfield code='l'>wadc</subfield>
+        <subfield code='s'>j</subfield>
+        <subfield code='t'>24</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a05636</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2017-11-30 00:00:00-05</subfield>
+        <subfield code='c'>2017-11-30 12:38:21-05</subfield>
+        <subfield code='u'>2017-11-30 12:38:55-05</subfield>
+      </datafield>
+  </record>
+</collection>

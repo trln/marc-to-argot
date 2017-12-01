@@ -215,7 +215,11 @@ to_field 'items' do |rec, acc, ctx|
 
     ilocs = items.collect { |it| it['loc_b'] }
     hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten
-    ctx.output_hash['location_hierarchy'] = explode_hierarchical_strings(hier_loc_code_strings)
+    clean_loc_strings = hier_loc_code_strings.select { |e| e.nil? == false }
+#    ctx.output_hash['hiertest'] = clean_loc_strings
+    if clean_loc_strings.size > 0
+      ctx.output_hash['location_hierarchy'] = explode_hierarchical_strings(clean_loc_strings)
+    end
   end
 end
 

@@ -1,82 +1,79 @@
 <?xml version='1.0'?>
 <collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
   <record>
-    <leader>00000cem  2200529 i 4500</leader>
-      <controlfield tag='007'>aj canzn</controlfield>
-      <controlfield tag='008'>170530s2017    dcub      a  f  1   eng c</controlfield>
-      <controlfield tag='001'>988328399</controlfield>
+    <leader>00000cam  2201057 i 4500</leader>
+      <controlfield tag='008'>151029s2017    caua     b    001 0 eng  </controlfield>
+      <controlfield tag='001'>927241453</controlfield>
       <controlfield tag='003'>OCoLC</controlfield>
-      <controlfield tag='005'>20171108112025.0</controlfield>
-      <datafield ind1='1' ind2=' ' tag='034'>
-        <subfield code='a'>a</subfield>
-        <subfield code='b'>15000</subfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2015040051</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='035'>
-        <subfield code='a'>(OCoLC)988328399</subfield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>918925075</subfield>
+        <subfield code='a'>968690973</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781483340401</subfield>
+        <subfield code='q'>(pbk. ;</subfield>
+        <subfield code='q'>alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1483340406</subfield>
+        <subfield code='q'>(pbk. ;</subfield>
+        <subfield code='q'>alk. paper)</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='040'>
-        <subfield code='a'>GPO</subfield>
+        <subfield code='a'>DLC</subfield>
         <subfield code='b'>eng</subfield>
         <subfield code='e'>rda</subfield>
-        <subfield code='c'>GPO</subfield>
-        <subfield code='d'>AZP</subfield>
-        <subfield code='d'>HLS</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>YDXCP</subfield>
+        <subfield code='d'>IUL</subfield>
+        <subfield code='d'>BDX</subfield>
+        <subfield code='d'>CDX</subfield>
+        <subfield code='d'>P4A</subfield>
         <subfield code='d'>OCLCQ</subfield>
-        <subfield code='d'>RIU</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='042'>
         <subfield code='a'>pcc</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='043'>
-        <subfield code='a'>n-us-wv</subfield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>H62</subfield>
+        <subfield code='b'>.R344 2017</subfield>
       </datafield>
-      <datafield ind1='1' ind2='4' tag='050'>
-        <subfield code='a'>G3792.H3 2017</subfield>
-        <subfield code='b'>.U5</subfield>
+      <datafield ind1='0' ind2='0' tag='082'>
+        <subfield code='a'>001.4/2</subfield>
+        <subfield code='2'>23</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='052'>
-        <subfield code='a'>3792</subfield>
-        <subfield code='b'>H3</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2=' ' tag='052'>
-        <subfield code='a'>3894</subfield>
-        <subfield code='b'>H25</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2=' ' tag='074'>
-        <subfield code='a'>0650</subfield>
-      </datafield>
-      <datafield ind1='0' ind2=' ' tag='086'>
-        <subfield code='a'>I 29.21:H 23/2017</subfield>
-      </datafield>
-      <datafield ind1='1' ind2=' ' tag='110'>
-        <subfield code='a'>United States.</subfield>
-        <subfield code='b'>National Park Service,</subfield>
-        <subfield code='e'>cartographer.</subfield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Ravitch, Sharon M.,</subfield>
+        <subfield code='e'>author.</subfield>
       </datafield>
       <datafield ind1='1' ind2='0' tag='245'>
-        <subfield code='a'>Harpers Ferry, Harpers Ferry National Historical Park, West Virginia, Maryland, Virginia /</subfield>
-        <subfield code='c'>National Park Service, U.S. Department of the Interior.</subfield>
+        <subfield code='a'>Reason &amp; rigor :</subfield>
+        <subfield code='b'>how conceptual frameworks guide research /</subfield>
+        <subfield code='c'>Sharon M. Ravitch, Matthew Riggan.</subfield>
       </datafield>
-      <datafield ind1='1' ind2=' ' tag='246'>
-        <subfield code='i'>Title in upper margin:</subfield>
-        <subfield code='a'>Visiting Harpers Ferry National Historical Park</subfield>
+      <datafield ind1='3' ind2=' ' tag='246'>
+        <subfield code='a'>Reason and rigor</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='255'>
-        <subfield code='a'>Scale approximately 1:15,000.</subfield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>Second edition.</subfield>
       </datafield>
       <datafield ind1=' ' ind2='1' tag='264'>
-        <subfield code='a'>[Washington, D.C.] :</subfield>
-        <subfield code='b'>National Park Service, U.S. Department of the Interior,</subfield>
-        <subfield code='c'>2017.</subfield>
+        <subfield code='a'>Los Angeles :</subfield>
+        <subfield code='b'>SAGE,</subfield>
+        <subfield code='c'>[2017]</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='300'>
-        <subfield code='a'>1 map :</subfield>
-        <subfield code='b'>color ;</subfield>
-        <subfield code='c'>42 x 57 cm, folded to 10 x 21 cm</subfield>
+        <subfield code='a'>xxiv, 234 pages :</subfield>
+        <subfield code='b'>illustrations ;</subfield>
+        <subfield code='c'>24 cm</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='336'>
-        <subfield code='a'>cartographic image</subfield>
-        <subfield code='b'>cri</subfield>
+        <subfield code='a'>text</subfield>
+        <subfield code='b'>txt</subfield>
         <subfield code='2'>rdacontent</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='337'>
@@ -85,100 +82,63 @@
         <subfield code='2'>rdamedia</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='338'>
-        <subfield code='a'>sheet</subfield>
-        <subfield code='b'>nb</subfield>
+        <subfield code='a'>volume</subfield>
+        <subfield code='b'>nc</subfield>
         <subfield code='2'>rdacarrier</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='500'>
-        <subfield code='a'>Relief shown by shading.</subfield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references (pages 219-225) and index.</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='500'>
-        <subfield code='a'>Includes text and timeline.</subfield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Introduction to conceptual frameworks -- Why conceptual frameworks? -- Origins of a conceptual framework: the birth of grit -- Excavating questions: conceptual frameworks, research questions, and research design -- The role of the conceptual framework in data collection and fieldwork -- Conceptual frameworks and the analysis of data -- Expanding the conversation, extending the argument: the role of conceptual frameworks in presenting, explaining, and contextualizing findings -- Reflections on the making and re-making of a conceptual framework -- The conceptual framework as guide and ballast.</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='500'>
-        <subfield code='a'>Test, illustrations (some color), index to sites of interest, and bird&apos;s eye view map on verso.</subfield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Social sciences</subfield>
+        <subfield code='x'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='500'>
-        <subfield code='a'>Shipping list no.: 2017-0257-P.</subfield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
       </datafield>
-      <datafield ind1='2' ind2='7' tag='610'>
-        <subfield code='a'>Harpers Ferry National Historical Park (Agency : U.S.)</subfield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Qualitative research.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Qualitative research.</subfield>
         <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst01729755</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='0' tag='651'>
-        <subfield code='a'>Harpers Ferry National Historical Park</subfield>
-        <subfield code='v'>Maps.</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='0' tag='651'>
-        <subfield code='a'>Harpers Ferry (W. Va.)</subfield>
-        <subfield code='v'>Maps.</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='0' tag='651'>
-        <subfield code='a'>Harpers Ferry (W. Va.)</subfield>
-        <subfield code='v'>Aerial views.</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='7' tag='651'>
-        <subfield code='a'>West Virginia</subfield>
-        <subfield code='z'>Harpers Ferry.</subfield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
         <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst01212444</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='7' tag='655'>
-        <subfield code='a'>Tourist maps.</subfield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Social sciences</subfield>
+        <subfield code='x'>Research</subfield>
+        <subfield code='x'>Methodology.</subfield>
         <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst01423809</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='7' tag='655'>
-        <subfield code='a'>Aerial views.</subfield>
-        <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst01423687</subfield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Riggan, Matthew,</subfield>
+        <subfield code='e'>author.</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='7' tag='655'>
-        <subfield code='a'>Maps.</subfield>
-        <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst01423704</subfield>
+      <datafield ind1='1' ind2=' ' tag='907'>
+        <subfield code='a'>b8985389</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='7' tag='655'>
-        <subfield code='a'>Tourist maps.</subfield>
-        <subfield code='2'>lcgft</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='7' tag='655'>
-        <subfield code='a'>Aerial views.</subfield>
-        <subfield code='2'>lcgft</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2=' ' tag='856'>
-        <subfield code='3'>(paper)</subfield>
-        <subfield code='u'>https://catalog.gpo.gov/fdlpdir/locate.jsp?ItemNumber=0650&amp;SYS=001018121</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2=' ' tag='907'>
-        <subfield code='a'>b8883180</subfield>
-      </datafield>
-      <datafield ind1='9' ind2='1' tag='999'>
-        <subfield code='i'>i11406682</subfield>
-        <subfield code='l'>dcpf</subfield>
-        <subfield code='s'>-</subfield>
-        <subfield code='t'>20</subfield>
+      <datafield ind1='9' ind2='4' tag='999'>
+        <subfield code='a'>o1839065</subfield>
+        <subfield code='b'> </subfield>
         <subfield code='c'>1</subfield>
-        <subfield code='o'>0</subfield>
-        <subfield code='p'>0860#</subfield>
-        <subfield code='q'>|aI 29.21:H 23/2017</subfield>
-      </datafield>
-      <datafield ind1='9' ind2='1' tag='999'>
-        <subfield code='i'>i11493093</subfield>
-        <subfield code='l'>dcpf</subfield>
-        <subfield code='s'>-</subfield>
-        <subfield code='t'>20</subfield>
-        <subfield code='c'>1</subfield>
-        <subfield code='o'>0</subfield>
-        <subfield code='b'>00051684211</subfield>
-        <subfield code='p'>0860#</subfield>
-        <subfield code='q'>|aI 29.21:H 23/2017</subfield>
+        <subfield code='d'></subfield>
+        <subfield code='e'></subfield>
+        <subfield code='f'>dd</subfield>
+        <subfield code='g'>o</subfield>
       </datafield>
       <datafield ind1='0' ind2='0' tag='999'>
-        <subfield code='a'>2017-11-08 00:00:00-05</subfield>
-        <subfield code='c'>2017-06-13 08:08:57-04</subfield>
-        <subfield code='u'>2017-11-08 11:20:26-05</subfield>
+        <subfield code='a'></subfield>
+        <subfield code='c'>2017-11-28 11:36:33-05</subfield>
+        <subfield code='u'>2017-11-28 11:38:52-05</subfield>
       </datafield>
   </record>
 </collection>

@@ -3,33 +3,20 @@ module MarcToArgot
     # Macros and useful functions for UNC records
     module UNC
       include MarcToArgot::Macros::Shared
-      # values to look for in the 856 that indicate
-      # a record has online access.
-      ELOC_IND2 = Set.new(%w[0 1])
-
-      # TODO: This method (and ELOC_IND2) can be remove
-      #       once the tests are updated to load the correct
-      #       Macro override. It is duplicates the method
-      #       in MarcToArgot::Marcos::Shared.
-      # tests whether the record has an 856[ind2] that matches
-      # any of the values in ELOC_IND2
-      # @param rec [MARC::Record] the record to be checked.
-      # @param _ctx [Object] extra context or data to be used in the test
-      #   (for overrides)
-      def online_access?(rec, _ctx = {})
-        l = rec.fields('856')
-        return false if l.nil?
-        !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
-      end
-
+      
       # tests whether the record has any physical items
-      # this implementation asks whether there are any 999 fields.
+      # this implementation asks whether there are any 999 fields that:
+      #  - have i1=9 (in all records, dates are output to 999 w/i1=0), and
+      #  - have i2<3 (i.e. an unsuppressed item or holding record exists)
+      # Records with ONLY an order record will NOT be assigned an
+      #  access_type value, given that it is presumed the item is on order
+      #  and not at all accessible yet.
       # @param rec [MARC::Record] the record to be checked.
       # @param _ctx [Object] extra context or data to be used in the test
       #   (for overrides)
       def physical_access?(rec, _ctx = {})
         checkfields = []
-        rec.each_by_tag('999') { |f| checkfields << f if f.indicator1 == '9' }
+        rec.each_by_tag('999') { |f| checkfields << f if f.indicator1 == '9' && f.indicator2.to_i < 3}
         if checkfields.size > 0
           return true
         else

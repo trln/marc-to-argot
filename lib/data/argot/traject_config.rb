@@ -163,6 +163,7 @@ end
 
 unless settings["override"].include?("url")
   to_field "url" do |rec, acc|
+    urls = []
       Traject::MarcExtractor.cached("856uyz3").each_matching_line(rec) do |field, spec, extractor|
           url = {}
           if field.indicator2.to_i > 1
@@ -180,9 +181,9 @@ unless settings["override"].include?("url")
                   url[:text] = subfield.value
               end
           end
-
-          acc << url
-     end
+          urls << url
+      end
+      urls.each { |u| acc << u } unless urls.empty?
   end
 end
 

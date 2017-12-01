@@ -1,7 +1,8 @@
 # coding: utf-8
 require 'spec_helper'
 describe MarcToArgot do
-  ids01 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'ids01') )
+  include Util::TrajectRunTest
+  let(:ids01) { run_traject_json('unc', 'ids01') }
   
   # -=-=-=-=-=-=-=-
   # 010 tests
@@ -44,5 +45,4 @@ describe MarcToArgot do
          ])
     )
   end
-
 end

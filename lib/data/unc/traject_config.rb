@@ -1,4 +1,4 @@
-extend MarcToArgot::Macros::UNC
+#extend MarcToArgot::Macros::UNC
 
 ################################################
 # Primary ID
@@ -27,10 +27,10 @@ end
 ################################################
 # Access Type field
 ######
-  to_field 'access_type' do |rec, acc|
-    acc << 'Online' if online_access?(rec)
-    acc << 'At the Library' if physical_access?(rec)
-  end
+#  to_field 'access_type' do |rec, acc|
+#    acc << 'Online' if online_access?(rec)
+#    acc << 'At the Library' if physical_access?(rec)
+#  end
   
 ################################################
 # Institution

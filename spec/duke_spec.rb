@@ -1,9 +1,11 @@
 require 'spec_helper'
 
 describe MarcToArgot do
+  include Util::TrajectRunTest
+
   it 'generates holdings data for Duke' do
-    result = Util::TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
-    expect(JSON.parse(result)['holdings']).to(
+    result = run_traject_json('duke', 'holdings', 'mrc')
+    expect(result['holdings']).to(
       eq(["{\"loc_b\":\"LAW\"," \
           "\"loc_n\":\"LGEN\"," \
           "\"notes\":[\"Currently received\"]," \
@@ -13,15 +15,15 @@ describe MarcToArgot do
   end
 
   it 'generates the location hierarchy for Duke' do
-    result = Util::TrajectRunTest.run_traject('duke', 'holdings', 'mrc')
+    result = run_traject('duke', 'holdings', 'mrc')
     expect(JSON.parse(result)['location_hierarchy']).to(
       eq(['duke', 'duke:dukelaww', 'law', 'law:lawdukw'])
     )
   end
 
   it 'generates author_facet values for Duke' do
-    result = Util::TrajectRunTest.run_traject('duke', 'author_facet', 'mrc')
-    expect(JSON.parse(result)['author_facet']).to(
+    result = run_traject_json('duke', 'author_facet', 'mrc')
+    expect(result['author_facet']).to(
       eq(["Author (100 field), 1874-1943",
           "Author (700 field, second indicator is 2), 1874-1943",
           "Author (700 field, no subfield e or 4), 1874-1943",
@@ -34,14 +36,14 @@ describe MarcToArgot do
   end
 
   it 'generates rollup_id for Duke' do
-    result = Util::TrajectRunTest.run_traject('duke', 'rollup_id', 'mrc')
-    expect(JSON.parse(result)['rollup_id']).to(
+    result = run_traject_json('duke', 'rollup_id', 'mrc')
+    expect(result['rollup_id']).to(
       eq('OCLC12420922')
     )
   end
 
   it 'does NOT generate a rollup_id for Duke special collections records' do
-    result = Util::TrajectRunTest.run_traject('duke', 'special_collections', 'mrc')
-    expect(JSON.parse(result)['rollup_id']).to(be_nil)
+    result = run_traject_json('duke', 'special_collections', 'mrc')
+    expect(result['rollup_id']).to(be_nil)
   end
 end

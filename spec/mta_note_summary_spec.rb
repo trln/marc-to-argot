@@ -1,15 +1,15 @@
-# coding: utf-8
-require 'spec_helper'
 describe MarcToArgot do
-  summary01 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary01') )
-  summary02 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary02') )
-  summary03 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary03') )  
-  summary04 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary04') )  
-  summary05 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary05') )
-  summary06 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary06') )
-  summary07 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary07') )
-  summary08 = JSON.parse( Util::TrajectRunTest.run_traject('unc', 'summary08') )
-  
+  include Util::TrajectRunTest
+
+  let(:summary01) { run_traject_json('unc', 'summary01') }
+  let(:summary02) { run_traject_json('unc', 'summary02') }
+  let(:summary03) { run_traject_json('unc', 'summary03')   }
+  let(:summary04) { run_traject_json('unc', 'summary04')   }
+  let(:summary05) { run_traject_json('unc', 'summary05') }
+  let(:summary06) { run_traject_json('unc', 'summary06') }
+  let(:summary07) { run_traject_json('unc', 'summary07') }
+  let(:summary08) { run_traject_json('unc', 'summary08') }
+
   # No additional label provided when i1 = blank
   # Remove -- from the end of subfields
   # Material specified note from $3
@@ -75,5 +75,4 @@ describe MarcToArgot do
       eq('Content advice: Bloody violence, strong sexuality, language, and brief drug use.')
     )
   end
-
 end

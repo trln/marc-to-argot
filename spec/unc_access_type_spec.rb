@@ -8,7 +8,8 @@ describe MarcToArgot do
   let(:at04) { run_traject_json('unc', 'access_type04') }
   let(:at05) { run_traject_json('unc', 'access_type05') }
   let(:at06) { run_traject_json('unc', 'access_type06') }
-
+  let(:at07) { run_traject_json('unc', 'access_type07') }
+  
     it '(UNC) access type = Online if 856 i2=0' do
     expect(at01['access_type']).to(
         eq(['Online'])
@@ -33,15 +34,21 @@ describe MarcToArgot do
     )
     end    
 
-    it '(UNC) access type = At Library if on order' do
+    it '(UNC) access type not set if on order' do
     expect(at05['access_type']).to(
-        eq(['At the Library'])
+        eq(nil)
     )
     end
 
     it '(UNC) access type = At Library if held and no 856' do
     expect(at06['access_type']).to(
         eq(['At the Library'])
+    )
+    end    
+
+    it '(UNC) access type = online only if 856 i2=0 and unsuppressed order record' do
+    expect(at07['access_type']).to(
+        eq(['Online'])
     )
     end    
 end

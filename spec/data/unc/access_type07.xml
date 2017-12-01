@@ -1,50 +1,82 @@
 <?xml version='1.0'?>
 <collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
   <record>
-    <leader>00000cam a2200361Ii 4500</leader>
-      <controlfield tag='008'>160503s2105    hu a     b    001 0 hun d</controlfield>
-      <controlfield tag='001'>948782767</controlfield>
-      <controlfield tag='003'>OCoLC</controlfield>
-      <controlfield tag='005'>20161213012930.0</controlfield>
-      <datafield ind1=' ' ind2=' ' tag='020'>
-        <subfield code='a'>9789637082559</subfield>
+    <leader>00000nam a2200553 i 4500</leader>
+      <controlfield tag='006'>m    |o  d |</controlfield>
+      <controlfield tag='007'>cr |n||||||||a</controlfield>
+      <controlfield tag='008'>161025s2017    njua    ob    001 0 eng  </controlfield>
+      <controlfield tag='001'>ybp13272642</controlfield>
+      <controlfield tag='003'>NhCcYBP</controlfield>
+      <controlfield tag='005'>20161207085928.3</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2016049189</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='020'>
-        <subfield code='a'>9637082557</subfield>
+        <subfield code='z'>9781118543788 (print)</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='035'>
-        <subfield code='a'>(OCoLC)948782767</subfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781118994405</subfield>
+        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>111899440X</subfield>
+        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781118994337</subfield>
+        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1118994337</subfield>
+        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781118994399</subfield>
+	        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1118994396</subfield>
+        <subfield code='q'>electronic book</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>9781118543788</subfield>
+        <subfield code='q'>hardcover</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='040'>
-        <subfield code='a'>HUL</subfield>
-        <subfield code='b'>eng</subfield>
-        <subfield code='e'>rda</subfield>
-        <subfield code='c'>HUL</subfield>
-        <subfield code='d'>OCLCO</subfield>
-        <subfield code='d'>ZCU</subfield>
-        <subfield code='d'>OCLCF</subfield>
-        <subfield code='d'>NOC</subfield>
+        <subfield code='a'>NhCcYBP</subfield>
+        <subfield code='c'>NhCcYBP</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='049'>
-        <subfield code='a'>NOCC</subfield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>pcc</subfield>
       </datafield>
       <datafield ind1=' ' ind2='4' tag='050'>
-        <subfield code='a'>PH3281.M15</subfield>
-        <subfield code='b'>Z46 2015</subfield>
+        <subfield code='a'>QD475</subfield>
+        <subfield code='b'>.S86 2017</subfield>
       </datafield>
-      <datafield ind1='0' ind2='0' tag='245'>
-        <subfield code='a'>Madách Imre napjai a magyar irodalomban, 1861-1864 /</subfield>
-        <subfield code='c'>gyűjtötte, sajtó alá rendezte, és a jegyzeteket írta Praznovszky Mihály.</subfield>
+      <datafield ind1=' ' ind2='7' tag='072'>
+        <subfield code='a'>SCI</subfield>
+        <subfield code='x'>013040</subfield>
+        <subfield code='2'>bisacsh</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='082'>
+        <subfield code='a'>547/.28</subfield>
+        <subfield code='2'>23</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Sundararajan, P. R.,</subfield>
+        <subfield code='e'>author.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Physical aspects of polymer self-assembly /</subfield>
+        <subfield code='c'>P. R. Sundararajan.</subfield>
       </datafield>
       <datafield ind1=' ' ind2='1' tag='264'>
-        <subfield code='a'>Budapest :</subfield>
-        <subfield code='b'>SikerX BT,</subfield>
-        <subfield code='c'>2015.</subfield>
+        <subfield code='a'>Hoboken, New Jersey :</subfield>
+        <subfield code='b'>John Wiley &amp; Sons, Inc.,</subfield>
+        <subfield code='c'>[2017]</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='300'>
-        <subfield code='a'>432 pages :</subfield>
-        <subfield code='b'>illustrations ;</subfield>
-        <subfield code='c'>25 cm</subfield>
+        <subfield code='a'>1 online resource ( xiii, 368 pages) :</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='336'>
         <subfield code='a'>text</subfield>
@@ -52,56 +84,69 @@
         <subfield code='2'>rdacontent</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='337'>
-        <subfield code='a'>unmediated</subfield>
-        <subfield code='b'>n</subfield>
+        <subfield code='a'>computer</subfield>
+        <subfield code='b'>c</subfield>
         <subfield code='2'>rdamedia</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='338'>
-        <subfield code='a'>volume</subfield>
-        <subfield code='b'>nc</subfield>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='b'>cr</subfield>
         <subfield code='2'>rdacarrier</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='504'>
         <subfield code='a'>Includes bibliographical references and index.</subfield>
       </datafield>
-      <datafield ind1='1' ind2='0' tag='600'>
-        <subfield code='a'>Madách, Imre,</subfield>
-        <subfield code='d'>1823-1864</subfield>
-        <subfield code='x'>Criticism and interpretation.</subfield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>Molecular forces -- Features of self-assembly -- Supramolecular macromolecules and polymers -- Block copolymers -- Rotaxanes and polyrotaxanes -- Polymer gels -- Self-assembly in polymer matrices.</subfield>
       </datafield>
-      <datafield ind1='1' ind2='7' tag='600'>
-        <subfield code='a'>Madách, Imre,</subfield>
-        <subfield code='d'>1823-1864.</subfield>
-        <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst00067548</subfield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Unlimited simultaneous users</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='7' tag='655'>
-        <subfield code='a'>Criticism, interpretation, etc.</subfield>
-        <subfield code='2'>fast</subfield>
-        <subfield code='0'>(OCoLC)fst01411635</subfield>
+      <datafield ind1=' ' ind2=' ' tag='588'>
+        <subfield code='a'>Description based on online resource; title from digital title page (viewed on December 07, 2016).</subfield>
       </datafield>
-      <datafield ind1='1' ind2=' ' tag='700'>
-        <subfield code='a'>Praznovszky, Mihály,</subfield>
-        <subfield code='e'>editor.</subfield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Self-assembly (Chemistry)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Polymers</subfield>
+        <subfield code='x'>Properties.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>Wiley online library e-books (online collection). Title-by-title purchases. Via YBP</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='776'>
+        <subfield code='i'>Print version:</subfield>
+        <subfield code='a'>Sundararajan, P. R.,</subfield>
+        <subfield code='t'>Physical aspects of polymer self-assembly /</subfield>
+        <subfield code='d'>Hoboken, New Jersey : John Wiley &amp; Sons, Inc., [2017]</subfield>
+        <subfield code='h'>( xiii, 368 pages) :</subfield>
+        <subfield code='d'>Hoboken, New Jersey : John Wiley &amp; Sons, 2016</subfield>
+        <subfield code='z'>9781118543788</subfield>
+        <subfield code='w'>(DLC)  2016036353</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://onlinelibrary.wiley.com/book/10.1002/9781118994405</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='x'>Wiley electronic book</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='907'>
-        <subfield code='a'>b8598539</subfield>
+        <subfield code='a'>b8697534</subfield>
       </datafield>
-      <datafield ind1='9' ind2='1' tag='999'>
-        <subfield code='i'>i11216497</subfield>
-        <subfield code='l'>ddda</subfield>
-        <subfield code='s'>-</subfield>
-        <subfield code='t'>0</subfield>
+      <datafield ind1='9' ind2='4' tag='999'>
+        <subfield code='a'>o1802132</subfield>
+        <subfield code='b'>-</subfield>
         <subfield code='c'>1</subfield>
-        <subfield code='o'>0</subfield>
-        <subfield code='b'>00050963590</subfield>
-        <subfield code='p'>090##</subfield>
-        <subfield code='q'>|aPH3281.M15|bZ82 2015</subfield>
+        <subfield code='d'>2017-01-10</subfield>
+        <subfield code='e'></subfield>
+        <subfield code='f'>eb</subfield>
+        <subfield code='g'>a</subfield>
       </datafield>
       <datafield ind1='0' ind2='0' tag='999'>
-        <subfield code='a'>2016-12-13 00:00:00-05</subfield>
-        <subfield code='c'>2016-10-04 16:42:25-04</subfield>
-        <subfield code='u'>2017-01-09 19:17:59-05</subfield>
+        <subfield code='a'>2017-01-10 00:00:00-05</subfield>
+        <subfield code='c'>2017-01-10 14:34:16-05</subfield>
+        <subfield code='u'>2017-01-21 16:57:49-05</subfield>
       </datafield>
   </record>
 </collection>

@@ -58,8 +58,7 @@ def remap_item_locations!(item)
   collection = loc if LOC_COLLECTIONS.include?(loc)
 
   if lib == 'SPECCOLL'
-    item['loc_b'] = "SPECCOLL-#{loc}"
-    item['loc_n'] = 'SPECCOLL'
+    item['loc_n'] = "SPECCOLL-#{loc}"
   end
 
   # now some remappings based on item type

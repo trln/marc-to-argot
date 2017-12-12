@@ -8,4 +8,5 @@
 /spec/reports/
 /tmp/
 /.idea/
+.ruby-version
 /marc_to_argot-*.gem

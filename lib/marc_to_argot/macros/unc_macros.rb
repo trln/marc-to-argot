@@ -47,7 +47,7 @@ module MarcToArgot
               when 'y'
                 text << val
               when '3'
-                text3 << val
+                text3 << val.sub(/ ?\W* ?$/, '')
                 rel = 'thumbnail' if val.downcase.include?('thumbnail')
                 rel = 'findingaid' if val.downcase.include?('finding aid')
               end

@@ -1,0 +1,1841 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000nam a2200445Ia 4500</leader>
+      <controlfield tag='006'>m        u</controlfield>
+      <controlfield tag='007'>cr cn|||||||||</controlfield>
+      <controlfield tag='008'>031120s2004    njua    sb    001 0 eng d</controlfield>
+      <controlfield tag='001'>ebr10088288</controlfield>
+      <controlfield tag='003'>CaPaEBR</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>ebr10088279,</subfield>
+        <subfield code='a'>ebr10088278</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>0805843299 (v. 1 : alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>0805843302 (v. 2 : alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='z'>0805843310 (v. 3 : alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>CaPaEBR</subfield>
+        <subfield code='c'>CaPaEBR</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='050'>
+        <subfield code='a'>RC473.P79</subfield>
+        <subfield code='b'>U83 vol.1 2004eb</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='082'>
+        <subfield code='a'>616.89/075</subfield>
+        <subfield code='2'>22</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='4' tag='245'>
+        <subfield code='a'>The use of psychological testing for treatment planning and outcomes assessment</subfield>
+        <subfield code='h'>[electronic resource] /</subfield>
+        <subfield code='c'>edited by Mark E. Maruish.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='250'>
+        <subfield code='a'>3rd ed.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Mahwah, N.J. :</subfield>
+        <subfield code='b'>Lawrence Erlbaum Associates,</subfield>
+        <subfield code='c'>2004.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>xviii, 508 p. :</subfield>
+        <subfield code='b'>ill.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and indexes.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Limited to one (1) concurrent user</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Psychological tests.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Mental illness</subfield>
+        <subfield code='x'>Diagnosis.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Mental illness</subfield>
+        <subfield code='x'>Treatment</subfield>
+        <subfield code='x'>Evaluation.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Psychiatric rating scales.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Outcome assessment (Medical care)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Maruish, Mark E.</subfield>
+        <subfield code='q'>(Mark Edward)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>Ebrary perpetual access (online collection). UNL title-by-title</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='3'>v. 1</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://site.ebrary.com/lib/uncch/Doc?id=10088288</subfield>
+        <subfield code='x'>EBRARY perpetual access</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='3'>v. 2</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://site.ebrary.com/lib/uncch/Doc?id=10088278</subfield>
+        <subfield code='x'>EBRARY perpetual access</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='3'>v. 3</subfield>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://site.ebrary.com/lib/uncch/Doc?id=10088279</subfield>
+        <subfield code='x'>EBRARY perpetual access</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b5122036</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2007-02-20 00:00:00-05</subfield>
+        <subfield code='c'>2007-02-20 13:08:00-05</subfield>
+        <subfield code='u'>2015-10-26 12:01:48-04</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam  2200181Ii 4500</leader>
+      <controlfield tag='008'>800409s1968    gw a          001 1 ger d</controlfield>
+      <controlfield tag='001'>6180566</controlfield>
+      <controlfield tag='005'>19840731000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>VA@</subfield>
+        <subfield code='c'>VA@</subfield>
+        <subfield code='d'>m.c.</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Busch, Wilhelm,</subfield>
+        <subfield code='d'>1832-1908.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='240'>
+        <subfield code='a'>Works.</subfield>
+        <subfield code='f'>1968</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Gesamtausgabe in vier Bänden /</subfield>
+        <subfield code='c'>Wilhelm Busch ; hrsg. von Friedrich Bohne.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Wiesbaden,</subfield>
+        <subfield code='b'>E. Vollmer,</subfield>
+        <subfield code='c'>[1968]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>4 v. :</subfield>
+        <subfield code='b'>chiefly ill. (some col.) ;</subfield>
+        <subfield code='c'>21 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;Wilhelm Buschs Leben&quot;: v. 4, p. 593-[612]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Includes index.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also available in electronic format.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Bohne, Friedrich.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='3'>Bd.1</subfield>
+        <subfield code='u'>http://www.gasl.org/refbib/Busch__Werke_1.pdf</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='3'>Bd.2</subfield>
+        <subfield code='u'>http://www.gasl.org/refbib/Busch__Werke_2.pdf</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1684651</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2410359</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>1</subfield>
+        <subfield code='b'>00002326977</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPT2603 .U8 1968</subfield>
+        <subfield code='v'>Bd.1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2410360</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00002326931</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPT2603 .U8 1968</subfield>
+        <subfield code='v'>Bd.2</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2410361</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00002326904</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPT2603 .U8 1968</subfield>
+        <subfield code='v'>Bd.3</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2410362</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00002326897</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPT2603 .U8 1968</subfield>
+        <subfield code='v'>Bd.4</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c1673153</subfield>
+        <subfield code='b'>ddda</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1673153</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='b'>555521</subfield>
+        <subfield code='h'>PT2603</subfield>
+        <subfield code='i'>.U8 1968</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1673153</subfield>
+        <subfield code='2'>853</subfield>
+        <subfield code='3'>y</subfield>
+        <subfield code='8'>1</subfield>
+        <subfield code='a'>Bd.</subfield>
+        <subfield code='t'>c.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-29 17:25:00-04</subfield>
+        <subfield code='u'>2016-09-26 09:26:04-04</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam  2200145I  4500</leader>
+      <controlfield tag='008'>711209s1922    nyua   j      000 1 eng d</controlfield>
+      <controlfield tag='001'>180353</controlfield>
+      <controlfield tag='005'>19790630000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>HEI</subfield>
+        <subfield code='c'>HEI</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Bianco, Margery Williams,</subfield>
+        <subfield code='d'>1881-1944.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The velveteen rabbit;</subfield>
+        <subfield code='b'>or, How toys become real.</subfield>
+        <subfield code='c'>By Margery Williams [i.e. M. W. Bianco]; with illustrations by William Nicholson.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Garden City, N.Y.,</subfield>
+        <subfield code='b'>Doubleday,</subfield>
+        <subfield code='c'>[1922?]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>33 p.</subfield>
+        <subfield code='b'>illus.</subfield>
+        <subfield code='c'>21 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also available via the World Wide Web.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+        <subfield code='u'>https://archive.org/details/velveteenrabbito0bian</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1045762</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1075370</subfield>
+        <subfield code='l'>llar</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>22</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>2</subfield>
+        <subfield code='b'>00022093672</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|aJH Bianco</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 13:08:00-04</subfield>
+        <subfield code='u'>2016-09-23 10:50:44-04</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam  2200337Ia 4500</leader>
+      <controlfield tag='008'>820514s1866    nyuaf         000 0 eng d</controlfield>
+      <controlfield tag='007'>cr |||||||||||</controlfield>
+      <controlfield tag='001'>1114041</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20080417081944.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>07021484</subfield>
+      </datafield>
+      <datafield ind1='7' ind2=' ' tag='016'>
+        <subfield code='a'>60341030R</subfield>
+        <subfield code='2'>DNLM</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>38330117</subfield>
+        <subfield code='a'>44190159</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1114041</subfield>
+        <subfield code='z'>(OCoLC)38330117</subfield>
+        <subfield code='z'>(OCoLC)44190159</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DNLM</subfield>
+        <subfield code='c'>NLM</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>IAU</subfield>
+        <subfield code='d'>SER</subfield>
+        <subfield code='d'>CGC</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCR</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>E467.1.D26</subfield>
+        <subfield code='b'>C89</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Craven, John Joseph,</subfield>
+        <subfield code='d'>1822-1893.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Prison life of Jefferson Davis :</subfield>
+        <subfield code='b'>embracing details and incidents in his captivity, particulars concerning his health and habits, together with many conversations on topics of great public interest /</subfield>
+        <subfield code='c'>John J. Craven.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York :</subfield>
+        <subfield code='b'>Carleton,</subfield>
+        <subfield code='c'>1866.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>377 p., [1] leaf of plates :</subfield>
+        <subfield code='b'>ill. ;</subfield>
+        <subfield code='c'>19 cm.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='600'>
+        <subfield code='a'>Davis, Jefferson,</subfield>
+        <subfield code='d'>1808-1889.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='u'>http://name.umdl.umich.edu/ACP4963</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1238434</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1417181</subfield>
+        <subfield code='l'>trlnc</subfield>
+        <subfield code='s'>e</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>1</subfield>
+        <subfield code='b'>10000647855</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aE467.1.D26 C89</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i7309327</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00030899047</subfield>
+        <subfield code='p'>05000</subfield>
+        <subfield code='q'>|aE467.1.D26|bC89</subfield>
+        <subfield code='n'>Bound in terra-cotta sand grain (S) cloth binding; advertisements, undated, 8 p. for &quot;New Books&quot; published by Carleton at end of text.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i7309328</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>2</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00030899056</subfield>
+        <subfield code='p'>05000</subfield>
+        <subfield code='q'>|aE467.1.D26|bC89</subfield>
+        <subfield code='n'>Bound in green sand grain (S) cloth binding; advertisements, undated, s p. for &quot;New Books&quot; published by Carleton at end of text.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c4694850</subfield>
+        <subfield code='b'>wcda</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c4694850</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>E467.1.D26</subfield>
+        <subfield code='i'>C89</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c4694850</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='t'>c. 1</subfield>
+        <subfield code='z'>Bound in terra-cotta sand grain (S) cloth binding; advertisements, undated, 8 p. for &quot;New Books&quot; published by Carleton at end of text.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c4694850</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>h</subfield>
+        <subfield code='t'>c. 2</subfield>
+        <subfield code='z'>Bound in green sand grain (S) cloth binding; advertisements, undated, s p. for &quot;New Books&quot; published by Carleton at end of text.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2008-04-17 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 16:29:00-04</subfield>
+        <subfield code='u'>2017-11-07 15:41:23.382-05</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam a22003851a 4500</leader>
+      <controlfield tag='008'>720203s1965    nyuag         001 0aeng  </controlfield>
+      <controlfield tag='001'>233495</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20130729023223.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>65016635</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)233495</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>OUN</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>BTCTA</subfield>
+        <subfield code='d'>OHRRH</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCR</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>ML410.B779</subfield>
+        <subfield code='b'>B6</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='082'>
+        <subfield code='a'>927.8</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Bradford, Perry,</subfield>
+        <subfield code='e'>author,</subfield>
+        <subfield code='e'>composer.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Born with the blues :</subfield>
+        <subfield code='b'>Perry Bradford&apos;s own story : the true story of the pioneering blues singers and musicians in the early days of jazz /</subfield>
+        <subfield code='c'>by Perry Bradford.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='246'>
+        <subfield code='a'>Perry Bradford&apos;s own story</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York, N.Y. :</subfield>
+        <subfield code='b'>Oak Publications,</subfield>
+        <subfield code='c'>c1965.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>175 p. :</subfield>
+        <subfield code='b'>ill., music ;</subfield>
+        <subfield code='c'>26 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;The salty and uninhibited autobiography of one of the greatest of the old-time jazz pioneers ; Including ten original Perry Bradford songs and more than 50 pages of photographs&quot;--Cover.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Includes index.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='600'>
+        <subfield code='a'>Bradford, Perry.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>African American musicians</subfield>
+        <subfield code='v'>Biography.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Composers, Black</subfield>
+        <subfield code='v'>Biography.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Blues (Music)</subfield>
+        <subfield code='x'>History and criticism.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Green, Archie,</subfield>
+        <subfield code='e'>former owner (RBC)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='740'>
+        <subfield code='a'>Archie Green Collection.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='2' tag='856'>
+        <subfield code='3'>Finding aid to the Archie Green archival collection</subfield>
+        <subfield code='u'>http://finding-aids.lib.unc.edu/20002/</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='919'>
+        <subfield code='a'>590 Touched / wkg</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1059806</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1100692</subfield>
+        <subfield code='l'>mmda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>3</subfield>
+        <subfield code='b'>00008070552</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aML410.B779 B6</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i10068420</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00038176071</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|aGreen|a63</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2013-07-29 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 13:09:49-04</subfield>
+        <subfield code='u'>2017-02-23 08:40:26-05</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam a2200481Ia 4500</leader>
+      <controlfield tag='008'>750827s1949    fr            000 j rusx </controlfield>
+      <controlfield tag='001'>1575428</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20100513093709.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>52025449</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1575428</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>WOO</subfield>
+        <subfield code='d'>STF</subfield>
+        <subfield code='d'>NLE</subfield>
+        <subfield code='d'>UBY</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>RBCS</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>PG3476.B425</subfield>
+        <subfield code='b'>O2</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='066'>
+        <subfield code='c'>(N</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='6'>880-01</subfield>
+        <subfield code='a'>Berberova, N.</subfield>
+        <subfield code='q'>(Nina)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='6'>880-02</subfield>
+        <subfield code='a'>Oblegchenie uchasti :</subfield>
+        <subfield code='b'>shestʹ povesteĭ /</subfield>
+        <subfield code='c'>N. Berberova.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='6'>880-03</subfield>
+        <subfield code='a'>Parizh :</subfield>
+        <subfield code='b'>YMCA-Press,</subfield>
+        <subfield code='c'>1949.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>277 p. ;</subfield>
+        <subfield code='c'>20 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Books with Autographs (S22).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='6'>880-05</subfield>
+        <subfield code='a'>Savine Collection copy is author&apos;s presentation copy to Natalʹ︠i︡a Aleksandrovna Ilʹina. Inscription on flyleaf: &quot;Mnogouvazhaemoĭ Natalʹe Aleksandrovne Ilʹinoĭ na dobru︠i︡u pam︠i︡atʹ o kratkoĭ vstreche i s glubokoĭ blagodarnostʹ︠i︡u. N. Berberova. Paris 1950.&quot;</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='6'>880-04</subfield>
+        <subfield code='a'>Akkompaniatorsha -- Oblegchenie uchasti -- Rokanvalʹ -- Lakeĭ i devka -- Voskreshenie Mo︠t︡sarta -- Plach.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Short stories, Russian.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Russian émigré short stories.</subfield>
+        <subfield code='2'>local</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Author&apos;s presentation copies (Provenance)</subfield>
+        <subfield code='z'>France</subfield>
+        <subfield code='z'>Paris</subfield>
+        <subfield code='y'>20th century.</subfield>
+        <subfield code='2'>rbprov</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>André Savine Collection (University of North Carolina at Chapel Hill)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='740'>
+        <subfield code='a'>André Savine Collection.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='776'>
+        <subfield code='i'>Online version:</subfield>
+        <subfield code='a'>Berberova, Nina Nikolaevna.</subfield>
+        <subfield code='t'>Oblegchenie uchasti.</subfield>
+        <subfield code='d'>Parizh, YMCA Press [1949]</subfield>
+        <subfield code='w'>(OCoLC)551348699</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='2' tag='856'>
+        <subfield code='3'>More information about this item in: Russia Beyond Russia: The André Savine Digital Library</subfield>
+        <subfield code='u'>http://dc.lib.unc.edu/cdm/item/collection/rbr/?id=28062</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='880'>
+        <subfield code='6'>100-01/(N</subfield>
+        <subfield code='a'>Берберова, H.</subfield>
+        <subfield code='q'>(Нина)</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='880'>
+        <subfield code='6'>245-02/(N</subfield>
+        <subfield code='a'>Облегчение участи :</subfield>
+        <subfield code='b'>шесть повестей /</subfield>
+        <subfield code='c'>Н. Берберова.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='880'>
+        <subfield code='6'>260-03/(N</subfield>
+        <subfield code='a'>Париж :</subfield>
+        <subfield code='b'>YMCA-Press,</subfield>
+        <subfield code='c'>1949.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='880'>
+        <subfield code='6'>505-04/(N</subfield>
+        <subfield code='a'>Аккомпаниаторша -- Облегчение участи -- Роканваль -- Лакей и девка -- Воскрешение Моцарта -- Плач.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='880'>
+        <subfield code='6'>500-05/(N</subfield>
+        <subfield code='a'>Savine Collection copy is author&apos;s presentation copy to Natalʹ︠i︡a Aleksandrovna Ilʹina. Inscription on flyleaf: &quot;Многоуважаемой Наталье Александровне Ильиной на добрую память о краткой встрече и с глубокой благодарностью. Н. Берберова. Paris 1950.&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='919'>
+        <subfield code='a'>590 Touched / wkg</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1302106</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1606667</subfield>
+        <subfield code='l'>trln</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00001642930</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPG3476.B425 O2</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i8286268</subfield>
+        <subfield code='l'>wcsa</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00037445700</subfield>
+        <subfield code='p'>05000</subfield>
+        <subfield code='q'>|aPG3476.B425|bO2</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2010-05-13 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 18:43:00-04</subfield>
+        <subfield code='u'>2017-02-24 11:24:22-05</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000nem  2200469Ka 4500</leader>
+      <controlfield tag='008'>111017s2003    cau    zz z  zs 0 z eng d</controlfield>
+      <controlfield tag='007'>cr zn ---mucmu</controlfield>
+      <controlfield tag='001'>778794202</controlfield>
+      <datafield ind1='1' ind2=' ' tag='034'>
+        <subfield code='a'>a</subfield>
+        <subfield code='b'>25000</subfield>
+        <subfield code='d'>-31.271601</subfield>
+        <subfield code='e'>66.096001</subfield>
+        <subfield code='f'>71.183701</subfield>
+        <subfield code='g'>27.637400</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='110'>
+        <subfield code='a'>GfK Marktforschung.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Europe Province/State Demographics</subfield>
+        <subfield code='h'>[electronic resource].</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='255'>
+        <subfield code='a'>Scale 1:25,000</subfield>
+        <subfield code='c'>(-31.271601 -- 66.096001/71.183701 -- 27.637400).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Redlands, California, USA:</subfield>
+        <subfield code='b'>Esri,</subfield>
+        <subfield code='c'>2003.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='270'>
+        <subfield code='a'>380 New York Street</subfield>
+        <subfield code='b'>Redlands</subfield>
+        <subfield code='c'>California</subfield>
+        <subfield code='d'>USA</subfield>
+        <subfield code='e'>92373-8100</subfield>
+        <subfield code='k'>909-793-2853</subfield>
+        <subfield code='m'>info@esri.com</subfield>
+        <subfield code='r'>8:00 a.m.-5:30 p.m. Pacific time, Monday-Friday</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='342'>
+        <subfield code='b'>Decimal degrees</subfield>
+        <subfield code='c'>0.000001</subfield>
+        <subfield code='d'>0.000001</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='352'>
+        <subfield code='a'>Vector.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Europe Province/State Demographics provides near province-level demographic information for Europe.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Largest scale when displaying the data: 1:25,000.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Vector digital data.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='506'>
+        <subfield code='a'>Access granted to Licensee only.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='514'>
+        <subfield code='d'>No duplicate features are present.</subfield>
+        <subfield code='e'>After processing, the data set is checked for drawing display and number of records and file sizes compared with source materials.</subfield>
+        <subfield code='f'>The positional accuracy is unknown.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='520'>
+        <subfield code='a'>Europe Province/State Demographics represents over 600 areas of Europe, which in most cases, are provinces, multiple provinces or countries.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also available on DVD.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='588'>
+        <subfield code='a'>Descriptive metadata copyrighted by Esri and used by permission.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Boundaries.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='651'>
+        <subfield code='a'>Europe</subfield>
+        <subfield code='v'>Maps</subfield>
+        <subfield code='v'>Databases.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='653'>
+        <subfield code='a'>Countries.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='653'>
+        <subfield code='a'>Demographics.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='653'>
+        <subfield code='a'>Maps</subfield>
+        <subfield code='a'>Digital.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='653'>
+        <subfield code='a'>Polygon.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='653'>
+        <subfield code='a'>Provinces.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='653'>
+        <subfield code='a'>Society.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='5' tag='653'>
+        <subfield code='a'>Europe.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Geospatial data.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='787'>
+        <subfield code='i'>Originally issued on DVD-ROM:</subfield>
+        <subfield code='t'>Esri data &amp; maps, 2003</subfield>
+        <subfield code='n'>Located on Esri Data &amp; Maps 2003 (DVD) Europe \demogrph</subfield>
+        <subfield code='w'>(OCoLC)51963129</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='2' tag='856'>
+        <subfield code='u'>http://cdn.lib.unc.edu/gis/thumbnails/b68556469.jpg</subfield>
+        <subfield code='3'>Thumbnail image</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='y'>DOWNLOAD DATA HERE</subfield>
+        <subfield code='u'>http://spruce.lib.unc.edu.libproxy.lib.unc.edu/content/gis/esri/dm03/europe/demog.zip</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='919'>
+        <subfield code='a'>EsriDatasets</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b6855646</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i9142759</subfield>
+        <subfield code='l'>dcyeb</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>43</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a10-856</subfield>
+        <subfield code='n'>2003</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2011-10-17 00:00:00-04</subfield>
+        <subfield code='c'>2011-10-17 14:36:00-04</subfield>
+        <subfield code='u'>2016-10-27 15:52:34-04</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam  2200421Ia 4500</leader>
+      <controlfield tag='008'>100920s2010    enk      b    001 0 eng d</controlfield>
+      <controlfield tag='001'>664616502</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20110103113354.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9780745651637 (hardback)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>0745651631 (hardback)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9780745651644 (paperback)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>074565164X (paperback)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)664616502</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>SIMAS</subfield>
+        <subfield code='c'>SIMAS</subfield>
+        <subfield code='d'>PIT</subfield>
+        <subfield code='d'>CDX</subfield>
+        <subfield code='d'>BWX</subfield>
+        <subfield code='d'>CBU</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>HB3717 2008</subfield>
+        <subfield code='b'>.D384 2010</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='082'>
+        <subfield code='a'>330</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Davies, H.</subfield>
+        <subfield code='q'>(Howard),</subfield>
+        <subfield code='d'>1951-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The financial crisis :</subfield>
+        <subfield code='b'>who is to blame? /</subfield>
+        <subfield code='c'>Howard Davies.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Cambridge, MA.:</subfield>
+        <subfield code='b'>Polity Press,</subfield>
+        <subfield code='c'>c2010.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>229 p. ;</subfield>
+        <subfield code='c'>23 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='520'>
+        <subfield code='a'>&quot;There is still no consensus on who or what caused the financial crisis which engulfed the world, beginning in the summer of 2007. A huge number of suspects have been identified, from greedy investment bankers, through feckless borrowers, dilatory regulators and myopic central bankers to violent video games and high levels of testosterone among the denizens of trading floors. There is not even agreement on whether the crisis shows a need for more government intervention in markets, or less: some maintain that government encouragement of home ownership lay at the heart of the problem in the US, in particular. In The Financial Crisis Howard Davies charts a course through these arguments, and the evidence advanced for each of them. The reader can thereby assess the weight to be attached to each, and the likely effectiveness of the remedies under development.&quot;- -Description viewed from website on 21 Sept. 2010.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Global Financial Crisis, 2008-2009.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Subprime mortgage loans</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Bank failures</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Banking law</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Off balance sheet financing</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Intervention (Federal government)</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Credit ratings</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='8' tag='856'>
+        <subfield code='a'>Description and Table of contents</subfield>
+        <subfield code='u'>http://politybooks.com/bookdetail?isbn=9780745651637</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b6477066</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i8533698</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>3</subfield>
+        <subfield code='b'>00038068508</subfield>
+        <subfield code='p'>050#4</subfield>
+        <subfield code='q'>|aHB3717 2008|b.D384 2010</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2011-01-03 00:00:00-05</subfield>
+        <subfield code='c'>2010-12-06 09:34:00-05</subfield>
+        <subfield code='u'>2017-11-10 22:24:25.892-05</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam a22003854a 4500</leader>
+      <controlfield tag='008'>040406s2004    njua     b    101 0 eng  </controlfield>
+      <controlfield tag='001'>54929866</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20051130083557.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>2004007923</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='015'>
+        <subfield code='a'>GBA4-X1423</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>56446711</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>0470021470 (cloth : alk. paper)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)54929866</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)54929866</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>UKM</subfield>
+        <subfield code='d'>C#P</subfield>
+        <subfield code='d'>BAKER</subfield>
+        <subfield code='d'>IXA</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>pcc</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>HF5411</subfield>
+        <subfield code='b'>.H35 2004</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='082'>
+        <subfield code='a'>658.8</subfield>
+        <subfield code='2'>22</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Håkansson, Håkan,</subfield>
+        <subfield code='d'>1947-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Rethinking marketing :</subfield>
+        <subfield code='b'>developing a new understanding of markets /</subfield>
+        <subfield code='c'>Håkan Håkansson with Debbie Harrison, Alexandra Waluszewski.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Hoboken :</subfield>
+        <subfield code='b'>Wiley,</subfield>
+        <subfield code='c'>c2004.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>x, 281 p. :</subfield>
+        <subfield code='b'>ill. ;</subfield>
+        <subfield code='c'>25 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;This book is the result of the seminar that was held in May 2003 in Oslo.&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='504'>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Marketing</subfield>
+        <subfield code='v'>Congresses.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Harrison, Debbie,</subfield>
+        <subfield code='d'>1972-</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Waluszewski, Alexandra.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='8' tag='856'>
+        <subfield code='3'>Table of contents only</subfield>
+        <subfield code='u'>http://www.loc.gov/catdir/toc/ecip0416/2004007923.html</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b4781511</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i6296714</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00025523540</subfield>
+        <subfield code='p'>05000</subfield>
+        <subfield code='q'>|aHF5411|b.H35 2004</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2005-11-30 00:00:00-05</subfield>
+        <subfield code='c'>2005-11-22 09:19:51-05</subfield>
+        <subfield code='u'>2017-11-11 08:30:07.438-05</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cas  2200805 a 4500</leader>
+      <controlfield tag='008'>750625c19719999dcuar        f0   a0eng  </controlfield>
+      <controlfield tag='001'>1798567</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20080606094513.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>75640915</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>1001521</subfield>
+        <subfield code='a'>2708828</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='022'>
+        <subfield code='a'>0096-8854</subfield>
+        <subfield code='2'>1</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1798567</subfield>
+        <subfield code='z'>(OCoLC)1001521</subfield>
+        <subfield code='z'>(OCoLC)2708828</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>OCL</subfield>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>NST</subfield>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>HUL</subfield>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>SYS</subfield>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>SLU</subfield>
+        <subfield code='d'>GPO</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>lc</subfield>
+        <subfield code='a'>nsdp</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>n-us---</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NDOL</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='050'>
+        <subfield code='a'>KF8719</subfield>
+        <subfield code='b'>.A34</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='082'>
+        <subfield code='a'>347.73/2</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='086'>
+        <subfield code='a'>Ju 13.1:</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='110'>
+        <subfield code='a'>Federal Judicial Center.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='222'>
+        <subfield code='a'>Annual report - Federal Judicial Center</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Annual report /</subfield>
+        <subfield code='c'>Federal Judicial Center.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Washington, D.C. :</subfield>
+        <subfield code='b'>Federal Judicial Center,</subfield>
+        <subfield code='c'>[1971-</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>v. ;</subfield>
+        <subfield code='c'>23-27 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='310'>
+        <subfield code='a'>Annual</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='362'>
+        <subfield code='a'>1971-</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Distributed to depository libraries in microfiche; avaiable to depository libraries electronically.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Title from cover.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='515'>
+        <subfield code='a'>Report covers fiscal year.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Some issues also available via the Internet at the FJC web site. Address as of 4/2/2002: http://www.fjc.gov/newweb/jnetweb.nsf/ismrecentpublications?OpenFrameSet; current access is available via PURL.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='0' tag='610'>
+        <subfield code='a'>Federal Judicial Center</subfield>
+        <subfield code='v'>Periodicals.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='776'>
+        <subfield code='c'>Microfiche</subfield>
+        <subfield code='d'>Supt. of Docs., U.S. G.P.O.</subfield>
+        <subfield code='w'>(DLC)sn 87020784</subfield>
+        <subfield code='w'>(OCoLC)8961422</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='780'>
+        <subfield code='a'>Federal Judicial Center</subfield>
+        <subfield code='t'>Annual report of the Federal Judicial Center to the Judicial Conference of the United States</subfield>
+        <subfield code='w'>(DLC)sn 87018810</subfield>
+        <subfield code='w'>(OCoLC)17255009</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='u'>http://purl.access.gpo.gov/GPO/LPS18485</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1329180</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797401</subfield>
+        <subfield code='l'>dcpfb</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>20</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HBFY-4258-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13.1:</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797402</subfield>
+        <subfield code='l'>dcpfb</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>20</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HBBE-0592-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13.1:</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797403</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115262H</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>968/69</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797404</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115263I</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>969</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797405</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115264J</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>970</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797406</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115265K</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>971</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797407</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115266L</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>972</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797408</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115267M</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>973</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797409</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115268N</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>974</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797410</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115269O</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>975</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797411</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115270G</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>976</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797412</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115271H</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>977</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797413</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115272I</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>978</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797414</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115273J</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>979</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797415</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115274K</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>980</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797416</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115275L</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>981</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797417</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115276M</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>982</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797418</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115277N</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>983</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797419</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115278O</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>984</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797420</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115279P</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>985</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797421</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115280H</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>986</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797422</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115281I</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>988</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797423</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115282J</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>989</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797424</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115283K</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>990</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797425</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115284L</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>991</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797426</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00115285M</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>992</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1797427</subfield>
+        <subfield code='l'>kdoc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>3</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00217388T</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aJu 13 .1:</subfield>
+        <subfield code='v'>995</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c1372182</subfield>
+        <subfield code='b'>dcpf</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1372182</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='b'>553388</subfield>
+        <subfield code='h'>Ju 13.1:</subfield>
+        <subfield code='z'>For holdings, ask at Service Desk.</subfield>
+        <subfield code='z'>Non-depository Federal Documents Collection.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1372182</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>e</subfield>
+        <subfield code='p'>HBFY-4258-00001</subfield>
+        <subfield code='t'>1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c1406596</subfield>
+        <subfield code='b'>dcpfb</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1406596</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='b'>553388</subfield>
+        <subfield code='g'>Microfiche</subfield>
+        <subfield code='h'>Ju 13.1:</subfield>
+        <subfield code='z'>For holdings, ask at Service Desk.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c1406596</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>e</subfield>
+        <subfield code='p'>HBBE-0592-00001</subfield>
+        <subfield code='t'>1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c14008662</subfield>
+        <subfield code='b'>kdoc</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c14008662</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>Ju 13</subfield>
+        <subfield code='i'>.1: Library has: 1993-94 on microfiche.</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c14008662</subfield>
+        <subfield code='2'>853</subfield>
+        <subfield code='3'>y</subfield>
+        <subfield code='8'>1.1</subfield>
+        <subfield code='a'>(yr)</subfield>
+        <subfield code='t'>c</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2008-06-06 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-27 18:45:00-04</subfield>
+        <subfield code='u'>2016-09-26 08:49:43-04</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cjm a2200493Ia 4500</leader>
+      <controlfield tag='007'>sd dmsdnnmslne</controlfield>
+      <controlfield tag='008'>090311s1949    ctumunn           n eng d</controlfield>
+      <controlfield tag='001'>314217984</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20160119101032.0</controlfield>
+      <datafield ind1='0' ind2='0' tag='028'>
+        <subfield code='a'>1049</subfield>
+        <subfield code='b'>Harmony</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='028'>
+        <subfield code='a'>CO 40903</subfield>
+        <subfield code='b'>Harmony</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='028'>
+        <subfield code='a'>CO 40904</subfield>
+        <subfield code='b'>Harmony</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='028'>
+        <subfield code='a'>1A</subfield>
+        <subfield code='b'>Harmony</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)314217984</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>STF</subfield>
+        <subfield code='c'>STF</subfield>
+        <subfield code='d'>OCLCF</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='047'>
+        <subfield code='a'>pp</subfield>
+        <subfield code='a'>mp</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Baby, it&apos;s cold outside</subfield>
+        <subfield code='h'>[sound recording] :</subfield>
+        <subfield code='b'>from Neptune&apos;s daughter ; The huckle-buck.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='246'>
+        <subfield code='i'>Side B:</subfield>
+        <subfield code='a'>Huckle-buck</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>[Bridgeport, Conn.] :</subfield>
+        <subfield code='b'>Harmony,</subfield>
+        <subfield code='c'>[1949?]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 sound disc :</subfield>
+        <subfield code='b'>analog, 78 rpm, mono. ;</subfield>
+        <subfield code='c'>10 in.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Harmony: 1049 (CO40903 (matrix)--CO 40904 (matrix); 1A (additional no. engraved on both sides of disc)).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Composer: Side A: Loesser. Side B: Alfred, Gibson.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Condition: Very good.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Special Collection material:  Use of audio or visual material may require production of listening or viewing copies before use.  Contact wilsonlibrary@unc.edu before visiting reading room for more information.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='511'>
+        <subfield code='a'>Pearl Bailey and Hot Lips Page, vocal with rhythm acc.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='561'>
+        <subfield code='a'>Howell Begle collection: 20441.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='648'>
+        <subfield code='a'>1941 - 1950</subfield>
+        <subfield code='2'>fast</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Popular music</subfield>
+        <subfield code='y'>1941-1950.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Motion picture music</subfield>
+        <subfield code='v'>Excerpts.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Motion picture music</subfield>
+        <subfield code='x'>Excerpts.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01027204</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='650'>
+        <subfield code='a'>Popular music.</subfield>
+        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01071422</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Alfred, Roy.</subfield>
+        <subfield code='4'>lyr</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Gibson, Andy,</subfield>
+        <subfield code='d'>1913-1961.</subfield>
+        <subfield code='4'>cmp</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Bailey, Pearl.</subfield>
+        <subfield code='4'>prf</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Page, Hot Lips,</subfield>
+        <subfield code='d'>1908-1954.</subfield>
+        <subfield code='4'>prf</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='700'>
+        <subfield code='a'>Loesser, Frank,</subfield>
+        <subfield code='d'>1910-1969.</subfield>
+        <subfield code='t'>Baby, it&apos;s cold outside.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='2' tag='856'>
+        <subfield code='3'>Finding aid for Howell Beglhttp://finding-aids.lib.unc.edu/20441/</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8407076</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i10931607</subfield>
+        <subfield code='l'>wadb</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>50</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='p'>099#9</subfield>
+        <subfield code='q'>|a78-20734</subfield>
+        <subfield code='n'>Special Collection material:  Use of audio or visual material may require production of listening or viewing copies before use.  Contact wilsonlibrary@unc.edu before visiting reading room for more information.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2016-01-19 00:00:00-05</subfield>
+        <subfield code='c'>2016-01-19 10:10:00-05</subfield>
+        <subfield code='u'>2017-03-23 14:46:26-04</subfield>
+      </datafield>
+  </record>
+  <record>
+    <leader>00000cam  2200373 a 4500</leader>
+      <controlfield tag='008'>000707s2000    dcu          f000 0 eng c</controlfield>
+      <controlfield tag='001'>44546864</controlfield>
+      <controlfield tag='005'>20001108154633.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(GPO)99060771</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='c'>WCL</subfield>
+        <subfield code='d'>GPO</subfield>
+        <subfield code='d'>DLC</subfield>
+        <subfield code='d'>MvI</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='042'>
+        <subfield code='a'>pcc</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>n-us---</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='074'>
+        <subfield code='a'>1008-C (online)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='074'>
+        <subfield code='a'>1008-D (online)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='086'>
+        <subfield code='a'>Y 1.1/8:196-644</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='110'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Congress.</subfield>
+        <subfield code='b'>House.</subfield>
+        <subfield code='b'>Committee on Appropriations.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Department of Defense appropriations bill, 2001 :</subfield>
+        <subfield code='b'>report of the Committee on Appropriations together with additional views (to accompany H.R. 4576).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>[Washington, D.C. :</subfield>
+        <subfield code='b'>U.S. G.P.O.,</subfield>
+        <subfield code='c'>2000]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>231 p. ;</subfield>
+        <subfield code='c'>24 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Cover title.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;June 1, 2000.&quot;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='530'>
+        <subfield code='a'>Also available via Internet from the G.P.O. Access web site. Addresses as of 11/8/00: http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=106c̲ongṟeports&amp;docid=f:hr644.106 (text version), http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=106c̲ongṟeports&amp;docid=f:hr644.106.pdf (PDF version); current access is available via PURLs.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='610'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Department of Defense</subfield>
+        <subfield code='x'>Appropriations and expenditures.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='610'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Department of Defense</subfield>
+        <subfield code='x'>Procurement.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='651'>
+        <subfield code='a'>United States</subfield>
+        <subfield code='x'>Armed Forces</subfield>
+        <subfield code='x'>Pay, allowances, etc.</subfield>
+        <subfield code='x'>Law and legislation.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='810'>
+        <subfield code='a'>United States.</subfield>
+        <subfield code='b'>Congress.</subfield>
+        <subfield code='b'>House.</subfield>
+        <subfield code='t'>Report ;</subfield>
+        <subfield code='v'>106-644.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='a'>#3 Text version: #u http://purl.access.gpo.gov/GPO/LPS6732</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='1' tag='856'>
+        <subfield code='3'>PDF version:</subfield>
+        <subfield code='u'>http://purl.access.gpo.gov/GPO/LPS6733</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b3761431</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i5226500</subfield>
+        <subfield code='l'>dcpf</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>20</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HBCD-4684-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aY 1.1/8:196-644</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i5226501</subfield>
+        <subfield code='l'>kdfc</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>27</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>HBCS-1313-00001</subfield>
+        <subfield code='p'>0860#</subfield>
+        <subfield code='q'>|aY 1.1/8:106-644</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-06 10:10:56-04</subfield>
+        <subfield code='u'>2013-10-23 07:49:24-04</subfield>
+      </datafield>
+  </record>
+</collection>

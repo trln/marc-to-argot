@@ -1,75 +1,50 @@
 <?xml version='1.0'?>
 <collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
   <record>
-    <leader>00000cam  2201057 i 4500</leader>
-      <controlfield tag='008'>151029s2017    caua     b    001 0 eng  </controlfield>
-      <controlfield tag='001'>927241453</controlfield>
+    <leader>00000cam a2200361Ii 4500</leader>
+      <controlfield tag='008'>160503s2105    hu a     b    001 0 hun d</controlfield>
+      <controlfield tag='001'>948782767</controlfield>
       <controlfield tag='003'>OCoLC</controlfield>
-      <datafield ind1=' ' ind2=' ' tag='010'>
-        <subfield code='a'>2015040051</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2=' ' tag='019'>
-        <subfield code='a'>918925075</subfield>
-        <subfield code='a'>968690973</subfield>
+      <controlfield tag='005'>20161213012930.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9789637082559</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='020'>
-        <subfield code='a'>9781483340401</subfield>
-        <subfield code='q'>(pbk. ;</subfield>
-        <subfield code='q'>alk. paper)</subfield>
+        <subfield code='a'>9637082557</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='020'>
-        <subfield code='a'>1483340406</subfield>
-        <subfield code='q'>(pbk. ;</subfield>
-        <subfield code='q'>alk. paper)</subfield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)948782767</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='040'>
-        <subfield code='a'>DLC</subfield>
+        <subfield code='a'>HUL</subfield>
         <subfield code='b'>eng</subfield>
         <subfield code='e'>rda</subfield>
-        <subfield code='c'>DLC</subfield>
+        <subfield code='c'>HUL</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>ZCU</subfield>
         <subfield code='d'>OCLCF</subfield>
-        <subfield code='d'>YDXCP</subfield>
-        <subfield code='d'>IUL</subfield>
-        <subfield code='d'>BDX</subfield>
-        <subfield code='d'>CDX</subfield>
-        <subfield code='d'>P4A</subfield>
-        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>NOC</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='042'>
-        <subfield code='a'>pcc</subfield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
       </datafield>
-      <datafield ind1='0' ind2='0' tag='050'>
-        <subfield code='a'>H62</subfield>
-        <subfield code='b'>.R344 2017</subfield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>PH3281.M15</subfield>
+        <subfield code='b'>Z46 2015</subfield>
       </datafield>
-      <datafield ind1='0' ind2='0' tag='082'>
-        <subfield code='a'>001.4/2</subfield>
-        <subfield code='2'>23</subfield>
-      </datafield>
-      <datafield ind1='1' ind2=' ' tag='100'>
-        <subfield code='a'>Ravitch, Sharon M.,</subfield>
-        <subfield code='e'>author.</subfield>
-      </datafield>
-      <datafield ind1='1' ind2='0' tag='245'>
-        <subfield code='a'>Reason &amp; rigor :</subfield>
-        <subfield code='b'>how conceptual frameworks guide research /</subfield>
-        <subfield code='c'>Sharon M. Ravitch, Matthew Riggan.</subfield>
-      </datafield>
-      <datafield ind1='3' ind2=' ' tag='246'>
-        <subfield code='a'>Reason and rigor</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2=' ' tag='250'>
-        <subfield code='a'>Second edition.</subfield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Madách Imre napjai a magyar irodalomban, 1861-1864 /</subfield>
+        <subfield code='c'>gyűjtötte, sajtó alá rendezte, és a jegyzeteket írta Praznovszky Mihály.</subfield>
       </datafield>
       <datafield ind1=' ' ind2='1' tag='264'>
-        <subfield code='a'>Los Angeles :</subfield>
-        <subfield code='b'>SAGE,</subfield>
-        <subfield code='c'>[2017]</subfield>
+        <subfield code='a'>Budapest :</subfield>
+        <subfield code='b'>SikerX BT,</subfield>
+        <subfield code='c'>2015.</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='300'>
-        <subfield code='a'>xxiv, 234 pages :</subfield>
+        <subfield code='a'>432 pages :</subfield>
         <subfield code='b'>illustrations ;</subfield>
-        <subfield code='c'>24 cm</subfield>
+        <subfield code='c'>25 cm</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='336'>
         <subfield code='a'>text</subfield>
@@ -87,58 +62,46 @@
         <subfield code='2'>rdacarrier</subfield>
       </datafield>
       <datafield ind1=' ' ind2=' ' tag='504'>
-        <subfield code='a'>Includes bibliographical references (pages 219-225) and index.</subfield>
+        <subfield code='a'>Includes bibliographical references and index.</subfield>
       </datafield>
-      <datafield ind1='0' ind2=' ' tag='505'>
-        <subfield code='a'>Introduction to conceptual frameworks -- Why conceptual frameworks? -- Origins of a conceptual framework: the birth of grit -- Excavating questions: conceptual frameworks, research questions, and research design -- The role of the conceptual framework in data collection and fieldwork -- Conceptual frameworks and the analysis of data -- Expanding the conversation, extending the argument: the role of conceptual frameworks in presenting, explaining, and contextualizing findings -- Reflections on the making and re-making of a conceptual framework -- The conceptual framework as guide and ballast.</subfield>
+      <datafield ind1='1' ind2='0' tag='600'>
+        <subfield code='a'>Madách, Imre,</subfield>
+        <subfield code='d'>1823-1864</subfield>
+        <subfield code='x'>Criticism and interpretation.</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='0' tag='650'>
-        <subfield code='a'>Social sciences</subfield>
-        <subfield code='x'>Research</subfield>
-        <subfield code='x'>Methodology.</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='0' tag='650'>
-        <subfield code='a'>Research</subfield>
-        <subfield code='x'>Methodology.</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='0' tag='650'>
-        <subfield code='a'>Qualitative research.</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='7' tag='650'>
-        <subfield code='a'>Qualitative research.</subfield>
+      <datafield ind1='1' ind2='7' tag='600'>
+        <subfield code='a'>Madách, Imre,</subfield>
+        <subfield code='d'>1823-1864.</subfield>
         <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst00067548</subfield>
       </datafield>
-      <datafield ind1=' ' ind2='7' tag='650'>
-        <subfield code='a'>Research</subfield>
-        <subfield code='x'>Methodology.</subfield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Criticism, interpretation, etc.</subfield>
         <subfield code='2'>fast</subfield>
-      </datafield>
-      <datafield ind1=' ' ind2='7' tag='650'>
-        <subfield code='a'>Social sciences</subfield>
-        <subfield code='x'>Research</subfield>
-        <subfield code='x'>Methodology.</subfield>
-        <subfield code='2'>fast</subfield>
+        <subfield code='0'>(OCoLC)fst01411635</subfield>
       </datafield>
       <datafield ind1='1' ind2=' ' tag='700'>
-        <subfield code='a'>Riggan, Matthew,</subfield>
-        <subfield code='e'>author.</subfield>
+        <subfield code='a'>Praznovszky, Mihály,</subfield>
+        <subfield code='e'>editor.</subfield>
       </datafield>
-      <datafield ind1='1' ind2=' ' tag='907'>
-        <subfield code='a'>b8985389</subfield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8598539</subfield>
       </datafield>
-      <datafield ind1='9' ind2='4' tag='999'>
-        <subfield code='a'>o1839065</subfield>
-        <subfield code='b'> </subfield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i11216497</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
         <subfield code='c'>1</subfield>
-        <subfield code='d'></subfield>
-        <subfield code='e'></subfield>
-        <subfield code='f'>dd</subfield>
-        <subfield code='g'>o</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00050963590</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPH3281.M15|bZ82 2015</subfield>
       </datafield>
       <datafield ind1='0' ind2='0' tag='999'>
-        <subfield code='a'></subfield>
-        <subfield code='c'>2017-11-28 11:36:33-05</subfield>
-        <subfield code='u'>2017-11-28 11:38:52-05</subfield>
+        <subfield code='a'>2016-12-13 00:00:00-05</subfield>
+        <subfield code='c'>2016-10-04 16:42:25-04</subfield>
+        <subfield code='u'>2017-01-09 19:17:59-05</subfield>
       </datafield>
   </record>
 </collection>

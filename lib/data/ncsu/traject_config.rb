@@ -40,6 +40,9 @@ end
 
 MAINS = Set.new(%w[DHILL HUNT])
 
+# locations that map to virtual collections
+LOC_COLLECTIONS = Set.new(%w[FLOATGAME FLOATDVD PRAGUE])
+
 def remap_item_locations!(item)
   lib, loc = get_location(item)
   collection = nil
@@ -52,13 +55,11 @@ def remap_item_locations!(item)
 
   item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
 
-  collection = loc if loc == 'FLOATGAME'
+  collection = loc if LOC_COLLECTIONS.include?(loc)
 
-  collection = loc if loc == 'FLOATDVD'
-
-  collection = loc if loc == 'PRAGUE'
-
-  item['loc_b'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
+  if lib == 'SPECCOLL'
+    item['loc_n'] = "SPECCOLL-#{loc}"
+  end
 
   # now some remappings based on item type
   item['loc_b'] = 'GAME' if item['type'] == 'GAME-4HR'

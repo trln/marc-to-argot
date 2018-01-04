@@ -113,12 +113,16 @@ unless settings["override"].include?("publisher_number")
   to_field "publisher_number", extract_marc(settings["specs"][:publisher_number])
 end
 
-unless settings["override"].include?("publisher_etc")
-  to_field "publisher_etc", argot_publisher(settings["specs"][:publisher_etc])
+unless settings["override"].include?("imprint_main")
+  to_field "imprint_main", imprint_main
 end
 
-unless settings["override"].include?("imprint")
-  to_field "imprint", argot_imprint(settings["specs"][:imprint])
+unless settings["override"].include?("imprint_multiple")
+  to_field "imprint_multiple", imprint_multiple
+end
+
+unless settings["override"].include?("publisher")
+  to_field "publisher", extract_marc(settings["specs"][:publisher], :separator => nil, :trim_punctuation => true)
 end
 
 ################################################

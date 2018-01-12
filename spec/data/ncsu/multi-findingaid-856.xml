@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?><marcxml:collection xmlns:marcxml="http://www.loc.gov/MARC21/slim">
+  <marcxml:record>
+    <marcxml:leader>06043npcaa2200757Ka 4500</marcxml:leader>
+    <marcxml:controlfield tag="001">ocn521064822</marcxml:controlfield>
+    <marcxml:controlfield tag="003">OCoLC</marcxml:controlfield>
+    <marcxml:controlfield tag="005">20120801032038.0</marcxml:controlfield>
+    <marcxml:controlfield tag="008">100219i19472010ncu                 eng d</marcxml:controlfield>
+    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">NRC</marcxml:subfield>
+      <marcxml:subfield code="c">NRC</marcxml:subfield>
+      <marcxml:subfield code="e">dacs</marcxml:subfield>
+      <marcxml:subfield code="d">NRC</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">(OCoLC)521064822</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="090" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="049" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">NRCC</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="110" ind1="2" ind2=" ">
+      <marcxml:subfield code="a">North Carolina State University.</marcxml:subfield>
+      <marcxml:subfield code="b">Department of Sociology and Anthropology</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="245" ind1="1" ind2="0">
+      <marcxml:subfield code="a">North Carolina State University, College of Humanities and Social Sciences, Department of Sociology and Anthropology records,</marcxml:subfield>
+      <marcxml:subfield code="f">1947-2010</marcxml:subfield>
+      <marcxml:subfield code="h">[manuscript].</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="300" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">54.79</marcxml:subfield>
+      <marcxml:subfield code="f">linear ft.</marcxml:subfield>
+      <marcxml:subfield code="a">(32</marcxml:subfield>
+      <marcxml:subfield code="f">cartons +</marcxml:subfield>
+      <marcxml:subfield code="a">3</marcxml:subfield>
+      <marcxml:subfield code="f">archival boxes +</marcxml:subfield>
+      <marcxml:subfield code="a">3</marcxml:subfield>
+      <marcxml:subfield code="f">legal boxes +</marcxml:subfield>
+      <marcxml:subfield code="a">3</marcxml:subfield>
+      <marcxml:subfield code="f">archival half boxes +</marcxml:subfield>
+      <marcxml:subfield code="a">6</marcxml:subfield>
+      <marcxml:subfield code="f">cardboxes)</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="351" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">This collection has not yet undergone full archival processing; materials are arranged in the order received.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="506" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">Portions of this collection have restricted access.  Please consult the Special Collections Research Center for more information.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="545" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">The North Carolina State University Department of Sociology and Anthropology dates back to 1920. The department has programs of study, research, extension and outreach in two colleges, the College of Humanities and Social Sciences, CHASS, and the College of Agriculture and LifeSciences, CALS.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="520" ind1="3" ind2=" ">
+      <marcxml:subfield code="a">The records of the North Carolina State University Department of Sociology and Anthropology contain correspondence, memoranda, curricula guides, handbooks, study guides, cards from a departmental card catalog, photographs of former faculty, and accreditation standards regarding farm policy review, community council, curricula, research progress reports, international programs, community development extension programs, and the Ellen Winston Lecture and Development Fund. Material also includes information about a rural economic development training program in Pakistan. The correspondence and files are primarily of Ronald C. Wimberley, Dept. of Sociology and Anthropology Head. Materials range in date from 1911 to 2010.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="541" ind1=" " ind2=" ">
+      <marcxml:subfield code="c">Transferred from the</marcxml:subfield>
+      <marcxml:subfield code="a">North Carolina State University Dept. of Sociology and Anthropology.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="555" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">Collection guide available.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="580" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">Forms part of the College of Humanities and Social Sciences Records (UA 120)</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="600" ind1="1" ind2="0">
+      <marcxml:subfield code="a">Wimberley, Ronald C.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="600" ind1="1" ind2="0">
+      <marcxml:subfield code="a">Winston, Ellen,</marcxml:subfield>
+      <marcxml:subfield code="d">1903-1984.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="650" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Anthropology</marcxml:subfield>
+      <marcxml:subfield code="x">Study and teaching (Higher)</marcxml:subfield>
+      <marcxml:subfield code="z">North Carolina.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="610" ind1="2" ind2="0">
+      <marcxml:subfield code="a">North Carolina State College</marcxml:subfield>
+      <marcxml:subfield code="x">History.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="610" ind1="2" ind2="0">
+      <marcxml:subfield code="a">North Carolina State University</marcxml:subfield>
+      <marcxml:subfield code="x">History.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="610" ind1="2" ind2="0">
+      <marcxml:subfield code="a">North Carolina State University.</marcxml:subfield>
+      <marcxml:subfield code="b">College of Agriculture and Life Sciences.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="610" ind1="2" ind2="0">
+      <marcxml:subfield code="a">North Carolina State University.</marcxml:subfield>
+      <marcxml:subfield code="b">College of Humanities and Social Sciences.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="610" ind1="2" ind2="0">
+      <marcxml:subfield code="a">North Carolina State University.</marcxml:subfield>
+      <marcxml:subfield code="b">Department of Sociology and Anthropology</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="650" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Sociology, Rural</marcxml:subfield>
+      <marcxml:subfield code="z">North Carolina.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="650" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Sociology</marcxml:subfield>
+      <marcxml:subfield code="x">Study and teaching (Higher)</marcxml:subfield>
+      <marcxml:subfield code="z">North Carolina.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="773" ind1="1" ind2=" ">
+      <marcxml:subfield code="t">College of Humanities and Social Science Records (UA 120)</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="856" ind1="4" ind2="2">
+      <marcxml:subfield code="y">View NCSU Libraries' online guide</marcxml:subfield>
+      <marcxml:subfield code="u">http://www.lib.ncsu.edu/findingaids/ua120_021/</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="994" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">C0</marcxml:subfield>
+      <marcxml:subfield code="b">NRC</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="856" ind1="4" ind2="2">
+      <marcxml:subfield code="3">Finding aid available</marcxml:subfield>
+      <marcxml:subfield code="u">http://www.lib.ncsu.edu/findingaids/ua120_021/</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="856" ind1="4" ind2="2">
+      <marcxml:subfield code="3">Collection guide available</marcxml:subfield>
+      <marcxml:subfield code="u">http://www.lib.ncsu.edu/findingaids/ua120_021/</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="918" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">999484</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="909" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">20110923</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="596" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">10</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">HAJN-9058-00001</marcxml:subfield>
+      <marcxml:subfield code="l">ARCHIVES</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">6/20/1998</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 1</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267142O</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">8/9/2005</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 2</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267143P</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">8/9/2005</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 3</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267048T</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">8/9/2005</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 4</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267049U</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">8/9/2005</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 5</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267050M</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">8/9/2005</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 6</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267051N</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">8/9/2005</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 HALF BOX 7</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02267346U</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">1/22/2007</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 BOX 8</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02244277S</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">1/14/2009</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 HALF BOX 10</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02246737V</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">N</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">1/27/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 11</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245564S</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 12</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245565T</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 13</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245542O</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 14</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245543P</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 15</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245553Q</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 16</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245554R</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 17</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245555S</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 18</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245562Q</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 BOX 19</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245563R</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 20</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245566U</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/22/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARDBOX 21</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02935671X</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/23/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARDBOX 22</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02935672Y</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/23/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARDBOX 23</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02935673Z</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/23/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARDBOX 24</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02935674-</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">9/23/2011</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">UA 120.021 CARTON 25</marcxml:subfield>
+      <marcxml:subfield code="w">ALPHANUM</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S02245572R</marcxml:subfield>
+      <marcxml:subfield code="l">SPEC-D</marcxml:subfield>
+      <marcxml:subfield code="m">SPECCOLL</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">MANUSCRIPT</marcxml:subfield>
+      <marcxml:subfield code="u">10/19/2011</marcxml:subfield>
+    </marcxml:datafield>
+  </marcxml:record>
+</marcxml:collection>

@@ -33,6 +33,10 @@ module MarcToArgot
         libraries.include?('ONLINE')
       end
 
+      def url_for_finding_aid?(fld)
+        substring_present_in_subfield?(fld, 'u', 'www.lib.ncsu.edu/findingaids')
+      end
+
       # checks whether there are any physical items;
       # this implementation looks at whether there are any
       # items in a library other than ONLINE

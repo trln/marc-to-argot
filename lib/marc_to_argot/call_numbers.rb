@@ -5,11 +5,10 @@ require 'lcsort'
 module MarcToArgot
   # Utilities for handling call numbers
   module CallNumbers
-    autoload :NCSU, 'marc_to_argot/ncsu/utils'
-
     def self.included(base)
       base.extend(LCC)
     end
+
     # Call numbers in Library of Congress Classification style
     module LCC
       @root = nil

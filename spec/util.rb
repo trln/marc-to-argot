@@ -1,6 +1,7 @@
 require 'yaml'
 require 'traject'
 require 'marc_to_argot'
+require 'yajl'
 
 # Utilities for specs
 module Util
@@ -8,6 +9,14 @@ module Util
   def find_marc(collection, file, extension = 'xml')
     data = File.expand_path('data', File.dirname(__FILE__))
     File.join(data, collection, "#{file}.#{extension}")
+  end
+
+  def load_json_multiple(json_data)
+    records = []
+    p = Yajl::Parser.new
+    p.on_object_complete { |x| records << x}
+    p.parse(data)
+    records
   end
 
   # Loads a traject configuration
@@ -32,7 +41,7 @@ module Util
 
     def load_indexer(collection = 'argot', extension = 'xml')
       data_dir = File.expand_path('../lib/data',File.dirname(__FILE__))     
-      conf_files = ["#{data_dir}/extensions.rb", "#{data_dir}/#{collection}/traject_config.rb", "#{data_dir}/argot/traject_config.rb"]
+      conf_files = ["#{data_dir}/extensions.rb", "#{data_dir}/argot/traject_config.rb", "#{data_dir}/#{collection}/traject_config.rb"]
       indexer_class = MarcToArgot::Indexers.find(collection.to_sym)
       traject_indexer = indexer_class.new create_settings(collection, data_dir, extension)
       conf_files.each do |conf_path|

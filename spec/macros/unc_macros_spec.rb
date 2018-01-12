@@ -27,7 +27,7 @@ describe MarcToArgot::Macros::UNC do
       ['Thumbnail image',
        'DOWNLOAD DATA HERE'],
       #8
-      [''],
+      nil,
       #9
       ['Table of contents only'],
       #10
@@ -39,7 +39,7 @@ describe MarcToArgot::Macros::UNC do
     ]
   }
 
-  let(:expected_rel) {
+  let(:expected_type) {
     [
       #1
       ['fulltext',
@@ -81,25 +81,23 @@ describe MarcToArgot::Macros::UNC do
       unless exp.nil?
         argotout = indexer.map_record(rec)
         urlfield = argotout['url']
-        output = []
-        urlfield.each { |u| output << u['text'] } #unless urlfield.empty?
+        output = urlfield.map { |u| JSON.parse(u)['text'] } #unless urlfield.empty?
         expect(output.length).to eq(exp.length), "Record #{idx +1} in error\nExpected:\n#{exp}\nOutput:\n #{output}"
         expect(output).to eq(exp)
       end
     end
   end
 
-  it 'extracts link rel' do
+  it 'extracts link type' do
     indexer.instance_eval do
       to_field 'url', url
     end
     url_recs.each_with_index do |rec, idx|
-      exp = expected_rel[idx]
+      exp = expected_type[idx]
       unless exp.nil?
         argotout = indexer.map_record(rec)
         urlfield = argotout['url']
-        output = []
-        urlfield.each { |u| output << u['rel'] } #unless urlfield.empty?
+        output = urlfield.map { |u| JSON.parse(u)['type'] } #unless urlfield.empty?
         expect(output.length).to eq(exp.length), "Record #{idx +1} in error\nExpected:\n#{exp}\nOutput:\n #{output}"
         expect(output).to eq(exp)
       end

@@ -162,29 +162,7 @@ end
 ######
 
 unless settings["override"].include?("url")
-  to_field "url" do |rec, acc|
-    urls = []
-      Traject::MarcExtractor.cached("856uyz3").each_matching_line(rec) do |field, spec, extractor|
-          url = {}
-          if field.indicator2.to_i > 1
-              url[:rel] = 'secondary'
-          else
-              url[:rel] = 'primary'
-          end
-
-          field.subfields.each do |subfield|
-              if subfield.code == 'u'
-                  url[:href] = subfield.value
-              elsif subfield.code == '3' && subfield.value == 'Finding Aid'
-                  url[:rel] = 'finding_aid'
-              else
-                  url[:text] = subfield.value
-              end
-          end
-          urls << url
-      end
-      urls.each { |u| acc << u } unless urls.empty?
-  end
+  to_field "url", url
 end
 
 ################################################

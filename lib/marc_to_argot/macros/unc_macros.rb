@@ -5,7 +5,7 @@ module MarcToArgot
       MarcExtractor = Traject::MarcExtractor
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
-      
+
       # tests whether the record has any physical items
       # this implementation asks whether there are any 999 fields that:
       #  - have i1=9 (in all records, dates are output to 999 w/i1=0), and
@@ -26,58 +26,18 @@ module MarcToArgot
         end
       end
 
-      
+      # assembles a string from the 856 subfields 3 & y to use for the URL text
+      # @param field [MARC::DataField] the field to use to assemble URL text
+      def url_text(field)
+        subfield_values_3 = collect_subfield_values_by_code(field, '3').map { |val| val.strip.sub(/ ?\W* ?$/, '')}
+        subfield_values_y = collect_subfield_values_by_code(field, 'y').map { |val| val.strip }
 
-      def url
-        url_extor = MarcExtractor.cached('856uy3')
-        lambda do |rec, acc, _|
-          urls = []
-          url_extor.each_matching_line(rec) do |field, spec, extractor|
-            url = {}
-            text = []
-            text3 = []
-            rel = ''
-            href = []
-
-            field.subfields.each do |sf|
-              val = sf.value.strip
-              case sf.code
-              when 'u'
-                href << val
-              when 'y'
-                text << val
-              when '3'
-                text3 << val.sub(/ ?\W* ?$/, '')
-                rel = 'thumbnail' if val.downcase.include?('thumbnail')
-                rel = 'findingaid' if val.downcase.include?('finding aid')
-              end
-            end
-
-            url['href'] = href.first unless href.empty?
-
-            case field.indicator2.to_i
-            when 0
-              rel = 'fulltext'
-            when 1
-              rel = 'fulltext'
-            when 2
-              rel = 'related' if rel.empty?
-            else
-              rel = 'other'
-            end
-
-            # don't need this delimiter unless both text and text3 are populated
-            text << 'Available via the UNC-Chapel Hill Libraries' if text.empty? && rel == 'fulltext'
-            text3 << '--' unless text3.empty? || text.empty?
-            finaltext = text3 + text
-            url['text'] = finaltext.join(' ')
-            url['rel'] = rel
-            urls << url unless href.empty?
-          end
-          urls.each { |u| acc << u } unless urls.empty?
+        if subfield_values_y.empty? && url_type_value(field) == 'fulltext'
+          subfield_values_y << 'Available via the UNC-Chapel Hill Libraries'
         end
+
+        ([subfield_values_3.join(' ')] + [subfield_values_y.join(' ')]).reject(&:empty?).join(' -- ')
       end
-      
     end
   end
 end

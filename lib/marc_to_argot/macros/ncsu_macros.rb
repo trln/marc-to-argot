@@ -1,7 +1,15 @@
+
+
 module MarcToArgot
   module Macros
     # Macros for NCSU-specific tasks
     module NCSU
+      autoload :Summaries, 'marc_to_argot/macros/ncsu/summaries'
+      autoload :Items, 'marc_to_argot/macros/ncsu/items'
+
+      include MarcToArgot::Macros::NCSU::Summaries
+      include MarcToArgot::Macros::NCSU::Items
+
       MarcExtractor = Traject::MarcExtractor
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -25,11 +33,27 @@ module MarcToArgot
         libraries.include?('ONLINE')
       end
 
+      def url_for_finding_aid?(fld)
+        substring_present_in_subfield?(fld, 'u', 'www.lib.ncsu.edu/findingaids')
+      end
+
       # checks whether there are any physical items;
       # this implementation looks at whether there are any
       # items in a library other than ONLINE
       def physical_access?(_rec, libraries = [])
         !libraries.find { |x| x != 'ONLINE' }.nil?
+      end
+
+      def generate_holdings(items)
+        holdings = []
+        lib_group = items.group_by { |x| x['loc_b'] }
+        lib_group.collect do |lib, libitems|
+          libitems.group_by { |x| x['loc_n'] }.each do |loc_n, itemz|
+            cns = itemz.collect { |x| x['call_no'] }
+            holdings << { 'loc_b' => lib, 'loc_n' => loc_n }.merge(summary(cns))
+          end
+        end
+        holdings
       end
     end
   end

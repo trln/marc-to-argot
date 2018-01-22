@@ -192,6 +192,9 @@
       <datafield ind1=' ' ind2=' ' tag='907'>
         <subfield code='a'>b1246383</subfield>
       </datafield>
+      <datafield ind1=' ' ind2=' ' tag='919'>
+        <subfield code='t'>testcoll</subfield>
+      </datafield>
       <datafield ind1='9' ind2='1' tag='999'>
         <subfield code='i'>i1430977</subfield>
         <subfield code='l'>trln</subfield>

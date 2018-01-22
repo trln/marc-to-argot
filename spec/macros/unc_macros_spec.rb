@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe MarcToArgot::Macros::UNC do
   include Util
-
+  
   let(:indexer) { MarcToArgot::Indexers::UNC.new }
   let(:url_recs) { MARC::XMLReader.new(find_marc('unc', 'url_spec')).to_a }
   let(:expected_text) {

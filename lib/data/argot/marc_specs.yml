@@ -12,7 +12,7 @@ isbn:
   - 020a
   - 020z
   - 776z
-issn: 
+issn:
   primary:
     - 440x
   linking:
@@ -30,10 +30,11 @@ issn:
     - 490x
 copyright_data:
   - 264c
+publisher:
+  - 260bf
+  - 264b
 publisher_number:
   - 028ab
-publisher_etc:
-  - 264b
 imprint:
   - 260abcefg
   - 262abcde
@@ -63,7 +64,7 @@ title:
   - 740ahnp
   - 780abcdghnkstxz
   - 785abcdghikmnstxz
-notes: 
+notes:
   indexed:
     - 500a
     - 501a
@@ -119,7 +120,7 @@ note_toc:
   - 505agrt
 note_summary:
   - 520abc3
-linking: 
+linking:
   main_series:
     - 760
   subseries:
@@ -156,7 +157,7 @@ statement_of_responsibility:
 edition:
   - 250ab
   - 254a
-frequency: 
+frequency:
   current:
     - 310ab
   former:
@@ -176,7 +177,7 @@ description:
     - 351a
   volumes:
     - 362a
-series: 
+series:
   main:
     - 440anpvx
     - 490avx

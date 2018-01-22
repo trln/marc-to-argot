@@ -58,6 +58,10 @@
       <datafield ind1=' ' ind2=' ' tag='907'>
         <subfield code='a'>b1319986</subfield>
       </datafield>
+      <datafield ind1=' ' ind2=' ' tag='919'>
+        <subfield code='t'>testcoll</subfield>
+        <subfield code='t'>anothercoll</subfield>
+      </datafield>
       <datafield ind1='9' ind2='1' tag='999'>
         <subfield code='i'>i1688265</subfield>
         <subfield code='l'>mmdb</subfield>

@@ -165,7 +165,8 @@ to_field 'items' do |rec, acc, ctx|
 
   formats = marc_formats.call(rec, [])
   items = []
-
+  barcodes = []
+  
   Traject::MarcExtractor.cached('999|*1|cdilnpqsv', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
 
     item = {}
@@ -176,6 +177,8 @@ to_field 'items' do |rec, acc, ctx|
       subfield.value.gsub!(/\|./, ' ') #remove subfield delimiters and
       subfield.value.strip! #delete leading/trailing spaces
       case sf
+      when 'b'
+        barcodes << subfield.value
       when 'c'
         item['copy_no'] = subfield.value if subfield.value != '1'
       when 'd'
@@ -211,13 +214,16 @@ to_field 'items' do |rec, acc, ctx|
     ctx.output_hash['available'] = 'Available' if is_available?(items)
     map_call_numbers(ctx, items)
 
+    #set location facet values
     ilocs = items.collect { |it| it['loc_b'] }
     hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten
     clean_loc_strings = hier_loc_code_strings.select { |e| e.nil? == false }
-#    ctx.output_hash['hiertest'] = clean_loc_strings
     if clean_loc_strings.size > 0
       ctx.output_hash['location_hierarchy'] = explode_hierarchical_strings(clean_loc_strings)
     end
+
+    #set barcodes field
+    ctx.output_hash['barcodes'] = barcodes
   end
 end
 

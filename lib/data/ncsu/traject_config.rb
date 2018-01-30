@@ -29,7 +29,7 @@ each_record do |_rec, ctx|
   items.reject! { |i| shadowed_location?(i) }
   ctx.skip! if items.empty?
 
-  ctx.output_hash['barcode'] = items.map { |x| x['item_id'] }.select(&:itself)
+  ctx.output_hash['barcodes'] = items.map { |x| x['item_id'] }.select(&:itself)
 
   if ctx.output_hash.fetch('format', []).include?('Journal/Newspaper')
     holdings = generate_holdings(items)

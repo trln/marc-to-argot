@@ -3,7 +3,22 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util::TrajectRunTest
 
-  it 'generates holdings data for Duke' do
+  it '(Duke) extracts items' do
+    result = run_traject_json('duke', 'items', 'mrc')
+    expect(result['items']).to(
+      eq(["{\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"cn_scheme\":\"LC\",\"call_no\":\"DF229.T6 C8 1969\","\
+          "\"copy_no\":\"c.1\",\"type\":\"BOOK\",\"item_id\":\"D03223637Q\",\"status\":\"Available\"}"])
+    )
+  end
+
+  it '(Duke) extracts barcodes' do
+    result = run_traject_json('duke', 'items', 'mrc')
+    expect(result['barcodes']).to(
+      eq(["D03223637Q"])
+    )
+  end
+
+  it '(Duke) generates holdings data' do
     result = run_traject_json('duke', 'holdings', 'mrc')
     expect(result['holdings']).to(
       eq(["{\"loc_b\":\"LAW\"," \
@@ -14,14 +29,14 @@ describe MarcToArgot do
     )
   end
 
-  it 'generates the location hierarchy for Duke' do
+  it '(Duke) generates the location hierarchy' do
     result = run_traject('duke', 'holdings', 'mrc')
     expect(JSON.parse(result)['location_hierarchy']).to(
       eq(['duke', 'duke:dukelaww', 'law', 'law:lawdukw'])
     )
   end
 
-  it 'generates author_facet values for Duke' do
+  it '(Duke) generates author_facet values' do
     result = run_traject_json('duke', 'author_facet', 'mrc')
     expect(result['author_facet']).to(
       eq(["Author (100 field), 1874-1943",
@@ -35,14 +50,14 @@ describe MarcToArgot do
       )
   end
 
-  it 'generates rollup_id for Duke' do
+  it '(Duke) generates rollup_id' do
     result = run_traject_json('duke', 'rollup_id', 'mrc')
     expect(result['rollup_id']).to(
       eq('OCLC12420922')
     )
   end
 
-  it 'does NOT generate a rollup_id for Duke special collections records' do
+  it '(Duke) does NOT generate a rollup_id for Duke special collections records' do
     result = run_traject_json('duke', 'special_collections', 'mrc')
     expect(result['rollup_id']).to(be_nil)
   end

@@ -38,20 +38,6 @@ to_field 'institution', literal('duke')
 ################################################
 # Items
 ######
-item_map = {
-  p: { key: 'item_id' },
-  n: { key: 'copy_no' },
-  b: { key: 'loc_b' },
-  z: { key: 'notes' },
-  h: { key: 'call_no' },
-  o: { key: 'status_code' },
-  q: { key: 'process_state' },
-  x: { key: 'due_date' },
-  c: { key: 'loc_n' },
-  r: { key: 'type' },
-  d: { key: 'cn_scheme' }
-}
-
 def is_available?(items)
   items.any? { |i| i['status'].downcase.start_with?('available') rescue false }
 end
@@ -227,14 +213,38 @@ end
 to_field 'items' do |rec, acc, ctx|
   lcc_top = Set.new
   items = []
+  barcodes = []
 
   Traject::MarcExtractor.cached('940', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
     item = {}
 
     field.subfields.each do |subfield|
-      code = subfield.code.to_sym
-      mapped = item_map.fetch(code, key: nil)[:key]
-      item[mapped] = subfield.value unless mapped.nil?
+      sf_code = subfield.code
+      case sf_code
+      when 'b'
+        item['loc_b'] = subfield.value
+      when 'c'
+        item['loc_n'] = subfield.value
+      when 'd'
+        item['cn_scheme'] = subfield.value
+      when 'h'
+        item['call_no'] = subfield.value
+      when 'n'
+        item['copy_no'] = subfield.value
+      when 'o'
+        item['status_code'] = subfield.value
+      when 'p'
+        item['item_id'] = subfield.value.strip
+        barcodes << subfield.value.strip
+      when 'q'
+        item['process_state'] = subfield.value
+      when 'r'
+        item['type'] = subfield.value
+      when 'x'
+        item['due_date'] = subfield.value
+      when 'z'
+        item['notes'] = subfield.value
+      end
     end
 
     item['status'] = item_status(rec, item)
@@ -256,6 +266,7 @@ to_field 'items' do |rec, acc, ctx|
   ctx.output_hash['lcc_top'] = lcc_top.to_a
   ctx.output_hash['available'] = 'Available' if is_available?(items)
   ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(locations) if locations
+  ctx.output_hash['barcodes'] = barcodes if barcodes.any?
 
   map_call_numbers(ctx, items)
 end

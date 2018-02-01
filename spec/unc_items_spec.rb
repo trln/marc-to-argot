@@ -125,45 +125,58 @@ describe MarcToArgot do
     )
   end
 
-    it '(UNC) sets multiple item notes in correct order' do
+  it '(UNC) sets multiple item notes in correct order' do
     expect(b2975416result[1]).to(
       include("\"notes\":[\"zzTest note\",\"aaTest note\"]")
     )
-    end
+  end
 
-    it '(UNC) does NOT set item notes when there are none' do
+  it '(UNC) does NOT set item notes when there are none' do
     expect(b2975416result[0]).not_to(
       include("\"notes\":[]")
     )
-    end
+  end
 
-    it '(UNC) sets available to Available if status is In-Library Use Only' do
+  it '(UNC) sets available to Available if status is In-Library Use Only' do
     expect(JSON.parse(b2975416argot)['available']).to(
       eq("Available")
     )
-    end
+  end
 
-    let(:eresloc) { run_traject_json('unc', 'location_eres') }
+  let(:eresloc) { run_traject_json('unc', 'location_eres') }
 
-    it '(UNC) sets location_hierarchy for record with unsuppressed e-items' do
+  it '(UNC) sets location_hierarchy for record with unsuppressed e-items' do
     expect(eresloc['location_hierarchy']).to(
       eq(['unc', 'unc:uncdavy', 'unc:uncdavy:uncdavdoc'])
     )
-    end
+  end
 
-    let(:wilson_loc_argot) { run_traject_json('unc', 'wilson_loc') }
+  let(:wilson_loc_argot) { run_traject_json('unc', 'wilson_loc') }
 
-    it '(UNC) sets multi location_hierarchy from one loc_b (single loc)' do
+  it '(UNC) sets multi location_hierarchy from one loc_b (single loc)' do
     expect(wilson_loc_argot['location_hierarchy']).to(
       eq(['unc', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])
     )
-    end
+  end
 
   let(:multi_loc_argot) { run_traject_json('unc', 'multi_loc') }
 
   it '(UNC) sets multi location_hierarchy from multi loc_bs in multiple item records' do
     expect(multi_loc_argot['location_hierarchy'].sort).to(
       eq(['hsl', 'hsl:hsluncy', 'unc', 'unc:unchsl', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])
+    )
+  end
+
+  it '(UNC) sets single barcodes value' do
+    expect(b1082803argot['barcodes']).to(
+      eq(['00007525537'])
+    )
+  end
+
+  let(:b1246383argot) { run_traject_json('unc', 'b1246383') }
+  it '(UNC) sets multiple barcodes values' do
+    expect(b1246383argot['barcodes']).to(
+      eq(['00036388532', '00036429481', '00036429490'])
     )
   end
 end

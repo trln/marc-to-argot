@@ -27,9 +27,11 @@ end
 each_record do |_rec, ctx|
   items = ctx.clipboard['items']
   items.reject! { |i| shadowed_location?(i) }
-  if items.empty?
-    ctx.skip!
-  elsif ctx.output_hash.fetch('format', []).include?('Journal/Newspaper')
+  ctx.skip! if items.empty?
+
+  ctx.output_hash['barcodes'] = items.map { |x| x['item_id'] }.select(&:itself)
+
+  if ctx.output_hash.fetch('format', []).include?('Journal/Newspaper')
     holdings = generate_holdings(items)
     ctx.output_hash['holdings'] = holdings.map(&:to_json)
   end

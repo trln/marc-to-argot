@@ -75,17 +75,6 @@ unless settings["override"].include?("publication_year")
   to_field "publication_year", marc_publication_date
 end
 
-unless settings["override"].include?("copyright_year")
-  to_field "copyright_year" do |record, acc|
-    Traject::MarcExtractor.cached("264c").each_matching_line(record) do |field, spec, extractor|
-       if field.indicator2 == '4'
-            str = extractor.collect_subfields(field,spec).first
-            acc << str.gsub!(/[^\d]/,'').to_i if str
-       end
-    end
-  end
-end
-
 unless settings['override'].include?('date_cataloged')
   to_field 'date_cataloged' do |rec, acc|
     cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first

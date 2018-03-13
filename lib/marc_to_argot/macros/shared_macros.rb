@@ -9,10 +9,12 @@ module MarcToArgot
       require 'marc_to_argot/macros/shared/helpers'
       require 'marc_to_argot/macros/shared/urls'
       require 'marc_to_argot/macros/shared/imprint'
+      require 'marc_to_argot/macros/shared/resource_type'
 
       include Helpers
       include Urls
       include Imprint
+      include ResourceType
 
       # values to look for in the 856 that indicate
       # a record has online access.

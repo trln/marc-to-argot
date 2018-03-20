@@ -335,6 +335,21 @@ unless settings["override"].include?("misc_id")
 end
 
 ################################################
+# Format -- Resource Type, Characteristics, Physical Media, etc.
+######
+
+unless settings['override'].include?('access_type')
+  to_field 'access_type' do |rec, acc|
+    acc << 'Online' if online_access?(rec)
+    acc << 'At the Library' if physical_access?(rec)
+  end
+end
+
+unless settings['override'].include?('resource_type')
+  to_field 'resource_type', resource_type
+end
+
+################################################
 # Additional
 ######
 
@@ -362,13 +377,6 @@ unless settings['override'].include?('institution')
   to_field 'institution' do |rec, acc|
     inst = %w[unc duke nccu ncsu]
     acc.concat(inst)
-  end
-end
-
-unless settings['override'].include?('access_type')
-  to_field 'access_type' do |rec, acc|
-    acc << 'Online' if online_access?(rec)
-    acc << 'At the Library' if physical_access?(rec)
   end
 end
 

@@ -47,16 +47,37 @@ module MarcToArgot
         end
 
         def item_status(current, home)
-          return 'Available' if current.nil? || current.empty? || current == home
-          LOCATION_AVAILABILITY.fetch(
+          location_status = LOCATION_AVAILABILITY.fetch(
             current,
             case current
             when /^RSRV/
               'Available - On Reserve'
-            else
-              "Unknown - #{current}"
             end
           )
+
+          simple_status = 'Available' if current.nil? || current.empty? || current == home
+
+          if location_status.nil?
+            simple_status || "Unknown - #{current}"
+          else
+            location_status
+          end
+        end
+
+        # items in certain 'current' locations
+        # should be displayed as if that is their
+        # home location
+        def current_as_home?(loc)
+          case loc
+          when 'RESERVES'
+            true
+          when /^RSRV-/
+            true
+          when 'NEWBOOKS'
+            true
+          else
+            false
+          end
         end
 
         def remap_item_locations!(item)
@@ -67,6 +88,11 @@ module MarcToArgot
           end
           item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
           item['loc_n'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
+
+          # reserves should pretend they're home.
+          if current_as_home?(item['loc_current'])
+            item['loc_n'] = item['loc_current']
+          end
           # now some remappings based on item type
           item['loc_b'] = 'GAME' if item['type'] == 'GAME-4HR'
         end
@@ -75,7 +101,7 @@ module MarcToArgot
           lib, loc = get_location(item)
           lib_cases = lib == 'SPECCOLL'
           loc_cases = case loc
-                      when 'GAMELAB', 'VRSTUDIO', /^SPEC/
+                      when 'GAMELAB', 'VRSTUDIO', /^SPEC/, /^REF/
                         true
                       else
                         false
@@ -89,6 +115,12 @@ module MarcToArgot
           lib_cases || loc_cases || type_cases
         end
 
+        # computes and updates item status
+        def item_status!(item)
+          item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
+          item['status'] << ' (Library use only)' if library_use_only?(item)
+        end
+
         def marc_to_item(field)
           item = {}
           field.subfields.each do |subfield|
@@ -96,8 +128,7 @@ module MarcToArgot
             mapped = SUBFIELDS.fetch(code, key: nil)[:key]
             item[mapped] = subfield.value unless mapped.nil?
           end
-          item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
-          item['status'] << ' (Library use only)' unless item['status'] =~ /library use only/i
+          item_status!(item)
           item
         end
 

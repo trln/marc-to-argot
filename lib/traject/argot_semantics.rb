@@ -431,7 +431,7 @@ module Traject::Macros
       lambda do |rec, acc|
         st = {}
         config.each do |key, spec|
-          extractor = MarcExtractor.cached(spec, separator: nil)
+          extractor = MarcExtractor.cached(spec)
           frequency = extractor.extract(rec)
           st[key] = frequency unless frequency.empty?
         end

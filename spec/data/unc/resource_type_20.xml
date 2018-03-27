@@ -1,0 +1,156 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000njm a22005773i 4500</leader>
+      <controlfield tag='006'>m    |o  h |</controlfield>
+      <controlfield tag='007'>cr nna|||||a|a</controlfield>
+      <controlfield tag='007'>sr n|nnnnnnned</controlfield>
+      <controlfield tag='008'>160321s2010    enkopn||o|||||||| | rus d</controlfield>
+      <controlfield tag='001'>ASP2197313/clmu</controlfield>
+      <controlfield tag='003'>VaAlASP</controlfield>
+      <controlfield tag='005'>20160321135937.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)811454673</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>VaAlASP</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='c'>VaAlASP</subfield>
+        <subfield code='e'>rda</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Rachmaninoff, Sergei,</subfield>
+        <subfield code='d'>1873-1943,</subfield>
+        <subfield code='e'>composer.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='240'>
+        <subfield code='a'>Aleko</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='245'>
+        <subfield code='a'>Aleko /</subfield>
+        <subfield code='c'>Rachmaninoff.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>[Colchester, Essex, England] :</subfield>
+        <subfield code='b'>Chandos,</subfield>
+        <subfield code='c'>[2010]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 online resource (51 min.)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='306'>
+        <subfield code='a'>005103</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>performed music</subfield>
+        <subfield code='b'>prm</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>computer</subfield>
+        <subfield code='b'>c</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>online resource</subfield>
+        <subfield code='b'>cr</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='347'>
+        <subfield code='a'>data file</subfield>
+        <subfield code='2'>rda</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='1' tag='382'>
+        <subfield code='b'>soprano voice</subfield>
+        <subfield code='n'>1</subfield>
+        <subfield code='b'>mezzo-soprano voice</subfield>
+        <subfield code='n'>1</subfield>
+        <subfield code='b'>tenor voice</subfield>
+        <subfield code='n'>1</subfield>
+        <subfield code='b'>baritone voice</subfield>
+        <subfield code='n'>1</subfield>
+        <subfield code='b'>bass voice</subfield>
+        <subfield code='n'>1</subfield>
+        <subfield code='a'>mixed chorus</subfield>
+        <subfield code='e'>1</subfield>
+        <subfield code='a'>orchestra</subfield>
+        <subfield code='e'>1</subfield>
+        <subfield code='r'>5</subfield>
+        <subfield code='t'>2</subfield>
+        <subfield code='2'>lcmpt</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>For soprano, mezzo-soprano, tenor, baritone, and bass soloists with mixed chorus and orche
+stra.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Streaming audio files.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='505'>
+        <subfield code='a'>I. Introduction (01:59) -- II. Chorus. Gypsies: &apos;As dear as freedom is our happy encampment&apos; (04:04) -- III. The Old Gypsy&apos;s Tale. Old Gypsy: &apos;The magic power of song&apos; (04:55) -- IV. Scene and Chorus. Aleko: &apos;But why did you not immediately hasten after the thankless wretch&apos; (01:58) -- V. Women&apos;s Dance (03:51) -- VI. Men&apos;s Dance (04:18) -- VII. Chorus. Gypsies: &apos;The fires have gone out&apos; (02:26) -- VIII. Duettino. Young Gypsy: &apos;Just one more kiss!&apos; (02:17) -- IX. Cradle Scene. Zemfira: &apos; &apos;Old man, fearful man ...&apos; (03:41) -- X. Aleko&apos;s Cavatina. Aleko: &apos;The whole camp sleeps&apos; (05:42) -- XI. Intermezzo (02:06) -- XII. Young Gypsy&apos;s Romance. Young Gypsy: &apos;Look how beneath the distant vault of heaven&apos; (01:37) -- XIII. Duet and Finale. Zemfira: &apos;It&apos;s time to go, my love, it&apos;s time!&apos; (04:50) -- XIV. Gypsies: &apos;What&apos;s all this noise? What is that cry?&apos; (04:07) -- XV. Gypsies:&apos;We are gentle and kind-hearted&apos; (03:12).</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='506'>
+        <subfield code='a'>Access limited to UNC Chapel Hill-authenticated users.</subfield>
+        <subfield code='f'>Unlimited simultaneous users</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='511'>
+        <subfield code='a'>Svetla Vassileva, soprano ; Nadezhda Vasilieva, mezzo-soprano ; Sergey Murzaev, baritone ; Evgeny Akimov, tenor ; Gennady Bezzubenkov, bass ; BBC Philharmonic ; Coro del Teatro egio di Torino ; Gianandrea Noseda, conductor.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='518'>
+        <subfield code='o'>Performed</subfield>
+        <subfield code='p'>Auditorium RAI &apos;Arturo Toscanini&apos;.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='518'>
+        <subfield code='o'>Recorded</subfield>
+        <subfield code='p'>Auditorio RAI Arturo Toscanini, Turin, Italy</subfield>
+        <subfield code='d'>Sep. 7-8, 2009.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='546'>
+        <subfield code='a'>Sung in Russian.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='588'>
+        <subfield code='a'>Title from resource description page (viewed March 21, 2016).</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='7' tag='655'>
+        <subfield code='a'>Operas.</subfield>
+        <subfield code='2'>lcgft</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Noseda, Gianandrea,</subfield>
+        <subfield code='e'>conductor.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>BBC Philharmonic Orchestra,</subfield>
+        <subfield code='e'>performer.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Teatro regio (Turin, Italy).</subfield>
+        <subfield code='b'>Coro,</subfield>
+        <subfield code='e'>performer.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='773'>
+        <subfield code='t'>Classical music library (online collection)</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='776'>
+        <subfield code='i'>Original cat. no.:</subfield>
+        <subfield code='o'>CHAN 10583</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='8' tag='776'>
+        <subfield code='i'>Original version:</subfield>
+        <subfield code='w'>(OCoLC)601603472</subfield>
+      </datafield>
+      <datafield ind1='4' ind2='0' tag='856'>
+        <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://www.aspresolver.com/aspresolver.asp?CLMU;2197
+313</subfield>
+        <subfield code='y'>Streaming audio available via the UNC-Chapel Hill Libraries</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b8944426</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2017-08-16 00:00:00-04</subfield>
+        <subfield code='c'>2017-08-16 14:48:45-04</subfield>
+        <subfield code='u'>2017-09-18 19:08:18-04</subfield>
+      </datafield>
+    </record>
+  </collection>

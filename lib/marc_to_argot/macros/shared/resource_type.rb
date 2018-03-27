@@ -196,18 +196,20 @@ module MarcToArgot
           end
 
           # Government publication
-          # 008/28 != #, _ AND LDR/06 != c, d, i, j
+          # 008/28 = a, c, f, i, l, m, o, s, z AND LDR/06 = a, e, f, g, k, m, o, r, t
           # OR
-          # 006/11 != #, _ AND 006/00 != c, d, i, j
+          # 006/11 = a, c, f, i, l, m, o, s, z AND 006/00 = a, e, f, g, k, m, o, r, t
           def government_publication?
-            marc_leader_06_match = !%w[c d i j].include?(record.leader.byteslice(6))
+            gov_pub_rec_types = %w[a e f g k m o r t]
+            gov_pub_code_vals = %w[a c f i l m o s z]
+            marc_leader_06_match = gov_pub_rec_types.include?(record.leader.byteslice(6))
             marc_008_28_match = record.fields('008').find do |field|
-              !['#', ' '].include?(field.value.byteslice(28))
+              gov_pub_code_vals.include?(field.value.byteslice(28))
             end
 
             marc_006_00_11_match = record.fields('006').find do |field|
-              !%w[c d i j].include?(field.value.byteslice(0)) &&
-                !['#', ' '].include?(field.value.byteslice(11))
+              gov_pub_rec_types.include?(field.value.byteslice(0)) &&
+                gov_pub_code_vals.include?(field.value.byteslice(11))
             end
 
             return true if (marc_leader_06_match && marc_008_28_match) ||

@@ -72,14 +72,7 @@ describe MarcToArgot::SpecGenerator do
     result = spec.generate_spec
     expect(result['fake_field']).to eq('foo')
   end
-  
-  it 'handles nested field specs properly' do
-    spec = MarcToArgot::SpecGenerator.new('spec/data/test_marc_spec.yaml')
-    result = spec.generate_spec
-    expect(result['notes']['indexed']).to eq('500a:533a')
-    expect(result['notes']['additional']).to include('546ab')
-  end
-  
+
   it 'loads NCSU spec without a problem' do
     spec = MarcToArgot::SpecGenerator.new('ncsu')
     result = spec.generate_spec

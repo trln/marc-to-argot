@@ -21,6 +21,7 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   let(:resource_type_17) { run_traject_json('duke', 'resource_type_17', 'mrc') }
   let(:resource_type_18) { run_traject_json('duke', 'resource_type_18', 'mrc') }
   let(:resource_type_19) { run_traject_json('duke', 'resource_type_19', 'mrc') }
+  let(:resource_type_20) { run_traject_json('unc', 'resource_type_20', 'xml') }
 
   it '(Duke) Sets resource_type to Music score' do
     result = resource_type_01['resource_type']
@@ -111,4 +112,10 @@ describe MarcToArgot::Macros::Shared::ResourceType do
     result = resource_type_19['resource_type']
     expect(result).to include('Object')
   end
+
+    it '(UNC) Sets resource_type to Music recording only (not government publication)' do
+    result = resource_type_20['resource_type']
+    expect(result).to eq(['Music recording'])
+  end
+
 end

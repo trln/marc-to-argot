@@ -443,6 +443,7 @@ module MarcToArgot
           # LDR/06 = g AND 008/33 = f, m, v
           # OR
           # 006/00 = g AND 006/16 = f, m, v
+          # 007/00 = m, v
           def video?
             marc_leader_06_match = record.leader.byteslice(6) == 'g'
             marc_008_33_match = record.fields('008').find do |field|
@@ -454,8 +455,13 @@ module MarcToArgot
                 %w[f m v].include?(field.value.byteslice(16))
             end
 
+            video_007_types = %w[m v]
+            marc_007_match = record.fields('007').find do |field|
+              video_007_types.include?(field.value.byteslice(0))
+            end
+
             return true if (marc_leader_06_match && marc_008_33_match) ||
-                           marc_006_match
+                           marc_006_match || marc_007_match
           end
 
           # Web page or site

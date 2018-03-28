@@ -1,0 +1,171 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000com a2200589Ii 4500</leader>
+      <controlfield tag='007'>vd cvaizq</controlfield>
+      <controlfield tag='008'>130402t20112011txunnn            bneng d</controlfield>
+      <controlfield tag='001'>834628979</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20140516064039.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>9781616690083</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>1616690089</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)834628979</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>CO2</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>rda</subfield>
+        <subfield code='c'>CO2</subfield>
+        <subfield code='d'>OCLCO</subfield>
+        <subfield code='d'>OCLCQ</subfield>
+        <subfield code='d'>OCLCA</subfield>
+        <subfield code='d'>NOH</subfield>
+      </datafield>
+      <datafield ind1='0' ind2=' ' tag='041'>
+        <subfield code='a'>eng</subfield>
+        <subfield code='a'>spa</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOHA</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='245'>
+        <subfield code='a'>Infant CPR anytime :</subfield>
+        <subfield code='b'>light skin /</subfield>
+        <subfield code='c'>American Heart Association and American Academy of Pediatrics.</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='246'>
+        <subfield code='a'>Infant CPR</subfield>
+      </datafield>
+      <datafield ind1='3' ind2='0' tag='246'>
+        <subfield code='a'>Light skin</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='246'>
+        <subfield code='i'>Movie title:</subfield>
+        <subfield code='a'>CPR anytime</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='1' tag='264'>
+        <subfield code='a'>Dallas, Tex. :</subfield>
+        <subfield code='b'>American Heart Association ;</subfield>
+        <subfield code='a'>Wappingers Falls, NY :</subfield>
+        <subfield code='b'>Laerdal Medical,</subfield>
+        <subfield code='c'>2011.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='264'>
+        <subfield code='c'>℗2011</subfield>
+      </datafield>
+     <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>1 videodisc :</subfield>
+        <subfield code='b'>DVD video, sound, color ;</subfield>
+        <subfield code='c'>4 3/4 in. +</subfield>
+        <subfield code='e'>1 mini baby CPR learning manikin, infant CPR skills reminder, 2 manikin wipes ; in box (29 x 18 x 11 cm)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='336'>
+        <subfield code='a'>two-dimensional moving image</subfield>
+        <subfield code='b'>tdi</subfield>
+        <subfield code='2'>rdacontent</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='337'>
+        <subfield code='a'>video</subfield>
+        <subfield code='b'>v</subfield>
+        <subfield code='2'>rdamedia</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='338'>
+        <subfield code='a'>videodisc</subfield>
+        <subfield code='b'>vd</subfield>
+        <subfield code='2'>rdacarrier</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='344'>
+        <subfield code='a'>digital</subfield>
+        <subfield code='b'>optical</subfield>
+        <subfield code='h'>Dolby digital</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='346'>
+        <subfield code='a'>laser optical</subfield>
+        <subfield code='b'>NTSC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='347'>
+        <subfield code='a'>video file</subfield>
+        <subfield code='b'>DVD video</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Title from box.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Information on kit container, mini baby directions for use and mini baby cleaning instructions inside kit container, videodisc container, infant CPR skills reminder in English and Spanish; directions for use on manikin wipes in English.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;Lifesaving skills in 20 minutes! = Habilidades que salvan vidas en 20 minutes!&quot;--DVD container.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='538'>
+        <subfield code='a'>DVD video, Dolby digital, NTSC.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='546'>
+        <subfield code='a'>Soundtrack in English and Spanish; special features closed captioning.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Pediatric emergencies.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='2' tag='650'>
+        <subfield code='a'>Cardiopulmonary Resuscitation</subfield>
+        <subfield code='x'>methods.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='2' tag='650'>
+        <subfield code='a'>Emergency Treatment</subfield>
+        <subfield code='x'>methods.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Resuscitation.</subfield>
+      </datafield>
+           <datafield ind1=' ' ind2='2' tag='650'>
+        <subfield code='a'>Infant.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>CPR (First aid) for children.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Medical emergencies.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Children</subfield>
+        <subfield code='x'>Health and hygiene.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Children</subfield>
+        <subfield code='x'>Diseases.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>Laerdal Medical Corporation.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>American Heart Association.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='710'>
+        <subfield code='a'>American Academy of Pediatrics.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b7395320</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i10360619</subfield>
+        <subfield code='l'>noha</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>23</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>H00457744V</subfield>
+        <subfield code='p'>096##</subfield>
+        <subfield code='q'>|aWG 205|bI43 2011</subfield>
+        <subfield code='n'>Inquire at the User Services Desk for access.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2014-05-16 00:00:00-04</subfield>
+        <subfield code='c'>2013-05-06 13:01:00-04</subfield>
+        <subfield code='u'>2015-06-16 13:42:05-04</subfield>
+      </datafield>
+  </record>
+    </collection>

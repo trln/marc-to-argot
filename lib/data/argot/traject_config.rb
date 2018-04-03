@@ -365,10 +365,6 @@ unless settings["override"].include?("frequency")
   to_field "frequency", argot_frequency(settings["specs"][:frequency])
 end
 
-unless settings["override"].include?("description")
-  to_field "description", argot_description(settings["specs"][:description])
-end
-
 unless settings["override"].include?("series")
   to_field "series", argot_series(settings["specs"][:series])
 end

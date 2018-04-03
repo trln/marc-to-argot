@@ -102,21 +102,6 @@ frequency:
     - 310ab
   former:
     - 321ab
-description:
-  general:
-    - 300abcefg
-  sound:
-    - 344abcdefgh3
-  projection:
-    - 345ab3
-  video:
-    - 346ab3
-  digital_file:
-    - 347abcdef3
-  organization:
-    - 351a
-  volumes:
-    - 362a
 series: 
   main:
     - 440anpvx
@@ -129,7 +114,3 @@ series:
     - 811tnpls
   uniform:
     - 830ahnpv
-
-
-    
-  

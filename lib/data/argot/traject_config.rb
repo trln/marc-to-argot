@@ -138,16 +138,88 @@ end
 # Notes
 ######
 
-unless settings["override"].include?("notes")
-  to_field "notes", argot_notes(settings["specs"][:notes])
+unless settings["override"].include?("note_access_restrictions")
+  to_field "note_access_restrictions", note_access_restrictions
 end
 
-unless settings["override"].include?("note_toc")
-  to_field "note_toc", argot_note_toc(settings["specs"][:note_toc]) 
+unless settings["override"].include?("note_admin_history")
+  to_field "note_admin_history", extract_marc(settings["specs"][:note_admin_history])
+end
+
+unless settings["override"].include?("note_binding")
+  to_field "note_binding", note_binding
+end
+
+unless settings["override"].include?("note_biographical")
+  to_field "note_biographical", note_biographical
+end
+
+unless settings["override"].include?("note_copy_version")
+  to_field "note_copy_version", note_copy_version
+end
+
+unless settings["override"].include?("note_data_quality")
+  to_field "note_data_quality", note_data_quality
+end
+
+unless settings["override"].include?("note_dissertation")
+  to_field "note_dissertation", note_dissertation
+end
+
+unless settings["override"].include?("note_file_type")
+  to_field "note_file_type", extract_marc(settings["specs"][:note_file_type])
+end
+
+unless settings["override"].include?("note_issuance")
+  to_field "note_issuance", extract_marc(settings["specs"][:note_issuance])
+end
+
+unless settings["override"].include?("note_numbering")
+  to_field "note_numbering", extract_marc(settings["specs"][:note_numbering])
+end
+
+unless settings["override"].include?("note_organization")
+  to_field "note_organization", extract_marc(settings["specs"][:note_organization])
+end
+
+unless settings["override"].include?("note_performer_credits")
+  to_field "note_performer_credits", note_performer_credits
+end
+
+unless settings["override"].include?("note_production_credits")
+  to_field "note_production_credits", extract_marc(settings["specs"][:note_production_credits])
+end
+
+unless settings["override"].include?("note_report_coverage")
+  to_field "note_report_coverage", extract_marc(settings["specs"][:note_report_coverage])
+end
+
+unless settings["override"].include?("note_report_type")
+  to_field "note_report_type", extract_marc(settings["specs"][:note_report_type])
+end
+
+unless settings["override"].include?("note_scale")
+  to_field "note_scale", extract_marc(settings["specs"][:note_scale])
 end
 
 unless settings["override"].include?("note_summary")
-  to_field "note_summary", argot_note_summary(settings["specs"][:note_summary]) 
+  to_field "note_summary", argot_note_summary(settings["specs"][:note_summary])
+end
+
+unless settings["override"].include?("note_supplement")
+  to_field "note_supplement", extract_marc(settings["specs"][:note_supplement])
+end
+
+unless settings["override"].include?("note_system_details")
+  to_field "note_system_details", note_system_details
+end
+
+unless settings["override"].include?("note_toc")
+  to_field "note_toc", argot_note_toc(settings["specs"][:note_toc])
+end
+
+unless settings["override"].include?("note_with")
+  to_field "note_with", extract_marc(settings["specs"][:note_with])
 end
 
 ################################################

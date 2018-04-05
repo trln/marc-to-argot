@@ -243,7 +243,8 @@ to_field 'items' do |rec, acc, ctx|
       when 'x'
         item['due_date'] = subfield.value
       when 'z'
-        item['notes'] = subfield.value
+        item['notes'] ||= []
+        item['notes'] << subfield.value
       end
     end
 

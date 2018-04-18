@@ -24,6 +24,15 @@ module MarcToArgot
         def collect_subfield_values_by_code(field, code)
           field.subfields.collect { |sf| sf.value if sf.code == code }.compact
         end
+
+        # collects an array of values from all instances of one or more subfields
+        # and joins those values with the specified separator
+        # @param field [MARC::DataField] the field to collect subfields from
+        # @param code [String]|[Array] the code(s) of the subfield to collect
+        # @param separator [String] the string to use to join the values
+        def collect_and_join_subfield_values(field, subfields_spec, separator = ' ')
+          field.subfields.select { |sf| [*subfields_spec].include?(sf.code) }.map(&:value).join(separator)
+        end
       end
     end
   end

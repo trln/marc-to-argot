@@ -170,8 +170,24 @@ unless settings["override"].include?("note_file_type")
   to_field "note_file_type", extract_marc(settings["specs"][:note_file_type])
 end
 
+unless settings["override"].include?("note_former_title")
+  to_field "note_former_title", extract_marc(settings["specs"][:note_former_title])
+end
+
+unless settings["override"].include?("note_general")
+  to_field "note_general", note_general
+end
+
 unless settings["override"].include?("note_issuance")
   to_field "note_issuance", extract_marc(settings["specs"][:note_issuance])
+end
+
+unless settings["override"].include?("note_local")
+  to_field "note_local", note_local
+end
+
+unless settings["override"].include?("note_methodology")
+  to_field "note_methodology", extract_marc(settings["specs"][:note_methodology])
 end
 
 unless settings["override"].include?("note_numbering")
@@ -179,7 +195,7 @@ unless settings["override"].include?("note_numbering")
 end
 
 unless settings["override"].include?("note_organization")
-  to_field "note_organization", extract_marc(settings["specs"][:note_organization])
+  to_field "note_organization", note_organization
 end
 
 unless settings["override"].include?("note_performer_credits")
@@ -190,12 +206,20 @@ unless settings["override"].include?("note_production_credits")
   to_field "note_production_credits", extract_marc(settings["specs"][:note_production_credits])
 end
 
+unless settings["override"].include?("note_related_work")
+  to_field "note_related_work", note_related_work
+end
+
 unless settings["override"].include?("note_report_coverage")
   to_field "note_report_coverage", extract_marc(settings["specs"][:note_report_coverage])
 end
 
 unless settings["override"].include?("note_report_type")
   to_field "note_report_type", extract_marc(settings["specs"][:note_report_type])
+end
+
+unless settings["override"].include?("note_reproduction")
+  to_field "note_reproduction", note_reproduction
 end
 
 unless settings["override"].include?("note_scale")

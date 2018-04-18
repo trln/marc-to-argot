@@ -14,6 +14,12 @@ module MarcToArgot
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
+      # Sets the list of MARC org codes that are local.
+      # Used by #subfield_5_present_with_local_code?
+      def local_marc_org_codes
+        %w[NcRS NcRS-P NcRS-V NcRhSUS]
+      end
+
       def rollup_id
         control_number_extor = MarcExtractor.cached('001')
         cni_extor = MarcExtractor.cached('003')

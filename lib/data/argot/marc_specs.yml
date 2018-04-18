@@ -66,12 +66,14 @@ note_admin_history:
   - 545|1*|abu
 note_file_type:
   - 516a
+note_former_title:
+  - 547a
 note_issuance:
   - 550a
+note_methodology:
+  - 567a
 note_numbering:
   - 515a
-note_organization:
-  - 351abc3
 note_production_credits:
   - 508a
 note_report_coverage:

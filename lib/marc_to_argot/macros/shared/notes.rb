@@ -8,6 +8,7 @@ module MarcToArgot
         def note_access_restrictions
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("506abcdefu").each_matching_line(rec) do |field, spec, extractor|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
               acc << [label, value].compact.join(': ') if value
@@ -49,6 +50,7 @@ module MarcToArgot
         def note_copy_version
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("562abcde").each_matching_line(rec) do |field, spec, extractor|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
               acc << [label, value].compact.join(': ') if value
@@ -181,6 +183,10 @@ module MarcToArgot
           notes << ['Title points: ', collect_and_join_subfield_values(field, 'd')]
           notes << ['', collect_and_join_subfield_values(field, 'z', ' -- ')]
           notes.select { |note| !note[1].empty? }.map(&:join).join(' -- ')
+        when '585'
+          if subfield_5_absent_or_present_with_local_code?(field)
+            extractor.collect_subfields(field, spec).first
+          end
         else
           extractor.collect_subfields(field, spec).first
         end
@@ -208,6 +214,7 @@ module MarcToArgot
       def note_local
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("500a:541abcdefhno3:561a:590a").each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
             notes = {}
 
             label = note_local_label(field)
@@ -359,6 +366,7 @@ module MarcToArgot
       def note_reproduction
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("533abcdefmn:534abcefklmnotxz").each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
             notes = {}
 
             label = note_reproduction_label(field)
@@ -425,6 +433,7 @@ module MarcToArgot
       def note_system_details
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("538au").each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
             label = field.subfields.select { |sf| %w[3 i].include?(sf.code) }.map { |sf| sf.value.chomp(':') }
             value = extractor.collect_subfields(field, spec).first
             acc << [*label, value].compact.join(': ') if value

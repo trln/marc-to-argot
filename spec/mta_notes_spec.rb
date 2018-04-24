@@ -47,7 +47,7 @@ describe MarcToArgot do
     )
   end
 
-    it '(MTA) sets note_binding' do
+  it '(MTA) sets note_binding' do
     result = note_binding['note_binding']
     expect(result).to eq(
       [{'value'=>'Perfect bound softcover. Four-color offset lithography. '\

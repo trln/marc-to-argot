@@ -6,6 +6,12 @@ module MarcToArgot
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
+      # Sets the list of MARC org codes that are local.
+      # Used by #subfield_5_present_with_local_code?
+      def local_marc_org_codes
+        %w[NcU NcU-BPR NcU-H NcU-IG NcU-LL NcU-LS NcU-MS NcU-Mu NcU-Pop]
+      end
+
       # tests whether the record has any physical items
       # this implementation asks whether there are any 999 fields that:
       #  - have i1=9 (in all records, dates are output to 999 w/i1=0), and

@@ -4,6 +4,12 @@ module MarcToArgot
     module Duke
       include MarcToArgot::Macros::Shared
 
+      # Sets the list of MARC org codes that are local.
+      # Used by #subfield_5_present_with_local_code?
+      def local_marc_org_codes
+        %w[NcD NcD-B NcD-D NcD-L NcD-M NcD-W NcDurDH]
+      end
+
       # Check for physical item record returns true unless it
       # has an 856 where the first indicator is 0.
       def physical_access?(rec, _ctx = {})

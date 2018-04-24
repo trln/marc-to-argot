@@ -1,0 +1,155 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam a2200481 a 4500</leader>
+      <controlfield tag='008'>841201s1722    enk           000 0 eng  </controlfield>
+      <controlfield tag='001'>14332985</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>20130523095108.0</controlfield>
+      <datafield ind1='7' ind2=' ' tag='016'>
+        <subfield code='a'>2731184R</subfield>
+        <subfield code='2'>DNLM</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='019'>
+        <subfield code='a'>15062822</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)14332985</subfield>
+        <subfield code='z'>(OCoLC)15062822</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>NLM</subfield>
+        <subfield code='b'>eng</subfield>
+        <subfield code='e'>dcrb</subfield>
+        <subfield code='c'>NLM</subfield>
+        <subfield code='d'>OUN</subfield>
+        <subfield code='d'>OCLCO</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='041'>
+        <subfield code='a'>eng</subfield>
+        <subfield code='h'>lat</subfield>
+        <subfield code='h'>fre</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='049'>
+        <subfield code='a'>NOCC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='4' tag='050'>
+        <subfield code='a'>QD25</subfield>
+        <subfield code='b'>.E8 1722x</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='060'>
+        <subfield code='a'>WZ 260</subfield>
+        <subfield code='b'>S4475dE 1722</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Sędziwój, Michał,</subfield>
+        <subfield code='d'>approximately 1556-approximately 1646.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='0' tag='240'>
+        <subfield code='a'>De lapide philosophorum</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='245'>
+        <subfield code='a'>A philosophical account of nature in general, and of the generation of the three principles of nature, viz. mercury, sulphur, and salt, out of the four elements /</subfield>
+        <subfield code='c'>translated from the French ; by John Digby, Esq;</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>London :</subfield>
+        <subfield code='b'>Printed for John Hooke ; and Thomas Edlin,</subfield>
+        <subfield code='c'>MDCCXXII [1722]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>[12], 348 p. ;</subfield>
+        <subfield code='c'>20 cm. (8vo)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>An English translation of Michael Sendivogius&apos;s &apos;De lapide philosophorum tractatus duodecim e naturae fonte et manuali experientia depromti&apos;, also know as &apos;Novum lumen chymicum&apos;; the French translation is entitled &apos;Cosmopolite; ou, nouvelle lumiere de la physique naturelle&apos;.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Sendivogius is described also as the editor of this work said to have been written by Alexander Seton (Ferguson, J. Bibliotheca chemica, vol.2, p.369)</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>With an initial advertisement leaf.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Head- and tail-pieces; initials.</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='510'>
+        <subfield code='a'>Blake, J.  NLM 18th cent.,</subfield>
+        <subfield code='c'>p. 351</subfield>
+      </datafield>
+      <datafield ind1='4' ind2=' ' tag='510'>
+        <subfield code='a'>ESTC (RLIN)</subfield>
+        <subfield code='c'>N20794</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='561'>
+        <subfield code='a'>NLM copy provenance: armorial bookplate of John F. Richards (motto &quot;honore et amore&quot;).</subfield>
+        <subfield code='5'>DNLM</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='563'>
+        <subfield code='a'>NLM copy bound in contemporary Cambridge-style binding.</subfield>
+        <subfield code='5'>DNLM</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='650'>
+        <subfield code='a'>Inorganic Chemicals.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Alchemy.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Alchemy</subfield>
+        <subfield code='x'>Religious aspects</subfield>
+        <subfield code='x'>Christianity.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2='2' tag='650'>
+        <subfield code='a'>Alchemy.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Digby, John</subfield>
+        <subfield code='c'>(Translator),</subfield>
+        <subfield code='d'>active 18th century.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Seton, Alexander,</subfield>
+        <subfield code='d'>-1604.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b2559560</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i3681270</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00021585704</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aQD27 .P45</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c2758606</subfield>
+        <subfield code='b'>wcda</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2758606</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='b'>572211</subfield>
+        <subfield code='h'>QD27</subfield>
+        <subfield code='i'>.P45</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c2758606</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>e</subfield>
+        <subfield code='p'>00021585704</subfield>
+        <subfield code='t'>1</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2013-05-23 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-02 08:52:58-04</subfield>
+        <subfield code='u'>2016-10-23 23:20:23-04</subfield>
+      </datafield>
+  </record>
+</collection>

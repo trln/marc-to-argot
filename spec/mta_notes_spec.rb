@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'spec_helper'
 
 describe MarcToArgot do
@@ -13,6 +14,7 @@ describe MarcToArgot do
   let(:note_general) { run_traject_json('duke', 'note_general', 'mrc') }
   let(:note_issuance) { run_traject_json('duke', 'note_issuance', 'mrc') }
   let(:note_local) { run_traject_json('duke', 'note_local', 'mrc') }
+  let(:note_local2) { run_traject_json('unc', 'note_local2', 'xml') }
   let(:note_methodology) { run_traject_json('duke', 'note_methodology', 'mrc') }
   let(:note_numbering) { run_traject_json('duke', 'note_numbering', 'mrc') }
   let(:note_organization) { run_traject_json('duke', 'note_organization', 'mrc') }
@@ -45,7 +47,7 @@ describe MarcToArgot do
     )
   end
 
-  it '(MTA) sets note_binding' do
+    it '(MTA) sets note_binding' do
     result = note_binding['note_binding']
     expect(result).to eq(
       [{'value'=>'Perfect bound softcover. Four-color offset lithography. '\
@@ -89,7 +91,10 @@ describe MarcToArgot do
     result = note_dissertation['note_dissertation']
     expect(result).to eq(
       ['Thesis (doctoral) - Universität, Neuchâtel, 1998.',
-       'Thesis/disseration--Bremen International Graduate School of Social Sciences, 2008']
+       'Thesis/disseration--Bremen International Graduate School of Social Sciences, 2008',
+       'Thesis--Ph.D--University of North Carolina at Chapel Hill.',
+       'Recital document--Master of Music in Performance and Vocal Pedagogy--University of Texas at San Antonio, 2012.',
+       'Ph. D.--University of North Carolina, 1976']
     )
   end
 
@@ -110,6 +115,7 @@ describe MarcToArgot do
   end
 
   # TODO: Add test for 500 field once subfield $5 is handled
+  # See the commented-out test below "(MTA) does NOT set note_local from field with non-whitelisted $5 value," which may do what this is referring to --kms, 2018-04-24 
   it '(MTA) sets note_general' do
     result = note_general['note_general']
     expect(result).to eq([
@@ -195,8 +201,20 @@ describe MarcToArgot do
          'value' => 'Presented by Benson R. Wilcox (Gift : 2010 : Health Sciences Library, c. 1)',
          'indexed_value' => 'Presented by Benson R. Wilcox'},
         {'label' => 'Ownership history: c. 1',
-         'value' => 'Bookplate: "Ex Libris Benson R. Wilcox M.D."--Inside front cover.'}]
+         'value' => 'Bookplate: "Ex Libris Benson R. Wilcox M.D."--Inside front cover.'},
+        {'value' => 'RBC PQ4315.58 .R7 1896 c. 1: RBC: Bound in ivory paper yapp fore-edges deckle edges notations and markings throughout.'}
+      ]
     )
+  end
+
+  # it '(MTA) does NOT set note_local from field with non-whitelisted $5 value' do
+  #   result = note_local2['note_local']
+  #   expect(result).to eq(nil)
+  # end
+
+  it '(MTA) does NOT set note_binding from field with non-whitelisted $5 value' do
+    result = note_local2['note_binding']
+    expect(result).to eq(nil)
   end
 
   it '(MTA) sets note_methodology' do
@@ -236,7 +254,7 @@ describe MarcToArgot do
     expect(result).to include('Producers, Leslie Midgley, John Sharnik ; director, Russ Bensley.')
   end
 
-  it '(MTA) sets note_related_work for 534' do
+  it '(MTA) sets note_related_work for 535' do
     result = note_related_work_01['note_related_work']
     expect(result).to eq([{'label' => 'Originals held by',
                            'value' => 'Diocesan Library, Episcopal Diocese of Western North '\
@@ -346,7 +364,9 @@ describe MarcToArgot do
     expect(result).to eq(
       ['v.1-2: Digital master conforms to: Benchmark for Faithful Digital Reproductions of Monographs '\
         'and Serials. Version 1. Digital Library Federation, December 2002 '\
-        'http://www.diglib.org/standards/bmarkfin.htm'])
+        'http://www.diglib.org/standards/bmarkfin.htm',
+       'Videodisc: DVD; stereo. or 5.1 surround.'
+      ])
   end
 
   it '(MTA) sets note_with' do

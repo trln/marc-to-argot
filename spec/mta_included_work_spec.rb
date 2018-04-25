@@ -28,7 +28,30 @@ describe MarcToArgot do
                           'title'=>'Peri tou kalou.||French||(Achard and Narbonne)'},
                          {'type'=>'included',
                           'author'=>'Name, Author, (Test name), 1944-.',
-                          'title'=>'Test title.'}
+                          'title'=>'Test title.'},
+                         {'type'=>'included',
+                          'author'=>'Kungliga Biblioteket (Sweden).',
+                          'title'=>'Manuscript.||KB787a.||Church Slavic.||1966.'},
+                         {'type'=>'included',
+                          'author'=>'United States. Congress (94th, 2nd session : 1976).',
+                          'title'=>'Memorial services held in the House of Representatives and Senate of the United States, together with remarks presented in eulogy of Jerry L. Litton, late a Representative from Missouri.||197.'},
+                         {'type'=>'included',
+                          'author'=>'North Carolina. Building Code Council.',
+                          'title'=>'North Carolina state building code.||1,||General construction.||11X,||Making buildings and facilities accessible to and usable by the physically handicapped.'},
+                         {'type'=>'included',
+                          'author'=>'Germany (East).',
+                          'title'=>'Treaties, etc.||Germany (West),||1990 May 18.||1990.'},
+                         {'type'=>'included',
+                          'author'=>'Café Tacuba (Musical group)',
+                          'title'=>'12/12'},
+                         {'type'=>'included',
+                          'author'=>'Great Central Fair for the U.S. Sanitary Commission (1864 : Philadelphia, Pa.). Committee on Public Charities and Benevolent Institutions.',
+                          'title'=>'Philadelphia [blank] 1864. 619 Walnut Street. To [blank] ...'},
+                         {'type'=>'included',
+                          'author'=>'Deutsch Foundation Conference (1930 : University of Chicago).',
+                          'title'=>'Care of the aged.||2000,||1972.',
+                          'details'=>'Reprint.',
+                          'issn'=>'1234-1234'}
                         ]
                       )
   end

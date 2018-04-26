@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe MarcToArgot do
+describe MarcToArgot::Macros::Shared::Notes do
   include Util::TrajectRunTest
   let(:note_access_restrictions) { run_traject_json('duke', 'note_access_restrictions', 'mrc') }
   let(:note_admin_history) { run_traject_json('duke', 'note_admin_history', 'mrc') }
@@ -59,6 +59,11 @@ describe MarcToArgot do
     )
   end
 
+  it '(MTA) does NOT set note_binding from field with non-whitelisted $5 value' do
+    result = note_local2['note_binding']
+    expect(result).to eq(nil)
+  end
+
   it '(MTA) sets note_biographical' do
     result = note_admin_history['note_biographical']
     expect(result).to eq(
@@ -114,8 +119,6 @@ describe MarcToArgot do
     )
   end
 
-  # TODO: Add test for 500 field once subfield $5 is handled
-  # See the commented-out test below "(MTA) does NOT set note_local from field with non-whitelisted $5 value," which may do what this is referring to --kms, 2018-04-24 
   it '(MTA) sets note_general' do
     result = note_general['note_general']
     expect(result).to eq([
@@ -207,13 +210,8 @@ describe MarcToArgot do
     )
   end
 
-  # it '(MTA) does NOT set note_local from field with non-whitelisted $5 value' do
-  #   result = note_local2['note_local']
-  #   expect(result).to eq(nil)
-  # end
-
-  it '(MTA) does NOT set note_binding from field with non-whitelisted $5 value' do
-    result = note_local2['note_binding']
+  it '(MTA) does NOT set note_local from field with non-whitelisted $5 value' do
+    result = note_local2['note_local']
     expect(result).to eq(nil)
   end
 

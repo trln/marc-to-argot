@@ -134,6 +134,10 @@ unless settings["override"].include?("title")
   to_field "title", argot_title(settings["specs"][:title])
 end
 
+unless settings["override"].include?("title_variant")
+  to_field "title_variant", title_variant
+end
+
 ################################################
 # Notes
 ######

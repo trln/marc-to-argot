@@ -273,8 +273,6 @@ module Traject::Macros
         case field.tag
         when '245'
           key = 'main'
-        when '210'
-          key = 'abbreviation'
         when '242'
           key = 'translation'
         when '240'

@@ -7,18 +7,20 @@ module MarcToArgot
     # same namespace.
     module Shared
       require 'marc_to_argot/macros/shared/helpers'
-      require 'marc_to_argot/macros/shared/urls'
       require 'marc_to_argot/macros/shared/imprint'
-      require 'marc_to_argot/macros/shared/resource_type'
       require 'marc_to_argot/macros/shared/notes'
+      require 'marc_to_argot/macros/shared/physical_media'
+      require 'marc_to_argot/macros/shared/resource_type'
       require 'marc_to_argot/macros/shared/title_variant'
+      require 'marc_to_argot/macros/shared/urls'
 
       include Helpers
-      include Urls
       include Imprint
-      include ResourceType
       include Notes
+      include PhysicalMedia
+      include ResourceType
       include TitleVariant
+      include Urls
 
       # values to look for in the 856 that indicate
       # a record has online access.

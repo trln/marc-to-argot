@@ -449,6 +449,10 @@ unless settings['override'].include?('resource_type')
   to_field 'resource_type', resource_type
 end
 
+unless settings['override'].include?('physical_media')
+  to_field 'physical_media', physical_media
+end
+
 ################################################
 # Additional
 ######

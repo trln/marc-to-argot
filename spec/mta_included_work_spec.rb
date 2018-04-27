@@ -51,7 +51,23 @@ describe MarcToArgot do
                           'author'=>'Deutsch Foundation Conference (1930 : University of Chicago).',
                           'title'=>'Care of the aged.||2000,||1972.',
                           'details'=>'Reprint.',
-                          'issn'=>'1234-1234'}
+                          'issn'=>'1234-1234'},
+                         {'type'=>'included',
+                          'title'=>'Cahiers de civilisation médiévale.||Bibliographie.',
+                          'issn'=>'0240-8678'},
+                         {'type'=>'included',
+                          'title'=>'Jane Pickering\'s lute book.||arr.',
+                          'title_variation'=>'Drewries Accord\'s;'},
+                         {'type'=>'included',
+                          'label'=>'Contains',
+                          'title'=>'Magnificent Ambersons (Motion picture).||Spanish.'},
+                         {'type'=>'included',
+                          'label'=>'Contains',
+                          'title'=>'Magnificent Ambersons (Motion picture).||English.',
+                          'title_nonfiling'=>'The magnificent Ambersons (Motion picture). English.'},
+                         {'type'=>'included',
+                          'label'=>'Guide: Based on',
+                          'title'=>'Deutsche Geschichte.||Band 6.'}
                         ]
                       )
   end

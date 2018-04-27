@@ -67,7 +67,12 @@ describe MarcToArgot do
                           'title_nonfiling'=>'The magnificent Ambersons (Motion picture). English.'},
                          {'type'=>'included',
                           'label'=>'Guide: Based on',
-                          'title'=>'Deutsche Geschichte.||Band 6.'}
+                          'title'=>'Deutsche Geschichte.||Band 6.'},
+                         {'type'=>'included',
+                          'title'=>'English pilot.||The fourth book : describing the West India navigation, from Hudson\'s-Bay to the river Amazones ...',
+                          'title_nonfiling'=>'The English pilot. The fourth book : describing the West India navigation, from Hudson\'s-Bay to the river Amazones ...'},
+                         {'type'=>'included',
+                          'title'=>'Industrial sales management game||5.'}
                         ]
                       )
   end

@@ -2,6 +2,9 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for NCCU records
     module NCCU
+      autoload :Items, 'marc_to_argot/macros/nccu/items'
+
+      include MarcToArgot::Macros::NCCU::Items
       include MarcToArgot::Macros::Shared
 
       # Sets the list of MARC org codes that are local.

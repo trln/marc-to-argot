@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: iso-8859-1
 require 'spec_helper'
 
 describe MarcToArgot do
@@ -17,8 +17,7 @@ describe MarcToArgot do
                          {'type'=>'included',
                           'label'=>'Facsimile of',
                           'author'=>'Ferrini, Vincent, 1913-2007.',
-                          'title'=>'Tidal wave : poems of the great strikes.||1945',
-                          'details'=>'(New York : Great-Concord Publishers)'},
+                          'title'=>'Tidal wave : poems of the great strikes.||1945||(New York : Great-Concord Publishers)'},
                          {'type'=>'included',
                           'label'=>'Tome 1, volume 1: Contains',
                           'author'=>'Plotinus.',
@@ -46,8 +45,7 @@ describe MarcToArgot do
                           'title'=>'Philadelphia [blank] 1864. 619 Walnut Street. To [blank] ...'},
                          {'type'=>'included',
                           'author'=>'Deutsch Foundation Conference (1930 : University of Chicago).',
-                          'title'=>'Care of the aged.||2000,||1972.',
-                          'details'=>'Reprint.',
+                          'title'=>'Care of the aged.||2000,||1972.||Reprint.',
                           'issn'=>'1234-1234'},
                          {'type'=>'included',
                           'title'=>'Cahiers de civilisation médiévale.||Bibliographie.',

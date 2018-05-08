@@ -45,4 +45,13 @@ describe MarcToArgot do
          ])
     )
   end
+
+  it '(MTA) sets national bib number with no qual when entire $a value in parens' do
+    result = ids01['misc_id'][7]
+    expect(result).to(
+      eq(
+        {'value' => '(USSR 68-VKP)', 'qual' => '', 'type' => "National Bibliography Number"}
+      )
+    )
+  end
 end

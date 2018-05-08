@@ -28,6 +28,9 @@
 	<subfield code='a'>789(v. 2) </subfield>
 	<subfield code='a'>1010</subfield>
       </datafield>
+      <datafield ind1=' ' ind2=' ' tag='015'>
+        <subfield code='a'>(USSR 68-VKP)</subfield>
+      </datafield>
       <datafield ind1=' ' ind2=' ' tag='019'>
         <subfield code='a'>1460998</subfield>
       </datafield>

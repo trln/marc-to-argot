@@ -9,6 +9,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/shared/helpers'
       require 'marc_to_argot/macros/shared/imprint'
       require 'marc_to_argot/macros/shared/notes'
+      require 'marc_to_argot/macros/shared/misc_id'
       require 'marc_to_argot/macros/shared/physical_media'
       require 'marc_to_argot/macros/shared/resource_type'
       require 'marc_to_argot/macros/shared/title_variant'
@@ -16,6 +17,7 @@ module MarcToArgot
 
       include Helpers
       include Imprint
+      include MiscId
       include Notes
       include PhysicalMedia
       include ResourceType

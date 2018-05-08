@@ -408,7 +408,9 @@ def process_015(field, acc)
   #  qualifying info as part of $a
   elsif sf_a.size > 0 && sf_q.size == 0
     sf_a.each do |sf|
-      if sf.value =~ /\(.+\)/
+      #hairy regex because sometimes entire sf value is in parens and in this case
+      #  should be set as the value
+      if sf.value =~ /^ *[^(]+\(.+\)/ 
         split = split_qualifier(sf.value)
         acc << {'value' => split[0], 'qual' => split[1], 'type' => type}
       else

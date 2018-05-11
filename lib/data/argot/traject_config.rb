@@ -67,6 +67,10 @@ unless settings["override"].include?("issn")
   to_field "issn", argot_issn(settings["specs"][:issn])
 end
 
+unless settings["override"].include?("misc_id")
+  to_field "misc_id", misc_id
+end
+
 ################################################
 # Dates
 ######
@@ -354,86 +358,6 @@ unless settings['override'].include?('subject_genre')
                                                         mapped_byte: 16,
                                                         bio_byte: 17,
                                                         constraint: :field_006_byte_00_at })
-end
-
-
-################################################
-# misc_ids
-######
-
-def national_bibliography_codes
-  @national_bibliography_codes ||=Traject::TranslationMap.new('shared/national_bibliography_codes')
-end
-
-def clean_qualifier_sf(value)
-  value.gsub!(/[()]/, '')
-end
-
-def split_qualifier(value)
-  m = /^(.+?) ?\((.+)\)/.match(value)
-  [m[1], m[2]]
-end
-
-def process_010(field, acc)
-  # 010 defines no qualifying info field
-  field.subfields.each do |sf|
-    case sf.code
-    when 'a'
-      acc << {'value' => sf.value, 'qual' => '', 'type' => 'LCCN'}
-    when 'b'
-      acc << {'value' => sf.value, 'qual' => '', 'type' => 'NUCMC'}
-    end
-  end
-end
-
-def process_015(field, acc)
-  sf_a = field.select { |sf| sf.code == 'a' }
-  sf_q = field.select { |sf| sf.code == 'q' }
-  sf_2 = field.select { |sf| sf.code == '2' }
-  type = 'National Bibliography Number'
-
-  if sf_2.size > 0
-    type = national_bibliography_codes[sf_2[0].value]
-  end
-
-  # when $q was defined 2013, the instruction to record multiple numbers
-  #  in repeating subfields was in place -- UNC catalog has no examples of
-  # multiple $a with $q in the same field. When $q exists, there is only 1 $a
-  if sf_a.size == 1 && sf_q.size == 1
-    id = sf_a[0].value
-    qual = clean_qualifier_sf(sf_q[0].value)
-    acc << {'value' => id, 'qual' => qual, 'type' => type}
-  # Prior to 2001, 015 field was not repeatable. $q was not defined.
-  #  Multiple ids were recorded in repeated $a's, with parenthetical
-  #  qualifying info as part of $a
-  elsif sf_a.size > 0 && sf_q.size == 0
-    sf_a.each do |sf|
-      #hairy regex because sometimes entire sf value is in parens and in this case
-      #  should be set as the value
-      if sf.value =~ /^ *[^(]+\(.+\)/ 
-        split = split_qualifier(sf.value)
-        acc << {'value' => split[0], 'qual' => split[1], 'type' => type}
-      else
-        acc << {'value' => sf.value, 'qual' => '', 'type' => type}
-      end
-    end
-  end
-end
-
-unless settings["override"].include?("misc_id")
-
-
-  to_field "misc_id" do |rec, acc|
-    Traject::MarcExtractor.cached('010ab:015aq2').each_matching_line(rec) do |field, spec, extractor|
-      case field.tag
-      when '010'
-        process_010(field, acc)
-      when '015'
-        process_015(field, acc)
-      end
-    end
-    acc.uniq!
-  end
 end
 
 ################################################

@@ -1,0 +1,1 @@
+00370nam a2200109   45e000100090000000300060000900500170001500800410003211100840007324000270015724500760018410373434OCoLC20100408194938.0090218s2008    nyu    foab   001 0 eng d2 aConsulta Latinoamericana de Iglesia y Sociedadn(2nd :d1966 :cEl Tabo, Chile)10aAmérica hoy.lEnglish10aSocial justice and the Latin churches.cTranslated by Jorge Lara-Braud.

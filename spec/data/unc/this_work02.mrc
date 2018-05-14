@@ -1,0 +1,1 @@
+00359nam a2200109   45e000100090000000300060000900500170001500800410003210000310007324000240010424501210012810373434OCoLC20100408194938.0090218s2008    nyu    foab   001 0 eng d1 aCamus, Albert,d1913-1960.10aÉtranger.lEnglish14aThe stranger /cAlbert Camus ; translated from the French by Matthew Ward ; with an introduction by Peter Dunwoodie.

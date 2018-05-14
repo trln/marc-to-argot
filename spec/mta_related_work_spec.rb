@@ -8,7 +8,7 @@ describe MarcToArgot do
   let(:related_work_linking_fields) { run_traject_json('unc', 'related_work_linking_fields', 'mrc') }  
 
   xit '(MTA) sets related_work_from_700_710_711_730_740' do
-    result = note_access_restrictions['related_work_mirror_included']
+    result = related_work_mirror_included['related_work']
     expect(result).to eq(
                         [{'type'=>'related',
                           'author'=>'Saint-SaÃ«ns, Camille, 1835-1921.',
@@ -77,7 +77,7 @@ describe MarcToArgot do
   end
 
   xit '(MTA) sets related_work_from_700_710_711_730_740 additional' do
-    result = note_access_restrictions['related_work_addtl_7XX']
+    result = related_work_addtl_7XX['related_work']
     expect(result).to eq(
                         [{'type'=>'related',
                           'label'=>'Facsimile of',
@@ -99,7 +99,7 @@ describe MarcToArgot do
   end
 
   xit '(MTA) sets related_work from 76X-78X linking fields' do
-    result = note_access_restrictions['related_work_linking_fields']
+    result = related_work_linking_fields['related_work']
     expect(result).to eq(
                         [{'type'=>'translation_of',
                           'author'=>'China.',

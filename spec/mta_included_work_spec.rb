@@ -1,4 +1,4 @@
-# coding: iso-8859-1
+# coding: utf-8
 require 'spec_helper'
 
 describe MarcToArgot do
@@ -6,7 +6,7 @@ describe MarcToArgot do
   let(:included_work) { run_traject_json('unc', 'included_work', 'mrc') }
 
   xit '(MTA) sets included_work' do
-    result = note_access_restrictions['included_work']
+    result = included_work['included_work']
     expect(result).to eq(
                         [{'type'=>'included',
                           'author'=>'Saint-Saëns, Camille, 1835-1921.',

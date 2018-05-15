@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01214nam a22003137a 4500</leader>
+  <controlfield tag="005">19910301114529.0</controlfield>
+  <controlfield tag="008">910301r19851983dcu     b    f00010 eng d</controlfield>
+  <datafield tag="027" ind1=" " ind2=" ">
+    <subfield code="a">PWA-5594-243</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)23174151</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">GPO</subfield>
+    <subfield code="c">GPO</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">MvI</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+  </datafield>
+  <datafield tag="074" ind1=" " ind2=" ">
+    <subfield code="a">830-H-14 (MF)</subfield>
+  </datafield>
+  <datafield tag="086" ind1="0" ind2=" ">
+    <subfield code="a">NAS 1.26:168189</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2="0">
+    <subfield code="a">Leach, K. P.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Energy efficient engine high-pressure turbine component rig performance test report</subfield>
+    <subfield code="h">[microform] /</subfield>
+    <subfield code="c">K.P. Leach.</subfield>
+  </datafield>
+  <datafield tag="260" ind1="0" ind2=" ">
+    <subfield code="a">[Cleveland, Ohio :</subfield>
+    <subfield code="b">National Aeronautics and Space Administration, Lewis Research Center,</subfield>
+    <subfield code="c">1983]</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 v.</subfield>
+  </datafield>
+  <datafield tag="490" ind1="1" ind2=" ">
+    <subfield code="a">NASA-CR ;</subfield>
+    <subfield code="v">168189</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Distributed to depository libraries in microfiche.</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Microfiche.</subfield>
+    <subfield code="b">[Washington, D.C.? :</subfield>
+    <subfield code="c">National Aeronautics and Space Administration],</subfield>
+    <subfield code="d">1985.</subfield>
+    <subfield code="e">3 microfiches.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">14</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Airplanes</subfield>
+    <subfield code="x">Turbine-propeller engines.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2="0">
+    <subfield code="a">Lewis Research Center.</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">NASA contractor report ;</subfield>
+    <subfield code="v">NASA CR-168189.</subfield>
+  </datafield>
+  <datafield tag="948" ind1=" " ind2=" ">
+    <subfield code="a">12/03/1999</subfield>
+    <subfield code="b">12/03/1999</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="a">NAS 1.26:168189</subfield>
+    <subfield code="b">222226</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">ALZ-2352</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">1237409</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">NAS 1.26:168189</subfield>
+    <subfield code="w">SUDOC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">0999967025860</subfield>
+    <subfield code="l">US-DOCS-MF</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MICROFICHE</subfield>
+    <subfield code="u">11/29/1999</subfield>
+    <subfield code="z">FEDDOC</subfield>
+  </datafield>
+</record>
+</collection>

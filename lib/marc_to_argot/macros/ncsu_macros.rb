@@ -4,15 +4,18 @@ module MarcToArgot
   module Macros
     # Macros for NCSU-specific tasks
     module NCSU
-      autoload :Summaries, 'marc_to_argot/macros/ncsu/summaries'
-      autoload :Items, 'marc_to_argot/macros/ncsu/items'
+      require 'marc_to_argot/macros/ncsu/summaries'
+      require 'marc_to_argot/macros/ncsu/items'
+      require 'marc_to_argot/macros/ncsu/physical_media'
 
-      include MarcToArgot::Macros::NCSU::Summaries
-      include MarcToArgot::Macros::NCSU::Items
-
-      MarcExtractor = Traject::MarcExtractor
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
+
+      include Summaries
+      include Items
+      include PhysicalMedia
+
+      MarcExtractor = Traject::MarcExtractor
 
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?

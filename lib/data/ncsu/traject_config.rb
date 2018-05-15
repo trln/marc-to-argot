@@ -1,5 +1,3 @@
-require 'set'
-require 'pp'
 ################################################
 # Primary ID
 ######
@@ -19,6 +17,8 @@ to_field 'institution', literal('ncsu')
 to_field 'rollup_id', rollup_id
 
 to_field 'items', extract_items
+
+to_field 'physical_media', physical_media
 
 def shadowed_location?(item)
   %w[BOTMISSING ACQ-S MISSING].include?(item['loc_n'])

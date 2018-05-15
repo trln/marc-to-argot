@@ -1,0 +1,29 @@
+MICROFILM: Microform > Microfilm
+MICROFICHE: Microform > Microfiche
+ACMICROFIC: Microform > Microfiche
+MICROOPAQ: Microform > Microopaque
+EBOOK: E-reader or player # only at DHHILL
+CD-ROM: CD
+AUD-CD: CD
+ACAUD-CD: CD
+ACCD-ROM: CD
+GIS_CD_ROM: CD
+CD-ROM-NC:VID-CD: CD
+DVD-ROM: DVD
+ACVID-ROM: DVD
+VID-DVD: DVD
+ACVID-DVD: DVD
+TEACH-DVD: DVD
+ART: Art
+SLIDES: Slides
+ACSLIDES: Slides
+POSTER: Poster
+FILMSTRIP: Film
+VID-CASS: Videocassette
+ACVID-CASS: Videocassette
+TEACH-CASS: Videocassette
+BETA: Videocassette (Beta)
+7D-HI: Videocassette (Beta)
+VID-DISC: Laserdisc
+AUD-DISC: Vinyl record
+ACAUD-DISC: Vinyl record

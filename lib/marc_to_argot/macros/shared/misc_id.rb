@@ -262,9 +262,9 @@ module MarcToArgot
         end
 
         def value_from_028(field)
-          field.select { |sf| sf.code == 'a' }.first.value
+          field.subfields.select { |sf| sf.code == 'a' }.map(&:value).first
         end
-
+        
         def qual_from_028(field)
           field.select { |sf| %w[b q].include?(sf.code) }
                .map { |sf| remove_parentheses(sf.value.strip) }

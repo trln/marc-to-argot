@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe MarcToArgot::Macros::Shared::Notes do
+describe MarcToArgot::Macros::Shared::MiscId do
   include Util::TrajectRunTest
   let(:misc_id) { run_traject_json('duke', 'misc_id', 'mrc') }
   let(:misc_id01) { run_traject_json('unc', 'ids01') }

@@ -1,542 +1,271 @@
-voc: contributor
-vocalist: contributor
-clb: contributor
-collaborator: contributor
-grt: creator
-graphic technician: creator
-ppt: contributor
-puppeteer: contributor
-stm: uncategorized
-stage manager: uncategorized
-stg: uncategorized
-setting: uncategorized
-sce: contributor
-scenarist: contributor
-prv: uncategorized
-provider: uncategorized
-pra: creator
-praeses: creator
-pte: uncategorized
-plaintiff-appellee: uncategorized
-spk: contributor
-speaker: contributor
-rce: contributor
-recording engineer: contributor
-pro: contributor
-producer: contributor
-wac: contributor
-writer of added commentary: contributor
-win: contributor
-writer of introduction: contributor
-tlp: other
-television producer: other
-sgd: contributor
-stage director: contributor
-ptf: other
-plaintiff: other
-tyd: uncategorized
-type designer: uncategorized
-sds: uncategorized
-sound designer: uncategorized
-sgn: uncategorized
-signer: uncategorized
-rcp: other
-addressee: other
-srv: contributor
-surveyor: contributor
-rsg: contributor
-restager: contributor
-pmn: uncategorized
-production manager: uncategorized
-sng: contributor
-singer: contributor
-res: contributor
-researcher: contributor
-pup: uncategorized
-publication place: uncategorized
-wat: contributor
-writer of added text: contributor
-rpc: other
-radio producer: other
-ivr: creator
-interviewer: creator
-mod: contributor
-moderator: contributor
-prs: contributor
-production designer: contributor
-csp: contributor
-consultant to a project: contributor
-dpc: uncategorized
-depicted: uncategorized
-lse: uncategorized
-licensee: uncategorized
-brd: publisher
-broadcaster: publisher
-fnd: uncategorized
-funder: uncategorized
-edt: contributor
-editor: contributor
-bkp: uncategorized
-book producer: uncategorized
-egr: manufacturer
-engraver: manufacturer
-ccp: contributor
-conceptor: contributor
-opn: uncategorized
-opponent: uncategorized
-cmm: contributor
-commentator: contributor
-orm: other
-organizer: other
-cov: uncategorized
-cover designer: uncategorized
-vac: contributor
-voice actor: contributor
-rcd: contributor
-recordist: contributor
-dtc: uncategorized
-data contributor: uncategorized
-cur: other
-curator: other
-lee: uncategorized
-libelee-appellee: uncategorized
-edc: contributor
-editor of compilation: contributor
-cou: other
-court governed: other
-com: creator
-compiler: creator
-mrb: uncategorized
-marbler: uncategorized
-osp: contributor
-onscreen presenter: contributor
-drt: other
-director: other
-fpy: uncategorized
-first party: uncategorized
-rps: uncategorized
-repository: uncategorized
-cns: uncategorized
-censor: uncategorized
-pat: uncategorized
-patron: uncategorized
-lel: uncategorized
-libelee: uncategorized
-aft: contributor
-author of afterword, colophon, etc.: contributor
-mtk: contributor
-minute taker: contributor
-isb: other
-issuing body: other
-lbr: uncategorized
-laboratory: uncategorized
-ann: other
-annotator: other
-dnr: owner
-donor: owner
-ape: other
-appellee: other
-lsa: creator
-landscape architect: creator
-cpc: uncategorized
-copyright claimant: uncategorized
-elt: uncategorized
-electrotyper: uncategorized
-tcd: uncategorized
-technical director: uncategorized
-pbd: uncategorized
-publishing director: uncategorized
-sll: owner
-seller: owner
-bdd: uncategorized
-binding designer: uncategorized
-pan: contributor
-panelist: contributor
-cmp: creator
-composer: creator
-asg: uncategorized
-assignee: uncategorized
-wde: contributor
-wood engraver: contributor
-spn: other
-sponsor: other
-ptt: uncategorized
-plaintiff-appellant: uncategorized
-crr: uncategorized
-corrector: uncategorized
-enj: creator
-enacting jurisdiction: creator
-cnd: contributor
-conductor: contributor
-lso: uncategorized
-licensor: uncategorized
-cpt: uncategorized
-complainant-appellant: uncategorized
-rth: contributor
-research team head: contributor
-lit: uncategorized
-libelant-appellant: uncategorized
-rse: uncategorized
-respondent-appellee: uncategorized
-cpl: uncategorized
-complainant: uncategorized
-rst: uncategorized
-respondent-appellant: uncategorized
-rsr: other
-restorationist: other
-exp: uncategorized
-expert: uncategorized
-prm: manufacturer
-printmaker: manufacturer
-eng: contributor
-engineer: contributor
-rbr: uncategorized
-rubricator: uncategorized
-col: other
-collector: other
-elg: uncategorized
-electrician: uncategorized
-dfd: other
-defendant: other
-arr: contributor
-arranger: contributor
-chr: creator
-choreographer: creator
-str: uncategorized
-stereotyper: uncategorized
-fac: contributor
-facsimilist: contributor
-mrk: uncategorized
-markup editor: uncategorized
-tyg: uncategorized
-typographer: uncategorized
-ctb: contributor
-contributor: contributor
-dis: contributor
-dissertant: contributor
-brl: manufacturer
-braille embosser: manufacturer
-ilu: other
-illuminator: other
-aud: contributor
-author of dialog: contributor
-auc: uncategorized
-auctioneer: uncategorized
-aus: creator
-screenwriter: creator
-lbt: creator
-librettist: creator
-cpe: uncategorized
-complainant-appellee: uncategorized
-prc: uncategorized
-process contact: uncategorized
-pth: uncategorized
-patent holder: uncategorized
-dgg: other
-degree granting institution: other
-ths: uncategorized
-thesis advisor: uncategorized
-med: other
-medium: other
-mus: contributor
-musician: contributor
-bpd: uncategorized
-bookplate designer: uncategorized
-lyr: creator
-lyricist: creator
-scl: creator
-sculptor: creator
-ill: contributor
-illustrator: contributor
-bsl: uncategorized
-bookseller: uncategorized
-abr: contributor
 abridger: contributor
-wit: uncategorized
-witness: uncategorized
-mfr: contributor
-manufacturer: contributor
-hst: contributor
-host: contributor
-edm: contributor
-editor of moving image work: contributor
-org: contributor
-originator: contributor
-mte: contributor
-metal-engraver: contributor
-pht: creator
-photographer: creator
-cot: uncategorized
-contestant-appellant: uncategorized
-cph: uncategorized
-copyright holder: uncategorized
-fld: uncategorized
-field director: uncategorized
-scr: contributor
-scribe: contributor
-sht: uncategorized
-supporting host: uncategorized
-prd: contributor
-production personnel: contributor
-anm: contributor
-animator: contributor
-prt: manufacturer
-printer: manufacturer
-ppm: uncategorized
-papermaker: uncategorized
-led: uncategorized
-lead: uncategorized
-ren: contributor
-renderer: contributor
-prf: contributor
-performer: contributor
-fmd: other
-film director: other
-jug: other
-jurisdiction governed: other
-ctg: creator
-cartographer: creator
-std: contributor
-set designer: contributor
-aui: contributor
-author of introduction, etc.: contributor
-rsp: creator
-respondent: creator
-pta: uncategorized
-patent applicant: uncategorized
-fmo: owner
-former owner: owner
-ive: creator
-interviewee: creator
-cli: uncategorized
-client: uncategorized
-pma: uncategorized
-permitting agency: uncategorized
-dte: other
-dedicatee: other
-trl: contributor
-translator: contributor
-his: other
-host institution: other
-vdg: contributor
-videographer: contributor
-itr: contributor
-instrumentalist: contributor
-dfe: uncategorized
-defendant-appellee: uncategorized
-ato: other
-autographer: other
-dgs: other
-degree supervisor: other
-nrt: contributor
-narrator: contributor
-ctr: contributor
-contractor: contributor
-adi: contributor
-art director: contributor
-lil: uncategorized
-libelant: uncategorized
-ant: uncategorized
-bibliographic antecedent: uncategorized
-prn: other
-production company: other
-dbp: uncategorized
-distribution place: uncategorized
-inv: creator
-inventor: creator
-sad: contributor
-scientific advisor: contributor
-ins: other
-inscriber: other
-wam: contributor
-writer of accompanying material: contributor
-hnr: other
-honoree: other
-lie: uncategorized
-libelant-appellee: uncategorized
-dto: other
-dedicator: other
-att: uncategorized
-attributed name: uncategorized
-fmp: other
-film producer: other
-pfr: uncategorized
-proofreader: uncategorized
-csl: other
-consultant: other
-pbl: publisher
-publisher: publisher
-asn: uncategorized
-associated name: uncategorized
-cts: uncategorized
-contestee: uncategorized
-wal: contributor
-writer of added lyrics: contributor
-rtm: contributor
-research team member: contributor
-fds: distributor
-film distributor: distributor
-prp: uncategorized
-production place: uncategorized
-dft: uncategorized
-defendant-appellant: uncategorized
-cwt: contributor
-commentator for written text: contributor
-sec: contributor
-secretary: contributor
-drm: contributor
-draftsman: contributor
-spy: uncategorized
-second party: uncategorized
-cst: contributor
-costume designer: contributor
-dsr: creator
-designer: creator
-acp: uncategorized
-art copyist: uncategorized
-blw: uncategorized
-blurb writer: uncategorized
-ldr: uncategorized
-laboratory director: uncategorized
-len: uncategorized
-lender: uncategorized
-cte: uncategorized
-contestee-appellee: uncategorized
-lgd: contributor
-lighting designer: contributor
-cre: creator
-creator: creator
-own: owner
-owner: owner
-bkd: uncategorized
-book designer: uncategorized
-con: uncategorized
-conservator: uncategorized
-gis: uncategorized
-geographic information specialist: uncategorized
-art: creator
-artist: creator
-mcp: uncategorized
-music copyist: uncategorized
-evp: uncategorized
-event place: uncategorized
-pre: contributor
-presenter: contributor
-mfp: uncategorized
-manufacture place: uncategorized
-cor: other
-collection registrar: other
-oth: other
-other: other
-wst: contributor
-writer of supplementary textual content: contributor
-rev: contributor
-reviewer: contributor
-stn: contributor
-standards body: contributor
-let: uncategorized
-libelee-appellant: uncategorized
-mon: uncategorized
-monitor: uncategorized
-uvp: uncategorized
-university place: uncategorized
-etr: manufacturer
-etcher: manufacturer
-ard: uncategorized
-artistic director: uncategorized
-rdd: other
-radio director: other
-wdc: contributor
-woodcutter: contributor
-wpr: contributor
-writer of preface: contributor
-stl: contributor
-storyteller: contributor
-bnd: other
-binder: other
-dst: publisher
-distributor: publisher
-aqt: contributor
-author in quotations or text abstracts: contributor
-cll: contributor
-calligrapher: contributor
-dtm: uncategorized
-data manager: uncategorized
-frg: contributor
-forger: contributor
-clr: uncategorized
-colorist: uncategorized
-crp: contributor
-correspondent: contributor
-msd: contributor
-musical director: contributor
-mdc: uncategorized
-metadata contact: uncategorized
-arc: creator
-architect: creator
-tld: other
-television director: other
-crt: contributor
-court reporter: contributor
-apl: other
-appellant: other
-ctt: uncategorized
-contestee-appellant: uncategorized
-dpt: owner
-depositor: owner
-adp: contributor
-adapter: contributor
-pdr: uncategorized
-project director: uncategorized
-act: contributor
 actor: contributor
-cmt: uncategorized
-compositor: uncategorized
-pop: uncategorized
-printer of plates: uncategorized
-dub: uncategorized
-dubious author: uncategorized
-prg: creator
-programmer: creator
-jud: other
-judge: other
-cng: other
-cinematographer: other
-tch: contributor
-teacher: contributor
-trc: contributor
-transcriber: contributor
-coe: uncategorized
-contestant-appellee: uncategorized
-cos: uncategorized
-contestant: uncategorized
-dnc: contributor
-dancer: contributor
-dln: contributor
-delineator: contributor
-rpt: contributor
-reporter: contributor
-anl: uncategorized
+adapter: contributor
+addressee: other
 analyst: uncategorized
-red: uncategorized
-redaktor: uncategorized
-aut: creator
-author: creator
-clt: manufacturer
-collotyper: manufacturer
-ltg: manufacturer
-lithographer: manufacturer
-plt: manufacturer
-platemaker: manufacturer
-cas: manufacturer
-caster: manufacturer
-fmk: creator
-filmmaker: creator
-flm: contributor
-film editor: contributor
-rpy: contributor
-responsible party: contributor
-app: uncategorized
+animator: contributor
+annotator: other
+appellant: other
+appellee: other
 applicant: uncategorized
-bjd: uncategorized
+architect: creator
+arranger: contributor
+art copyist: uncategorized
+art director: contributor
+artist: creator
+artistic director: uncategorized
+assignee: uncategorized
+associated name: uncategorized
+attributed name: uncategorized
+auctioneer: uncategorized
+author in quotations or text abstracts: contributor
+author of afterword, colophon, etc.: contributor
+author of dialog: creator
+author of introduction, etc.: contributor
+author: creator
+autographer: other
+bibliographic antecedent: uncategorized
+binder: other
+binding designer: uncategorized
+blurb writer: uncategorized
+book designer: uncategorized
+book producer: uncategorized
 bookjacket designer: uncategorized
+bookplate designer: uncategorized
+bookseller: uncategorized
+braille embosser: manufacturer
+broadcaster: publisher
+calligrapher: contributor
+cartographer: creator
+caster: manufacturer
+censor: uncategorized
+choreographer: creator
+cinematographer: other
+client: uncategorized
+collaborator: contributor
+collection registrar: other
+collector: other
+collotyper: manufacturer
+colorist: uncategorized
+commentator for written text: contributor
+commentator: contributor
+compiler: creator
+complainant-appellant: uncategorized
+complainant-appellee: uncategorized
+complainant: uncategorized
+composer: creator
+compositor: uncategorized
+conceptor: contributor
+conductor: contributor
+conservator: uncategorized
+consultant to a project: contributor
+consultant: other
+contestant-appellant: uncategorized
+contestant-appellee: uncategorized
+contestant: uncategorized
+contestee-appellant: uncategorized
+contestee-appellee: uncategorized
+contestee: uncategorized
+contractor: contributor
+contributor: contributor
+copyright claimant: uncategorized
+copyright holder: uncategorized
+corrector: uncategorized
+correspondent: contributor
+costume designer: contributor
+court governed: other
+court reporter: contributor
+cover designer: uncategorized
+creator: creator
+curator: other
+dancer: contributor
+data contributor: uncategorized
+data manager: uncategorized
+dedicatee: other
+dedicator: other
+defendant-appellant: uncategorized
+defendant-appellee: uncategorized
+defendant: other
+degree granting institution: other
+degree supervisor: other
+delineator: contributor
+depicted: uncategorized
+depositor: owner
+designer: creator
+director: director
+dissertant: creator
+distribution place: uncategorized
+distributor: publisher
+donor: owner
+draftsman: contributor
+dubious author: uncategorized
+editor of compilation: editor
+editor of moving image work: contributor
+editor: editor
+electrician: uncategorized
+electrotyper: uncategorized
+enacting jurisdiction: creator
+engineer: contributor
+engraver: manufacturer
+etcher: manufacturer
+event place: uncategorized
+expert: uncategorized
+facsimilist: contributor
+field director: uncategorized
+film director: director
+film distributor: distributor
+film editor: contributor
+film producer: other
+filmmaker: director
+first party: uncategorized
+forger: contributor
+former owner: owner
+funder: uncategorized
+geographic information specialist: uncategorized
+graphic technician: creator
+honoree: other
+host institution: other
+host: contributor
+illuminator: other
+illustrator: contributor
+inscriber: other
+instrumentalist: contributor
+interviewee: creator
+interviewer: creator
+inventor: creator
+issuing body: publisher
+judge: other
+jurisdiction governed: other
+laboratory director: uncategorized
+laboratory: uncategorized
+landscape architect: creator
+lead: uncategorized
+lender: uncategorized
+libelant-appellant: uncategorized
+libelant-appellee: uncategorized
+libelant: uncategorized
+libelee-appellant: uncategorized
+libelee-appellee: uncategorized
+libelee: uncategorized
+librettist: creator
+licensee: uncategorized
+licensor: uncategorized
+lighting designer: contributor
+lithographer: manufacturer
+lyricist: creator
+manufacture place: uncategorized
+manufacturer: manufacturer
+marbler: uncategorized
+markup editor: uncategorized
+medium: other
+metadata contact: uncategorized
+metal-engraver: contributor
+minute taker: contributor
+moderator: contributor
+monitor: uncategorized
+music copyist: uncategorized
+musical director: contributor
+musician: contributor
+narrator: contributor
+onscreen presenter: contributor
+opponent: uncategorized
+organizer: other
+originator: creator
+other: other
+owner: owner
+panelist: contributor
+papermaker: uncategorized
+patent applicant: uncategorized
+patent holder: uncategorized
+patron: uncategorized
+performer: contributor
+permitting agency: uncategorized
+photographer: creator
+plaintiff-appellant: uncategorized
+plaintiff-appellee: uncategorized
+plaintiff: other
+platemaker: manufacturer
+praeses: creator
+presenter: contributor
+printer of plates: uncategorized
+printer: manufacturer
+printmaker: manufacturer
+process contact: uncategorized
+producer: contributor
+production company: other
+production designer: contributor
+production manager: uncategorized
+production personnel: contributor
+production place: uncategorized
+programmer: creator
+project director: uncategorized
+proofreader: uncategorized
+provider: publisher
+publication place: uncategorized
+publisher: publisher
+publishing director: uncategorized
+puppeteer: contributor
+radio director: director
+radio producer: other
+recording engineer: contributor
+recordist: contributor
+redaktor: uncategorized
+renderer: contributor
+reporter: contributor
+repository: uncategorized
+research team head: contributor
+research team member: contributor
+researcher: contributor
+respondent-appellant: uncategorized
+respondent-appellee: uncategorized
+respondent: creator
+responsible party: contributor
+restager: contributor
+restorationist: other
+reviewer: contributor
+rubricator: uncategorized
+scenarist: contributor
+scientific advisor: contributor
+screenwriter: creator
+scribe: contributor
+sculptor: creator
+second party: uncategorized
+secretary: contributor
+seller: owner
+set designer: contributor
+setting: uncategorized
+signer: uncategorized
+singer: contributor
+sound designer: uncategorized
+speaker: contributor
+sponsor: other
+stage director: contributor
+stage manager: uncategorized
+standards body: contributor
+stereotyper: uncategorized
+storyteller: contributor
+supporting host: uncategorized
+surveyor: contributor
+teacher: contributor
+technical director: uncategorized
+television director: director
+television producer: other
+thesis advisor: uncategorized
+transcriber: contributor
+translator: contributor
+type designer: uncategorized
+typographer: uncategorized
+university place: uncategorized
+videographer: contributor
+vocalist: contributor
+voice actor: contributor
+witness: uncategorized
+wood engraver: contributor
+woodcutter: contributor
+writer of accompanying material: contributor
+writer of added commentary: contributor
+writer of added lyrics: contributor
+writer of added text: contributor
+writer of introduction: contributor
+writer of preface: contributor
+writer of supplementary textual content: contributor

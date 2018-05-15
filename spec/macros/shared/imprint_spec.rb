@@ -1,3 +1,6 @@
+# coding: utf-8
+require 'spec_helper'
+
 describe MarcToArgot::Macros::Shared::Imprint do
   include Util
 

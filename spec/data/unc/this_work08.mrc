@@ -1,0 +1,1 @@
+00350nam a2200097   45e000100090000000300060000900500170001500800410003210000270007324501520010010373434OCoLC20100408194938.0090218s2008    nyu    foab   001 0 eng d1 aBoman, Patrick,d1948-10aThé de boeuf, radis de cheval :bde Paris-Montparnasse à Paris-Est en évitant la ligne 4 du métropolitain : journal de voyage /cPatrick Boman.

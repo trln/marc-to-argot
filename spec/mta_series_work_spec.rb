@@ -4,7 +4,8 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util::TrajectRunTest
   let(:series_work) { run_traject_json('unc', 'series_work', 'mrc') }
-
+  let(:series_work01) { run_traject_json('unc', 'series_work01', 'mrc') }
+  
   xit '(MTA) sets series_work' do
     result = series_work['series_work']
     expect(result).to eq(
@@ -85,4 +86,23 @@ describe MarcToArgot do
                         ]
                       )
   end
+
+  xit '(MTA) sets series_work' do
+    result = series_work['series_work']
+    expect(result).to eq(
+                        [{'type'=>'series',
+                          'title'=>'Records of ante-bellum southern plantations from the Revolution through the Civil War.||Series J,||Selections from the Southern Historical Collection, Manuscripts Department, Library of the University of North Carolina at Chapel Hill.||Part 3,||South Carolina',
+                          'details'=>'reel 1'},
+                         {'type'=>'series',
+                          'title'=>'Stewart dynasty in Scotland',
+                          'title_nonfiling'=>'The Stewart dynasty in Scotland'},
+                         {'type'=>'series',
+                          'title'=>'Companions to contemporary German culture',
+                          'issn'=>'2193-9659',
+                          'details'=>'v. 3'}
+                        ]
+                      )
+  end
 end
+
+

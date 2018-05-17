@@ -14,6 +14,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/shared/physical_media'
       require 'marc_to_argot/macros/shared/resource_type'
       require 'marc_to_argot/macros/shared/title_variant'
+      require 'marc_to_argot/macros/shared/upc'
       require 'marc_to_argot/macros/shared/urls'
 
       include Helpers
@@ -24,6 +25,7 @@ module MarcToArgot
       include PhysicalMedia
       include ResourceType
       include TitleVariant
+      include Upc
       include Urls
 
       # values to look for in the 856 that indicate

@@ -34,89 +34,6 @@ module MarcToArgot
         end
 
         ################################################
-        # Misc ID Helpers
-        ######
-
-        def assemble_id_hash(value, options = {})
-          id = {}
-
-          type = options.fetch(:type, nil)
-          qual = options.fetch(:qual, nil)
-          display = options.fetch(:display, nil)
-
-          id['value'] = value unless value.nil? || value.empty?
-          id['type'] = type unless type.nil? || type.empty? || display == 'false'
-          id['qual'] = qual unless qual.nil? || qual.empty? || display == 'false'
-          id['display'] = display unless display.nil? || display.empty?
-
-          id
-        end
-
-        # Takes a string and returns the identifier portion:
-        # "123456" => "123456"
-        # "123456 (abc)" => "123456"
-        # "123456 abc" => "123456 abc"
-        # "(123456)" => "(123456)"
-        # "(123456) (abc)" => "(123456)"
-        def extract_identifier(sf_value)
-          identifier = split_identifier_and_qualifier(sf_value).first
-          enclosed_id_match = /[\(\[]#{Regexp.escape(identifier)}[\)\]]/.match(sf_value)
-
-          enclosed_id_match ? enclosed_id_match[0] : identifier
-        end
-
-        # Takes a string and returns the qualifier portion
-        #   with parentheses and brackets removed:
-        # "123456" => nil
-        # "123456 (abc)" => "abc"
-        # "123456 abc" => nil
-        # "(123456)" => nil
-        # "(123456) (abc)" => "abc"
-        def extract_qualifier(sf_value)
-          qualifier = split_identifier_and_qualifier(sf_value)
-          return qualifier[1] if qualifier.length > 1
-        end
-
-        # Takes a string and returns an array of
-        #   the identifier and qualifier components.
-        #   the first item is always the identifier.
-        #   any outer brackets or parentheses present in the
-        #   identifier get reconstitued by #extract_identifier.
-        # "123456" => ["123456"]
-        # "123456 (abc)" => ["123456", "abc"]
-        # "123456 abc" => ["123456 abc"]
-        # "(123456)" => ["123456"]
-        # "(123456) (abc)" => ["123456", "abc"]
-        def split_identifier_and_qualifier(sf_value)
-          sf_value.split(/[\(\)\[\]]/).map(&:strip).delete_if { |str| str.empty? }
-        end
-
-        def remove_parentheses(value)
-          value.tr('[]()', '')
-        end
-
-        def qualifier_extracted_or_q(field, sf)
-          extracted_qualifier = extract_qualifier(sf.value)
-          return extracted_qualifier if extracted_qualifier
-
-          sf_q = field.subfields.select { |ssf| ssf.code == 'q' }
-          return remove_parentheses(sf_q.first.value) if sf_q.any?
-        end
-
-        def type_a_or_z(sf, type)
-          case sf.code
-          when 'a'
-            type
-          when 'z'
-            "#{type} #{cancelled_type}"
-          end
-        end
-
-        def cancelled_type
-          '(canceled or invalid)'
-        end
-
-        ################################################
         # MARC 010 Processor
         ######
 
@@ -151,25 +68,35 @@ module MarcToArgot
 
         def misc_id_015(field)
           ids = []
-          field.subfields.each do |sf|
-            id_hash = assemble_id_hash(value_from_015_sf(sf),
-                                       type: type_from_015(field),
-                                       qual: qualifier_extracted_or_q(field, sf))
+          id_subfields = 'az'
+          qual_subfields = 'q'
+
+          split_fields = split_complex_id_field(field, id_subfields, qual_subfields)
+
+          split_fields.each do |sfield|
+            id_hash = assemble_id_hash(value_from_015(sfield, id_subfields),
+                                       type: type_from_015(sfield),
+                                       qual: gather_qualifiers(sfield, id_subfields, qual_subfields))
             ids << id_hash if id_hash.has_key?('value')
           end
-
           ids
         end
 
-        def value_from_015_sf(sf)
-          extract_identifier(sf.value) if sf.code == 'a'
+        def value_from_015(field, id_subfields)
+          sfs = field.find_all { |sf| id_subfields.include?(sf.code) }
+          extract_identifier(sfs[0].value) if sfs.any?
         end
 
         def type_from_015(field)
-          sf_2 = field.subfields.select { |ssf| ssf.code == '2' }
-          sf_2_code = sf_2.first.value if sf_2.any?
-
-          national_bibliography_codes[sf_2_code] || 'National Bibliography Number'
+          source_code = get_data_source_code(field)
+          if source_code
+            type =  national_bibliography_codes[source_code] || 'National Bibliography Number'
+          else
+            type =  'National Bibliography Number'
+          end
+          
+          type = "#{type} #{cancelled_type}" if subfields_present(field).include?('z')
+          type
         end
 
         def national_bibliography_codes
@@ -182,29 +109,29 @@ module MarcToArgot
 
         def misc_id_024(field)
           ids = []
-          field.subfields.each do |sf|
-            id_hash = assemble_id_hash(value_from_024_sf(field, sf),
-                                       type: type_from_024_sf(field, sf),
-                                       qual: qualifier_extracted_or_q(field, sf))
-            ids << id_hash if id_hash.has_key?('value')
+          id_subfields = 'az'
+          qual_subfields = 'dq'
+          
+          if field.indicator1 != '1'
+            split_fields = split_complex_id_field(field, id_subfields, qual_subfields)
+
+            split_fields.each do |sfield|
+                id_hash = assemble_id_hash(value_from_024(sfield, id_subfields),
+                                           type: type_from_024(sfield),
+                                           qual: gather_qualifiers(sfield, id_subfields, qual_subfields))
+                ids << id_hash if id_hash.has_key?('value')
+            end
           end
 
           ids
         end
 
-        def value_from_024_sf(field, sf)
-          value = extract_identifier(sf.value)
-          case sf.code
-          when 'a'
-            sf_d = field.subfields.select { |ssf| ssf.code == 'd' }
-            sf_d_value = sf_d.first.value if sf_d.any?
-            [value, sf_d_value].compact.join(' ')
-          when 'z'
-            value
-          end
+        def value_from_024(field, id_subfields)
+          sfs = field.subfields.select { |sf| id_subfields.include?(sf.code) }
+          extract_identifier(sfs[0].value) if sfs.any? 
         end
 
-        def type_from_024_sf(field, sf)
+        def type_from_024(field)
           case field.indicator1
           when '0'
             type = 'International Standard Recording Number'
@@ -215,14 +142,14 @@ module MarcToArgot
           when '4'
             type = 'Serial Item and Contribution Identifier'
           when '7'
-            sf_2 = field.subfields.select { |ssf| ssf.code == '2' }
-            sf_2_code = sf_2.first.value if sf_2.any?
-            type = identifier_codes[sf_2_code] || 'Unspecified Standard Number'
+            type = identifier_codes[get_data_source_code(field)] || 'Unspecified Standard Number'
           when '8'
             type = 'Unspecified Standard Number'
           end
 
-          sf.code == 'z' ? "#{type} #{cancelled_type}" : type
+          type = "#{type} #{cancelled_type}" if subfields_present(field).include?('z')
+          type
+
         end
 
         def identifier_codes
@@ -253,7 +180,7 @@ module MarcToArgot
           field.subfields.each do |sf|
             id_hash = assemble_id_hash(value_from_028(field),
                                        type: type_from_028(field),
-                                       qual: qual_from_028(field),
+                                       qual: gather_qualifiers(field, '', 'bq'),
                                        display: display_from_028(field))
             ids << id_hash if id_hash.has_key?('value')
           end
@@ -263,12 +190,6 @@ module MarcToArgot
 
         def value_from_028(field)
           field.subfields.select { |sf| sf.code == 'a' }.map(&:value).first
-        end
-        
-        def qual_from_028(field)
-          field.select { |sf| %w[b q].include?(sf.code) }
-               .map { |sf| remove_parentheses(sf.value.strip) }
-               .join("; ")
         end
 
         def display_from_028(field)

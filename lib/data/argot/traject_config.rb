@@ -71,6 +71,10 @@ unless settings["override"].include?("misc_id")
   to_field "misc_id", misc_id
 end
 
+unless settings["override"].include?("upc")
+  to_field "upc", upc
+end
+
 ################################################
 # Dates
 ######
@@ -101,10 +105,6 @@ end
 ################################################
 # Publisher
 ######
-
-unless settings["override"].include?("publisher_number")
-  to_field "publisher_number", extract_marc(settings["specs"][:publisher_number])
-end
 
 unless settings["override"].include?("imprint_main")
   to_field "imprint_main", imprint_main

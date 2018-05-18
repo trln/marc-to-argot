@@ -94,7 +94,7 @@ module MarcToArgot
           else
             type =  'National Bibliography Number'
           end
-          
+
           type = "#{type} #{cancelled_type}" if subfields_present(field).include?('z')
           type
         end
@@ -111,7 +111,7 @@ module MarcToArgot
           ids = []
           id_subfields = 'az'
           qual_subfields = 'dq'
-          
+
           if field.indicator1 != '1'
             split_fields = split_complex_id_field(field, id_subfields, qual_subfields)
 

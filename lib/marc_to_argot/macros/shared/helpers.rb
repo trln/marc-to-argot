@@ -20,9 +20,9 @@ module MarcToArgot
         # collects an array of values from all instances of a particular subfield
         # code from a field
         # @param field [MARC::DataField] the field to collect subfields from
-        # @param code [String] the code of the subfield to collect
+        # @param code [String]|Array the code(s) of the subfield(s) to collect
         def collect_subfield_values_by_code(field, code)
-          field.subfields.collect { |sf| sf.value if sf.code == code }.compact
+          field.subfields.select { |sf| [*code].include?(sf.code) }.map(&:value)
         end
 
         # collects an array of values from all instances of one or more subfields
@@ -30,8 +30,8 @@ module MarcToArgot
         # @param field [MARC::DataField] the field to collect subfields from
         # @param code [String]|[Array] the code(s) of the subfield to collect
         # @param separator [String] the string to use to join the values
-        def collect_and_join_subfield_values(field, subfields_spec, separator = ' ')
-          field.subfields.select { |sf| [*subfields_spec].include?(sf.code) }.map(&:value).join(separator)
+        def collect_and_join_subfield_values(field, code, separator = ' ')
+          field.subfields.select { |sf| [*code].include?(sf.code) }.map(&:value).join(separator)
         end
 
         def subfields_present(field)

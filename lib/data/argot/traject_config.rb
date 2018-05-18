@@ -143,6 +143,14 @@ unless settings["override"].include?("title_variant")
 end
 
 ################################################
+# Related and Included Works
+######
+
+unless settings["override"].include?("included_work")
+  to_field "included_work", included_work
+end
+
+################################################
 # Notes
 ######
 

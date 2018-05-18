@@ -29,6 +29,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_reproduction_02) { run_traject_json('duke', 'note_reproduction_02', 'mrc') }
   let(:note_scale_01) { run_traject_json('duke', 'note_scale_01', 'mrc') }
   let(:note_scale_02) { run_traject_json('duke', 'note_scale_02', 'mrc') }
+  let(:note_serial_dates) { run_traject_json('unc', 'note_serial_dates', 'mrc') }
   let(:note_supplement) { run_traject_json('duke', 'note_supplement', 'mrc') }
   let(:note_system_details) { run_traject_json('duke', 'note_system_details', 'mrc') }
   let(:note_with) { run_traject_json('duke', 'note_with', 'mrc') }
@@ -349,6 +350,15 @@ describe MarcToArgot::Macros::Shared::Notes do
   it '(MTA) sets note_scale from 255' do
     result = note_scale_02['note_scale']
     expect(result).to include('Scale 1:33,000,000 ; Mercator projection (E 15°--E 60°/N 45°--N 15°).')
+  end
+
+  xit '(MTA) sets note_serial_dates from 362' do
+    result = note_serial_dates['note_serial_dates']
+    expect(result).to eq(
+                        ['Began with v. 1 in 1846; ceased in Mar. 1934. (Data from: Union list of serials.)',
+                         'Aug. 1, 1959-Aug. 1, 1965.'
+                        ]
+                      )
   end
 
   it '(MTA) sets note_supplement' do

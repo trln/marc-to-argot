@@ -150,6 +150,10 @@ unless settings["override"].include?("included_work")
   to_field "included_work", included_work
 end
 
+unless settings["override"].include?("related_work")
+  to_field "related_work", related_work
+end
+
 ################################################
 # Notes
 ######

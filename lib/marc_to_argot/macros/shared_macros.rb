@@ -1,3 +1,15 @@
+require 'marc_to_argot/macros/shared/helpers'
+require 'marc_to_argot/macros/shared/imprint'
+require 'marc_to_argot/macros/shared/misc_id'
+require 'marc_to_argot/macros/shared/names'
+require 'marc_to_argot/macros/shared/notes'
+require 'marc_to_argot/macros/shared/physical_media'
+require 'marc_to_argot/macros/shared/resource_type'
+require 'marc_to_argot/macros/shared/title_variant'
+require 'marc_to_argot/macros/shared/upc'
+require 'marc_to_argot/macros/shared/urls'
+require 'marc_to_argot/macros/shared/work_entry'
+
 require 'set'
 
 module MarcToArgot
@@ -6,21 +18,8 @@ module MarcToArgot
     # defined here, and overriden in institution-specific modules in the
     # same namespace.
     module Shared
-      require 'marc_to_argot/macros/shared/helpers'
-      require 'marc_to_argot/macros/shared/imprint'
-      require 'marc_to_argot/macros/shared/included_work'
-      require 'marc_to_argot/macros/shared/misc_id'
-      require 'marc_to_argot/macros/shared/names'
-      require 'marc_to_argot/macros/shared/notes'
-      require 'marc_to_argot/macros/shared/physical_media'
-      require 'marc_to_argot/macros/shared/resource_type'
-      require 'marc_to_argot/macros/shared/title_variant'
-      require 'marc_to_argot/macros/shared/upc'
-      require 'marc_to_argot/macros/shared/urls'
-
       include Helpers
       include Imprint
-      include IncludedWork
       include MiscId
       include Names
       include Notes
@@ -29,6 +28,7 @@ module MarcToArgot
       include TitleVariant
       include Upc
       include Urls
+      include WorkEntry
 
       # values to look for in the 856 that indicate
       # a record has online access.

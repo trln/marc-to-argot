@@ -84,10 +84,10 @@ unless settings["override"].include?("publication_year")
 end
 
 unless settings['override'].include?('date_cataloged')
-  to_field 'date_cataloged' do |rec, acc|
-    cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first
-    acc << Time.parse(cataloged).utc.iso8601 if cataloged
-  end
+    to_field 'date_cataloged' do |rec, acc|
+      cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first
+      acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
+    end
 end
 
 ################################################

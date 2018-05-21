@@ -225,8 +225,6 @@ module MarcToArgot
           # OR
           # 006/00 = k
           # OR
-          # 006/00 = m AND 006/09 = c
-          # OR
           # 006/00 = g AND 006/16 = a, c, I, k, l, n, p, s, t
           def image?
             marc_leader_06_k_match = record.leader.byteslice(6) == 'k'
@@ -243,7 +241,6 @@ module MarcToArgot
 
             marc_006_match = record.fields('006').find do |field|
               field.value.byteslice(0) == 'k' ||
-                (field.value.byteslice(0) == 'm' && field.value.byteslice(9) == 'c') ||
                   (field.value.byteslice(0) == '6' &&
                     %w[a c i k l n p s t].include?(field.value.byteslice(16)))
             end

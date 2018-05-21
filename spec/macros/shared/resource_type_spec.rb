@@ -23,6 +23,8 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   let(:resource_type_19) { run_traject_json('duke', 'resource_type_19', 'mrc') }
   let(:resource_type_20) { run_traject_json('unc', 'resource_type_20', 'xml') }
   let(:resource_type_21) { run_traject_json('unc', 'resource_type_21', 'xml') }
+  let(:resource_type_22) { run_traject_json('unc', 'resource_type_22', 'mrc') }
+
 
   it '(Duke) Sets resource_type to Music score' do
     result = resource_type_01['resource_type']
@@ -122,6 +124,25 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   it '(UNC) Sets resource_type to include Video AND Kit' do
     result = resource_type_21['resource_type']
     expect(result).to include('Video') && include('Kit')
+  end
+
+    
+  context '006/00 = m' do
+    context '006/09 = c' do
+      it '(UNC) does NOT set as Image' do
+        a = resource_type_22['resource_type']
+        expect(a).to_not include('Image')
+      end
+    end
+  end
+
+  context 'LDR/06 = g' do
+    context '008/33 = v' do
+      it '(UNC) sets as Video' do
+        a = resource_type_22['resource_type']
+        expect(a).to include('Video')
+      end
+    end
   end
 
 end

@@ -4,7 +4,8 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util::TrajectRunTest
   let(:details340) { run_traject_json('unc', 'phys_desc_details_340', 'mrc') }  
-
+  let(:details344) { run_traject_json('unc', 'phys_desc_details_344', 'mrc') }
+  
   xit '(MTA) sets physical_description_details from 340' do
     result = details340['physical_description_details']
     expect(result).to eq(
@@ -57,7 +58,38 @@ describe MarcToArgot do
                            'value' => 'negative'}
                         ]
                       )
-    end
+  end
+
+  xit '(MTA) sets physical_description_details from 344' do
+    result = details344['physical_description_details']
+    expect(result).to eq(
+                        [
+                          {'label' => 'Recording type',
+                           'value' => 'analog'},
+                          {'label' => 'Speed',
+                           'value' => '1 7/8 ips'},
+                          {'label' => 'Tape type',
+                           'value' => '4 track'},
+                          {'label' => 'Recording type',
+                           'value' => 'analog'},
+                          {'label' => 'Recording medium',
+                           'value' => 'magnetic'},
+                          {'label' => 'Channels',
+                           'value' => 'stereo; surround'},
+                          {'label' => 'Special audio characteristics',
+                           'value' => 'Dolby-B encoded'},
+                          {'label' => 'Recording type',
+                           'value' => 'analog'},
+                          {'label' => 'Speed',
+                           'value' => '78 rpm'},
+                          {'label' => 'Groove',
+                           'value' => 'coarse groove'},
+                          {'label' => 'Sound track configuration',
+                           'value' => 'edge track'}
+                        ]
+                      )
+  end
+
 end
 
 

@@ -7,6 +7,7 @@ describe MarcToArgot do
   let(:details344) { run_traject_json('unc', 'phys_desc_details_344', 'mrc') }
   let(:details345) { run_traject_json('unc', 'phys_desc_details_345', 'mrc') }
   let(:details346) { run_traject_json('unc', 'phys_desc_details_346', 'mrc') }
+  let(:details347) { run_traject_json('unc', 'phys_desc_details_347', 'mrc') }
   
   xit '(MTA) sets physical_description_details from 340' do
     result = details340['physical_description_details']
@@ -112,6 +113,34 @@ describe MarcToArgot do
                            'value' => 'VHS'},
                           {'label' => 'Broadcast standard',
                            'value' => 'NTSC'}
+                        ]
+                      )
+  end
+
+  xit '(MTA) sets physical_description_details from 347' do
+    result = details347['physical_description_details']
+    expect(result).to eq(
+                        [
+                          {'label' => 'File type',
+                           'value' => 'video file'},
+                          {'label' => 'File format',
+                           'value' => 'DVD video'},
+                          {'label' => 'Regional encoding',
+                           'value' => 'all regions'},
+                          {'label' => 'File type',
+                           'value' => 'image file'},
+                          {'label' => 'File format',
+                           'value' => 'JPEG'},
+                          {'label' => 'Image resolution',
+                           'value' => '3.1 megapixels'},
+                          {'label' => 'Image size',
+                           'value' => '1.5 MB'},
+                          {'label' => 'File type',
+                           'value' => 'audio file'},
+                          {'label' => 'File format',
+                           'value' => 'MP3'},
+                          {'label' => 'Bitrate',
+                           'value' => '128 kbps'}
                         ]
                       )
   end

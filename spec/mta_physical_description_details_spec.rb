@@ -5,6 +5,7 @@ describe MarcToArgot do
   include Util::TrajectRunTest
   let(:details340) { run_traject_json('unc', 'phys_desc_details_340', 'mrc') }  
   let(:details344) { run_traject_json('unc', 'phys_desc_details_344', 'mrc') }
+  let(:details345) { run_traject_json('unc', 'phys_desc_details_345', 'mrc') }
   
   xit '(MTA) sets physical_description_details from 340' do
     result = details340['physical_description_details']
@@ -90,8 +91,16 @@ describe MarcToArgot do
                       )
   end
 
+  xit '(MTA) sets physical_description_details from 345' do
+    result = details345['physical_description_details']
+    expect(result).to eq(
+                        [
+                          {'label' => 'DVD: Presentation format',
+                           'value' => 'full screen (1.33:1)'},
+                          {'label' => 'DVD: Projection speed',
+                           'value' => '24 fps'}
+                        ]
+                      )
+  end
+
 end
-
-
-
-

@@ -8,6 +8,7 @@ describe MarcToArgot do
   let(:details345) { run_traject_json('unc', 'phys_desc_details_345', 'mrc') }
   let(:details346) { run_traject_json('unc', 'phys_desc_details_346', 'mrc') }
   let(:details347) { run_traject_json('unc', 'phys_desc_details_347', 'mrc') }
+  let(:details352) { run_traject_json('unc', 'phys_desc_details_352', 'mrc') }
   
   xit '(MTA) sets physical_description_details from 340' do
     result = details340['physical_description_details']
@@ -141,6 +142,16 @@ describe MarcToArgot do
                            'value' => 'MP3'},
                           {'label' => 'Bitrate',
                            'value' => '128 kbps'}
+                        ]
+                      )
+  end
+  
+  xit '(MTA) sets physical_description_details from 352' do
+    result = details352['physical_description_details']
+    expect(result).to eq(
+                        [
+                          {'label' => 'Data set graphics details',
+                           'value' => 'Raster : Grid cell (20,880 x 43,200)'}
                         ]
                       )
   end

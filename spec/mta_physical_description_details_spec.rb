@@ -6,6 +6,7 @@ describe MarcToArgot do
   let(:details340) { run_traject_json('unc', 'phys_desc_details_340', 'mrc') }  
   let(:details344) { run_traject_json('unc', 'phys_desc_details_344', 'mrc') }
   let(:details345) { run_traject_json('unc', 'phys_desc_details_345', 'mrc') }
+  let(:details346) { run_traject_json('unc', 'phys_desc_details_346', 'mrc') }
   
   xit '(MTA) sets physical_description_details from 340' do
     result = details340['physical_description_details']
@@ -99,6 +100,18 @@ describe MarcToArgot do
                            'value' => 'full screen (1.33:1)'},
                           {'label' => 'DVD: Projection speed',
                            'value' => '24 fps'}
+                        ]
+                      )
+  end
+
+  xit '(MTA) sets physical_description_details from 346' do
+    result = details346['physical_description_details']
+    expect(result).to eq(
+                        [
+                          {'label' => 'Video format',
+                           'value' => 'VHS'},
+                          {'label' => 'Broadcast standard',
+                           'value' => 'NTSC'}
                         ]
                       )
   end

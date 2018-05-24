@@ -3,51 +3,49 @@ module MarcToArgot
     module Shared
       module WorkEntry
         ################################################
-        # Work Entry
+        # Work Entry: Included Work, Related Work,
+        #             Series Work, This Work
         ######
         def included_work
-          lambda do |rec, acc|
-            Traject::MarcExtractor.cached('700|*2|:710|*2|:711|*2|:730|*2|:740|*2|:774')
-                                  .each_matching_line(rec) do |field, spec, extractor|
-              next unless subfield_5_absent_or_present_with_local_code?(field)
-              included_work = assemble_work_entry_hash(field)
-
-              acc << included_work unless included_work.empty?
-            end
-          end
+          work_entry('700|*2|:710|*2|:711|*2|:730|*2|:740|*2|:774')
         end
 
         def related_work
-          lambda do |rec, acc|
-            Traject::MarcExtractor.cached('700|* |:710|* |:711|* |:730|* |:740|* |:'\
-                                          '765:767:770:772:773:775:777:780:785:786:787')
-                                  .each_matching_line(rec) do |field, spec, extractor|
-              next unless subfield_5_absent_or_present_with_local_code?(field)
-              related_work = assemble_work_entry_hash(field)
-
-              acc << related_work unless related_work.empty?
-            end
-          end
+          work_entry('700|* |:710|* |:711|* |:730|* |:740|* |:'\
+                     '765:767:770:772:773:775:777:780:785:786:787')
         end
 
         def series_work
-          lambda do |rec, acc|
-            Traject::MarcExtractor.cached('440:760:762:800:810:811:830')
-                                  .each_matching_line(rec) do |field, spec, extractor|
-              next unless subfield_5_absent_or_present_with_local_code?(field)
-              related_work = assemble_work_entry_hash(field)
+          work_entry('440:760:762:800:810:811:830')
+        end
 
-              acc << related_work unless related_work.empty?
+        def this_work
+          work_entry('100:110:111:130:240:245')
+        end
+
+        # NOTE: Alternate/vernacular scripts are excluded from processing
+        #       for now. Handling details TBD.
+        def work_entry(conf)
+          lambda do |rec, acc|
+            Traject::MarcExtractor.cached(conf, :alternate_script => false)
+                                  .each_matching_line(rec) do |field, spec, extractor|
+
+              next unless passes_work_entry_constraint?(field, rec)
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+
+              work_entry = assemble_work_entry_hash(field, rec)
+
+              acc << work_entry unless work_entry.empty?
             end
           end
         end
 
-        def assemble_work_entry_hash(field)
+        def assemble_work_entry_hash(field, rec)
           work_entry = {}
 
           work_entry['type'] = work_entry_type(field)
           work_entry['label'] = work_entry_label(field)
-          work_entry['author'] = work_entry_author(field)
+          work_entry['author'] = work_entry_author(field, rec)
           work_entry['title'] = work_entry_title(field)
           work_entry['title_nonfiling'] = work_entry_title_nonfiling(field)
           work_entry['title_variation'] = work_entry_title_variation(field)
@@ -64,17 +62,16 @@ module MarcToArgot
         # Type: Work Entry
         ######
         def work_entry_type(field)
-          return unless passes_work_entry_constraint?(field)
-
           case field.tag
           when /(700|710|711|730|740)/
-            work_entry_type_70x_71x_73x_74x(field)
-          when /(440|760|762|765|767|770|772|773|774|775|777|780|785|786|787|800|810|811|830)/
-            work_entry_type_440_76x_77x_78x_8xx(field)
+            work_entry_type_by_indicator2(field)
+          when /(100|110|111|130|240|245|440|760|762|765|767|770|772|773|
+                 774|775|777|780|785|786|787|800|810|811|830)/x
+            work_entry_type_by_field_tag(field)
           end
         end
 
-        def work_entry_type_70x_71x_73x_74x(field)
+        def work_entry_type_by_indicator2(field)
           case field.indicator2
           when '2'
             'included'
@@ -83,8 +80,10 @@ module MarcToArgot
           end
         end
 
-        def work_entry_type_440_76x_77x_78x_8xx(field)
+        def work_entry_type_by_field_tag(field)
           case field.tag
+          when /(100|110|111|130|240|245)/
+            'this'
           when /(440|760|800|810|811|830)/
             'series'
           when '762'
@@ -120,15 +119,14 @@ module MarcToArgot
         # Label: Work Entry
         ######
         def work_entry_label(field)
-          return unless passes_work_entry_constraint?(field) &&
-                        passes_work_entry_label_constraint?(field)
+          return unless passes_work_entry_label_constraint?(field)
 
           label = []
           case field.tag
           when /(700|710|711|730|773|800|810|811|830)/
-            label.concat work_entry_label_70x_71x_73x_773_8xx(field)
+            label.concat collect_subfield_i3_labels(field)
           when /(760|762|765|767|770|774|777|786|787)/
-            label << process_subfield_i(field)
+            label.concat collect_subfield_i_labels(field)
           when /(772|775|780|785)/
             label.concat work_entry_labels_772_775_780_785(field)
           end
@@ -140,7 +138,7 @@ module MarcToArgot
           labels = []
           sf_codes = field.subfields.map(&:code)
           if sf_codes.include?('i')
-            labels << process_subfield_i(field)
+            labels.concat collect_subfield_i_labels(field)
           else
             labels << work_entry_labels_772_775_780_785_no_sf_e(field)
           end
@@ -148,44 +146,37 @@ module MarcToArgot
         end
 
         def work_entry_labels_772_775_780_785_no_sf_e(field)
+          labels = []
           sf_codes = field.subfields.map(&:code)
           case field.tag
           when '772'
             if field.indicator2 == '0' && !sf_codes.include?('4')
-              'Parent item'
+              labels << 'Parent item'
             end
           when '775'
             if !sf_codes.include?('4')
-              process_subfield_e(field)
+              labels << collect_subfield_e_labels(field)
             end
           when '780'
-            translate_780_i2(field)
+            labels << translate_780_i2(field)
           when '785'
-            translate_785_i2(field)
+            labels << translate_785_i2(field)
           end
+          labels
         end
 
-        def passes_work_entry_label_constraint?(field)
-          case field.tag
-          when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
-            field.indicator1 == '0'
-          else
-            true
-          end
-        end
-
-        def work_entry_label_70x_71x_73x_773_8xx(field)
+        def collect_subfield_i3_labels(field)
           label = []
-          label << collect_subfield_3_label_values(field)
-          label << process_subfield_i(field)
+          label << collect_subfield_3_labels(field)
+          label << collect_subfield_i_labels(field)
           label
         end
 
-        def collect_subfield_3_label_values(field)
+        def collect_subfield_3_labels(field)
           field.subfields.select { |sf| sf.code == '3' }.map(&:value).first.to_s.chomp(":")
         end
 
-        def process_subfield_i(field)
+        def collect_subfield_i_labels(field)
           field.subfields.select { |sf| sf.code == 'i' }
                .map { |i| i.value.gsub(/\s\((work|expression|manifestation|item)\)/, '')
                                  .chomp(":")
@@ -193,7 +184,7 @@ module MarcToArgot
                                  .gsub('Contained in', "In") }
         end
 
-        def process_subfield_e(field)
+        def collect_subfield_e_labels(field)
           translation_map = Traject::TranslationMap.new("marc_languages")
           languages = field.subfields.select { |sf| sf.code == 'e' }.map do |sf|
             translation_map[sf.value]
@@ -245,20 +236,47 @@ module MarcToArgot
           end
         end
 
+        def passes_work_entry_label_constraint?(field)
+          case field.tag
+          when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
+            field.indicator1 == '0'
+          else
+            true
+          end
+        end
+
         ################################################
         # Author: Work Entry
         ######
-        def work_entry_author(field)
-          return unless passes_work_entry_constraint?(field)
+        def work_entry_author(field, rec)
           case field.tag
-          when /(700|800)/
+          when /(100|700|800)/
             collect_subfield_if_before(field, %w[a b c d j q u], 'g', %w[t k])
-          when /(710|810)/
+          when /(110|710|810)/
             collect_subfield_if_before(field, %w[a b c u], %w[d g n], %w[t k])
+          when /(111)/
+            collect_subfield_if_before(field, %w[a c e q u], %w[d g n], %w[t k])
+          when /(240|245)/
+            collect_author_for_240_245(rec)
           when /(711|811)/
             collect_subfield_if_before(field, %w[a c e u], %w[d g n], %w[t k])
           when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
             gsub_final_comma_with_period(collect_and_join_subfield_values(field, 'a'))
+          end
+        end
+
+        def collect_author_for_240_245(rec)
+          author_field = rec.fields.find do |f|
+            %w[100 110 111].include?(f.tag)
+          end
+          return if author_field.nil?
+          case author_field.tag
+          when '100'
+            collect_and_join_subfield_values(author_field, %w[a b c d g j q u]).chomp(',')
+          when '110'
+            collect_and_join_subfield_values(author_field, %w[a b c d g n u]).chomp(',')
+          when '111'
+            collect_and_join_subfield_values(author_field, %w[a c e q u d g n]).chomp(',')
           end
         end
 
@@ -279,9 +297,13 @@ module MarcToArgot
         # Title: Work Entry
         ######
         def work_entry_title(field)
-          return unless passes_work_entry_title_constraint?(field)
-
           case field.tag
+          when '100'
+            collect_subfield_if_after(field, %w[f h k l n p t], 'g', %w[t k])
+          when /(110|111)/
+            collect_subfield_if_after(field, %w[f k l p t], %w[d g n], %w[t k])
+          when '245'
+            collect_filing_title_from_subfields(field, %w[a f g k n p])
           when '440'
             collect_filing_title_from_subfields(field, %w[a n p])
           when /(700|800)/
@@ -290,7 +312,7 @@ module MarcToArgot
             collect_subfield_if_after(field, %w[f h k l m o p r s t], %w[d g n], %w[t k])
           when /(711|811)/
             collect_subfield_if_after(field, %w[f h k l m p s t], %w[d g n], %w[t k])
-          when /(730|830)/
+          when /(130|240|730|830)/
             collect_filing_title_from_subfields(field, %w[a d f g h k l m n o p r s])
           when '740'
             collect_filing_title_from_subfields(field, %w[a h n p])
@@ -318,15 +340,6 @@ module MarcToArgot
           end
         end
 
-        def passes_work_entry_title_constraint?(field)
-          case field.tag
-          when /(700|710|711)/
-            passes_constraint_has_tk?(field)
-          else
-            true
-          end
-        end
-
         def collect_subfield_if_after(field, spec_passthrough, spec_restricted, spec_after)
           first_index_of_spec_after = field.subfields.index { |sf|  spec_after.include?(sf.code) }
           selected_fields = field.subfields.select.with_index do |sf, index|
@@ -341,15 +354,14 @@ module MarcToArgot
           non_filing_chars = count_non_filing_characters(field)
           title[0] = title[0][non_filing_chars..-1]
           title[0] = capitalize_first_letter(title[0])
-          title
-          title.map { |t| t.strip.chomp(' ;') }
+          title.map { |t| t.strip.chomp(' ;').chomp(' /') }
         end
 
         def count_non_filing_characters(field)
           case field.tag
-          when /(730|740)/
+          when /(130|730|740)/
             field.indicator1.to_s.to_i
-          when /(440|830)/
+          when /(440|240|245|830)/
             field.indicator2.to_s.to_i
           end
         end
@@ -362,8 +374,10 @@ module MarcToArgot
           case field.tag
           when '440'
             collect_and_join_subfield_values(field, %w[a n p])
-          when /(730|830)/
+          when /(130|240|730|830)/
             collect_and_join_subfield_values(field, %w[a d f g h k l m n o p r s])
+          when '245'
+            collect_and_join_subfield_values(field, %w[a f g k n p]).chomp(' /')
           when '740'
             collect_and_join_subfield_values(field, %w[a h n p])
           when /(773|780)/
@@ -373,11 +387,9 @@ module MarcToArgot
 
         def passes_work_entry_title_nonfiling_constraint?(field)
           case field.tag
-          when /(730|740)/
+          when /(130|730|740)/
             field.indicator1.to_s.to_i > 0
-          when /(773|780)/
-            passes_constraint_has_ts?(field)
-          when /(440|830)/
+          when /(240|245|440|830)/
             field.indicator2.to_s.to_i > 0
           else
             true
@@ -390,7 +402,7 @@ module MarcToArgot
         def work_entry_title_variation(field)
           return unless passes_work_entry_title_variation_constraint?(field)
           case field.tag
-          when /(730|760|762|765|767|770|772|773|774|775|777|780|785|786|787|830)/
+          when /(130|730|760|762|765|767|770|772|773|774|775|777|780|785|786|787|830)/
             collect_and_join_subfield_values(field, 't')
           end
         end
@@ -398,6 +410,8 @@ module MarcToArgot
         def passes_work_entry_title_variation_constraint?(field)
           sf_codes = field.subfields.map(&:code)
           case field.tag
+          when '130'
+            sf_codes.include?('t')
           when /(730|830)/
             sf_codes.include?('t') && sf_codes.include?('a')
           when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
@@ -439,7 +453,7 @@ module MarcToArgot
         def passes_work_entry_details_constraints?(field)
           case field.tag
           when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
-            passes_constraint_has_ts?(field) && field.indicator1 == '0'
+            field.indicator1 == '0'
           else
             true
           end
@@ -465,7 +479,6 @@ module MarcToArgot
         # ISSN: Work Entry
         ######
         def work_entry_issn(field)
-          return unless passes_work_entry_constraint?(field)
           issn = collect_issn_from_sf_x(field)
           return issn.gsub(/[\.;]$/,'').strip unless issn.nil?
         end
@@ -480,7 +493,6 @@ module MarcToArgot
         def work_entry_isbn(field)
           case field.tag
           when /(765|767|770|772|773|774|775|777|780|785|786|787)/
-            return unless passes_constraint_has_ts?(field)
             collect_subfield_values_by_code(field, 'z')
           end
         end
@@ -491,7 +503,6 @@ module MarcToArgot
         def work_entry_other_ids(field)
           case field.tag
           when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
-            return unless passes_constraint_has_ts?(field)
             field.subfields.select { |sf| work_entry_other_id_subfields(field).include?(sf.code) }
                            .map { |sf| remove_parenthetical_id_prefix_from_sf_w(sf) }
           end
@@ -520,7 +531,7 @@ module MarcToArgot
         def work_entry_display(field)
           case field.tag
           when /(760|762|765|767|770|772|773|774|775|777|780|785|786|787)/
-            return unless passes_constraint_has_ts?(field) && field.indicator1 == '1'
+            return unless field.indicator1 == '1'
             'false'
           end
         end
@@ -528,23 +539,49 @@ module MarcToArgot
         ################################################
         # Constraints: Work Entry
         ######
-
-        def passes_work_entry_constraint?(field)
+        def passes_work_entry_constraint?(field, rec)
           case field.tag
+          when /(100|110|111)/
+            has_subfield_t?(field)
+          when '130'
+            !has_100_110_111?(rec)
+          when '240'
+            !has_100_110_111_with_t?(rec)
+          when '245'
+            !has_130_240?(rec) &&
+              !(has_100_110_111?(rec) &&
+                has_100_110_111_with_t?(rec))
           when /(700|710|711)/
-            passes_constraint_has_tk?(field)
+            has_subfield_tk?(field)
           when /(760|765|767|770|772|773|774|775|777|780|785|786|787)/
-            passes_constraint_has_ts?(field)
+            has_subfield_ts?(field)
           else
             true
           end
         end
 
-        def passes_constraint_has_tk?(field)
+        def has_130_240?(rec)
+          (%w[130 240] & rec.fields.map(&:tag)).any?
+        end
+
+        def has_100_110_111?(rec)
+          (%w[100 110 111] & rec.fields.map(&:tag)).any?
+        end
+
+        def has_100_110_111_with_t?(rec)
+          fields_1xx = rec.fields.select { |f| %w[100 110 111].include?(f.tag) }
+          fields_1xx.first.subfields.find { |sf| sf.code == 't' }
+        end
+
+        def has_subfield_t?(field)
+          field.subfields.map(&:code).include?('t')
+        end
+
+        def has_subfield_tk?(field)
           (%w[t k] & field.subfields.map(&:code)).any?
         end
 
-        def passes_constraint_has_ts?(field)
+        def has_subfield_ts?(field)
           (%w[t s] & field.subfields.map(&:code)).any?
         end
 

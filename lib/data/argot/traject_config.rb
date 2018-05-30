@@ -262,6 +262,10 @@ unless settings["override"].include?("note_with")
   to_field "note_with", extract_marc(settings["specs"][:note_with])
 end
 
+unless settings["override"].include?("note_serial_dates")
+  to_field "note_serial_dates", note_serial_dates
+end
+
 ################################################
 # URLs
 ######

@@ -352,7 +352,7 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to include('Scale 1:33,000,000 ; Mercator projection (E 15°--E 60°/N 45°--N 15°).')
   end
 
-  xit '(MTA) sets note_serial_dates from 362' do
+  it '(MTA) sets note_serial_dates from 362' do
     result = note_serial_dates['note_serial_dates']
     expect(result).to eq(
                         ['Began with v. 1 in 1846; ceased in Mar. 1934. (Data from: Union list of serials.)',

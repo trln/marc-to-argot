@@ -54,6 +54,13 @@ module MarcToArgot
           return sfs[0].value.strip if sfs.any?
         end
 
+        def capitalize_first_letter(value)
+          value = value.split('')
+          value.first.upcase!
+          value = value.join
+          value
+        end
+
         ################################################################
         # ID field-related helpers
         ################################################################

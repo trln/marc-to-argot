@@ -138,12 +138,16 @@ module MarcToArgot
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '521'
           labels << collect_subfield_values_by_code(field, '3').join(' ').chomp(':').capitalize
-          labels << 'For grade(s)' if field.indicator1 == '0'
-          labels << 'For age(s)' if field.indicator1 == '1'
-          labels << 'For grade(s)' if field.indicator1 == '2'
-          labels << 'For audience(s)' if field.indicator1 == '3'
-          labels << 'For audience(s)' if field.indicator1 == '4'
-          labels << 'For audience(s)' if field.indicator1 == ' '
+          case field.indicator1
+          when '0'
+            labels << 'For grade(s)'
+          when '1'
+            labels << 'For age(s)'
+          when '2'
+            labels << 'For grade(s)'
+          when /(3|4| )/
+            labels << 'For audience(s)'
+          end
         when '522'
           labels << 'Geographic coverage' if field.indicator1 == ' '
         when '526'

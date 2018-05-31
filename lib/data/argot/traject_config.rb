@@ -143,11 +143,24 @@ unless settings["override"].include?("title_variant")
 end
 
 ################################################
-# Related and Included Works
+# Work Entry: Related Work, Included Work,
+#             Series Work, This Work
 ######
 
 unless settings["override"].include?("included_work")
   to_field "included_work", included_work
+end
+
+unless settings["override"].include?("related_work")
+  to_field "related_work", related_work
+end
+
+unless settings["override"].include?("series_work")
+  to_field "series_work", series_work
+end
+
+unless settings["override"].include?("this_work")
+  to_field "this_work", this_work
 end
 
 ################################################

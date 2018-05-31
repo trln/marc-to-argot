@@ -86,7 +86,7 @@ describe MarcToArgot do
                           'details'=>'Dean Smith commemorative issue (Feb. 26, 2015)',
                           'other_ids'=>['1766364']},
                          {'type'=>'included',
-                          'title'=>['Bulletin (North Carolina Agricultural Experiment Station)'],
+                          'title'=>['Bulletin', '(North Carolina Agricultural Experiment Station)'],
                           'title_variation'=>'1991 NC Agricultural Experiment Station Bulletin',
                           'other_ids'=>['1421220']},
                          {'type'=>'included',

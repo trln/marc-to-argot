@@ -12,7 +12,7 @@ describe MarcToArgot do
                            'value' => '1 videodisc (107 min.) : sound, color ; 4 3/4 in.'},
                           {'label' => 'volumes',
                            'value' => '286 pages : illustrations ; 21 cm.'},
-                          {'label' => 'print +',
+                          {'label' => 'print',
                            'value' => '1 reel of 1 (18 min., 30 sec.) (656 ft.) : opt sd., b&w ; 16 mm. with study guide.'}
                         ]
                       )

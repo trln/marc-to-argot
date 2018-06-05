@@ -9,8 +9,8 @@ describe MarcToArgot do
   let(:details346) { run_traject_json('unc', 'phys_desc_details_346', 'mrc') }
   let(:details347) { run_traject_json('unc', 'phys_desc_details_347', 'mrc') }
   let(:details352) { run_traject_json('unc', 'phys_desc_details_352', 'mrc') }
-  
-  xit '(MTA) sets physical_description_details from 340' do
+
+  it '(MTA) sets physical_description_details from 340' do
     result = details340['physical_description_details']
     expect(result).to eq(
                         [
@@ -64,7 +64,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets physical_description_details from 344' do
+  it '(MTA) sets physical_description_details from 344' do
     result = details344['physical_description_details']
     expect(result).to eq(
                         [
@@ -94,7 +94,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets physical_description_details from 345' do
+  it '(MTA) sets physical_description_details from 345' do
     result = details345['physical_description_details']
     expect(result).to eq(
                         [
@@ -106,7 +106,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets physical_description_details from 346' do
+  it '(MTA) sets physical_description_details from 346' do
     result = details346['physical_description_details']
     expect(result).to eq(
                         [
@@ -118,7 +118,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets physical_description_details from 347' do
+  it '(MTA) sets physical_description_details from 347' do
     result = details347['physical_description_details']
     expect(result).to eq(
                         [
@@ -132,10 +132,10 @@ describe MarcToArgot do
                            'value' => 'image file'},
                           {'label' => 'File format',
                            'value' => 'JPEG'},
+                          {'label' => 'File size',
+                           'value' => '1.5 MB'},
                           {'label' => 'Image resolution',
                            'value' => '3.1 megapixels'},
-                          {'label' => 'Image size',
-                           'value' => '1.5 MB'},
                           {'label' => 'File type',
                            'value' => 'audio file'},
                           {'label' => 'File format',
@@ -145,8 +145,8 @@ describe MarcToArgot do
                         ]
                       )
   end
-  
-  xit '(MTA) sets physical_description_details from 352' do
+
+  it '(MTA) sets physical_description_details from 352' do
     result = details352['physical_description_details']
     expect(result).to eq(
                         [
@@ -155,5 +155,4 @@ describe MarcToArgot do
                         ]
                       )
   end
-
 end

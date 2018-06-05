@@ -287,6 +287,10 @@ unless settings["override"].include?("physical_description")
   to_field "physical_description", physical_description
 end
 
+unless settings["override"].include?("physical_description_details")
+  to_field "physical_description_details", physical_description_details
+end
+
 ################################################
 # URLs
 ######

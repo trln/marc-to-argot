@@ -56,7 +56,7 @@ module MarcToArgot
 
         def capitalize_first_letter(value)
           value = value.split('')
-          value.first.upcase!
+          value.first.upcase! unless value.first.nil?
           value = value.join
           value
         end

@@ -3,6 +3,7 @@ require 'marc_to_argot/macros/shared/imprint'
 require 'marc_to_argot/macros/shared/misc_id'
 require 'marc_to_argot/macros/shared/names'
 require 'marc_to_argot/macros/shared/notes'
+require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/title_variant'
@@ -23,6 +24,7 @@ module MarcToArgot
       include MiscId
       include Names
       include Notes
+      include PhysicalDescription
       include PhysicalMedia
       include ResourceType
       include TitleVariant

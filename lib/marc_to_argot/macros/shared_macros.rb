@@ -7,6 +7,7 @@ require 'marc_to_argot/macros/shared/notes'
 require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/resource_type'
+require 'marc_to_argot/macros/shared/series_statement'
 require 'marc_to_argot/macros/shared/title_variant'
 require 'marc_to_argot/macros/shared/upc'
 require 'marc_to_argot/macros/shared/urls'
@@ -29,6 +30,7 @@ module MarcToArgot
       include PhysicalDescription
       include PhysicalMedia
       include ResourceType
+      include SeriesStatement
       include TitleVariant
       include Upc
       include Urls

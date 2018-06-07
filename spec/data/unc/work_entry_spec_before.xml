@@ -1,0 +1,86 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cam a2200289Ii 4500</leader>
+  <controlfield tag='001'>3566796</controlfield>
+  <controlfield tag='005'>19800331000000.0</controlfield>
+  <controlfield tag='008'>780118s1977    miu           000 0 eng d</controlfield>
+  <datafield ind1=' ' ind2=' ' tag='010'>
+    <subfield code='a'>64017325</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='040'>
+    <subfield code='a'>WIA</subfield>
+    <subfield code='c'>WIA</subfield>
+    <subfield code='d'>NOH</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='092'>
+    <subfield code='a'>615.1</subfield>
+    <subfield code='b'>S</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='245'>
+    <subfield code='a'>O.T.C. drugs :</subfield>
+    <subfield code='b'>a third classification of drugs /</subfield>
+    <subfield code='c'>Edited by Frank P. Facione.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='260'>
+    <subfield code='a'>[Detroit:</subfield>
+    <subfield code='b'>Wayne State University College of Pharmacy and Allied Health Professions,</subfield>
+    <subfield code='c'>1977.]</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='300'>
+    <subfield code='a'>58 p. ;</subfield>
+    <subfield code='c'>22 cm.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='490'>
+    <subfield code='a'>Stephen Wilson Annual Pharmacy Seminar, 23rd, Detroit, 1977.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>Sponsored by the Pharmacy Alumni Association and the College of Pharmacy and Allied Health Professions of Wayne State University</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='2' tag='650'>
+    <subfield code='a'>Nonprescription Drugs.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='2' tag='650'>
+    <subfield code='a'>Pharmaceutical Services.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='2' tag='650'>
+    <subfield code='a'>Pharmacy.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='2' tag='655'>
+    <subfield code='a'>Congresses.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>Facione, Frank P.</subfield>
+  </datafield>
+  <datafield ind1='2' ind2=' ' tag='710'>
+    <subfield code='a'>Wayne State University.</subfield>
+    <subfield code='b'>College of Pharmacy and Allied Health Professions.</subfield>
+  </datafield>
+  <datafield ind1='2' ind2=' ' tag='811'>
+    <subfield code='a'>Stephen Wilson Pharmacy Seminar</subfield>
+    <subfield code='n'>(23rd :</subfield>
+    <subfield code='d'>1977 :</subfield>
+    <subfield code='c'>Detroit, Mich.)</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='907'>
+    <subfield code='a'>b1506716</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i2119182</subfield>
+    <subfield code='l'>nohh</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>0</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>H00130936M</subfield>
+    <subfield code='p'>096##</subfield>
+    <subfield code='q'>|aQV 704|bS831 no. 23 1977</subfield>
+    <subfield code='v'>no.23(1977)</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='999'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-28 16:20:58-04</subfield>
+    <subfield code='u'>2016-09-23 14:08:05-04</subfield>
+  </datafield>
+</record>
+</collection>

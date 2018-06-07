@@ -16,13 +16,6 @@ describe MarcToArgot do
     expect(result).not_to be_empty
   end
 
-  it 'generates author facet value if relators include punctuation' do
-    b1082803argot = run_traject_json('unc', 'b1082803')
-    expect(b1082803argot['author_facet']).to(
-      include('Gregory, Lady, 1852-1932')
-    )
-  end
-
   it 'does NOT generate a rollup_id for Duke special collections records' do
     result = run_traject_json('duke', 'special_collections', 'mrc')
     expect(result['rollup_id']).to(be_nil)

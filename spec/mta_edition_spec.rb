@@ -8,7 +8,7 @@ describe MarcToArgot do
   let(:edition3) { run_traject_json('unc', 'edition3', 'mrc') }
   let(:edition4) { run_traject_json('unc', 'edition4', 'mrc') }
   
-  xit '(MTA) sets edition from 250 with $3' do
+  it '(MTA) sets edition from 250 with $3' do
     result = edition1['edition']
     expect(result).to eq(
                         [
@@ -17,7 +17,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets edition from 250 and 254 fields' do
+  it '(MTA) sets edition from 250 and 254 fields' do
     result = edition2['edition']
     expect(result).to eq(
                         [
@@ -27,7 +27,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets edition from 254 field' do
+  it '(MTA) sets edition from 254 field' do
     result = edition3['edition']
     expect(result).to eq(
                         [
@@ -36,7 +36,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets edition from 250 $a and $b' do
+  it '(MTA) sets edition from 250 $a and $b' do
     result = edition4['edition']
     expect(result).to eq(
                         [

@@ -425,7 +425,8 @@ unless settings["override"].include?("statement_of_responsibility")
 end
 
 unless settings["override"].include?("edition")
-  to_field "edition", argot_gvo(settings["specs"][:edition])
+  #to_field "edition", argot_gvo(settings["specs"][:edition])
+  to_field "edition", edition
 end
 
 unless settings["override"].include?("frequency")

@@ -1,3 +1,4 @@
+require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/helpers'
 require 'marc_to_argot/macros/shared/imprint'
 require 'marc_to_argot/macros/shared/misc_id'
@@ -19,6 +20,7 @@ module MarcToArgot
     # defined here, and overriden in institution-specific modules in the
     # same namespace.
     module Shared
+      include Edition
       include Helpers
       include Imprint
       include MiscId

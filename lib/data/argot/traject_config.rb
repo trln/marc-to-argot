@@ -164,6 +164,14 @@ unless settings["override"].include?("this_work")
 end
 
 ################################################
+# Series Statement
+######
+
+unless settings["override"].include?("series_statement")
+  to_field "series_statement", series_statement
+end
+
+################################################
 # Notes
 ######
 

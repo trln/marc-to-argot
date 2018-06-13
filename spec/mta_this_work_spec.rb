@@ -21,7 +21,13 @@ describe MarcToArgot do
   let(:this_work13) { run_traject_json('unc', 'this_work13', 'mrc') }
   let(:this_work14) { run_traject_json('unc', 'this_work14', 'mrc') }
   let(:this_work15) { run_traject_json('unc', 'this_work15', 'mrc') }
+  let(:this_work1) { run_traject_json('unc', 'vern_this_work1', 'mrc') }
+  let(:this_work2) { run_traject_json('unc', 'vern_this_work2', 'mrc') }
+  let(:this_work3) { run_traject_json('unc', 'vern_this_work3', 'mrc') }  
+  let(:this_work4) { run_traject_json('unc', 'vern_this_work4', 'mrc') }
+  let(:this_work5) { run_traject_json('unc', 'vern_this_work5', 'mrc') }
 
+  
   it '(MTA) sets this_work from 100' do
     result = this_work00_1['this_work']
     expect(result).to eq(
@@ -185,5 +191,86 @@ describe MarcToArgot do
                             'title'=>['Young singer.', 'Soprano'],
                             'title_nonfiling'=>'The Young singer. Soprano'}
                           ])
+    end
+
+    xit '(MTA) sets vernacular this_work from 880s linked to 100 & 240' do
+    result = this_work1['this_work']
+    expect(result).to eq(
+                        [
+                          {'type'=>'this',
+                           'author'=>'Han, Fei, -233 B.C.',
+                           'title'=>['Han Feizi']
+                          },
+                          {'type'=>'this',
+                           'author'=>'韓非, -233 B.C.',
+                           'title'=>['韓非子'],
+                           'lang'=>'cjk'
+                          }
+                        ]
+                      )
+  end
+
+    xit '(MTA) sets vernacular this_work from 100 and 880 linked to 240' do
+      result = this_work2['this_work']
+      expect(result).to eq(
+                          [
+                            {'type'=>'this',
+                             'author'=>'Ōkuma, Kotomichi, 1798-1868.',
+                             'title'=>['Sōkeishū.', 'Selections.', 'English']
+                            },
+                            {'type'=>'this',
+                             'author'=>'Ōkuma, Kotomichi, 1798-1868.',
+                             'title'=>['草徑集.', 'Selections.', 'English'],
+                             'lang'=>'cjk'
+                            }
+                          ]
+                        )
+    end
+
+    xit '(MTA) sets vernacular this_work from 240 and 880 linked to 100' do
+      result = this_work3['this_work']
+      expect(result).to eq(
+                          [
+                            {'type'=>'this',
+                             'author'=>'Bingxin, 1900-1999.',
+                             'title'=>['Works.', '1982']
+                            },
+                            {'type'=>'this',
+                             'author'=>'冰心, 1900-1999.',
+                             'title'=>['Works.', '1982'],
+                             'lang'=>'cjk'
+                            }
+                          ]
+                        )
+    end
+
+    xit '(MTA) sets vernacular this_work from 100 and 880 linked to 245' do
+      result = this_work4['this_work']
+      expect(result).to eq(
+                          [
+                            {'type'=>'this',
+                             'author'=>'Mif, P.$q(Pavel), 1901-',
+                             'title'=>['Fa zhan zhuo de Zhongguo ge ming gao chao']
+                            },
+                            {'type'=>'this',
+                             'author'=>'Mif, P.$q(Pavel), 1901-',
+                             'title'=>['發展著的中國革命高潮'],
+                             'lang'=>'cjk'
+                            }
+                          ]
+                        )
+    end
+
+    xit '(MTA) sets vernacular this_work from 100 and 880 linked to 245' do
+      result = this_work5['this_work']
+      expect(result).to eq(
+                          [
+                            {'type'=>'this',
+                             'author'=>'高田, 時雄.',
+                             'title'=>['梵蒂岡圖書館所藏漢籍目録補編'],
+                             'lang'=>'cjk'
+                            }
+                          ]
+                        )
     end
 end

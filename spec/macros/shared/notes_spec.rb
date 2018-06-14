@@ -386,7 +386,7 @@ describe MarcToArgot::Macros::Shared::Notes do
     )
   end
 
-  it '(MTA) sets note_system_details from vernacular' do
+  xit '(MTA) sets note_system_details from vernacular' do
     result = note_system_details_vernacular['note_system_details']
     expect(result).to eq(
                         [ 'Xi tong yao qiu: Blu-ray bo fang she bei ji xiang guan ruan jian.',

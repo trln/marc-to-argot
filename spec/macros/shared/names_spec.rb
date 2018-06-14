@@ -16,7 +16,10 @@ describe MarcToArgot::Macros::Shared::Names do
   let(:names10) { run_traject_json('unc', 'names10', 'mrc') }
   let(:names11) { run_traject_json('unc', 'names11', 'mrc') }
   let(:names12) { run_traject_json('unc', 'names12', 'mrc') }
-
+  let(:vnames01) { run_traject_json('unc', 'vern_names01', 'mrc') }
+  let(:vnames02) { run_traject_json('unc', 'vern_names02', 'mrc') }
+  let(:vnames03) { run_traject_json('unc', 'vern_names03', 'mrc') }
+  
   it '(MTA) sets names, prioritizing director type over creator type' do
     result = names01['names']
     expect(result).to eq(
@@ -64,10 +67,10 @@ describe MarcToArgot::Macros::Shared::Names do
   it '(MTA) sets names, multiple creators, initial followed by retained period at end of name' do
     result = names04['names']
     expect(result).to eq(
-                        [{'name'=>'Bériot, Ch. de (Charles), 1802-1870',
+                        [{'name'=>'BÃ©riot, Ch. de (Charles), 1802-1870',
                           'rel'=>['composer'],
                           'type'=>'creator'},
-                         {'name'=>'Labarre, Théodore, 1805-1870',
+                         {'name'=>'Labarre, ThÃ©odore, 1805-1870',
                           'rel'=>['composer'],
                           'type'=>'creator'},
                          {'name'=>'Sheldon, Henry K.',
@@ -112,7 +115,7 @@ describe MarcToArgot::Macros::Shared::Names do
                         [{'name'=>'Lampe, Angela',
                           'rel'=>['editor'],
                           'type'=>'editor'},
-                         {'name'=>'Musée national d\'art moderne (France)',
+                         {'name'=>'MusÃ©e national d\'art moderne (France)',
                           'rel'=>['host institution'],
                           'type'=>'other'},
                          {'name'=>'Baumgartner, Michael',
@@ -134,7 +137,7 @@ describe MarcToArgot::Macros::Shared::Names do
                           'type'=>'creator'},
                          {'name'=>'Bach, Johann Sebastian, 1685-1750',
                           'type'=> 'no_rel'},
-                         {'name'=>'Schröder, Otto, 1860-1946',
+                         {'name'=>'SchrÃ¶der, Otto, 1860-1946',
                           'rel'=>['editor'],
                           'type'=>'editor'}
                         ])
@@ -146,7 +149,7 @@ describe MarcToArgot::Macros::Shared::Names do
                         [{'name'=>'Hincker, Louis',
                           'rel'=>['editor'],
                           'type'=>'editor'},
-                         {'name'=>'Amselle, Frédérique',
+                         {'name'=>'Amselle, FrÃ©dÃ©rique',
                           'rel'=>['ditor'],
                           'type'=>'uncategorized'},
                          {'name'=>'Huftier, Arnaud',
@@ -155,7 +158,7 @@ describe MarcToArgot::Macros::Shared::Names do
                          {'name'=>'Lacheny, Marc',
                           'rel'=>['editor'],
                           'type'=>'editor'},
-                         {'name'=>'Université de Valenciennes et du Hainaut-Cambrésis',
+                         {'name'=>'UniversitÃ© de Valenciennes et du Hainaut-CambrÃ©sis',
                           'rel'=>['host institution'],
                           'type'=>'other'}
                         ])
@@ -186,6 +189,59 @@ describe MarcToArgot::Macros::Shared::Names do
                          {'name'=>'Spence, Thomas, 1750-1814',
                           'rel'=>['writer of preface'],
                           'type'=>'contributor'}
+                        ])
+  end
+  
+  xit '(MTA) sets names from 100 and linked vernacular field' do
+    result = vnames01['names']
+    expect(result).to eq(
+                        [
+                          {
+                            'name'=>'Li, Cha.',
+                            'type'=>'creator'
+                          },
+                          {
+                            'name'=>'李察.',
+                            'type'=>'creator',
+                            'lang'=>'cjk'
+                          }
+                        ])
+  end
+  
+  xit '(MTA) sets names from 700s and linked vernacular fields' do
+    result = vnames02['names']
+    expect(result).to eq(
+                        [
+                          {
+                            'name'=>'Hayashi, Taizō, 1922-',
+                            'type'=>'no_rel'
+                          },
+                          {
+                            'name'=>'Gomi, Yūji, 1928-',
+                            'type'=>'no_rel'
+                          },
+                          {
+                            'name'=>'林大造, 1922-',
+                            'type'=>'no_rel',
+                            'lang'=>'cjk'
+                          },
+                          {
+                            'name'=>'五味, 雄治, 1928-',
+                            'type'=>'no_rel',
+                            'lang'=>'cjk'
+                          }                          
+                        ])
+  end
+  
+  xit '(MTA) sets vernacular name from 100' do
+    result = vnames02['names']
+    expect(result).to eq(
+                        [
+                          {
+                            'name'=>'お茶の水女子大学グローバル教育センター.',
+                            'type'=>'creator'
+                            'lang'=>'cjk'
+                          }
                         ])
   end
 end

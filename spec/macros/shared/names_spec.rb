@@ -239,7 +239,7 @@ describe MarcToArgot::Macros::Shared::Names do
                         [
                           {
                             'name'=>'お茶の水女子大学グローバル教育センター.',
-                            'type'=>'creator'
+                            'type'=>'creator',
                             'lang'=>'cjk'
                           }
                         ])

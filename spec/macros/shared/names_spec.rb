@@ -67,10 +67,10 @@ describe MarcToArgot::Macros::Shared::Names do
   it '(MTA) sets names, multiple creators, initial followed by retained period at end of name' do
     result = names04['names']
     expect(result).to eq(
-                        [{'name'=>'BÃ©riot, Ch. de (Charles), 1802-1870',
+                        [{'name'=>'Bériot, Ch. de (Charles), 1802-1870',
                           'rel'=>['composer'],
                           'type'=>'creator'},
-                         {'name'=>'Labarre, ThÃ©odore, 1805-1870',
+                         {'name'=>'Labarre, Théodore, 1805-1870',
                           'rel'=>['composer'],
                           'type'=>'creator'},
                          {'name'=>'Sheldon, Henry K.',
@@ -115,7 +115,7 @@ describe MarcToArgot::Macros::Shared::Names do
                         [{'name'=>'Lampe, Angela',
                           'rel'=>['editor'],
                           'type'=>'editor'},
-                         {'name'=>'MusÃ©e national d\'art moderne (France)',
+                         {'name'=>'Musée national d\'art moderne (France)',
                           'rel'=>['host institution'],
                           'type'=>'other'},
                          {'name'=>'Baumgartner, Michael',
@@ -137,7 +137,7 @@ describe MarcToArgot::Macros::Shared::Names do
                           'type'=>'creator'},
                          {'name'=>'Bach, Johann Sebastian, 1685-1750',
                           'type'=> 'no_rel'},
-                         {'name'=>'SchrÃ¶der, Otto, 1860-1946',
+                         {'name'=>'Schröder, Otto, 1860-1946',
                           'rel'=>['editor'],
                           'type'=>'editor'}
                         ])
@@ -149,7 +149,7 @@ describe MarcToArgot::Macros::Shared::Names do
                         [{'name'=>'Hincker, Louis',
                           'rel'=>['editor'],
                           'type'=>'editor'},
-                         {'name'=>'Amselle, FrÃ©dÃ©rique',
+                         {'name'=>'Amselle, Frédérique',
                           'rel'=>['ditor'],
                           'type'=>'uncategorized'},
                          {'name'=>'Huftier, Arnaud',
@@ -158,7 +158,7 @@ describe MarcToArgot::Macros::Shared::Names do
                          {'name'=>'Lacheny, Marc',
                           'rel'=>['editor'],
                           'type'=>'editor'},
-                         {'name'=>'UniversitÃ© de Valenciennes et du Hainaut-CambrÃ©sis',
+                         {'name'=>'Université de Valenciennes et du Hainaut-Cambrésis',
                           'rel'=>['host institution'],
                           'type'=>'other'}
                         ])

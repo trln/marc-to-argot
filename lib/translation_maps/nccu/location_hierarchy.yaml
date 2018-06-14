@@ -1,0 +1,42 @@
+CMC: nccu;nccucmcy
+MUSIC: nccu;nccumusc
+LAW: nccu;ncculaww
+SHEPARD: nccu;nccushed
+SLIS: nccu;nccusche
+
+#Shepard
+ARCHIVE,ARCHIVES: nccu;nccushed;nccushedncon
+BIOTECHIN: nccu;nccushed;nccushedbio
+BINDERY: nccu;nccushed;nccushedmary
+CATALOGING: nccu;nccushed;nccushedcang
+GOVTDOCS: nccu;nccushed;nccushedgots
+INDEX: nccu;nccushed;nccushedidx
+OFFICE: nccu;nccushed;nccushedlice
+MEDIA: nccu;nccushed;nccushedmeon
+MICROFICHE: nccu;nccushed;nccushedmioz
+MICROFILM: nccu;nccushed;nccushedmion
+NCCUFILE: nccu;nccushed;nccushedhist
+NEWBOOKSHE: nccu;nccushed;nccushedonby
+REFERENCE: nccu;nccushed;nccushedrece
+RESERVES: nccu;nccushed;nccushedresk
+SERIALS: nccu;nccushed;nccushedsels
+SHEPARDAV: nccu;nccushed;nccushedaual
+SPECIALRES: nccu;nccushed;nccushedloon
+STACKS: nccu;nccushed;nccushedstks
+STAFF: nccu;nccushed;nccushedstce
+STAFFCOLL: nccu;nccushed;nccushedstar
+SYSTEMS: nccu;nccushed;nccushedsyce
+THESIS: nccu;nccushed;nccushedthon
+TREASURE: nccu;nccushed;nccushedtrg
+WELLNESS: nccu;nccushed;nccushedwell
+
+#Law
+LAW1STFLR,LAWACADSUC,LAWCD,LAWDISPLAY,LAWDVD,LAWMICF,LAWNEWBOOK: nccu;ncculaww
+
+#SLIS
+AV: nccu;nccusche;nccuscheaual
+LSSTACKS:  nccu;nccusche;nccuschestks
+
+#Status
+AVAIL_SOON: nccu;nccushed;nccushedas
+ON-ORDER: nccu;nccushed;nccushedaq 

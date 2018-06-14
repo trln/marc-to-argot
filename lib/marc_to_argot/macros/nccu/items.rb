@@ -1,7 +1,7 @@
 module MarcToArgot
   module Macros
     module NCCU
-      # Methods for working with NCSU item records
+      # Methods for working with NCCU item records
       module Items
         SUBFIELDS = {
           i: { key: 'item_id' },
@@ -143,8 +143,21 @@ module MarcToArgot
           access_types << 'At the Library' if physical_access?(rec, libs)
           ctx.output_hash['access_type'] = access_types
           ctx.output_hash['virtual_collection'] = vcs unless vcs.empty?
-          loc_hier = arrays_to_hierarchy(items.map { |x| ['ncsu', x['loc_b']] })
-          ctx.output_hash['location_hierarchy'] =  loc_hier
+
+          locations = map_locations_to_hierarchy(items)
+          ctx.output_hash['location_hierarchy'] =  arrays_to_hierarchy(locations) if locations
+        end
+
+        def map_locations_to_hierarchy(items)
+          locations = ['nccu']
+          items.each do |item|
+            loc_b = item.fetch('loc_b', nil)
+            loc_n = item.fetch('loc_n', nil)
+            locations << location_hierarchy_map[loc_b] if loc_b
+            locations << location_hierarchy_map[loc_n] if loc_n
+          end
+
+          locations.map { |loc| loc.split('|') if loc }.flatten.map { |c| c.split(';') if c }.compact
         end
 
         def extract_items
@@ -157,10 +170,15 @@ module MarcToArgot
               items << item
               acc << item.to_json if item
             end
-            # populate_context!(items, rec, ctx)
+            populate_context!(items, rec, ctx)
             map_call_numbers(ctx, items)
           end
         end
+
+        def location_hierarchy_map
+         @location_hierarchy_map ||= Traject::TranslationMap.new('nccu/location_hierarchy')
+        end
+
       end
     end
   end

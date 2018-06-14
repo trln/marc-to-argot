@@ -281,10 +281,11 @@ module MarcToArgot
         end
 
         def collect_subfield_if_before(field, spec_passthrough, spec_restricted, spec_before)
-          first_index_of_spec_before = field.subfields.index { |sf|  spec_before.include?(sf.code) }
+          first_index_of_spec_before = field.subfields.index { |sf| spec_before.include?(sf.code) }.to_i
           selected_fields = field.subfields.select.with_index do |sf, index|
             spec_passthrough.include?(sf.code) ||
-              ([*spec_restricted].include?(sf.code) && index < first_index_of_spec_before)
+              ([*spec_restricted].include?(sf.code) &&
+                (index < first_index_of_spec_before))
           end
           gsub_final_comma_with_period(selected_fields.map(&:value).join(' '))
         end
@@ -341,19 +342,27 @@ module MarcToArgot
         end
 
         def collect_subfield_if_after(field, spec_passthrough, spec_restricted, spec_after)
-          first_index_of_spec_after = field.subfields.index { |sf|  spec_after.include?(sf.code) }
+          first_index_of_spec_after = field.subfields.index { |sf| spec_after.include?(sf.code) }
           selected_fields = field.subfields.select.with_index do |sf, index|
             spec_passthrough.include?(sf.code) ||
-              ([*spec_restricted].include?(sf.code) && index > first_index_of_spec_after)
+              ([*spec_restricted].include?(sf.code) &&
+                (!first_index_of_spec_after.nil? &&
+                  index > first_index_of_spec_after))
           end
           selected_fields.map { |sf| sf.value.strip.chomp(' ;') }
         end
 
         def collect_filing_title_from_subfields(field, spec)
           title = collect_subfield_values_by_code(field, spec)
+          return title if title.empty?
           non_filing_chars = count_non_filing_characters(field)
+          return cleanup_work_entry_title(title) if non_filing_chars >= title.first.length
           title[0] = title[0][non_filing_chars..-1]
           title[0] = capitalize_first_letter(title[0])
+          cleanup_work_entry_title(title)
+        end
+
+        def cleanup_work_entry_title(title)
           title.map { |t| t.strip.chomp(' ;').chomp(' /') }
         end
 
@@ -387,12 +396,28 @@ module MarcToArgot
 
         def passes_work_entry_title_nonfiling_constraint?(field)
           case field.tag
-          when /(130|730|740)/
-            field.indicator1.to_s.to_i > 0
-          when /(240|245|440|830)/
-            field.indicator2.to_s.to_i > 0
+          when /(130|730|740|240|245|440|830)/
+            filing_chars = filing_characters_count(field)
+            filing_chars > 0 && filing_chars <= title_subfield_value_length(field)
           else
             true
+          end
+        end
+
+        def title_subfield_value_length(field, subfield = 'a')
+          begin
+            field.subfields.first.value.length
+          rescue
+            0
+          end
+        end
+
+        def filing_characters_count(field)
+          case field.tag
+          when /(130|730|740)/
+            field.indicator1.to_s.to_i
+          when /(240|245|440|830)/
+            field.indicator2.to_s.to_i
           end
         end
 
@@ -551,7 +576,7 @@ module MarcToArgot
             !has_130_240?(rec) &&
               !(has_100_110_111?(rec) &&
                 has_100_110_111_with_t?(rec))
-          when /(700|710|711)/
+          when /(700|710|711|800|810|811)/
             has_subfield_tk?(field)
           when /(760|765|767|770|772|773|774|775|777|780|785|786|787)/
             has_subfield_ts?(field)
@@ -569,8 +594,8 @@ module MarcToArgot
         end
 
         def has_100_110_111_with_t?(rec)
-          fields_1xx = rec.fields.select { |f| %w[100 110 111].include?(f.tag) }
-          fields_1xx.first.subfields.find { |sf| sf.code == 't' }
+          first_field_1xx = rec.fields.select { |f| %w[100 110 111].include?(f.tag) }.first
+          first_field_1xx.subfields.find { |sf| sf.code == 't' } unless first_field_1xx.nil?
         end
 
         def has_subfield_t?(field)

@@ -1,0 +1,69 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cam a2200241Ia 4500</leader>
+  <controlfield tag='001'>8320699</controlfield>
+  <controlfield tag='005'>19890124000000.0</controlfield>
+  <controlfield tag='008'>890124s1981    miu           000 1 rusod</controlfield>
+  <datafield ind1=' ' ind2=' ' tag='019'>
+    <subfield code='a'>13474344</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='040'>
+    <subfield code='a'>CLE</subfield>
+    <subfield code='c'>CLE</subfield>
+    <subfield code='d'>UMC</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>RBN</subfield>
+    <subfield code='d'>m/c</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='100'>
+    <subfield code='a'>Strugat͡skiĭ, Arkadiĭ,</subfield>
+    <subfield code='d'>1925-1991.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='6' tag='245'>
+    <subfield code='a'>Les /</subfield>
+    <subfield code='c'>Bratʹ︠i︡a Struga︠t︡skie.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='260'>
+    <subfield code='a'>[Ann Arbor, Mich.] :</subfield>
+    <subfield code='b'>Ardis,</subfield>
+    <subfield code='c'>1981.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='300'>
+    <subfield code='a'>81 p. ;</subfield>
+    <subfield code='c'>21 cm.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>&quot;&apos;Les&apos; predstavl︠i︡aet sobo︠i︡u chastʹ romana Struga︠t︡skikh &apos;Ulitka na sklone&apos;, pervonachalʹno napechatannu︠i︡u v sbornike &apos;Ėllinskiĭ sekret&apos; (1966). Dannyĭ tekst ne byl vkl︠i︡uchen v izdanie romana, osushchestvlennoe izdatelʹstvom Posev v 1972 godu&quot;--T.p. verso.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>Strugat͡skiĭ, Boris,</subfield>
+    <subfield code='d'>1933-2012.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>Strugat͡skiĭ, Arkadiĭ,</subfield>
+    <subfield code='d'>1925-1991.</subfield>
+    <subfield code='t'>Ulitka na sklone.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='907'>
+    <subfield code='a'>b1818748</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i2626253</subfield>
+    <subfield code='l'>ddda</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>0</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>2</subfield>
+    <subfield code='b'>00005932342</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPG3476.S78835 L47 1981</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='999'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-30 09:23:12-04</subfield>
+    <subfield code='u'>2016-10-23 14:13:10-04</subfield>
+  </datafield>
+</record>
+</collection>

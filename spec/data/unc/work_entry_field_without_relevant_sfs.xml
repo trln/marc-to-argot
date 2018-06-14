@@ -1,0 +1,93 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cam  2200265 i 4500</leader>
+  <controlfield tag='001'>4444572</controlfield>
+  <controlfield tag='008'>781211s1978    dcu          f000 0 eng d</controlfield>
+  <datafield ind1=' ' ind2=' ' tag='035'>
+    <subfield code='a'>(GPO)79004136</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='040'>
+    <subfield code='a'>GPO</subfield>
+    <subfield code='c'>GPO</subfield>
+    <subfield code='d'>MvI-ran</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='043'>
+    <subfield code='a'>n-us---</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='074'>
+    <subfield code='a'>546-D</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='074'>
+    <subfield code='a'>546-D (MF)</subfield>
+  </datafield>
+  <datafield ind1='0' ind2=' ' tag='086'>
+    <subfield code='a'>GA 1.13:GGD-78-24</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='110'>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='b'>General Accounting Office.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='245'>
+    <subfield code='a'>Better guidance and controls are needed to improve Federal surveys of attitudes and opinions :</subfield>
+    <subfield code='c'>by the Comptroller General of the United States.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='245'>
+    <subfield code='b'>report</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='260'>
+    <subfield code='a'>[Washington] :</subfield>
+    <subfield code='b'>General Accounting Office,</subfield>
+    <subfield code='c'>1978.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='300'>
+    <subfield code='a'>v, 72 p. ;</subfield>
+    <subfield code='c'>27 cm.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>&quot;GGD-78-24.&quot;</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>&quot;B-181254.&quot;</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>Issued Sept. 15, 1978.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Attitude (Psychology)</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Public opinion polls.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='907'>
+    <subfield code='a'>b3525375</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i4956379</subfield>
+    <subfield code='l'>dcpf</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>HBAD-2339-00001</subfield>
+    <subfield code='p'>0860#</subfield>
+    <subfield code='q'>|aGA 1.13:GGD-78-24</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i4956380</subfield>
+    <subfield code='l'>dcpf</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00019869439</subfield>
+    <subfield code='p'>0860#</subfield>
+    <subfield code='q'>|aGA 1.13:GGD-78-24</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='999'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-10-05 08:17:25-04</subfield>
+    <subfield code='u'>2015-11-22 15:42:32-05</subfield>
+  </datafield>
+</record>
+</collection>

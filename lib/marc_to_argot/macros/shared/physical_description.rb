@@ -66,6 +66,9 @@ module MarcToArgot
 
         def physical_description_details_label(field, sf_code)
           labels = []
+          # TODO: Example: =300  \\$a1 reel of 1 (18 min., 30 sec.) (656 ft.) :$bopt sd., b&w ;$c16 mm.$3print +$ewith study guide.
+          #       Ideally, the "+" that's included in the $3 would be prepended to the value of $e where it belongs.
+          #       Skipping this detail for now.
           labels << capitalize_first_letter(collect_and_join_subfield_values(field, '3').chomp(':').strip)
           case field.tag
           when '340'

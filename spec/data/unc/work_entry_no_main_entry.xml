@@ -1,0 +1,108 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000nam a22003972 b4500</leader>
+  <controlfield tag='001'>sseb031389292</controlfield>
+  <controlfield tag='003'>WaSeSS</controlfield>
+  <controlfield tag='005'>20180508092708.0</controlfield>
+  <controlfield tag='006'>m     o  d</controlfield>
+  <controlfield tag='007'>cr |n |||||||a</controlfield>
+  <controlfield tag='008'>170918e20171215xxk    eo|||||||| ||spa|d</controlfield>
+  <datafield ind1=' ' ind2=' ' tag='020'>
+    <subfield code='a'>1780409141</subfield>
+    <subfield code='q'>E-Book, E-Book</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='020'>
+    <subfield code='a'>9781780409146</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='040'>
+    <subfield code='a'>BIP US</subfield>
+    <subfield code='b'>eng</subfield>
+    <subfield code='d'>WaSeSS</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='240'>
+    <subfield code='a'>Biological Wastewater Treatment</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='245'>
+    <subfield code='a'>Tratamiento Biológico de Aguas Residuales: Principios, Modelación y Diseño</subfield>
+    <subfield code='h'>[electronic resource]</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='260'>
+    <subfield code='a'>London :</subfield>
+    <subfield code='b'>IWA Publishing</subfield>
+    <subfield code='c'>Dec. 2017</subfield>
+    <subfield code='a'>Ashland :</subfield>
+    <subfield code='b'>Baker &amp; Taylor Publisher Services (BTPS) [Distributor]</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='300'>
+    <subfield code='a'>1 online resource (580 pages)</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='336'>
+    <subfield code='a'>text</subfield>
+    <subfield code='b'>txt</subfield>
+    <subfield code='2'>rdacontent</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='337'>
+    <subfield code='a'>computer</subfield>
+    <subfield code='b'>c</subfield>
+    <subfield code='2'>rdamedia</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='338'>
+    <subfield code='a'>online resource</subfield>
+    <subfield code='b'>cr</subfield>
+    <subfield code='2'>rdacarrier</subfield>
+  </datafield>
+  <datafield ind1='0' ind2=' ' tag='506'>
+    <subfield code='f'>Unlimited simultaneous users</subfield>
+  </datafield>
+  <datafield ind1='8' ind2=' ' tag='520'>
+    <subfield code='a'>En las últimas decadas, el conocimiento y entendimiento del tratamiento de aguas residuales ha avanzado extensamente evolucionando de enfoques basados en procedimientos meramente empíricos a enfoques con principios básicos que abarcan la química, microbiología, física, ingeniería de procesos y matemáticas. La gran mayoría de estos avances han madurado a tal grado que han sido codificados en modelos matemáticos para su simulación en computadoras. Para una nueva generación de jóvenes científicos e ingenieros que ingresan al área del tratamiento de aguas residuales, la cantidad, complejidad y diversidad de estos nuevos desarrollos puede ser abrumador, particularmente en países en vías de desarrollo donde no existe un fácil acceso a cursos avanzados de postgrado en tratamientos de aguas residuales.Este libro tiene como objetivo resolver esta deficiencia ya que compila e integra el material de diversos cursos de postgrado de más de una docena de grupos de investigación de todo el mundo que han hecho contribuciones significativas para el desarrollo del tratamiento de aguas residuales. Cabe resaltar que la edición en inglés del presente libro, forma parte de un plan de estudios en tratamiento biológico de aguas residuales que incluye:* Resúmenes de las presentaciones y clases de los temas cubiertos en el libro* Videos de las clases de los profesores autores de los capítulos del libro* Ejercicios de auto-aprendizaje para los participantes en los cursosAl término del plan de estudios antes mencionado, los últimos avances en modelación y simulación de la operación y diseño de los sistemas de tratamiento de aguas residuales (ya sean lodos activados, procesos de remoción biológica de nitrógeno y fósforo, clarificadores secundarios o sistemas de biopelículas) pueden ser abordados con mayor profundidad, conocimientos más avanzados y mayor confianza.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='521'>
+    <subfield code='a'>College Audience</subfield>
+    <subfield code='b'>IWA Publishing</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='590'>
+    <subfield code='a'>Provider: Open Access Publishing in European Networks</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='590'>
+    <subfield code='a'>Vendor supplied catalog record.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>Carrillo, F. J. Cervanes</subfield>
+    <subfield code='e'>Editor</subfield>
+    <subfield code='4'>edt</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>García, H. A. Hernández</subfield>
+    <subfield code='e'>Editor</subfield>
+    <subfield code='4'>edt</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>Lopez-Vazquez, C. M.</subfield>
+    <subfield code='e'>Editor</subfield>
+    <subfield code='4'>edt</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='700'>
+    <subfield code='a'>Méndez, G. Buitrón</subfield>
+    <subfield code='e'>Editor</subfield>
+    <subfield code='4'>edt</subfield>
+  </datafield>
+  <datafield ind1='0' ind2=' ' tag='773'>
+    <subfield code='t'>OAPEN ebooks (online collection)</subfield>
+  </datafield>
+  <datafield ind1='4' ind2='0' tag='856'>
+    <subfield code='u'>http://libproxy.lib.unc.edu/login?url=http://VB3LK7EB4T.search.serialssolutions.com/?V=1.0&amp;L=VB3LK7EB4T&amp;S=JCs&amp;C=TC_031389292&amp;T=marc</subfield>
+    <subfield code='x'>OAPEN</subfield>
+    <subfield code='y'>Full text available via the UNC-Chapel Hill Libraries</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='907'>
+    <subfield code='a'>b9186380</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='999'>
+    <subfield code='a'>2018-05-11 00:00:00-04</subfield>
+    <subfield code='c'>2018-05-11 11:48:46-04</subfield>
+    <subfield code='u'>2018-05-12 06:29:13-04</subfield>
+  </datafield>
+</record>
+</collection>

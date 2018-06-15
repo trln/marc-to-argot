@@ -446,6 +446,30 @@ module MarcToArgot
       end
 
       ################################################
+      # Note Cited In
+      ######
+      def note_cited_in
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached('510abcux3').each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+            label = []
+            values = []
+            field.subfields.each do |sf|
+              if sf.code == 'x'
+                values << "ISSN #{sf.value}"
+              elsif sf.code == '3'
+                label << sf.value.chomp(':')
+              else
+                values << sf.value
+              end
+            end
+            value = values.join(' ')
+            acc << [*label, value].compact.join(': ') if value
+          end
+        end
+      end
+      
+      ################################################
       # Note System Details
       ######
       def note_system_details

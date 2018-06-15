@@ -71,24 +71,24 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to eq(nil)
   end
 
-  xit '(MTA) sets cited_in note, including ISSN label' do
+  it '(MTA) sets cited_in note, including ISSN label' do
     result = note_cited_in1['note_cited_in']
     expect(result).to eq(
                         [
-                          'Chemical abstracts ISSN 0009-2258 1968-1986'
+                          'Chemical abstracts ISSN 0009-2258 1968-1986.'
                         ]
                       )
   end
 
-  xit '(MTA) sets cited_in note with $3 label' do
+  it '(MTA) sets cited_in note with $3 label' do
     result = note_cited_in2['note_cited_in']
     expect(result).to eq(
                         [
-                          'Arcadelt, Quinto libro: RISM B/I, B1544-16',
-                          'Arcadelt, Quinto libro: RISM A/I, A1382',
-                          'Arcadelt, Secondo libro: RISM A/I, A1371',
-                          'Arcadelt, Terzo libro: RISM B/I, 1539-23',
-                          'Arcadelt, Terzo libro: RISM A/I, A1374'
+                          'Arcadelt, Terzo libro: RISM A/I, A1374.',
+                          'Arcadelt, Terzo libro: RISM B/I, 1539-23.',
+                          'Arcadelt, Secondo libro: RISM A/I, A1371.',
+                          'Arcadelt, Quinto libro: RISM A/I, A1382.',
+                          'Arcadelt, Quinto libro: RISM B/I, B1544-16.'
                         ]
                       )
   end

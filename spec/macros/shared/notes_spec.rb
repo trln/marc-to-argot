@@ -6,6 +6,8 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_access_restrictions) { run_traject_json('duke', 'note_access_restrictions', 'mrc') }
   let(:note_admin_history) { run_traject_json('duke', 'note_admin_history', 'mrc') }
   let(:note_binding) { run_traject_json('duke', 'note_binding', 'mrc') }
+  let(:note_cited_in1) { run_traject_json('unc', 'note_cited_in1', 'mrc') }
+  let(:note_cited_in2) { run_traject_json('unc', 'note_cited_in2', 'mrc') }
   let(:note_copy_version) { run_traject_json('duke', 'note_copy_version', 'mrc') }
   let(:note_data_quality) { run_traject_json('duke', 'note_data_quality', 'mrc') }
   let(:note_dissertation) { run_traject_json('duke', 'note_dissertation', 'mrc') }
@@ -66,6 +68,28 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to eq(nil)
   end
 
+  xit '(MTA) sets cited_in note, including ISSN label' do
+    result = note_cited_in1['note_cited_in']
+    expect(result).to eq(
+                        [
+                          'Chemical abstracts ISSN 0009-2258 1968-1986'
+                        ]
+                      )
+  end
+
+  xit '(MTA) sets cited_in note with $3 label' do
+    result = note_cited_in2['note_cited_in']
+    expect(result).to eq(
+                        [
+                          'Arcadelt, Quinto libro: RISM B/I, B1544-16',
+                          'Arcadelt, Quinto libro: RISM A/I, A1382',
+                          'Arcadelt, Secondo libro: RISM A/I, A1371',
+                          'Arcadelt, Terzo libro: RISM B/I, 1539-23',
+                          'Arcadelt, Terzo libro: RISM A/I, A1374'
+                        ]
+                      )
+  end
+  
   it '(MTA) sets note_biographical' do
     result = note_admin_history['note_biographical']
     expect(result).to eq(

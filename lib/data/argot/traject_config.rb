@@ -187,6 +187,10 @@ unless settings["override"].include?("note_biographical")
   to_field "note_biographical", note_biographical
 end
 
+unless settings["override"].include?("note_cited_in")
+  to_field "note_cited_in", note_cited_in
+end
+
 unless settings["override"].include?("note_copy_version")
   to_field "note_copy_version", note_copy_version
 end

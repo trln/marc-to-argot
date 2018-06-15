@@ -10,6 +10,9 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_cited_in2) { run_traject_json('unc', 'note_cited_in2', 'mrc') }
   let(:note_copy_version) { run_traject_json('duke', 'note_copy_version', 'mrc') }
   let(:note_data_quality) { run_traject_json('duke', 'note_data_quality', 'mrc') }
+  let(:note_described_by1) { run_traject_json('unc', 'note_described_by1', 'mrc') }
+  let(:note_described_by2) { run_traject_json('unc', 'note_described_by2', 'mrc') }
+  let(:note_described_by3) { run_traject_json('unc', 'note_described_by3', 'mrc') }
   let(:note_dissertation) { run_traject_json('duke', 'note_dissertation', 'mrc') }
   let(:note_file_type) { run_traject_json('duke', 'note_file_type', 'mrc') }
   let(:note_former_title) { run_traject_json('duke', 'note_former_title', 'mrc') }
@@ -118,6 +121,35 @@ describe MarcToArgot::Macros::Shared::Notes do
     )
   end
 
+  xit '(MTA) sets note_described_by with Finding aid label' do
+    result = note_described_by1['note_described_by']
+    expect(result).to eq(
+                        [
+                          'Finding aids: List of items in front of folder 39.'
+                        ]
+                      )
+  end
+
+  xit '(MTA) sets note_described_by with Index and $3 label' do
+    result = note_described_by2['note_described_by']
+    expect(result).to eq(
+                        [
+                          '1961-1973: Indexes: Annual index published separately each year.',
+                          '1974-: Indexes: Annual index published with the last issue of each year.',
+                          'v. 1-10, 1962-1971: Indexes: Cumulative index published separately in 1 volume.'
+                        ]
+                      )
+  end
+
+  xit '(MTA) sets note_described_by with no extra labeling' do
+    result = note_described_by3['note_described_by']
+    expect(result).to eq(
+                        [
+                          'Cumulative title, document number and subject index available online with links to select online titles.'
+                        ]
+                      )
+  end
+  
   it '(MTA) sets note_dissertation' do
     result = note_dissertation['note_dissertation']
     expect(result).to eq(

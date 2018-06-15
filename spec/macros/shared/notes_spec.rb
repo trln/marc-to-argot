@@ -33,7 +33,8 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_supplement) { run_traject_json('duke', 'note_supplement', 'mrc') }
   let(:note_system_details) { run_traject_json('duke', 'note_system_details', 'mrc') }
   let(:note_with) { run_traject_json('duke', 'note_with', 'mrc') }
-
+  let(:note_system_details_vernacular) { run_traject_json('unc', 'vern_note_sys_det', 'mrc') }
+  
   it '(MTA) sets note_access_restrictions' do
     result = note_access_restrictions['note_access_restrictions']
     expect(result).to eq(
@@ -383,6 +384,14 @@ describe MarcToArgot::Macros::Shared::Notes do
       ['With: Chong kan Song ben Mengzi zhu shu, [Taibei Shi : Yi wen yin shu guan, Min guo 44 i.e. 1955]',
        'With: 重栞宋本孟子注疏, [北市 : 藝文印書館, 民國44 i.e. 1955]']
     )
+  end
+
+  xit '(MTA) sets note_system_details from vernacular' do
+    result = note_system_details_vernacular['note_system_details']
+    expect(result).to eq(
+                        [ 'Xi tong yao qiu: Blu-ray bo fang she bei ji xiang guan ruan jian.',
+                          '系统要求: Blu-ray播放设备及相关软件.'
+      ])
   end
 
 end

@@ -16,7 +16,10 @@ describe MarcToArgot::Macros::Shared::Names do
   let(:names10) { run_traject_json('unc', 'names10', 'mrc') }
   let(:names11) { run_traject_json('unc', 'names11', 'mrc') }
   let(:names12) { run_traject_json('unc', 'names12', 'mrc') }
-
+  let(:vnames01) { run_traject_json('unc', 'vern_names01', 'mrc') }
+  let(:vnames02) { run_traject_json('unc', 'vern_names02', 'mrc') }
+  let(:vnames03) { run_traject_json('unc', 'vern_names03', 'mrc') }
+  
   it '(MTA) sets names, prioritizing director type over creator type' do
     result = names01['names']
     expect(result).to eq(
@@ -186,6 +189,59 @@ describe MarcToArgot::Macros::Shared::Names do
                          {'name'=>'Spence, Thomas, 1750-1814',
                           'rel'=>['writer of preface'],
                           'type'=>'contributor'}
+                        ])
+  end
+  
+  xit '(MTA) sets names from 100 and linked vernacular field' do
+    result = vnames01['names']
+    expect(result).to eq(
+                        [
+                          {
+                            'name'=>'Li, Cha.',
+                            'type'=>'creator'
+                          },
+                          {
+                            'name'=>'李察.',
+                            'type'=>'creator',
+                            'lang'=>'cjk'
+                          }
+                        ])
+  end
+  
+  xit '(MTA) sets names from 700s and linked vernacular fields' do
+    result = vnames02['names']
+    expect(result).to eq(
+                        [
+                          {
+                            'name'=>'Hayashi, Taizō, 1922-',
+                            'type'=>'no_rel'
+                          },
+                          {
+                            'name'=>'Gomi, Yūji, 1928-',
+                            'type'=>'no_rel'
+                          },
+                          {
+                            'name'=>'林大造, 1922-',
+                            'type'=>'no_rel',
+                            'lang'=>'cjk'
+                          },
+                          {
+                            'name'=>'五味, 雄治, 1928-',
+                            'type'=>'no_rel',
+                            'lang'=>'cjk'
+                          }                          
+                        ])
+  end
+  
+  xit '(MTA) sets vernacular name from 100' do
+    result = vnames02['names']
+    expect(result).to eq(
+                        [
+                          {
+                            'name'=>'お茶の水女子大学グローバル教育センター.',
+                            'type'=>'creator',
+                            'lang'=>'cjk'
+                          }
                         ])
   end
 end

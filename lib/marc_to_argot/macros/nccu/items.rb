@@ -143,7 +143,7 @@ module MarcToArgot
           access_types << 'At the Library' if physical_access?(rec, libs)
           ctx.output_hash['access_type'] = access_types
           ctx.output_hash['virtual_collection'] = vcs unless vcs.empty?
-
+          ctx.output_hash['available'] = 'Available' if is_available?(items)
           locations = map_locations_to_hierarchy(items)
           ctx.output_hash['location_hierarchy'] =  arrays_to_hierarchy(locations) if locations
         end
@@ -177,6 +177,10 @@ module MarcToArgot
 
         def location_hierarchy_map
          @location_hierarchy_map ||= Traject::TranslationMap.new('nccu/location_hierarchy')
+        end
+
+        def is_available?(items)
+          items.any? { |i| i['status'].downcase.start_with?('available') rescue false }
         end
 
       end

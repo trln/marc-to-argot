@@ -1,10 +1,8 @@
 # Argot attributes you do not want parsed by the default argot configuration
 - id
-- local_id
 - institution
-- cataloged_date
 - items
+- local_id
 - oclc_number
 - rollup_id
 - sersol_number
-- linking

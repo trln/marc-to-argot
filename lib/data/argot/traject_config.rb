@@ -130,8 +130,12 @@ end
 # Title
 ######
 
-unless settings["override"].include?("title")
-  to_field "title", argot_title(settings["specs"][:title])
+unless settings["override"].include?("title_main")
+  to_field "title_main", title_main
+end
+
+unless settings["override"].include?("title_sort")
+  to_field "title_sort", title_sort
 end
 
 unless settings["override"].include?("title_variant")
@@ -413,11 +417,11 @@ end
 ######
 
 unless settings["override"].include?("statement_of_responsibility")
-  to_field "statement_of_responsibility", argot_gvo(settings["specs"][:statement_of_responsibility])
+  to_field "statement_of_responsibility",
+    basic_vernacular_field(settings["specs"][:statement_of_responsibility])
 end
 
 unless settings["override"].include?("edition")
-  #to_field "edition", argot_gvo(settings["specs"][:edition])
   to_field "edition", edition
 end
 

@@ -8,9 +8,11 @@ require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/series_statement'
+require 'marc_to_argot/macros/shared/title'
 require 'marc_to_argot/macros/shared/title_variant'
 require 'marc_to_argot/macros/shared/upc'
 require 'marc_to_argot/macros/shared/urls'
+require 'marc_to_argot/macros/shared/vernacular'
 require 'marc_to_argot/macros/shared/work_entry'
 
 require 'set'
@@ -31,9 +33,11 @@ module MarcToArgot
       include PhysicalMedia
       include ResourceType
       include SeriesStatement
+      include Title
       include TitleVariant
       include Upc
       include Urls
+      include Vernacular
       include WorkEntry
 
       # values to look for in the 856 that indicate

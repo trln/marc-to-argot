@@ -22,11 +22,16 @@ to_field 'local_id' do |rec, acc|
   acc << local_id
 end
 
+################################################
 # Institution
-######\
+######
 to_field 'institution', literal('unc')
 
+################################################
+# Virtual collection
+######
 to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collection], :separator => nil)
+
 ################################################
 # oclc_number, sersol_number, rollup_id
 # 001, 003, 035

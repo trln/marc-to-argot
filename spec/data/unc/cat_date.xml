@@ -1,0 +1,74 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200181   4500</leader>
+      <controlfield tag='008'>690519s1969    nyu           000 0 engm </controlfield>
+      <controlfield tag='001'>1765</controlfield>
+      <controlfield tag='003'>OCoLC</controlfield>
+      <controlfield tag='005'>19850225000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>68027685</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='035'>
+        <subfield code='a'>(OCoLC)1765</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>m.c.</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='082'>
+        <subfield code='a'>792/.028/07</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Avram, Rachmael ben.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The act and the image.</subfield>
+        <subfield code='b'>Including Our town,</subfield>
+        <subfield code='c'>by Thornton Wilder and Romeo and Juliet, by William Shakespeare.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>New York,</subfield>
+        <subfield code='b'>Odyssey Press</subfield>
+        <subfield code='c'>[1969]</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>x, 292 p.</subfield>
+        <subfield code='c'>23 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Acting.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Wilder, Thornton,</subfield>
+        <subfield code='d'>1897-1975.</subfield>
+        <subfield code='t'>Our town.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Shakespeare, William,</subfield>
+        <subfield code='d'>1564-1616.</subfield>
+        <subfield code='t'>Romeo and Juliet.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1000575</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i1000985</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>9</subfield>
+        <subfield code='b'>10000193595</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPN2061 .B38</subfield>
+      </datafield>
+            <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-24 20:14:18-04</subfield>
+        <subfield code='u'>2016-09-23 10:19:54-04</subfield>
+      </datafield>
+  </record>
+</collection>

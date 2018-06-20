@@ -1,0 +1,126 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200229Ia 4500</leader>
+      <controlfield tag='008'>930203s1819    enk           000 0 engdd</controlfield>
+      <controlfield tag='001'>28042987</controlfield>
+      <controlfield tag='005'>19960814084335.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>ZCL</subfield>
+        <subfield code='c'>ZCL</subfield>
+        <subfield code='d'>NDO</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='043'>
+        <subfield code='a'>e-uk---</subfield>
+        <subfield code='a'>n-us---</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Chitty, Joseph,</subfield>
+        <subfield code='d'>1776-1841.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='2' tag='245'>
+        <subfield code='a'>A practical treatise on the criminal law :</subfield>
+        <subfield code='b'>comprising the practice, pleadings, and evidence which occur in the course of criminal pro
+secution /</subfield>
+        <subfield code='c'>by Joseph Chitty ; with additional notes ... by Richard Peters, Jr.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>Philadelphia :</subfield>
+        <subfield code='b'>Isaac Riley,</subfield>
+        <subfield code='c'>1819.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>2 v. in 3 ;</subfield>
+        <subfield code='c'>23 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Vol. 2 in 2 parts.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>&quot;Whether by indictment or information : with a copious collection of precedents of in
+dictments, informations, presentments, and every description of practical forms, with comprehensive notes as to each
+particular offence, the process, indictment, plea, defence, evidence, trial, verdict, judgment, and punishment.&quot;
+</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Criminal law</subfield>
+        <subfield code='z'>Great Britain.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Forms (Law)</subfield>
+        <subfield code='z'>Great Britain.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='650'>
+        <subfield code='a'>Criminal law</subfield>
+        <subfield code='z'>United States.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Peters, Richard.</subfield>
+      </datafield>
+            <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b2909995</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i4149156</subfield>
+        <subfield code='l'>kwrbr</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>43</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00238079T</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aKF9219 .C48 1819a</subfield>
+        <subfield code='v'>v.1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i4149157</subfield>
+        <subfield code='l'>kwrbr</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>43</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00238080L</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aKF9219 .C48 1819a</subfield>
+        <subfield code='v'>v.2:pt.1</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i4149158</subfield>
+        <subfield code='l'>kwrbr</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>43</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>L00238081M</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aKF9219 .C48 1819a</subfield>
+        <subfield code='v'>v.2:pt.2</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c14061812</subfield>
+        <subfield code='b'>kwrbr</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c14061812</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>KF9219</subfield>
+        <subfield code='i'>.C48 1819a</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c14061812</subfield>
+        <subfield code='2'>853</subfield>
+        <subfield code='3'>y</subfield>
+        <subfield code='8'>1</subfield>
+        <subfield code='a'>v.</subfield>
+        <subfield code='b'>pt.</subfield>
+        <subfield code='t'>c.</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-10-03 07:54:48-04</subfield>
+        <subfield code='u'>2013-10-31 13:39:27-04</subfield>
+      </datafield>
+    </record>
+  </collection>

@@ -33,6 +33,25 @@ to_field 'institution', literal('unc')
 to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collection], :separator => nil)
 
 ################################################
+# note_local
+######
+to_field "note_local", note_local
+
+each_record do |rec, context|
+    Traject::MarcExtractor.cached('790|1 |a:791|2 |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+
+    if field.tag == '791'
+      value = "Purchased using funds from the #{field.value}"
+    else field.tag == '790'
+      value = "Donated by #{field.value}" 
+    end
+
+    context.output_hash['note_local'] ||= []
+    context.output_hash['note_local'] << {'value' =>  value}
+  end
+end
+
+################################################
 # oclc_number, sersol_number, rollup_id
 # 001, 003, 035
 ######\

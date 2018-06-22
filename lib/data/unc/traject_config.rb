@@ -68,8 +68,10 @@ to_field "note_local", note_local
 
 each_record do |rec, context|
   donors = process_donor_marc(rec)
-  context.output_hash['note_local'] ||= []
-  donors.each { |d| context.output_hash['note_local'] << d } if donors.size > 0
+  if donors.size > 0
+    context.output_hash['note_local'] ||= []
+    donors.each { |d| context.output_hash['note_local'] << d }
+  end
 end
 
 

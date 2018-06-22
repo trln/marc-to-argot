@@ -38,10 +38,6 @@ module MarcToArgot
           'CATALOGING' => 'In Process'
         }.freeze
 
-        def virtual_collection(item)
-          item['loc_b'] != 'LRL' && LOC_COLLECTIONS.include?(item['loc_n']) && item['loc_n']
-        end
-
         def get_location(item)
           [item['loc_b'], item['loc_n']]
         end
@@ -64,61 +60,9 @@ module MarcToArgot
           end
         end
 
-        # items in certain 'current' locations
-        # should be displayed as if that is their
-        # home location
-        def current_as_home?(loc)
-          case loc
-          when 'RESERVES'
-            true
-          when /^RSRV-/
-            true
-          when 'NEWBOOKS'
-            true
-          else
-            false
-          end
-        end
-
-        def remap_item_locations!(item)
-          lib, loc = get_location(item)
-          if lib == 'BOOKBOT'
-            item['loc_b'] = 'HUNT'
-            item['loc_n'] = 'BOOKBOT' if loc == 'STACKS'
-          end
-          item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
-          item['loc_n'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
-
-          # reserves should pretend they're home.
-          if current_as_home?(item['loc_current'])
-            item['loc_n'] = item['loc_current']
-          end
-          # now some remappings based on item type
-          item['loc_b'] = 'GAME' if item['type'] == 'GAME-4HR'
-        end
-
-        def library_use_only?(item)
-          lib, loc = get_location(item)
-          lib_cases = lib == 'SPECCOLL'
-          loc_cases = case loc
-                      when 'GAMELAB', 'VRSTUDIO', /^SPEC/, /^REF/
-                        true
-                      else
-                        false
-                      end
-          type_cases = case item['type']
-                       when 'BOOKNOCIRC', 'SERIAL', 'MAP', 'CD-ROM-NC'
-                         true
-                       else
-                         false
-                       end
-          lib_cases || loc_cases || type_cases
-        end
-
         # computes and updates item status
         def item_status!(item)
           item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
-          # item['status'] << ' (Library use only)' if library_use_only?(item)
         end
 
         def marc_to_item(field)
@@ -137,12 +81,10 @@ module MarcToArgot
         def populate_context!(items, rec, ctx)
           ctx.clipboard['items'] = items
           libs = items.map { |x| x['loc_b'] }
-          vcs = items.map { |x| virtual_collection(x) }.select(&:itself).uniq
           access_types = []
           access_types << 'Online' if online_access?(rec, libs)
           access_types << 'At the Library' if physical_access?(rec, libs)
           ctx.output_hash['access_type'] = access_types
-          ctx.output_hash['virtual_collection'] = vcs unless vcs.empty?
           ctx.output_hash['available'] = 'Available' if is_available?(items)
           locations = map_locations_to_hierarchy(items)
           ctx.output_hash['location_hierarchy'] =  arrays_to_hierarchy(locations) if locations
@@ -165,8 +107,6 @@ module MarcToArgot
             items = []
             Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
               item = marc_to_item(field)
-              # remap_item_locations!(item)
-              # item.delete('item_cat_2')
               items << item
               acc << item.to_json if item
             end

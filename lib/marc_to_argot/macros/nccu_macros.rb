@@ -12,6 +12,19 @@ module MarcToArgot
       def local_marc_org_codes
         %w[NcDurC NcDurCL]
       end
+
+      def url_for_finding_aid?(fld)
+        substring_present_in_subfield?(fld, 'u', 'https://finding-aids.lib.unc.edu/')
+      end
+
+      def online_access?(_rec, libraries = [])
+        libraries.include?('ONLINE')
+      end
+
+      def physical_access?(_rec, libraries = [])
+        !libraries.find { |x| x != 'ONLINE' }.nil?
+      end
+
     end
   end
 end

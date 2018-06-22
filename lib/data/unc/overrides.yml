@@ -1,5 +1,6 @@
 # Argot attributes you do not want parsed by the default argot configuration
 - cataloged_date
+- donor
 - id
 - institution
 - items

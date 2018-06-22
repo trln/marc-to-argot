@@ -308,22 +308,6 @@ unless settings["override"].include?("url")
 end
 
 ################################################
-# Linking
-######
-
-unless settings["override"].include?("linking")
-  to_field "linking", argot_linking_attributes(settings["specs"][:linking])
-end
-
-################################################
-# Format
-######
-
-unless settings["override"].include?("format")
-  to_field "format", marc_formats
-end
-
-################################################
 # Subjects
 ######
 

@@ -32,6 +32,49 @@ to_field 'institution', literal('unc')
 ######
 to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collection], :separator => nil)
 
+
+def process_donor_marc(rec)
+  donors = []
+  Traject::MarcExtractor.cached('790|1 |abcdgqu:791|2 |abcdfg', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    if field.tag == '790'
+      included_sfs = %w[a b c d g q u]
+      value = []
+      field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
+      value = value.join(' ').chomp(',')
+      donors << {'value' => "Donated by #{value}"}
+    else field.tag == '791'
+      included_sfs = %w[a b c d f g]
+      value = []
+      field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
+      value = value.join(' ').chomp(',')
+      donors << {'value' => "Purchased using funds from the #{field.value}"}
+    end
+  end
+  return donors
+end
+
+################################################
+# donor
+######
+to_field 'donor' do |rec, acc|
+  donors = process_donor_marc(rec)
+  donors.each { |d| acc << d } if donors.size > 0
+end
+
+################################################
+# note_local
+######
+to_field "note_local", note_local
+
+each_record do |rec, context|
+  donors = process_donor_marc(rec)
+  if donors.size > 0
+    context.output_hash['note_local'] ||= []
+    donors.each { |d| context.output_hash['note_local'] << d }
+  end
+end
+
+
 ################################################
 # oclc_number, sersol_number, rollup_id
 # 001, 003, 035

@@ -1,0 +1,104 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+    <leader>00000cam  2200241 i 4500</leader>
+      <controlfield tag='008'>781020s1976    enk           000 0 eng  </controlfield>
+      <controlfield tag='001'>4465618</controlfield>
+      <controlfield tag='005'>19850206000000.0</controlfield>
+      <datafield ind1=' ' ind2=' ' tag='010'>
+        <subfield code='a'>78321295</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='015'>
+        <subfield code='a'>GB78-25455</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='020'>
+        <subfield code='a'>0573025061 :</subfield>
+        <subfield code='c'>£0.50</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='040'>
+        <subfield code='a'>DLC</subfield>
+        <subfield code='c'>DLC</subfield>
+        <subfield code='d'>NOC</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='082'>
+        <subfield code='a'>822/.9/14</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='100'>
+        <subfield code='a'>Stoppard, Tom.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2='4' tag='245'>
+        <subfield code='a'>The fifteen minute Hamlet /</subfield>
+        <subfield code='c'>by Tom Stoppard.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='260'>
+        <subfield code='a'>London ;</subfield>
+        <subfield code='a'>New York :</subfield>
+        <subfield code='b'>French,</subfield>
+        <subfield code='c'>1976.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='300'>
+        <subfield code='a'>16 p. ;</subfield>
+        <subfield code='c'>19 cm.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='500'>
+        <subfield code='a'>Test note.</subfield>
+        <subfield code='5'>NcU</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='700'>
+        <subfield code='a'>Shakespeare, William,</subfield>
+        <subfield code='d'>1564-1616.</subfield>
+        <subfield code='t'>Hamlet.</subfield>
+      </datafield>
+      <datafield ind1='2' ind2=' ' tag='791'>
+        <subfield code='a'>William A. Whitaker Foundation Library Fund.</subfield>
+      </datafield>
+      <datafield ind1='1' ind2=' ' tag='790'>
+        <subfield code='a'>Scaglione, Aldo D.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2='0' tag='830'>
+        <subfield code='a'>French&apos;s theatre scripts.</subfield>
+      </datafield>
+      <datafield ind1=' ' ind2=' ' tag='907'>
+        <subfield code='a'>b1574656a</subfield>
+      </datafield>
+           <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i2229633</subfield>
+        <subfield code='l'>ddda</subfield>
+        <subfield code='s'>-</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>3</subfield>
+        <subfield code='o'>4</subfield>
+        <subfield code='b'>00007996939</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPR2878.H3 S8</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='1' tag='999'>
+        <subfield code='i'>i6509128</subfield>
+        <subfield code='l'>wcda</subfield>
+        <subfield code='s'>o</subfield>
+        <subfield code='t'>0</subfield>
+        <subfield code='c'>1</subfield>
+        <subfield code='o'>0</subfield>
+        <subfield code='b'>00027190094</subfield>
+        <subfield code='p'>090##</subfield>
+        <subfield code='q'>|aPR2878.H3 S8</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='2' tag='999'>
+        <subfield code='a'>c4671237</subfield>
+        <subfield code='b'>wcda</subfield>
+        <subfield code='c'>0</subfield>
+      </datafield>
+      <datafield ind1='9' ind2='3' tag='999'>
+        <subfield code='0'>c4671237</subfield>
+        <subfield code='2'>852</subfield>
+        <subfield code='3'>c</subfield>
+        <subfield code='h'>PR2878.H3</subfield>
+        <subfield code='i'>S8</subfield>
+      </datafield>
+      <datafield ind1='0' ind2='0' tag='999'>
+        <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+        <subfield code='c'>2004-09-28 16:27:00-04</subfield>
+        <subfield code='u'>2018-01-10 06:02:30-05</subfield>
+      </datafield>
+  </record>
+</collection>

@@ -14,13 +14,13 @@ module MarcToArgot
               edition = {}
 
               case field.tag
-                when '250'
-                  label = collect_and_join_subfield_values(field, '3').chomp(':').strip
-                  edition['label'] = label unless label.empty?
-                  edition['value'] = collect_and_join_subfield_values(field, %w[a b])
-                when '254'
-                  edition['value'] = collect_and_join_subfield_values(field, %w[a])
-                end  
+              when '250'
+                label = collect_and_join_subfield_values(field, '3').chomp(':').strip
+                edition['label'] = label unless label.empty?
+                edition['value'] = collect_and_join_subfield_values(field, %w[a b])
+              when '254'
+                edition['value'] = collect_and_join_subfield_values(field, %w[a])
+              end
 
               acc << edition unless edition.empty?
 

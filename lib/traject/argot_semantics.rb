@@ -391,13 +391,27 @@ module Traject::Macros
     bio_006 = 17
 
     lambda do |rec, acc|
-      Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-        
+      genre_values = []
+      Traject::MarcExtractor.cached('008:006', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+        to_map = []
+        if field.tag == '008' && uses_book_008_config?(rec)
+          to_map << get_bytes_to_map(field, lit_form_008, bio_008)
+        elsif field.tag == '006' && is_book_006?(field)
+          to_map << get_bytes_to_map(field, lit_form_006, bio_006)
+        end
+
+        unless to_map.empty?
+          to_map.each do |bytevals|
+            genre_values << map_byte_value_to_genre(bytevals['lit_form'])
+            genre_values << 'Biography' if bytevals['bio'] =~ /[abcd]/
+          end
+        end
       end
+      acc.concat genre_values unless genre_values.empty?
     end
   end
 
-  def self.uses_book_008_config?(rec)
+  def uses_book_008_config?(rec)
     if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
       true
     elsif rec.leader.byteslice(6) == 't'
@@ -407,11 +421,18 @@ module Traject::Macros
     end
   end
 
-  def self.is_book_006?(field)
+  def is_book_006?(field)
     true if field.value.byteslice(0) =~ /[at]/
   end
 
-  def self.map_byte_value_to_genre(byte_value)
+  def get_bytes_to_map(field, lit_form_byte, bio_byte)
+    values = {}
+    values['lit_form'] = field.value.byteslice(lit_form_byte)
+    values['bio'] = field.value.byteslice(bio_byte)
+    values
+  end
+  
+  def map_byte_value_to_genre(byte_value)
     case byte_value
     when '0'
       'Nonfiction'
@@ -436,57 +457,9 @@ module Traject::Macros
     end
   end
   
-    # def argot_genre_from_fixed_fields(options={})
-    #   spec        = options[:spec] || '008[33]:008[34]'
-    #   mapped_byte = options[:mapped_byte] || 33
-    #   bio_byte    = options[:bio_byte] || 34
-    #   constraint  = options[:constraint] || nil
-
-    #   lambda do |rec, acc|
-
-    #     Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    #       if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
-    #         if constraint.nil? || ArgotSemantics.method(constraint).call(field)
-    #           field_value = field.value.byteslice(spec.bytes)
-    #           mapped_values = []
-    #           if spec.bytes == mapped_byte
-    #             mapped_values << case field_value
-    #                              when '0'
-    #                                'Nonfiction'
-    #                              when '1'
-    #                                'Fiction'
-    #                              when 'd'
-    #                                'Drama'
-    #                              when 'e'
-    #                                'Essays'
-    #                              when 'f'
-    #                                'Novels'
-    #                              when 'h'
-    #                                'Humor, satire, etc'
-    #                              when 'i'
-    #                                'Letters'
-    #                              when 'j'
-    #                                'Short stories'
-    #                              when 'p'
-    #                                'Poetry'
-    #                              when 's'
-    #                                'Speeches, addresses, etc'
-    #                              end
-    #           end
-
-    #           if spec.bytes == bio_byte
-    #             mapped_values << 'Biography' if field_value =~ /[abcd]/
-    #           end
-    #           acc.concat mapped_values unless mapped_values.empty?
-    #         end
-    #       end
-    #     end
-    #   end
+    # def self.field_006_byte_00_at(field)
+    #   field.value.byteslice(0) =~ /[at]/
     # end
-
-    def self.field_006_byte_00_at(field)
-      field.value.byteslice(0) =~ /[at]/
-    end
 
     ################################################
     # Lambda for Generic Vernacular Object

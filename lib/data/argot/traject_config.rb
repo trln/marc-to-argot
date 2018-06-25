@@ -376,10 +376,7 @@ unless settings['override'].include?('subject_genre')
                                                 })
 
   to_field 'subject_genre', argot_genre_from_fixed_fields()
-  # to_field 'subject_genre', argot_genre_from_fixed_fields({ spec: '006[16]:006[17]',
-  #                                                       mapped_byte: 16,
-  #                                                       bio_byte: 17,
-  #                                                       constraint: :field_006_byte_00_at })
+
   each_record do |rec, context|
     primary_source_genres = ['Archival resources',
                              'Archives',

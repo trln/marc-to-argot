@@ -385,6 +385,7 @@ module Traject::Macros
   end
 
   def argot_genre_from_fixed_fields
+    #set relevant byte positions for each field
     lit_form_008 = 33
     bio_008 = 34
     lit_form_006 = 16
@@ -394,9 +395,9 @@ module Traject::Macros
       genre_values = []
       Traject::MarcExtractor.cached('008:006', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
         to_map = []
-        if field.tag == '008' && uses_book_008_config?(rec)
+        if field.tag == '008' && rec.uses_book_configuration_in_008?
           to_map << get_bytes_to_map(field, lit_form_008, bio_008)
-        elsif field.tag == '006' && is_book_006?(field)
+        elsif field.tag == '006' && field.uses_book_configuration_in_006?
           to_map << get_bytes_to_map(field, lit_form_006, bio_006)
         end
 
@@ -409,20 +410,6 @@ module Traject::Macros
       end
       acc.concat genre_values unless genre_values.empty?
     end
-  end
-
-  def uses_book_008_config?(rec)
-    if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
-      true
-    elsif rec.leader.byteslice(6) == 't'
-      true
-    else
-      false
-    end
-  end
-
-  def is_book_006?(field)
-    true if field.value.byteslice(0) =~ /[at]/
   end
 
   def get_bytes_to_map(field, lit_form_byte, bio_byte)
@@ -456,10 +443,6 @@ module Traject::Macros
       'Speeches, addresses, etc'
     end
   end
-  
-    # def self.field_006_byte_00_at(field)
-    #   field.value.byteslice(0) =~ /[at]/
-    # end
 
     ################################################
     # Lambda for Generic Vernacular Object

@@ -384,53 +384,105 @@ module Traject::Macros
     end
   end
 
-    def argot_genre_from_fixed_fields(options={})
-      spec        = options[:spec] || '008[33]:008[34]'
-      mapped_byte = options[:mapped_byte] || 33
-      bio_byte    = options[:bio_byte] || 34
-      constraint  = options[:constraint] || nil
+  def argot_genre_from_fixed_fields
+    lit_form_008 = 33
+    bio_008 = 34
+    lit_form_006 = 16
+    bio_006 = 17
 
-      lambda do |rec, acc|
-
-        Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-          if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
-            if constraint.nil? || ArgotSemantics.method(constraint).call(field)
-              field_value = field.value.byteslice(spec.bytes)
-              mapped_values = []
-              if spec.bytes == mapped_byte
-                mapped_values << case field_value
-                                 when '0'
-                                   'Nonfiction'
-                                 when '1'
-                                   'Fiction'
-                                 when 'd'
-                                   'Drama'
-                                 when 'e'
-                                   'Essays'
-                                 when 'f'
-                                   'Novels'
-                                 when 'h'
-                                   'Humor, satire, etc'
-                                 when 'i'
-                                   'Letters'
-                                 when 'j'
-                                   'Short stories'
-                                 when 'p'
-                                   'Poetry'
-                                 when 's'
-                                   'Speeches, addresses, etc'
-                                 end
-              end
-
-              if spec.bytes == bio_byte
-                mapped_values << 'Biography' if field_value =~ /[abcd]/
-              end
-              acc.concat mapped_values unless mapped_values.empty?
-            end
-          end
-        end
+    lambda do |rec, acc|
+      Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+        
       end
     end
+  end
+
+  def self.uses_book_008_config?(rec)
+    if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
+      true
+    elsif rec.leader.byteslice(6) == 't'
+      true
+    else
+      false
+    end
+  end
+
+  def self.is_book_006?(field)
+    true if field.value.byteslice(0) =~ /[at]/
+  end
+
+  def self.map_byte_value_to_genre(byte_value)
+    case byte_value
+    when '0'
+      'Nonfiction'
+    when '1'
+      'Fiction'
+    when 'd'
+      'Drama'
+    when 'e'
+      'Essays'
+    when 'f'
+      'Novels'
+    when 'h'
+      'Humor, satire, etc'
+    when 'i'
+      'Letters'
+    when 'j'
+      'Short stories'
+    when 'p'
+      'Poetry'
+    when 's'
+      'Speeches, addresses, etc'
+    end
+  end
+  
+    # def argot_genre_from_fixed_fields(options={})
+    #   spec        = options[:spec] || '008[33]:008[34]'
+    #   mapped_byte = options[:mapped_byte] || 33
+    #   bio_byte    = options[:bio_byte] || 34
+    #   constraint  = options[:constraint] || nil
+
+    #   lambda do |rec, acc|
+
+    #     Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    #       if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
+    #         if constraint.nil? || ArgotSemantics.method(constraint).call(field)
+    #           field_value = field.value.byteslice(spec.bytes)
+    #           mapped_values = []
+    #           if spec.bytes == mapped_byte
+    #             mapped_values << case field_value
+    #                              when '0'
+    #                                'Nonfiction'
+    #                              when '1'
+    #                                'Fiction'
+    #                              when 'd'
+    #                                'Drama'
+    #                              when 'e'
+    #                                'Essays'
+    #                              when 'f'
+    #                                'Novels'
+    #                              when 'h'
+    #                                'Humor, satire, etc'
+    #                              when 'i'
+    #                                'Letters'
+    #                              when 'j'
+    #                                'Short stories'
+    #                              when 'p'
+    #                                'Poetry'
+    #                              when 's'
+    #                                'Speeches, addresses, etc'
+    #                              end
+    #           end
+
+    #           if spec.bytes == bio_byte
+    #             mapped_values << 'Biography' if field_value =~ /[abcd]/
+    #           end
+    #           acc.concat mapped_values unless mapped_values.empty?
+    #         end
+    #       end
+    #     end
+    #   end
+    # end
 
     def self.field_006_byte_00_at(field)
       field.value.byteslice(0) =~ /[at]/

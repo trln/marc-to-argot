@@ -7,6 +7,7 @@ describe MarcToArgot do
   let(:subject2) { run_traject_json('unc', 'subject2', 'mrc') }
   let(:primary_source1) { run_traject_json('unc', 'primary_source1', 'mrc') }
   let(:primary_source2) { run_traject_json('unc', 'primary_source2', 'mrc') }
+  let(:genre1) { run_traject_json('unc', 'genre1', 'mrc') }
   
   it '(MTA) sets subject_headings from any source' do
     result = subject1['subject_headings']
@@ -118,6 +119,13 @@ describe MarcToArgot do
     result = primary_source2['subject_genre']
     expect(result).to include(
                         'Primary sources'
+                      )
+  end  
+
+  it '(MTA) adds genre facet value from 006 alone' do
+    result = genre1['subject_genre']
+    expect(result).to include(
+                        'Nonfiction'
                       )
   end  
 

@@ -1,13 +1,13 @@
+edition:
+  - 250ab3
+  - 254a
+frequency:
+  current:
+    - 310ab
+  former:
+    - 321ab
 id:
   - '001'
-oclc_number:
-  value:
-    - 035a
-  old:
-    - 035z
-syndetics_id:
-  - 020a
-  - 024a
 isbn:
   - 020a
   - 020z
@@ -28,35 +28,6 @@ issn:
     - 785xz
   series:
     - 490x
-publisher:
-  - 260bf
-  - 264b
-imprint:
-  - 260abcefg
-  - 262abcde
-  - 264abc
-authors:
-  - 100abcdegq
-  - 110abcdefgn
-  - 111abcdefngq
-  - 700abcdeq
-  - 710abcde
-  - 711abcdeq
-  - 720a
-author_facet:
-  - 100abcdgjqu
-  - 110abcdgnu
-  - 111acdegnqu
-  - 700abcdgjqu
-title:
-  - 245abnp
-  - 130adfghklmnoprs
-  - 240adfghklmnoprs
-  - 242abhnp
-  - 730adfghklmnoprst
-  - 740ahnp
-  - 780abcdghnkstxz
-  - 785abcdghikmnstxz
 note_admin_history:
   - 545|1*|abu
 note_file_type:
@@ -86,59 +57,31 @@ note_toc:
   - 505agrt
 note_with:
   - 501a
-linking:
-  main_series:
-    - 760
-  subseries:
-    - 762
-  translation_of:
-    - 765
-  translated_as:
-    - 767
-  has_supplement:
-    - 770
-  supplement_to:
-    - 772
-  host_item:
-    - 773
-  constituent_unit:
-    - 774
-  added_entry:
-    - 790
-    - 791
-subjects:
-  - 600abcdefghijklmnopqrstvxyz
-  - 610abcdefghijklmnopqrstvxyz
-  - 611acdefghijklmnopqrstvxyz
+oclc_number:
+  value:
+    - 035a
+  old:
+    - 035z
+publisher:
+  - 260bf
+  - 264b
+syndetics_id:
+  - 020a
+  - 024a
+title:
+  - 245abnp
+statement_of_responsibility:
+  - 245c
+subject_headings:
+  - 600abcdfghjklmnopqrstuvxyz
+  - 610abcdfghklmnoprstuvxyz
+  - 611acdefghklnpqstuvxyz
   - 630adfghklmnoprstvxyz
-  - 650abcdevxyz
-  - 651avxyz
+  - 647acdgvxyz
+  - 648avxyz
+  - 650abcdgvxyz
+  - 651agvxyz
   - 653a
-  - 655abvxyz
   - 690ax
   - 691abvxyz
   - 695a
-statement_of_responsibility:
-  - 245c
-edition:
-  - 250ab3
-  - 254a
-frequency:
-  current:
-    - 310ab
-  former:
-    - 321ab
-series:
-  main:
-    - 440anpvx
-    - 490avx
-  personal:
-    - 800tnpfkl
-  corporate:
-    - 810tnoprlsm
-  meeting:
-    - 811tnpls
-  uniform:
-    - 830ahnpv
-misc_id:
-  - 010ab

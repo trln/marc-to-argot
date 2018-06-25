@@ -315,82 +315,88 @@ end
 # Subjects
 ######
 
-unless settings["override"].include?("subjects")
-  to_field "subjects", marc_lcsh_formatted({:spec => settings["specs"][:subjects], :subdivison_separator => " -- "})
+unless settings["override"].include?("subject_headings")
+  to_field 'subject_headings', argot_subject_genre_headings({ spec: settings["specs"][:subject_headings]})
 end
 
-unless settings['override'].include?('subject_topic_lcsh')
-  to_field 'subject_topic_lcsh', argot_subjects({ spec: '600|*0|abcdfghjklmnopqrstu:600|*0|x:'\
-                                                        '610|*0|abcdfghklmnoprstu:610|*0|x:'\
-                                                        '611|*0|acdefghklnpqstu:611|*0|x:'\
-                                                        '630|*0|adfghklmnoprst:630|*0|x:'\
-                                                        '647|*0|acdg:647|*0|x:'\
-                                                        '648|*0|x:'\
-                                                        '650|*0|abcdg:650|*0|x:'\
-                                                        '651|*0|x' })
+unless settings["override"].include?("genre_headings")
+  to_field 'genre_headings', argot_subject_genre_headings({ spec: '655avxyz',
+                                                            filters: {
+                                                              'rbbin' => [ :strip_rb_vocab_terms ],
+                                                              'rbgenr' => [ :strip_rb_vocab_terms ],
+                                                              'rbmscv' => [ :strip_rb_vocab_terms ],
+                                                              'rbpap' => [ :strip_rb_vocab_terms ],
+                                                              'rbpri' => [ :strip_rb_vocab_terms ],
+                                                              'rbprov' => [ 'strip_rb_vocab_terms' ],
+                                                              'rbpub' => [ :strip_rb_vocab_terms ],
+                                                              'rbtyp' => [ :strip_rb_vocab_terms ]
+                                                            }
+                                                          })
+end
 
-  to_field 'subject_topic_lcsh', argot_subjects({ spec: '600|*7|abcdfghjklmnopqrstu:600|*7|x:'\
-                                                        '610|*7|abcdfghklmnoprstu:610|*7|x:'\
-                                                        '611|*7|acdefghklnpqstu:611|*7|x:'\
-                                                        '630|*7|adfghklmnoprst:630|*7|x:'\
-                                                        '647|*7|acdg:647|*7|x:'\
-                                                        '648|*7|x:'\
-                                                        '650|*7|abcdg:650|*7|x:'\
-                                                        '651|*7|x:'\
-                                                        '656|*7|x:656|*7|a:'\
-                                                        '657|*7|x:657|*7|a',
-                                                  classifications: /lcsh/ })
+unless settings['override'].include?('subject_topical')
+  to_field 'subject_topical', argot_subject_facets({ spec: '600abcdfghjklmnopqrstu:600x:'\
+                                                        '610abcdfghklmnoprstu:610x:'\
+                                                        '611acdefghklnpqstu:611x:'\
+                                                        '630adfghklmnoprst:630x:'\
+                                                        '647acdg:647x:'\
+                                                        '648x:'\
+                                                        '650abcdg:650x:'\
+                                                        '651x:'\
+                                                        '656x:656a:'\
+                                                        '657x:657a'})
 end
 
 unless settings['override'].include?('subject_chronological')
-  to_field 'subject_chronological', argot_subjects({ spec: '600|*0|y:610|*0|y:611|*0|y:630|*0|y:'\
-                                                           '648|*0|a:650|*0|y:651|*0|y:655|*0|y' })
-
-  to_field 'subject_chronological', argot_subjects({ spec: '600|*7|y:610|*7|y:611|*7|y:630|*7|y:'\
-                                                           '650|*7|y:651|*7|y:655|*7|y',
-                                                     classifications: /lcsh/ })
-
-  to_field 'subject_chronological', argot_subjects({ spec: '648|*7|a',
-                                                     classifications: /lcsh|fast/ })
+  to_field 'subject_chronological', argot_subject_facets({ spec: '600y:610y:611y:630y:'\
+                                                           '648a:650y:651y:655y' })
 end
 
 unless settings['override'].include?('subject_geographic')
-  to_field 'subject_geographic', argot_subjects({ spec: '600|*0|z:610|*0|z:611|*0|z:630|*0|z:'\
-                                                        '648|*0|z:650|*0|z:651|*0|z:655|*0|z'})
-
-  to_field 'subject_geographic', argot_subjects({ spec: '600|*7|z:610|*7|z:611|*7|z:630|*7|z:'\
-                                                        '650|*7|z:651|*7|z:655|*7|z',
-                                                  classifications: /lcsh/ })
-
-  to_field 'subject_geographic', argot_subjects({ spec: '648|*7|z',
-                                                  classifications: /lcsh|fast/ })
+  to_field 'subject_geographic', argot_subject_facets({ spec: '600z:610z:611z:630z:'\
+                                                        '648a:648z:650z:651z:655z'})
 end
 
 unless settings['override'].include?('subject_genre')
-  to_field 'subject_genre', argot_subjects({ spec: '600|*0|v:610|*0|v:611|*0|v:630|*0|v:647|*0|v:'\
-                                                   '648|*0|v:650|*0|v:651|*0|v:655|*0|v'})
+  to_field 'subject_genre', argot_subject_facets({ spec: '600v:610v:611v:630v:647v:'\
+                                                   '648v:650v:651v:655v:656v:656k:657v'})
 
-  to_field 'subject_genre', argot_subjects({ spec: '600|*7|v:610|*7|v:611|*7|v:630|*7|v:647|*7|v:'\
-                                                   '648|*7|v:650|*7|v:651|*7|v:656|*7|v:656|*7|k:657|*7|v',
-                                             classifications: /lcsh/})
+  to_field 'subject_genre', argot_subject_facets({ spec: '655ax',
+                                                   subdivison_separator: ' -- ',
+                                                   filters: {
+                                                     'rbbin' => [ :strip_rb_vocab_terms ],
+                                                     'rbgenr' => [ :strip_rb_vocab_terms ],
+                                                     'rbmscv' => [ :strip_rb_vocab_terms ],
+                                                     'rbpap' => [ :strip_rb_vocab_terms ],
+                                                     'rbpri' => [ :strip_rb_vocab_terms ],
+                                                     'rbprov' => [ 'strip_rb_vocab_terms' ],
+                                                     'rbpub' => [ :strip_rb_vocab_terms ],
+                                                     'rbtyp' => [ :strip_rb_vocab_terms ]
+                                                   }
+                                                })
 
-  to_field 'subject_genre', argot_subjects({ spec: '655|*7|v',
-                                             classifications: /lcsh|lcgft|rbbin|rbgenr|rbprov/})
-
-  to_field 'subject_genre', argot_subjects({ spec: '655|*7|ax:655|*0|ax',
-                                             classifications: /lcsh|lcgft|rbbin|rbgenr/,
-                                             subdivison_separator: ' -- ' })
-
-  to_field 'subject_genre', argot_subjects({ spec: '655|*7|ax',
-                                             classifications: /rbprov/,
-                                             subdivison_separator: ' -- ',
-                                             filter_method: :strip_provenance })
-
-  to_field 'subject_genre', argot_genre_special_cases()
-  to_field 'subject_genre', argot_genre_special_cases({ spec: '006[16]:006[17]',
+  to_field 'subject_genre', argot_genre_from_fixed_fields()
+  to_field 'subject_genre', argot_genre_from_fixed_fields({ spec: '006[16]:006[17]',
                                                         mapped_byte: 16,
                                                         bio_byte: 17,
                                                         constraint: :field_006_byte_00_at })
+  each_record do |rec, context|
+    primary_source_genres = ['Archival resources',
+                             'Archives',
+                             'Correspondence',
+                             'Diaries',
+                             'Interviews',
+                             'Interview',
+                             'Notebooks, sketchbooks, etc',
+                             'Personal narratives',
+                             'Sources',
+                             'Speeches, addresses, etc']
+    
+    if context.output_hash['subject_genre']
+      context.output_hash['subject_genre'] << "Primary sources" if !(context.output_hash['subject_genre'] & primary_source_genres).empty?
+      context.output_hash['subject_genre'] = context.output_hash['subject_genre'].uniq
+    end
+  end
 end
 
 ################################################
@@ -427,10 +433,6 @@ end
 
 unless settings["override"].include?("frequency")
   to_field "frequency", argot_frequency(settings["specs"][:frequency])
-end
-
-unless settings["override"].include?("series")
-  to_field "series", argot_series(settings["specs"][:series])
 end
 
 unless settings['override'].include?('institution')

@@ -295,53 +295,62 @@ module Traject::Macros
     end
 
     ################################################
-    # Lambda for Series
+    # Lambda for Subject/Genre headings
     ######
-    def argot_series(config)
+
+    def argot_subject_genre_headings(options={})
+      spec            = options[:spec] || '600|*0|abcdfghjklmnopqrstu'
+      subd_separator  = options[:subdivison_separator] || ' -- '
+      filters   = options[:filters] || nil
+      
       lambda do |rec, acc|
-        st = {}
-        config.each do |key, spec|
-          series = ArgotSemantics.get_gvo(rec, spec)
-          st[key] = series if series
-        end
-        acc << st unless st.empty?
+        acc.concat ArgotSemantics.subject_extractor(rec,
+                                                    spec,
+                                                    subd_separator,
+                                                    filters).map { |v| {'value' => v} }
       end
     end
 
+    
     ################################################
-    # Lambda for Subjects
+    # Lambda for Subject Facets
     ######
 
-    def argot_subjects(options={})
+    def argot_subject_facets(options={})
       spec            = options[:spec] || '600|*0|abcdfghjklmnopqrstu'
       subd_separator  = options[:subdivison_separator] || ' '
-      classifications = options[:classifications] || nil
-      filter_method   = options[:filter_method] || nil
+      filters   = options[:filters] || nil
 
       lambda do |rec, acc|
         acc.concat ArgotSemantics.subject_extractor(rec,
                                                     spec,
                                                     subd_separator,
-                                                    classifications,
-                                                    filter_method)
+                                                    filters)
       end
     end
 
-    def self.subject_extractor(rec, spec, separator, classifications=nil, filter=nil)
+    def self.subject_extractor(rec, spec, separator, filters=nil)
       subjects = []
       Traject::MarcExtractor.cached(spec, alternate_script: false, separator: separator).each_matching_line(rec) do |field, spec, extractor|
-        if classifications.nil? || subfield_2_classification_constraint(field, classifications)
-          subfields = collect_subject_subfields(field, spec, separator, filter)
-          subjects.concat(subfields)
-        end
+        subfields = collect_subject_subfields(field, spec, separator, filters)
+        subjects.concat(subfields)
       end
       subjects.uniq
     end
 
-    def self.collect_subject_subfields(field, spec, separator, filter)
+  def self.collect_subject_subfields(field, spec, separator, filters)
       subfields = field.subfields.collect do |subfield|
         subfield_value = subfield.value if spec.includes_subfield_code?(subfield.code)
-        subfield_value = method(filter).call(subfield) if filter && subfield_value
+        if subfield_value
+          if filters && special_treatment_filter?(field, filters)
+            special_treatments(field, filters).each do |m|
+              subfield_value = method(m).call(subfield)
+            end
+          end
+          split_value = subfield_value.split(//, 2)
+          subfield_value = split_value[0].capitalize + split_value[1]
+          subfield_value = subfield_value.gsub(/\)\.$/, ')')
+        end
         Traject::Macros::Marc21.trim_punctuation(subfield_value)
       end.compact
 
@@ -354,20 +363,28 @@ module Traject::Macros
       subfields
     end
 
-    def self.subfield_2_classification_constraint(field, classifications)
-      class_scheme = field.subfields.select { |subfield| subfield.code == '2' }.first
-      class_scheme && class_scheme.value =~ classifications
+  # returns boolean statement of whether field needs special treatment
+  def self.special_treatment_filter?(field, filters)
+    vocabs = filters.keys
+    field_vocab = field.subfields.select { |subfield| subfield.code == '2' }.first
+    field_vocab && vocabs.include?(field_vocab.value)
+  end
+  
+  # returns array of methods associated with the vocabulary
+  def self.special_treatments(field, filters)
+    vocab = field.subfields.select { |subfield| subfield.code == '2' }.first.value
+    filters[vocab]
+  end
+  
+  def self.strip_rb_vocab_terms(subfield)
+    if subfield.code == 'a'
+      return subfield.value.gsub(/ \((Binding|Genre|Paper|Printing|Provenance|Publishing|Type)\)/i, '')
+    else
+      return subfield.value
     end
+  end
 
-    def self.strip_provenance(subfield)
-      if subfield.code == 'a'
-        subfield.value.gsub(' (Provenance)', '')
-      else
-        subfield.value
-      end
-    end
-
-    def argot_genre_special_cases(options={})
+    def argot_genre_from_fixed_fields(options={})
       spec        = options[:spec] || '008[33]:008[34]'
       mapped_byte = options[:mapped_byte] || 33
       bio_byte    = options[:bio_byte] || 34

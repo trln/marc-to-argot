@@ -327,7 +327,7 @@ unless settings["override"].include?("genre_headings")
                                                               'rbmscv' => [ :strip_rb_vocab_terms ],
                                                               'rbpap' => [ :strip_rb_vocab_terms ],
                                                               'rbpri' => [ :strip_rb_vocab_terms ],
-                                                              'rbprov' => [ 'strip_rb_vocab_terms' ],
+                                                              'rbprov' => [ :strip_rb_vocab_terms ],
                                                               'rbpub' => [ :strip_rb_vocab_terms ],
                                                               'rbtyp' => [ :strip_rb_vocab_terms ]
                                                             }
@@ -369,7 +369,7 @@ unless settings['override'].include?('subject_genre')
                                                      'rbmscv' => [ :strip_rb_vocab_terms ],
                                                      'rbpap' => [ :strip_rb_vocab_terms ],
                                                      'rbpri' => [ :strip_rb_vocab_terms ],
-                                                     'rbprov' => [ 'strip_rb_vocab_terms' ],
+                                                     'rbprov' => [:strip_rb_vocab_terms ],
                                                      'rbpub' => [ :strip_rb_vocab_terms ],
                                                      'rbtyp' => [ :strip_rb_vocab_terms ]
                                                    }

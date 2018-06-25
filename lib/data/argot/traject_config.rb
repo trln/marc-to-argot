@@ -320,7 +320,7 @@ unless settings["override"].include?("subject_headings")
 end
 
 unless settings["override"].include?("genre_headings")
-  to_field 'genre_headings', argot_subject_genre_headings({ spec: '655avxyz',
+  to_field 'genre_headings', argot_subject_genre_headings({ spec: '653|*6|a:655avxyz:656kv',
                                                             filters: {
                                                               'rbbin' => [ :strip_rb_vocab_terms ],
                                                               'rbgenr' => [ :strip_rb_vocab_terms ],
@@ -342,24 +342,29 @@ unless settings['override'].include?('subject_topical')
                                                         '647acdg:647x:'\
                                                         '648x:'\
                                                         '650abcdg:650x:'\
-                                                        '651x:'\
+                                                        '651x:653|*0|a:653|*1|a:653|*2|a:'\
+                                                        '653|*3|a:'\
                                                         '656x:656a:'\
                                                         '657x:657a'})
 end
 
 unless settings['override'].include?('subject_chronological')
   to_field 'subject_chronological', argot_subject_facets({ spec: '600y:610y:611y:630y:'\
-                                                           '648a:650y:651y:655y' })
+                                                                 '648a:650y:651y:653|*4|a:'\
+                                                                 '655y:656y:657y' })
 end
 
 unless settings['override'].include?('subject_geographic')
   to_field 'subject_geographic', argot_subject_facets({ spec: '600z:610z:611z:630z:'\
-                                                        '648a:648z:650z:651z:655z'})
+                                                              '648a:648z:650z:651z:'\
+                                                              '653|*5|a:655z:656z:'\
+                                                              '657z:662abcdfgh'})
 end
 
 unless settings['override'].include?('subject_genre')
   to_field 'subject_genre', argot_subject_facets({ spec: '600v:610v:611v:630v:647v:'\
-                                                   '648v:650v:651v:655v:656v:656k:657v'})
+                                                         '648v:650v:651v:653|*6|a:'\
+                                                         '655v:656v:656k:657v'})
 
   to_field 'subject_genre', argot_subject_facets({ spec: '655ax',
                                                    subdivison_separator: ' -- ',

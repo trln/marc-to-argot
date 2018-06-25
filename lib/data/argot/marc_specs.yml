@@ -81,7 +81,15 @@ subject_headings:
   - 648avxyz
   - 650abcdgvxyz
   - 651agvxyz
-  - 653a
+  - 653|*0|a
+  - 653|*1|a
+  - 653|*2|a
+  - 653|*3|a
+  - 653|*4|a
+  - 653|*5|a
+  - 656akvxyz
+  - 657avxyz
+  - 662abcdfgh
   - 690ax
   - 691abvxyz
   - 695a

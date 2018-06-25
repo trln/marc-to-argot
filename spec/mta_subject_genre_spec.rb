@@ -8,6 +8,9 @@ describe MarcToArgot do
   let(:primary_source1) { run_traject_json('unc', 'primary_source1', 'mrc') }
   let(:primary_source2) { run_traject_json('unc', 'primary_source2', 'mrc') }
   let(:genre1) { run_traject_json('unc', 'genre1', 'mrc') }
+  let(:genre2) { run_traject_json('unc', 'genre2', 'mrc') }
+  let(:genre3) { run_traject_json('unc', 'genre3', 'mrc') }
+  let(:genre4) { run_traject_json('unc', 'genre4', 'mrc') }
   
   it '(MTA) sets subject_headings from any source' do
     result = subject1['subject_headings']
@@ -65,7 +68,7 @@ describe MarcToArgot do
                         ]
                       )
   end
-    
+  
   it '(MTA) sets and deduplicates subject_chronological' do
     result = subject1['subject_chronological']
     expect(result).to eq(
@@ -129,4 +132,48 @@ describe MarcToArgot do
                       )
   end  
 
+  it '(MTA) keeps 655ax together in genre facet' do
+    result = genre2['subject_genre']
+    expect(result).to include(
+                        'American Literature -- Adaptations'
+                      )
+  end  
+  
+  it '(MTA) splits 655av in genre facet' do
+    result = genre3['subject_genre']
+    expect(result).to include(
+                        'Spy stories',
+                        'Comic books, strips, etc'
+                      )
+  end  
+  
+  it '(MTA) sets genre facet values from 656 k and v' do
+    result = genre3['subject_genre']
+    expect(result).to include(
+                        'School district case files',
+                        'Indexes'
+                      )
+  end
+
+    it '(MTA) sets subject headings values from 656' do
+    result = genre3['subject_headings']
+    expect(result).to include(
+                        {'value' => 'Migrant laborers -- School district case files -- Indexes'},
+                      )
+    end
+
+    it '(MTA) sets genre facet from 653 with 2nd ind = 6' do
+      result = genre4['subject_genre']
+      expect(result).to include(
+                          'Graphic novels'
+                        )
+    end
+
+    it '(MTA) sets genre headings values from 653 with 2nd ind = 6' do
+    result = genre4['genre_headings']
+    expect(result).to include(
+                        {'value' => 'Graphic novels'},
+                      )
+    end
 end
+

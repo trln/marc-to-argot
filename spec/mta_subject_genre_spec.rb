@@ -11,6 +11,10 @@ describe MarcToArgot do
   let(:genre2) { run_traject_json('unc', 'genre2', 'mrc') }
   let(:genre3) { run_traject_json('unc', 'genre3', 'mrc') }
   let(:genre4) { run_traject_json('unc', 'genre4', 'mrc') }
+  let(:genre5) { run_traject_json('unc', 'genre5', 'mrc') }
+  let(:genre6) { run_traject_json('unc', 'genre6', 'mrc') }
+  let(:genre7) { run_traject_json('unc', 'genre7', 'mrc') }
+  let(:vern650v) { run_traject_json('unc', 'vern650v', 'mrc') }
   
   it '(MTA) sets subject_headings from any source' do
     result = subject1['subject_headings']
@@ -54,6 +58,22 @@ describe MarcToArgot do
                       )
   end
   
+  it '(MTA) keeps a and g together in subject_geographic from 651' do
+    result = genre3['subject_geographic']
+    expect(result).to include(
+                          "Broadway -- New York, NY"
+                      )
+  end
+
+  it '(MTA) separates 662 subfield values in subject_geographic' do
+    result = genre3['subject_geographic']
+    expect(result).to include(
+                        "United States",
+                        "Vermont",
+                        "Green Mountain National Forest"
+                      )
+  end
+
   it '(MTA) sets and deduplicates subject_topical' do
     result = subject1['subject_topical']
     expect(result).to eq(
@@ -125,10 +145,17 @@ describe MarcToArgot do
                       )
   end  
 
-  it '(MTA) adds genre facet value from 006 alone' do
+  it '(MTA) adds genre facet value from 006 LitForm byte independent of LDR values' do
     result = genre1['subject_genre']
     expect(result).to include(
                         'Nonfiction'
+                      )
+  end  
+  
+  it '(MTA) sets genre facet to Biography from 008/34' do
+    result = genre3['subject_genre']
+    expect(result).to include(
+                        'Biography'
                       )
   end  
 
@@ -174,6 +201,80 @@ describe MarcToArgot do
     expect(result).to include(
                         {'value' => 'Graphic novels'},
                       )
+    end
+
+    it '(MTA) sets subject headings values from 653 with 2nd ind = blank' do
+      result = genre5['subject_headings']
+      expect(result).to include(
+                          {'value' => 'Mattel'},
+                        )
+    end
+
+    it '(MTA) sets separate genre headings values from 382 subfields' do
+      result = genre6['genre_headings']
+      expect(result).to include(
+                          {'value' => 'Oboe'},
+                          {'value' => 'Orchestra'}
+                        )
+    end
+
+    it '(MTA) sets separate subject_genre values from 382 subfields' do
+      result = genre6['subject_genre']
+      expect(result).to include(
+                          'Oboe',
+                          'Orchestra'
+                        )
+    end
+
+    it '(MTA) sets genre headings values from 384' do
+      result = genre7['genre_headings']
+      expect(result).to include(
+                          {'value' => 'C♯ minor'}
+                        )
+    end
+
+    it '(MTA) sets genre facet values from 384' do
+      result = genre7['subject_genre']
+      expect(result).to include(
+                          'C♯ minor'
+                        )
+    end
+
+    it '(MTA) sets genre headings values from 567$b' do
+      result = genre7['genre_headings']
+      expect(result).to include(
+                          {'value' => 'Narrative inquiry (Research method)'}
+                        )
+    end
+    
+    xit '(MTA) sets subject_headings from 880 field' do
+      result = vern650v['subject_headings']
+      expect(result).to include(
+                          { "value" => "按摩疗法(中医) -- 教材",
+                            "lang" => "cjk"}
+                        )
+    end
+    
+    xit '(MTA) sets subject_topical from 880 field' do
+      result = vern650v['subject_topical']
+      expect(result).to include(
+                          "按摩疗法(中医)",
+                        )
+    end
+
+    xit '(MTA) sets subject_genre from 880 field' do
+      result = vern650v['subject_genre']
+      expect(result).to include(
+                          "教材"
+                        )
+    end
+
+    xit '(MTA) sets genre_headings from 880 field' do
+      result = vern655ara['genre_headings']
+      expect(result).to include(
+                          { 'value' => 'أعمال مبكرة إلى 1800',
+                            'lang' => 'ara' }
+                        )
     end
 end
 

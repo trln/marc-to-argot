@@ -600,7 +600,7 @@ module Traject::Macros
   #   To remedy, any 041a indicator 1, with a value of 6 or more
   #   alpha characters will be thrown out
 
-  def argot_languages(spec = "008[35-37]:041")
+  def argot_languages(spec = "008[35-37]:041adeg")
     translation_map = Traject::TranslationMap.new("marc_languages")
 
     extractor = MarcExtractor.new(spec, :separator => nil)
@@ -614,7 +614,7 @@ module Traject::Macros
           # potential dirty data, see note above
           subfield_a = field.subfields.find { |subfield| subfield.code == 'a' }
           check_subfield_a = subfield_a.nil? ? '' : subfield_a.value
-          next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length > 6
+          next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length >= 6
           extractor.collect_subfields(field, spec).collect do |value|
             # sometimes multiple language codes are jammed together in one subfield, and
             # we need to separate ourselves. sigh.

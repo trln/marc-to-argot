@@ -66,8 +66,9 @@ publisher:
   - 260bf
   - 264b
 syndetics_id:
-  - 020a
-  - 024a
+  - 020az
+  - 024|1*|a
+  - 776z
 title:
   - 245abnp
 statement_of_responsibility:

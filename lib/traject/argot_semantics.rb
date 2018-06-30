@@ -610,18 +610,15 @@ module Traject::Macros
         if extractor.control_field?(field)
           (spec.bytes ? field.value.byteslice(spec.bytes) : field.value)
         else
-          # the following 2 lines are used to skip legacy records with
-          # potential dirty data, see note above
-          subfield_a = field.subfields.find { |subfield| subfield.code == 'a' }
-          check_subfield_a = subfield_a.nil? ? '' : subfield_a.value
-          next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length >= 6
-          extractor.collect_subfields(field, spec).collect do |value|
-            # sometimes multiple language codes are jammed together in one subfield, and
-            # we need to separate ourselves. sigh.
-            unless value.length == 3
-              # split into an array of 3-length substrs; JRuby has problems with regexes
-              # across threads, which is why we don't use String#scan here.
-              value = value.chars.each_slice(3).map(&:join)
+          #get all potentially usable subfields
+          subfields = field.subfields.collect do |sf|
+            sf if spec.includes_subfield_code?(sf.code)
+          end.compact
+          #reject $a of translations with multiple languages crammed into $a
+          good_subfields = subfields.reject { |sf| field.indicator1 == '1' && sf.code == 'a' && sf.value.length >=6 }
+          good_subfields.collect do |sf|
+            unless sf.value.length == 3
+              value = sf.value.chars.each_slice(3).map(&:join)
             end
             value
           end.flatten

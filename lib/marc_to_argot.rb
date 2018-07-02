@@ -16,6 +16,8 @@ require 'json'
 require 'yaml'
 require 'time'
 require 'ext/marc/data_field'
+require 'ext/marc/control_field'
+require 'ext/marc/record'
 
 # Top-level module for conversion to Argot
 module MarcToArgot

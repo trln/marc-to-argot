@@ -384,57 +384,65 @@ module Traject::Macros
     end
   end
 
-    def argot_genre_from_fixed_fields(options={})
-      spec        = options[:spec] || '008[33]:008[34]'
-      mapped_byte = options[:mapped_byte] || 33
-      bio_byte    = options[:bio_byte] || 34
-      constraint  = options[:constraint] || nil
+  def argot_genre_from_fixed_fields
+    #set relevant byte positions for each field
+    lit_form_008 = 33
+    bio_008 = 34
+    lit_form_006 = 16
+    bio_006 = 17
 
-      lambda do |rec, acc|
+    lambda do |rec, acc|
+      genre_values = []
+      Traject::MarcExtractor.cached('008:006', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+        to_map = []
+        if field.tag == '008' && rec.uses_book_configuration_in_008?
+          to_map << get_bytes_to_map(field, lit_form_008, bio_008)
+        elsif field.tag == '006' && field.uses_book_configuration_in_006?
+          to_map << get_bytes_to_map(field, lit_form_006, bio_006)
+        end
 
-        Traject::MarcExtractor.cached(spec, alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-          if rec.leader.byteslice(6) =~ /[a]/ && rec.leader.byteslice(7) =~ /[acdm]/
-            if constraint.nil? || ArgotSemantics.method(constraint).call(field)
-              field_value = field.value.byteslice(spec.bytes)
-              mapped_values = []
-              if spec.bytes == mapped_byte
-                mapped_values << case field_value
-                                 when '0'
-                                   'Nonfiction'
-                                 when '1'
-                                   'Fiction'
-                                 when 'd'
-                                   'Drama'
-                                 when 'e'
-                                   'Essays'
-                                 when 'f'
-                                   'Novels'
-                                 when 'h'
-                                   'Humor, satire, etc'
-                                 when 'i'
-                                   'Letters'
-                                 when 'j'
-                                   'Short stories'
-                                 when 'p'
-                                   'Poetry'
-                                 when 's'
-                                   'Speeches, addresses, etc'
-                                 end
-              end
-
-              if spec.bytes == bio_byte
-                mapped_values << 'Biography' if field_value =~ /[abcd]/
-              end
-              acc.concat mapped_values unless mapped_values.empty?
-            end
+        unless to_map.empty?
+          to_map.each do |bytevals|
+            genre_values << map_byte_value_to_genre(bytevals['lit_form'])
+            genre_values << 'Biography' if bytevals['bio'] =~ /[abcd]/
           end
         end
       end
+      acc.concat genre_values unless genre_values.empty?
     end
+  end
 
-    def self.field_006_byte_00_at(field)
-      field.value.byteslice(0) =~ /[at]/
+  def get_bytes_to_map(field, lit_form_byte, bio_byte)
+    values = {}
+    values['lit_form'] = field.value.byteslice(lit_form_byte)
+    values['bio'] = field.value.byteslice(bio_byte)
+    values
+  end
+  
+  def map_byte_value_to_genre(byte_value)
+    case byte_value
+    when '0'
+      'Nonfiction'
+    when '1'
+      'Fiction'
+    when 'd'
+      'Drama'
+    when 'e'
+      'Essays'
+    when 'f'
+      'Novels'
+    when 'h'
+      'Humor, satire, etc'
+    when 'i'
+      'Letters'
+    when 'j'
+      'Short stories'
+    when 'p'
+      'Poetry'
+    when 's'
+      'Speeches, addresses, etc'
     end
+  end
 
     ################################################
     # Lambda for Generic Vernacular Object
@@ -592,7 +600,7 @@ module Traject::Macros
   #   To remedy, any 041a indicator 1, with a value of 6 or more
   #   alpha characters will be thrown out
 
-  def argot_languages(spec = "008[35-37]:041")
+  def argot_languages(spec = "008[35-37]:041adeg")
     translation_map = Traject::TranslationMap.new("marc_languages")
 
     extractor = MarcExtractor.new(spec, :separator => nil)
@@ -602,18 +610,15 @@ module Traject::Macros
         if extractor.control_field?(field)
           (spec.bytes ? field.value.byteslice(spec.bytes) : field.value)
         else
-          # the following 2 lines are used to skip legacy records with
-          # potential dirty data, see note above
-          subfield_a = field.subfields.find { |subfield| subfield.code == 'a' }
-          check_subfield_a = subfield_a.nil? ? '' : subfield_a.value
-          next if field.tag == '041' && field.indicator1 == '1' && check_subfield_a.length > 6
-          extractor.collect_subfields(field, spec).collect do |value|
-            # sometimes multiple language codes are jammed together in one subfield, and
-            # we need to separate ourselves. sigh.
-            unless value.length == 3
-              # split into an array of 3-length substrs; JRuby has problems with regexes
-              # across threads, which is why we don't use String#scan here.
-              value = value.chars.each_slice(3).map(&:join)
+          #get all potentially usable subfields
+          subfields = field.subfields.collect do |sf|
+            sf if spec.includes_subfield_code?(sf.code)
+          end.compact
+          #reject $a of translations with multiple languages crammed into $a
+          good_subfields = subfields.reject { |sf| field.indicator1 == '1' && sf.code == 'a' && sf.value.length >=6 }
+          good_subfields.collect do |sf|
+            unless sf.value.length == 3
+              value = sf.value.chars.each_slice(3).map(&:join)
             end
             value
           end.flatten

@@ -166,6 +166,65 @@ each_record do |rec, cxt|
 end
 
 ################################################
+# Shared records
+######
+proxies = { 'unc' => 'http://libproxy.lib.unc.edu/login?url=',
+            'duke' => 'http://proxy.lib.duke.edu/login?url=',
+            'nccu' => 'http://ezproxy.nccu.edu/login?url=',
+            'ncsu' => 'http://proxying.lib.ncsu.edu/index.php?url='
+          }
+
+urlnotes = { 
+            'duke' => 'Full text available via Duke Libraries',
+            'nccu' => 'Full text available via NCCU Libraries',
+            'ncsu' => 'Full text available via NCSU Libraries'
+}
+
+def set_all_institutions(cxt)
+    cxt.output_hash['institution'] << 'duke'    
+    cxt.output_hash['institution'] << 'nccu'
+    cxt.output_hash['institution'] << 'ncsu'
+end
+
+# This doesn't work because url isn't ACTUALLY a hash. Save to fix later.
+# def add_proxied_urls(cxt, institutions)
+#   urls = cxt.output_hash['url']
+#   urls.each do |url|
+#     plain_url = url[.sub(proxies['unc'], '')
+#     institutions.each do |inst|
+#       new_url = "{\"href\":\""
+#       new_url << proxies[inst]
+#       new_url << plain_url
+#       new_url << "\":\"type\":\"fulltext\",\"text\":\""
+#       new_url << urlnotes[inst]
+#       new_url << "\"}"
+#       cxt.output_hash['url'] << new_url
+#     end
+#   end
+# end
+
+### This part is working correctly, except for the add_proxied_urls piece
+### Wait until that is fixed to set other institutions on IP-restricted sets
+each_record do |rec, cxt|
+  shared_set = ''
+  Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    value = field.to_s.downcase
+    shared_set = 'dwsgpo' if value =~ /dwsgpo/
+  end
+
+  case shared_set
+  when 'dwsgpo'
+    set_all_institutions(cxt)
+  # when 'troup'
+  #   set_all_institutions(cxt)
+  #   add_proxied_urls(cxt, ['duke', 'nccu', 'ncsu'])
+  # when 'asp'
+  #   cxt.output_hash['institution'] << 'duke'
+  #   add_proxied_urls(cxt, ['duke'])
+  end
+end
+
+################################################
 # Items
 # https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
 ######

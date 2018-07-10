@@ -7,6 +7,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/ncsu/summaries'
       require 'marc_to_argot/macros/ncsu/items'
       require 'marc_to_argot/macros/ncsu/physical_media'
+      require 'marc_to_argot/macros/ncsu/resource_type'
 
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -21,6 +22,13 @@ module MarcToArgot
       # Used by #subfield_5_present_with_local_code?
       def local_marc_org_codes
         %w[NcRS NcRS-P NcRS-V NcRhSUS]
+      end
+
+      def resource_type
+        lambda do |rec, acc, ctx|
+          acc << MarcToArgot::Macros::NCSU::ResourceType.classify(rec, ctx.clipboard['items'])
+          acc.flatten!
+        end
       end
 
       def rollup_id

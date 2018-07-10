@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd"
+  xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>07309npcaa2200829Ka 4500</leader>
+  <controlfield tag="001">ocn566307606</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20141024112432.0</controlfield>
+  <controlfield tag="008">100322q19302005ncu                 eng d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o566307606</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)566307606</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="e">dacs</subfield>
+    <subfield code="c">NRC</subfield>
+    <subfield code="d">NRC</subfield>
+    <subfield code="d">OCLCA</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">OCLCO</subfield>
+    <subfield code="d">OCLCA</subfield>
+    <subfield code="d">NRC</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">n-us-nc</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">cdb</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">UA 024</subfield>
+  </datafield>
+  <datafield tag="110" ind1="2" ind2=" ">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">University Archives.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">University Archives Audiovisual Collection,</subfield>
+    <subfield code="f">1930s - 2005</subfield>
+    <subfield code="h">[graphic].</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">55.5</subfield>
+    <subfield code="f">linear ft.</subfield>
+    <subfield code="a">(35</subfield>
+    <subfield code="f">cartons +</subfield>
+    <subfield code="e">1</subfield>
+    <subfield code="f">oversize box)</subfield>
+  </datafield>
+  <datafield tag="351" ind1=" " ind2=" ">
+    <subfield code="a">Materials are arranged in the order received.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">The University Archives Audiovisual Collection contains film, videotape, audiocassettes, reel-to-reel tape, and other formats of audio and video recordings of important events on the North Carolina State University campus. Also included are recordings of interviews with prominent University people or visitors to the campus. Audiovisual materials from identified campus divisions and units are arranged within those units' records. Materials range in date from the 1930s to 2005.</subfield>
+  </datafield>
+  <datafield tag="524" ind1=" " ind2=" ">
+    <subfield code="a">[Identification of item], North Carolina State University, UA 024, Special Collections Research Center, North Carolina State University Libraries, Raleigh, NC</subfield>
+  </datafield>
+  <datafield tag="545" ind1=" " ind2=" ">
+    <subfield code="a">The University Archives Audiovisual Collection contains materials related to the history of North Carolina State University.  They cover a variety of events such as speeches, lectures, Chancellor installations, symposia, seminars, and promotional videos.  These audiovisual materials were acquired from various departments and individuals.</subfield>
+  </datafield>
+  <datafield tag="555" ind1=" " ind2=" ">
+    <subfield code="a">Collection guide available.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">10 14</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State College</subfield>
+    <subfield code="x">History.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University</subfield>
+    <subfield code="x">History.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">Office of the Chancellor.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Student activities</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Lectures and seminars</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Speeches, addresses, etc.</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">Raleigh (N.C.)</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="2">
+    <subfield code="3">View NCSU Libraries' online guide</subfield>
+    <subfield code="u">http://www.lib.ncsu.edu/findingaids/ua024/</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">1853495</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20141024</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 7</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269591Y</subfield>
+    <subfield code="d">3/20/2018</subfield>
+    <subfield code="e">1/8/2018</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">3</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 11</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269597/</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">5/8/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 28</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269598+</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/5/2016</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 30</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269599%</subfield>
+    <subfield code="d">3/7/2018</subfield>
+    <subfield code="e">3/2/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 16</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269602R</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">9/4/2015</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">4</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 18</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269605U</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">2/14/2018</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 19</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269607W</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">11/16/2015</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">4</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 2</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269614U</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">4/3/2015</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 21</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269631T</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">11/11/2015</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">4</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 4</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269830U</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">4/12/2017</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">5</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 26</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269831V</subfield>
+    <subfield code="d">3/20/2018</subfield>
+    <subfield code="e">2/27/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 22</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269835Z</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/4/2016</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 1</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269841W</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">4/3/2015</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 23</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269843Y</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/4/2016</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 10</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269859+</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/8/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 17</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269860X</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">2/14/2018</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">4</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 9</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269865</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/8/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 8</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269866$</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/8/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 32</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02244527Q</subfield>
+    <subfield code="d">3/2/2018</subfield>
+    <subfield code="e">5/5/2016</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="k">OFF-SPEC</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">M</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">10/22/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 24</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02480108N</subfield>
+    <subfield code="d">3/1/2018</subfield>
+    <subfield code="e">2/27/2018</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">2/5/2013</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 27</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269606V</subfield>
+    <subfield code="d">3/1/2018</subfield>
+    <subfield code="e">2/27/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 3</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269610Q</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">4/3/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 29</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269869%</subfield>
+    <subfield code="d">3/7/2018</subfield>
+    <subfield code="e">3/2/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">4</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 6</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269613T</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">4/3/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/15/2012</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 5</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02973070S</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">4/3/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">2</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/22/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 12</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02970480U</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">5/8/2015</subfield>
+    <subfield code="f">2/15/2016</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">2</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/27/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 13</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02269149X</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">3/7/2016</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">2</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/28/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 14</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02271021F</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">3/7/2016</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">2</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/28/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 15</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02274223M</subfield>
+    <subfield code="d">2/19/2018</subfield>
+    <subfield code="e">2/14/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">5</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/28/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 20</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02271022G</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="e">5/4/2016</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">2</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">2</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/28/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 25</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02270780Q</subfield>
+    <subfield code="d">3/1/2018</subfield>
+    <subfield code="e">2/27/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/2/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 31</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02970483X</subfield>
+    <subfield code="d">3/29/2018</subfield>
+    <subfield code="e">3/2/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/2/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 33</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02972450T</subfield>
+    <subfield code="d">3/2/2018</subfield>
+    <subfield code="e">4/3/2015</subfield>
+    <subfield code="f">1/16/2018</subfield>
+    <subfield code="g">4</subfield>
+    <subfield code="k">OFF-SPEC</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">2</subfield>
+    <subfield code="r">M</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/2/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 OVERSIZE BOX 34</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02273086S</subfield>
+    <subfield code="d">6/22/2018</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">10/24/2014</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 LEGALBOX 37</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02408401J</subfield>
+    <subfield code="l">SATELLITE</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">1/10/2017</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 42</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02406988.</subfield>
+    <subfield code="d">4/5/2017</subfield>
+    <subfield code="e">4/3/2017</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">1</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">3/29/2017</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 024 CARTON 43</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02406987-</subfield>
+    <subfield code="d">4/5/2017</subfield>
+    <subfield code="e">4/3/2017</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">1</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">3/29/2017</subfield>
+  </datafield>
+</record>
+</collection>

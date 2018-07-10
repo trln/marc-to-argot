@@ -4,6 +4,16 @@ require 'logger'
 module MarcToArgot
   # The class that executes for the Argot command line utility.
   class CommandLine < Thor
+
+    map %w[--version -v] => :__version
+
+    desc '--version, -v', 'print the version'
+    def __version
+      puts "marc-to-argot version #{MarcToArgot::VERSION}, installed #{File.mtime(__FILE__)}"
+    end
+
+
+
     ###############
     # Flatten
     ###############

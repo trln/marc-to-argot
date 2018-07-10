@@ -65,7 +65,7 @@ module Util
 
     # resets stdout and executes a block, returning
     # all output as a string
-    def capture_stdout
+    def capture_stdout(capture_stderr = false)
       io = StringIO.new
       err_io = StringIO.new
       old_stdout = $stdout
@@ -73,7 +73,11 @@ module Util
       $stdout = io
       $stderr = err_io
       begin
-        yield io
+        if capture_stderr
+          yield io, err_io
+        else
+          yield io
+        end
       ensure
         $stdout = old_stdout
         $stderr = old_stderr
@@ -84,9 +88,10 @@ module Util
     def run_traject(collection, file, extension = 'xml')
       indexer = load_indexer(collection, extension)
       test_file = find_marc(collection, file, extension)
-      capture_stdout do |_|
+      output = capture_stdout do |_|
         indexer.process(File.open(test_file))
       end
+      output
     end
 
     # Runs traject and parses the results as JSON.
@@ -94,6 +99,4 @@ module Util
       JSON.parse(run_traject(collection, file, extension))
     end
   end
-
-  
 end

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01590cam a2200373Ka 4500</leader>
+  <controlfield tag="001">ocm44804852</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20040408103842.0</controlfield>
+  <controlfield tag="008">000817s1997    vau     b    f000 0 eng d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)44804852</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">tmp97234949</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">GPO</subfield>
+    <subfield code="c">GPO</subfield>
+    <subfield code="d">MvI</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+  </datafield>
+  <datafield tag="074" ind1=" " ind2=" ">
+    <subfield code="a">0337-B-03 (MF)</subfield>
+  </datafield>
+  <datafield tag="074" ind1=" " ind2=" ">
+    <subfield code="a">0337-B-03 (online)</subfield>
+  </datafield>
+  <datafield tag="086" ind1="0" ind2=" ">
+    <subfield code="a">D 103.57/5:96-R-21</subfield>
+    <subfield code="z">D 103.57/5:95-R-21</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Yoe, Charles E.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Planning manual</subfield>
+    <subfield code="h">[microform] /</subfield>
+    <subfield code="c">by Charles E. Yoe and Kenneth D. Orth.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Alexandria, Va.] :</subfield>
+    <subfield code="b">US Army Corps of Engineers, Water Resources Support Center, Institute for Water Resources,</subfield>
+    <subfield code="c">[1997]</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 v.</subfield>
+  </datafield>
+  <datafield tag="440" ind1=" " ind2="0">
+    <subfield code="a">IWR report ;</subfield>
+    <subfield code="v">96-R-21</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Shipping list no.: 2000-0768-M.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">"November 1996."</subfield>
+  </datafield>
+  <datafield tag="530" ind1=" " ind2=" ">
+    <subfield code="a">Also available via Internet from the IWR web site. Address as of 4/8/04: http://www.iwr.usace.army.mil/iwr/pdf/96r21.pdf; current access is available via PURL.</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Microfiche.</subfield>
+    <subfield code="b">[Washington, D.C.] :</subfield>
+    <subfield code="c">Supt. of Docs., U.S. G.P.O.,</subfield>
+    <subfield code="d">[2000]</subfield>
+    <subfield code="e">4 microfiches.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">14</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">U.S. Army Engineer Institute for Water Resources</subfield>
+    <subfield code="x">Management</subfield>
+    <subfield code="v">Handbooks, manuals, etc.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Orth, Kenneth D.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">U.S. Army Engineer Institute for Water Resources.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="1">
+    <subfield code="y">Open access e-resource</subfield>
+    <subfield code="u">http://purl.access.gpo.gov/GPO/LPS47130</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="c">1</subfield>
+    <subfield code="w">EBOOK</subfield>
+    <subfield code="t">EBOOK</subfield>
+    <subfield code="l">US-DOCS</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="x">EBOOK</subfield>
+    <subfield code="z">FEDDOC</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">ANZ-2152</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">338627</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">D 103.57/5:96-R-21</subfield>
+    <subfield code="w">SUDOC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">HAOG-1395-00001</subfield>
+    <subfield code="l">US-DOCS-MF</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MICROFICHE</subfield>
+    <subfield code="u">11/15/2000</subfield>
+    <subfield code="z">FEDDOC</subfield>
+  </datafield>
+</record>
+</collection>

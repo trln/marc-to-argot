@@ -27,4 +27,5 @@ module MarcToArgot
   autoload :CallNumbers, 'marc_to_argot/call_numbers'
   autoload :Macros, 'marc_to_argot/macros'
   autoload :Indexers, 'marc_to_argot/indexers'
+  autoload :Util, 'marc_to_argot/util'
 end

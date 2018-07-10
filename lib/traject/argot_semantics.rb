@@ -348,7 +348,7 @@ module Traject::Macros
             end
           end
           split_value = subfield_value.split(//, 2)
-          subfield_value = split_value[0].capitalize + split_value[1]
+          subfield_value = split_value[0].to_s.capitalize + split_value[1].to_s
           subfield_value = subfield_value.gsub(/\)\.$/, ')')
         end
         Traject::Macros::Marc21.trim_punctuation(subfield_value)

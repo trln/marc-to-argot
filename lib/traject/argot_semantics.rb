@@ -55,10 +55,7 @@ module Traject::Macros
         st = {}
         config.each do |key, spec|
           extractor = MarcExtractor.cached(spec, separator: nil)
-          issn = extractor.extract(rec).collect! do |o|
-            StdNum::ISSN.normalize(o)
-          end.compact
-
+          issn = extractor.extract(rec).compact
           st[key] = issn.uniq unless issn.empty?
         end
 

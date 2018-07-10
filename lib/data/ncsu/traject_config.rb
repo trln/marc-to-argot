@@ -20,6 +20,8 @@ to_field 'items', extract_items
 
 to_field 'physical_media', physical_media
 
+to_field 'resource_type', resource_type
+
 def shadowed_location?(item)
   %w[BOTMISSING ACQ-S MISSING].include?(item['loc_n'])
 end
@@ -27,6 +29,8 @@ end
 each_record do |_rec, ctx|
   items = ctx.clipboard['items']
   items.reject! { |i| shadowed_location?(i) }
+  items.each { |i| i.delete('item_cat_2') }
+  logger.info "Skipping #{ctx.output_hash['id']} (no items)" if items.empty?
   ctx.skip! if items.empty?
 
   ctx.output_hash['barcodes'] = items.map { |x| x['item_id'] }.select(&:itself)

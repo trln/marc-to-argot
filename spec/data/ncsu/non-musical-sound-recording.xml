@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>02044cim a2200421Ia 4500</leader>
+  <controlfield tag="007">sd uuugnn----u</controlfield>
+  <controlfield tag="008">031007s2000    nyunnn   z     z    eng d</controlfield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">0938027530</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)53090537</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">COO</subfield>
+    <subfield code="c">COO</subfield>
+    <subfield code="d">OCLCQ</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">s-pe---</subfield>
+    <subfield code="a">s-bo---</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">adn</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">QL689.P5</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Schulenberg, Thomas S.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Birds of the rainforest of southern Peru and northern Bolivia</subfield>
+    <subfield code="h">[sound recording] /</subfield>
+    <subfield code="c">Thomas S. Schulenberg, Curtis A. Marantz, and Peter H. English.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Ithaca, N.Y. :</subfield>
+    <subfield code="b">Library of Natural Sounds, Cornell Laboratory of Ornithology,</subfield>
+    <subfield code="c">p2000.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">3 sound discs ;</subfield>
+    <subfield code="c">4 3/4 in. +</subfield>
+    <subfield code="e">3 guides (24 p. ; 12 cm.)</subfield>
+  </datafield>
+  <datafield tag="440" ind1=" " ind2="0">
+    <subfield code="a">Voices of Amazonian birds</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Title from disc label.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Guides list the species by track; include indexes.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2=" ">
+    <subfield code="a">V. 1. Tinamous (Tinamidae) through Barbets (Capitonidae) -- v. 2. Toucans (Ramphastidae) through Antbirds (Thamnophilidae) -- v. 3. Ground antbirds (Formicariidae) through Jays (Corvidae).</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Presents the vocalization of 99 bird species found in the lowland rainforests of the western Amazon basin.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Compact disc.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">14</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Birdsongs</subfield>
+    <subfield code="z">Peru.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Birdsongs</subfield>
+    <subfield code="z">Bolivia.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Birds</subfield>
+    <subfield code="z">Peru</subfield>
+    <subfield code="v">Identification.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Birds</subfield>
+    <subfield code="z">Bolivia</subfield>
+    <subfield code="v">Identification.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Marantz, Curtis A.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">English, Peter H.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Cornell University.</subfield>
+    <subfield code="b">Library of Natural Sounds.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Field Museum of Natural History.</subfield>
+    <subfield code="b">Environmental and Conservation Programs.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Conservation International.</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">ASO-2477</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">359610</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">QL689 .P5 S38 2000 V.1</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01921624P</subfield>
+    <subfield code="d">10/1/2012</subfield>
+    <subfield code="e">4/11/2008</subfield>
+    <subfield code="l">MEDIA</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">1</subfield>
+    <subfield code="p">$36.78</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">AUD-CD</subfield>
+    <subfield code="u">4/4/2003</subfield>
+    <subfield code="0">GIFT</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">QL689 .P5 S38 2000 V.2</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02286431Q</subfield>
+    <subfield code="d">10/1/2012</subfield>
+    <subfield code="e">4/11/2008</subfield>
+    <subfield code="l">MEDIA</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">1</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">AUD-CD</subfield>
+    <subfield code="u">2/18/2005</subfield>
+    <subfield code="0">GIFT</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">QL689 .P5 S38 2000 V.3</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02286432R</subfield>
+    <subfield code="d">10/1/2012</subfield>
+    <subfield code="l">MEDIA</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">AUD-CD</subfield>
+    <subfield code="u">2/18/2005</subfield>
+    <subfield code="0">GIFT</subfield>
+  </datafield>
+</record>
+</collection>

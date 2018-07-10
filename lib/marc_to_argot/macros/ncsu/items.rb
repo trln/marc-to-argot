@@ -153,7 +153,7 @@ module MarcToArgot
             Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
               item = marc_to_item(field)
               remap_item_locations!(item)
-              item.delete('item_cat_2')
+              #item.delete('item_cat_2')
               items << item
               acc << item.to_json if item
             end

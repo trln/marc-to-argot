@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>02725nim a2200577 a 4500</leader>
+  <controlfield tag="001">rbz99005234</controlfield>
+  <controlfield tag="003">CtWfDGI</controlfield>
+  <controlfield tag="005">20120821102636.0</controlfield>
+  <controlfield tag="006">m        h        </controlfield>
+  <controlfield tag="007">sz zunnnnnuneu</controlfield>
+  <controlfield tag="007">cr nnannnuuuua</controlfield>
+  <controlfield tag="008">120820r20122012nyunnnn o      j  n eng d</controlfield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9781464043048</subfield>
+  </datafield>
+  <datafield tag="028" ind1="0" ind2="1">
+    <subfield code="a">Z05234</subfield>
+    <subfield code="b">Recorded Books</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) rbz99005234</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">CtWfDGI</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">CtWfDGI</subfield>
+  </datafield>
+  <datafield tag="041" ind1="0" ind2=" ">
+    <subfield code="d">eng</subfield>
+    <subfield code="d">spa</subfield>
+  </datafield>
+  <datafield tag="050" ind1="1" ind2="4">
+    <subfield code="a">PC4121</subfield>
+    <subfield code="b">.C378 2012eb</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="4">
+    <subfield code="a">468.3/421</subfield>
+    <subfield code="2">23</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Castilian Spanish.</subfield>
+    <subfield code="p">The somplete course.</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">Unabridged.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">New York :</subfield>
+    <subfield code="b">Simon &amp; Schuster Audio ;</subfield>
+    <subfield code="a">Prince Frederick, MD :</subfield>
+    <subfield code="b">Distributed by Recorded Books ;</subfield>
+    <subfield code="a">[Prince Frederick, Md.] :</subfield>
+    <subfield code="b">[Distributed by OneClick Digital,</subfield>
+    <subfield code="c">2012, p2012.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 sound file :</subfield>
+    <subfield code="b">digital.</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">spoken word</subfield>
+    <subfield code="b">spw</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">computer</subfield>
+    <subfield code="b">c</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">audio</subfield>
+    <subfield code="b">s</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">online resource</subfield>
+    <subfield code="b">cr</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="490" ind1="1" ind2=" ">
+    <subfield code="a">Pimsleur language programs</subfield>
+  </datafield>
+  <datafield tag="506" ind1=" " ind2=" ">
+    <subfield code="a">Access is limited to one user at a time</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Requires OneClick Digital Media Manager.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">System requirements: 200 MB of free disk space, 512 MB of RAM, Windows Installer 3.1, Microsoft .NET Framework 4 (x86 and x64), Windows Media Player 10 QA.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Downloadable audio file.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Title from title screen (viewed August 20, 2012).</subfield>
+  </datafield>
+  <datafield tag="530" ind1=" " ind2=" ">
+    <subfield code="a">Downloadable applications available for access via iOS 4.0+ devices (iPhone, iPad, iPod Touch) and Android 2.1+ devices.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Presents a beginning language learning program designed to teach the listener Castilian Spanish in progressive steps.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Spanish language</subfield>
+    <subfield code="v">Sound recordings for English speakers.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Spanish language</subfield>
+    <subfield code="v">Self-instruction.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Spanish language</subfield>
+    <subfield code="x">Study and teaching</subfield>
+    <subfield code="x">Audio-visual aids.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="4">
+    <subfield code="a">Downloadable audio books.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Pimsleur, Paul.</subfield>
+  </datafield>
+  <datafield tag="773" ind1=" " ind2=" ">
+    <subfield code="a">RB digital</subfield>
+  </datafield>
+  <datafield tag="776" ind1="0" ind2="8">
+    <subfield code="i">Compact disc version:</subfield>
+    <subfield code="t">Castilian Spanish: the short course.</subfield>
+    <subfield code="d">New York : Simon &amp; Schuster Audio ; Prince Frederick, MD : Distributed by Recorded Books, p2012.</subfield>
+    <subfield code="z">9781464043017</subfield>
+    <subfield code="w">(CtWfDGI)rpc90000058</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Pimsleur language programs.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">https://proxying.lib.ncsu.edu/index.php?qurl=http%3a%2f%2fncstateunc.rbdigital.com%2f%23titles%2f9781464043048</subfield>
+    <subfield code="z">Available to participating NC libraries through NC LIVE.</subfield>
+  </datafield>
+  <datafield tag="945" ind1=" " ind2=" ">
+    <subfield code="c">(OCoLC)807127281</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="t">AUDIOBOOK</subfield>
+    <subfield code="z">NCLIVETRLN</subfield>
+    <subfield code="a">PC4121 .C378 2012eb</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20180108</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">4051000</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">PC4121 .C378 2012 eb</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">4051000-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">AUDIOBOOK</subfield>
+    <subfield code="u">1/8/2018</subfield>
+    <subfield code="z">NCLIVETRLN</subfield>
+  </datafield>
+</record>
+</collection>

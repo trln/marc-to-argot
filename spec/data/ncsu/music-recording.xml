@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01557cjm a2200385Ia 4500</leader>
+  <controlfield tag="001">ocm47856278</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20070906115116.0</controlfield>
+  <controlfield tag="007">sd fsngnn|||eu</controlfield>
+  <controlfield tag="008">010828s2001    flu  n              spa d</controlfield>
+  <datafield tag="024" ind1="1" ind2="0">
+    <subfield code="a">037628446323</subfield>
+  </datafield>
+  <datafield tag="028" ind1="0" ind2="0">
+    <subfield code="a">TRK 84463</subfield>
+    <subfield code="b">Sony Discos</subfield>
+  </datafield>
+  <datafield tag="028" ind1="0" ind2="0">
+    <subfield code="a">2-475355</subfield>
+    <subfield code="b">Sony Discos</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)47856278</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">IKG</subfield>
+    <subfield code="c">IKG</subfield>
+    <subfield code="d">JED</subfield>
+    <subfield code="d">UV$</subfield>
+    <subfield code="d">DIV</subfield>
+    <subfield code="d">WIM</subfield>
+    <subfield code="d">NRC</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">cl-----</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">amb</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">M1680.18.S6524</subfield>
+    <subfield code="b">S24 2001</subfield>
+  </datafield>
+  <datafield tag="092" ind1="0" ind2=" ">
+    <subfield code="a">781.63098 S698s</subfield>
+    <subfield code="2">22</subfield>
+  </datafield>
+  <datafield tag="110" ind1="2" ind2=" ">
+    <subfield code="a">Son by Four (Musical group)</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Salsa hits</subfield>
+    <subfield code="h">[sound recording] /</subfield>
+    <subfield code="c">Son by Four.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Miami Beach, Fla. :</subfield>
+    <subfield code="b">Sony Discos,</subfield>
+    <subfield code="c">p2001.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 sound disc :</subfield>
+    <subfield code="b">digital ;</subfield>
+    <subfield code="c">4 3/4 in.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Sony Discos: TRK 84463 (2-475355).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Compact disc.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2="0">
+    <subfield code="t">A puro dolor (salsa)</subfield>
+    <subfield code="g">(4:23) --</subfield>
+    <subfield code="t">No hay razoÌn</subfield>
+    <subfield code="g">(4:32) --</subfield>
+    <subfield code="t">Cuando seas mia (salsa)</subfield>
+    <subfield code="g">(3:35) --</subfield>
+    <subfield code="t">Donde estaÌ tu amor (salsa)</subfield>
+    <subfield code="g">(4:20) --</subfield>
+    <subfield code="t">Vida mia (salsa)</subfield>
+    <subfield code="r">(duet with Jaci VelaÌsquez)</subfield>
+    <subfield code="g">(3:56) --</subfield>
+    <subfield code="t">Lo que yo mas quiero</subfield>
+    <subfield code="g">(4:49) --</subfield>
+    <subfield code="t">Sofia (boogaloo version)</subfield>
+    <subfield code="g">(4:18) --</subfield>
+    <subfield code="t">Corazones solitarios</subfield>
+    <subfield code="g">(4:21) --</subfield>
+    <subfield code="t">PrepaÌrense</subfield>
+    <subfield code="g">(6:22) --</subfield>
+    <subfield code="t">With you</subfield>
+    <subfield code="g">(4:18) --</subfield>
+    <subfield code="t">Vida mia (balada)</subfield>
+    <subfield code="r">(ballad duet with Jaci VelaÌsquez)</subfield>
+    <subfield code="g">(4:20).</subfield>
+  </datafield>
+  <datafield tag="511" ind1="0" ind2=" ">
+    <subfield code="a">Son by Four.</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Sung in Spanish.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">14</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Salsa (Music)</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Popular music</subfield>
+    <subfield code="z">Latin America.</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">1980940</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20070906</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">M1680.18 .S6524 S24 2001</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02510811I</subfield>
+    <subfield code="d">9/28/2012</subfield>
+    <subfield code="l">MEDIA</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">AUD-CD</subfield>
+    <subfield code="u">9/6/2007</subfield>
+    <subfield code="0">GIFT</subfield>
+  </datafield>
+</record>
+</collection>

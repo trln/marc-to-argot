@@ -14,6 +14,7 @@ require 'marc_to_argot/macros/shared/upc'
 require 'marc_to_argot/macros/shared/urls'
 require 'marc_to_argot/macros/shared/vernacular'
 require 'marc_to_argot/macros/shared/work_entry'
+require 'marc_to_argot/macros/shared/call_numbers'
 
 require 'set'
 
@@ -39,6 +40,7 @@ module MarcToArgot
       include Urls
       include Vernacular
       include WorkEntry
+      include CallNumbers
 
       # values to look for in the 856 that indicate
       # a record has online access.

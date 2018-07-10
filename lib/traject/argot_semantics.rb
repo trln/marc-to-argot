@@ -557,37 +557,6 @@ module Traject::Macros
       result.flatten.uniq
     end
 
-    # extracts call numbers from an items
-    # and maps them into the output_hash
-    # populates: `call_number_schemes`,
-    # `normalized_call_numbers`,
-    # and `lcc_callnum_classification`
-    def map_call_numbers(ctx, items)
-      call_numbers = items.each_with_object({}) do |i, cns|
-        scheme = i['cn_scheme']
-        next unless %w[LC SUDOC].include?(scheme)
-        numbers = (cns[scheme] ||= [])
-        numbers << if scheme == 'LC'
-        LCC.normalize(i['call_no'])
-      else
-        i['call_no']
-      end
-    end
-    ctx.output_hash['call_number_schemes'] = call_numbers.keys
-    ctx.output_hash['normalized_call_numbers'] = call_numbers.collect do |scheme, values|
-      s = scheme.downcase
-      values.collect { |v| "#{s}:#{v}" }
-    end.flatten.uniq
-
-    return unless call_numbers.key?('LC')
-    res = []
-    LCC.find_path(call_numbers['LC'].first).each_with_object([]) do |part, acc|
-      acc << part
-      res << acc.join(':')
-    end
-    ctx.output_hash['lcc_callnum_classification'] = res
-  end
-
   # maps languages, by default out of 008[35-37] and 041a and 041d
   #
   # de-dups values so you don't get the same one twice.

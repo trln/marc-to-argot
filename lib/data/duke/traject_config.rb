@@ -269,7 +269,7 @@ to_field 'items' do |rec, acc, ctx|
   ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(locations) if locations
   ctx.output_hash['barcodes'] = barcodes if barcodes.any?
 
-  map_call_numbers(ctx, items)
+  map_call_numbers!(ctx, items)
 end
 
 ################################################

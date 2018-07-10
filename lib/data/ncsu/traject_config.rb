@@ -32,9 +32,7 @@ each_record do |_rec, ctx|
   items.each { |i| i.delete('item_cat_2') }
   logger.info "Skipping #{ctx.output_hash['id']} (no items)" if items.empty?
   ctx.skip! if items.empty?
-
   ctx.output_hash['barcodes'] = items.map { |x| x['item_id'] }.select(&:itself)
-
   if ctx.output_hash.fetch('format', []).include?('Journal/Newspaper')
     holdings = generate_holdings(items)
     ctx.output_hash['holdings'] = holdings.map(&:to_json)

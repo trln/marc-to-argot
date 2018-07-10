@@ -260,7 +260,7 @@ to_field 'items' do |rec, acc, ctx|
 
     #set Availability facet value affirmatively
     ctx.output_hash['available'] = 'Available' if is_available?(items)
-    map_call_numbers(ctx, items)
+    map_call_numbers!(ctx, items)
 
     #set location facet values
     ilocs = items.collect { |it| it['loc_b'] }

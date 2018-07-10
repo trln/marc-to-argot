@@ -14,20 +14,9 @@ isbn:
   - 776z
 issn:
   primary:
-    - 440x
+    - 022a
   linking:
-    - 760xz
-    - 762xz
-    - 765xz
-    - 767xz
-    - 770xz
-    - 772xz
-    - 773xz
-    - 774xz
-    - 780xz
-    - 785xz
-  series:
-    - 490x
+    - 022l
 note_admin_history:
   - 545|1*|abu
 note_file_type:

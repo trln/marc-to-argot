@@ -12,7 +12,7 @@ describe MarcToArgot do
     expect(result).to eq(nil)
   end
 
-  it '(MTA) sets all institutions on DWSGPO recs' do
+  xit '(MTA) sets all institutions on DWSGPO recs' do
     result = dwsgpo1['institution']
     expect(result).to eq(
                         ['unc', 'duke', 'nccu', 'ncsu']

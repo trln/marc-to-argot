@@ -203,26 +203,27 @@ end
 #   end
 # end
 
-### This part is working correctly, except for the add_proxied_urls piece
-### Wait until that is fixed to set other institutions on IP-restricted sets
-each_record do |rec, cxt|
-  shared_set = ''
-  Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    value = field.to_s.downcase
-    shared_set = 'dwsgpo' if value =~ /dwsgpo/
-  end
+### This part is working correctly, except for tweaking the URLs to
+###   have institution-specific notes and proxies
+### Wait until that is fixed to set other institutions
+# each_record do |rec, cxt|
+#   shared_set = ''
+#   Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+#     value = field.to_s.downcase
+#     shared_set = 'dwsgpo' if value =~ /dwsgpo/
+#   end
 
-  case shared_set
-  when 'dwsgpo'
-    set_all_institutions(cxt)
-  # when 'troup'
-  #   set_all_institutions(cxt)
-  #   add_proxied_urls(cxt, ['duke', 'nccu', 'ncsu'])
-  # when 'asp'
-  #   cxt.output_hash['institution'] << 'duke'
-  #   add_proxied_urls(cxt, ['duke'])
-  end
-end
+#   case shared_set
+#   when 'dwsgpo'
+#     set_all_institutions(cxt)
+#   # when 'troup'
+#   #   set_all_institutions(cxt)
+#   #   add_proxied_urls(cxt, ['duke', 'nccu', 'ncsu'])
+#   # when 'asp'
+#   #   cxt.output_hash['institution'] << 'duke'
+#   #   add_proxied_urls(cxt, ['duke'])
+#   end
+# end
 
 ################################################
 # Items

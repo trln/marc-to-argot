@@ -20,8 +20,12 @@ attributed name: uncategorized
 auctioneer: uncategorized
 author in quotations or text abstracts: contributor
 author of afterword, colophon, etc.: contributor
+author of commentary: contributor
 author of dialog: creator
+author of foreword: contributor
 author of introduction, etc.: contributor
+author of introduction: contributor
+author of the appendix: contributor
 author: creator
 autographer: other
 bibliographic antecedent: uncategorized
@@ -109,6 +113,8 @@ engineer: contributor
 engraver: manufacturer
 etcher: manufacturer
 event place: uncategorized
+exhibiting institution: other
+exhibition curator: other
 expert: uncategorized
 facsimilist: contributor
 field director: uncategorized
@@ -124,6 +130,7 @@ funder: uncategorized
 geographic information specialist: uncategorized
 graphic technician: creator
 honoree: other
+honouree: other
 host institution: other
 host: contributor
 illuminator: other
@@ -232,6 +239,7 @@ sculptor: creator
 second party: uncategorized
 secretary: contributor
 seller: owner
+series editor: editor
 set designer: contributor
 setting: uncategorized
 signer: uncategorized
@@ -239,6 +247,7 @@ singer: contributor
 sound designer: uncategorized
 speaker: contributor
 sponsor: other
+sponsoring body: other
 stage director: contributor
 stage manager: uncategorized
 standards body: contributor
@@ -266,6 +275,12 @@ writer of accompanying material: contributor
 writer of added commentary: contributor
 writer of added lyrics: contributor
 writer of added text: contributor
+writer of afterword: contributor
+writer of afterwork: contributor
+writer of commentary: contributor
+writer of conclusion: contributor
+writer of foreword: contributor
 writer of introduction: contributor
 writer of preface: contributor
+writer of supplementary material: contributor
 writer of supplementary textual content: contributor

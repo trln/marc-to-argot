@@ -180,10 +180,20 @@ urlnotes = {
             'ncsu' => 'Full text available via NCSU Libraries'
 }
 
-def set_all_institutions(cxt)
-    cxt.output_hash['institution'] << 'duke'    
-    cxt.output_hash['institution'] << 'nccu'
-    cxt.output_hash['institution'] << 'ncsu'
+def add_institutions(cxt, institution_array)
+  institution_array.each { |i| cxt.output_hash['institution'] << i } 
+end
+
+def add_record_data_source(cxt, value)
+  cxt.output_hash['record_data_source'] << value
+end
+
+def add_virtual_collection(cxt, value)
+  if cxt.output_hash['virtual_collection']
+    cxt.output_hash['virtual_collection'] << value
+  else
+    cxt.output_hash['virtual_collection'] = [value]
+  end
 end
 
 # This doesn't work because url isn't ACTUALLY a hash. Save to fix later.
@@ -206,24 +216,31 @@ end
 ### This part is working correctly, except for tweaking the URLs to
 ###   have institution-specific notes and proxies
 ### Wait until that is fixed to set other institutions
-# each_record do |rec, cxt|
-#   shared_set = ''
-#   Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-#     value = field.to_s.downcase
-#     shared_set = 'dwsgpo' if value =~ /dwsgpo/
-#   end
+each_record do |rec, cxt|
+  shared_set = ''
+  Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+    value = field.to_s.downcase
+    case value
+    #when /dwsgpo/
+    #  shared_set = 'dwsgpo'
+    when /troup/
+      shared_set = 'oupp'
+    end
+  end
 
-#   case shared_set
-#   when 'dwsgpo'
-#     set_all_institutions(cxt)
-#   # when 'troup'
-#   #   set_all_institutions(cxt)
-#   #   add_proxied_urls(cxt, ['duke', 'nccu', 'ncsu'])
-#   # when 'asp'
-#   #   cxt.output_hash['institution'] << 'duke'
-#   #   add_proxied_urls(cxt, ['duke'])
-#   end
-# end
+  case shared_set
+  #when 'dwsgpo'
+  #  set_all_institutions(cxt)
+  when 'oupp'
+    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'OUPP')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
+  # when 'asp'
+  #   cxt.output_hash['institution'] << 'duke'
+  #   add_proxied_urls(cxt, ['duke'])
+  end
+end
 
 ################################################
 # Items

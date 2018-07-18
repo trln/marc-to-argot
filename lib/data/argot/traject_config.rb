@@ -203,6 +203,10 @@ unless settings["override"].include?("note_data_quality")
   to_field "note_data_quality", note_data_quality
 end
 
+unless settings["override"].include?("note_described_by")
+  to_field "note_described_by", note_described_by
+end
+
 unless settings["override"].include?("note_dissertation")
   to_field "note_dissertation", note_dissertation
 end

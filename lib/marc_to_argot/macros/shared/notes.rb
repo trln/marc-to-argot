@@ -77,6 +77,26 @@ module MarcToArgot
         end
 
         ################################################
+        # Note Described By
+        ######
+        def note_described_by
+          lambda do |rec, acc|
+            Traject::MarcExtractor.cached("555abcdu3").each_matching_line(rec) do |field, spec, extractor|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+              label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
+              case field.indicator1
+              when ' '
+                typelabel = 'Indexes'
+              when '0'
+                typelabel = 'Finding aids'
+              end
+              value = collect_and_join_subfield_values(field, %w[a b c d u])
+              acc << [label, typelabel, value].compact.join(': ') if value
+            end
+          end
+        end
+
+        ################################################
         # Note Dissertation
         ######
         def note_dissertation

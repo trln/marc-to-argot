@@ -121,7 +121,7 @@ describe MarcToArgot::Macros::Shared::Notes do
     )
   end
 
-  xit '(MTA) sets note_described_by with Finding aid label' do
+  it '(MTA) sets note_described_by with Finding aid label' do
     result = note_described_by1['note_described_by']
     expect(result).to eq(
                         [
@@ -130,7 +130,7 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-  xit '(MTA) sets note_described_by with Index and $3 label' do
+  it '(MTA) sets note_described_by with Index and $3 label' do
     result = note_described_by2['note_described_by']
     expect(result).to eq(
                         [
@@ -141,7 +141,7 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-  xit '(MTA) sets note_described_by with no extra labeling' do
+  it '(MTA) sets note_described_by with no extra labeling' do
     result = note_described_by3['note_described_by']
     expect(result).to eq(
                         [

@@ -94,7 +94,7 @@ module MarcToArgot
             item['loc_n'] = item['loc_current']
           end
           # now some remappings based on item type
-          item['loc_b'] = 'GAME' if item['type'] == 'GAME-4HR'
+          item['loc_n'] = 'GAME' if item['type'] == 'GAME-4HR'
         end
 
         def library_use_only?(item)

@@ -34,7 +34,7 @@ module MarcToArgot
           'BINDERY' => 'Material at the bindery',
           'REPAIR' => 'Being fixed/mended',
           'PRESERV' => 'Preservation',
-          'RESHELVING' => 'Just retruned',
+          'RESHELVING' => 'Just returned',
           'CATALOGING' => 'In Process'
         }.freeze
 

@@ -17,26 +17,39 @@ module MarcToArgot
           z: { key: 'item_cat_2' }
         }.freeze
 
-        MAINS = Set.new(%w[DHILL HUNT]).freeze
-
-        # locations that map to virtual collections
-        # library does not matter for these, EXCEPT for LRL/TEXTBOOK
-        # which is not part of the
-        LOC_COLLECTIONS = Set.new(%w[TEXTBOOK FLOATGAME FLOATDVD PRAGUE]).freeze
-
         LOCATION_AVAILABILITY = {
-          'CHECKEDOUT' => 'Checked Out',
-          'ILL' => 'Checked Out',
-          'ON-ORDER' => 'On Order',
-          'INPROCESS' => 'Received - In Process',
-          'RESERVES' => 'Available - On Reserve',
-          'INTRANSIT' => 'Being transferred between libraries',
-          'BINDERY' => 'Material at the bindery',
-          'REPAIR' => 'Being fixed/mended',
-          'PRESERV' => 'Preservation',
-          'RESHELVING' => 'Just retruned',
-          'CATALOGING' => 'In Process'
-        }.freeze
+          "AVAIL_SOON" => "Available",
+          "BINDERY" => "Not Available",
+          "CHECKEDOUT" => "Checked Out",
+          "DISCARD" => "Not Available", #Check with NCCU what to display
+          "EASY" => "Available", #Check with NCCU what to display
+          "HOLDS" => "On Hold", 
+          "ILL" => "Not Available", 
+          "ILLNCIP" => "Not Available", 
+          "INPROCESS" => "Available", 
+          "INSHIPPING" => "Checked Out", 
+          "INTRANSIT" => "Available",
+          "LAWDISPLAY" => "Available", #Check with NCCU what to display
+          "LONGOVRDUE" => "Not Available",
+          "LOST" => "Lost", 
+          "LOST-ASSUM" => "Lost",
+          "LOST-CLAIM"  => "Lost", 
+          "MISSING" => "Lost", 
+          "ON-ORDER" => "Available", 
+          "REPAIR" => "Not Available", 
+          "RESHELVING" => "Available", 
+          "REVIEWME"  => "Not Available", 
+          "RESERVES" => "Available - Library Use Only",  
+          "SERIALS" => "Available - Library Use Only",
+          "TUCKER" => "Available - Library Use Only", #Check with NCCU what to display. I assume this is a special collection
+          "MCKISSICK" => "Available",
+          "SCORES" => "Available", #When the records fixed, this value can be deleted
+          "STACKS" => "Available",  
+          "WITHDRAWN" =>  "Not Available",
+          "MEDIA" => "Available ",  
+          "REFDISPLAY" => "Available - Library Use Only", 
+          "REFERENCE" => "Available - Library Use Only" 
+         }.freeze 
 
         def get_location(item)
           [item['loc_b'], item['loc_n']]
@@ -95,6 +108,7 @@ module MarcToArgot
           items.each do |item|
             loc_b = item.fetch('loc_b', nil)
             loc_n = item.fetch('loc_n', nil)
+            loc_n = loc_b + loc_n
             locations << location_hierarchy_map[loc_b] if loc_b
             locations << location_hierarchy_map[loc_n] if loc_n
           end

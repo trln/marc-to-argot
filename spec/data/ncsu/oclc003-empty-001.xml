@@ -1,0 +1,114 @@
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/MARC21/slim" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record>
+  <leader>01443cgm a2200385Ia 4500</leader>
+  <controlfield tag="001"/>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="007">vd*cvaiuz</controlfield>
+  <controlfield tag="008">      s1996    cou072            vleng d</controlfield>
+  <datafield tag="013" ind1=" " ind2=" ">
+    <subfield code="a">a</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) a3085133</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">n-us---</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">tmc</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">NRC</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">SD565</subfield>
+    <subfield code="b">.F576 1996b</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Forest wars</subfield>
+    <subfield code="h">[videorecording] /</subfield>
+    <subfield code="c">written by Nicolas Brown, Patrick Prentice.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Aspen, CO]? :</subfield>
+    <subfield code="b">Produced for the Earth Vision Institute by Summit Films, Inc.,</subfield>
+    <subfield code="c">c1996.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 DVD-ROM (72 min.) :</subfield>
+    <subfield code="b">sd., col ;</subfield>
+    <subfield code="c">4 3/4 in.</subfield>
+  </datafield>
+  <datafield tag="508" ind1=" " ind2=" ">
+    <subfield code="a">Produced by Roger C. Brown ; directed and edited by Nicolas Brown.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="0" ind2=" ">
+    <subfield code="a">Presenter, Lee Horsley.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Documents an American dilemma: Can we have our wood products and our forests too?  Presents both sides of the legal and political log jam over forests.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">DVD-ROM</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Forest management</subfield>
+    <subfield code="z">United States.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Conservation of natural resources</subfield>
+    <subfield code="z">United States.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Sustainable forestry</subfield>
+    <subfield code="z">United States.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Forest policy</subfield>
+    <subfield code="z">United States.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Brown, Nicolas Roether.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Prentice, Patrick.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Earth Vision Institute.</subfield>
+  </datafield>
+  <datafield tag="948" ind1=" " ind2=" ">
+    <subfield code="a">12/12/1996</subfield>
+    <subfield code="b">03/31/1997</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">AIM-9971</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20140623</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">5</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">3085133</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">SD565 .F576 1996B</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02967139.</subfield>
+    <subfield code="d">8/7/2014</subfield>
+    <subfield code="e">6/23/2014</subfield>
+    <subfield code="l">MEDIA</subfield>
+    <subfield code="m">NRL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">DVD-ROM</subfield>
+    <subfield code="u">6/23/2014</subfield>
+  </datafield>
+</record>
+</collection>
+

@@ -41,6 +41,8 @@ module MarcToArgot
             oclc = control_number_extor.extract(rec).first
             acc << oclc.gsub(/^\D*/, '') unless oclc.nil?
           end
+          acc.compact!
+          acc.reject!(&:empty?)
           acc.uniq!
           acc.map! { |x| "OCLC#{x}" }
         end

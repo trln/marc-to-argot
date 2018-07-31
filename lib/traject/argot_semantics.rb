@@ -29,8 +29,9 @@ module Traject::Macros
             st[key] = oclc_num unless oclc_num.empty?
           end
         end
+        val = st['value']
 
-        acc << st unless st.empty?
+        acc << st unless val.nil? || val.empty?
       end
     end
 

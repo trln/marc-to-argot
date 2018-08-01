@@ -28,7 +28,9 @@ module MarcToArgot
             formats << 'Database' if database?
             formats << 'Dataset -- Statistical' if dataset_statistical?
             formats << 'Game' if game?
-            formats << 'Government publication' if government_publication?
+            unless from_university_press?
+              formats << 'Government publication' if government_publication?
+            end
             formats << 'Image' if image?
             formats << 'Journal, Magazine, or Periodical' if journal_magazine_periodical?
             formats << 'Kit' if kit?
@@ -196,12 +198,15 @@ module MarcToArgot
           end
 
           # Government publication
-          # 008/28 = a, c, f, i, l, m, o, s, z AND LDR/06 = a, e, f, g, k, m, o, r, t
+          # (008/28 = a, c, f, i, l, m, o, s, z AND LDR/06 = a, e, f, g, k, m, o, r, t
           # OR
-          # 006/11 = a, c, f, i, l, m, o, s, z AND 006/00 = a, e, f, g, k, m, o, r, t
+          # 006/11 = a, c, f, i, l, m, o, s, z AND 006/00 = a, e, f, g, k, m, o, r, t)
+          # AND
+          # 260/264b does NOT contain 'university'
           def government_publication?
             gov_pub_rec_types = %w[a e f g k m o r t]
             gov_pub_code_vals = %w[a c f i l m o s z]
+            
             marc_leader_06_match = gov_pub_rec_types.include?(record.leader.byteslice(6))
             marc_008_28_match = record.fields('008').find do |field|
               gov_pub_code_vals.include?(field.value.byteslice(28))
@@ -214,6 +219,25 @@ module MarcToArgot
 
             return true if (marc_leader_06_match && marc_008_28_match) ||
                            marc_006_00_11_match
+          end
+
+          def from_university_press?
+            # get publisher since we need to exclude university publications
+            publishers = []
+            record.fields(['260', '264']).each do |field|
+              if field.tag == '260'
+                publishers << field.find_all { |sf| sf.code == 'b' }
+              elsif field.tag == '264' && field.indicator2 == '1'
+                publishers << field.find_all { |sf| sf.code == 'b' }
+              end
+            end
+            pubstring = publishers.flatten.to_s.downcase
+
+            if pubstring.include?('university')
+              return true
+            else
+              return false
+            end
           end
 
           # Image

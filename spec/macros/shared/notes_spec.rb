@@ -13,6 +13,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_described_by1) { run_traject_json('unc', 'note_described_by1', 'mrc') }
   let(:note_described_by2) { run_traject_json('unc', 'note_described_by2', 'mrc') }
   let(:note_described_by3) { run_traject_json('unc', 'note_described_by3', 'mrc') }
+  let(:note_described_by4) { run_traject_json('unc', 'note_described_by4', 'mrc') }
   let(:note_dissertation) { run_traject_json('duke', 'note_dissertation', 'mrc') }
   let(:note_file_type) { run_traject_json('duke', 'note_file_type', 'mrc') }
   let(:note_former_title) { run_traject_json('duke', 'note_former_title', 'mrc') }
@@ -149,7 +150,16 @@ describe MarcToArgot::Macros::Shared::Notes do
                         ]
                       )
   end
-  
+
+  it '(MTA) sets note_described_by' do
+    result = note_described_by4['note_described_by']
+    expect(result).to eq(
+                        [
+                          'Indexes: Vols. 3-4, 1969-71 in v. 4; v. 1-20, 1976-87. 1 v.'
+                        ]
+                      )
+  end
+
   it '(MTA) sets note_dissertation' do
     result = note_dissertation['note_dissertation']
     expect(result).to eq(

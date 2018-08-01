@@ -24,8 +24,9 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   let(:resource_type_20) { run_traject_json('unc', 'resource_type_20', 'xml') }
   let(:resource_type_21) { run_traject_json('unc', 'resource_type_21', 'xml') }
   let(:resource_type_22) { run_traject_json('unc', 'resource_type_22', 'mrc') }
-
-
+  let(:resource_type_23) { run_traject_json('unc', 'resource_type_23', 'mrc') }
+  let(:resource_type_24) { run_traject_json('unc', 'resource_type_24', 'mrc') }
+  
   it '(Duke) Sets resource_type to Music score' do
     result = resource_type_01['resource_type']
     expect(result).to include('Music score')
@@ -63,6 +64,16 @@ describe MarcToArgot::Macros::Shared::ResourceType do
 
   it '(Duke) Sets resource_type to Government publication' do
     result = resource_type_09['resource_type']
+    expect(result).to include('Government publication')
+  end
+
+  it '(MTA) Does not set gov pub value if 260 or 264 includes university' do
+    result = resource_type_23['resource_type']
+    expect(result).to_not include('Government publication')
+  end
+
+  it '(MTA) Does not croak checking resource_type if there is no 260 or 264' do
+    result = resource_type_24['resource_type']
     expect(result).to include('Government publication')
   end
 
@@ -125,7 +136,6 @@ describe MarcToArgot::Macros::Shared::ResourceType do
     result = resource_type_21['resource_type']
     expect(result).to include('Video') && include('Kit')
   end
-
     
   context '006/00 = m' do
     context '006/09 = c' do

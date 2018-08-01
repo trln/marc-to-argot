@@ -12,3 +12,5 @@ end
 to_field 'institution', literal('nccu')
 
 to_field 'items', extract_items
+
+to_field 'rollup_id', rollup_id

@@ -46,19 +46,19 @@ end
 unless settings["override"].include?("isbn")
   to_field "isbn" do |rec, acc|
     Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
-        str = extractor.collect_subfields(field, spec).first
-        isbn = {}
-        if str
-            explode = str.split
-            if(StdNum::ISBN.checkdigit(explode[0]))
+      str = extractor.collect_subfields(field, spec).first
+      isbn = {}
+      if str
+        explode = str.split
+        if(StdNum::ISBN.checkdigit(explode[0]))
 
-                isbn = {
-                    :number => explode[0],
-                    :qualifying_info => explode[1..-1].join(" ")
-                }
-            end
+          isbn = {
+            :number => explode[0],
+            :qualifying_info => explode[1..-1].join(" ")
+          }
         end
-        acc << isbn if !isbn.empty?
+      end
+      acc << isbn if !isbn.empty?
     end
   end
 end
@@ -84,10 +84,10 @@ unless settings["override"].include?("publication_year")
 end
 
 unless settings['override'].include?('date_cataloged')
-    to_field 'date_cataloged' do |rec, acc|
-      cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first
-      acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
-    end
+  to_field 'date_cataloged' do |rec, acc|
+    cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first
+    acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
+  end
 end
 
 ################################################
@@ -346,16 +346,16 @@ end
 
 unless settings['override'].include?('subject_topical')
   to_field 'subject_topical', argot_subject_facets({ spec: '600abcdfghjklmnopqrstu:600x:'\
-                                                        '610abcdfghklmnoprstu:610x:'\
-                                                        '611acdefghklnpqstu:611x:'\
-                                                        '630adfghklmnoprst:630x:'\
-                                                        '647acdg:647x:'\
-                                                        '648x:'\
-                                                        '650abcdg:650x:'\
-                                                        '651x:653|*0|a:653|*1|a:653|*2|a:'\
-                                                        '653|*3|a:'\
-                                                        '656a:656x:'\
-                                                        '657a:657x'})
+                                                           '610abcdfghklmnoprstu:610x:'\
+                                                           '611acdefghklnpqstu:611x:'\
+                                                           '630adfghklmnoprst:630x:'\
+                                                           '647acdg:647x:'\
+                                                           '648x:'\
+                                                           '650abcdg:650x:'\
+                                                           '651x:653|*0|a:653|*1|a:653|*2|a:'\
+                                                           '653|*3|a:'\
+                                                           '656a:656x:'\
+                                                           '657a:657x'})
 end
 
 unless settings['override'].include?('subject_chronological')
@@ -394,10 +394,11 @@ unless settings['override'].include?('subject_genre')
                                                      'rbpub' => [ :strip_rb_vocab_terms ],
                                                      'rbtyp' => [ :strip_rb_vocab_terms ]
                                                    }
-                                                })
+                                                 })
 
   to_field 'subject_genre', argot_genre_from_fixed_fields()
 
+  # Create 'Primary sources' genre facet value
   each_record do |rec, context|
     primary_source_genres = ['Archival resources',
                              'Archives',
@@ -412,6 +413,28 @@ unless settings['override'].include?('subject_genre')
     
     if context.output_hash['subject_genre']
       context.output_hash['subject_genre'] << "Primary sources" if !(context.output_hash['subject_genre'] & primary_source_genres).empty?
+      context.output_hash['subject_genre'] = context.output_hash['subject_genre'].uniq
+    end
+  end
+
+  # Create 'Reference' genre facet value
+  each_record do |rec, context|
+    reference_genres = [
+      'Bibliography',
+      'Bio-bibliography',
+      'Dictionaries',
+      'Directories',
+      'Encyclopedias',
+      'Handbooks, manuals, etc.',
+      'Handbooks, manuals, etc',
+      'Identification',
+      'Identification guides',
+      'Indexes',
+      'Style manuals'
+    ]
+    
+    if context.output_hash['subject_genre']
+      context.output_hash['subject_genre'] << "Reference" if !(context.output_hash['subject_genre'] & reference_genres).empty?
       context.output_hash['subject_genre'] = context.output_hash['subject_genre'].uniq
     end
   end
@@ -442,7 +465,7 @@ end
 
 unless settings["override"].include?("statement_of_responsibility")
   to_field "statement_of_responsibility",
-    basic_vernacular_field(settings["specs"][:statement_of_responsibility])
+           basic_vernacular_field(settings["specs"][:statement_of_responsibility])
 end
 
 unless settings["override"].include?("edition")

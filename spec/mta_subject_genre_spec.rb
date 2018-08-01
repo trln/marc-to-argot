@@ -14,6 +14,7 @@ describe MarcToArgot do
   let(:genre5) { run_traject_json('unc', 'genre5', 'mrc') }
   let(:genre6) { run_traject_json('unc', 'genre6', 'mrc') }
   let(:genre7) { run_traject_json('unc', 'genre7', 'mrc') }
+  let(:genre8) { run_traject_json('unc', 'genre8', 'mrc') }
   let(:vern650v) { run_traject_json('unc', 'vern650v', 'mrc') }
   
   it '(MTA) sets subject_headings from any source' do
@@ -145,6 +146,14 @@ describe MarcToArgot do
                       )
   end  
 
+  it '(MTA) adds Reference genre facet value when that facet includes Dictionaries' do
+    result = genre8['subject_genre']
+    expect(result).to include(
+                        'Reference'
+                      )
+  end  
+
+  
   it '(MTA) adds genre facet value from 006 LitForm byte independent of LDR values' do
     result = genre1['subject_genre']
     expect(result).to include(

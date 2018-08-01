@@ -305,7 +305,7 @@ to_field 'items' do |rec, acc, ctx|
       when 'b'
         barcodes << subfield.value
       when 'c'
-        item['copy_no'] = subfield.value if subfield.value != '1'
+        item['copy_no'] = 'c. ' + subfield.value if subfield.value != '1'
       when 'd'
         item['due_date'] = subfield.value
       when 'i'

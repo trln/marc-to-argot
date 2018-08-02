@@ -202,7 +202,7 @@ module MarcToArgot
           # OR
           # 006/11 = a, c, f, i, l, m, o, s, z AND 006/00 = a, e, f, g, k, m, o, r, t)
           # AND
-          # 260/264b does NOT contain 'university'
+          # 260/264b does NOT contain 'university' or 'universities press'
           def government_publication?
             gov_pub_rec_types = %w[a e f g k m o r t]
             gov_pub_code_vals = %w[a c f i l m o s z]
@@ -227,13 +227,13 @@ module MarcToArgot
             record.fields(['260', '264']).each do |field|
               if field.tag == '260'
                 publishers << field.find_all { |sf| sf.code == 'b' }
-              elsif field.tag == '264' && field.indicator2 == '1'
+              elsif field.tag == '264'
                 publishers << field.find_all { |sf| sf.code == 'b' }
               end
             end
             pubstring = publishers.flatten.to_s.downcase
 
-            if pubstring.include?('university')
+            if pubstring.include?('university') or pubstring.include?('universities press')
               return true
             else
               return false

@@ -1,0 +1,22 @@
+# These are non-standard, but frequently occurring relator codes in our data
+# They are separated from the main relator_categories.yaml file because eventually
+#  we expect that file to be generated based on standard code lists and we do not
+#  want to lose the categorizations for non-standard terms when that gets updated.
+#  Also, separating these allows us to warn about non-standard values (which can be
+#  passed on for catalog cleanup if desired), but still assign the names to  a category. 
+arranger of music: contributor
+author of commentary: contributor
+author of foreword: contributor
+author of introduction: contributor
+author of the appendix: contributor
+exhibiting institution: other
+exhibition curator: other
+honouree: other
+series editor: editor
+sponsoring body: other
+writer of afterword: contributor
+writer of afterwork: contributor
+writer of commentary: contributor
+writer of conclusion: contributor
+writer of foreword: contributor
+writer of supplementary material: contributor

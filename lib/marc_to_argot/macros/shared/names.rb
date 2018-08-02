@@ -44,7 +44,7 @@ module MarcToArgot
             name = collect_and_join_subfield_values(field, 'a')
           end
 
-          name.gsub(/(?<!\s[A-Z])[\.,]$/, '').strip
+          name.gsub(/(?<!\s[A-Z])[\.,]\s?$/, '').strip
         end
 
         def names_rel(field)
@@ -70,7 +70,12 @@ module MarcToArgot
         end
 
         def names_cleanup_rels(value)
-          value.gsub(/(?<!etc)[,\.\s]*$/, '').gsub(/^([,\.\s])*/, '').strip
+          # remove FRBR/WEMI terms sometimes found in relators
+          value = value.gsub(/\((work|expression|manifestation|item)\)/i, '').strip
+          # remove instution/library-specific relator qualifiers
+          value = value.gsub(/\((ncc|rbc).*\)/i, '').strip
+          # cleanup punctuation and spacing
+          value = value.gsub(/(?<!etc)[,\.\s]*$/, '').gsub(/^([,\.\s])*/, '').strip
         end
 
         def names_type(field, rels)
@@ -86,7 +91,12 @@ module MarcToArgot
         def name_type_with_rel(rels)
           type = rels.map do |rel|
             category = relator_categories[rel]
-            logger.warn "Relator value '#{rel}' not mapped to a relator category." if category.nil?
+            if category.nil?
+              not_standard = true
+              category = relator_categories_local[rel]
+            end
+            logger.warn "Relator term '#{rel}' not mapped to a relator category." if category.nil?
+            logger.warn "Relator term '#{rel}' not a standard relator term, but was mapped to a relator category." if not_standard
             category
           end
           type = (names_category_order & type).first
@@ -99,6 +109,10 @@ module MarcToArgot
 
         def relator_categories
           @relator_categories ||= Traject::TranslationMap.new('shared/relator_categories')
+        end
+
+        def relator_categories_local
+          @relator_categorial ||= Traject::TranslationMap.new('shared/relator_categories_local')
         end
 
         def names_category_order

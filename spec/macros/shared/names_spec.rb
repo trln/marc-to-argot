@@ -16,6 +16,7 @@ describe MarcToArgot::Macros::Shared::Names do
   let(:names10) { run_traject_json('unc', 'names10', 'mrc') }
   let(:names11) { run_traject_json('unc', 'names11', 'mrc') }
   let(:names12) { run_traject_json('unc', 'names12', 'mrc') }
+  let(:names13) { run_traject_json('unc', 'names13', 'mrc') }
   let(:vnames01) { run_traject_json('unc', 'vern_names01', 'mrc') }
   let(:vnames02) { run_traject_json('unc', 'vern_names02', 'mrc') }
   let(:vnames03) { run_traject_json('unc', 'vern_names03', 'mrc') }
@@ -37,7 +38,7 @@ describe MarcToArgot::Macros::Shared::Names do
                          {'name'=>'Sagher, Tami',
                           'rel'=>['actor'],
                           'type'=>'contributor'}]
-    )
+                      )
   end
 
   it '(MTA) sets names, setting editor over contributor, deduping relators' do
@@ -85,16 +86,16 @@ describe MarcToArgot::Macros::Shared::Names do
                         [{'name'=>'Wilson, James, 1779-1845',
                           'rel'=>['author'],
                           'type'=>'creator'},
-                          {'name'=>'Showell, John Whitehouse',
+                         {'name'=>'Showell, John Whitehouse',
                           'rel'=>['printer'],
                           'type'=>'manufacturer'},
-                          {'name'=>'Hutchinson, Elizabeth, 1820-1905',
+                         {'name'=>'Hutchinson, Elizabeth, 1820-1905',
                           'rel'=>['former owner', 'autographer'],
                           'type'=>'owner'},
-                          {'name'=>'Hutchinson, Sara, 1775-1835',
+                         {'name'=>'Hutchinson, Sara, 1775-1835',
                           'rel'=>['inscriber'],
                           'type'=>'other'},
-                          {'name'=>'Reed, Mark L.',
+                         {'name'=>'Reed, Mark L.',
                           'rel'=>['former owner'],
                           'type'=>'owner'}
                         ])
@@ -191,7 +192,33 @@ describe MarcToArgot::Macros::Shared::Names do
                           'type'=>'contributor'}
                         ])
   end
+
+  it '(MTA) sets relator category from local translation map' do
+    result = names13['names']
+    expect(result).to include(
+                        {'name'=>'Spence, Thomas',
+                         'rel'=>['arranger of music'],
+                         'type'=>'contributor'}
+                      )
+  end
   
+  it '(MTA) cleans WEMI terms out of relators' do
+    result = names13['names']
+    expect(result).to include(
+                        {'name'=>'Fusco, Giovanni, 1906-1968',
+                         'rel'=>['composer'],
+                         'type'=>'creator'}
+                      )
+  end
+  
+  it '(MTA) cleans institution-specific qualifiers out of relators' do
+    result = names13['names']
+    expect(result).to include(
+                        {'name'=>'Kerouac, Edie Parker, 1923-1992',
+                         'rel'=>['former owner'],
+                         'type'=>'owner'}
+                      )
+  end  
   xit '(MTA) sets names from 100 and linked vernacular field' do
     result = vnames01['names']
     expect(result).to eq(

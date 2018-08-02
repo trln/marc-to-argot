@@ -95,7 +95,7 @@ describe MarcToArgot do
 
   it '(UNC) sets copy_no when greater than 1' do
     expect(b1319986result1).to(
-      include("\"copy_no\":\"2\"")
+      include("\"copy_no\":\"c. 2\"")
     )
   end
 

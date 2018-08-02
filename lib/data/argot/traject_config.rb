@@ -26,15 +26,6 @@ unless settings["override"].include?("oclc_number")
   to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc_number])
 end
 
-unless settings["override"].include?("syndetics_id")
-  to_field "syndetics_id", extract_marc(settings["specs"][:syndetics_id], :separator=>nil) do |rec, acc|
-    orig = acc.dup
-    acc.map!{|x| StdNum::ISBN.allNormalizedValues(x)}
-    acc.flatten!
-    acc.uniq!
-  end
-end
-
 unless settings["override"].include?("ead_id")
   # to_field "ead_id", literal("")
 end

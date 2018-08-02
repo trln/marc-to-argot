@@ -233,7 +233,8 @@ module MarcToArgot
             end
             pubstring = publishers.flatten.to_s.downcase
 
-            if pubstring.include?('university') or pubstring.include?('universities press')
+            if pubstring.include?('university') || pubstring.include?('universities press') ||
+               pubstring.include?('school of')
               return true
             else
               return false

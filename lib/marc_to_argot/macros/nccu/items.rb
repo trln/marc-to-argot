@@ -108,7 +108,6 @@ module MarcToArgot
           items.each do |item|
             loc_b = item.fetch('loc_b', nil)
             loc_n = item.fetch('loc_n', nil)
-            loc_n = loc_b + loc_n
             locations << location_hierarchy_map[loc_b] if loc_b
             locations << location_hierarchy_map[loc_n] if loc_n
           end

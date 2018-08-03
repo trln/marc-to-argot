@@ -2,10 +2,17 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for UNC records
     module UNC
-      MarcExtractor = Traject::MarcExtractor
+      require 'marc_to_argot/macros/unc/shared_records'
+      require 'marc_to_argot/macros/unc/urls'
+      
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
+      include SharedRecords
+      include Urls
+
+      MarcExtractor = Traject::MarcExtractor
+      
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?
       def local_marc_org_codes
@@ -32,18 +39,6 @@ module MarcToArgot
         end
       end
 
-      # assembles a string from the 856 subfields 3 & y to use for the URL text
-      # @param field [MARC::DataField] the field to use to assemble URL text
-      def url_text(field)
-        subfield_values_3 = collect_subfield_values_by_code(field, '3').map { |val| val.strip.sub(/ ?\W* ?$/, '')}
-        subfield_values_y = collect_subfield_values_by_code(field, 'y').map { |val| val.strip }
-
-        if subfield_values_y.empty? && url_type_value(field) == 'fulltext'
-          subfield_values_y << 'Available via the UNC-Chapel Hill Libraries'
-        end
-
-        ([subfield_values_3.join(' ')] + [subfield_values_y.join(' ')]).reject(&:empty?).join(' -- ')
-      end
     end
   end
 end

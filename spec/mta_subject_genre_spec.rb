@@ -39,7 +39,27 @@ describe MarcToArgot do
                       )
   end
 
-  #This is currently failing because the comma between name and date is being stripped out
+  it '(MTA) subdivides corporate name headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "North Carolina. Provincial Congress (4th : 1776 : Halifax, N.C.) -- Drama"}
+                      )
+  end
+
+  it '(MTA) subdivides meeting name headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "Vatican Council (2nd : 1962-1965 : Basilica di San Pietro in Vaticano) -- Drama"}
+                      )
+  end
+
+  it '(MTA) subdivides uniform title headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "Bible. Gospels -- Commentaries"}
+                      )
+  end
+
   it '(MTA) adds personal name to subject_topical correctly' do
     result = subject3['subject_topical']
     expect(result).to include(

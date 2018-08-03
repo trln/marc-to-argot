@@ -378,17 +378,14 @@ module Traject::Macros
         [subfield.code, subfield_value] if subfield_value
       end.compact
 
-      return subfields if subfields.empty?
-
+      if subfields.empty?
+        return subfields
+      else
       subdivisions = []
       
       if separator && spec.joinable?
         case field.tag
-        when '384'
-          subdivide_at_subfields = %w[a]
-        when '567'
-          subdivide_at_subfields = %w[b]
-        when /(600|610|611|630|650)/
+        when /600|610|611|630|650/
           subdivide_at_subfields = %w[v x y z]
         when '651'
           subdivide_at_subfields = %w[g v y z]
@@ -400,6 +397,8 @@ module Traject::Macros
           subdivide_at_subfields = %w[a k v x y z]
         when '662'
           subdivide_at_subfields = %w[a b c d f g h]
+        else
+          subdivide_at_subfields = %w[na]
         end
 
         subdivisions = [subfields.shift[1]]
@@ -421,6 +420,7 @@ module Traject::Macros
       
 
       return subdivisions
+      end
     end
 
   # returns boolean statement of whether field needs special treatment

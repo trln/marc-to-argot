@@ -298,7 +298,7 @@ module Traject::Macros
 
     def argot_subject_genre_headings(options={})
       spec            = options[:spec] || '600|*0|abcdfghjklmnopqrstu'
-      subd_separator  = options[:subdivison_separator] || ' -- '
+      subd_separator  = options[:subdivision_separator] || ' -- '
       filters   = options[:filters] || nil
       
       lambda do |rec, acc|
@@ -316,7 +316,7 @@ module Traject::Macros
 
     def argot_subject_facets(options={})
       spec            = options[:spec] || '600|*0|abcdfghjklmnopqrstu'
-      subd_separator  = options[:subdivison_separator] || ' '
+      subd_separator  = options[:subdivision_separator] || ' '
       filters   = options[:filters] || nil
 
       lambda do |rec, acc|
@@ -335,8 +335,33 @@ module Traject::Macros
       end
       subjects.uniq
     end
+        
+    # def self.collect_subject_subfields(field, spec, separator, filters)
+    #   subfields = field.subfields.collect do |subfield|
+    #     subfield_value = subfield.value if spec.includes_subfield_code?(subfield.code)
+    #     if subfield_value
+    #       if filters && special_treatment_filter?(field, filters)
+    #         special_treatments(field, filters).each do |m|
+    #           subfield_value = method(m).call(subfield)
+    #         end
+    #       end
+    #       split_value = subfield_value.split(//, 2)
+    #       subfield_value = split_value[0].to_s.capitalize + split_value[1].to_s
+    #       subfield_value = subfield_value.gsub(/\)\.$/, ')')
+    #     end
+    #     Traject::Macros::Marc21.trim_punctuation(subfield_value)
+    #   end.compact
 
-  def self.collect_subject_subfields(field, spec, separator, filters)
+    #   return subfields if subfields.empty?
+
+    #   if separator && spec.joinable?
+    #     subfields = [subfields.join(separator)]
+    #   end
+
+    #   subfields
+    # end
+
+    def self.collect_subject_subfields(field, spec, separator, filters)
       subfields = field.subfields.collect do |subfield|
         subfield_value = subfield.value if spec.includes_subfield_code?(subfield.code)
         if subfield_value
@@ -349,16 +374,53 @@ module Traject::Macros
           subfield_value = split_value[0].to_s.capitalize + split_value[1].to_s
           subfield_value = subfield_value.gsub(/\)\.$/, ')')
         end
-        Traject::Macros::Marc21.trim_punctuation(subfield_value)
+        
+        [subfield.code, subfield_value] if subfield_value
       end.compact
 
       return subfields if subfields.empty?
 
+      subdivisions = []
+      
       if separator && spec.joinable?
-        subfields = [subfields.join(separator)]
-      end
+        case field.tag
+        when '384'
+          subdivide_at_subfields = %w[a]
+        when '567'
+          subdivide_at_subfields = %w[b]
+        when /(600|610|611|630|650)/
+          subdivide_at_subfields = %w[v x y z]
+        when '651'
+          subdivide_at_subfields = %w[g v y z]
+        when '655'
+          subdivide_at_subfields = %w[v x y z]
+        when '653'
+          subdivide_at_subfields = %w[a]
+        when '656'
+          subdivide_at_subfields = %w[a k v x y z]
+        when '662'
+          subdivide_at_subfields = %w[a b c d f g h]
+        end
 
-      subfields
+        subdivisions = [subfields.shift[1]]
+
+        subfields.each do |sf|
+          if subdivide_at_subfields.include?(sf[0])
+            subdivisions << sf[1]
+          else
+            current_subdivision_index = subdivisions.length - 1
+            subdivisions[current_subdivision_index] << " #{sf[1]}"
+          end
+        end
+
+        subdivisions = subdivisions.collect { |subd| Traject::Macros::Marc21.trim_punctuation(subd) }
+        subdivisions = [subdivisions.join(separator)]
+      else
+        subdivisions = subfields.collect { |sf| Traject::Macros::Marc21.trim_punctuation(sf[1]) }
+      end
+      
+
+      return subdivisions
     end
 
   # returns boolean statement of whether field needs special treatment

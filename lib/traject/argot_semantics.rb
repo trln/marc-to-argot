@@ -336,31 +336,6 @@ module Traject::Macros
       subjects.uniq
     end
         
-    # def self.collect_subject_subfields(field, spec, separator, filters)
-    #   subfields = field.subfields.collect do |subfield|
-    #     subfield_value = subfield.value if spec.includes_subfield_code?(subfield.code)
-    #     if subfield_value
-    #       if filters && special_treatment_filter?(field, filters)
-    #         special_treatments(field, filters).each do |m|
-    #           subfield_value = method(m).call(subfield)
-    #         end
-    #       end
-    #       split_value = subfield_value.split(//, 2)
-    #       subfield_value = split_value[0].to_s.capitalize + split_value[1].to_s
-    #       subfield_value = subfield_value.gsub(/\)\.$/, ')')
-    #     end
-    #     Traject::Macros::Marc21.trim_punctuation(subfield_value)
-    #   end.compact
-
-    #   return subfields if subfields.empty?
-
-    #   if separator && spec.joinable?
-    #     subfields = [subfields.join(separator)]
-    #   end
-
-    #   subfields
-    # end
-
     def self.collect_subject_subfields(field, spec, separator, filters)
       subfields = field.subfields.collect do |subfield|
         subfield_value = subfield.value if spec.includes_subfield_code?(subfield.code)

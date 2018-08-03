@@ -171,7 +171,7 @@ module MarcToArgot
           def game?
             marc_leader_06_o_r_match = %w[o r].include?(record.leader.byteslice(6))
             marc_008_33_g_match = record.fields('008').find do |field|
-              field.value.byteslice(26) == 'g'
+              field.value.byteslice(33) == 'g'
             end
 
             marc_leader_06_m_match = record.leader.byteslice(6) == 'm'
@@ -188,7 +188,7 @@ module MarcToArgot
             marc_006_match = record.fields('006').find do |field|
               (%w[o r].include?(field.value.byteslice(0)) && field.value.byteslice(16) == 'g') ||
                 (field.value.byteslice(0) == 'm' && (field.value.byteslice(9) == 'g' ||
-                  (field.value.byteslice(16..1) || '').split('').include?('n')))
+                  (field.value.byteslice(16..17) || '').split('').include?('n')))
             end
 
             return true if (marc_leader_06_o_r_match && marc_008_33_g_match) ||

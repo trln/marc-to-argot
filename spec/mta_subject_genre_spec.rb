@@ -5,6 +5,7 @@ describe MarcToArgot do
   include Util::TrajectRunTest
   let(:subject1) { run_traject_json('unc', 'subject1', 'mrc') }
   let(:subject2) { run_traject_json('unc', 'subject2', 'mrc') }
+  let(:subject3) { run_traject_json('unc', 'subject3', 'mrc') }
   let(:primary_source1) { run_traject_json('unc', 'primary_source1', 'mrc') }
   let(:primary_source2) { run_traject_json('unc', 'primary_source2', 'mrc') }
   let(:genre1) { run_traject_json('unc', 'genre1', 'mrc') }
@@ -28,6 +29,41 @@ describe MarcToArgot do
                           { "value" => "MEDICAL / Pediatrics" },
                           { "value" => "Asperger Syndrome -- History" }
                         ]
+                      )
+  end
+
+  it '(MTA) subdivides personal name headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "Shakespeare, William, 1564-1616 -- Musical settings"}
+                      )
+  end
+
+  it '(MTA) subdivides corporate name headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "North Carolina. Provincial Congress (4th : 1776 : Halifax, N.C.) -- Drama"}
+                      )
+  end
+
+  it '(MTA) subdivides meeting name headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "Vatican Council (2nd : 1962-1965 : Basilica di San Pietro in Vaticano) -- Drama"}
+                      )
+  end
+
+  it '(MTA) subdivides uniform title headings correctly' do
+    result = subject3['subject_headings']
+    expect(result).to include(
+                        {"value" => "Bible. Gospels -- Commentaries"}
+                      )
+  end
+
+  it '(MTA) adds personal name to subject_topical correctly' do
+    result = subject3['subject_topical']
+    expect(result).to include(
+                        "Shakespeare, William, 1564-1616"
                       )
   end
 

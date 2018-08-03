@@ -363,7 +363,7 @@ unless settings['override'].include?('subject_geographic')
                                                               '657z:662a:662b:662c:662d:662f:662g:662h'})
 
   to_field 'subject_geographic', argot_subject_facets({ spec: '651ag',
-                                                        subdivison_separator: ' -- '
+                                                        subdivision_separator: ' -- '
                                                       })
 end
 
@@ -374,7 +374,7 @@ unless settings['override'].include?('subject_genre')
                                                          '655v:656v:656k:657v'})
 
   to_field 'subject_genre', argot_subject_facets({ spec: '655ax',
-                                                   subdivison_separator: ' -- ',
+                                                   subdivision_separator: ' -- ',
                                                    filters: {
                                                      'rbbin' => [ :strip_rb_vocab_terms ],
                                                      'rbgenr' => [ :strip_rb_vocab_terms ],

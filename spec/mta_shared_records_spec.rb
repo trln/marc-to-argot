@@ -72,6 +72,13 @@ describe MarcToArgot do
                           ['TRLN Shared Records. Documents without shelves.']
                         )
     end
+
+    it '(UNC) available value is Available' do
+      result = dwsgpo1['available']
+      expect(result).to eq(
+                          "Available"
+                        )
+    end
   end
 
 

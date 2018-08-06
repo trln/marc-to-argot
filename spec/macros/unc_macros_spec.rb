@@ -74,7 +74,9 @@ describe MarcToArgot::Macros::UNC do
   
   it 'extracts link text' do
     indexer.instance_eval do
-      to_field 'url', url
+      each_record do |rec, cxt|
+        url(rec, cxt)
+      end
     end
     url_recs.each_with_index do |rec, idx|
       exp = expected_text[idx]
@@ -90,7 +92,9 @@ describe MarcToArgot::Macros::UNC do
 
   it 'extracts link type' do
     indexer.instance_eval do
-      to_field 'url', url
+      each_record do |rec, cxt|
+        url(rec, cxt)
+      end
     end
     url_recs.each_with_index do |rec, idx|
       exp = expected_type[idx]

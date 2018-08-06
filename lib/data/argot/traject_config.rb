@@ -442,6 +442,14 @@ unless settings['override'].include?('access_type')
   end
 end
 
+unless settings['override'].include?('available')
+  each_record do |rec, context|
+    if context.output_hash['access_type'] == ['Online']
+      context.output_hash['available'] = 'Available'
+    end
+  end
+end
+
 unless settings['override'].include?('resource_type')
   to_field 'resource_type', resource_type
 end

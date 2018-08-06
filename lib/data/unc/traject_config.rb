@@ -1,3 +1,7 @@
+each_record do |rec, cxt|
+  set_shared_record_set_code(rec, cxt)
+end
+
 ################################################
 # Primary ID
 ######
@@ -166,79 +170,31 @@ each_record do |rec, cxt|
 end
 
 ################################################
+# URLs
+######
+each_record do |rec, cxt|
+  url(rec, cxt)
+end
+
+
+################################################
 # Shared records
 ######
-proxies = { 'unc' => 'http://libproxy.lib.unc.edu/login?url=',
-            'duke' => 'http://proxy.lib.duke.edu/login?url=',
-            'nccu' => 'http://ezproxy.nccu.edu/login?url=',
-            'ncsu' => 'http://proxying.lib.ncsu.edu/index.php?url='
-          }
-
-urlnotes = { 
-            'duke' => 'Full text available via Duke Libraries',
-            'nccu' => 'Full text available via NCCU Libraries',
-            'ncsu' => 'Full text available via NCSU Libraries'
-}
-
-def add_institutions(cxt, institution_array)
-  institution_array.each { |i| cxt.output_hash['institution'] << i } 
-end
-
-def add_record_data_source(cxt, value)
-  cxt.output_hash['record_data_source'] << value
-end
-
-def add_virtual_collection(cxt, value)
-  if cxt.output_hash['virtual_collection']
-    cxt.output_hash['virtual_collection'] << value
-  else
-    cxt.output_hash['virtual_collection'] = [value]
-  end
-end
-
-# This doesn't work because url isn't ACTUALLY a hash. Save to fix later.
-# def add_proxied_urls(cxt, institutions)
-#   urls = cxt.output_hash['url']
-#   urls.each do |url|
-#     plain_url = url[.sub(proxies['unc'], '')
-#     institutions.each do |inst|
-#       new_url = "{\"href\":\""
-#       new_url << proxies[inst]
-#       new_url << plain_url
-#       new_url << "\":\"type\":\"fulltext\",\"text\":\""
-#       new_url << urlnotes[inst]
-#       new_url << "\"}"
-#       cxt.output_hash['url'] << new_url
-#     end
-#   end
-# end
-
-### This part is working correctly, except for tweaking the URLs to
-###   have institution-specific notes and proxies
-### Wait until that is fixed to set other institutions
 each_record do |rec, cxt|
-  shared_set = ''
-  Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    value = field.to_s.downcase
-    case value
-    #when /dwsgpo/
-    #  shared_set = 'dwsgpo'
-    when /troup/
-      shared_set = 'oupp'
-    end
-  end
-
-  case shared_set
-  #when 'dwsgpo'
-  #  set_all_institutions(cxt)
+  case cxt.clipboard[:shared_record_set]
+  when 'dws'
+    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'DWS')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Documents without shelves.')
   when 'oupp'
     add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'OUPP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
-  # when 'asp'
-  #   cxt.output_hash['institution'] << 'duke'
-  #   add_proxied_urls(cxt, ['duke'])
+    # when 'asp'
+    #   cxt.output_hash['institution'] << 'duke'
+    #   add_proxied_urls(cxt, ['duke'])
   end
 end
 

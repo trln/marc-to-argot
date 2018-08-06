@@ -32,6 +32,11 @@ end
 to_field 'institution', literal('unc')
 
 ################################################
+# Resource type
+######
+to_field 'resource_type', resource_type
+
+################################################
 # Virtual collection
 ######
 to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collection], :separator => nil)

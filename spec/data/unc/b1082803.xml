@@ -62,9 +62,6 @@
       <datafield ind1=' ' ind2=' ' tag='907'>
         <subfield code='a'>b1082803</subfield>
       </datafield>
-      <datafield ind1=' ' ind2=' ' tag='919'>
-        <subfield code='a'>DWSGPO</subfield>
-      </datafield>
       <datafield ind1='9' ind2='1' tag='999'>
         <subfield code='i'>i1147335</subfield>
         <subfield code='l'>ddda</subfield>

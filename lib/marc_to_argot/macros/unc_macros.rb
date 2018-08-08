@@ -2,6 +2,7 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for UNC records
     module UNC
+      require 'marc_to_argot/macros/unc/holdings'
       require 'marc_to_argot/macros/unc/resource_type'
       require 'marc_to_argot/macros/unc/shared_records'
       require 'marc_to_argot/macros/unc/urls'
@@ -9,6 +10,7 @@ module MarcToArgot
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
+      include Holdings
       include ResourceType
       include SharedRecords
       include Urls

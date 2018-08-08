@@ -95,6 +95,7 @@ if field['2'] == '852' && field['3'] == 'c'
           end
 
 
+
         end
 
         class HoldingsField < MARC::DataField

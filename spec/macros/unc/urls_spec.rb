@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe MarcToArgot::Macros::UNC do
+describe MarcToArgot::Macros::UNC::Urls do
   include Util
   
   let(:indexer) { MarcToArgot::Indexers::UNC.new }

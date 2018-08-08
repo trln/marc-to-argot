@@ -127,32 +127,20 @@ module MarcToArgot
           end
 
           # Dataset -- Statistical
-          # LDR/06 = a AND 008/24-27(any) = s
-          # OR
-          # 006/00 = a AND 006/07-70(any) = s
-          # OR
           # LDR/06 = m AND 008/26 = a
           # OR
           # 006/00 = m AND 006/09 = a
           def dataset_statistical?
-            marc_leader_06_a_match = record.leader.byteslice(6) == 'a'
-            marc_008_24_27_match = record.fields('008').find do |field|
-              (field.value.byteslice(24..27) || '').split('').include?('s')
-            end
-
             marc_leader_06_m_match = record.leader.byteslice(6) == 'm'
             marc_008_26_match = record.fields('008').find do |field|
               field.value.byteslice(26) == 'a'
             end
 
             marc_006_match = record.fields('006').find do |field|
-              (field.value.byteslice(0) == 'a' &&
-                (field.value.byteslice(7..70) || '').split('').include?('s')) ||
-                  (field.value.byteslice(0) == 'm' && field.value.byteslice(9) == 'a')
+              (field.value.byteslice(0) == 'm' && field.value.byteslice(9) == 'a')
             end
 
-            return true if (marc_leader_06_a_match && marc_008_24_27_match) ||
-                           (marc_leader_06_m_match && marc_008_26_match) ||
+            return true if (marc_leader_06_m_match && marc_008_26_match) ||
                            marc_006_match
           end
 

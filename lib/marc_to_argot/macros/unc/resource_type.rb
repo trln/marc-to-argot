@@ -62,6 +62,7 @@ module MarcToArgot
           def book_008?
             return true if ( manuscript_lang_rec_type? ||
                              ( lang_rec_type? && %w[a c d m].include?(record.leader.byteslice(7)))
+                           )
           end
           
           def unc_manuscript?

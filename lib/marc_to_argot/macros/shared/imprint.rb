@@ -76,7 +76,7 @@ module MarcToArgot
         # @param field [MARC::DataField] the field to use to determine imprint label
         def imprint_label(field)
           label_subfields = field.subfields.select { |sf| sf.value if sf.code == '3' }
-          label_subfields.compact.map { |sf| sf.value.strip }.join(' ').tr(',;:.', '').strip
+          label_subfields.compact.map { |sf| sf.value.strip }.join(' ').gsub(/[,;:.]*$/, '').strip
         end
 
         # sets the imprint value from specific subfields

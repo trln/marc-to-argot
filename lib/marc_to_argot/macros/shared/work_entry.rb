@@ -37,6 +37,7 @@ module MarcToArgot
 
               acc << work_entry unless work_entry.empty?
             end
+            acc.uniq!
           end
         end
 

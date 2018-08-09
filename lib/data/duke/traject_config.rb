@@ -2,7 +2,7 @@
 # Primary ID
 ######
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
-  acc.collect! {|s| "#{s}"}
+  acc.collect! { |s| s.match(/DUKE.*/) ? s.to_s : "DUKE#{s}" }
 end
 
 ################################################
@@ -22,8 +22,8 @@ end
 # Rollup ID
 ######
 
-to_field "rollup_id", extract_marc("035a") do |rec, acc|
-  acc.select! { |x| /^(\(OCoLC\))?\d+$/.match(x.to_s) }
+to_field "rollup_id", extract_marc("035|  |a") do |rec, acc|
+  acc.select! { |x| /^(\(OCoLC\))?\d{8,9}$/.match(x.to_s) }
   acc.map! { |x| x.sub('(OCoLC)', '') }
   acc.map! { |x| "OCLC#{x}" }
   acc.flatten!
@@ -222,9 +222,9 @@ to_field 'items' do |rec, acc, ctx|
       sf_code = subfield.code
       case sf_code
       when 'b'
-        item['loc_b'] = subfield.value
+        item['loc_b'] = subfield.value.strip
       when 'c'
-        item['loc_n'] = subfield.value
+        item['loc_n'] = subfield.value.strip
       when 'd'
         item['cn_scheme'] = subfield.value
       when 'h'
@@ -282,9 +282,9 @@ to_field 'holdings' do |rec, acc, context|
     field.subfields.each do |sf|
       case sf.code
       when 'b'
-        holding['loc_b'] = sf.value
+        holding['loc_b'] = sf.value.strip
       when 'c'
-        holding['loc_n'] = sf.value
+        holding['loc_n'] = sf.value.strip
       when 'h'
         holding['class_number'] = sf.value
       when 'i'

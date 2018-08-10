@@ -25,8 +25,11 @@ module MarcToArgot
 
         def holdings(rec, cxt)
           unless cxt.clipboard[:shared_record_set] == 'dws'
-            holdings = create_holdings_for_processing(rec)
+            # create HoldingsRecord objects
+            holdings = create_temp_holdings_for_processing(rec)
+            # process them to extract the necessary data
             holdings.each { |hrec| hrec.process_holdings_data }
+            # write them out to argot
             argotholdings = []
             holdings.each { |hrec| argotholdings << hrec.to_argot }
             cxt.output_hash['holdings'] = argotholdings
@@ -36,11 +39,12 @@ module MarcToArgot
         # creates HoldingsRecords with relevant fields for display and processing
         # after doing this, we can process the fields without having to check III
         #  field type constantly
-        def create_holdings_for_processing(rec)
+        def create_temp_holdings_for_processing(rec)
+          # init_holdings is a hash of the parameters needed to create a
+          #  HoldingsRecord object.
+          # Initially we set the first 4, which come from 999 92s
           init_holdings = {}
           occ = 0
-
-          # Create initial HoldingsRecord object for each 999 92
           Traject::MarcExtractor.cached("999|92|").each_matching_line(rec) do |field, spec, extractor|
             id = field['a']
             loc = field['b']
@@ -50,8 +54,10 @@ module MarcToArgot
             init_holdings[id] = [id, loc, ct, occ]
           end
 
-          # Add the associated variable fields from 999 93s to the
-          #  associated HoldingsRecord object
+          # field_hash
+          #  key = holdings record id
+          #  value = array of MARC::DataFields created from 999 93s determined to
+          #    be relevant to subsequent display/processing
           field_hash = {}
           
           Traject::MarcExtractor.cached("999|93|").each_matching_line(rec) do |field, spec, extractor|
@@ -70,19 +76,26 @@ module MarcToArgot
             end
           end
 
+          # field_hash values are appended to the relevant parameter array of init_holdings
           field_hash.each { |k, v| init_holdings[k] << v }
-          
+
+          # create new HoldingsRecord object 
           holdings_array = []
           init_holdings.each_value do |hdata|
+            # if there are no relevant variable fields, we don't need to output holdings data
             if hdata.size == 5
               holdings_array << HoldingsRecord.new(hdata[0], hdata[1], hdata[2],
                                                    hdata[3], hdata[4]) 
             end
           end
-          
+
+          # make sure they are in ILS order
           holdings_array.sort_by { |h| h.occ }
         end
 
+
+        # helper to turn nasty 999 93 fields from the bib into proper MARC::DataFields
+        #  following the MARC holdings format -- just easier to work with
         def new_data_field(field)
           datafield = MARC::DataField.new(field['2'],
                                           field.indicator1,
@@ -107,12 +120,16 @@ module MarcToArgot
           attr_accessor :summary_holding_supplement
           attr_accessor :summary_holding_index
 
+          # create the HoldingsRecord object with initial read-only attributes
+          #  and the other attributes set up to push to
+          # @fields.freeze out of paranoia that extract_notes or extract_textual_summary_holdings
+          #  was messing with the contents. Not entirely sure it does anything.
           def initialize(id, loc, ct, occ, fields)
             @id = id
             @loc = loc
             @card_ct = ct
-            @fields = fields.freeze
             @occ = occ
+            @fields = fields.freeze
             @call_numbers = []
             @notes = []
             @summary_holding = []
@@ -120,10 +137,17 @@ module MarcToArgot
             @summary_holding_index = []
           end
 
+          # do the heavy lifting
+          #################################
+          # THIS IS WHAT I CAN'T FIGURE OUT
+          #################################          
+          # Tests pass as long as extract_textual_summary_holdings is FIRST
+          # Moving extract_call_numbers or extract_notes above extract_textual_summary_holdings
+          #  breaks the 4 tests related to summary holdings
           def process_holdings_data
             extract_textual_summary_holdings
-            extract_notes
             extract_call_numbers
+            extract_notes
           end
 
           def get_852s
@@ -139,7 +163,6 @@ module MarcToArgot
               cn_sf_vals = f.select { |sf| %w[h i j k].include?(sf.code) }.map { |sf| sf.value }
               @call_numbers << cn_sf_vals.join(' ') unless cn_sf_vals.empty?
             end
-            return self
           end
 
           def extract_notes
@@ -148,14 +171,15 @@ module MarcToArgot
               n_sf_vals = f.select { |sf| sf.code == 'z'}.map { |sf| sf.value }
               n_sf_vals.each { |n| @notes << n } unless n_sf_vals.empty?
             end
-            return self
           end
 
           def extract_textual_summary_holdings
             sh_fields = get_textual_holdings_fields
             sh_fields.each do |f|
-              # gets repeated $a from single field, joins with ', '
+              # A single field may have multiple $a values which should be joined with ', '
               summary = f.select { |sf| sf.code == 'a'}.map { |sf| sf.value }.join(', ')
+              # Push the string from this field to the appropriate attribute array, where
+              #   we are collecting holdings summaries from different fields
               unless summary.empty?
                 case f.tag
                 when '866'
@@ -168,12 +192,20 @@ module MarcToArgot
               end
             end
 
+            # I don't like this next part being here but it's working-ish right now
+            # Summary holdings statements of the same type from different variable fields
+            #   get joined with '; '
             @summary_holding = @summary_holding.join('; ').strip
             @summary_holding_supplement = @summary_holding_supplement.join('; ').strip
             @summary_holding_index = @summary_holding_index.join('; ').strip
-            return self
           end
 
+          # if there are no textual summary holdings, we need to build them.
+          # the horror... the horror...
+          def build_summary_holdings
+          end
+
+          # translate the HoldingsRecord object into Argot format
           def to_argot
             argot_holding = {}
             argot_holding['holdings_id'] = @id if @card_ct.to_i > 0
@@ -182,6 +214,8 @@ module MarcToArgot
             argot_holding['call_no'] = @call_numbers.join('; ') unless @call_numbers.empty?
             argot_holding['notes'] = @notes.uniq unless @notes.empty?
 
+            # gather the 3 types of summary_holdings, add the appropriate labels, and
+            #  join them all with '; '
             summary = []
             summary << @summary_holding unless @summary_holding.empty?
             if @summary_holding_supplement.length > 0
@@ -190,7 +224,6 @@ module MarcToArgot
             if @summary_holding_index.length > 0
               summary << 'Index holdings: ' + @summary_holding_index
             end
-            
             argot_holding['summary'] = summary.join('; ') unless summary.empty?
             
             argot_holding.to_json

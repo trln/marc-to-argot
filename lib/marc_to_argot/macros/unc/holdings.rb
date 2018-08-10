@@ -18,20 +18,20 @@ module MarcToArgot
 
         # Initial logic for processing these fields is specified in holdings_data_logic.org.
         # The main idea is:
-        # - Any 852 field is extracted.
+        # - 852 field with III tag = c is extracted.
         # - 86[345678] fields with III tag = h are extracted.
         # -- According to Kurt Blythe, if these fields are coded otherwise (usually g for
         #    DRA Holdings), they should NOT display to the public.
 
         def holdings(rec, cxt)
           unless cxt.clipboard[:shared_record_set] == 'dws'
-            # create HoldingsRecord objects
-            holdings = create_temp_holdings_for_processing(rec)
+            # create HoldingsRecord objects to process
+            tmp_holdings = create_temp_holdings_for_processing(rec)
             # process them to extract the necessary data
-            holdings.each { |hrec| hrec.process_holdings_data }
+            tmp_holdings.each { |hrec| hrec.process_holdings_data }
             # write them out to argot
             argotholdings = []
-            holdings.each { |hrec| argotholdings << hrec.to_argot }
+            tmp_holdings.each { |hrec| argotholdings << hrec.to_argot }
             cxt.output_hash['holdings'] = argotholdings
           end
         end

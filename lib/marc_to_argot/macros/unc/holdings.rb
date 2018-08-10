@@ -135,7 +135,7 @@ module MarcToArgot
           end
 
           def extract_call_numbers
-            self.get_852s.each do |f|
+            get_852s.each do |f|
               cn_sf_vals = f.select { |sf| %w[h i j k].include?(sf.code) }.map { |sf| sf.value }
               @call_numbers << cn_sf_vals.join(' ') unless cn_sf_vals.empty?
             end
@@ -143,7 +143,7 @@ module MarcToArgot
           end
 
           def extract_notes
-            note_fields =  self.get_852s + self.get_textual_holdings_fields
+            note_fields = get_852s + get_textual_holdings_fields
             note_fields.each do |f|
               n_sf_vals = f.select { |sf| sf.code == 'z'}.map { |sf| sf.value }
               n_sf_vals.each { |n| @notes << n } unless n_sf_vals.empty?
@@ -152,7 +152,7 @@ module MarcToArgot
           end
 
           def extract_textual_summary_holdings
-            sh_fields = self.get_textual_holdings_fields
+            sh_fields = get_textual_holdings_fields
             sh_fields.each do |f|
               # gets repeated $a from single field, joins with ', '
               summary = f.select { |sf| sf.code == 'a'}.map { |sf| sf.value }.join(', ')

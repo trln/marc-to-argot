@@ -145,13 +145,13 @@ module MarcToArgot
           # Moving extract_call_numbers or extract_notes above extract_textual_summary_holdings
           #  breaks the 4 tests related to summary holdings
           def process_holdings_data
-            extract_textual_summary_holdings
             extract_call_numbers
+            extract_textual_summary_holdings
             extract_notes
           end
 
           def get_852s
-            @fields.select { |f| f.tag = '852' }
+            @fields.select { |f| f.tag == '852' }
           end
 
           def get_textual_holdings_fields

@@ -6,6 +6,7 @@ describe MarcToArgot do
   let(:subject1) { run_traject_json('unc', 'subject1', 'mrc') }
   let(:subject2) { run_traject_json('unc', 'subject2', 'mrc') }
   let(:subject3) { run_traject_json('unc', 'subject3', 'mrc') }
+  let(:subject4) { run_traject_json('unc', 'subject4', 'mrc') }
   let(:primary_source1) { run_traject_json('unc', 'primary_source1', 'mrc') }
   let(:primary_source2) { run_traject_json('unc', 'primary_source2', 'mrc') }
   let(:genre1) { run_traject_json('unc', 'genre1', 'mrc') }
@@ -50,6 +51,13 @@ describe MarcToArgot do
     result = subject3['subject_headings']
     expect(result).to include(
                         {"value" => "Vatican Council (2nd : 1962-1965 : Basilica di San Pietro in Vaticano) -- Drama"}
+                      )
+  end
+
+    it '(MTA) subdivides geographic name headings correctly' do
+    result = subject4['subject_headings']
+    expect(result).to include(
+                        {"value" => "Cary (N.C.) -- Description and travel"}
                       )
   end
 

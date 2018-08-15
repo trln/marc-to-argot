@@ -363,7 +363,7 @@ module Traject::Macros
         when /600|610|611|630|650/
           subdivide_at_subfields = %w[v x y z]
         when '651'
-          subdivide_at_subfields = %w[g v y z]
+          subdivide_at_subfields = %w[g x v y z]
         when '655'
           subdivide_at_subfields = %w[v x y z]
         when '653'

@@ -30,6 +30,10 @@ module MarcToArgot
               formats = []
               formats << 'Archival and manuscript material'
             end
+            if unc_text_corpus?
+              formats.delete('Book')
+              formats << 'Text corpus'
+            end
             if unc_thesis_dissertation?
               formats.delete('Archival and manuscript material')
               formats.delete('Book')
@@ -47,6 +51,10 @@ module MarcToArgot
             record.leader.byteslice(6) == 'a'
           end
 
+          def computer_rec_type?
+            record.leader.byteslice(6) == 'm'
+          end
+          
           def unc_archival?
             archival_control? && archival_bib_level?
           end
@@ -67,6 +75,31 @@ module MarcToArgot
           
           def unc_manuscript?
             return true if manuscript_lang_rec_type? unless has_502?
+          end
+
+          def the_336_contains(string_regexp)
+            regexp = Regexp.new(string_regexp)
+            match336s = record.fields('336').map{ |f| f.to_s.downcase }.select{ |f| regexp.match(f) }
+            return true unless match336s.empty?
+          end
+
+          def byte_of_008_equals(position, value)
+            return true if record['008'].value.byteslice(position) == value
+          end
+
+          def has_lang_006?
+            match006s = record.fields('006').select{ |f| f.value.byteslice(0) == 'a' }
+            return true unless match006s.empty?
+          end
+
+          # Text corpus
+          # LDR/06 = m AND 008/26 = d AND 006/00 = a AND 336 contains dataset or cod
+          def unc_text_corpus?
+            return true if (computer_rec_type? &&
+                            byte_of_008_equals(26, 'd') &&
+                            has_lang_006? &&
+                            the_336_contains('dataset|cod')
+                           )
           end
           
           # Thesis/Dissertation

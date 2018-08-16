@@ -7,6 +7,7 @@ describe MarcToArgot::Macros::UNC::ResourceType do
   let(:archives3) { run_traject_json('unc', 'archives3', 'mrc') }
   let(:archives4) { run_traject_json('unc', 'archives4', 'mrc') }
   let(:archives5) { run_traject_json('unc', 'archives5', 'mrc') }
+  let(:corpus1) { run_traject_json('unc', 'corpus1', 'mrc') }
   let(:thesis1) { run_traject_json('unc', 'thesis1', 'mrc') }
   let(:thesis2) { run_traject_json('unc', 'thesis2', 'mrc') }
   let(:thesis3) { run_traject_json('unc', 'thesis3', 'mrc') }
@@ -21,7 +22,16 @@ describe MarcToArgot::Macros::UNC::ResourceType do
         a = stats1['resource_type']
         expect(a).to include('Dataset -- Statistical')
       end
-
+    end
+    context 'AND 008/26 (type of computer file) is document (d)' do
+      context 'AND 006/00 (additional format) is language material (a)' do
+        context 'AND 336 contains dataset OR cod' do
+          it '(UNC) resource_type will include Dataset -- Statistical' do
+            a = corpus1['resource_type']
+            expect(a).to include('Text corpus')
+          end
+        end
+      end
     end
   end
   

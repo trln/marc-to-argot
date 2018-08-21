@@ -1,0 +1,237 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas  2200409 a 4500</leader>
+  <controlfield tag='001'>813550</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20050824075343.0</controlfield>
+  <controlfield tag='008'>740226d19661976enkmrzp       0   a0eng  </controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>66009965</subfield>
+    <subfield code='z'>sn 87007151</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>1461388</subfield>
+  </datafield>
+  <datafield tag='022' ind1=' ' ind2=' '>
+    <subfield code='a'>0001-9984</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)813550</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>DLC</subfield>
+    <subfield code='c'>OUN</subfield>
+    <subfield code='d'>SUL</subfield>
+    <subfield code='d'>COO</subfield>
+    <subfield code='d'>MUL</subfield>
+    <subfield code='d'>COO</subfield>
+    <subfield code='d'>PIT</subfield>
+    <subfield code='d'>MUL</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>AIP</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+  </datafield>
+  <datafield tag='043' ind1=' ' ind2=' '>
+    <subfield code='a'>f------</subfield>
+  </datafield>
+  <datafield tag='049' ind1=' ' ind2=' '>
+    <subfield code='a'>NOCC</subfield>
+  </datafield>
+  <datafield tag='050' ind1='0' ind2='0'>
+    <subfield code='a'>HC511</subfield>
+    <subfield code='b'>.A12</subfield>
+  </datafield>
+  <datafield tag='210' ind1='0' ind2=' '>
+    <subfield code='a'>Afr. dev.</subfield>
+  </datafield>
+  <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>African development</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>African development</subfield>
+    <subfield code='h'>[serial].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>[London :</subfield>
+    <subfield code='b'>African Buyer and Trader</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v. :</subfield>
+    <subfield code='b'>ill. ;</subfield>
+    <subfield code='c'>29 cm.</subfield>
+  </datafield>
+  <datafield tag='310' ind1=' ' ind2=' '>
+    <subfield code='a'>Monthly</subfield>
+  </datafield>
+  <datafield tag='362' ind1='1' ind2=' '>
+    <subfield code='a'>Began with v. 1, 1966; ceased with v. 10, 1976.</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Description based on: Vol. 8, no. 12 (Dec. 1974); title from cover.</subfield>
+  </datafield>
+  <datafield tag='530' ind1=' ' ind2=' '>
+    <subfield code='a'>Available on microfilm.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Industries</subfield>
+    <subfield code='z'>Africa</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Investments, British</subfield>
+    <subfield code='z'>Africa</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='0'>
+    <subfield code='a'>Africa</subfield>
+    <subfield code='x'>Economic conditions</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='776' ind1='1' ind2=' '>
+    <subfield code='t'>African development</subfield>
+    <subfield code='w'>(OCoLC)5872846</subfield>
+  </datafield>
+  <datafield tag='785' ind1='0' ind2='0'>
+    <subfield code='t'>New African development</subfield>
+    <subfield code='x'>0140-833X</subfield>
+    <subfield code='w'>(DLC) 77646422</subfield>
+    <subfield code='w'>(OCoLC)2726708</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1188667</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8488601</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00039626618</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHC511|b.A12</subfield>
+    <subfield code='v'>v.5(1971)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8488602</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00039626627</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHC511|b.A12</subfield>
+    <subfield code='v'>v.6(1972)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1330953</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00039626636</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHC511 .A12</subfield>
+    <subfield code='v'>v.7(1973)</subfield>
+    <subfield code='n'>incomplete</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1330954</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00039626645</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHC511 .A12</subfield>
+    <subfield code='v'>v.8(1974)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1330955</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00039626654</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHC511 .A12</subfield>
+    <subfield code='v'>v.9(1975)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1330956</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00034226052</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHC511 .A12</subfield>
+    <subfield code='v'>v.10(1976)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1207843</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1207843</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555521</subfield>
+    <subfield code='h'>HC511</subfield>
+    <subfield code='i'>.A12</subfield>
+    <subfield code='x'>Later titles exist.</subfield>
+    <subfield code='z'>Microforms Coll. also has vols. on microfilm</subfield>
+    <subfield code='x'>Previously converted record</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1207843</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='i'>(year)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1207843</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>5-6</subfield>
+    <subfield code='i'>1971-1972</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1207843</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>7</subfield>
+    <subfield code='i'>1973</subfield>
+    <subfield code='z'>incomplete</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1207843</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>8-10</subfield>
+    <subfield code='i'>1974-1976</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2005-07-13 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-27 13:23:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:09:21-05</subfield>
+  </datafield>
+</record>
+</collection>

@@ -52,7 +52,7 @@ describe MarcToArgot do
     )
     end
 
-    context 'Textual holdings field(s) present' do
+    context 'When textual holdings field(s) with III field type = h are present' do
       it '(UNC) sets notes from 866, 867, 868' do
         expect(b1246383argot['holdings'][3]).to(
           include("\"notes\":[\"N1\",\"N2\",\"N4\",\"N3\"]")
@@ -85,24 +85,28 @@ describe MarcToArgot do
       end
     end
 
-    context 'Textual holdings field(s) NOT present' do
+    context 'When textual holdings field(s) with III field type = h are NOT present AND' do
+      context 'There is at least one 853 with III field type = y AND' do
+        context 'There is at least one 863 with III field type = h' do
 
-      # 2 #IDEAL: v.1 (1971) - v.4 (1974) -- ACCEPT: v. 1-4 (1971-1974)
-      # 3 #IDEAL: Bd.1:Heft 1 (Jan. 1928) - Bd.32:Heft 3 (Juni 1933); Jahrg.19:Heft 1 (1961) - Jahrg.38:Heft 2 (1980)
-      # 4 #IDEAL: v.5 (1971) - v.6 (1972), v.7 (1973) incomplete, v.8 (1974) - v.10 (1976)
-      # 5 #IDEAL: v.1 (1921)- TO DATE (Davis Library Federal Documents) --- v.60:no.1 (Jan. 1980) - v.72:no.6 (June 1992) (LSC)
-      # 6 #IDEAL: v.9 (1943) - v.15 (1949), v.22 (1956) - v.23 (1957), v.27 (1961), v.29 (1963), v.32 (1966) - v.33 (1967), v.36 (1970) - v.42 (1976)
+          # y 853  30|81|av.|i(year)|tc.
+          # h 863    |81.1|a1-3|i1939
+          # should produce
+          #  v.1 (1939) - v.3 (1939)
+          
+          it '(UNC) provides summary holdings statement' do
+            expect(holdings1['holdings'][0]).to(
+              include("\"summary\":\"v.1 (1939) - v.3 (1939)")
+            )
+          end
 
-      # y 853  30|81|av.|i(year)|tc.
-      # h 863  |81.1|a1-3|i1939
-      # should produce
-      #  v.1 (1939) - v.3 (1939)
-      
-      it '(UNC) provides acc' do
-        expect(holdings1['holdings'][0]).to(
-          include("\"summary\":\"v.1 (1939) - v.3 (1939)")
-        )
+          # 2 v.1 (1971) - v.4 (1974) -- ACCEPT: v. 1-4 (1971-1974)
+          # 3 Bd.1:Heft 1 (Jan. 1928) - Bd.32:Heft 3 (Juni 1933); Jahrg.19:Heft 1 (1961) - Jahrg.38:Heft 2 (1980)
+          # 4 v.5 (1971) - v.6 (1972), v.7 (1973) incomplete, v.8 (1974) - v.10 (1976)
+          # 5 v.1 (1921)- TO DATE (Davis Library Federal Documents) --- v.60:no.1 (Jan. 1980) - v.72:no.6 (June 1992) (LSC)
+          # 6 v.9 (1943) - v.15 (1949), v.22 (1956) - v.23 (1957), v.27 (1961), v.29 (1963), v.32 (1966) - v.33 (1967), v.36 (1970) - v.42 (1976)
+
+        end
       end
-
     end
 end

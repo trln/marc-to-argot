@@ -65,7 +65,8 @@ module MarcToArgot
 
             df = new_data_field(field) if 
               ( field['2'] == '852' && field['3'] == 'c' ) ||
-              field['3'] == 'h'
+              ( field['2'] == '853' && field['3'] == 'y' ) ||
+              ( field['2'] =~ /86./ && field['3'] == 'h' )
 
             if df
               if field_hash.has_key?(recid)
@@ -132,22 +133,19 @@ module MarcToArgot
             @fields = fields.freeze
             @call_numbers = []
             @notes = []
+            @patterns = {}
+            @enums_and_chrons = {}
             @summary_holding = []
             @summary_holding_supplement = []
             @summary_holding_index = []
           end
 
           # do the heavy lifting
-          #################################
-          # THIS IS WHAT I CAN'T FIGURE OUT
-          #################################          
-          # Tests pass as long as extract_textual_summary_holdings is FIRST
-          # Moving extract_call_numbers or extract_notes above extract_textual_summary_holdings
-          #  breaks the 4 tests related to summary holdings
           def process_holdings_data
             extract_call_numbers
-            extract_textual_summary_holdings
             extract_notes
+            extract_textual_summary_holdings
+            build_summary_holdings if @summary_holding.empty?
           end
 
           def get_852s
@@ -181,12 +179,12 @@ module MarcToArgot
               # Push the string from this field to the appropriate attribute array, where
               #   we are collecting holdings summaries from different fields
               unless summary.empty?
-                case f.tag
-                when '866'
+                case get_field_type(f)
+                when :basic
                   @summary_holding << summary
-                when '867'
+                when :supp
                   @summary_holding_supplement << summary
-                when '868'
+                when :index
                   @summary_holding_index << summary
                 end
               end
@@ -203,6 +201,215 @@ module MarcToArgot
           # if there are no textual summary holdings, we need to build them.
           # the horror... the horror...
           def build_summary_holdings
+            get_patterns
+#            puts @patterns
+            get_enums_and_chrons
+#            puts @enums_and_chrons
+            apply_patterns unless @patterns.empty? || @enums_and_chrons.empty?
+          end
+
+          def apply_patterns
+            p = @patterns
+            ec = @enums_and_chrons
+
+            p.each do |type, patterns|
+              result = []
+              patterns.each do |pid, pattern|
+                result << process_pattern(type, pid, pattern)
+              end
+              
+              case type
+              when :basic
+                @summary_holding = result.join('; ')
+              when :supp
+                @summary_holding_supplement = result.join('; ')
+              when :index
+                @summary_holding_index = result.join('; ')
+              end
+            end
+          end
+
+          def process_pattern(type, pid, pattern)
+            summary = []
+            psfs = pattern.keys
+            
+            get_ecs_data_matching_pattern(type, pid).each do |ec|
+              num_open = []
+              num_close = []
+              alt_num_open = []
+              alt_num_close = []
+              chron_open = []
+              chron_close = []
+              alt_chron_open = []
+              alt_chron_close = []
+              pub_note = []
+              
+              sfs = ec.keys.sort
+              sfs.each do |sf|
+                if psfs.include?(sf)
+                  ov = ec[sf][:open]
+                  cv = ec[sf][:close]
+                  
+                  case sf
+                  when /[abcdef]/
+                    num_open << process_pattern_subfield(pattern, sf, ov)
+                    num_close << process_pattern_subfield(pattern, sf, cv)
+                  when /[gh]/
+                    alt_num_open << process_pattern_subfield(pattern, sf, ov)
+                    alt_num_close << process_pattern_subfield(pattern, sf, cv)
+                  when /[ijkl]/
+                    chron_open << process_pattern_subfield(pattern, sf, ov)
+                    chron_close << process_pattern_subfield(pattern, sf, cv)
+                  when 'm'
+                    alt_chron_open << process_pattern_subfield(pattern, sf, ov)
+                    alt_chron_close << process_pattern_subfield(pattern, sf, cv)
+                  end
+                end
+              end
+
+              num_open = num_open.join(':')
+              num_close = num_close.join(':')
+              chron_open = chron_open.join(' ')
+              chron_close = chron_close.join(' ')
+
+              result = "#{num_open} (#{chron_open}) - #{num_close} (#{chron_close})"
+              summary << result
+              return summary
+            end
+          end
+
+          def process_pattern_subfield(pattern, sfcode, sfval)
+            label = pattern[sfcode][:value] if pattern[sfcode][:is_label]
+            "#{label}#{sfval}"
+          end
+          
+          # returns array of enum/chron field data, sorted by occurrence
+          def get_ecs_data_matching_pattern(type, pid)
+            result_hash = @enums_and_chrons[type][pid]
+            results = []
+            result_hash.keys.sort.each { |occnum| results << result_hash[occnum] }
+            return results
+          end
+          
+          # return hash of data from the enumeration and chronology fields
+          # { :basic => {
+          #     '1' => {            #this is the pattern id
+          #       '1' => {          #this is the enum/chron occurrence
+          #         'a' => {:open => '1', :close => '27'},
+          #         'b' => {:open => '1', :close => '4'},
+          #         'i' => {:open => '1900', :close => '1927'},
+          #         'j' => {:open => 'Jan', :close => 'Jun'}
+          #     }
+          #    }
+          #   },
+          #   :supp => {...},
+          #   :index => {...}
+          # }
+          def get_enums_and_chrons
+            
+
+            ecfs = @fields.select{ |f| f.tag =~ /86[345]/ }
+            unless ecfs.empty?
+              enums_and_chrons = {:basic => {},
+                                  :supp => {},
+                                  :index => {}
+                                 }
+              
+              ecfs.each do |ecf|
+                pid = get_pattern_id(ecf)
+                po = get_pattern_occurrence(ecf)
+                enum_chron = {}
+                type = get_field_type(ecf)
+                
+                ecf.subfields.each do |sf|
+                  if sf.code == '8'
+                    next
+                  else
+                    enum_chron[sf.code] = split_enum_chron_data(sf.value)
+                  end
+                end
+                enums_and_chrons[type][pid] = { po => enum_chron }
+              end
+              @enums_and_chrons = enums_and_chrons
+            end
+          end
+
+          def split_enum_chron_data(string)
+            arr = string.split(/ ?- ?/)
+            open = arr[0]
+            if arr[1]
+              close = arr[1]
+            else
+              close = arr[0]
+            end
+            {:open => open, :close => close}
+          end
+          
+          # return hash of caption and chronology patterns
+          # { :basic => {
+          #     '1' => {
+          #       'a' => {:value => 'v.', :is_label => true},
+          #       'b' => {:value => 'no.', :is_label => true},
+          #       'i' => {:value => 'year', :is_label => nil},
+          #       'j' => {:value => 'month', :is_label => nil}
+          #     }
+          #   },
+          #   :supp => {...},
+          #   :index => {...}
+          # }
+          def get_patterns
+            pfs = @fields.select{ |f| f.tag =~ /85[345]/ }
+            unless pfs.empty?
+            patterns = {:basic => {},
+                        :supp => {},
+                        :index => {}
+                       }
+            
+              
+            pfs.each do |pf|
+              pid = get_pattern_id(pf)
+              pattern = {}
+              type = get_field_type(pf)
+              
+              pf.subfields.each do |sf|
+                if sf.code == '8'
+                  next
+                else
+                  pattern[sf.code] = get_pattern_segment(sf.value)
+                end
+              end
+
+              patterns[type][pid] = pattern
+            end
+            @patterns = patterns
+            end
+          end
+
+          def get_pattern_segment(string)
+            is_label = true unless string =~ /\(.*\)/
+            cleaned = string.delete('()')
+            {:value => cleaned, :is_label => is_label}
+          end
+
+          def get_pattern_id(field)
+            sf8 = field.subfields.select{ |sf| sf.code == '8'}.first
+            sf8.value.split('.')[0]
+          end
+
+          def get_pattern_occurrence(field)
+            sf8 = field.subfields.select{ |sf| sf.code == '8'}.first
+            sf8.value.split('.')[1]
+          end
+
+          def get_field_type(field)
+            case field.tag
+            when /8[56]3|866/
+              :basic
+            when /8[56]4|867/
+              :supp
+            when /8[56]5|868/
+              :index
+            end
           end
 
           # translate the HoldingsRecord object into Argot format

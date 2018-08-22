@@ -212,13 +212,13 @@ module MarcToArgot
             p = @patterns
             ec = @enums_and_chrons
 
-            p.each do |type, patterns|
+            p.each do |holding_type, patterns|
               result = []
               patterns.each do |pid, pattern|
-                result << process_pattern(type, pid, pattern)
+                result << process_pattern(holding_type, pid, pattern)
               end
               
-              case type
+              case holding_type
               when :basic
                 @summary_holding = result.join('; ')
               when :supp
@@ -229,57 +229,83 @@ module MarcToArgot
             end
           end
 
-          def process_pattern(type, pid, pattern)
+          def process_pattern(holding_type, pid, pattern)
             summary = []
             psfs = pattern.keys
             
-            get_ecs_data_matching_pattern(type, pid).each do |ec|
-              num_open = []
-              num_close = []
-              alt_num_open = []
-              alt_num_close = []
-              chron_open = []
-              chron_close = []
-              alt_chron_open = []
-              alt_chron_close = []
+            get_ecs_data_matching_pattern(holding_type, pid).each do |ec|
+              numeration = { :open => [], :close => [] }
+              alt_numeration = { :open => [], :close => [] }
+              chron_pieces = { :open => { :year  => '',
+                                          :month => '',
+                                          :day => '',
+                                          :other => ''
+                                        },
+                               :close => { :year  => '',
+                                          :month => '',
+                                          :day => '',
+                                          :other => ''
+                                         }
+                             }
               pub_note = []
               
               sfs = ec.keys.sort
               sfs.each do |sf|
                 if psfs.include?(sf)
-                  ov = ec[sf][:open]
-                  cv = ec[sf][:close]
-                  
+                  ov = process_pattern_subfield(pattern, sf, ec[sf][:open])
+                  cv = process_pattern_subfield(pattern, sf, ec[sf][:close])
+
                   case sf
                   when /[abcdef]/
-                    num_open << process_pattern_subfield(pattern, sf, ov)
-                    num_close << process_pattern_subfield(pattern, sf, cv)
+                    numeration[:open] << ov
+                    numeration[:close] << cv
                   when /[gh]/
-                    alt_num_open << process_pattern_subfield(pattern, sf, ov)
-                    alt_num_close << process_pattern_subfield(pattern, sf, cv)
+                    alt_numeration[:open] << ov
+                    alt_numeration[:close] << cv
                   when /[ijkl]/
-                    chron_open << process_pattern_subfield(pattern, sf, ov)
-                    chron_close << process_pattern_subfield(pattern, sf, cv)
-                  when 'm'
-                    alt_chron_open << process_pattern_subfield(pattern, sf, ov)
-                    alt_chron_close << process_pattern_subfield(pattern, sf, cv)
+                    case get_pattern_segment_value(pattern, sf)
+                    when 'year'
+                      chron_type = :year
+                    when 'month'
+                      chron_type = :month
+                    when 'day'
+                      chron_type = :day
+                    else
+                      chron_type = :other
+                    end
+                    chron_pieces[:open][chron_type] << ov
+                    chron_pieces[:close][chron_type] << cv
                   end
                 end
               end
 
-              num_open = num_open.join(':')
-              num_close = num_close.join(':')
-              chron_open = chron_open.join(' ')
-              chron_close = chron_close.join(' ')
+              numeration = numeration.map{ |k, v| [k, v.join(':')] }.to_h
 
-              result = "#{num_open} (#{chron_open}) - #{num_close} (#{chron_close})"
+              chron_pieces.each do |range_type, pieces|
+                result = []
+                result << "#{pieces[:month]} " if pieces[:month].length > 0
+                result << pieces[:day] if pieces[:day]
+                result << pieces[:year] if pieces[:year]
+                result << pieces[:other] if pieces[:other]
+                chron_pieces[range_type][:compiled] = result.join('')
+              end
+                
+
+              result = ''
+              result << "#{numeration[:open]} (#{chron_pieces[:open][:compiled]})"
+              result << " - "
+              result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
               summary << result
               return summary
             end
           end
 
+          def get_pattern_segment_value(pattern, sfcode)
+            pattern[sfcode][:value]
+          end
+
           def process_pattern_subfield(pattern, sfcode, sfval)
-            label = pattern[sfcode][:value] if pattern[sfcode][:is_label]
+            label = "#{pattern[sfcode][:value]} " if pattern[sfcode][:is_label]
             "#{label}#{sfval}"
           end
           

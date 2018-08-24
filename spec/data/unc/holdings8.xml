@@ -1,0 +1,142 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas a2200325I  4500</leader>
+  <controlfield tag='001'>1565185</controlfield>
+  <controlfield tag='005'>19860825093525.3</controlfield>
+  <controlfield tag='008'>860405d195919uufr uu m       0    0fre d</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>67003772</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>917120</subfield>
+  </datafield>
+  <datafield tag='022' ind1=' ' ind2=' '>
+    <subfield code='a'>0589-8153</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>MUL</subfield>
+    <subfield code='c'>MUL</subfield>
+    <subfield code='d'>UCU</subfield>
+    <subfield code='d'>YUS</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>m.c.</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Corpus vitrearum Medii Aevi.</subfield>
+    <subfield code='p'>France</subfield>
+    <subfield code='h'>[serial].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>Paris,</subfield>
+    <subfield code='b'>Caisse nationale des monuments historiques, Centre national de la recherche scientifique,</subfield>
+    <subfield code='c'>1959-</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>ill.,plates (part col.)</subfield>
+    <subfield code='c'>32 cm.</subfield>
+  </datafield>
+  <datafield tag='362' ind1='0' ind2=' '>
+    <subfield code='a'>v.1-</subfield>
+  </datafield>
+  <datafield tag='550' ind1=' ' ind2=' '>
+    <subfield code='a'>&quot;Publié par le Comité international d&apos;histoire de l&apos;art sous le patronage de l&apos;Union académique internationale.&quot;</subfield>
+  </datafield>
+  <datafield tag='550' ind1=' ' ind2=' '>
+    <subfield code='a'>&quot;Publié par la Caisse nationale des monuments historiques avec le concours de l&apos;Unesco et de l&apos;Union centrale des arts décoratifs.&quot;</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Glass painting and staining</subfield>
+    <subfield code='z'>France.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Centre national de la recherche scientifique (France)</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Comité international d&apos;histoire de l&apos;art.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Caisse nationale des monuments historiques et des sites (France)</subfield>
+  </datafield>
+  <datafield tag='785' ind1='0' ind2='0'>
+    <subfield code='t'>Corpus vitrearum. France</subfield>
+    <subfield code='w'>(OCoLC)15173966</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1300565</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1586472</subfield>
+    <subfield code='l'>aada</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>HAHC-6082-00001</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aNK5308.C6|bF7</subfield>
+    <subfield code='v'>v.1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1586473</subfield>
+    <subfield code='l'>aada</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>HAHC-6082-00002</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aNK5308.C6|bF7</subfield>
+    <subfield code='v'>v.4:pt.2:t.1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1346919</subfield>
+    <subfield code='b'>aada</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346919</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>573321</subfield>
+    <subfield code='h'>NK5308.C6</subfield>
+    <subfield code='i'>F7</subfield>
+    <subfield code='x'>ANALYZED</subfield>
+    <subfield code='x'>Later titles exist.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346919</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>pt.</subfield>
+    <subfield code='c'>t.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346919</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346919</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>4</subfield>
+    <subfield code='b'>2</subfield>
+    <subfield code='c'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-27 18:42:57-04</subfield>
+    <subfield code='u'>2017-12-01 10:11:08-05</subfield>
+  </datafield>
+</record>
+</collection>

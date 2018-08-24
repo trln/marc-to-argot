@@ -1,0 +1,195 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000nas  2200409Ka 4500</leader>
+  <controlfield tag='001'>747823629</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20110825121055.0</controlfield>
+  <controlfield tag='007'>hd ||||||||||</controlfield>
+  <controlfield tag='008'>110825c18279999ve dr neal   f0   b0spa d</controlfield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)747823629</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>NOC</subfield>
+    <subfield code='c'>NOC</subfield>
+  </datafield>
+  <datafield tag='049' ind1=' ' ind2=' '>
+    <subfield code='a'>NOCC</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Gaceta oficial de los Estados Unidos de Venezuela</subfield>
+    <subfield code='h'>[microfilm serial].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>Caracas :</subfield>
+    <subfield code='b'>[s.l.]</subfield>
+  </datafield>
+  <datafield tag='362' ind1='1' ind2=' '>
+    <subfield code='a'>Began publication with the Sept. 15, 1827 issue.</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Description based on print record; title from caption title.</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Other variations in title.</subfield>
+  </datafield>
+  <datafield tag='520' ind1='8' ind2=' '>
+    <subfield code='a'>Contains a daily record of the laws, decrees, resolutions and executive orders of the government. Patent and trade-mark notices are also published.</subfield>
+  </datafield>
+  <datafield tag='533' ind1=' ' ind2=' '>
+    <subfield code='a'>Microfilm.</subfield>
+    <subfield code='b'>Chapel Hill, N.C. :</subfield>
+    <subfield code='c'>University Library, University of North Carolina at Chapel Hill,</subfield>
+    <subfield code='d'>1978.</subfield>
+    <subfield code='e'>1 microfilm reel ; 35 mm.</subfield>
+    <subfield code='n'>Master microform (MN 3-1301) held by: NcU.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Patents</subfield>
+    <subfield code='z'>Venezuela</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Trademarks</subfield>
+    <subfield code='z'>Venezuela</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='0'>
+    <subfield code='a'>Venezuela</subfield>
+    <subfield code='x'>Politics and government</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='776' ind1='1' ind2=' '>
+    <subfield code='c'>Original</subfield>
+    <subfield code='w'>(OCoLC)145343597</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b6820876</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9154570</subfield>
+    <subfield code='l'>dgdaa</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>69</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>099#9</subfield>
+    <subfield code='q'>|aSerial 1-53</subfield>
+    <subfield code='v'>Reel 1=Año 56:Mes 8:no.16.512-Año 56:Mes 9:no.16.604 (mayo 22-set.10, 1928)</subfield>
+    <subfield code='n'>incomplete</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9154579</subfield>
+    <subfield code='l'>dgdaa</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>69</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>099#9</subfield>
+    <subfield code='q'>|aSerial 1-53</subfield>
+    <subfield code='v'>Reel 2=Año 56:Mes 12:no.16.605-Año 57:Mes 1:no.16.644 (set. 11-oct.27, 1928)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9154569</subfield>
+    <subfield code='l'>dgaa</subfield>
+    <subfield code='s'>u</subfield>
+    <subfield code='t'>67</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00034666013</subfield>
+    <subfield code='p'>099#0</subfield>
+    <subfield code='q'>|aMN-1301</subfield>
+    <subfield code='v'>Reel 2=Año 56:Mes 8:no.16.512-Año 56:Mes 9:no.16.604 (Sept. 11-Oct 27, 1928)</subfield>
+    <subfield code='n'>See Preservation staff for assistance with this microfilm. Use of this reel may require production of a use copy.</subfield>
+    <subfield code='n'>Some issues missing.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9154578</subfield>
+    <subfield code='l'>dgaa</subfield>
+    <subfield code='s'>u</subfield>
+    <subfield code='t'>67</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00034666004</subfield>
+    <subfield code='p'>099#9</subfield>
+    <subfield code='q'>|aMN-1301</subfield>
+    <subfield code='v'>Reel 1=Año 56:Mes 12:no.16.605-Año 57:Mes 1:no.16.644 (May 22,-Sept.10, 1928)</subfield>
+    <subfield code='n'>Some issues missing</subfield>
+    <subfield code='n'>See Preservation staff for assistance with this microfilm. Use of this reel may require production of a use copy.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c4900225</subfield>
+    <subfield code='b'>dgdaa</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4900225</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='g'>Microfilm</subfield>
+    <subfield code='h'>Serial</subfield>
+    <subfield code='i'>1-53</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4900225</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>año</subfield>
+    <subfield code='b'>Mes</subfield>
+    <subfield code='c'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+    <subfield code='k'>(day)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4900225</subfield>
+    <subfield code='2'>866</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>año 56:Mes 8:no.16.512(mayo 22, 1928)-año 57:Mes 1:no.16.644(oct.27, 1928) Some issues missing.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c4900227</subfield>
+    <subfield code='b'>dgdda</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4900227</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='h'>MN-1301</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4900227</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>año</subfield>
+    <subfield code='b'>Mes</subfield>
+    <subfield code='c'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+    <subfield code='k'>(day)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4900227</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>56-57</subfield>
+    <subfield code='b'>8-1</subfield>
+    <subfield code='c'>16.512-16.644</subfield>
+    <subfield code='i'>1928</subfield>
+    <subfield code='j'>mayo-oct.</subfield>
+    <subfield code='k'>22-27</subfield>
+    <subfield code='z'>Some issues missing</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2011-08-25 00:00:00-04</subfield>
+    <subfield code='c'>2011-08-25 12:10:00-04</subfield>
+    <subfield code='u'>2017-12-01 11:18:25-05</subfield>
+  </datafield>
+</record>
+</collection>

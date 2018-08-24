@@ -153,11 +153,8 @@ describe MarcToArgot do
             end
           end
         end
-# --- v.60:no.1 (Jan. 1980) - v.72:no.6 (June 1992) (LSC)          
-          # 6 v.9 (1943) - v.15 (1949), v.22 (1956) - v.23 (1957), v.27 (1961), v.29 (1963), v.32 (1966) - v.33 (1967), v.36 (1970) - v.42 (1976)
-
-        end
       end
     end
   end
+end
 

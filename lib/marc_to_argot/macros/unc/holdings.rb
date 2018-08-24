@@ -296,8 +296,8 @@ module MarcToArgot
               result << " - "
               result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
               summary << result
-              return summary
             end
+              return summary.join(', ')
           end
 
           def get_pattern_segment_value(pattern, sfcode)
@@ -354,7 +354,11 @@ module MarcToArgot
                     enum_chron[sf.code] = split_enum_chron_data(sf.value)
                   end
                 end
-                enums_and_chrons[type][pid] = { po => enum_chron }
+                if enums_and_chrons[type].has_key?(pid)
+                  enums_and_chrons[type][pid].merge!({ po => enum_chron })
+                else
+                  enums_and_chrons[type][pid] = { po => enum_chron }
+                end
               end
               @enums_and_chrons = enums_and_chrons
             end

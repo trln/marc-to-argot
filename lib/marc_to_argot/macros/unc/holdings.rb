@@ -259,26 +259,33 @@ module MarcToArgot
                   ov = process_pattern_subfield(pattern, sf, ec[:sfs][sf][:open])
                   cv = process_pattern_subfield(pattern, sf, ec[:sfs][sf][:close]) if ec[:rangeness]
 
+                  case get_pattern_segment_value(pattern, sf)
+                  when 'year'
+                    chron_type = :year
+                  when 'month'
+                    chron_type = :month
+                  when 'day'
+                    chron_type = :day
+                  end
+
                   case sf
                   when /[abcdef]/
-                    numeration[:open] << ov
-                    numeration[:close] << cv if ec[:rangeness]
+                    if chron_type
+                      chron_pieces[:open][chron_type] << ov
+                      chron_pieces[:close][chron_type] << cv if ec[:rangeness]
+                    else
+                      numeration[:open] << ov
+                      numeration[:close] << cv if ec[:rangeness]
+                    end
                   when /[gh]/
                     alt_numeration[:open] << ov
                     alt_numeration[:close] << cv if ec[:rangeness]
-                  when /[ijkl]/
-                    case get_pattern_segment_value(pattern, sf)
-                    when 'year'
-                      chron_type = :year
-                    when 'month'
-                      chron_type = :month
-                    when 'day'
-                      chron_type = :day
-                    else
-                      chron_type = :other
-                    end
+                  when /[ijk]/
                     chron_pieces[:open][chron_type] << ov
                     chron_pieces[:close][chron_type] << cv if ec[:rangeness]
+                  when 'l'
+                    chron_pieces[:open][:other] << ov
+                    chron_pieces[:close][:other] << cv if ec[:rangeness]
                   end
                 end
               end
@@ -287,7 +294,7 @@ module MarcToArgot
               # puts chronology elements in the right order for display
               chron_pieces.each do |range_type, pieces|
                 result = []
-                result << "#{pieces[:month]} " if pieces[:month].length > 0
+                result << "#{translate_month(pieces[:month])} " if pieces[:month].length > 0
                 result << "#{pieces[:day]}, " if pieces[:day].length > 0
                 result << pieces[:year] if pieces[:year]
                 result << pieces[:other] if pieces[:other]
@@ -295,12 +302,27 @@ module MarcToArgot
               end
                 
               result = ''
-              result << "#{numeration[:open]} (#{chron_pieces[:open][:compiled]})"
-              if numeration[:close].empty? && chron_pieces[:close][:compiled].empty?
-                #result << " #{pub_note.join(' ')}"
-              else
+#              puts "NUMOPEN: #{numeration[:open].inspect}"
+#              puts "CHRONOPEN: #{chron_pieces[:open][:compiled].inspect}"
+
+              if numeration[:open].length > 0 && chron_pieces[:open][:compiled].length > 0
+                result << "#{numeration[:open]} (#{chron_pieces[:open][:compiled]})"
+              elsif numeration[:open].length > 0 && chron_pieces[:open][:compiled].empty?
+                result << "#{numeration[:open]}"
+              elsif numeration[:open].empty? && chron_pieces[:open][:compiled].length > 0
+                result << chron_pieces[:open][:compiled]
+              end
+
+#              puts "NUMCLOSE: #{numeration[:close].inspect}"
+#              puts "CHRONCLOSE: #{chron_pieces[:close][:compiled].inspect}"
+              if numeration[:close].length > 0 && chron_pieces[:close][:compiled].length > 0
                 result << " - "
                 result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
+              elsif numeration[:close].length > 0 && chron_pieces[:close][:compiled].empty?
+                result << "#{numeration[:close]}"
+              elsif numeration[:close].empty? && chron_pieces[:close][:compiled].length > 0
+                result << " - "
+                result << chron_pieces[:close][:compiled]
               end
 
               result << " #{pub_note.join(' ')}" unless pub_note.empty?
@@ -308,6 +330,19 @@ module MarcToArgot
               summary << result
             end
               return summary.join(', ')
+          end
+
+          def translate_month(month)
+            month = '0' + month if month.match?(/^\d$/)
+            if holdings_month[month]
+              holdings_month[month]
+            else
+              month
+            end
+          end
+            
+          def holdings_month
+            @holdings_month ||=Traject::TranslationMap.new('unc/holdings_months')
           end
 
           def get_pattern_segment_value(pattern, sfcode)

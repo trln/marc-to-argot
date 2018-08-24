@@ -1,0 +1,624 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000casa 2200421 a 4500</leader>
+  <controlfield tag='001'>5867824</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20061116035551.0</controlfield>
+  <controlfield tag='008'>800112c19uu9999iluwr    b    0   a0eng d</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>84644807</subfield>
+  </datafield>
+  <datafield tag='022' ind1='1' ind2=' '>
+    <subfield code='a'>0748-0415</subfield>
+    <subfield code='2'>1</subfield>
+  </datafield>
+  <datafield tag='037' ind1=' ' ind2=' '>
+    <subfield code='b'>One-Spot Publishing Division, Trade Service Publication, 1000 W. Central Rd., Mt. Prospect, IL 60056</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>BGU</subfield>
+    <subfield code='c'>BGU</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>lc</subfield>
+    <subfield code='a'>nsdp</subfield>
+  </datafield>
+  <datafield tag='043' ind1=' ' ind2=' '>
+    <subfield code='a'>n-us---</subfield>
+  </datafield>
+  <datafield tag='049' ind1=' ' ind2=' '>
+    <subfield code='a'>NOCC</subfield>
+  </datafield>
+  <datafield tag='050' ind1='0' ind2='0'>
+    <subfield code='a'>ML156.4.P6</subfield>
+    <subfield code='b'>O5</subfield>
+  </datafield>
+  <datafield tag='082' ind1='0' ind2=' '>
+    <subfield code='a'>016.7899/12</subfield>
+    <subfield code='2'>19</subfield>
+  </datafield>
+  <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>One Spot new release reporter</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>One Spot new release reporter.</subfield>
+    <subfield code='h'>[serial]</subfield>
+  </datafield>
+  <datafield tag='246' ind1='3' ind2='0'>
+    <subfield code='a'>New release reporter</subfield>
+  </datafield>
+  <datafield tag='246' ind1='1' ind2='3'>
+    <subfield code='a'>One-Spot new release reporter</subfield>
+  </datafield>
+  <datafield tag='246' ind1='1' ind2='3'>
+    <subfield code='a'>One-Spot weekly new release reporter</subfield>
+    <subfield code='f'>&lt;Mar. 26, 1984-&gt;</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>Forest Park, Ill. :</subfield>
+    <subfield code='b'>One-Spot Publishers</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v. ;</subfield>
+    <subfield code='c'>24-23 x 29 cm.</subfield>
+  </datafield>
+  <datafield tag='310' ind1=' ' ind2=' '>
+    <subfield code='a'>Weekly</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Description based on: Vol. 1, no. 11 (Apr. 1, 1959); title from cover.</subfield>
+  </datafield>
+  <datafield tag='515' ind1=' ' ind2=' '>
+    <subfield code='a'>Issues for &lt;Mar. 26, 1984-&gt; lack v. designation.</subfield>
+  </datafield>
+  <datafield tag='550' ind1=' ' ind2=' '>
+    <subfield code='a'>Issues for &lt;Mar. 26, 1984-&gt; compiled by One-Spot Publishing Division, Trade Service Publications, Inc.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Popular music</subfield>
+    <subfield code='z'>United States</subfield>
+    <subfield code='v'>Discography</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>One-Spot Publishers.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Trade Service Publications, Inc.</subfield>
+    <subfield code='b'>One-Spot Publishing Division.</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b4945723</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6510814</subfield>
+    <subfield code='l'>wadb</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c4671488</subfield>
+    <subfield code='b'>wadb</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+    <subfield code='k'>(day)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>2</subfield>
+    <subfield code='a'>(year)</subfield>
+    <subfield code='b'>(month)</subfield>
+    <subfield code='c'>(day)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='b'>11</subfield>
+    <subfield code='i'>1959</subfield>
+    <subfield code='j'>04</subfield>
+    <subfield code='k'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='b'>23</subfield>
+    <subfield code='i'>1959</subfield>
+    <subfield code='j'>06</subfield>
+    <subfield code='k'>29</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='b'>27-33</subfield>
+    <subfield code='i'>1959</subfield>
+    <subfield code='j'>07-09</subfield>
+    <subfield code='k'>27-7</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.4</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='b'>36</subfield>
+    <subfield code='i'>1959</subfield>
+    <subfield code='j'>09</subfield>
+    <subfield code='k'>28</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.5</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='b'>44-49</subfield>
+    <subfield code='i'>1959</subfield>
+    <subfield code='j'>11-12</subfield>
+    <subfield code='k'>23-28</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.6</subfield>
+    <subfield code='a'>2</subfield>
+    <subfield code='b'>1-4</subfield>
+    <subfield code='i'>1960</subfield>
+    <subfield code='j'>01</subfield>
+    <subfield code='k'>4-25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.7</subfield>
+    <subfield code='a'>2</subfield>
+    <subfield code='b'>13</subfield>
+    <subfield code='i'>1960</subfield>
+    <subfield code='j'>03</subfield>
+    <subfield code='k'>28</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.8</subfield>
+    <subfield code='a'>2</subfield>
+    <subfield code='b'>39</subfield>
+    <subfield code='i'>1960</subfield>
+    <subfield code='j'>09</subfield>
+    <subfield code='k'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.9</subfield>
+    <subfield code='a'>2</subfield>
+    <subfield code='b'>52</subfield>
+    <subfield code='i'>1960</subfield>
+    <subfield code='j'>12</subfield>
+    <subfield code='k'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.10</subfield>
+    <subfield code='a'>1961</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>27</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.11</subfield>
+    <subfield code='a'>1961</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.12</subfield>
+    <subfield code='a'>1961</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.13</subfield>
+    <subfield code='a'>1961</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.14</subfield>
+    <subfield code='a'>1962</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.15</subfield>
+    <subfield code='a'>1962</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>31</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.16</subfield>
+    <subfield code='a'>1963</subfield>
+    <subfield code='b'>04</subfield>
+    <subfield code='c'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.17</subfield>
+    <subfield code='a'>1963</subfield>
+    <subfield code='b'>07</subfield>
+    <subfield code='c'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.18</subfield>
+    <subfield code='a'>1963</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>30</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.19</subfield>
+    <subfield code='a'>1963</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>30</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.20</subfield>
+    <subfield code='a'>1964-1965</subfield>
+    <subfield code='b'>02-10</subfield>
+    <subfield code='c'>24-11</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.21</subfield>
+    <subfield code='a'>1965-1966</subfield>
+    <subfield code='b'>12-1</subfield>
+    <subfield code='c'>27-24</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.22</subfield>
+    <subfield code='a'>1966</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>28</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.23</subfield>
+    <subfield code='a'>1966</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>27</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.24</subfield>
+    <subfield code='a'>1966</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.25</subfield>
+    <subfield code='a'>1966</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.26</subfield>
+    <subfield code='a'>1967</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>27</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.27</subfield>
+    <subfield code='a'>1967</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.28</subfield>
+    <subfield code='a'>1967</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.29</subfield>
+    <subfield code='a'>1967</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.30</subfield>
+    <subfield code='a'>1968</subfield>
+    <subfield code='b'>02</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.31</subfield>
+    <subfield code='a'>1968</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.32</subfield>
+    <subfield code='a'>1968</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>24</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.33</subfield>
+    <subfield code='a'>1968</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>30</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.34</subfield>
+    <subfield code='a'>1968</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>30</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.35</subfield>
+    <subfield code='a'>1969</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>31</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.36</subfield>
+    <subfield code='a'>1969</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>30</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.37</subfield>
+    <subfield code='a'>1969</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>29</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.38</subfield>
+    <subfield code='a'>1969</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>29</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.39</subfield>
+    <subfield code='a'>1971</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>27</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.40</subfield>
+    <subfield code='a'>1972</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>27</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.41</subfield>
+    <subfield code='a'>1972</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.42</subfield>
+    <subfield code='a'>1972</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.43</subfield>
+    <subfield code='a'>1972</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.44</subfield>
+    <subfield code='a'>1973</subfield>
+    <subfield code='b'>03</subfield>
+    <subfield code='c'>26</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.45</subfield>
+    <subfield code='a'>1973</subfield>
+    <subfield code='b'>06</subfield>
+    <subfield code='c'>25</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.46</subfield>
+    <subfield code='a'>1973</subfield>
+    <subfield code='b'>09</subfield>
+    <subfield code='c'>24</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.47</subfield>
+    <subfield code='a'>1973</subfield>
+    <subfield code='b'>12</subfield>
+    <subfield code='c'>31</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.48</subfield>
+    <subfield code='a'>1974</subfield>
+    <subfield code='b'>01-06</subfield>
+    <subfield code='c'>7-24</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.49</subfield>
+    <subfield code='a'>1974</subfield>
+    <subfield code='b'>07-09</subfield>
+    <subfield code='c'>15-23</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.50</subfield>
+    <subfield code='a'>1974</subfield>
+    <subfield code='b'>10-12</subfield>
+    <subfield code='c'>14-23</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.51</subfield>
+    <subfield code='a'>1975</subfield>
+    <subfield code='b'>01</subfield>
+    <subfield code='c'>6</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4671488</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.52</subfield>
+    <subfield code='a'>1975</subfield>
+    <subfield code='b'>01-02</subfield>
+    <subfield code='c'>20-10</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2006-11-16 00:00:00-05</subfield>
+    <subfield code='c'>2006-11-16 17:17:00-05</subfield>
+    <subfield code='u'>2017-12-01 10:56:34-05</subfield>
+  </datafield>
+</record>
+</collection>

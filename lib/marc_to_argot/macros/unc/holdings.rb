@@ -33,6 +33,7 @@ module MarcToArgot
             argotholdings = []
             tmp_holdings.each { |hrec| argotholdings << hrec.to_argot }
             cxt.output_hash['holdings'] = argotholdings
+#            puts "AH: #{argotholdings}"
           end
         end
 
@@ -206,6 +207,7 @@ module MarcToArgot
             get_enums_and_chrons
 #            puts @enums_and_chrons
             apply_patterns unless @patterns.empty? || @enums_and_chrons.empty?
+#            puts "BSH: #{@summary_holding}"
           end
 
           def apply_patterns
@@ -286,21 +288,23 @@ module MarcToArgot
               chron_pieces.each do |range_type, pieces|
                 result = []
                 result << "#{pieces[:month]} " if pieces[:month].length > 0
-                result << pieces[:day] if pieces[:day]
+                result << "#{pieces[:day]}, " if pieces[:day].length > 0
                 result << pieces[:year] if pieces[:year]
                 result << pieces[:other] if pieces[:other]
                 chron_pieces[range_type][:compiled] = result.join('')
               end
                 
-
               result = ''
               result << "#{numeration[:open]} (#{chron_pieces[:open][:compiled]})"
               if numeration[:close].empty? && chron_pieces[:close][:compiled].empty?
-                result << " #{pub_note.join(' ')}"
+                #result << " #{pub_note.join(' ')}"
               else
                 result << " - "
                 result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
               end
+
+              result << " #{pub_note.join(' ')}" unless pub_note.empty?
+#              puts "RESULT: #{result}"
               summary << result
             end
               return summary.join(', ')
@@ -311,8 +315,15 @@ module MarcToArgot
           end
 
           def process_pattern_subfield(pattern, sfcode, sfval)
-            label = "#{pattern[sfcode][:value]} " if pattern[sfcode][:is_label]
-            "#{label}#{sfval}"
+            label = "#{pattern[sfcode][:value]}" if pattern[sfcode][:is_label]
+            if label
+              value = "#{label} #{sfval}"
+#              puts "SFVAL: #{value}"
+              return value
+            else
+#              puts "SFVAL: #{value}"
+              return sfval
+            end
           end
           
           # returns array of enum/chron field data, sorted by occurrence
@@ -435,12 +446,13 @@ module MarcToArgot
               patterns[type][pid] = pattern
             end
             @patterns = patterns
+            #puts "PATTERNS: #{@patterns}"
             end
           end
 
           def get_pattern_segment(string)
             is_label = true unless string =~ /\(.*\)/
-            cleaned = string.delete('()')
+            cleaned = string.delete('()').strip
             {:value => cleaned, :is_label => is_label}
           end
 

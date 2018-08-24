@@ -96,7 +96,8 @@ describe MarcToArgot do
     context 'There is at least one 853 with III field type = y AND' do
       context 'At least one 863 with III field type = h AND' do
         context 'There is a single level of enumeration AND' do
-          context 'Year-only chronology AND' do 
+          context 'Year-only chronology AND' do
+            
             context 'The open and close year is the same year' do
 
               # y 853  30|81|av.|i(year)|tc.
@@ -129,6 +130,21 @@ describe MarcToArgot do
                   )
                 end                        
               end
+            end
+
+            context 'Some 863s are complete but not ranges' do
+              # y	853  30|81|av.|i(year)
+              # h	863  40|81.9|a9-15|i1943-1949|wg
+              # h	863  40|81.22|a22-23|i1956-1957|wg
+              # h	863  41|81.27|a27|i1961|wg
+              # h	863  41|81.29|a29|i1963|wg
+              # h	863  40|81.32|a32-33|i1966-1967|wg
+              # h	863  40|81.36|a36-42|i1970-1976
+              it '(UNC) provides summary holdings statement' do
+                expect(holdings9['holdings'][0]).to(
+                  include("\"summary\":\"v. 9 (1943) - v. 15 (1949), v. 22 (1956) - v. 23 (1957), v. 27 (1961), v. 29 (1963), v. 32 (1966) - v. 33 (1967), v. 36 (1970) - v. 42 (1976)\"")
+                )
+              end                        
             end
             
             context 'The open and close year are different' do
@@ -215,14 +231,8 @@ end
 =begin
 
 holdings9 - c1361861 - b1317354
-y	853  30|81|av.|i(year)
-h	863  40|81.9|a9-15|i1943-1949|wg
-h	863  40|81.22|a22-23|i1956-1957|wg
-h	863  41|81.27|a27|i1961|wg
-h	863  41|81.29|a29|i1963|wg
-h	863  40|81.32|a32-33|i1966-1967|wg
-h	863  40|81.36|a36-42|i1970-1976
-v. 9 (1943) - v. 15 (1949), v. 22 (1956) - v. 23 (1957), v. 27 (1961), v. 29 (1963), v. 32 (1966) - v. 33 (1967), v. 36 (1970) - v. 42 (1976)
+
+
 
 holdings10 - c1503867 - b1514689
 y	853  3|81|aårg.|gnr.|i(year)

@@ -498,7 +498,7 @@ module MarcToArgot
 
           def get_pattern_occurrence(field)
             sf8 = field.subfields.select{ |sf| sf.code == '8'}.first
-            sf8.value.split('.')[1]
+            sf8.value.split('.')[1].to_i
           end
 
           def get_field_type(field)

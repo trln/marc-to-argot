@@ -248,20 +248,22 @@ module MarcToArgot
                                          }
                              }
               pub_note = []
-              
-              sfs = ec.keys.sort
+
+              pub_note << ec[:sfs]['z'] if ec[:sfs].has_key?('z')
+                              
+              sfs = ec[:sfs].keys.sort
               sfs.each do |sf|
                 if psfs.include?(sf)
-                  ov = process_pattern_subfield(pattern, sf, ec[sf][:open])
-                  cv = process_pattern_subfield(pattern, sf, ec[sf][:close])
+                  ov = process_pattern_subfield(pattern, sf, ec[:sfs][sf][:open])
+                  cv = process_pattern_subfield(pattern, sf, ec[:sfs][sf][:close]) if ec[:rangeness]
 
                   case sf
                   when /[abcdef]/
                     numeration[:open] << ov
-                    numeration[:close] << cv
+                    numeration[:close] << cv if ec[:rangeness]
                   when /[gh]/
                     alt_numeration[:open] << ov
-                    alt_numeration[:close] << cv
+                    alt_numeration[:close] << cv if ec[:rangeness]
                   when /[ijkl]/
                     case get_pattern_segment_value(pattern, sf)
                     when 'year'
@@ -274,13 +276,13 @@ module MarcToArgot
                       chron_type = :other
                     end
                     chron_pieces[:open][chron_type] << ov
-                    chron_pieces[:close][chron_type] << cv
+                    chron_pieces[:close][chron_type] << cv if ec[:rangeness]
                   end
                 end
               end
-
               numeration = numeration.map{ |k, v| [k, v.join(':')] }.to_h
 
+              # puts chronology elements in the right order for display
               chron_pieces.each do |range_type, pieces|
                 result = []
                 result << "#{pieces[:month]} " if pieces[:month].length > 0
@@ -293,8 +295,12 @@ module MarcToArgot
 
               result = ''
               result << "#{numeration[:open]} (#{chron_pieces[:open][:compiled]})"
-              result << " - "
-              result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
+              if numeration[:close].empty? && chron_pieces[:close][:compiled].empty?
+                result << " #{pub_note.join(' ')}"
+              else
+                result << " - "
+                result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
+              end
               summary << result
             end
               return summary.join(', ')
@@ -332,8 +338,6 @@ module MarcToArgot
           #   :index => {...}
           # }
           def get_enums_and_chrons
-            
-
             ecfs = @fields.select{ |f| f.tag =~ /86[345]/ }
             unless ecfs.empty?
               enums_and_chrons = {:basic => {},
@@ -344,14 +348,22 @@ module MarcToArgot
               ecfs.each do |ecf|
                 pid = get_pattern_id(ecf)
                 po = get_pattern_occurrence(ecf)
-                enum_chron = {}
+                enum_chron = { :sfs => {} }
                 type = get_field_type(ecf)
+                has_ranges = includes_range_data(ecf)
+                enum_chron[:rangeness] = true if has_ranges == true
                 
                 ecf.subfields.each do |sf|
                   if sf.code == '8'
                     next
+                  elsif sf.code == 'z'
+                    enum_chron[:sfs][sf.code] = sf.value
                   else
-                    enum_chron[sf.code] = split_enum_chron_data(sf.value)
+                    if has_ranges == true
+                      enum_chron[:sfs][sf.code] = split_enum_chron_range_data(sf.value)
+                    else
+                      enum_chron[:sfs][sf.code] = split_enum_chron_nonrange_data(sf.value)
+                    end
                   end
                 end
                 if enums_and_chrons[type].has_key?(pid)
@@ -361,10 +373,16 @@ module MarcToArgot
                 end
               end
               @enums_and_chrons = enums_and_chrons
+              #puts @enums_and_chrons
             end
           end
 
-          def split_enum_chron_data(string)
+          def includes_range_data(field)
+            range_sfs = field.subfields.select{ |sf| sf.value.include?('-') }
+            return true unless range_sfs.empty?
+          end
+
+          def split_enum_chron_range_data(string)
             arr = string.split(/ ?- ?/)
             open = arr[0]
             if arr[1]
@@ -374,7 +392,11 @@ module MarcToArgot
             end
             {:open => open, :close => close}
           end
-          
+
+          def split_enum_chron_nonrange_data(string)
+            {:open => string}
+          end
+
           # return hash of caption and chronology patterns
           # { :basic => {
           #     '1' => {

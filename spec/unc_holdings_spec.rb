@@ -111,6 +111,17 @@ describe MarcToArgot do
                 )
               end
             end
+
+            context 'AND close of range is TO DATE' do
+              # y 853  |81|av.|i(year)
+              # h 863  |81.1|a1-|i1921-|pHAHE-5109-00001|zTO DATE
+
+              it '(UNC) provides summary holdings statement' do
+                expect(holdings5['holdings'][0]).to(
+                  include("\"summary\":\"v. 1 (1921) TO DATE\"")
+                )
+              end                        
+            end
           end
             
           context 'The open and close year are different' do
@@ -142,8 +153,7 @@ describe MarcToArgot do
             end
           end
         end
-          
-          # 5 v.1 (1921)- TO DATE (Davis Library Federal Documents) --- v.60:no.1 (Jan. 1980) - v.72:no.6 (June 1992) (LSC)
+# --- v.60:no.1 (Jan. 1980) - v.72:no.6 (June 1992) (LSC)          
           # 6 v.9 (1943) - v.15 (1949), v.22 (1956) - v.23 (1957), v.27 (1961), v.29 (1963), v.32 (1966) - v.33 (1967), v.36 (1970) - v.42 (1976)
 
         end
@@ -151,5 +161,3 @@ describe MarcToArgot do
     end
   end
 
-#got: v. 5 (1971) - v. 6 (1972), v. 7 (1973) - v.  (), v. 8 (1974) - v. 10 (1976)
-#exp: v. 5 (1971) - v. 6 (1972), v. 7 (1973) incomplete, v. 8 (1974) - v. 10 (1976)

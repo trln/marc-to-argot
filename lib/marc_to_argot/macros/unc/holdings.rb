@@ -378,7 +378,8 @@ module MarcToArgot
           end
 
           def includes_range_data(field)
-            range_sfs = field.subfields.select{ |sf| sf.value.include?('-') }
+            check_sfs = field.subfields.select{ |sf| sf.code.match?(/[abcdefijkl]/) }
+            range_sfs = check_sfs.reject{ |sf| sf.value.match?(/- *$/) || !sf.value.include?('-') }
             return true unless range_sfs.empty?
           end
 
@@ -394,7 +395,7 @@ module MarcToArgot
           end
 
           def split_enum_chron_nonrange_data(string)
-            {:open => string}
+            {:open => string.delete('-')}
           end
 
           # return hash of caption and chronology patterns

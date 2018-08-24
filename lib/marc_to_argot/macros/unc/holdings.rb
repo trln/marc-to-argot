@@ -290,7 +290,7 @@ module MarcToArgot
                 end
               end
               numeration = numeration.map{ |k, v| [k, v.join(':')] }.to_h
-
+              
               # puts chronology elements in the right order for display
               chron_pieces.each do |range_type, pieces|
                 result = []
@@ -325,6 +325,10 @@ module MarcToArgot
                 result << chron_pieces[:close][:compiled]
               end
 
+              alt_numeration = alt_numeration.map{ |k, v| [k, v.join(':')] }.to_h
+              result << " = #{alt_numeration[:open]}" if alt_numeration[:open].length > 0
+              result << " - #{alt_numeration[:close]}" if alt_numeration[:close].length > 0
+              
               result << " #{pub_note.join(' ')}" unless pub_note.empty?
 #              puts "RESULT: #{result}"
               summary << result

@@ -99,7 +99,6 @@ describe MarcToArgot do
           context 'Year-only chronology AND' do
             
             context 'The open and close year is the same year' do
-
               # y 853  30|81|av.|i(year)|tc.
               # h 863    |81.1|a1-3|i1939
               it '(UNC) provides summary holdings statement' do
@@ -107,29 +106,29 @@ describe MarcToArgot do
                   include("\"summary\":\"v. 1 (1939) - v. 3 (1939)")
                 )
               end
+            end
 
-              context 'AND year is incomplete, noted in $z' do
-                # 853  30|81|av.|i(year)
-                # 863  30|81.1|a5-6|i1971-1972|wg
-                # 863  31|81.2|a7|i1973|zincomplete
-                # 863  40|81.3|a8-10|i1974-1976
-                it '(UNC) provides summary holdings statement' do
-                  expect(holdings4['holdings'][0]).to(
-                    include("\"summary\":\"v. 5 (1971) - v. 6 (1972), v. 7 (1973) incomplete, v. 8 (1974) - v. 10 (1976)")
-                  )
-                end
+            context 'AND year is incomplete, noted in $z' do
+              # 853  30|81|av.|i(year)
+              # 863  30|81.1|a5-6|i1971-1972|wg
+              # 863  31|81.2|a7|i1973|zincomplete
+              # 863  40|81.3|a8-10|i1974-1976
+              it '(UNC) provides summary holdings statement' do
+                expect(holdings4['holdings'][0]).to(
+                  include("\"summary\":\"v. 5 (1971) - v. 6 (1972), v. 7 (1973) incomplete, v. 8 (1974) - v. 10 (1976)")
+                )
               end
+            end
 
-              context 'AND close of range is TO DATE, noted in $z' do
-                # y 853  |81|av.|i(year)
-                # h 863  |81.1|a1-|i1921-|pHAHE-5109-00001|zTO DATE
+            context 'AND close of range is TO DATE, noted in $z' do
+              # y 853  |81|av.|i(year)
+              # h 863  |81.1|a1-|i1921-|pHAHE-5109-00001|zTO DATE
 
-                it '(UNC) provides summary holdings statement' do
-                  expect(holdings5['holdings'][0]).to(
-                    include("\"summary\":\"v. 1 (1921) TO DATE\"")
-                  )
-                end                        
-              end
+              it '(UNC) provides summary holdings statement' do
+                expect(holdings5['holdings'][0]).to(
+                  include("\"summary\":\"v. 1 (1921) TO DATE\"")
+                )
+              end                        
             end
 
             context 'Some 863s are complete but not ranges' do
@@ -144,25 +143,38 @@ describe MarcToArgot do
                 expect(holdings9['holdings'][0]).to(
                   include("\"summary\":\"v. 9 (1943) - v. 15 (1949), v. 22 (1956) - v. 23 (1957), v. 27 (1961), v. 29 (1963), v. 32 (1966) - v. 33 (1967), v. 36 (1970) - v. 42 (1976)\"")
                 )
-              end                        
+              end
             end
-            
-            context 'The open and close year are different' do
-              # y	853  30|81|av.|bno.|i(year)|j(month)
-              # h	863  40|81.1|a1-4|i1971-1974
+
+            context 'AND there is a 1-level alt num scheme' do
+              # y	853  3|81|aårg.|gnr.|i(year)
+              # h	863  40|81.1|a8-17|g29-68|i1977-1990
               it '(UNC) provides summary holdings statement' do
-                expect(holdings2['holdings'][0]).to(
-                  include("\"summary\":\"v. 1 (1971) - v. 4 (1974)")
+                expect(holdings10['holdings'][0]).to(
+                  include("\"summary\":\"årg. 8 (1977) - årg. 17 (1990) = nr. 29 - nr. 68\"")
                 )
               end
             end
           end
         end
 
-        context 'There are 2 levels of enumeration AND' do
-          context 'A month/year chronology AND' do
-            context 'There are 2 different patterns' do
+        context 'There are 2 levels of enumeration' do
+          context 'AND A month/year chronology' do
+            context 'BUT only year chronology recorded in 863' do
+              context 'AND There is only one 1 enumeration level specified in 863' do
+                context 'AND The open and close year are different' do
+                  # y	853  30|81|av.|bno.|i(year)|j(month)
+                  # h	863  40|81.1|a1-4|i1971-1974
+                  it '(UNC) provides summary holdings statement' do
+                    expect(holdings2['holdings'][0]).to(
+                      include("\"summary\":\"v. 1 (1971) - v. 4 (1974)")
+                    )
+                  end
+                end
+              end
+            end
 
+            context 'AND there are 2 different patterns' do
               # y	853  30|81|aBd.|bHeft |i(year)|j(month)
               # y	853  31|82|aJahrg.|bHeft |i(year)
               # h	863  40|81.1|a1-32|b1-3|i1928-1933|jJan.-Juni|wn
@@ -172,23 +184,21 @@ describe MarcToArgot do
                   include("\"summary\":\"Bd. 1:Heft 1 (Jan. 1928) - Bd. 32:Heft 3 (Juni 1933); Jahrg. 19:Heft 1 (1961) - Jahrg. 38:Heft 2 (1980)")
                 )
               end
-
             end
-          end
 
-          context 'There is another pattern with no enumeration, only year/month/day chronology' do
-
-            # y	853  |81|av.|bno.|i(year)|j(month)|k(day)
-            # y	853  |82|a(year)|b(month)|c(day)
-            # h	863  41|81.1|a1|b11|i1959|j04|k1
-            # h	863  41|81.2|a1|b23|i1959|j06|k29
-            # ...
-            # h	863  41|82.10|a1961|b03|c27
-            # h	863  41|82.11|a1961|b06|c26
-            it '(UNC) provides summary holdings statement' do
-              expect(holdings7['holdings'][0]).to(
-                include("\"summary\":\"v. 1:no. 11 (Apr. 1, 1959), v. 1:no. 23 (June 29, 1959), v. 1:no. 27 (July 27, 1959) - v. 1:no. 33 (Sept. 7, 1959), v. 1:no. 36 (Sept. 28, 1959), v. 1:no. 44 (Nov. 23, 1959) - v. 1:no. 49 (Dec. 28, 1959), v. 2:no. 1 (Jan. 4, 1960) - v. 2:no. 4 (Jan. 25, 1960), v. 2:no. 13 (Mar. 28, 1960), v. 2:no. 39 (Sept. 26, 1960), v. 2:no. 52 (Dec. 26, 1960); Mar. 27, 1961, June 26, 1961, Sept. 25, 1961, Dec. 25, 1961, Mar. 26, 1962, Dec. 31, 1962, Apr. 1, 1963, July 1, 1963, Sept. 30, 1963, Dec. 30, 1963, Feb. 24, 1964 - Oct. 11, 1965, Dec. 27, 1965 - Jan. 24, 1966, Mar. 28, 1966, June 27, 1966, Sept. 26, 1966, Dec. 26, 1966, Mar. 27, 1967, June 26, 1967, Sept. 25, 1967, Dec. 25, 1967, Feb. 26, 1968, Mar. 25, 1968, June 24, 1968, Sept. 30, 1968, Dec. 30, 1968, Mar. 31, 1969, June 30, 1969, Sept. 29, 1969, Dec. 29, 1969, Dec. 27, 1971, Mar. 27, 1972, June 26, 1972, Sept. 25, 1972, Dec. 25, 1972, Mar. 26, 1973, June 25, 1973, Sept. 24, 1973, Dec. 31, 1973, Jan. 7, 1974 - June 24, 1974, July 15, 1974 - Sept. 23, 1974, Oct. 14, 1974 - Dec. 23, 1974, Jan. 6, 1975, Jan. 20, 1975 - Feb. 10, 1975\"")
-              )
+            context 'AND there is another pattern with no enumeration, only year/month/day chronology' do
+              # y	853  |81|av.|bno.|i(year)|j(month)|k(day)
+              # y	853  |82|a(year)|b(month)|c(day)
+              # h	863  41|81.1|a1|b11|i1959|j04|k1
+              # h	863  41|81.2|a1|b23|i1959|j06|k29
+              # ...
+              # h	863  41|82.10|a1961|b03|c27
+              # h	863  41|82.11|a1961|b06|c26
+              it '(UNC) provides summary holdings statement' do
+                expect(holdings7['holdings'][0]).to(
+                  include("\"summary\":\"v. 1:no. 11 (Apr. 1, 1959), v. 1:no. 23 (June 29, 1959), v. 1:no. 27 (July 27, 1959) - v. 1:no. 33 (Sept. 7, 1959), v. 1:no. 36 (Sept. 28, 1959), v. 1:no. 44 (Nov. 23, 1959) - v. 1:no. 49 (Dec. 28, 1959), v. 2:no. 1 (Jan. 4, 1960) - v. 2:no. 4 (Jan. 25, 1960), v. 2:no. 13 (Mar. 28, 1960), v. 2:no. 39 (Sept. 26, 1960), v. 2:no. 52 (Dec. 26, 1960); Mar. 27, 1961, June 26, 1961, Sept. 25, 1961, Dec. 25, 1961, Mar. 26, 1962, Dec. 31, 1962, Apr. 1, 1963, July 1, 1963, Sept. 30, 1963, Dec. 30, 1963, Feb. 24, 1964 - Oct. 11, 1965, Dec. 27, 1965 - Jan. 24, 1966, Mar. 28, 1966, June 27, 1966, Sept. 26, 1966, Dec. 26, 1966, Mar. 27, 1967, June 26, 1967, Sept. 25, 1967, Dec. 25, 1967, Feb. 26, 1968, Mar. 25, 1968, June 24, 1968, Sept. 30, 1968, Dec. 30, 1968, Mar. 31, 1969, June 30, 1969, Sept. 29, 1969, Dec. 29, 1969, Dec. 27, 1971, Mar. 27, 1972, June 26, 1972, Sept. 25, 1972, Dec. 25, 1972, Mar. 26, 1973, June 25, 1973, Sept. 24, 1973, Dec. 31, 1973, Jan. 7, 1974 - June 24, 1974, July 15, 1974 - Sept. 23, 1974, Oct. 14, 1974 - Dec. 23, 1974, Jan. 6, 1975, Jan. 20, 1975 - Feb. 10, 1975\"")
+                )
+              end
             end
           end
         end
@@ -196,7 +206,6 @@ describe MarcToArgot do
         context 'There are 3 levels of enumeration' do
           context 'AND There is no chronology' do
             context 'AND Some 863s specify only partial enumeration' do
-
               # y	853  30|81|av.|bpt.|ct.
               # h	863  40|81.1|a1|wg
               # h	863  41|81.2|a4|b2|c1
@@ -210,7 +219,6 @@ describe MarcToArgot do
           
           context 'AND There is a month/day/year chronology' do
             context 'AND There is a $z note unrelated to range' do
-
               # holdings6 - c4900227 - b6820876
               # y	853  |81|aaño |bMes |cno.|i(year)|j(month)|k(day)
               # h	863  30|81.1|a56-57|b8-1|c16.512-16.644|i1928|jmayo-oct.|k22-27|zSome issues missing
@@ -222,7 +230,6 @@ describe MarcToArgot do
             end
           end
         end
-        
       end
     end
   end
@@ -230,14 +237,8 @@ end
 
 =begin
 
-holdings9 - c1361861 - b1317354
-
-
-
 holdings10 - c1503867 - b1514689
-y	853  3|81|aårg.|gnr.|i(year)
-h	863  40|81.1|a8-17|g29-68|i1977-1990
-årg. 8 (1977) - årg. 17 (1990) = nr. 29 - nr. 68
+
 
 holdings11 - c1360005 - b1315368
 y	853  3|81|aaño |i(year)|gno.

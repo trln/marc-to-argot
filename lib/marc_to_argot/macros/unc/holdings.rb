@@ -66,7 +66,7 @@ module MarcToArgot
 
             df = new_data_field(field) if 
               ( field['2'] == '852' && field['3'] == 'c' ) ||
-              ( field['2'] == '853' && field['3'] == 'y' ) ||
+              ( field['2'] =~ /85[345]/ && field['3'] == 'y' ) ||
               ( field['2'] =~ /86./ && field['3'] == 'h' )
 
             if df
@@ -217,6 +217,7 @@ module MarcToArgot
             p.each do |holding_type, patterns|
               result = []
               patterns.each do |pid, pattern|
+#                puts "PATTERN: #{pattern}"
                 result << process_pattern(holding_type, pid, pattern)
               end
               
@@ -423,7 +424,7 @@ module MarcToArgot
                 end
               end
               @enums_and_chrons = enums_and_chrons
-              #puts @enums_and_chrons
+#             puts @enums_and_chrons
             end
           end
 
@@ -470,6 +471,7 @@ module MarcToArgot
             
               
             pfs.each do |pf|
+#              puts "PATTERN FIELD: #{pf.inspect}"
               pid = get_pattern_id(pf)
               pattern = {}
               type = get_field_type(pf)

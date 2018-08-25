@@ -92,7 +92,7 @@ describe MarcToArgot do
     end
   end
 
-  context 'When textual holdings field(s) with III field type = h are NOT present AND' do
+  context 'When 866 with III field type = h are NOT present AND' do
     context 'There is at least one 853 with III field type = y AND' do
       context 'At least one 863 with III field type = h AND' do
         context 'There is a single level of enumeration AND' do
@@ -146,13 +146,26 @@ describe MarcToArgot do
               end
             end
 
-            context 'AND there is a 1-level alt num scheme' do
+            context 'AND there is a 1-level alt num scheme specified in 853' do
               # y	853  3|81|aårg.|gnr.|i(year)
               # h	863  40|81.1|a8-17|g29-68|i1977-1990
               it '(UNC) provides summary holdings statement' do
                 expect(holdings10['holdings'][0]).to(
                   include("\"summary\":\"årg. 8 (1977) - årg. 17 (1990) = nr. 29 - nr. 68\"")
                 )
+              end
+
+              context 'BUT no alt numeration specified in 863s' do
+                it '(UNC) provides summary holdings statement' do
+                  # y	853  3|81|aaño |i(year)|gno.
+                  # y	855  |81|ano.|i(year)
+                  # h	863  30|81.1|a1|i1952|b1-8|zincomplete
+                  # h	863  40|81.2|a2-23|i1953-1974
+                  # h	865  41|81.3|a1-62|i1952-1961
+                  expect(holdings11['holdings'][0]).to(
+                    include("\"summary\":\"año 1 (1952) - año 1 (1952) incomplete, año 2 (1953) - año 23 (1974);")
+                  )
+                end
               end
             end
           end
@@ -233,12 +246,32 @@ describe MarcToArgot do
       end
     end
   end
+
+  context 'When 868 with III field type = h are NOT present AND' do
+    context 'There is at least one 855 with III field type = y AND' do
+      context 'At least one 865 with III field type = h AND' do
+        context 'There is a single level of enumeration AND' do
+          context 'Year-only chronology AND' do
+            it '(UNC) provides summary holdings statement' do
+              # y	853  3|81|aaño |i(year)|gno.
+              # y	855  |81|ano.|i(year)
+              # h	863  30|81.1|a1|i1952|b1-8|zincomplete
+              # h	863  40|81.2|a2-23|i1953-1974
+              # h	865  41|81.3|a1-62|i1952-1961
+              expect(holdings11['holdings'][0]).to(
+                include("; Index holdings: no. 1 (1952) - no. 62 (1961)\"")
+              )
+            end
+
+          end
+        end
+      end
+    end
+  end
+
 end
 
 =begin
-
-holdings10 - c1503867 - b1514689
-
 
 holdings11 - c1360005 - b1315368
 y	853  3|81|aaño |i(year)|gno.

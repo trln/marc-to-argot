@@ -5,6 +5,33 @@ require 'yajl'
 
 # Utilities for specs
 module Util
+  def data_path(name)
+    File.join(File.expand_path('data', __dir__), name)
+  end
+
+  def load_yaml(collection, base)
+    filename = data_path(File.join(collection, "#{base}.yml"))
+    yaml = File.open(filename) do |f|
+      YAML.load(f)
+    end
+    yield yaml if block_given?
+    yaml
+  end
+
+  def yaml_to_item_fields(collection, base, tag = '999')
+    data = load_yaml(collection, base)
+    item_fields = data.map do |name, vals|
+      field = MARC::DataField.new('999', ' ', ' ')
+      vals.each do |k, v|
+        field.subfields << MARC::Subfield.new(k, v)
+      end
+      [name, field]
+    end
+    items = Hash[item_fields]
+    yield items if block_given?
+    items
+  end
+
   # utility method for loading MARC data for testing
   def find_marc(collection, file, extension = 'xml')
     data = File.expand_path('data', File.dirname(__FILE__))

@@ -28,7 +28,25 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:hillReference) { stringhash(loc_b: 'DHHILL', loc_n: 'REF', type: 'BOOKNOCIRC') }
 
+  let(:fixture_items) { yaml_to_item_fields('ncsu', 'items') }
+
+  let(:copy_no_item) { fixture_items[:copy_no] }
+
+  let(:no_copy_no_item) { fixture_items[:no_copy_no] }
+
+  let(:bbr_record) { run_traject_json('ncsu', 'bbr') }
+
+  let(:audiobook) { run_traject_json('ncsu', 'audiobook') }
+
   context 'NCSU' do
+    it 'does not have a copy_no for an item with no copy_no' do
+      expect(marc_to_item(no_copy_no_item)['copy_no']).to be_nil
+    end
+
+    it 'prepends c. to the copy_no when present' do
+      expect(marc_to_item(copy_no_item)['copy_no']).to start_with('c. ')
+    end
+
     it 'does not tag BOOKBOT/STACKS as library_use_only' do
       expect(library_use_only?(bookbotStacksItem)).to be(false)
     end
@@ -80,5 +98,15 @@ describe MarcToArgot::Macros::NCSU::Items do
       remap_item_locations!(speccollItem)
       expect(speccollItem['loc_n']).to eq('SPECCOLL-ARCHIVES')
     end
+
+    it 'excludes PRINTDDA (Books By Request) from location hierarchy' do
+      lh = bbr_record['location_hierarchy']
+      expect(lh).not_to include('ncsu:BBR')
+    end
+
+    it 'excludes ONLINE library from location hierarchy' do
+      expect(audiobook['location_hierarchy']).to be_empty
+    end
+
   end
 end

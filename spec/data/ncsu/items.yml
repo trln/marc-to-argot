@@ -1,0 +1,24 @@
+---
+:dummy:
+    :i: item_id
+    :c: copy_no
+    :m: loc_b
+    :o: notes
+    :a: call_no
+    :k: loc_current
+    :l: loc_n
+    :t: type
+    :v: vol
+    :w: cn_scheme
+    :z: item_cat_2
+
+:no_copy_no:
+    :i: SN0C0PY
+    :m: DHHILL
+    :l: STACKS
+
+:copy_no:
+    :i: SY3SC0PY
+    :m: DHHILL
+    :l: STACKS
+    :c: 1

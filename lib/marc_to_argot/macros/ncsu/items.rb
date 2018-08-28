@@ -17,6 +17,8 @@ module MarcToArgot
           z: { key: 'item_cat_2' }
         }.freeze
 
+        NO_FACET_LOCATIONS = %w[ONLINE BBR].freeze
+
         MAINS = Set.new(%w[DHILL HUNT]).freeze
 
         # locations that map to virtual collections
@@ -128,6 +130,7 @@ module MarcToArgot
             mapped = SUBFIELDS.fetch(code, key: nil)[:key]
             item[mapped] = subfield.value unless mapped.nil?
           end
+          item['copy_no'] = "c. #{item['copy_no']}" if item['copy_no'] 
           item_status!(item)
           item
         end
@@ -143,7 +146,8 @@ module MarcToArgot
           access_types << 'At the Library' if physical_access?(rec, libs)
           ctx.output_hash['access_type'] = access_types
           ctx.output_hash['virtual_collection'] = vcs unless vcs.empty?
-          loc_hier = arrays_to_hierarchy(items.map { |x| ['ncsu', x['loc_b']] })
+          visible_loc_items = items.reject { |i| NO_FACET_LOCATIONS.include?(i['loc_b']) }
+          loc_hier = arrays_to_hierarchy(visible_loc_items.map { |x| ['ncsu', x['loc_b']] })
           ctx.output_hash['location_hierarchy'] =  loc_hier
         end
 

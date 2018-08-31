@@ -1,0 +1,1239 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas a2201789 a 4500</leader>
+  <controlfield tag='001'>1697070</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20150318115029.0</controlfield>
+  <controlfield tag='008'>751012d19212014dcumr p   s  f0   a0eng c</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>21026819</subfield>
+  </datafield>
+  <datafield tag='012' ind1=' ' ind2=' '>
+    <subfield code='b'>3</subfield>
+    <subfield code='e'>b</subfield>
+    <subfield code='j'>1</subfield>
+    <subfield code='l'>g</subfield>
+  </datafield>
+  <datafield tag='016' ind1='7' ind2=' '>
+    <subfield code='a'>010508009</subfield>
+    <subfield code='2'>Uk</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>2582315</subfield>
+    <subfield code='a'>6161496</subfield>
+    <subfield code='a'>13566910</subfield>
+    <subfield code='a'>185058421</subfield>
+    <subfield code='a'>264687664</subfield>
+    <subfield code='a'>612143726</subfield>
+  </datafield>
+  <datafield tag='022' ind1='0' ind2=' '>
+    <subfield code='a'>0039-6222</subfield>
+    <subfield code='l'>0039-6222</subfield>
+    <subfield code='2'>1</subfield>
+  </datafield>
+  <datafield tag='030' ind1=' ' ind2=' '>
+    <subfield code='a'>SVCBAK</subfield>
+  </datafield>
+  <datafield tag='030' ind1=' ' ind2=' '>
+    <subfield code='a'>SVCBAK</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)1697070</subfield>
+    <subfield code='z'>(OCoLC)2582315</subfield>
+    <subfield code='z'>(OCoLC)6161496</subfield>
+    <subfield code='z'>(OCoLC)13566910</subfield>
+    <subfield code='z'>(OCoLC)185058421</subfield>
+    <subfield code='z'>(OCoLC)264687664</subfield>
+    <subfield code='z'>(OCoLC)612143726</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>MUL</subfield>
+    <subfield code='b'>eng</subfield>
+    <subfield code='c'>MUL</subfield>
+    <subfield code='d'>SUL</subfield>
+    <subfield code='d'>COO</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>IUL</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>AIP</subfield>
+    <subfield code='d'>HUL</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>AIP</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>WAU</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>MYG</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>AGL</subfield>
+    <subfield code='d'>IUL</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>IUL</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>MUQ</subfield>
+    <subfield code='d'>DIBAM</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>NLGGC</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>NYDWH</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>CIT</subfield>
+    <subfield code='d'>FJM</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>UKMGB</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>FUG</subfield>
+    <subfield code='d'>ORZ</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>OCLCF</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>CLU</subfield>
+    <subfield code='d'>OCLCA</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>nsdp</subfield>
+    <subfield code='a'>pcc</subfield>
+  </datafield>
+  <datafield tag='043' ind1=' ' ind2=' '>
+    <subfield code='a'>n-us---</subfield>
+  </datafield>
+  <datafield tag='049' ind1=' ' ind2=' '>
+    <subfield code='a'>NDOL</subfield>
+  </datafield>
+  <datafield tag='050' ind1=' ' ind2='4'>
+    <subfield code='a'>K23</subfield>
+    <subfield code='b'>.U78</subfield>
+  </datafield>
+  <datafield tag='050' ind1='0' ind2='0'>
+    <subfield code='a'>HC101</subfield>
+    <subfield code='b'>.A13</subfield>
+  </datafield>
+  <datafield tag='074' ind1=' ' ind2=' '>
+    <subfield code='a'>0228</subfield>
+  </datafield>
+  <datafield tag='082' ind1='0' ind2='4'>
+    <subfield code='a'>330.5</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 18.5/3</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 3.33:</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 18.35:</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 43.8:</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 56.109:</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 59.11:</subfield>
+  </datafield>
+  <datafield tag='210' ind1='0' ind2=' '>
+    <subfield code='a'>Surv. curr. bus.</subfield>
+  </datafield>
+  <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>Survey of current business</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Survey of current business</subfield>
+    <subfield code='h'>[serial] /</subfield>
+    <subfield code='c'>United States Department of Commerce ; compiled by Bureau of the Census, Bureau of Foreign and Domestic Commerce, Bureau of Standards.</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>Washington :</subfield>
+    <subfield code='b'>U.S. Dept. of Commerce,</subfield>
+    <subfield code='c'>1921-</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v. :</subfield>
+    <subfield code='b'>ill. ;</subfield>
+    <subfield code='c'>31 cm.</subfield>
+  </datafield>
+  <datafield tag='310' ind1=' ' ind2=' '>
+    <subfield code='a'>Monthly</subfield>
+  </datafield>
+  <datafield tag='362' ind1='0' ind2=' '>
+    <subfield code='a'>No. 1 (Aug. 1, 1921)-no. 117 (May 1931); v. 11, no. 6 (June 1931)-</subfield>
+  </datafield>
+  <datafield tag='362' ind1='1' ind2=' '>
+    <subfield code='a'>Ceased in print with: Vol. 94, no. 1 (Jan. 2014).</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Title from cover.</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>No SuDoc number issued until no. 34 (July 1924) which was C 18.5/3; changed to C 3.33: from Jan. 1924 to July 1930 ; C 18.35: from July 1930 to Feb. 1944 ; C 43.8: from Feb. 1944 to Dec. 1972 ; C 56.109: for v. 52 (Feb. 1973) to 55 ; C 59.11: after v.56. Source: Monthly catalog.</subfield>
+  </datafield>
+  <datafield tag='515' ind1=' ' ind2=' '>
+    <subfield code='a'>Preceded by an unnumbered issue dated July 1, 1921.</subfield>
+  </datafield>
+  <datafield tag='515' ind1=' ' ind2=' '>
+    <subfield code='a'>Issues for Jan. and Feb. 1996 combined.</subfield>
+  </datafield>
+  <datafield tag='515' ind1=' ' ind2=' '>
+    <subfield code='a'>Vol. 93, no. 10 (Oct. 2013) not published in print but is available online.</subfield>
+  </datafield>
+  <datafield tag='550' ind1=' ' ind2=' '>
+    <subfield code='a'>Issued by: Bureau of the Census, June 1929-June 1930; by: Bureau of Foreign and Domestic Commerce, July 1930-Jan. 1947; by: Office of Business Economics, Feb. 1947-Dec. 1971; by: Bureau of Economic Analysis, Jan. 1972-</subfield>
+  </datafield>
+  <datafield tag='580' ind1=' ' ind2=' '>
+    <subfield code='a'>Supplemented by: National income and product accounts of the United States. Statistical tables, 1965- ; by: Business statistics (Washington, D.C. : Biennial), 1951- ; by: Weekly business statistics, 1977-1981, and by their predecessor and successor publications. Cumulated 1994-2000 by annual CD-ROM publication with same title. Some material appearing in Survey of current business is occasionally reprinted in the publication: User&apos;s guide to BEA information.</subfield>
+  </datafield>
+  <datafield tag='588' ind1=' ' ind2=' '>
+    <subfield code='a'>Latest issue consulted: Vol. 82, no. 7 (July 2002).</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Commercial statistics</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='7'>
+    <subfield code='a'>Economic history.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>(OCoLC)fst00901974</subfield>
+  </datafield>
+  <datafield tag='650' ind1='1' ind2='7'>
+    <subfield code='a'>Bedrijfsleven.</subfield>
+    <subfield code='2'>gtt</subfield>
+  </datafield>
+  <datafield tag='650' ind1='1' ind2='7'>
+    <subfield code='a'>Economische ontwikkeling.</subfield>
+    <subfield code='2'>gtt</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='7'>
+    <subfield code='a'>ESTADISTICA COMERCIAL</subfield>
+    <subfield code='x'>PUBLICACIONES PERIODICAS.</subfield>
+    <subfield code='2'>renib</subfield>
+  </datafield>
+  <datafield tag='650' ind1='1' ind2='7'>
+    <subfield code='a'>BUSINESS.</subfield>
+    <subfield code='2'>unbist</subfield>
+  </datafield>
+  <datafield tag='650' ind1='1' ind2='7'>
+    <subfield code='a'>UNITED STATES.</subfield>
+    <subfield code='2'>unbist</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='7'>
+    <subfield code='a'>Commerce.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>(OCoLC)fst00869279</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='7'>
+    <subfield code='a'>Commercial statistics.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>(OCoLC)fst00869640</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='0'>
+    <subfield code='a'>United States</subfield>
+    <subfield code='x'>Economic conditions</subfield>
+    <subfield code='v'>Statistics</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='7'>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>(OCoLC)fst01204155</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='0'>
+    <subfield code='a'>United States</subfield>
+    <subfield code='x'>Commerce</subfield>
+    <subfield code='v'>Statistics</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='655' ind1=' ' ind2='7'>
+    <subfield code='a'>Periodicals.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>(OCoLC)fst01411641</subfield>
+  </datafield>
+  <datafield tag='655' ind1=' ' ind2='7'>
+    <subfield code='a'>Statistics.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>(OCoLC)fst01423727</subfield>
+  </datafield>
+  <datafield tag='710' ind1='1' ind2=' '>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='b'>Bureau of the Census.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='1' ind2=' '>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='b'>Bureau of Foreign and Domestic Commerce.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='1' ind2=' '>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='b'>Office of Business Economics.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='1' ind2=' '>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='b'>Bureau of Economic Analysis.</subfield>
+  </datafield>
+  <datafield tag='762' ind1='1' ind2=' '>
+    <subfield code='t'>Survey of current business. Weekly supplement</subfield>
+    <subfield code='w'>(DLC)   90643809</subfield>
+    <subfield code='w'>(OCoLC)9901283</subfield>
+  </datafield>
+  <datafield tag='770' ind1='1' ind2=' '>
+    <subfield code='t'>National income and product accounts of the United States. Statistical tables</subfield>
+    <subfield code='x'>0361-3895</subfield>
+    <subfield code='w'>(DLC)   76641088</subfield>
+    <subfield code='w'>(OCoLC)2246481</subfield>
+  </datafield>
+  <datafield tag='770' ind1='1' ind2=' '>
+    <subfield code='t'>Business statistics (Washington, D.C. : Biennial)</subfield>
+    <subfield code='x'>0083-2545</subfield>
+    <subfield code='w'>(DLC)   90643805</subfield>
+    <subfield code='w'>(OCoLC)1227582</subfield>
+  </datafield>
+  <datafield tag='770' ind1='1' ind2=' '>
+    <subfield code='t'>Weekly business statistics</subfield>
+    <subfield code='x'>0162-8860</subfield>
+    <subfield code='w'>(DLC)   78646483</subfield>
+    <subfield code='w'>(OCoLC)3306990</subfield>
+  </datafield>
+  <datafield tag='772' ind1='0' ind2=' '>
+    <subfield code='a'>United States. Bureau of Foreign and Domestic Commerce.</subfield>
+    <subfield code='t'>Commerce reports</subfield>
+    <subfield code='g'>July 1921-July 1925</subfield>
+    <subfield code='w'>(OCoLC)1533465</subfield>
+  </datafield>
+  <datafield tag='776' ind1='0' ind2='8'>
+    <subfield code='i'>Continued online:</subfield>
+    <subfield code='t'>Survey of current business (Online)</subfield>
+    <subfield code='x'>1937-4534</subfield>
+    <subfield code='w'>(DLC)  2002230671</subfield>
+    <subfield code='w'>(OCoLC)48033640</subfield>
+  </datafield>
+  <datafield tag='780' ind1='0' ind2='6'>
+    <subfield code='t'>Business conditions digest</subfield>
+    <subfield code='x'>0146-7735</subfield>
+    <subfield code='w'>(DLC)   72621004</subfield>
+    <subfield code='w'>(OCoLC)2452279</subfield>
+  </datafield>
+  <datafield tag='787' ind1='1' ind2=' '>
+    <subfield code='t'>Survey of current business (CD-ROM)</subfield>
+    <subfield code='x'>1937-4526</subfield>
+    <subfield code='w'>(DLC)   95655290</subfield>
+    <subfield code='w'>(OCoLC)32717486</subfield>
+  </datafield>
+  <datafield tag='787' ind1='1' ind2=' '>
+    <subfield code='t'>User&apos;s guide to BEA information</subfield>
+    <subfield code='w'>(DLC)   96644652</subfield>
+    <subfield code='w'>(OCoLC)19232828</subfield>
+  </datafield>
+  <datafield tag='856' ind1='4' ind2='1'>
+    <subfield code='u'>http://purl.access.gpo.gov/GPO/LPS1730</subfield>
+  </datafield>
+  <datafield tag='856' ind1='4' ind2='1'>
+    <subfield code='3'>FRASER archive</subfield>
+    <subfield code='u'>http://purl.access.gpo.gov/GPO/LPS80460</subfield>
+  </datafield>
+  <datafield tag='891' ind1='2' ind2='0'>
+    <subfield code='9'>853</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='u'>12</subfield>
+    <subfield code='v'>r</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+    <subfield code='k'>(day)</subfield>
+    <subfield code='w'>m</subfield>
+  </datafield>
+  <datafield tag='891' ind1='4' ind2='1'>
+    <subfield code='9'>863</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1</subfield>
+    <subfield code='i'>1921</subfield>
+    <subfield code='j'>08</subfield>
+    <subfield code='k'>01</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1317123</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675054</subfield>
+    <subfield code='l'>dcpf</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>HAHE-5109-00001</subfield>
+    <subfield code='p'>0860#</subfield>
+    <subfield code='q'>|aC 59.11:</subfield>
+    <subfield code='v'>v.1-(1921-)</subfield>
+    <subfield code='n'>TO DATE</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675056</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00045878W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.71 (1991: Sept./Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675057</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00045879X</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.72 (1992: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675058</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00127632L</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.72 (1992: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675059</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00169637W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.73 (1993: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675060</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00081940M</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.73 (1993: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675061</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00210190D</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.74 (1994: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675062</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00210196J</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.74 (1994: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675063</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00082908R</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.75 (1995: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675064</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00233239M</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.75 (1995: July/Oct.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675065</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00134471K</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.76 (1996: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675066</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00249629W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.76 (1996: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675067</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00249635T</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.77 (1997: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675068</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00267179W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.77 (1997: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675069</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00252039L</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.78 (1998: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675070</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00254885W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.78 (1998: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675071</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00285736V</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.79 (1999: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675072</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00285737W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.79 (1999: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675073</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00299919$</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.80 (2000: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675074</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00299920V</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.80 (2000: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675075</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00318613M</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.81 (2001: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675076</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00324623K</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.81 (2001: July/Sep.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675077</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00324635N</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.81 (2001: Oct./Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675078</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00319253N</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.82 (2002: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675079</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00324629Q</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.82 (2002: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675080</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00327582R</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.83 (2003: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675081</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00330988V</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.83 (2003: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675082</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00334653O</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.84 (2004: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6136869</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00340823K</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.84 (2004: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6302632</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00344788Y</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23|b.U681</subfield>
+    <subfield code='v'>v.85 (2005: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6366055</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00348642R</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23|b.U681</subfield>
+    <subfield code='v'>v.85 (2005: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6789351</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00358352Q</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.86 (2006: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6789353</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00358353R</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.86 (2006: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7287233</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00363978-</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.87 (2007: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7351923</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00283128O</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.87 (2007: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7564960</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00368182S</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.88 (2008: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7722113</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00371224J</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.88 (2008: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7910748</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00375963X</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.89 (2009: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8223004</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00380044J</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.89 (2009: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8448739</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00383846W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.90 (2010: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9117163</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00390719T</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.90 (2010: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9577978</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00394953X</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.91 (2011: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9577983</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00394959$</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.91 (2011: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9756444</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00396374W</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.92 (2012: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i10024367</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00399749+</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.92 (2012: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i10135517</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00400909M</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.93 (2013: Jan./June)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i10349635</subfield>
+    <subfield code='l'>ksta</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>L00403310B</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aK23 .U681</subfield>
+    <subfield code='v'>v.93 (2013: July/Dec.)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1675055</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707011</subfield>
+    <subfield code='v'>v.60:no.1-6(Jan.-June 1980)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883349</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707020</subfield>
+    <subfield code='v'>v.60:no7-12(July-Dec.1980)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883352</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707039</subfield>
+    <subfield code='v'>v.62:no.1-6(Jan.-June 1981)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883355</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706815</subfield>
+    <subfield code='v'>v.61:no.7-12(July-Dec.1981)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883357</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707048</subfield>
+    <subfield code='v'>v.62:no.1-6(Jan.-June 1982)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883360</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706824</subfield>
+    <subfield code='v'>v.62:no.7-12(July-Dec.1982)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883362</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706833</subfield>
+    <subfield code='v'>v.63:no.1-6(Jan.-June 1983)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883364</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706842</subfield>
+    <subfield code='v'>v.63:no.7-12(July-Dec.1983)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883366</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706851</subfield>
+    <subfield code='v'>v.64:no.1-6(Jan.-June 1984)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883368</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706860</subfield>
+    <subfield code='v'>v.64:no.7-12(July-Dec.1984)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883371</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706879</subfield>
+    <subfield code='v'>v.65:no.1-6(Jan.-June 1985)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883374</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706888</subfield>
+    <subfield code='v'>v.65:no.7-12(July-Dec.1985)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883376</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706897</subfield>
+    <subfield code='v'>v.66:no.1-6(Jan.-June 1986)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883382</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706904</subfield>
+    <subfield code='v'>v.66:no.7-12(July-Dec.1986)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883384</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706913</subfield>
+    <subfield code='v'>v.67:no.1-6(Jan.-June 1987)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883386</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035706922</subfield>
+    <subfield code='v'>v.67:no.7-12(July-Dec.1987)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883397</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707413</subfield>
+    <subfield code='v'>v.68:no.1-6(Jan.-June 1988)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883398</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707422</subfield>
+    <subfield code='v'>v.68:no.7-12(July-Dec.1988)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883400</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707431</subfield>
+    <subfield code='v'>v.70:no.1-7(Jan.-June 1990)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883402</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035707440</subfield>
+    <subfield code='v'>v.70:no.7-12(July-Dec.1990)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883404</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035727776</subfield>
+    <subfield code='v'>v.71:no.1-6(Jan.-June 1991)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883405</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035727785</subfield>
+    <subfield code='v'>v.71:no.7-12(July-Dec.1991)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7883406</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00035727794</subfield>
+    <subfield code='v'>v.72:no.1-6(Jan.-June 1992)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1361648</subfield>
+    <subfield code='b'>dcpf</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1361648</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>553388</subfield>
+    <subfield code='z'>Currently received</subfield>
+    <subfield code='h'>C 59.11:</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1361648</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='i'>(year)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1361648</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1-</subfield>
+    <subfield code='i'>1921-</subfield>
+    <subfield code='p'>HAHE-5109-00001</subfield>
+    <subfield code='z'>TO DATE</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1361649</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1361649</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>dnda</subfield>
+    <subfield code='x'>Bulk transf. from IOG 4/13/97</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1361649</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1361649</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>60-72</subfield>
+    <subfield code='b'>1-6</subfield>
+    <subfield code='i'>1980-1992</subfield>
+    <subfield code='j'>Jan.-June</subfield>
+    <subfield code='x'>V.69,no.11/12 and v.72 no.7/8 at bindery to be delivered later</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2015-03-18 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-27 18:44:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:12:33-05</subfield>
+  </datafield>
+</record>
+</collection>

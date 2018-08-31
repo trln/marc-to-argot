@@ -33,10 +33,7 @@ module MarcToArgot
             argotholdings = []
             tmp_holdings.each { |hrec| argotholdings << hrec.to_argot }
             cxt.output_hash['holdings'] = argotholdings
-<<<<<<< HEAD
-=======
 #            puts "AH: #{argotholdings}"
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
           end
         end
 
@@ -69,11 +66,7 @@ module MarcToArgot
 
             df = new_data_field(field) if 
               ( field['2'] == '852' && field['3'] == 'c' ) ||
-<<<<<<< HEAD
-              ( field['2'] == '853' && field['3'] == 'y' ) ||
-=======
               ( field['2'] =~ /85[345]/ && field['3'] == 'y' ) ||
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
               ( field['2'] =~ /86./ && field['3'] == 'h' )
 
             if df
@@ -214,10 +207,7 @@ module MarcToArgot
             get_enums_and_chrons
 #            puts @enums_and_chrons
             apply_patterns unless @patterns.empty? || @enums_and_chrons.empty?
-<<<<<<< HEAD
-=======
 #            puts "BSH: #{@summary_holding}"
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
           end
 
           def apply_patterns
@@ -227,10 +217,7 @@ module MarcToArgot
             p.each do |holding_type, patterns|
               result = []
               patterns.each do |pid, pattern|
-<<<<<<< HEAD
-=======
 #                puts "PATTERN: #{pattern}"
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
                 result << process_pattern(holding_type, pid, pattern)
               end
               
@@ -273,28 +260,6 @@ module MarcToArgot
                   ov = process_pattern_subfield(pattern, sf, ec[:sfs][sf][:open])
                   cv = process_pattern_subfield(pattern, sf, ec[:sfs][sf][:close]) if ec[:rangeness]
 
-<<<<<<< HEAD
-                  case sf
-                  when /[abcdef]/
-                    numeration[:open] << ov
-                    numeration[:close] << cv if ec[:rangeness]
-                  when /[gh]/
-                    alt_numeration[:open] << ov
-                    alt_numeration[:close] << cv if ec[:rangeness]
-                  when /[ijkl]/
-                    case get_pattern_segment_value(pattern, sf)
-                    when 'year'
-                      chron_type = :year
-                    when 'month'
-                      chron_type = :month
-                    when 'day'
-                      chron_type = :day
-                    else
-                      chron_type = :other
-                    end
-                    chron_pieces[:open][chron_type] << ov
-                    chron_pieces[:close][chron_type] << cv if ec[:rangeness]
-=======
                   case get_pattern_segment_value(pattern, sf)
                   when 'year'
                     chron_type = :year
@@ -322,42 +287,21 @@ module MarcToArgot
                   when 'l'
                     chron_pieces[:open][:other] << ov
                     chron_pieces[:close][:other] << cv if ec[:rangeness]
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
                   end
                 end
               end
               numeration = numeration.map{ |k, v| [k, v.join(':')] }.to_h
-<<<<<<< HEAD
-
-              # puts chronology elements in the right order for display
-              chron_pieces.each do |range_type, pieces|
-                result = []
-                result << "#{pieces[:month]} " if pieces[:month].length > 0
-                result << pieces[:day] if pieces[:day]
-=======
               
               # puts chronology elements in the right order for display
               chron_pieces.each do |range_type, pieces|
                 result = []
                 result << "#{translate_month(pieces[:month])} " if pieces[:month].length > 0
                 result << "#{pieces[:day]}, " if pieces[:day].length > 0
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
                 result << pieces[:year] if pieces[:year]
                 result << pieces[:other] if pieces[:other]
                 chron_pieces[range_type][:compiled] = result.join('')
               end
                 
-<<<<<<< HEAD
-
-              result = ''
-              result << "#{numeration[:open]} (#{chron_pieces[:open][:compiled]})"
-              if numeration[:close].empty? && chron_pieces[:close][:compiled].empty?
-                result << " #{pub_note.join(' ')}"
-              else
-                result << " - "
-                result << "#{numeration[:close]} (#{chron_pieces[:close][:compiled]})"
-              end
-=======
               result = ''
 #              puts "NUMOPEN: #{numeration[:open].inspect}"
 #              puts "CHRONOPEN: #{chron_pieces[:open][:compiled].inspect}"
@@ -388,14 +332,11 @@ module MarcToArgot
               
               result << " #{pub_note.join(' ')}" unless pub_note.empty?
 #              puts "RESULT: #{result}"
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
               summary << result
             end
               return summary.join(', ')
           end
 
-<<<<<<< HEAD
-=======
           def translate_month(month)
             month = '0' + month if month.match?(/^\d$/)
             if holdings_month[month]
@@ -409,16 +350,11 @@ module MarcToArgot
             @holdings_month ||=Traject::TranslationMap.new('unc/holdings_months')
           end
 
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
           def get_pattern_segment_value(pattern, sfcode)
             pattern[sfcode][:value]
           end
 
           def process_pattern_subfield(pattern, sfcode, sfval)
-<<<<<<< HEAD
-            label = "#{pattern[sfcode][:value]} " if pattern[sfcode][:is_label]
-            "#{label}#{sfval}"
-=======
             label = "#{pattern[sfcode][:value]}" if pattern[sfcode][:is_label]
             if label
               value = "#{label} #{sfval}"
@@ -428,7 +364,6 @@ module MarcToArgot
 #              puts "SFVAL: #{value}"
               return sfval
             end
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
           end
           
           # returns array of enum/chron field data, sorted by occurrence
@@ -489,11 +424,7 @@ module MarcToArgot
                 end
               end
               @enums_and_chrons = enums_and_chrons
-<<<<<<< HEAD
-              #puts @enums_and_chrons
-=======
 #             puts @enums_and_chrons
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
             end
           end
 
@@ -540,10 +471,7 @@ module MarcToArgot
             
               
             pfs.each do |pf|
-<<<<<<< HEAD
-=======
 #              puts "PATTERN FIELD: #{pf.inspect}"
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
               pid = get_pattern_id(pf)
               pattern = {}
               type = get_field_type(pf)
@@ -559,20 +487,13 @@ module MarcToArgot
               patterns[type][pid] = pattern
             end
             @patterns = patterns
-<<<<<<< HEAD
-=======
             #puts "PATTERNS: #{@patterns}"
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
             end
           end
 
           def get_pattern_segment(string)
             is_label = true unless string =~ /\(.*\)/
-<<<<<<< HEAD
-            cleaned = string.delete('()')
-=======
             cleaned = string.delete('()').strip
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
             {:value => cleaned, :is_label => is_label}
           end
 
@@ -583,11 +504,7 @@ module MarcToArgot
 
           def get_pattern_occurrence(field)
             sf8 = field.subfields.select{ |sf| sf.code == '8'}.first
-<<<<<<< HEAD
-            sf8.value.split('.')[1]
-=======
             sf8.value.split('.')[1].to_i
->>>>>>> 5534fe3af53d7ed0befdd481174468069f401fad
           end
 
           def get_field_type(field)

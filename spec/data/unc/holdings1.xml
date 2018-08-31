@@ -1,0 +1,102 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000nas  2200217Ia 4500</leader>
+  <controlfield tag='001'>22474366</controlfield>
+  <controlfield tag='005'>20010907134237.0</controlfield>
+  <controlfield tag='008'>901005u1939uuuupe uu         0   b0spa d</controlfield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>NDD</subfield>
+    <subfield code='c'>NDD</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='3'>
+    <subfield code='a'>La Colonia del Perene y sus problemas medico sociales /</subfield>
+    <subfield code='c'>Instituto de Medicina Social.</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>Lima :</subfield>
+    <subfield code='b'>Ediciones de &quot;La Reforma médica,&quot;</subfield>
+    <subfield code='c'>1939-</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v. :</subfield>
+    <subfield code='b'>ill. ;</subfield>
+    <subfield code='c'>25 cm.</subfield>
+  </datafield>
+  <datafield tag='362' ind1='0' ind2=' '>
+    <subfield code='a'>1. memoria-</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Social medicine</subfield>
+    <subfield code='z'>Peru</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Public health</subfield>
+    <subfield code='z'>Peru</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='0'>
+    <subfield code='a'>Peru</subfield>
+    <subfield code='x'>Social conditions</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Universidad Nacional Mayor de San Marcos.</subfield>
+    <subfield code='b'>Instituto de Medicina Social.</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b4046175</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i5558514</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00028300525</subfield>
+    <subfield code='p'>092##</subfield>
+    <subfield code='q'>|a614.0985 L732c</subfield>
+    <subfield code='v'>v.1-3(1939)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1911997</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1911997</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555541</subfield>
+    <subfield code='h'>614.0985</subfield>
+    <subfield code='i'>L732c</subfield>
+    <subfield code='x'>**</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1911997</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='t'>c.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1911997</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1-3</subfield>
+    <subfield code='i'>1939</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-10-06 23:02:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:50:40-05</subfield>
+  </datafield>
+</record>
+</collection>

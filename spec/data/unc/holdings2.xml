@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas  22001811a 4500</leader>
+  <controlfield tag='001'>1780340</controlfield>
+  <controlfield tag='005'>19870106000000.0</controlfield>
+  <controlfield tag='008'>870106d19711974ne qx p       0   a0eng  </controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>72624414 //r77</subfield>
+  </datafield>
+  <datafield tag='022' ind1=' ' ind2=' '>
+    <subfield code='a'>0034-3331</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>DLC</subfield>
+    <subfield code='c'>MUL</subfield>
+    <subfield code='d'>YUS</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>NSD</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>lc</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Regional and urban economics</subfield>
+    <subfield code='h'>[serial].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>[Amsterdam :</subfield>
+    <subfield code='b'>North Holland Pub. Co.]</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>4 v. :</subfield>
+    <subfield code='b'>ill. ;</subfield>
+    <subfield code='c'>24 cm.</subfield>
+  </datafield>
+  <datafield tag='362' ind1='0' ind2=' '>
+    <subfield code='a'>Vol. 1, no. 1 (May 1971)-v. 4, no. 2 (Oct. 1974).</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Economics</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='785' ind1='0' ind2='0'>
+    <subfield code='t'>Regional science and urban economics</subfield>
+    <subfield code='w'>(OCoLC)1334639</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1327262</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1773542</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00036429775</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHB9 .R33</subfield>
+    <subfield code='v'>v.1(1971-1972)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8037617</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00036429784</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHB9|b.R33</subfield>
+    <subfield code='v'>v.2(1972-1973)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8037618</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00036429793</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHB9|b.R33</subfield>
+    <subfield code='v'>v.3(1973)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i8037619</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00036429800</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aHB9|b.R33</subfield>
+    <subfield code='v'>v.4(1974)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1370494</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1370494</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555521</subfield>
+    <subfield code='h'>HB9</subfield>
+    <subfield code='i'>.R33</subfield>
+    <subfield code='x'>Later titles exist.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1370494</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1370494</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1-4</subfield>
+    <subfield code='i'>1971-1974</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-27 18:45:16-04</subfield>
+    <subfield code='u'>2017-12-01 10:14:17-05</subfield>
+  </datafield>
+</record>
+</collection>

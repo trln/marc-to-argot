@@ -1,0 +1,215 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas  2200349Ia 4500</leader>
+  <controlfield tag='001'>3660043</controlfield>
+  <controlfield tag='005'>19830419000000.0</controlfield>
+  <controlfield tag='008'>780222c19779999dk qr p       0   a0dan d</controlfield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>HUL</subfield>
+    <subfield code='c'>HUL</subfield>
+    <subfield code='d'>COO</subfield>
+    <subfield code='d'>MUL</subfield>
+    <subfield code='d'>HUL</subfield>
+    <subfield code='d'>IUL</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Kultur og klasse</subfield>
+    <subfield code='h'>[serial].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>[København] :</subfield>
+    <subfield code='b'>Medusa,</subfield>
+    <subfield code='c'>1977-</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v. ;</subfield>
+    <subfield code='c'>21 cm.</subfield>
+  </datafield>
+  <datafield tag='362' ind1='0' ind2=' '>
+    <subfield code='a'>Årg. 8, nr. 1 (1977)- = Nr. 29- .</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Poetics</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Poetry</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Communism and literature</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Literature</subfield>
+    <subfield code='x'>History and criticism</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='780' ind1='0' ind2='0'>
+    <subfield code='t'>Tidsskriftet poetik</subfield>
+    <subfield code='w'>(OCoLC)2252024</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1514689</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i2133062</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615019</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.8:nr.1-4=nr.29-32(1977-1978)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535823</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615028</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.9:nr.1-4=nr.33-36(1978-[1979])</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535825</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615037</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.10:nr.1-4=nr.37-40([1980-1981])</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535826</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615046</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.11:nr.1-4=nr.41-44([1981-1982])</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535827</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615055</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.12:nr.1-4=nr.45-48([1983])</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535828</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615064</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.13:nr.1-4=nr.49-52(sept.1984-febr.1986)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535829</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615073</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.14:nr.1-4=nr.53-56(juni 1986-april 1987)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535830</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615082</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.15:nr.1-4=nr.57-60(aug.1987-april 1987)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535831</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615091</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.16:nr.1-4=nr.61-64(maj 1988-april 1989)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7535832</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00027615108</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aPN51|b.P5</subfield>
+    <subfield code='v'>årg.17:nr.1-4=nr.65-68(1989-1990)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1503867</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1503867</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555521</subfield>
+    <subfield code='h'>PN51</subfield>
+    <subfield code='i'>.P5</subfield>
+    <subfield code='x'>Earlier titles exist.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1503867</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>årg.</subfield>
+    <subfield code='g'>nr.</subfield>
+    <subfield code='i'>(year)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1503867</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>8-17</subfield>
+    <subfield code='g'>29-68</subfield>
+    <subfield code='i'>1977-1990</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-28 16:21:41-04</subfield>
+    <subfield code='u'>2017-12-01 10:18:32-05</subfield>
+  </datafield>
+</record>
+</collection>

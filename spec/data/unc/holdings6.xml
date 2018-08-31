@@ -145,10 +145,16 @@
   </datafield>
   <datafield tag='999' ind1='9' ind2='3'>
     <subfield code='0'>c4900225</subfield>
-    <subfield code='2'>866</subfield>
+    <subfield code='2'>863</subfield>
     <subfield code='3'>h</subfield>
-    <subfield code='8'>1</subfield>
-    <subfield code='a'>año 56:Mes 8:no.16.512(mayo 22, 1928)-año 57:Mes 1:no.16.644(oct.27, 1928) Some issues missing.</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>56-57</subfield>
+    <subfield code='b'>8-1</subfield>
+    <subfield code='c'>16.512-16.644</subfield>
+    <subfield code='i'>1928</subfield>
+    <subfield code='j'>mayo-oct.</subfield>
+    <subfield code='k'>22-27</subfield>
+    <subfield code='z'>Some issues missing</subfield>
   </datafield>
   <datafield tag='999' ind1='9' ind2='2'>
     <subfield code='a'>c4900227</subfield>

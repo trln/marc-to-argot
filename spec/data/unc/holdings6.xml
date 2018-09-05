@@ -136,8 +136,8 @@
     <subfield code='2'>853</subfield>
     <subfield code='3'>y</subfield>
     <subfield code='8'>1</subfield>
-    <subfield code='a'>año</subfield>
-    <subfield code='b'>Mes</subfield>
+    <subfield code='a'>año </subfield>
+    <subfield code='b'>Mes </subfield>
     <subfield code='c'>no.</subfield>
     <subfield code='i'>(year)</subfield>
     <subfield code='j'>(month)</subfield>
@@ -172,8 +172,8 @@
     <subfield code='2'>853</subfield>
     <subfield code='3'>y</subfield>
     <subfield code='8'>1</subfield>
-    <subfield code='a'>año</subfield>
-    <subfield code='b'>Mes</subfield>
+    <subfield code='a'>año </subfield>
+    <subfield code='b'>Mes </subfield>
     <subfield code='c'>no.</subfield>
     <subfield code='i'>(year)</subfield>
     <subfield code='j'>(month)</subfield>

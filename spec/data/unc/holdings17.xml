@@ -1,0 +1,126 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas a2201081 a 4500</leader>
+  <controlfield tag='001'>1565592</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20120809082225.0</controlfield>
+  <controlfield tag='008'>750824c19589999cauqr p       0   a0eng c</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>59004068</subfield>
+  </datafield>
+  <datafield tag='015' ind1=' ' ind2=' '>
+    <subfield code='a'>010042784</subfield>
+    <subfield code='2'>dnb</subfield>
+  </datafield>
+  <datafield tag='016' ind1='7' ind2=' '>
+    <subfield code='a'>955312-5</subfield>
+    <subfield code='2'>DE-600</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>2260013</subfield>
+    <subfield code='a'>57279792</subfield>
+  </datafield>
+  <datafield tag='022' ind1='0' ind2=' '>
+    <subfield code='a'>0011-3069</subfield>
+    <subfield code='l'>0011-3069</subfield>
+    <subfield code='2'>1</subfield>
+  </datafield>
+  <datafield tag='030' ind1=' ' ind2=' '>
+    <subfield code='a'>CRTRAH</subfield>
+  </datafield>
+  <datafield tag='032' ind1=' ' ind2=' '>
+    <subfield code='a'>000963</subfield>
+    <subfield code='b'>USPS</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)1565592</subfield>
+    <subfield code='z'>(OCoLC)2260013</subfield>
+    <subfield code='z'>(OCoLC)57279792</subfield>
+  </datafield>
+  <datafield tag='037' ind1=' ' ind2=' '>
+    <subfield code='b'>Curator, the museum journal, 15200 NBN Way, Blus Ridge Summit, PA 17214</subfield>
+  </datafield>
+   <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>Curator</subfield>
+    <subfield code='b'>(New York, N.Y.)</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Curator</subfield>
+    <subfield code='h'>[serial] :</subfield>
+    <subfield code='b'>a quarterly publication of the American Museum of Natural History.</subfield>
+  </datafield>
+    <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1300647</subfield>
+    </datafield>
+
+     <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1459134</subfield>
+    <subfield code='b'>trbrs</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555521</subfield>
+    <subfield code='h'>DA20</subfield>
+    <subfield code='i'>.C17</subfield>
+    <subfield code='x'>ANALYZED</subfield>
+    <subfield code='x'>Later titles exist.</subfield>
+    <subfield code='z'>Set entitled Nicholas papers extracted and cataloged under: DA39.N5 N53 1886. This accounts fo
+r new ser. 40, 50, 57 of the Works.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>2</subfield>
+    <subfield code='a'>n.s. v.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>855</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>3</subfield>
+    <subfield code='a'>Index</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>1-105</subfield>
+    <subfield code='z'>incomplete</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>2.1</subfield>
+    <subfield code='a'>1-62</subfield>
+    <subfield code='z'>incomplete</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1459134</subfield>
+    <subfield code='2'>865</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>3.1</subfield>
+    <subfield code='a'>1/80</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-28 16:05:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:17:13-05</subfield>
+    <subfield code='m'></subfield>
+  </datafield>
+  
+</record>
+</collection>

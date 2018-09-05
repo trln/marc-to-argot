@@ -641,7 +641,7 @@
     <subfield code='3'>y</subfield>
     <subfield code='8'>1</subfield>
     <subfield code='a'>Bd.</subfield>
-    <subfield code='b'>Heft</subfield>
+    <subfield code='b'>Heft </subfield>
     <subfield code='i'>(year)</subfield>
     <subfield code='j'>(month)</subfield>
   </datafield>
@@ -651,7 +651,7 @@
     <subfield code='3'>y</subfield>
     <subfield code='8'>2</subfield>
     <subfield code='a'>Jahrg.</subfield>
-    <subfield code='b'>Heft</subfield>
+    <subfield code='b'>Heft </subfield>
     <subfield code='i'>(year)</subfield>
   </datafield>
   <datafield tag='999' ind1='9' ind2='3'>

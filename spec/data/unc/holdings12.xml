@@ -1,0 +1,197 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas a2200349I  4500</leader>
+  <controlfield tag='001'>1305170</controlfield>
+  <controlfield tag='005'>19841119000000.0</controlfield>
+  <controlfield tag='008'>750430u19611965sp uu         0   b0spa d</controlfield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>DLC</subfield>
+    <subfield code='c'>DRB</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='3'>
+    <subfield code='a'>El Americanismo en las revistas</subfield>
+    <subfield code='h'>[serial] :</subfield>
+    <subfield code='b'>Antropología /</subfield>
+    <subfield code='c'>Coordinadores: M. Ballesteros Gaibrois y J. Alcina Franch.</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>Sevilla :</subfield>
+    <subfield code='b'>Facultad de Filosofía y Letras, Universidad de Sevilla,</subfield>
+    <subfield code='c'>1961-1965.</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>5 v. ;</subfield>
+    <subfield code='c'>23 cm.</subfield>
+  </datafield>
+  <datafield tag='490' ind1='1' ind2=' '>
+    <subfield code='a'>Publicaciones del Seminario del Antropología Americana ; v. 2, 4, 6, 8, 10</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Issued by the Seminario de Antropología Americana, Universidad de Sevilla, in collaboration with Instituto &quot;Gonzalo Fernández de Oviedo&quot; of the Consejo Superior de Investigaciones Científicas.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Indians</subfield>
+    <subfield code='v'>Abstracts.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Universidad de Sevilla.</subfield>
+    <subfield code='b'>Seminario de Antropología Americana.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>Instituto Gonzalo Fernández de Oviedo.</subfield>
+  </datafield>
+  <datafield tag='830' ind1=' ' ind2='0'>
+    <subfield code='a'>Publicaciones del Seminario de Antropología Americana ;</subfield>
+    <subfield code='v'>v. 2.</subfield>
+  </datafield>
+  <datafield tag='830' ind1=' ' ind2='0'>
+    <subfield code='a'>Publicaciones del Seminario de Antropología Americana ;</subfield>
+    <subfield code='v'>v. 4.</subfield>
+  </datafield>
+  <datafield tag='830' ind1=' ' ind2='0'>
+    <subfield code='a'>Publicaciones del Seminario de Antropología Americana ;</subfield>
+    <subfield code='v'>v. 6.</subfield>
+  </datafield>
+  <datafield tag='830' ind1=' ' ind2='0'>
+    <subfield code='a'>Publicaciones del Seminario de Antropología Americana ;</subfield>
+    <subfield code='v'>v. 8.</subfield>
+  </datafield>
+  <datafield tag='830' ind1=' ' ind2='0'>
+    <subfield code='a'>Publicaciones del Seminario de Antropología Americana ;</subfield>
+    <subfield code='v'>v. 10.</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1265705</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1466953</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00000294185</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aE65|b.S45a v.10</subfield>
+    <subfield code='v'>v.10=t.5</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1466952</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00000294130</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aE65|b.S45a v.8</subfield>
+    <subfield code='v'>v.8=t.4</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1466949</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00037067903</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aE65|b.S45a v.2</subfield>
+    <subfield code='v'>v.2=t.1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1466950</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00037067912</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aE65|b.S45a v.4</subfield>
+    <subfield code='v'>v.4=t.2</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1466951</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00036190157</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aE65|b.S45a v.6</subfield>
+    <subfield code='v'>v.6=t.3</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1947981</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555521</subfield>
+    <subfield code='h'>E65</subfield>
+    <subfield code='i'>.S45a v.2, etc.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='g'>t.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>2</subfield>
+    <subfield code='g'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>4</subfield>
+    <subfield code='g'>2</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>6</subfield>
+    <subfield code='g'>3</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.4</subfield>
+    <subfield code='a'>8</subfield>
+    <subfield code='g'>4</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1947981</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.5</subfield>
+    <subfield code='a'>10</subfield>
+    <subfield code='g'>5</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-27 16:32:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:09:53-05</subfield>
+    <subfield code='m'></subfield>
+  </datafield>
+</record>
+</collection>

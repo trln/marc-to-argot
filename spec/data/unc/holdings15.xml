@@ -1,0 +1,260 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas a2201081 a 4500</leader>
+  <controlfield tag='001'>1565592</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20120809082225.0</controlfield>
+  <controlfield tag='008'>750824c19589999cauqr p       0   a0eng c</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>59004068</subfield>
+  </datafield>
+  <datafield tag='015' ind1=' ' ind2=' '>
+    <subfield code='a'>010042784</subfield>
+    <subfield code='2'>dnb</subfield>
+  </datafield>
+  <datafield tag='016' ind1='7' ind2=' '>
+    <subfield code='a'>955312-5</subfield>
+    <subfield code='2'>DE-600</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>2260013</subfield>
+    <subfield code='a'>57279792</subfield>
+  </datafield>
+  <datafield tag='022' ind1='0' ind2=' '>
+    <subfield code='a'>0011-3069</subfield>
+    <subfield code='l'>0011-3069</subfield>
+    <subfield code='2'>1</subfield>
+  </datafield>
+  <datafield tag='030' ind1=' ' ind2=' '>
+    <subfield code='a'>CRTRAH</subfield>
+  </datafield>
+  <datafield tag='032' ind1=' ' ind2=' '>
+    <subfield code='a'>000963</subfield>
+    <subfield code='b'>USPS</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)1565592</subfield>
+    <subfield code='z'>(OCoLC)2260013</subfield>
+    <subfield code='z'>(OCoLC)57279792</subfield>
+  </datafield>
+  <datafield tag='037' ind1=' ' ind2=' '>
+    <subfield code='b'>Curator, the museum journal, 15200 NBN Way, Blus Ridge Summit, PA 17214</subfield>
+  </datafield>
+   <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>Curator</subfield>
+    <subfield code='b'>(New York, N.Y.)</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Curator</subfield>
+    <subfield code='h'>[serial] :</subfield>
+    <subfield code='b'>a quarterly publication of the American Museum of Natural History.</subfield>
+  </datafield>
+    <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1300647</subfield>
+    </datafield>
+      <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c2804887</subfield>
+    <subfield code='b'>llhb</subfield>
+    <subfield code='c'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c2804887</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year).</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c2804887</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>44</subfield>
+    <subfield code='b'>1</subfield>
+    <subfield code='i'>2001</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c2804887</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>44</subfield>
+    <subfield code='b'>3-4</subfield>
+    <subfield code='i'>2001</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c2804887</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>45-54</subfield>
+    <subfield code='i'>2003-2011</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1346988</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346988</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>dnda</subfield>
+    <subfield code='x'>Transferred 11/00 from Art</subfield>
+  </datafield>
+    <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346988</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346988</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>1-2</subfield>
+    <subfield code='i'>1958-1959</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346988</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.4</subfield>
+    <subfield code='a'>3</subfield>
+    <subfield code='b'>2-4</subfield>
+    <subfield code='i'>1960</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1346988</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.5</subfield>
+    <subfield code='a'>4-32</subfield>
+    <subfield code='i'>1961-1989</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2006-07-07 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-27 18:42:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:11:10-05</subfield>
+    <subfield code='m'></subfield>
+  </datafield>
+    <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1367735</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1367735</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555521</subfield>
+    <subfield code='h'>RC321</subfield>
+    <subfield code='i'>.J83</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1367735</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1367735</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>27</subfield>
+    <subfield code='b'>1-5</subfield>
+    <subfield code='i'>1900</subfield>
+    <subfield code='j'>Jan.-May</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+    <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1367735</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.9</subfield>
+    <subfield code='a'></subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1367735</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.10</subfield>
+    <subfield code='a'>53-159</subfield>
+    <subfield code='i'>1921-1974</subfield>
+  </datafield>
+
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1303997</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1303997</subfield>
+    <subfield code='2'>855</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'></subfield>
+    <subfield code='i'>(year)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1303997</subfield>
+    <subfield code='2'>865</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>25/28</subfield>
+    <subfield code='i'>1982</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1303997</subfield>
+    <subfield code='2'>865</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>29/33</subfield>
+    <subfield code='i'>1983</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1303997</subfield>
+    <subfield code='2'>865</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>34/38</subfield>
+    <subfield code='i'>1984</subfield>
+  </datafield>
+   <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1303997</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(month)</subfield>
+    <subfield code='k'>(day)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1303997</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>3-147</subfield>
+    <subfield code='i'>1976-1999</subfield>
+    <subfield code='j'>-Jan.</subfield>
+    <subfield code='k'>-25</subfield>
+  </datafield>
+
+</record>
+</collection>

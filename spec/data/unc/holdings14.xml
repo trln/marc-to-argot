@@ -1,0 +1,243 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+  <record>
+  <leader>00000cas  2200505 a 4500</leader>
+  <controlfield tag='001'>1487738</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20060224025910.0</controlfield>
+  <controlfield tag='008'>750729c19649999it  x m      i0   a0eng  </controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>75648822</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>1569617</subfield>
+    <subfield code='a'>8416832</subfield>
+  </datafield>
+  <datafield tag='022' ind1=' ' ind2=' '>
+    <subfield code='a'>0014-5602</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)1487738</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>DLC</subfield>
+    <subfield code='c'>UDI</subfield>
+    <subfield code='d'>COO</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>DLC</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>CRL</subfield>
+    <subfield code='d'>NST</subfield>
+    <subfield code='d'>OCL</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>WAU</subfield>
+    <subfield code='d'>TXA</subfield>
+    <subfield code='d'>OCL</subfield>
+  </datafield>
+  <datafield tag='041' ind1='0' ind2=' '>
+    <subfield code='a'>eng</subfield>
+    <subfield code='a'>fre</subfield>
+    <subfield code='a'>spa</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>lc</subfield>
+  </datafield>
+  <datafield tag='049' ind1=' ' ind2=' '>
+    <subfield code='a'>NOCC</subfield>
+  </datafield>
+  <datafield tag='050' ind1='0' ind2='0'>
+    <subfield code='a'>SH1</subfield>
+    <subfield code='b'>.F8725a</subfield>
+  </datafield>
+  <datafield tag='082' ind1=' ' ind2=' '>
+    <subfield code='a'>597</subfield>
+  </datafield>
+  <datafield tag='210' ind1='0' ind2=' '>
+    <subfield code='a'>FAO fish. synop.</subfield>
+  </datafield>
+  <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>FAO fisheries synopsis</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>FAO fisheries synopsis</subfield>
+    <subfield code='h'>[serial].</subfield>
+  </datafield>
+  <datafield tag='246' ind1='2' ind2=' '>
+    <subfield code='a'>Food and Agriculture Organization of the United Nations fisheries synopsis</subfield>
+  </datafield>
+  <datafield tag='246' ind1='3' ind2='0'>
+    <subfield code='a'>Fisheries synopsis</subfield>
+  </datafield>
+    <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1289533</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i3820106</subfield>
+    <subfield code='l'>dcpw</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00010807380</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aSH1 .F8725a no.154</subfield>
+    <subfield code='v'>no.154</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i4066859</subfield>
+    <subfield code='l'>dcpw</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aSH1|b.F8725a no.156</subfield>
+    <subfield code='v'>no.156</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6343619</subfield>
+    <subfield code='l'>dcpw</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aSH1 .F8725a</subfield>
+    <subfield code='v'>no.80</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6343620</subfield>
+    <subfield code='l'>dcpw</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aSH1 .F8725a</subfield>
+    <subfield code='v'>no.112</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6343621</subfield>
+    <subfield code='l'>dcpw</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aSH1 .F8725a</subfield>
+    <subfield code='v'>no.114</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6343622</subfield>
+    <subfield code='l'>dcpw</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='p'>090##</subfield>
+    <subfield code='q'>|aSH1 .F8725a</subfield>
+    <subfield code='v'>no.115</subfield>
+  </datafield>
+    <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1336732</subfield>
+    <subfield code='b'>dcpw</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1336732</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>555541</subfield>
+    <subfield code='h'>SH1</subfield>
+    <subfield code='i'>.F8725a</subfield>
+    <subfield code='z'>No.125:v.3,14-15,no.154,no.156 in this series have individual records.  To see titles and circ
+ulation information, search by series title, call number, or authors/titles of individual volumes.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1336732</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>no.</subfield>
+    <subfield code='b'>v.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1336732</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>2</subfield>
+    <subfield code='a'>no.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1336732</subfield>
+    <subfield code='2'>866</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>no.80, no.112, no.114 - no.115, no.119 - no.120, no.125, no.128, no.135, no.137, no.139, no.154, no.156 - no.158</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1401052</subfield>
+    <subfield code='b'>xada</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1401052</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>xada</subfield>
+    <subfield code='z'>Currently received</subfield>
+    <subfield code='x'>Received direct</subfield>
+  </datafield>
+    <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1401052</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='t'>c.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1401052</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>40-</subfield>
+    <subfield code='i'>1976-</subfield>
+    <subfield code='p'>HAOG-9118-00001</subfield>
+    <subfield code='z'>TO DATE</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c4659916</subfield>
+    <subfield code='b'>bbdb</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4659916</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='h'>SH1</subfield>
+    <subfield code='i'>.F8725a</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4659916</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='a'>no.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4659916</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='a'>145</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2006-02-24 00:00:00-05</subfield>
+    <subfield code='c'>2004-09-27 16:34:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:10:34-05</subfield>
+    <subfield code='m'></subfield>
+  </datafield>
+</record>
+</collection>

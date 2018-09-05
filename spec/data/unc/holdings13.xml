@@ -1,0 +1,238 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>00000cas  22003977a 4500</leader>
+  <controlfield tag='001'>9069635</controlfield>
+  <controlfield tag='005'>19920921132406.2</controlfield>
+  <controlfield tag='008'>821220u19829999ilufr1p       0   a0eng d</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>sn 82008425</subfield>
+  </datafield>
+  <datafield tag='022' ind1='0' ind2=' '>
+    <subfield code='a'>0736-0770</subfield>
+    <subfield code='y'>0160-3221</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>NSD</subfield>
+    <subfield code='c'>NSD</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>nsdp</subfield>
+  </datafield>
+  <datafield tag='222' ind1=' ' ind2='0'>
+    <subfield code='a'>Visual arts research</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Visual arts research</subfield>
+    <subfield code='h'>[serial].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>[Champaign, Ill.] :</subfield>
+    <subfield code='b'>University of Illinois Press,</subfield>
+    <subfield code='c'>c1982-</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>v. :</subfield>
+    <subfield code='b'>ill. ;</subfield>
+    <subfield code='c'>23 cm.</subfield>
+  </datafield>
+  <datafield tag='310' ind1=' ' ind2=' '>
+    <subfield code='a'>Two issues yearly</subfield>
+  </datafield>
+  <datafield tag='362' ind1='1' ind2=' '>
+    <subfield code='a'>Vol. 8, no. 2 (fall 1982)- .</subfield>
+  </datafield>
+  <datafield tag='515' ind1=' ' ind2=' '>
+    <subfield code='a'>Vol. 8-&lt;9&gt; also called no. 16-&lt;20&gt;.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Visual education</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Art</subfield>
+    <subfield code='x'>Study and teaching</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>University of Illinois at Urbana-Champaign.</subfield>
+  </datafield>
+  <datafield tag='780' ind1='0' ind2='0'>
+    <subfield code='t'>Review of research in visual arts education</subfield>
+    <subfield code='w'>(OCoLC) 2710914</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b1863705</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i2695370</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00031482903</subfield>
+    <subfield code='v'>[v.8:no.2]-v.9:no.2=issue 16-18(Fall 1982-Fall 1983)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6915453</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00031482912</subfield>
+    <subfield code='v'>v.10:no.1-v.11:no.2=issue 19-21(Spring 1984-Fall 1985)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7560676</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00031482878</subfield>
+    <subfield code='v'>v.12:no.1-v.13:no.2=issue 23-26(Spring 1986-Fall 1987)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7560678</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00031482887</subfield>
+    <subfield code='v'>v.14:no.1-v.15:no.2=issue 27-30(Spring 1988-Fall 1989)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i7560683</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00031482896</subfield>
+    <subfield code='v'>v.16:no.1-2=issue 31-32(Spring-Fall 1990)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6910822</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00028792735</subfield>
+    <subfield code='v'>v.26(2000)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6910824</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00028792744</subfield>
+    <subfield code='v'>v.27:no.1(2001)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6910826</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00028792753</subfield>
+    <subfield code='v'>v.28:no.2(2002)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i6910834</subfield>
+    <subfield code='l'>trln</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>3</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00028792762</subfield>
+    <subfield code='v'>v.29(2003)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c1768678</subfield>
+    <subfield code='b'>trln</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>dnda</subfield>
+    <subfield code='x'>Transferred 11/00 from Art</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>1</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='g'>issue </subfield>
+    <subfield code='i'>(year)</subfield>
+    <subfield code='j'>(season)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>853</subfield>
+    <subfield code='3'>y</subfield>
+    <subfield code='8'>2</subfield>
+    <subfield code='a'>v.</subfield>
+    <subfield code='b'>no.</subfield>
+    <subfield code='i'>(year)</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.1</subfield>
+    <subfield code='a'>8-16</subfield>
+    <subfield code='b'>2-2</subfield>
+    <subfield code='g'>16-32</subfield>
+    <subfield code='i'>1982-1990</subfield>
+    <subfield code='j'>23-23</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.2</subfield>
+    <subfield code='a'>26-27</subfield>
+    <subfield code='b'>1-1</subfield>
+    <subfield code='i'>2000-2001</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.3</subfield>
+    <subfield code='a'>27</subfield>
+    <subfield code='b'>1</subfield>
+    <subfield code='i'>2001</subfield>
+    <subfield code='w'>g</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c1768678</subfield>
+    <subfield code='2'>863</subfield>
+    <subfield code='3'>h</subfield>
+    <subfield code='8'>1.4</subfield>
+    <subfield code='a'>28-29</subfield>
+    <subfield code='b'>2-1</subfield>
+    <subfield code='i'>2002-2003</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-09-30 09:29:00-04</subfield>
+    <subfield code='u'>2017-12-01 10:24:53-05</subfield>
+    <subfield code='m'></subfield>
+  </datafield>
+</record>
+</collection>

@@ -80,19 +80,19 @@ describe MarcToArgot do
 
     it '(UNC) sets supplementary content summary holdings from 867' do
       expect(b1246383argot['holdings'][1]).to(
-        include("\"summary\":\"Supplementary holdings: 1970/1977 retrospective volume\"")
+        include("\"summary\":\"Supplements: 1970/1977 retrospective volume\"")
       )
     end
 
     it '(UNC) sets index content summary holdings from 868' do
       expect(b1246383argot['holdings'][2]).to(
-        include("\"summary\":\"Index holdings: v.1/32(1895/1928) Name Index\"")
+        include("\"summary\":\"Indexes: v.1/32(1895/1928) Name Index\"")
       )
     end
 
     it '(UNC) sets multi summary holdings from 866, 867, 868' do
       expect(b1246383argot['holdings'][3]).to(
-        include("\"summary\":\"H1, H2; H3; Supplementary holdings: SH; Index holdings: IH\"")
+        include("\"summary\":\"H1, H2; H3; Supplements: SH; Indexes: IH\"")
       )
     end
 
@@ -284,7 +284,7 @@ end
               # h	863  40|81.2|a2-23|i1953-1974
               # h	865  41|81.3|a1-62|i1952-1961
               expect(holdings11['holdings'][0]).to(
-                include("; Index holdings: no.1 (1952) - no.62 (1961)\"")
+                include("; Indexes: no.1 (1952) - no.62 (1961)\"")
               )
             end
 
@@ -330,7 +330,7 @@ end
         context 'When one data subfield of enum/chron field has no data' do
           it '(UNC) sets summary' do
             expect(holdings15['holdings'][3]).to(
-              include("; Index holdings: v.25/28 (1982), v.29/33 (1983), v.34/38 (1984)")
+              include("; Indexes: v.25/28 (1982), v.29/33 (1983), v.34/38 (1984)")
             )
             expect(holdings15['holdings'][3]).to(
               include("\"summary\":\"v.3 (1976) - v.147 (Jan. 25, 1999)")

@@ -569,10 +569,10 @@ module MarcToArgot
             summary = []
             summary << @summary_holding unless @summary_holding.empty?
             if @summary_holding_supplement.length > 0
-              summary << 'Supplementary holdings: ' + @summary_holding_supplement
+              summary << 'Supplements: ' + @summary_holding_supplement
             end
             if @summary_holding_index.length > 0
-              summary << 'Index holdings: ' + @summary_holding_index
+              summary << 'Indexes: ' + @summary_holding_index
             end
             argot_holding['summary'] = summary.join('; ') unless summary.empty?
             

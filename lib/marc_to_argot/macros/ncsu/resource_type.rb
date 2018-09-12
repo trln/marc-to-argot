@@ -13,7 +13,9 @@ module MarcToArgot
           item_types = items.map { |i| i['type'] }.compact
           types = []
           types << 'Book' if cl.book?
-          types << 'Government publication' if itemcat2s.include?('FEDDOC')
+          unless cl.from_university_press?
+            types << 'Government publication' if cl.government_publication?
+          end
           types << 'Journal, Magazine, or Periodical' if cl.journal_magazine_periodical?
           types << 'Video' if cl.video?
           types << 'Dataset -- Statistical' if item_types.include?('DATASET')

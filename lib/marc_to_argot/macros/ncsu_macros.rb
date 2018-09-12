@@ -31,6 +31,13 @@ module MarcToArgot
         end
       end
 
+      # tests whether the record is a serial of the sort E-Matrix trades in.
+      def serial?(rec)
+        rec.leader.byteslice(7) == 's' and ['p', 'm', 'n', ' '].include?(rec['008'].value.byteslice(21))
+      rescue StandardError
+        false
+      end
+
       def rollup_id
         control_number_extor = MarcExtractor.cached('001')
         cni_extor = MarcExtractor.cached('003')
@@ -48,6 +55,10 @@ module MarcToArgot
         end
       end
 
+      def is_available?(items)
+        items.any? { |i| i['status'] =~ /^avail/i || i['loc_b'] == 'ONLINE' }
+      end
+
       def online_access?(_rec, libraries = [])
         libraries.include?('ONLINE')
       end
@@ -60,7 +71,7 @@ module MarcToArgot
       # this implementation looks at whether there are any
       # items in a library other than ONLINE
       def physical_access?(_rec, libraries = [])
-        !libraries.find { |x| x != 'ONLINE' }.nil?
+        libraries.any? { |x| x != 'ONLINE' }
       end
 
       def generate_holdings(items)

@@ -18,6 +18,7 @@ describe MarcToArgot do
   let(:genre7) { run_traject_json('unc', 'genre7', 'mrc') }
   let(:genre8) { run_traject_json('unc', 'genre8', 'mrc') }
   let(:vern650v) { run_traject_json('unc', 'vern650v', 'mrc') }
+  let(:vern655ara) { run_traject_json('unc', 'vern655ara', 'mrc') }
   
   it '(MTA) sets subject_headings from any source' do
     result = subject1['subject_headings']
@@ -330,4 +331,3 @@ describe MarcToArgot do
                         )
     end
 end
-

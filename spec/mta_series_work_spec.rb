@@ -5,7 +5,8 @@ describe MarcToArgot do
   include Util::TrajectRunTest
   let(:series_work) { run_traject_json('unc', 'series_work', 'mrc') }
   let(:series_work01) { run_traject_json('unc', 'series_work01', 'mrc') }
-
+  let(:series_work_vern1) { run_traject_json('unc', 'series_work_vern1', 'mrc') }
+  
   it '(MTA) sets series_work' do
     result = series_work['series_work']
     expect(result).to eq(
@@ -98,6 +99,17 @@ describe MarcToArgot do
                           'details'=>'v. 3',
                           'issn'=>'2193-9659'}
                         ]
+                      )
+  end
+
+  xit '(MTA) sets series_work from 880' do
+    result = series_work_vern1['series_work']
+    expect(result).to include(
+                        {'type'=>'series',
+                         'title'=>['雲菁.', '1977'],
+                         'title_variation'=>'Works.',
+                         'details'=>'8.',
+                         'lang'=>'cjk'}
                       )
   end
 end

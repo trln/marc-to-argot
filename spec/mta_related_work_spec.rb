@@ -278,7 +278,7 @@ describe MarcToArgot do
                       )
   end
 
-    it '(MTA) sets related_work_from 880s' do
+    xit '(MTA) sets related_work_from 880s' do
     result = related_work_vern1['related_work']
     expect(result).to include(
                         {'type'=>'related',

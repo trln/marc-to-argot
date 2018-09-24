@@ -283,7 +283,8 @@ describe MarcToArgot do
     expect(result).to include(
                         {'type'=>'related',
                           'author'=>'郭湛波.',
-                          'title'=>['近五十年中國思想史.']},
+                          'title'=>['近五十年中國思想史.'],
+                          'lang'=>'cjk'},
                       )
   end
 

@@ -10,7 +10,7 @@ describe MarcToArgot do
     result = included_work['included_work']
     expect(result).to eq(
                         [{'type'=>'included',
-                          'author'=>'Saint-SaÃ«ns, Camille, 1835-1921.',
+                          'author'=>'Saint-Saëns, Camille, 1835-1921.',
                           'title'=>['Quartets,', 'violins (2), viola, cello,', 'no. 2, op. 153,', 'G major']},
                          {'type'=>'included',
                           'author'=>'Schwenkel, Christina.',
@@ -39,7 +39,7 @@ describe MarcToArgot do
                           'author'=>'Germany (East).',
                           'title'=>['Treaties, etc.', 'Germany (West),', '1990 May 18.', '1990.']},
                          {'type'=>'included',
-                          'author'=>'CafÃ© Tacuba (Musical group)',
+                          'author'=>'Café Tacuba (Musical group)',
                           'title'=>['12/12']},
                          {'type'=>'included',
                           'author'=>'Great Central Fair for the U.S. Sanitary Commission (1864 : Philadelphia, Pa.). Committee on Public Charities and Benevolent Institutions.',
@@ -49,7 +49,7 @@ describe MarcToArgot do
                           'title'=>['Care of the aged.', '2000,', '1972.', 'Reprint.'],
                           'issn'=>'1234-1234'},
                          {'type'=>'included',
-                          'title'=>['Cahiers de civilisation mÃ©diÃ©vale.', 'Bibliographie.'],
+                          'title'=>['Cahiers de civilisation médiévale.', 'Bibliographie.'],
                           'issn'=>'0240-8678'},
                          {'type'=>'included',
                           'title'=>['Jane Pickering\'s lute book.', 'arr.'],

@@ -5,13 +5,14 @@ describe MarcToArgot do
   include Util::TrajectRunTest
   let(:related_work_mirror_included) { run_traject_json('unc', 'related_work_mirror_included', 'mrc') }
   let(:related_work_addtl_7XX) { run_traject_json('unc', 'related_work_addtl_7XX', 'mrc') }
-  let(:related_work_linking_fields) { run_traject_json('unc', 'related_work_linking_fields', 'mrc') }  
+  let(:related_work_linking_fields) { run_traject_json('unc', 'related_work_linking_fields', 'mrc') }
+    let(:related_work_vern1) { run_traject_json('unc', 'related_work_vern1', 'mrc') }  
 
   it '(MTA) sets related_work_from_700_710_711_730_740' do
     result = related_work_mirror_included['related_work']
     expect(result).to eq(
                         [{'type'=>'related',
-                          'author'=>'Saint-Saëns, Camille, 1835-1921.',
+                          'author'=>'Saint-SaÃ«ns, Camille, 1835-1921.',
                           'title'=>['Quartets,', 'violins (2), viola, cello,', 'no. 2, op. 153,', 'G major']},
                          {'type'=>'related',
                           'author'=>'Schwenkel, Christina.',
@@ -40,7 +41,7 @@ describe MarcToArgot do
                           'author'=>'Germany (East).',
                           'title'=>['Treaties, etc.', 'Germany (West),', '1990 May 18.', '1990.']},
                          {'type'=>'related',
-                          'author'=>'Café Tacuba (Musical group)',
+                          'author'=>'CafÃ© Tacuba (Musical group)',
                           'title'=>['12/12']},
                          {'type'=>'related',
                           'author'=>'Great Central Fair for the U.S. Sanitary Commission (1864 : Philadelphia, Pa.). Committee on Public Charities and Benevolent Institutions.',
@@ -50,7 +51,7 @@ describe MarcToArgot do
                           'title'=>['Care of the aged.', '2000,', '1972.', 'Reprint.'],
                           'issn'=>'1234-1234'},
                          {'type'=>'related',
-                          'title'=>['Cahiers de civilisation médiévale.', 'Bibliographie.'],
+                          'title'=>['Cahiers de civilisation mÃ©diÃ©vale.', 'Bibliographie.'],
                           'issn'=>'0240-8678'},
                          {'type'=>'related',
                           'title'=>['Jane Pickering\'s lute book.', 'arr.'],
@@ -83,11 +84,11 @@ describe MarcToArgot do
                           'title'=>['Concertos,', 'violin, orchestra,', 'K. 219,', 'A major.', 'Library of Congress. Music Division : ML30.8b .M8 K. 219 Case.']},
                          {'type'=>'related',
                           'label'=>'Facsimilie of',
-                          'author'=>'Conservatoire royal de musique de Bruxelles. Bibliothèque.',
+                          'author'=>'Conservatoire royal de musique de Bruxelles. BibliothÃ¨que.',
                           'title'=>['Manuscript.', '16.662.']},
                          {'type'=>'related',
                           'label'=>'Facsimilie of',
-                          'author'=>'Conservatoire royal de musique de Bruxelles. Bibliothèque.',
+                          'author'=>'Conservatoire royal de musique de Bruxelles. BibliothÃ¨que.',
                           'title'=>['Manuscript.', '16.663.']},
                          {'type'=>'related',
                           'author'=>'Westminster Assembly (1643-1652).',
@@ -101,23 +102,23 @@ describe MarcToArgot do
     expect(result).to eq(
                         [{'type'=>'translation_of',
                           'author'=>'China.',
-                          'title'=>['Laws, etc.', '(Zhonghua Renmin Gongheguo fa lü hui bian).'],
-                          'title_variation'=>'Zhonghua Renmin Gongheguo fa lü hui bian',
+                          'title'=>['Laws, etc.', '(Zhonghua Renmin Gongheguo fa lÃ¼ hui bian).'],
+                          'title_variation'=>'Zhonghua Renmin Gongheguo fa lÃ¼ hui bian',
                           'other_ids'=>['90645849']},
                          {'type'=>'translation_of',
                           'label'=>'Originally published in France as',
-                          'title'=>['Innovations médicales en situations humanitaires.'],
+                          'title'=>['Innovations mÃ©dicales en situations humanitaires.'],
                           'details'=>'Paris : Harmattan, c2009',
                           'isbn'=>['9782296100466'],
                           'other_ids'=>['465089061']},
                          {'type'=>'translation_of',
-                          'title'=>['Itogi nauki i tekhniki. Seri︠i︡a Sovremennye problemy matematiki. Fundamentalʹnye napravleni︠i︡a'],
+                          'title'=>['Itogi nauki i tekhniki. Seriï¸ iï¸¡a Sovremennye problemy matematiki. FundamentalÊ¹nye napravleniï¸ iï¸¡a'],
                           'issn'=>'0233-6723',
                           'other_ids'=>['87645715', '14198545'],
                           'display'=>'false'},
                          {'type'=>'translated_as',
                           'label'=>'German version',
-                          'title'=>['Wissenschaftliche Mitteilungen des Bosnisch-Herzegowinischen Landesmuseums.', 'Heft A, Archäologie'],
+                          'title'=>['Wissenschaftliche Mitteilungen des Bosnisch-Herzegowinischen Landesmuseums.', 'Heft A, ArchÃ¤ologie'],
                            'issn'=>'0352-1990',
                            'other_ids'=>['2010223203', '4818533']},
                          {'type'=>'has_supplement',
@@ -177,7 +178,7 @@ describe MarcToArgot do
                          {'type'=>'alt_edition',
                           'label'=>'Spanish version',
                           'title'=>['Identity theft and your social security number.', 'Spanish', '(Online)'],
-                          'title_variation'=>'Robo de identidad y su número de seguro social',
+                          'title_variation'=>'Robo de identidad y su nÃºmero de seguro social',
                           'other_ids'=>['2005230022', '57614487']},
                          {'type'=>'alt_edition',
                           'label'=>'Translation of',
@@ -190,7 +191,7 @@ describe MarcToArgot do
                           'issn'=>'2218-9750'},
                          {'type'=>'alt_edition',
                           'label'=>'German language edition',
-                          'title'=>['Weltverkehrsforum : Forum Höhepunkte'],
+                          'title'=>['Weltverkehrsforum : Forum HÃ¶hepunkte'],
                           'issn'=>'2218-9777'},
                          {'type'=>'alt_edition',
                           'label'=>'Russian language edition',
@@ -230,7 +231,7 @@ describe MarcToArgot do
                          {'type'=>'earlier',
                           'label'=>'Formed by the union of',
                           'title'=>['Voices', '(Edmonton, Alta.).'],
-                          'details'=>'[Edmonton] : English Language Arts Council of the Alberta Teachers\' Association, ©1986-2002',
+                          'details'=>'[Edmonton] : English Language Arts Council of the Alberta Teachers\' Association, Â©1986-2002',
                           'issn'=>'0832-8315',
                           'other_ids'=>['870315102', 'cn 87031510']},
                          {'type'=>'later',
@@ -276,6 +277,16 @@ describe MarcToArgot do
                         ]
                       )
   end
+
+    it '(MTA) sets related_work_from 880s' do
+    result = related_work_vern1['related_work']
+    expect(result).to include(
+                        {'type'=>'related',
+                          'author'=>'郭湛波.',
+                          'title'=>['近五十年中國思想史.']},
+                      )
+  end
+
 end
 
 

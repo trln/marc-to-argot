@@ -2,6 +2,18 @@ module MarcToArgot
   module Macros
     module Shared
       module Title
+
+        # populates the 'short_title' of a Traject output_hash
+        # if the title is
+        def short_titles!(output_hash, max_length = 4)
+          main_title = output_hash.fetch('title_main', '')
+          return if main_title.empty?
+          words = main_title.first[:value].split(/\s+/)
+          if words.length <= max_length
+            output_hash["short_title"] = words.join(' ')
+          end
+        end
+        
         ################################################
         # Title Main
         ######

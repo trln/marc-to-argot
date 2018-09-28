@@ -7,16 +7,17 @@ module MarcToArgot
         ######
 
         def names
-          lambda do |rec, acc|
+          lambda do |rec, acc, ctx|
             Traject::MarcExtractor.cached('100:110:111:700:710:711:720', :alternate_script => false)
                                   .each_matching_line(rec) do |field, spec, extractor|
 
               next unless passes_names_constraint?(field)
               next unless subfield_5_absent_or_present_with_local_code?(field)
-
+              Logging.mdc['field'] = field.tag
               names = assemble_names_hash(field)
 
               acc << names unless names.empty?
+              Logging.mdc.delete('field')
             end
           end
         end
@@ -32,6 +33,7 @@ module MarcToArgot
         end
 
         def names_name(field)
+          
           name = ''
           case field.tag
           when /(100|700)/

@@ -40,11 +40,15 @@ module MarcToArgot
       include Urls
       include Vernacular
       include WorkEntry
-      include CallNumbers
+      include CallNumbers      
 
       # values to look for in the 856 that indicate
       # a record has online access.
       ELOC_IND2 = Set.new(%w[0 1])
+
+      def record_id
+        oclcnum("035a:035z")
+      end
 
       # tests whether the record has an 856[ind2] that matches
       # any of the values in ELOC_IND2

@@ -7,6 +7,7 @@ end
 ######
 to_field 'id', extract_marc(settings['specs'][:id], :first => true) do |rec, acc|
   acc.collect! {|s| "UNC#{s}"}
+  Logging.mdc['record_id'] = acc.first
 end
 
 ################################################
@@ -41,6 +42,11 @@ to_field 'resource_type', resource_type
 ######
 to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collection], :separator => nil)
 
+################################################
+# Names
+###
+
+to_field 'names', names
 
 def process_donor_marc(rec)
   donors = []
@@ -321,4 +327,5 @@ end
 
 each_record do |rec, cxt|
   holdings(rec, cxt)
+  Logging.mdc.clear
 end

@@ -1,9 +1,13 @@
 ################################################
 # Primary ID
 ######
-to_field 'id', extract_marc(settings['specs'][:id], first: true) do |_rec, acc|
+to_field 'id', extract_marc('918a', first: true) do |rec, acc|
   acc.collect! { |s| "NCSU#{s}" }
+  Logging.mdc['record_id'] = acc.first
 end
+
+to_field 'names', names
+
 
 ################################################
 # Local ID
@@ -29,12 +33,14 @@ end
 each_record do |rec, ctx|
   items = ctx.clipboard['items']
   items.reject! { |i| shadowed_location?(i) }
+  urls = ctx.output_hash.fetch('url', [])
+  open_access!(urls, items)
   items.each { |i| i.delete('item_cat_2') }
   logger.info "Skipping #{ctx.output_hash['id']} (no items)" if items.empty?
   ctx.skip! if items.empty?
   if serial?(rec)
     libraries = items.map { |i| i['loc_b'] }.uniq
-    urls = ctx.output_hash.fetch('url', [])
+    
     if online_access?(rec, libraries)
       loc_id = ctx.output_hash['local_id'].first[:value]
       href = "https://www.lib.ncsu.edu/journals/more_info.php?catkey=#{loc_id}"
@@ -47,10 +53,13 @@ each_record do |rec, ctx|
     ctx.output_hash['url'] = urls
   end
 
+  short_titles!(ctx.output_hash)
+
   ctx.output_hash['barcodes'] = items.map { |x| x['item_id'] }.select(&:itself)
-  ctx.output_hash['availability'] = 'Available' if is_available?(items)
+  ctx.output_hash['available'] = 'Available' if is_available?(items)
   if ctx.output_hash.fetch('format', []).include?('Journal/Newspaper')
     holdings = generate_holdings(items)
     ctx.output_hash['holdings'] = holdings.map(&:to_json)
   end
+  Logging.mdc.clear
 end

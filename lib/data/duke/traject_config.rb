@@ -3,6 +3,7 @@
 ######
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
   acc.collect! { |s| s.match(/DUKE.*/) ? s.to_s : "DUKE#{s}" }
+  Logging.mdc['record_id'] = acc.first
 end
 
 ################################################
@@ -34,6 +35,11 @@ end
 # Institutiuon
 ######
 to_field 'institution', literal('duke')
+
+##################
+# Names
+#########
+to_field 'names', names
 
 ################################################
 # Items
@@ -323,4 +329,8 @@ to_field 'holdings' do |rec, acc, context|
 
     acc << holding.to_json if holding.any?
   end
+end
+
+each_record do |rec, ctx|
+  Logging.mdc.clear
 end

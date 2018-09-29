@@ -8,6 +8,7 @@ require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/series_statement'
+require 'marc_to_argot/macros/shared/subject_genre'
 require 'marc_to_argot/macros/shared/title'
 require 'marc_to_argot/macros/shared/title_variant'
 require 'marc_to_argot/macros/shared/upc'
@@ -34,13 +35,14 @@ module MarcToArgot
       include PhysicalMedia
       include ResourceType
       include SeriesStatement
+      include SubjectGenre
       include Title
       include TitleVariant
       include Upc
       include Urls
       include Vernacular
       include WorkEntry
-      include CallNumbers      
+      include CallNumbers
 
       # values to look for in the 856 that indicate
       # a record has online access.

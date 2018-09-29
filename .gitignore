@@ -10,3 +10,4 @@
 /.idea/
 .ruby-version
 /marc_to_argot-*.gem
+/*.log

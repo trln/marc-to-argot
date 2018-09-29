@@ -24,6 +24,35 @@ module MarcToArgot
         substring_present_in_subfield?(field, 'y', 'collection guide')
       end
 
+      # OCLC Number & Rollup ID
+
+      def oclc_number
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
+            oclc_numbers = fetch_oclc_numbers(field).map! { |x| { value: x } }
+            acc.concat(oclc_numbers)
+          end
+        end
+      end
+
+      def rollup_id
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
+            first_oclc_number = fetch_oclc_numbers(field).first
+            acc << "OCLC#{first_oclc_number}" unless first_oclc_number.nil? || first_oclc_number.empty?
+          end
+        end
+      end
+
+      def fetch_oclc_numbers(field)
+        oclc_numbers = field.subfields.select { |sf| sf.code == 'a' }.map(&:value).map(&:strip)
+        oclc_numbers.select! { |x| /^(\(OCoLC\))?\d{8,}$/.match(x) }
+        oclc_numbers.map! { |x| x.sub('(OCoLC)', '') }
+        oclc_numbers
+      end
+
+      # Physical Media Override
+
       class PhysicalMedia::PhysicalMediaClassifier
         # Checks the 940$c for any cases where the narrow location
         # includes an ebook location code. See #ebook_location_codes below.

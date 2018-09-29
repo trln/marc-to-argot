@@ -23,16 +23,16 @@ to_field 'local_id' do |rec, acc, context|
 end
 
 ################################################
+# OCLC Number
+######
+
+to_field "oclc_number", oclc_number
+
+################################################
 # Rollup ID
 ######
 
-to_field "rollup_id", extract_marc("035|  |a") do |rec, acc|
-  acc.select! { |x| /^(\(OCoLC\))?\d{8,9}$/.match(x.to_s) }
-  acc.map! { |x| x.sub('(OCoLC)', '') }
-  acc.map! { |x| "OCLC#{x}" }
-  acc.flatten!
-  acc.uniq!
-end
+to_field "rollup_id", rollup_id
 
 ################################################
 # Institutiuon

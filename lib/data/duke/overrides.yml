@@ -2,6 +2,7 @@
 - id
 - local_id
 - rollup_id
+- oclc_number
 - institution
 - items
 - holdings

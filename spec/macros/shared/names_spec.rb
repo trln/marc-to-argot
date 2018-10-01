@@ -20,7 +20,7 @@ describe MarcToArgot::Macros::Shared::Names do
   let(:vnames01) { run_traject_json('unc', 'vern_names01', 'mrc') }
   let(:vnames02) { run_traject_json('unc', 'vern_names02', 'mrc') }
   let(:vnames03) { run_traject_json('unc', 'vern_names03', 'mrc') }
-  
+
   it '(MTA) sets names, prioritizing director type over creator type' do
     result = names01['names']
     expect(result).to eq(
@@ -201,7 +201,7 @@ describe MarcToArgot::Macros::Shared::Names do
                          'type'=>'contributor'}
                       )
   end
-  
+
   it '(MTA) cleans WEMI terms out of relators' do
     result = names13['names']
     expect(result).to include(
@@ -210,7 +210,7 @@ describe MarcToArgot::Macros::Shared::Names do
                          'type'=>'creator'}
                       )
   end
-  
+
   it '(MTA) cleans institution-specific qualifiers out of relators' do
     result = names13['names']
     expect(result).to include(
@@ -218,24 +218,25 @@ describe MarcToArgot::Macros::Shared::Names do
                          'rel'=>['former owner'],
                          'type'=>'owner'}
                       )
-  end  
-  xit '(MTA) sets names from 100 and linked vernacular field' do
+  end
+
+  it '(MTA) sets names from 100 and linked vernacular field' do
     result = vnames01['names']
     expect(result).to eq(
                         [
                           {
-                            'name'=>'Li, Cha.',
+                            'name'=>'Li, Cha',
                             'type'=>'creator'
                           },
                           {
-                            'name'=>'李察.',
+                            'name'=>'李察',
                             'type'=>'creator',
                             'lang'=>'cjk'
                           }
                         ])
   end
-  
-  xit '(MTA) sets names from 700s and linked vernacular fields' do
+
+  it '(MTA) sets names from 700s and linked vernacular fields' do
     result = vnames02['names']
     expect(result).to eq(
                         [
@@ -256,16 +257,16 @@ describe MarcToArgot::Macros::Shared::Names do
                             'name'=>'五味, 雄治, 1928-',
                             'type'=>'no_rel',
                             'lang'=>'cjk'
-                          }                          
+                          }
                         ])
   end
-  
-  xit '(MTA) sets vernacular name from 100' do
-    result = vnames02['names']
+
+  it '(MTA) sets vernacular name from 100' do
+    result = vnames03['names']
     expect(result).to eq(
                         [
                           {
-                            'name'=>'お茶の水女子大学グローバル教育センター.',
+                            'name'=>'お茶の水女子大学グローバル教育センター',
                             'type'=>'creator',
                             'lang'=>'cjk'
                           }

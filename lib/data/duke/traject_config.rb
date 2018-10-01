@@ -2,7 +2,10 @@
 # Primary ID
 ######
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
-  acc.collect! { |s| s.match(/DUKE.*/) ? s.to_s : "DUKE#{s}" }
+  acc.collect! do |s|
+    id = s.to_s.strip
+    id.match(/DUKE.*/) ? id : "DUKE#{id}"
+  end
   Logging.mdc['record_id'] = acc.first
 end
 
@@ -12,7 +15,7 @@ end
 
 to_field 'local_id' do |rec, acc, context|
   local_id = {
-    value: context.output_hash['id'].first,
+    value: context.output_hash.fetch('id', []).first,
     other: []
   }
 

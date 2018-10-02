@@ -68,5 +68,3 @@ describe MarcToArgot do
                       )
   end
 end
-
-

@@ -1,3 +1,7 @@
+# Logging
+require 'yell'
+require 'yell/logging_adapter'
+
 # Traject
 require 'traject'
 require 'traject/macros/marc21_semantics'

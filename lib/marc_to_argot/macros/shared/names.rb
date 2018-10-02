@@ -8,15 +8,16 @@ module MarcToArgot
 
         def names
           lambda do |rec, acc|
-            Traject::MarcExtractor.cached('100:110:111:700:710:711:720', :alternate_script => false)
+            Traject::MarcExtractor.cached('100:110:111:700:710:711:720')
                                   .each_matching_line(rec) do |field, spec, extractor|
 
               next unless passes_names_constraint?(field)
               next unless subfield_5_absent_or_present_with_local_code?(field)
-
+              Logging.mdc['field'] = field.tag
               names = assemble_names_hash(field)
 
               acc << names unless names.empty?
+              Logging.mdc.delete('field')
             end
           end
         end
@@ -28,17 +29,20 @@ module MarcToArgot
           name['rel'] = names_rel(field)
           name['type'] = names_type(field, name['rel'])
 
+          lang = Vernacular::ScriptClassifier.new(field, name['name']).classify
+          name['lang'] = lang unless lang.nil? || lang.empty?
+
           name.delete_if { |k, v| v.nil? || v.empty? }
         end
 
         def names_name(field)
           name = ''
-          case field.tag
-          when /(100|700)/
+          case field_tag_or_880_linkage_tag(field)
+          when '100', '700'
             name = collect_and_join_subfield_values(field, %w[a b c d g j q u])
-          when /(110|710)/
+          when '110', '710'
             name = collect_and_join_subfield_values(field, %w[a b c d g n u])
-          when /(111|711)/
+          when '111', '711'
             name = collect_and_join_subfield_values(field, %w[a c d e g n q u])
           when '720'
             name = collect_and_join_subfield_values(field, 'a')
@@ -50,10 +54,10 @@ module MarcToArgot
         def names_rel(field)
           rels = []
           rels.concat names_collect_rels(field, '4').map { |code| names_map_relator_code_to_term(code) }
-          case field.tag
-          when /(100|110|700|710|720)/
+          case field_tag_or_880_linkage_tag(field)
+          when '100', '110', '700', '710', '720'
             rels.concat names_collect_rels(field, 'e')
-          when /(111|711)/
+          when '111', '711'
             rels.concat names_collect_rels(field, 'j')
           end
           rels.compact.map(&:downcase).uniq
@@ -80,10 +84,10 @@ module MarcToArgot
 
         def names_type(field, rels)
           return name_type_with_rel(rels) unless rels.empty?
-          case field.tag
-          when /(100|110|111)/
+          case field_tag_or_880_linkage_tag(field)
+          when '100', '110', '111'
             'creator'
-          when /(700|710|711|720)/
+          when '700', '710', '711', '720'
             'no_rel'
           end
         end
@@ -130,8 +134,8 @@ module MarcToArgot
         end
 
         def passes_names_constraint?(field)
-          case field.tag
-          when /(700|710|711)/
+          case field_tag_or_880_linkage_tag(field)
+          when '700', '710', '711'
             !(%w[t k] & field.subfields.map(&:code)).any?
           else
             true

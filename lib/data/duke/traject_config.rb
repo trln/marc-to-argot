@@ -2,7 +2,11 @@
 # Primary ID
 ######
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
-  acc.collect! { |s| s.match(/DUKE.*/) ? s.to_s : "DUKE#{s}" }
+  acc.collect! do |s|
+    id = s.to_s.strip
+    id.match(/DUKE.*/) ? id : "DUKE#{id}"
+  end
+  Logging.mdc['record_id'] = acc.first
 end
 
 ################################################
@@ -11,7 +15,7 @@ end
 
 to_field 'local_id' do |rec, acc, context|
   local_id = {
-    value: context.output_hash['id'].first,
+    value: context.output_hash.fetch('id', []).first,
     other: []
   }
 
@@ -19,21 +23,26 @@ to_field 'local_id' do |rec, acc, context|
 end
 
 ################################################
+# OCLC Number
+######
+
+to_field "oclc_number", oclc_number
+
+################################################
 # Rollup ID
 ######
 
-to_field "rollup_id", extract_marc("035|  |a") do |rec, acc|
-  acc.select! { |x| /^(\(OCoLC\))?\d{8,9}$/.match(x.to_s) }
-  acc.map! { |x| x.sub('(OCoLC)', '') }
-  acc.map! { |x| "OCLC#{x}" }
-  acc.flatten!
-  acc.uniq!
-end
+to_field "rollup_id", rollup_id
 
 ################################################
 # Institutiuon
 ######
 to_field 'institution', literal('duke')
+
+##################
+# Names
+#########
+to_field 'names', names
 
 ################################################
 # Items
@@ -323,4 +332,8 @@ to_field 'holdings' do |rec, acc, context|
 
     acc << holding.to_json if holding.any?
   end
+end
+
+each_record do |rec, ctx|
+  Logging.mdc.clear
 end

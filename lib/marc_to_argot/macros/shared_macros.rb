@@ -8,6 +8,7 @@ require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/series_statement'
+require 'marc_to_argot/macros/shared/subject_genre'
 require 'marc_to_argot/macros/shared/title'
 require 'marc_to_argot/macros/shared/title_variant'
 require 'marc_to_argot/macros/shared/upc'
@@ -34,6 +35,7 @@ module MarcToArgot
       include PhysicalMedia
       include ResourceType
       include SeriesStatement
+      include SubjectGenre
       include Title
       include TitleVariant
       include Upc
@@ -45,6 +47,10 @@ module MarcToArgot
       # values to look for in the 856 that indicate
       # a record has online access.
       ELOC_IND2 = Set.new(%w[0 1])
+
+      def record_id
+        oclcnum("035a:035z")
+      end
 
       # tests whether the record has an 856[ind2] that matches
       # any of the values in ELOC_IND2

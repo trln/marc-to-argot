@@ -1,10 +1,30 @@
+## Traject configurations start by loading this file, and then they load 
+# institution/configuration specific files.  In order of execution, this means
+# that any field that is *not* overridden in an institution/configuration
+# specific file happens *after* any field that is mapped in this file.
+
+# The loader 'includes' shared macros in this file, and includes
+# institution-specific macros (if any) for the sub-configurations.  
+# What this means is that any macros (or methods) used in this file
+# will be the 'shared' versions, which may not be what you want.
+
+# Set up the main logger, used in macros and configuration files.
+# this version uses the `logging` gem with a custom adapter, allowing
+# us to set a mapped diagnostic context which can contain information about
+# the record being processed
+self.logger = Yell.new do |l|
+  l.adapter :logging_adapter, 
+    level: settings.fetch(:log_level, :warn), 
+    appender: settings.fetch(:appender, :stderr)
+end
+
 ################################################
 # IDs and Standard Numbers
 ######
 
-unless settings["override"].include?("id")
-  to_field "id", oclcnum("035a:035z")
-end
+#unless settings["override"].include?("id")
+#  to_field "id", record_id
+#end
 
 unless settings["override"].include?("record_data_source")
   to_field "record_data_source" do |rec, acc|
@@ -311,128 +331,35 @@ unless settings["override"].include?("url")
 end
 
 ################################################
-# Subjects
+# Subject & Genre Headings
 ######
 
 unless settings["override"].include?("subject_headings")
-  to_field 'subject_headings', argot_subject_genre_headings({ spec: settings["specs"][:subject_headings]})
+  to_field 'subject_headings', subject_headings
 end
 
 unless settings["override"].include?("genre_headings")
-  to_field 'genre_headings', argot_subject_genre_headings({ spec: '382a:382b:382d:382p:'\
-                                                                  '384a:567b:653|*6|a'
-                                                          })
+  to_field 'genre_headings', genre_headings
 end
 
-unless settings["override"].include?("genre_headings")
-  to_field 'genre_headings', argot_subject_genre_headings({ spec: '655avxyz',
-                                                            filters: {
-                                                              'rbbin' => [ :strip_rb_vocab_terms ],
-                                                              'rbgenr' => [ :strip_rb_vocab_terms ],
-                                                              'rbmscv' => [ :strip_rb_vocab_terms ],
-                                                              'rbpap' => [ :strip_rb_vocab_terms ],
-                                                              'rbpri' => [ :strip_rb_vocab_terms ],
-                                                              'rbprov' => [ :strip_rb_vocab_terms ],
-                                                              'rbpub' => [ :strip_rb_vocab_terms ],
-                                                              'rbtyp' => [ :strip_rb_vocab_terms ]
-                                                            }
-                                                          })
-end
+################################################
+# Subject & Genre Facets
+######
 
 unless settings['override'].include?('subject_topical')
-  to_field 'subject_topical', argot_subject_facets({ spec: '600abcdfghjklmnopqrstu:600x:'\
-                                                           '610abcdfghklmnoprstu:610x:'\
-                                                           '611acdefghklnpqstu:611x:'\
-                                                           '630adfghklmnoprst:630x:'\
-                                                           '647acdg:647x:'\
-                                                           '648x:'\
-                                                           '650abcdg:650x:'\
-                                                           '651x:653|*0|a:653|*1|a:653|*2|a:'\
-                                                           '653|*3|a:'\
-                                                           '656a:656x:'\
-                                                           '657a:657x'})
+  to_field 'subject_topical', subject_topical
 end
 
 unless settings['override'].include?('subject_chronological')
-  to_field 'subject_chronological', argot_subject_facets({ spec: '600y:610y:611y:630y:'\
-                                                                 '648a:650y:651y:653|*4|a:'\
-                                                                 '655y:656y:657y' })
+  to_field 'subject_chronological', subject_chronological
 end
 
 unless settings['override'].include?('subject_geographic')
-  to_field 'subject_geographic', argot_subject_facets({ spec: '600z:610z:611z:630z:'\
-                                                              '648z:650z:'\
-                                                              '651z:'\
-                                                              '653|*5|a:655z:656z:'\
-                                                              '657z:662a:662b:662c:662d:662f:662g:662h'})
-
-  to_field 'subject_geographic', argot_subject_facets({ spec: '651ag',
-                                                        subdivision_separator: ' -- '
-                                                      })
+  to_field 'subject_geographic', subject_geographic
 end
 
 unless settings['override'].include?('subject_genre')
-  to_field 'subject_genre', argot_subject_facets({ spec: '382a:382b:382d:382p:384a:567b:'\
-                                                         '600v:610v:611v:630v:647v:'\
-                                                         '648v:650v:651v:653|*6|a:'\
-                                                         '655v:656v:656k:657v'})
-
-  to_field 'subject_genre', argot_subject_facets({ spec: '655ax',
-                                                   subdivision_separator: ' -- ',
-                                                   filters: {
-                                                     'rbbin' => [ :strip_rb_vocab_terms ],
-                                                     'rbgenr' => [ :strip_rb_vocab_terms ],
-                                                     'rbmscv' => [ :strip_rb_vocab_terms ],
-                                                     'rbpap' => [ :strip_rb_vocab_terms ],
-                                                     'rbpri' => [ :strip_rb_vocab_terms ],
-                                                     'rbprov' => [:strip_rb_vocab_terms ],
-                                                     'rbpub' => [ :strip_rb_vocab_terms ],
-                                                     'rbtyp' => [ :strip_rb_vocab_terms ]
-                                                   }
-                                                 })
-
-  to_field 'subject_genre', argot_genre_from_fixed_fields()
-
-  # Create 'Primary sources' genre facet value
-  each_record do |rec, context|
-    primary_source_genres = ['Archival resources',
-                             'Archives',
-                             'Correspondence',
-                             'Diaries',
-                             'Interviews',
-                             'Interview',
-                             'Notebooks, sketchbooks, etc',
-                             'Personal narratives',
-                             'Sources',
-                             'Speeches, addresses, etc']
-    
-    if context.output_hash['subject_genre']
-      context.output_hash['subject_genre'] << "Primary sources" if !(context.output_hash['subject_genre'] & primary_source_genres).empty?
-      context.output_hash['subject_genre'] = context.output_hash['subject_genre'].uniq
-    end
-  end
-
-  # Create 'Reference' genre facet value
-  each_record do |rec, context|
-    reference_genres = [
-      'Bibliography',
-      'Bio-bibliography',
-      'Dictionaries',
-      'Directories',
-      'Encyclopedias',
-      'Handbooks, manuals, etc.',
-      'Handbooks, manuals, etc',
-      'Identification',
-      'Identification guides',
-      'Indexes',
-      'Style manuals'
-    ]
-    
-    if context.output_hash['subject_genre']
-      context.output_hash['subject_genre'] << "Reference" if !(context.output_hash['subject_genre'] & reference_genres).empty?
-      context.output_hash['subject_genre'] = context.output_hash['subject_genre'].uniq
-    end
-  end
+  to_field 'subject_genre', subject_genre
 end
 
 ################################################
@@ -485,10 +412,3 @@ unless settings['override'].include?('institution')
     acc.concat(inst)
   end
 end
-
-# Other fields in endeca model that we're unsure how to map to
-# source_of_acquisition
-# related_collections
-# biographical_sketch
-# most_recent
-# holdings_note

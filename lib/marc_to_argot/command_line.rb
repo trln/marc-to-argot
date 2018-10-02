@@ -1,4 +1,5 @@
 require 'marc_to_argot'
+require 'yell/logging_adapter'
 require 'logger'
 
 module MarcToArgot
@@ -11,8 +12,6 @@ module MarcToArgot
     def __version
       puts "marc-to-argot version #{MarcToArgot::VERSION}, installed #{File.mtime(__FILE__)}"
     end
-
-
 
     ###############
     # Flatten

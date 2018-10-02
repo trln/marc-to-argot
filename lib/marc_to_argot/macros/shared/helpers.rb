@@ -73,7 +73,7 @@ module MarcToArgot
         # "(123456) (abc)" => "(123456)"
         def extract_identifier(sf_value)
           identifier = split_identifier_and_qualifier(sf_value).first
-          enclosed_id_match = /[\(\[]#{Regexp.escape(identifier)}[\)\]]/.match(sf_value)
+          enclosed_id_match = /[\(\[]#{Regexp.escape(identifier.to_s)}[\)\]]/.match(sf_value)
 
           enclosed_id_match ? enclosed_id_match[0] : identifier
         end
@@ -201,6 +201,14 @@ module MarcToArgot
             split_fields
           else
             [field]
+          end
+        end
+
+        def field_tag_or_880_linkage_tag(field)
+          if field.tag == '880'
+            collect_subfield_values_by_code(field, '6').first[0..2]
+          else
+            field.tag
           end
         end
       end

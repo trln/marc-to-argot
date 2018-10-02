@@ -36,6 +36,13 @@ describe MarcToArgot do
     )
   end
 
+  it '(Duke) generates oclc_number' do
+    result = run_traject_json('duke', 'rollup_id', 'mrc')
+    expect(result['oclc_number']).to(
+      eq({ "value" => '12420922'})
+    )
+  end
+
   it '(Duke) generates rollup_id' do
     result = run_traject_json('duke', 'rollup_id', 'mrc')
     expect(result['rollup_id']).to(
@@ -45,11 +52,6 @@ describe MarcToArgot do
 
   it '(Duke) does NOT generate a rollup_id for Duke special collections records' do
     result = run_traject_json('duke', 'special_collections', 'mrc')
-    expect(result['rollup_id']).to(be_nil)
-  end
-
-  it '(Duke) does NOT generate a rollup_id when it is not an OCLC number' do
-    result = run_traject_json('duke', 'invalid_rollup_id', 'mrc')
     expect(result['rollup_id']).to(be_nil)
   end
 

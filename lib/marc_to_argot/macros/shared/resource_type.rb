@@ -69,13 +69,13 @@ module MarcToArgot
           def audiobook?
             marc_leader_06_match = record.leader.byteslice(6) == 'i'
             marc_008_30_31_match = record.fields('008').find do |field|
-              (%w[a b d e f h k m o p] & (field.value.byteslice(30..31) || '').split('')).any?
+              (%w[a b d e f h k m o p] & (field.value.byteslice(30..31) || '').scrub(' ').split('')).any?
             end
 
             marc_006_00_13_14_match = record.fields('006').find do |field|
               field.value.byteslice(0) == 'i' &&
                 (%w[a b d e f h k m o p] &
-                  (field.value.byteslice(13..14) || '').split('')).any?
+                  (field.value.byteslice(13..14) || '').scrub(' ').split('')).any?
             end
 
             return true if (marc_leader_06_match &&
@@ -91,12 +91,12 @@ module MarcToArgot
             marc_leader_06_match = %w[a t].include?(record.leader.byteslice(6))
             marc_leader_07_match = %w[a c d m].include?(record.leader.byteslice(7))
             marc_008_24_27_match = record.fields('008').find do |field|
-              !(field.value.byteslice(24..27) || '').split('').include?('m')
+              !(field.value.byteslice(24..27) || '').scrub(' ').split('').include?('m')
             end
 
             marc_006_match = record.fields('006').find do |field|
               %w[a t].include?(field.value.byteslice(0)) &&
-                !(field.value.byteslice(7..10) || '').split('').include?('m')
+                !(field.value.byteslice(7..10) || '').scrub(' ').split('').include?('m')
             end
 
             return true if (marc_leader_06_match &&
@@ -169,14 +169,14 @@ module MarcToArgot
 
             marc_leader_06_e_f_match = %w[e f].include?(record.leader.byteslice(6))
             marc_008_33_34_n_match = record.fields('008').find do |field|
-              (field.value.byteslice(33..34) || '').split('').include?('n')
+              (field.value.byteslice(33..34) || '').scrub(' ').split('').include?('n')
             end
 
 
             marc_006_match = record.fields('006').find do |field|
               (%w[o r].include?(field.value.byteslice(0)) && field.value.byteslice(16) == 'g') ||
                 (field.value.byteslice(0) == 'm' && (field.value.byteslice(9) == 'g' ||
-                  (field.value.byteslice(16..17) || '').split('').include?('n')))
+                  (field.value.byteslice(16..17) || '').scrub(' ').split('').include?('n')))
             end
 
             return true if (marc_leader_06_o_r_match && marc_008_33_g_match) ||
@@ -437,12 +437,12 @@ module MarcToArgot
           def thesis_dissertation?
             marc_leader_06_match = record.leader.byteslice(6) == 'a'
             marc_008_24_27_match = record.fields('008').find do |field|
-              (field.value.byteslice(24..27) || '').split('').include?('m')
+              (field.value.byteslice(24..27) || '').scrub(' ').split('').include?('m')
             end
 
             marc_006_match = record.fields('006').find do |field|
               %w[a s].include?(field.value.byteslice(0)) &&
-                (field.value.byteslice(7..10) || '').split('').include?('m')
+                (field.value.byteslice(7..10) || '').scrub(' ').split('').include?('m')
             end
 
             return true if (marc_leader_06_match && marc_008_24_27_match) ||

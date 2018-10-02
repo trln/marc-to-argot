@@ -55,8 +55,14 @@ module MarcToArgot
         end
       end
 
+      def open_access!(urls, items)
+        if items.any? { |i| i['item_cat_2'] == 'OPENACCESS' }
+          urls.each{ |u| u['open'] = true if u['type'] == 'fulltext' }
+        end
+      end
+
       def is_available?(items)
-        items.any? { |i| i['status'] =~ /^avail/i || i['loc_b'] == 'ONLINE' }
+        items.any? { |i| i.fetch('status', '').match?(/^avail/i) || i['loc_b'] == 'ONLINE' }
       end
 
       def online_access?(_rec, libraries = [])

@@ -4,7 +4,8 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util::TrajectRunTest
   let(:included_work) { run_traject_json('unc', 'included_work', 'mrc') }
-
+  let(:included_work1) { run_traject_json('unc', 'included_work1', 'mrc') }
+  
   it '(MTA) sets included_work' do
     result = included_work['included_work']
     expect(result).to eq(
@@ -95,6 +96,17 @@ describe MarcToArgot do
                           'other_ids'=>['2001211888', '48166959'],
                           'display'=>'false'}
                         ]
+                      )
+  end
+
+    xit '(MTA) sets included_work from 880s' do
+    result = included_work1['included_work']
+    expect(result).to include(
+                        {'type'=>'included',
+                          'author'=>'劉卲, active 3rd century.',
+                          'title'=>['人物志.', '1974.'],
+                          'lang'=>'cjk'
+                        }
                       )
   end
 end

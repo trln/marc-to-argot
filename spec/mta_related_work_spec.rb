@@ -5,7 +5,8 @@ describe MarcToArgot do
   include Util::TrajectRunTest
   let(:related_work_mirror_included) { run_traject_json('unc', 'related_work_mirror_included', 'mrc') }
   let(:related_work_addtl_7XX) { run_traject_json('unc', 'related_work_addtl_7XX', 'mrc') }
-  let(:related_work_linking_fields) { run_traject_json('unc', 'related_work_linking_fields', 'mrc') }  
+  let(:related_work_linking_fields) { run_traject_json('unc', 'related_work_linking_fields', 'mrc') }
+    let(:related_work_vern1) { run_traject_json('unc', 'related_work_vern1', 'mrc') }  
 
   it '(MTA) sets related_work_from_700_710_711_730_740' do
     result = related_work_mirror_included['related_work']
@@ -276,6 +277,17 @@ describe MarcToArgot do
                         ]
                       )
   end
+
+    xit '(MTA) sets related_work_from 880s' do
+    result = related_work_vern1['related_work']
+    expect(result).to include(
+                        {'type'=>'related',
+                          'author'=>'郭湛波.',
+                          'title'=>['近五十年中國思想史.'],
+                          'lang'=>'cjk'},
+                      )
+  end
+
 end
 
 

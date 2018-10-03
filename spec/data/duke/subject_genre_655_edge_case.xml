@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cgm a2200781Ii 4500 </leader>
+<controlfield tag="001">DUKE007756804 </controlfield>
+<controlfield tag="005">20170217135027.0 </controlfield>
+<controlfield tag="007">vd^cvaizu </controlfield>
+<controlfield tag="008">161115s2016^^^^txu101^^^^^^^^^^^^vlara^d </controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">962733920 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">BTS</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">BTS</subfield>
+ <subfield code="d">OCLCA </subfield>
+</datafield>
+<datafield tag="041" ind1="0" ind2=" ">
+ <subfield code="a">ara</subfield>
+ <subfield code="a">eng</subfield>
+ <subfield code="a">kor</subfield>
+ <subfield code="j">eng</subfield>
+ <subfield code="h">ara</subfield>
+ <subfield code="h">eng</subfield>
+ <subfield code="h">kor </subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">a-sy---</subfield>
+ <subfield code="a">a-jo--- </subfield>
+</datafield>
+<datafield tag="046" ind1=" " ind2=" ">
+ <subfield code="k">2016 </subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDLL </subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">HV640.5.S97</subfield>
+ <subfield code="b">A38 2016 </subfield>
+</datafield>
+<datafield tag="130" ind1="0" ind2=" ">
+ <subfield code="a">After spring (Documentary film) </subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="6">880-01</subfield>
+ <subfield code="a">After spring /</subfield>
+ <subfield code="c">directed by Ellen Martinez, Steph Ching ; produced by Steph Ching, Ellen Martinez. </subfield>
+</datafield>
+<datafield tag="257" ind1=" " ind2=" ">
+ <subfield code="6">880-02</subfield>
+ <subfield code="a">United States</subfield>
+ <subfield code="2">naf </subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="2">
+ <subfield code="6">880-03</subfield>
+ <subfield code="a">[Austin, Texas] :</subfield>
+ <subfield code="b">Tugg,</subfield>
+ <subfield code="c">[2016] </subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="6">880-04</subfield>
+ <subfield code="a">two-dimensional moving image</subfield>
+ <subfield code="b">tdi</subfield>
+ <subfield code="2">rdacontent </subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="6">880-05</subfield>
+ <subfield code="a">video</subfield>
+ <subfield code="b">v</subfield>
+ <subfield code="2">rdamedia </subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="6">880-06</subfield>
+ <subfield code="a">videodisc</subfield>
+ <subfield code="b">vd</subfield>
+ <subfield code="2">rdacarrier </subfield>
+</datafield>
+<datafield tag="344" ind1=" " ind2=" ">
+ <subfield code="6">880-07</subfield>
+ <subfield code="a">digital</subfield>
+ <subfield code="b">optical</subfield>
+ <subfield code="2">rda </subfield>
+</datafield>
+<datafield tag="347" ind1=" " ind2=" ">
+ <subfield code="6">880-08</subfield>
+ <subfield code="a">video file</subfield>
+ <subfield code="b">DVD video</subfield>
+ <subfield code="2">rda </subfield>
+</datafield>
+<datafield tag="380" ind1=" " ind2=" ">
+ <subfield code="6">880-09</subfield>
+ <subfield code="a">Motion pictures</subfield>
+ <subfield code="2">lcgft </subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="6">880-10</subfield>
+ <subfield code="a">DVD. </subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+ <subfield code="6">880-11</subfield>
+ <subfield code="a">In Arabic, English, and Korean with English subtitles. </subfield>
+</datafield>
+<datafield tag="508" ind1=" " ind2=" ">
+ <subfield code="6">880-12</subfield>
+ <subfield code="a">Cinematography, Jason Graham Howell, Frank Weiss ; editing, Paul Lovelace ; music, Katy Jarzebowski. </subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="6">880-13</subfield>
+ <subfield code="a">Originally released as a documentary feature film in 2016. </subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="6">880-14</subfield>
+ <subfield code="a">&quot;With the Syrian conflict now in its sixth year, millions of people continue to be displaced. AFTER SPRING is the story of what happens next. By following two refugee families in transition and aid workers fighting to keep the camp running, viewers will experience what it is like to live in Zaatari, the largest camp for Syrian refugees. With no end in sight for the conflict or this refugee crisis, everyone must decide if they can rebuild their lives in a place that was never meant to be permanent&quot;--After Spring WWW site. </subfield>
+</datafield>
+<datafield tag="610" ind1="2" ind2="0">
+ <subfield code="6">880-15</subfield>
+ <subfield code="a">Zaatari (Refugee camp)</subfield>
+ <subfield code="x">Social conditions. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="6">880-16</subfield>
+ <subfield code="a">Refugees</subfield>
+ <subfield code="z">Syria</subfield>
+ <subfield code="x">Social conditions. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="6">880-17</subfield>
+ <subfield code="a">Refugee camps</subfield>
+ <subfield code="z">Jordan. </subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="6">880-18</subfield>
+ <subfield code="a">Syria</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">Civil War, 2011-</subfield>
+ <subfield code="x">Refugees. </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19</subfield>
+ <subfield code="6">880-19.</subfield>
+ <subfield code="6">880-19 </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20</subfield>
+ <subfield code="6">880-20.</subfield>
+ <subfield code="6">880-20 </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21</subfield>
+ <subfield code="6">880-21.</subfield>
+ <subfield code="6">880-21 </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-22</subfield>
+ <subfield code="a">Martinez, Ellen,</subfield>
+ <subfield code="e">film director,</subfield>
+ <subfield code="e">film producer. </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-23</subfield>
+ <subfield code="a">Ching, Steph,</subfield>
+ <subfield code="e">film director,</subfield>
+ <subfield code="e">film producer. </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-24</subfield>
+ <subfield code="a">Jarzebowski, Katy,</subfield>
+ <subfield code="e">composer (expression) </subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="6">880-25</subfield>
+ <subfield code="a">Tugg Inc.,</subfield>
+ <subfield code="e">film distributor. </subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2="0">
+ <subfield code="6">245-01/</subfield>
+ <subfield code="a">افتر سپرنگ /</subfield>
+ <subfield code="c">درتد بي رلن مرتنز، ستپه چنگ ؛ پردد بي ستپه چنگ، رلن مرتنز. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">257-02/</subfield>
+ <subfield code="a">انتد ستتس</subfield>
+ <subfield code="2">نف </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="2">
+ <subfield code="6">264-03/</subfield>
+ <subfield code="a">[استن، تxس] :</subfield>
+ <subfield code="b">تگگ،</subfield>
+ <subfield code="c">[2016] </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">336-04/</subfield>
+ <subfield code="a">تودمنسنل مڤنگ امگ</subfield>
+ <subfield code="b">تد</subfield>
+ <subfield code="2">ردنتنت </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">337-05/</subfield>
+ <subfield code="a">ڤد</subfield>
+ <subfield code="b">ڤ</subfield>
+ <subfield code="2">ردمد </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">338-06/</subfield>
+ <subfield code="a">ڤددس</subfield>
+ <subfield code="b">ڤد</subfield>
+ <subfield code="2">ردرر </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">344-07/</subfield>
+ <subfield code="a">دگتل</subfield>
+ <subfield code="b">پتل</subfield>
+ <subfield code="2">رد </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">347-08/</subfield>
+ <subfield code="a">ڤد فل</subfield>
+ <subfield code="b">دڤد ڤد</subfield>
+ <subfield code="2">رد </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">380-09/</subfield>
+ <subfield code="a">متن پترس</subfield>
+ <subfield code="2">لگفت </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">538-10/</subfield>
+ <subfield code="a">دڤد. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">546-11/</subfield>
+ <subfield code="a">ان ارب، غنگله، اند كرن وث طنگله سبتتلس. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">508-12/</subfield>
+ <subfield code="a">نمتگرپهي، جسن گرهم هول، فرنك وس ؛ دتنگ، پل لڤل ؛ مس، كتي جرزبوسك. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">500-13/</subfield>
+ <subfield code="a">رگنلي رلسد اس ا دمنتري فتر فلم ان 2016. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">520-14/</subfield>
+ <subfield code="a">&quot;وث ث سيرن نفلت نو ان اتس سxث ير، ملنس ف پپل نتن ت ب دسپلد. افتتر سپرانگ اس ث ستري ف وهة هپنس نxت. بي فلونگ تو رفگي فملس ان ترنستن اند اد وركرس فغتنگ ت كيپ ث مپ رننگ، ڤورس ول xپرن وهة ات اس ل ت ل ان زاتر، ث لرگست مپ فر سيرن رفگيس. وث ن ند ان سغت فر ث نفلت ر ثس رفگي رسس، ڤرين مست دد اف ثي ن ربلد ثر لس ان ا پل ثة وس نڤر منت ت ب پرمننت&quot;فتر سپرنگ وو ست. </subfield>
+</datafield>
+<datafield tag="880" ind1="2" ind2="0">
+ <subfield code="6">610-15/</subfield>
+ <subfield code="a">زاتر (رفگي مپ)</subfield>
+ <subfield code="x">سل ندتنس. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="0">
+ <subfield code="6">650-16/</subfield>
+ <subfield code="a">رفگيس</subfield>
+ <subfield code="z">سير</subfield>
+ <subfield code="x">سل ندتنس. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="0">
+ <subfield code="6">650-17/</subfield>
+ <subfield code="a">رفگي مپس</subfield>
+ <subfield code="z">جردن. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="0">
+ <subfield code="6">651-18/</subfield>
+ <subfield code="a">سير</subfield>
+ <subfield code="x">هستري</subfield>
+ <subfield code="y">ڤل ور، 2011</subfield>
+ <subfield code="x">رفگيس. </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="7">
+ <subfield code="6">655-19/</subfield>
+ <subfield code="a">دمنتري فلمس.</subfield>
+ <subfield code="2">لگفت </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="7">
+ <subfield code="6">655-20/</subfield>
+ <subfield code="a">ننفتن فلمس.</subfield>
+ <subfield code="2">لگفت </subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="7">
+ <subfield code="6">655-21/</subfield>
+ <subfield code="a">فتر فلمس.</subfield>
+ <subfield code="2">لگفت </subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-22/</subfield>
+ <subfield code="a">مرتنز، صلن،</subfield>
+ <subfield code="e">فلم درتر،</subfield>
+ <subfield code="e">فلم پردر. </subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-23/</subfield>
+ <subfield code="a">چنگ، ستپه،</subfield>
+ <subfield code="e">فلم درتر،</subfield>
+ <subfield code="e">فلم پردر. </subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-24/</subfield>
+ <subfield code="a">جرزبوسك، كتي،</subfield>
+ <subfield code="e">مپسر (xپرسن) </subfield>
+</datafield>
+<datafield tag="880" ind1="2" ind2=" ">
+ <subfield code="6">710-25/</subfield>
+ <subfield code="a">تگگ ان.،</subfield>
+ <subfield code="e">فلم دستربتر. </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">G </subfield>
+ <subfield code="b">Visual </subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20170217 </subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">LAW</subfield>
+ <subfield code="c">LGEN</subfield>
+ <subfield code="h">HV640.5.S97</subfield>
+ <subfield code="i">A38 2016</subfield>
+ <subfield code="D">x </subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">LAW</subfield>
+ <subfield code="c">LRES</subfield>
+ <subfield code="h">HV640.5.S97 A38 2016</subfield>
+ <subfield code="h"></subfield>
+ <subfield code="D">x </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LAW</subfield>
+ <subfield code="c">LRES</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">HV640.5.S97 A38 2016</subfield>
+ <subfield code="o">10</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">DVD</subfield>
+ <subfield code="p">L00607358T </subfield>
+ <subfield code="s">20170213</subfield>
+ <subfield code="u">20170217</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007892052 </subfield>
+</datafield>
+</record>
+</collection>

@@ -65,7 +65,7 @@ module MarcToArgot
 
             Traject::MarcExtractor.cached('655axyz').each_matching_line(rec) do |field, spec|
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x y z].include?(sf.code) }, spec)
-              acc << { value: value}
+              acc << { value: value } unless value.nil? || value.empty?
             end
 
             acc.uniq!
@@ -160,7 +160,7 @@ module MarcToArgot
 
             Traject::MarcExtractor.cached('655ax').each_matching_line(rec) do |field, spec|
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x].include?(sf.code) }, spec)
-              acc << value
+              acc << value unless value.nil? || value.empty?
             end
 
             acc.concat(argot_genre_from_fixed_fields(rec))
@@ -290,7 +290,11 @@ module MarcToArgot
         def assemble_subdivisions(codes_with_subdivisions, field, spec)
           subdivisions = []
 
-          if spec.joinable?
+          # remove any arrays from the array that don't have two entries
+          # should be of the pattern [[code,value],[code,value]]
+          codes_with_subdivisions.delete_if { |a| a.length != 2 }
+
+          if spec.joinable? && !codes_with_subdivisions.empty?
             subdivisions = [codes_with_subdivisions.shift[1]]
 
             codes_with_subdivisions.each do |sf|

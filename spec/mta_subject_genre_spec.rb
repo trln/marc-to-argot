@@ -19,7 +19,8 @@ describe MarcToArgot do
   let(:genre8) { run_traject_json('unc', 'genre8', 'mrc') }
   let(:vern650v) { run_traject_json('unc', 'vern650v', 'mrc') }
   let(:vern655ara) { run_traject_json('unc', 'vern655ara', 'mrc') }
-  
+  let(:duke_genre_edge_case) { run_traject_json('duke', 'subject_genre_655_edge_case', 'xml') }
+
   it '(MTA) sets subject_headings from any source' do
     result = subject1['subject_headings']
     expect(result).to eq(
@@ -92,7 +93,7 @@ describe MarcToArgot do
                           "Nonfiction"
                         ]
                       )
-  end  
+  end
 
   it '(MTA) sets and deduplicates subject_geographic' do
     result = subject1['subject_geographic']
@@ -103,7 +104,7 @@ describe MarcToArgot do
                         ]
                       )
   end
-  
+
   it '(MTA) keeps a and g together in subject_geographic from 651' do
     result = genre3['subject_geographic']
     expect(result).to include(
@@ -134,7 +135,7 @@ describe MarcToArgot do
                         ]
                       )
   end
-  
+
   it '(MTA) sets and deduplicates subject_chronological' do
     result = subject1['subject_chronological']
     expect(result).to eq(
@@ -175,59 +176,59 @@ describe MarcToArgot do
                           "Nonfiction"
                         ]
                       )
-  end  
+  end
 
   it '(MTA) adds Primary sources genre facet value when that facet includes Diaries' do
     result = primary_source1['subject_genre']
     expect(result).to include(
                         'Primary sources'
                       )
-  end  
+  end
 
   it '(MTA) adds Primary sources genre facet value when that facet includes Notebooks, sketchbooks, etc.' do
     result = primary_source2['subject_genre']
     expect(result).to include(
                         'Primary sources'
                       )
-  end  
+  end
 
   it '(MTA) adds Reference genre facet value when that facet includes Dictionaries' do
     result = genre8['subject_genre']
     expect(result).to include(
                         'Reference'
                       )
-  end  
+  end
 
-  
+
   it '(MTA) adds genre facet value from 006 LitForm byte independent of LDR values' do
     result = genre1['subject_genre']
     expect(result).to include(
                         'Nonfiction'
                       )
-  end  
-  
+  end
+
   it '(MTA) sets genre facet to Biography from 008/34' do
     result = genre3['subject_genre']
     expect(result).to include(
                         'Biography'
                       )
-  end  
+  end
 
   it '(MTA) keeps 655ax together in genre facet' do
     result = genre2['subject_genre']
     expect(result).to include(
                         'American Literature -- Adaptations'
                       )
-  end  
-  
+  end
+
   it '(MTA) splits 655av in genre facet' do
     result = genre3['subject_genre']
     expect(result).to include(
                         'Spy stories',
                         'Comic books, strips, etc'
                       )
-  end  
-  
+  end
+
   it '(MTA) sets genre facet values from 656 k and v' do
     result = genre3['subject_genre']
     expect(result).to include(
@@ -300,7 +301,21 @@ describe MarcToArgot do
                           {'value' => 'Narrative inquiry (Research method)'}
                         )
     end
-    
+
+    it '(MTA) sets the genre_headings field values without errors or empty values' do
+      result = duke_genre_edge_case['genre_headings']
+      expect(result).to eq([{"value" => "دمنتري فلمس"},
+                            {"value" => "ننفتن فلمس"},
+                            {"value" => "فتر فلمس"}])
+    end
+
+    it '(MTA) sets the subject genre field values without errors or empty values' do
+      result = duke_genre_edge_case['subject_genre']
+      expect(result).to eq(["دمنتري فلمس",
+                            "ننفتن فلمس",
+                            "فتر فلمس"])
+    end
+
     xit '(MTA) sets subject_headings from 880 field' do
       result = vern650v['subject_headings']
       expect(result).to include(
@@ -308,7 +323,7 @@ describe MarcToArgot do
                             "lang" => "cjk"}
                         )
     end
-    
+
     xit '(MTA) sets subject_topical from 880 field' do
       result = vern650v['subject_topical']
       expect(result).to include(

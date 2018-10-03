@@ -25,5 +25,20 @@ describe MarcToArgot do
         expect(output['publisher']).to eq(exp.nil? ? nil : exp)
       end
     end
+
+    let(:imprint_v1) { run_traject_json('unc', 'imprint_v1', 'mrc') }
+
+    xit '(MTA) sets publisher from 260 and linked 880' do
+      result = imprint_v1['publisher']
+      expect(result).to eq(
+                          [
+                            {'value': 'In-t vseobshcheĭ istorii RAN'},
+                            {'value': 'Nauka'},
+                            {'value': 'Ин-т всеобщей истории РАН', 'lang': 'rus'},
+                            {'value': 'Наука', 'lang': 'rus'} 
+                          ]
+                        )
+    end
+
   end
 end

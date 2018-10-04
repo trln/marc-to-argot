@@ -20,7 +20,7 @@ module MarcToArgot
         end
 
         def this_work
-          work_entry('100:110:111:130:240:245')
+          work_entry('100:110:111:130:240')
         end
 
         # NOTE: Alternate/vernacular scripts are excluded from processing
@@ -66,7 +66,7 @@ module MarcToArgot
           case field.tag
           when /(700|710|711|730|740)/
             work_entry_type_by_indicator2(field)
-          when /(100|110|111|130|240|245|440|760|762|765|767|770|772|773|
+          when /(100|110|111|130|240|440|760|762|765|767|770|772|773|
                  774|775|777|780|785|786|787|800|810|811|830)/x
             work_entry_type_by_field_tag(field)
           end
@@ -83,7 +83,7 @@ module MarcToArgot
 
         def work_entry_type_by_field_tag(field)
           case field.tag
-          when /(100|110|111|130|240|245)/
+          when /(100|110|111|130|240)/
             'this'
           when /(440|760|800|810|811|830)/
             'series'
@@ -257,7 +257,7 @@ module MarcToArgot
             collect_subfield_if_before(field, %w[a b c u], %w[d g n], %w[t k])
           when /(111)/
             collect_subfield_if_before(field, %w[a c e q u], %w[d g n], %w[t k])
-          when /(240|245)/
+          when /240/
             collect_author_for_240_245(rec)
           when /(711|811)/
             collect_subfield_if_before(field, %w[a c e u], %w[d g n], %w[t k])
@@ -304,8 +304,6 @@ module MarcToArgot
             collect_subfield_if_after(field, %w[f h k l n p t], 'g', %w[t k])
           when /(110|111)/
             collect_subfield_if_after(field, %w[f k l p t], %w[d g n], %w[t k])
-          when '245'
-            collect_filing_title_from_subfields(field, %w[a f g k n p])
           when '440'
             collect_filing_title_from_subfields(field, %w[a n p])
           when /(700|800)/
@@ -386,8 +384,6 @@ module MarcToArgot
             collect_and_join_subfield_values(field, %w[a n p])
           when /(130|240|730|830)/
             collect_and_join_subfield_values(field, %w[a d f g h k l m n o p r s])
-          when '245'
-            collect_and_join_subfield_values(field, %w[a f g k n p]).chomp(' /')
           when '740'
             collect_and_join_subfield_values(field, %w[a h n p])
           when /(773|780)/
@@ -397,7 +393,7 @@ module MarcToArgot
 
         def passes_work_entry_title_nonfiling_constraint?(field)
           case field.tag
-          when /(130|730|740|240|245|440|830)/
+          when /(130|730|740|240|440|830)/
             filing_chars = filing_characters_count(field)
             filing_chars > 0 && filing_chars <= title_subfield_value_length(field)
           else
@@ -417,7 +413,7 @@ module MarcToArgot
           case field.tag
           when /(130|730|740)/
             field.indicator1.to_s.to_i
-          when /(240|245|440|830)/
+          when /(240|440|830)/
             field.indicator2.to_s.to_i
           end
         end
@@ -573,10 +569,6 @@ module MarcToArgot
             !has_100_110_111?(rec)
           when '240'
             !has_100_110_111_with_t?(rec)
-          when '245'
-            !has_130_240?(rec) &&
-              !(has_100_110_111?(rec) &&
-                has_100_110_111_with_t?(rec))
           when /(700|710|711|800|810|811)/
             has_subfield_tk?(field)
           when /(760|765|767|770|772|773|774|775|777|780|785|786|787)/
@@ -584,10 +576,6 @@ module MarcToArgot
           else
             true
           end
-        end
-
-        def has_130_240?(rec)
-          (%w[130 240] & rec.fields.map(&:tag)).any?
         end
 
         def has_100_110_111?(rec)

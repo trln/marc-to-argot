@@ -277,7 +277,7 @@ to_field 'items' do |rec, acc, ctx|
         when 'd'
           item['due_date'] = subfield.value
         when 'i'
-          item['id'] = subfield.value
+          item['item_id'] = subfield.value
         when 'l'
           item['loc_b'] = subfield.value
           item['loc_n'] = subfield.value

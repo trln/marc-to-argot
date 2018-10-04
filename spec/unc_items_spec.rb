@@ -6,7 +6,7 @@ describe MarcToArgot do
 
   it '(UNC) sets item id (single item record)' do
     expect(b1082803argot['items'][0]).to(
-      include("\"id\":\"i1147335\"")
+      include("\"item_id\":\"i1147335\"")
     )
   end
 

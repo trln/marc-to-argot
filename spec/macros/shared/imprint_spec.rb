@@ -77,7 +77,9 @@ describe MarcToArgot::Macros::Shared::Imprint do
         {"type"=>"distribution",
          "value"=>"[Buffalo, NY] : William S. Hein & Company, [2009]"}]]
     }
-
+    let(:imprint_v1) { run_traject_json('unc', 'imprint_v1', 'mrc') }
+    let(:imprint_v2) { run_traject_json('unc', 'imprint_v2', 'mrc') }
+    
     it 'extracts imprint_main' do
       indexer.instance_eval do
         to_field 'imprint_main', imprint_main
@@ -101,5 +103,62 @@ describe MarcToArgot::Macros::Shared::Imprint do
         expect(output['imprint_multiple']).to eq(exp.nil? ? nil : exp.map { |v| v.to_json  })
       end
     end
+
+    xit '(MTA) sets imprint_main from 260 and linked 880' do
+      result = imprint_v1['imprint_main']
+      expect(result).to eq(
+                          [
+                            {
+                              'type': 'imprint',
+                             'label': 'vyp. 4-',
+                             'value': 'Moskva : Nauka'
+                            }.to_json,
+                            {
+                              'type': 'imprint',
+                             'label': 'вып. 4-',
+                             'value': 'Москва : Наука'
+                            }.to_json
+                          ]
+                        )
+    end
+
+    xit '(MTA) sets imprint_multiple from 260 and linked 880' do
+      result = imprint_v1['imprint_multiple']
+      expect(result).to eq(
+                          [
+                            {
+                              'type': 'imprint',
+                             'value': 'Moskva : In-t vseobshcheĭ istorii RAN, 2000-'
+                            }.to_json,
+                            {
+                              'type': 'imprint',
+                             'label': 'vyp. 4-',
+                             'value': 'Moskva : Nauka'
+                            }.to_json,
+                            {
+                              'type': 'imprint',
+                             'value': 'Москва : Ин-т всеобщей истории РАН, 2000-'
+                            }.to_json,
+                            {
+                              'type': 'imprint',
+                             'label': 'вып. 4-',
+                             'value': 'Москва : Наука'
+                            }.to_json
+                          ]
+                        )
+    end
+
+    it '(MTA) sets non-roman imprint_main from 260' do
+      result = imprint_v2['imprint_main']
+      expect(result).to eq(
+                          [
+                            {
+                              'type': 'imprint',
+                             'value': '[S.l.] : 秋田大学教育文化学部附属教育実践総合センター'
+                            }.to_json
+                          ]
+                        )
+    end
+
   end
 end

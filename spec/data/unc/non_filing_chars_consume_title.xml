@@ -21,6 +21,10 @@
     <subfield code='a'>Strugat͡skiĭ, Arkadiĭ,</subfield>
     <subfield code='d'>1925-1991.</subfield>
   </datafield>
+  <datafield ind1='1' ind2='6' tag='240'>
+    <subfield code='a'>Les /</subfield>
+    <subfield code='c'>Bratʹ︠i︡a Struga︠t︡skie.</subfield>
+  </datafield>
   <datafield ind1='1' ind2='6' tag='245'>
     <subfield code='a'>Les /</subfield>
     <subfield code='c'>Bratʹ︠i︡a Struga︠t︡skie.</subfield>

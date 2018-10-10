@@ -10,15 +10,10 @@ module MarcToArgot
         # accumulates an array of JSON blobs with main imprint data from a record.
         def imprint_main
           lambda do |rec, acc|
-            imprint_fields = []
-
-            Traject::MarcExtractor.cached("260:264", alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-              imprint_fields << field
-            end
-
-            main_imprint = select_main_imprint(imprint_fields)
-
-            acc << assemble_imprint_hash(main_imprint).to_json if main_imprint
+            main_imprints = []
+            main_imprints << imprint_main_extractor(rec, alternate_script: false)
+            main_imprints << imprint_main_extractor(rec, alternate_script: :only)
+            acc.concat main_imprints.compact unless main_imprints.empty?
           end
         end
 
@@ -28,7 +23,7 @@ module MarcToArgot
           lambda do |rec, acc|
             imprint_fields = []
 
-            Traject::MarcExtractor.cached("260:264", alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+            Traject::MarcExtractor.cached("260:264").each_matching_line(rec) do |field, spec, extractor|
               imprint_fields << field
             end
 
@@ -38,6 +33,18 @@ module MarcToArgot
               end
             end
           end
+        end
+
+        def imprint_main_extractor(rec, options)
+          imprint_fields = []
+
+          Traject::MarcExtractor.cached("260:264", options).each_matching_line(rec) do |field, spec, extractor|
+            imprint_fields << field
+          end
+
+          main_imprint = select_main_imprint(imprint_fields)
+
+          main_imprint ? assemble_imprint_hash(main_imprint).to_json : nil
         end
 
         # assembles a hash of imprint data to serialize
@@ -54,9 +61,9 @@ module MarcToArgot
         # sets the imprint type based on field tag and/or 2nd indicator value
         # @param field [MARC::DataField] the field to use to determine imprint type
         def imprint_type(field)
-          if field.tag == '260'
+          if field_tag_or_880_linkage_tag(field) == '260'
             'imprint'
-          elsif field.tag == '264'
+          elsif field_tag_or_880_linkage_tag(field) == '264'
             case field.indicator2
             when '0'
               'production'
@@ -118,13 +125,13 @@ module MarcToArgot
         # checks whether all the imprint fields are 260s
         # @param fields [MARC::DataField] all the imprint fields from the record
         def all_260s?(fields)
-          fields.all? { |field| field.tag == '260' }
+          fields.all? { |field| field_tag_or_880_linkage_tag(field) == '260' }
         end
 
         # checks whether all the imprint fields are 264s
         # @param fields [MARC::DataField] all the imprint fields from the record
         def all_264s?(fields)
-          fields.all? { |field| field.tag == '264' }
+          fields.all? { |field| field_tag_or_880_linkage_tag(field) == '264' }
         end
       end
     end

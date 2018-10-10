@@ -130,7 +130,9 @@ unless settings["override"].include?("imprint_multiple")
 end
 
 unless settings["override"].include?("publisher")
-  to_field "publisher", extract_marc(settings["specs"][:publisher], :separator => nil, :trim_punctuation => true)
+  to_field "publisher", basic_vernacular_field(settings["specs"][:publisher],
+                                               :separator => nil,
+                                               :trim_punctuation => true)
 end
 
 ################################################

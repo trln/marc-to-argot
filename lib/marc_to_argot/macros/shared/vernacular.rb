@@ -3,18 +3,22 @@ module MarcToArgot
     module Shared
       module Vernacular
 
-        def basic_vernacular_field(spec)
+        def basic_vernacular_field(spec, options={})
           lambda do |rec, acc|
-            Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec, extractor|
-              field_values = {}
+            Traject::MarcExtractor.cached(spec, options).each_matching_line(rec) do |field, spec, extractor|
+              values = extractor.collect_subfields(field, spec)
+              values.each do |value|
+                field_values = {}
 
-              value = extractor.collect_subfields(field, spec).first
-              lang = Vernacular::ScriptClassifier.new(field, value).classify
+                lang = Vernacular::ScriptClassifier.new(field, value).classify
 
-              field_values[:value] = value unless value.nil? || value.empty?
-              field_values[:lang] = lang unless lang.nil? || lang.empty?
+                value = Traject::Macros::Marc21.trim_punctuation(value) if options.fetch(:trim_punctuation, nil) == true
 
-              acc << field_values if field_values.has_key?(:value)
+                field_values['value'] = value unless value.nil? || value.empty?
+                field_values['lang'] = lang unless lang.nil? || lang.empty?
+
+                acc << field_values if field_values.has_key?('value')
+              end
             end
           end
         end

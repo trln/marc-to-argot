@@ -91,7 +91,7 @@ end
 ######
 
 unless settings["override"].include?("publication_year")
-  to_field "publication_year", marc_publication_date
+  to_field "publication_year", publication_year
 end
 
 unless settings['override'].include?('date_cataloged')

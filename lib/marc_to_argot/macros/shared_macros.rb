@@ -1,3 +1,4 @@
+require 'marc_to_argot/macros/shared/call_numbers'
 require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/helpers'
 require 'marc_to_argot/macros/shared/imprint'
@@ -6,6 +7,7 @@ require 'marc_to_argot/macros/shared/names'
 require 'marc_to_argot/macros/shared/notes'
 require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
+require 'marc_to_argot/macros/shared/publication_year'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/series_statement'
 require 'marc_to_argot/macros/shared/subject_genre'
@@ -15,7 +17,6 @@ require 'marc_to_argot/macros/shared/upc'
 require 'marc_to_argot/macros/shared/urls'
 require 'marc_to_argot/macros/shared/vernacular'
 require 'marc_to_argot/macros/shared/work_entry'
-require 'marc_to_argot/macros/shared/call_numbers'
 
 require 'set'
 
@@ -25,6 +26,7 @@ module MarcToArgot
     # defined here, and overriden in institution-specific modules in the
     # same namespace.
     module Shared
+      include CallNumbers
       include Edition
       include Helpers
       include Imprint
@@ -32,6 +34,7 @@ module MarcToArgot
       include Names
       include Notes
       include PhysicalDescription
+      include PublicationYear
       include PhysicalMedia
       include ResourceType
       include SeriesStatement
@@ -42,7 +45,6 @@ module MarcToArgot
       include Urls
       include Vernacular
       include WorkEntry
-      include CallNumbers
 
       # values to look for in the 856 that indicate
       # a record has online access.

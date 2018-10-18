@@ -151,6 +151,10 @@ unless settings["override"].include?("title_main")
   to_field "title_main", title_main
 end
 
+unless settings['override'].include?('short_title')
+  to_field 'short_title', short_title
+end
+
 unless settings["override"].include?("title_sort")
   to_field "title_sort", title_sort
 end

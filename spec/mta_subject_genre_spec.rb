@@ -304,9 +304,9 @@ describe MarcToArgot do
 
     it '(MTA) sets the genre_headings field values without errors or empty values' do
       result = duke_genre_edge_case['genre_headings']
-      expect(result).to eq([{"value" => "دمنتري فلمس"},
-                            {"value" => "ننفتن فلمس"},
-                            {"value" => "فتر فلمس"}])
+      expect(result).to eq([{"value" => "دمنتري فلمس", "lang"=>"ara"},
+                            {"value" => "ننفتن فلمس", "lang"=>"ara"},
+                            {"value" => "فتر فلمس", "lang"=>"ara"}])
     end
 
     it '(MTA) sets the subject genre field values without errors or empty values' do
@@ -316,7 +316,7 @@ describe MarcToArgot do
                             "فتر فلمس"])
     end
 
-    xit '(MTA) sets subject_headings from 880 field' do
+    it '(MTA) sets subject_headings from 880 field' do
       result = vern650v['subject_headings']
       expect(result).to include(
                           { "value" => "按摩疗法(中医) -- 教材",
@@ -324,21 +324,21 @@ describe MarcToArgot do
                         )
     end
 
-    xit '(MTA) sets subject_topical from 880 field' do
+    it '(MTA) sets subject_topical from 880 field' do
       result = vern650v['subject_topical']
       expect(result).to include(
                           "按摩疗法(中医)",
                         )
     end
 
-    xit '(MTA) sets subject_genre from 880 field' do
+    it '(MTA) sets subject_genre from 880 field' do
       result = vern650v['subject_genre']
       expect(result).to include(
                           "教材"
                         )
     end
 
-    xit '(MTA) sets genre_headings from 880 field' do
+    it '(MTA) sets genre_headings from 880 field' do
       result = vern655ara['genre_headings']
       expect(result).to include(
                           { 'value' => 'أعمال مبكرة إلى 1800',

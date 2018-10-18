@@ -1,10 +1,10 @@
-## Traject configurations start by loading this file, and then they load 
+## Traject configurations start by loading this file, and then they load
 # institution/configuration specific files.  In order of execution, this means
 # that any field that is *not* overridden in an institution/configuration
 # specific file happens *after* any field that is mapped in this file.
 
 # The loader 'includes' shared macros in this file, and includes
-# institution-specific macros (if any) for the sub-configurations.  
+# institution-specific macros (if any) for the sub-configurations.
 # What this means is that any macros (or methods) used in this file
 # will be the 'shared' versions, which may not be what you want.
 
@@ -13,8 +13,8 @@
 # us to set a mapped diagnostic context which can contain information about
 # the record being processed
 self.logger = Yell.new do |l|
-  l.adapter :logging_adapter, 
-    level: settings.fetch(:log_level, :warn), 
+  l.adapter :logging_adapter,
+    level: settings.fetch(:log_level, :info),
     appender: settings.fetch(:appender, :stderr)
 end
 

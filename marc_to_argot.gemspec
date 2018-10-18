@@ -50,8 +50,9 @@ Gem::Specification.new do |s|
   end
 
   s.add_runtime_dependency 'logging', '~> 2.2.2'
-  s.add_runtime_dependency 'library_stdnums'
+  s.add_runtime_dependency 'library_stdnums', '~> 1.6'
+  s.add_runtime_dependency 'nokogiri', '~> 1.8'
   s.add_runtime_dependency 'lcsort', '~> 0.9.0'
-  s.add_runtime_dependency 'thor', ['~> 0.19.4']
-  s.add_runtime_dependency 'traject', ['~> 2.0']
+  s.add_runtime_dependency 'thor', '~> 0.20.0'
+  s.add_runtime_dependency 'traject', '~> 2.0'
 end

@@ -47,7 +47,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets edition from 250 and linked 880' do
+  it '(MTA) sets edition from 250 and linked 880' do
     result = edition_v1['edition']
     expect(result).to eq(
                         [
@@ -58,7 +58,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets edition from non-Roman 250' do
+  it '(MTA) sets edition from non-Roman 250' do
     result = edition_v2['edition']
     expect(result).to eq(
                         [

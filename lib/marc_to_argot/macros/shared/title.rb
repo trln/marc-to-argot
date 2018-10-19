@@ -1,19 +1,8 @@
 module MarcToArgot
   module Macros
     module Shared
+      # Macros and methods for working with titles.
       module Title
-
-        # populates the 'short_title' of a Traject output_hash
-        # if the title is
-        def short_titles!(output_hash, max_length = 4)
-          main_title = output_hash.fetch('title_main', '')
-          return if main_title.empty?
-          words = main_title.first[:value].split(/\s+/)
-          if words.length <= max_length
-            output_hash["short_title"] = words.join(' ')
-          end
-        end
-        
         ################################################
         # Title Main
         ######
@@ -29,6 +18,27 @@ module MarcToArgot
               title_main[:lang] = lang unless lang.nil? || lang.empty?
 
               acc << title_main if title_main.has_key?(:value)
+            end
+          end
+        end
+
+        # extracts a short title from title_main (if appropriate)
+        # @param [Fixnum] max_length the maximum word length in a title
+        # that will be extracted.
+        # NOTE: this lambda assumes that title_main will already be populated,
+        # in the output hash, so this macro should only be invoked after
+        # #title_main
+        def short_title(max_length = 4)
+          lambda do |_, acc, ctx|
+            output_hash = ctx.output_hash
+            main_title = output_hash.fetch('title_main', '')
+            return if main_title.empty?
+
+            words = main_title.first[:value].split(/\s+/)
+            if words.length <= max_length
+              # strip any punctuation off the last word
+              words[-1] = words[-1].gsub(/[^a-z0-9]$/i, '')
+              acc << words.join(' ')
             end
           end
         end

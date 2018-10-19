@@ -53,8 +53,6 @@ each_record do |rec, ctx|
     ctx.output_hash['url'] = urls
   end
 
-  short_titles!(ctx.output_hash)
-
   ctx.output_hash['barcodes'] = items.map { |x| x['item_id'] }.select(&:itself)
   ctx.output_hash['available'] = 'Available' if is_available?(items)
   if ctx.output_hash.fetch('format', []).include?('Journal/Newspaper')

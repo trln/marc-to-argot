@@ -39,7 +39,7 @@ module MarcToArgot
           res = []
           LCC.find_path(call_numbers['LC'].first).each_with_object([]) do |part, acc|
             acc << part
-            res << acc.join(':')
+            res << acc.join('|')
           end
           out['lcc_callnum_classification'] = res
         end

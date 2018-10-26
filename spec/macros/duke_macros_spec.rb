@@ -11,14 +11,14 @@ describe MarcToArgot::Macros::Duke do
     [['Duke law journal, v. 50, no. 6',
       'Duke law journal, v. 50, no. 6',
       'Duke law journal, v. 50, no. 6'],
-     ['Collection guide'],
+     ['Collection guide', 'Finding aid'],
      ['Text version:', 'PDF version:'],
      [nil, nil]]
   end
 
   let(:expected_type) do
     [%w[other other other],
-     %w[findingaid],
+     %w[findingaid findingaid],
      %w[fulltext fulltext],
      %w[fulltext other]]
   end

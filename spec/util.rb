@@ -62,7 +62,8 @@ module Util
         'processing_thread_pool' => 1,
         'marc_source.type' => marc_source_type,
         'marc_source.encoding' => 'utf-8',
-        'override' => override
+        'override' => override,
+        'log_level' => :error
       }
     end
 

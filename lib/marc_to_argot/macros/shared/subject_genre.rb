@@ -37,8 +37,10 @@ module MarcToArgot
               field_values = {}
 
               value = collect_and_join_subjects(field, spec, ' -- ')
+              lang = Vernacular::ScriptClassifier.new(field, value).classify
 
               field_values[:value] = value unless value.nil? || value.empty?
+              field_values[:lang] = lang unless lang.nil? || lang.empty?
 
               acc << field_values if field_values.has_key?(:value)
               acc.uniq!
@@ -56,16 +58,22 @@ module MarcToArgot
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               values = collect_subjects(field, spec)
               headings = values.map do |v|
+                lang = Vernacular::ScriptClassifier.new(field, v).classify
                 heading = {}
                 heading[:value] = v
+                heading[:lang] = lang unless lang.nil? || lang.empty?
                 heading
               end
               acc.concat(headings) unless headings.empty?
             end
 
             Traject::MarcExtractor.cached('655axyz').each_matching_line(rec) do |field, spec|
+              heading = {}
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x y z].include?(sf.code) }, spec)
-              acc << { value: value } unless value.nil? || value.empty?
+              lang = Vernacular::ScriptClassifier.new(field, value).classify
+              heading[:value] = value unless value.nil? || value.empty?
+              heading[:lang] = lang unless lang.nil? || lang.empty?
+              acc << heading unless heading.empty?
             end
 
             acc.uniq!
@@ -313,7 +321,7 @@ module MarcToArgot
         end
 
         def subdivide_at_subfields(field)
-          case field.tag
+          case field_tag_or_880_linkage_tag(field)
           when '600', '610', '611', '630', '650'
             %w[v x y z]
           when '651'

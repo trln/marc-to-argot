@@ -21,7 +21,8 @@ module MarcToArgot
       # tests whether the field contains a URL for a finding aid
       # @param field [MARC::DataField] the field to check for a finding aid URL
       def url_for_finding_aid?(field)
-        substring_present_in_subfield?(field, 'y', 'collection guide')
+        substring_present_in_subfield?(field, 'u', 'library.duke.edu/rubenstein/findingaids') ||
+          substring_present_in_subfield?(field, 'y', 'collection guide')
       end
 
       # OCLC Number & Rollup ID

@@ -203,9 +203,11 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'OUPP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
-    # when 'asp'
-    #   cxt.output_hash['institution'] << 'duke'
-    #   add_proxied_urls(cxt, ['duke'])
+  when 'asp'
+    cxt.output_hash['institution'] << 'duke'
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'ASP')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
   end
 end
 

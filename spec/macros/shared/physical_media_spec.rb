@@ -19,7 +19,9 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
   let(:physical_media_rsi_surface) { run_traject_json('duke', 'physical_media_rsi_surface', 'mrc') }
   let(:physical_media_umatic) { run_traject_json('duke', 'physical_media_umatic', 'mrc') }
   let(:physical_media_vhs) { run_traject_json('duke', 'physical_media_vhs', 'mrc') }
-
+  let(:at01) { run_traject_json('unc', 'access_type01') }
+  let(:at02) { run_traject_json('unc', 'access_type02') }
+  
   it '(MTA) Sets physical_media to 35 mm film' do
     result = physical_media_35mm['physical_media']
     expect(result).to eq(['35 mm film'])
@@ -98,5 +100,14 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
   it '(MTA) Sets physical_media to Videocassette (VHS)' do
     result = physical_media_vhs['physical_media']
     expect(result).to eq(['Videocassette (VHS)'])
+  end
+
+  it '(MTA) Sets physical_media to Online if access_type includes Online' do
+    result = at01['physical_media']
+    expect(result).to eq(['Online'])
+
+    result = at02['physical_media']
+    expect(result).to include('Online')
+
   end
 end

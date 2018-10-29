@@ -7,6 +7,14 @@ module MarcToArgot
         # general helpers
         ################################################################
 
+        # tests whether at least one occurrence of field exists in record
+        # @param record [MARC::Record] the record to check
+        # @param field_tag [String] the tag of the field to check for
+        def field_present?(record, field_tag)
+          tags = record.tags
+          tags.include?(field_tag)
+        end
+        
         # tests whether a field's subfields with a particular code
         # contain any instance of a substring
         # @param field [MARC::DataField] the field to check for a subfield substring

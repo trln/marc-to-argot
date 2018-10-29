@@ -17,17 +17,22 @@ module MarcToArgot
             # set the url type
             url[:type] = url_type_value(field)
 
+            # set the text value
             if cxt.clipboard[:shared_record_set] == 'dws'
-              url[:text] = dws_url_text(field)
+              url_text = dws_url_text(field)
             else
-              url[:text] = normal_url_text(field) unless normal_url_text(field).empty?
+              url_text = normal_url_text(field)
             end
+            url[:text] = url_text unless url_text.empty?
+
+            
 
             urls << url.to_json
           end
 
           cxt.output_hash['url'] = urls
         end
+
         
         # assembles a string from the 856 subfields 3 & y to use for the URL text
         # @param field [MARC::DataField] the field to use to assemble URL text
@@ -44,10 +49,8 @@ module MarcToArgot
         # Return string for use as URL text in DWS shared records
         def dws_url_text(field)
           sf3 = subfield_values_3(field)
-          if sf3.empty?
-            "Open Access resource -- Full text available"
-          else
-            "Open Access resource -- #{sf3} -- Full text available"
+          unless sf3.empty?
+            sf3
           end
         end
 

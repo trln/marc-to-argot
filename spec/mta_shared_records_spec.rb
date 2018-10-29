@@ -48,14 +48,14 @@ describe MarcToArgot do
     it '(UNC) sets open access URL' do
       result = dwsgpo1['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS2957\",\"type\":\"fulltext\",\"text\":\"Open Access resource -- Full text available\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS2957\",\"type\":\"fulltext\",\"restricted\":\"false\"}"                            
                       )
     end
 
     it '(UNC) sets open access URL without discarding $3 values' do
       result = dwsgpo2['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"text\":\"Open Access resource -- Spanish -- Full text available\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"text\":\"Spanish\",\"restricted\":\"false\"}"                            
                         )
     end
     
@@ -82,12 +82,12 @@ describe MarcToArgot do
   end
 
 
-  context 'When shared record set it ASP' do
-    xit '(MTA) creates Duke proxied URL for ASP recs' do
+  context 'When shared record set is ASP' do
+    xit '(MTA) creates URL template for ASP recs' do
       result = asp1['url']
       expect(result).to include(
                           [
-                            "{\"href\":\"http://proxy.lib.duke.edu/login?url=https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"text\":\"Streaming video available via Duke Libraries\"}"                            
+                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
                           ]
                         )
     end

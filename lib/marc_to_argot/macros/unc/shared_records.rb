@@ -3,8 +3,8 @@ module MarcToArgot
     module UNC
       module SharedRecords
 
-        # Gets resource type based on a mix of fixed fields,
-        # item types, and itemcat2 (Sirsi)
+        # If record is part of a shared record set, set the code for the set
+        # Further processing is based on this code value
         def set_shared_record_set_code(rec, cxt)
           shared_set = ''
           Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|

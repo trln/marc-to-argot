@@ -254,6 +254,8 @@ def set_cn_scheme(marc_tag, i1, i2)
 end
 
 to_field 'items' do |rec, acc, ctx|
+  # This unless logic added because staff put print items on DWS e-records sometimes
+  #   and we need to ignore those
   unless ctx.clipboard[:shared_record_set] == 'dws'
 
     formats = marc_formats.call(rec, [])

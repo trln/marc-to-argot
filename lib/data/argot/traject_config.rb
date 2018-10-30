@@ -418,3 +418,17 @@ unless settings['override'].include?('institution')
     acc.concat(inst)
   end
 end
+
+unless settings['override'].include?('access_type')
+each_record do |rec, context|
+  access_type = context.output_hash['access_type']
+  if access_type
+    physical_media = context.output_hash['physical_media']
+    if physical_media
+      physical_media << 'Online' if access_type.include?('Online')
+    else
+      context.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
+    end
+  end
+end
+end

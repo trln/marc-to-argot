@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>02711nam a22004815i 4500</leader>
+  <controlfield tag="001">ssj0001584643</controlfield>
+  <controlfield tag="003">WaSeSS</controlfield>
+  <controlfield tag="005">20160201070440.0</controlfield>
+  <controlfield tag="006">m        d        </controlfield>
+  <controlfield tag="007">cr cnu---auuuu</controlfield>
+  <controlfield tag="008">150930s2016    gw |    s    |||| 0|eng d</controlfield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9783319232737</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9783319232720</subfield>
+  </datafield>
+  <datafield tag="024" ind1="7" ind2=" ">
+    <subfield code="a">10.1007/978-3-319-23273-7</subfield>
+    <subfield code="2">doi</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0001584643</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="d">WaSeSS</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">TA405-409.3 ebook</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">QA808.2 ebook</subfield>
+  </datafield>
+  <datafield tag="072" ind1=" " ind2="7">
+    <subfield code="a">TG</subfield>
+    <subfield code="2">bicssc</subfield>
+  </datafield>
+  <datafield tag="072" ind1=" " ind2="7">
+    <subfield code="a">TEC009070</subfield>
+    <subfield code="2">bisacsh</subfield>
+  </datafield>
+  <datafield tag="072" ind1=" " ind2="7">
+    <subfield code="a">TEC021000</subfield>
+    <subfield code="2">bisacsh</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="4">
+    <subfield code="a">620.1</subfield>
+    <subfield code="2">23</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Hackett, Robert M.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Hyperelasticity Primer</subfield>
+    <subfield code="h">[electronic resource] /</subfield>
+    <subfield code="c">by Robert M. Hackett.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Cham :</subfield>
+    <subfield code="b">Springer International Publishing :</subfield>
+    <subfield code="b">Imprint: Springer,</subfield>
+    <subfield code="c">2016.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 online resource.</subfield>
+  </datafield>
+  <datafield tag="347" ind1=" " ind2=" ">
+    <subfield code="a">text file</subfield>
+    <subfield code="b">PDF</subfield>
+    <subfield code="2">rda</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2=" ">
+    <subfield code="a">Finite Elasticity -- Strain Measures -- Polar Decomposition -- Strain-Energy Function -- Stress Measures -- Tangent Moduli -- Conjugate Pairs -- Incrementation (Parts I -- II -- III and IV) -- Objectivity -- Finite Viscoelasticity -- Finite Element Implementation -- How to Obtain Model Parameters from Test Data,- Appendices.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">This book introduces the subject of hyperelasticity in a concise manner mainly directed to students of solid mechanics who have a familiarity with continuum mechanics.  It focuses on important introductory topics in the field of nonlinear material behavior and presents a number of example problems and solutions to greatly aid the student in mastering the difficulty of the subject and gaining necessary insight.  Professor Hackett delineates the concepts and applications of hyperelasticity in such a way that a new student of the subject can absorb the intricate details without having to wade through excessively complicated formulations.  The book further presents significant review material on intricately related subjects such as tensor calculus and introduces some new formulations.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Engineering.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Continuum mechanics.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Structural mechanics.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">SpringerLink (Online service)</subfield>
+  </datafield>
+  <datafield tag="773" ind1="0" ind2=" ">
+    <subfield code="t">Springer eBooks</subfield>
+  </datafield>
+  <datafield tag="776" ind1="0" ind2="8">
+    <subfield code="i">Printed edition:</subfield>
+    <subfield code="z">9783319232720</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="y">View resource online (NCSU only)</subfield>
+    <subfield code="u">http://proxying.lib.ncsu.edu/index.php?url=http://link.springer.com/openurl?genre=book&amp;isbn=978-3-319-23272-0</subfield>
+    <subfield code="z">Springer-Verlag SpringerLINK ebooks - Engineering (2016)</subfield>
+  </datafield>
+  <datafield tag="912" ind1=" " ind2=" ">
+    <subfield code="a">ZDB-2-ENG</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="h">ONLINEBOOK</subfield>
+  </datafield>
+  <datafield tag="950" ind1=" " ind2=" ">
+    <subfield code="a">Engineering (Springer-11647)</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">3550298</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20160202</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">TA405 -409.3 ebook</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">3550298-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">EBOOK</subfield>
+    <subfield code="u">2/2/2016</subfield>
+    <subfield code="0">360MARC</subfield>
+  </datafield>
+</record>
+
+</collection>
+

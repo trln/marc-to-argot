@@ -19,7 +19,11 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
   let(:physical_media_rsi_surface) { run_traject_json('duke', 'physical_media_rsi_surface', 'mrc') }
   let(:physical_media_umatic) { run_traject_json('duke', 'physical_media_umatic', 'mrc') }
   let(:physical_media_vhs) { run_traject_json('duke', 'physical_media_vhs', 'mrc') }
-
+  let(:at01) { run_traject_json('unc', 'access_type01') }
+  let(:at02) { run_traject_json('unc', 'access_type02') }
+  let(:pm1) { run_traject_json('nccu', 'physical_media1') }
+  let(:pm2) { run_traject_json('duke', 'url0', 'mrc') }
+  
   it '(MTA) Sets physical_media to 35 mm film' do
     result = physical_media_35mm['physical_media']
     expect(result).to eq(['35 mm film'])
@@ -99,4 +103,24 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
     result = physical_media_vhs['physical_media']
     expect(result).to eq(['Videocassette (VHS)'])
   end
+
+  it '(MTA for UNC) Sets physical_media to Online if access_type includes Online' do
+    result = at01['physical_media']
+    expect(result).to eq(['Online'])
+
+    result = at02['physical_media']
+    expect(result).to include('Online')
+  end
+
+  it '(MTA for NCCU) Sets physical_media to Online if access_type includes Online' do
+    result = pm1['physical_media']
+    expect(result).to include('Online')
+  end
+
+  it '(MTA for DUKE) Sets physical_media to Online if access_type includes Online' do
+    result = pm2['physical_media']
+    expect(result).to include('Online')
+  end
+
+  # Test for NCSU is in spec/macros/ncsu/physical_media_spec.rb
 end

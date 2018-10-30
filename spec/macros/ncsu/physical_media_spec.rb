@@ -54,7 +54,7 @@ describe MarcToArgot::Macros::NCSU::PhysicalMedia do
   end
 
   it 'correctly maps physical_media for e-reader record 1' do
-    expect(test_1['physical_media']).to be_nil
+    expect(test_1['physical_media']).to eq(['Online'])
   end
 
   it 'correctly maps physical_media for e-reader record 2' do

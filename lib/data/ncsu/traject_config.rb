@@ -59,5 +59,16 @@ each_record do |rec, ctx|
     holdings = generate_holdings(items)
     ctx.output_hash['holdings'] = holdings.map(&:to_json)
   end
+
+  access_type = ctx.output_hash['access_type']
+  if access_type
+    physical_media = ctx.output_hash['physical_media']
+    if physical_media
+      physical_media << 'Online' if access_type.include?('Online')
+    else
+      ctx.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
+    end
+  end
+  
   Logging.mdc.clear
 end

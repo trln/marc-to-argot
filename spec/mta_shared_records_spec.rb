@@ -8,6 +8,7 @@ describe MarcToArgot do
   let(:dwsgpo2) { run_traject_json('unc', 'dwsgpo2', 'mrc') }
   let(:oupp1) { run_traject_json('unc', 'oupp1', 'mrc') }
   let(:asp1) { run_traject_json('unc', 'asp1', 'mrc') }
+  let(:asp2) { run_traject_json('unc', 'asp2', 'mrc') }
 
   context 'When shared record set is OUPP' do
     it '(UNC) does NOT set TRLN location facet hierarchy for TRLN shared print' do
@@ -48,14 +49,14 @@ describe MarcToArgot do
     it '(UNC) sets open access URL' do
       result = dwsgpo1['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS2957\",\"type\":\"fulltext\",\"text\":\"Open Access resource -- Full text available\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS2957\",\"type\":\"fulltext\",\"restricted\":\"false\"}"                            
                       )
     end
 
     it '(UNC) sets open access URL without discarding $3 values' do
       result = dwsgpo2['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"text\":\"Open Access resource -- Spanish -- Full text available\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"text\":\"Spanish\",\"restricted\":\"false\"}"                            
                         )
     end
     
@@ -82,13 +83,42 @@ describe MarcToArgot do
   end
 
 
-  context 'When shared record set it ASP' do
-    xit '(MTA) creates Duke proxied URL for ASP recs' do
+  context 'When shared record set is ASP' do
+    it '(UNC) creates URL template for ASP recs' do
       result = asp1['url']
-      expect(result).to include(
+      expect(result).to eq(
                           [
-                            "{\"href\":\"http://proxy.lib.duke.edu/login?url=https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"text\":\"Streaming video available via Duke Libraries\"}"                            
+                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
                           ]
+                        )
+    end
+
+    it '(UNC) keeps 856$3 values in url[text]' do
+      result = asp2['url']
+      expect(result).to eq(
+                          [
+                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"text\":\"Part 3\"}"                            
+                          ]
+                        )
+    end
+    it '(UNC) record is assigned to unc and duke only' do
+      result = asp1['institution']
+      expect(result).to eq(
+                          ['unc', 'duke']
+                        )
+    end
+
+    it '(UNC) record_data_source includes "Shared Records" and "ASP"' do
+      result = asp1['record_data_source']
+      expect(result).to eq(
+                          ['ILSMARC', 'Shared Records', 'ASP']
+                        )
+    end
+
+    it '(UNC) virtual_collection includes "TRLN Shared Records. Alexander Street Press videos."' do
+      result = asp1['virtual_collection']
+      expect(result).to eq(
+                          ['TRLN Shared Records. Alexander Street Press videos.']
                         )
     end
   end

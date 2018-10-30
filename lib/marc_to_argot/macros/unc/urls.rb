@@ -17,16 +17,33 @@ module MarcToArgot
             # set the url type
             url[:type] = url_type_value(field)
 
-            if cxt.clipboard[:shared_record_set] == 'dws'
-              url[:text] = dws_url_text(field)
+            # set the text value
+            if cxt.clipboard[:shared_record_set]
+              url_text = shared_record_url_text(field)
             else
-              url[:text] = normal_url_text(field) unless normal_url_text(field).empty?
+              url_text = normal_url_text(field)
             end
+            url[:text] = url_text if url_text
 
+            url[:restricted] = 'false' unless is_restricted?(url[:href])
+
+            # Templatize urls for shared records
+            if cxt.clipboard[:shared_record_set] && url[:restricted] == nil
+              url[:href] = template_proxy(url[:href])
+            end
+            
             urls << url.to_json
           end
 
           cxt.output_hash['url'] = urls
+        end
+
+
+        def is_restricted?(url)
+          return true if is_proxied?(url)
+          return true if url.start_with?('http://unc.kanopystreaming.com')
+          return true if url.start_with?('http://vb3lk7eb4t.search.serialssolutions.com')
+          return false
         end
         
         # assembles a string from the 856 subfields 3 & y to use for the URL text
@@ -42,12 +59,10 @@ module MarcToArgot
         end
 
         # Return string for use as URL text in DWS shared records
-        def dws_url_text(field)
+        def shared_record_url_text(field)
           sf3 = subfield_values_3(field)
-          if sf3.empty?
-            "Open Access resource -- Full text available"
-          else
-            "Open Access resource -- #{sf3} -- Full text available"
+          unless sf3.empty?
+            sf3
           end
         end
 
@@ -55,6 +70,13 @@ module MarcToArgot
           collect_subfield_values_by_code(field, '3').map { |val| val.strip.sub(/ ?\W* ?$/, '')}.join(' ')
         end
 
+        def is_proxied?(url)
+          return true if url.start_with?('http://libproxy.lib.unc.edu/login?url=')
+        end
+
+        def template_proxy(url)
+          return url.gsub('http://libproxy.lib.unc.edu/login?url=', '{proxyPrefix}')
+        end
       end
     end
   end

@@ -203,9 +203,11 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'OUPP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
-    # when 'asp'
-    #   cxt.output_hash['institution'] << 'duke'
-    #   add_proxied_urls(cxt, ['duke'])
+  when 'asp'
+    cxt.output_hash['institution'] << 'duke'
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'ASP')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
   end
 end
 
@@ -254,6 +256,8 @@ def set_cn_scheme(marc_tag, i1, i2)
 end
 
 to_field 'items' do |rec, acc, ctx|
+  # This unless logic added because staff put print items on DWS e-records sometimes
+  #   and we need to ignore those
   unless ctx.clipboard[:shared_record_set] == 'dws'
 
     formats = marc_formats.call(rec, [])

@@ -1,6 +1,5 @@
 # coding: iso-8859-1
 require 'spec_helper'
-#require_relative '../../../lib/marc_to_argot/macros/shared/publication_year'
 include MarcToArgot::Macros::Shared::PublicationYear
 
 describe MarcToArgot do

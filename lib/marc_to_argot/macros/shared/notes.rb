@@ -472,22 +472,49 @@ module MarcToArgot
         lambda do |rec, acc|
           Traject::MarcExtractor.cached('510abcux3').each_matching_line(rec) do |field, spec, extractor|
             next unless subfield_5_absent_or_present_with_local_code?(field)
-            label = []
-            values = []
-            field.subfields.each do |sf|
-              if sf.code == 'x'
-                values << "ISSN #{sf.value}"
-              elsif sf.code == '3'
-                label << sf.value.chomp(':')
-              else
-                values << sf.value
-              end
-            end
-            value = values.join(' ')
-            acc << [*label, value].compact.join(': ') if value
+            notes = {}
+
+            label = note_cited_in_label(field)
+            notes[:label] = label unless label.nil? || label.empty?
+
+            value = note_cited_in_value(field, spec, extractor)
+            notes[:value] = value unless value.nil? || value.empty?
+
+            indexed_value = note_cited_in_indexed_value(field)
+            notes[:indexed_value] = indexed_value unless indexed_value.nil? || indexed_value.empty? || indexed_value == value
+
+            next if (notes[:value].nil? || notes[:value].empty?) &&
+                    (notes[:indexed_value].nil? || notes[:indexed_value].empty?)
+
+            acc << notes
           end
         end
       end
+
+      def note_cited_in_label(field)
+        labels = []
+        labels << collect_subfield_values_by_code(field, '3').join(' ')
+        labels.compact.reject(&:empty?).join(': ')
+      end
+
+      def note_cited_in_value(field, spec, extractor)
+        value = []
+        field.subfields.each do |sf|
+          if sf.code == 'x'
+            value << "ISSN #{sf.value}"
+          elsif sf.code =~ /[abcu]/
+            value << sf.value
+          end
+        end
+        return value.join(' ')
+      end
+
+      def note_cited_in_indexed_value(field)
+        value = []
+        field.subfields.each{ |sf| value << sf.value if 'abc'.include?(sf.code) }
+        return value.join(' ')
+      end
+
       
       ################################################
       # Note System Details

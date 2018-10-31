@@ -4,7 +4,7 @@ module MarcToArgot
       module Urls
         include MarcToArgot::Macros::Shared::Urls
 
-        def url(rec, cxt)
+        def url_unc(rec, cxt)
           urls = []
           Traject::MarcExtractor.cached("856uy3").each_matching_line(rec) do |field, spec, extractor|
             url = {}
@@ -35,7 +35,7 @@ module MarcToArgot
             urls << url.to_json
           end
 
-          cxt.output_hash['url'] = urls
+          cxt.output_hash['url'] = urls unless urls.empty?
         end
 
 
@@ -72,6 +72,7 @@ module MarcToArgot
 
         def is_proxied?(url)
           return true if url.start_with?('http://libproxy.lib.unc.edu/login?url=')
+          return false
         end
 
         def template_proxy(url)

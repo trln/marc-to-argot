@@ -184,7 +184,7 @@ end
 # URLs
 ######
 each_record do |rec, cxt|
-  url(rec, cxt)
+  url_unc(rec, cxt)
 end
 
 

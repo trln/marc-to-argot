@@ -5,10 +5,10 @@
 - institution
 - items
 - local_id
+- names
 - note_local
 - oclc_number
 - resource_type
 - rollup_id
 - sersol_number
 - url
-- names

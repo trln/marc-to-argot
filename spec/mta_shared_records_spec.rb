@@ -121,6 +121,13 @@ describe MarcToArgot do
                           ['TRLN Shared Records. Alexander Street Press videos.']
                         )
     end
+
+    it '(UNC) removes UNC-specific wording in note_access_restrictions' do
+      result = asp1['note_access_restrictions']
+      expect(result).to eq(
+                          ['Access limited to authenticated users. Unlimited simultaneous users.']
+                        )
+    end    
   end
 
 end

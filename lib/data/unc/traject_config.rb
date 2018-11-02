@@ -187,30 +187,6 @@ each_record do |rec, cxt|
   url_unc(rec, cxt)
 end
 
-
-################################################
-# Shared records
-######
-each_record do |rec, cxt|
-  case cxt.clipboard[:shared_record_set]
-  when 'dws'
-    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
-    add_record_data_source(cxt, 'Shared Records')
-    add_record_data_source(cxt, 'DWS')
-    add_virtual_collection(cxt, 'TRLN Shared Records. Documents without shelves.')
-  when 'oupp'
-    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
-    add_record_data_source(cxt, 'Shared Records')
-    add_record_data_source(cxt, 'OUPP')
-    add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
-  when 'asp'
-    cxt.output_hash['institution'] << 'duke'
-    add_record_data_source(cxt, 'Shared Records')
-    add_record_data_source(cxt, 'ASP')
-    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
-  end
-end
-
 ################################################
 # Items
 # https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
@@ -331,5 +307,27 @@ end
 
 each_record do |rec, cxt|
   holdings(rec, cxt)
+
+  # Add and manipulate fields for TRLN shared records
+  case cxt.clipboard[:shared_record_set]
+  when 'dws'
+    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'DWS')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Documents without shelves.')
+  when 'oupp'
+    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'OUPP')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
+  when 'asp'
+    cxt.output_hash['institution'] << 'duke'
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'ASP')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
+    ar = cxt.output_hash['note_access_restrictions']
+    ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
+  end
+
   Logging.mdc.clear
 end

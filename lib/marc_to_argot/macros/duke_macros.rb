@@ -18,6 +18,17 @@ module MarcToArgot
         true
       end
 
+      # For duke records add a proxy prefix if it's missing
+      def url_href_value(field)
+        href = collect_subfield_values_by_code(field, 'u').first.to_s.strip
+        if url_type_value(field) == 'fulltext' &&
+          !href.match(/proxy\.lib\.duke\.edu.*url=/)
+          "https://proxy.lib.duke.edu/login?url=#{href}"
+        else
+          href
+        end
+      end
+
       # tests whether the field contains a URL for a finding aid
       # @param field [MARC::DataField] the field to check for a finding aid URL
       def url_for_finding_aid?(field)

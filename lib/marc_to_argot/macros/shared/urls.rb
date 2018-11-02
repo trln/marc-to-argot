@@ -12,7 +12,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("856uy3").each_matching_line(rec) do |field, spec, extractor|
               url = {}
-              url[:href] = collect_subfield_values_by_code(field, 'u').first
+              url[:href] = url_href_value(field)
 
               next if url[:href].nil? || url[:href].empty?
 
@@ -22,6 +22,10 @@ module MarcToArgot
               acc << url.to_json
             end
           end
+        end
+
+        def url_href_value(field)
+          collect_subfield_values_by_code(field, 'u').first
         end
 
         # returns a type value based on the 856 field's 2nd indicator value

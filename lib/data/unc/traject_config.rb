@@ -325,7 +325,8 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'ASP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
-    cxt.output_hash['note_access_restrictions'].map{ |e| e.gsub!('UNC Chapel Hill-', '') }
+    ar = cxt.output_hash['note_access_restrictions']
+    ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   end
 
   Logging.mdc.clear

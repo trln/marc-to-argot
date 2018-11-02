@@ -281,7 +281,7 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-  it '(MTA) sets note_local' do
+  it '(MTA) sets note_local when there is a local $5 value (even with extra spaces in the field)' do
     result = note_local['note_local']
     expect(result).to eq(
                         [{'label' => 'c. 1',

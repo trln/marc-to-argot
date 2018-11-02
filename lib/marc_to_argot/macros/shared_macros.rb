@@ -103,7 +103,7 @@ module MarcToArgot
       # @param rec [MARC::Field] the field to be checked.
       def subfield_5_present_with_local_code?(field)
         subfield_5_present?(field) &&
-          (field.subfields.select { |sf| sf.code == '5' }.map(&:value) &
+          (field.subfields.select { |sf| sf.code == '5' }.map { |sf| sf.value.strip } &
             local_marc_org_codes).any?
       end
     end

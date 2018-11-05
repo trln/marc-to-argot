@@ -57,4 +57,28 @@ describe MarcToArgot::Macros::Shared::TitleVariant do
         'display' => 'false'}]
     )
   end
+
+  xit '(MTA) sets non-Roman title_variant from 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('880', '1', '4', ['6', '246-04/(N'], ['a', 'Сказки Афанасьева'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['title_variant']
+    expect(result).to eq([{'type' => 'variant',
+                           'label' => 'Cover title',
+                           'value' => 'Сказки Афанасьева',
+                           'lang' => 'rus'
+                          }])
+  end
+
+    xit '(MTA) sets non-Roman title_variant from 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('246', '1', '4', ['a', 'Сказки Афанасьева'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['title_variant']
+    expect(result).to eq([{'type' => 'variant',
+                           'label' => 'Cover title',
+                           'value' => 'Сказки Афанасьева',
+                           'lang' => 'rus'
+                          }])
+  end
 end

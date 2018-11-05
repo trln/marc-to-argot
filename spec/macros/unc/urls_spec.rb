@@ -1,16 +1,10 @@
-# coding: iso-8859-1
+# coding: utf-8
 require 'spec_helper'
 include MarcToArgot::Macros::Shared::Helpers
 include MarcToArgot::Macros::UNC::Urls
 
 describe MarcToArgot::Macros::UNC::Urls do
   include Util
-
-  def make_rec
-    rec = MARC::Record.new
-    rec << MARC::ControlField.new('008', ' ' * 40)
-    return rec
-  end
 
   def return_argot_url_field(rec)
     argot = run_traject_on_record('unc', rec)

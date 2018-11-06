@@ -5,6 +5,13 @@ require 'yajl'
 
 # Utilities for specs
 module Util
+  # create a brief, simple MARC record that to be populated directly for testing
+  def make_rec
+    rec = MARC::Record.new
+    rec << MARC::ControlField.new('008', ' ' * 40)
+    return rec
+  end
+
   def data_path(name)
     File.join(File.expand_path('data', __dir__), name)
   end

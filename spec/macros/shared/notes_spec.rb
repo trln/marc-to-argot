@@ -129,6 +129,13 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to eq(nil)
   end
 
+    it '(MTA) sets note_biographical' do
+    result = note_admin_history['note_biographical']
+    expect(result).to eq(
+                        ['A unspecified Biographical or Historical Data note.', 'A biographical note.']
+                      )
+  end
+
     xit '(MTA) sets vernacular note_biographical from linked 880' do
     rec = make_rec
     rec << MARC::DataField.new('545', ' ', ' ',
@@ -195,14 +202,34 @@ describe MarcToArgot::Macros::Shared::Notes do
                         ]
                       )
   end
-  
-  it '(MTA) sets note_biographical' do
-    result = note_admin_history['note_biographical']
+
+      xit '(MTA) sets vernacular note_cited_in from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('510', ' ', ' ',
+                               ['6', '880-01'],
+                               ['a', 'Zhongguo guang gao nian jian'])
+    rec << MARC::DataField.new('880', ' ', ' ',
+                               ['6', '510-01'],
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_cited_in']
     expect(result).to eq(
-                        ['A unspecified Biographical or Historical Data note.', 'A biographical note.']
+                        [{ 'value' => 'Zhongguo guang gao nian jian' },
+                         { 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
                       )
   end
 
+  xit '(MTA) sets vernacular note_cited_in from non-roman 545' do
+    rec = make_rec
+    rec << MARC::DataField.new('510', '1', ' ',
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_cited_in']
+    expect(result).to eq(
+                         [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+  
   it '(MTA) sets note_copy_version' do
     result = note_copy_version['note_copy_version']
     expect(result).to eq(

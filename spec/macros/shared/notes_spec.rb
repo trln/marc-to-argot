@@ -78,7 +78,7 @@ describe MarcToArgot::Macros::Shared::Notes do
     argot = run_traject_on_record('unc', rec)
     result = argot['note_admin_history']
     expect(result).to eq(
-                         [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                        [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
                       )
   end
 
@@ -129,14 +129,14 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to eq(nil)
   end
 
-    it '(MTA) sets note_biographical' do
+  it '(MTA) sets note_biographical' do
     result = note_admin_history['note_biographical']
     expect(result).to eq(
                         ['A unspecified Biographical or Historical Data note.', 'A biographical note.']
                       )
   end
 
-    xit '(MTA) sets vernacular note_biographical from linked 880' do
+  xit '(MTA) sets vernacular note_biographical from linked 880' do
     rec = make_rec
     rec << MARC::DataField.new('545', ' ', ' ',
                                ['6', '880-01'],
@@ -159,7 +159,7 @@ describe MarcToArgot::Macros::Shared::Notes do
     argot = run_traject_on_record('unc', rec)
     result = argot['note_biographical']
     expect(result).to eq(
-                         [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                        [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
                       )
   end
 
@@ -203,7 +203,7 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-      xit '(MTA) sets vernacular note_cited_in from linked 880' do
+  xit '(MTA) sets vernacular note_cited_in from linked 880' do
     rec = make_rec
     rec << MARC::DataField.new('510', ' ', ' ',
                                ['6', '880-01'],
@@ -219,14 +219,14 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-  xit '(MTA) sets vernacular note_cited_in from non-roman 545' do
+  xit '(MTA) sets vernacular note_cited_in from non-roman 510' do
     rec = make_rec
     rec << MARC::DataField.new('510', '1', ' ',
                                ['a', '中国广告年鉴'])
     argot = run_traject_on_record('unc', rec)
     result = argot['note_cited_in']
     expect(result).to eq(
-                         [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                        [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
                       )
   end
   
@@ -289,14 +289,41 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-  it '(MTA) sets note_dissertation' do
+  xit '(MTA) sets note_dissertation' do
     result = note_dissertation['note_dissertation']
     expect(result).to eq(
-                        ['Thesis (doctoral) - Universität, Neuchâtel, 1998.',
-                         'Thesis/disseration--Bremen International Graduate School of Social Sciences, 2008',
-                         'Thesis--Ph.D--University of North Carolina at Chapel Hill.',
-                         'Recital document--Master of Music in Performance and Vocal Pedagogy--University of Texas at San Antonio, 2012.',
-                         'Ph. D.--University of North Carolina, 1976']
+                        [{ 'value' => 'Thesis (doctoral) - Universität, Neuchâtel, 1998.' },
+                         { 'value' => 'Thesis/disseration--Bremen International Graduate School of Social Sciences, 2008' },
+                         { 'value' => 'Thesis--Ph.D--University of North Carolina at Chapel Hill.' },
+                         { 'value' => 'Recital document--Master of Music in Performance and Vocal Pedagogy--University of Texas at San Antonio, 2012.' },
+                         { 'value' => 'Ph. D.--University of North Carolina, 1976' }]
+                      )
+  end
+
+  xit '(MTA) sets vernacular note_dissertation from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('502', ' ', ' ',
+                               ['6', '880-01'],
+                               ['a', 'Zhongguo guang gao nian jian'])
+    rec << MARC::DataField.new('880', ' ', ' ',
+                               ['6', '502-01'],
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_dissertation']
+    expect(result).to eq(
+                        [{ 'value' => 'Zhongguo guang gao nian jian' },
+                         { 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+
+  xit '(MTA) sets vernacular note_dissertation from non-roman 502' do
+    rec = make_rec
+    rec << MARC::DataField.new('502', ' ', ' ',
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_dissertation']
+    expect(result).to eq(
+                        [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
                       )
   end
 

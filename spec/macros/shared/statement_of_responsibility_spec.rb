@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe MarcToArgot do
+describe MarcToArgot::Macros::Shared::StatementOfResponsibility do
   include Util
   let(:statement_of_responsibility) { run_traject_json('duke', 'statement_of_responsibility', 'mrc') }
   let(:statement_of_responsibility_vern1) { run_traject_json('unc', 'statement_of_responsibility_vern1', 'mrc') }

@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 describe MarcToArgot::Macros::Shared::Notes do
-  include Util::TrajectRunTest
+  include Util
   let(:note_access_restrictions) { run_traject_json('duke', 'note_access_restrictions', 'mrc') }
   let(:note_admin_history) { run_traject_json('duke', 'note_admin_history', 'mrc') }
   let(:note_binding) { run_traject_json('duke', 'note_binding', 'mrc') }
@@ -48,10 +48,37 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
-  it '(MTA) sets note_admin_history' do
+  xit '(MTA) sets note_admin_history' do
     result = note_admin_history['note_admin_history']
     expect(result).to eq(
-                        ['A note about admin history.']
+                        [{ 'value' => 'A note about admin history.' }]
+                      )
+  end
+
+  xit '(MTA) sets vernacular note_admin_history from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('545', '1', ' ',
+                               ['6', '880-01'],
+                               ['a', 'Zhongguo guang gao nian jian'])
+    rec << MARC::DataField.new('880', '1', ' ',
+                               ['6', '545-01'],
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_admin_history']
+    expect(result).to eq(
+                        [{ 'value' => 'Zhongguo guang gao nian jian' },
+                         { 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+
+  xit '(MTA) sets vernacular note_admin_history from non-roman 545' do
+    rec = make_rec
+    rec << MARC::DataField.new('545', '1', ' ',
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_admin_history']
+    expect(result).to eq(
+                         [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
                       )
   end
 

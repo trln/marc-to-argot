@@ -129,6 +129,33 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to eq(nil)
   end
 
+    xit '(MTA) sets vernacular note_biographical from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('545', ' ', ' ',
+                               ['6', '880-01'],
+                               ['a', 'Zhongguo guang gao nian jian'])
+    rec << MARC::DataField.new('880', ' ', ' ',
+                               ['6', '545-01'],
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_biographical']
+    expect(result).to eq(
+                        [{ 'value' => 'Zhongguo guang gao nian jian' },
+                         { 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+
+  xit '(MTA) sets vernacular note_biographical from non-roman 545' do
+    rec = make_rec
+    rec << MARC::DataField.new('545', '0', ' ',
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_biographical']
+    expect(result).to eq(
+                         [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+
   it '(MTA) sets cited_in note, including ISSN label' do
     result = note_cited_in1['note_cited_in']
     expect(result).to eq(

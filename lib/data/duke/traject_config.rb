@@ -335,5 +335,6 @@ to_field 'holdings' do |rec, acc, context|
 end
 
 each_record do |rec, ctx|
+  remove_print_from_archival_material(ctx)
   Logging.mdc.clear
 end

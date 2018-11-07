@@ -70,5 +70,7 @@ each_record do |rec, ctx|
     end
   end
   
+  remove_print_from_archival_material(ctx)
+
   Logging.mdc.clear
 end

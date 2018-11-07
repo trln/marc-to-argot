@@ -23,6 +23,8 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
   let(:at02) { run_traject_json('unc', 'access_type02') }
   let(:pm1) { run_traject_json('nccu', 'physical_media1') }
   let(:pm2) { run_traject_json('duke', 'url0', 'mrc') }
+  let(:resource_type_archival) { run_traject_json('duke', 'resource_type_archival', 'xml')}
+  let(:resource_type_archival_unc) { run_traject_json('unc', 'resource_type_archival', 'xml')}
   
   it '(MTA) Sets physical_media to 35 mm film' do
     result = physical_media_35mm['physical_media']
@@ -122,5 +124,14 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
     expect(result).to include('Online')
   end
 
+  it '(MTA) Does NOT set physical_media to Print if resource_type is Archival' do
+    result = resource_type_archival.fetch('physical_media', [])
+    expect(result).not_to include('Print')
+  end
+
+  it '(UNC) Does NOT set physical_media to Print if resource_type is Archival' do
+    result = resource_type_archival_unc.fetch('physical_media', [])
+    expect(result).not_to include('Print')
+  end
   # Test for NCSU is in spec/macros/ncsu/physical_media_spec.rb
 end

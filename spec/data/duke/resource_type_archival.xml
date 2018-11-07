@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     npcaa2200433Ii 4500 </leader>
+<controlfield tag="001">DUKE007913393 </controlfield>
+<controlfield tag="005">20170531095900.0 </controlfield>
+<controlfield tag="008">170531s2016^^^^mx^^^^^^^^^^^^^^^^^^eng^d </controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">988399539 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="e">dacs</subfield>
+ <subfield code="c">NDD </subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP </subfield>
+</datafield>
+<datafield tag="090" ind1=" " ind2=" ">
+ <subfield code="a">RL.11486 </subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Sánchez Santamaría, Sergio,</subfield>
+ <subfield code="d">1976-</subfield>
+ <subfield code="e">artist. </subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Sergio Sánchez Santamaría Art Prints collection,</subfield>
+ <subfield code="f">2016 and undated. </subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="0">
+ <subfield code="c">2016 and undated </subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">3.4 linear ft., 37 items </subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">other</subfield>
+ <subfield code="b">xxx</subfield>
+ <subfield code="2">rdacontent </subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia </subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">sheet</subfield>
+ <subfield code="b">nb</subfield>
+ <subfield code="2">rdacarrier </subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Cataloged from items. </subfield>
+</datafield>
+<datafield tag="545" ind1=" " ind2=" ">
+ <subfield code="a">Sergio Sánchez Santamaría was born in Tlayacapan, Morelos, Mexico, in 1976. A muralist, illustrator, and printmaker, Sánchez Santamaría is the heir of the Taller de Gráfica Popular (TGP) print collective. He received his Fine Arts degree from the La Esmeralda National School of Painting, Sculpture, and Engraving in Mexico City. Sánchez Santamaría&apos;s print works, in particular his bookplate prints, have been exhibited internationally. His work explores classic mediums of charcoal drawing, woodcut, metal engraving, lithography (on stone and metal plates), and linocut. Sánchez Santamaría is considered one of the best print makers in Mexico and is well known for his &quot;ex libris&quot; (bookplates), illustration, and portfolios. </subfield>
+</datafield>
+<datafield tag="520" ind1="8" ind2=" ">
+ <subfield code="a">Collection includes 37 works of art created by Sergio Sánchez Santamaría, including 16 linocuts, 4 lithographs, 4 etchings, 3 scratch board, 8 ink drawings, 1 digital print, and 1 copper engraving. Themes explored include Mexican traditional topics such as the Mexican Revolution, folktales, indigeneity and myth, urban and rural landscaping, Calaveras (social and political commentary), and the Day of the Dead. </subfield>
+</datafield>
+<datafield tag="541" ind1=" " ind2=" ">
+ <subfield code="a">.</subfield>
+ <subfield code="c">Gift</subfield>
+ <subfield code="d">2017;</subfield>
+ <subfield code="e">2017-0052 </subfield>
+</datafield>
+<datafield tag="555" ind1="8" ind2=" ">
+ <subfield code="a">Collection guide available online. </subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="0">
+ <subfield code="a">Sánchez Santamaría, Sergio,</subfield>
+ <subfield code="d">1976- </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Linoleum block-printing</subfield>
+ <subfield code="v">Specimens. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Linoleum block-printing, Mexican. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Lithography, Mexican. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Engraving, Mexican. </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Linocuts (prints)</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Lithographs</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Etchings (prints)</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Scratchboard</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Drawings (visual works)</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Digital prints</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Copper engravings (visual works)</subfield>
+ <subfield code="z">Mexico</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+ <subfield code="y">Collection guide</subfield>
+ <subfield code="u">http://library.duke.edu/rubenstein/findingaids/sanchezsantamariasergio/ </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">MS</subfield>
+ <subfield code="b">MS All </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">P </subfield>
+ <subfield code="b">Mixed Material </subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20170531 </subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="D">v </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04664086Y </subfield>
+ <subfield code="s">20170531</subfield>
+ <subfield code="u">20170607</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">008050158 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 2</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04664087Z </subfield>
+ <subfield code="s">20170531</subfield>
+ <subfield code="u">20170607</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">008050158 </subfield>
+</datafield>
+</record>
+</collection>

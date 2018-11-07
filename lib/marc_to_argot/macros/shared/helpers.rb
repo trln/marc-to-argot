@@ -219,6 +219,17 @@ module MarcToArgot
             field.tag
           end
         end
+
+        # If the resource_type field includes 'Archival and manuscript material'
+        # then remove the value 'Print' from the physical_media field
+        def remove_print_from_archival_material(ctx)
+          if ctx.output_hash.fetch('resource_type', [])
+                            .include?('Archival and manuscript material') &&
+             ctx.output_hash.key?('physical_media')
+            ctx.output_hash['physical_media'].delete('Print')
+            ctx.output_hash.delete('physical_media') if ctx.output_hash['physical_media'].empty?
+          end
+        end
       end
     end
   end

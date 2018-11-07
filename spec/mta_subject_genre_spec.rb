@@ -265,6 +265,17 @@ describe MarcToArgot do
                         )
     end
 
+    it '(MTA) sets subject_topical from 653 with 2nd ind = 4 (instead of subject_chronological)' do
+      rec = make_rec
+      rec << MARC::DataField.new('653', '0', '4', ['a', 'Sloppy data'])
+      rec << MARC::DataField.new('650', '0', '0', ['a', 'Invalid cataloging'], ['y', '21st century'])
+      argot = run_traject_on_record('unc', rec)
+      result_top = argot['subject_topical']
+      result_chron = argot['subject_chronological']
+      expect(result_top).to include('Sloppy data')
+      expect(result_chron).to eq(['21st century'])
+    end
+
     it '(MTA) sets separate genre headings values from 382 subfields' do
       result = genre6['genre_headings']
       expect(result).to include(

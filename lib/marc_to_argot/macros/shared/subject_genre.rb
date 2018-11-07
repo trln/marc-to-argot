@@ -95,6 +95,7 @@ module MarcToArgot
                    '650abcdgx:'\
                    '651x:653|*0|a:653|*1|a:653|*2|a:'\
                    '653|*3|a:'\
+                   '653|*4|a:'\
                    '656ax:'\
                    '657ax'
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
@@ -114,7 +115,7 @@ module MarcToArgot
         def subject_chronological
           lambda do |rec, acc|
             spec = '600y:610y:611y:630y:'\
-                   '648a:650y:651y:653|*4|a:'\
+                   '648a:650y:651y:'\
                    '655y:656y:657y'
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
 

@@ -94,6 +94,36 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
+  xit '(MTA) sets vernacular note_binding from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('563', ' ', ' ',
+                               ['6', '880-01'],
+                               ['a', 'Zhongguo guang gao nian jian'])
+    rec << MARC::DataField.new('880', ' ', ' ',
+                               ['6', '563-01'],
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_binding']
+    expect(result).to eq(
+                        [{ 'value' => 'Zhongguo guang gao nian jian' },
+                         { 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+
+  xit '(MTA) sets vernacular note_binding from non-roman 563' do
+    rec = make_rec
+    rec << MARC::DataField.new('563', ' ', ' ',
+                               ['3', '(Health Sciences Library, c. 1)'],
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_binding']
+    expect(result).to eq(
+                        [{ 'label' => '(Health Sciences Library, c. 1)',
+                           'value' => '中国广告年鉴',
+                           'lang' => 'cjk' }]
+                      )
+  end
+
   it '(MTA) does NOT set note_binding from field with non-whitelisted $5 value' do
     result = note_local2['note_binding']
     expect(result).to eq(nil)

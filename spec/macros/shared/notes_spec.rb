@@ -411,6 +411,59 @@ describe MarcToArgot::Macros::Shared::Notes do
                          ])
   end
 
+  # Don't need lang element, since field is not indexed. Could provide it if that's easier to code.
+  xit '(MTA) sets vernacular in non-indexed note_general from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('521', '1', ' ',
+                               ['6', '880-03'],
+                               ['a', 'Dli︠a︡ starshego shkolʹnogo vozrasta.'])
+    rec << MARC::DataField.new('880', '1', ' ',
+                               ['6', '521-03'],
+                               ['a', 'Для старшего школьного возраста.'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_general']
+    expect(result).to eq(
+                        [{ 'label' => 'For age(s)',
+                           'value' => 'Dli︠a︡ starshego shkolʹnogo vozrasta.',
+                           'indexed' => 'false' },
+                         { 'label' => 'For age(s)',
+                           'value' => 'Для старшего школьного возраста.',
+                           'indexed' => 'false' }]
+                      )
+  end
+
+    xit '(MTA) sets vernacular in indexed note_general from linked 880' do
+    rec = make_rec
+    rec << MARC::DataField.new('500', ' ', ' ',
+                               ['6', '880-03'],
+                               ['3', 'Blah'],
+                               ['a', 'Dli︠a︡ starshego shkolʹnogo vozrasta.'])
+    rec << MARC::DataField.new('880', ' ', ' ',
+                               ['6', '500-03'],
+                               ['3', 'Blah'],
+                               ['a', 'Для старшего школьного возраста.'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_general']
+    expect(result).to eq(
+                        [{ 'label' => 'Blah',
+                           'value' => 'Dli︠a︡ starshego shkolʹnogo vozrasta.' },
+                         { 'label' => 'Blah',
+                           'value' => 'Для старшего школьного возраста.',
+                           'lang' => 'rus' }]
+                      )
+    end
+    
+  xit '(MTA) sets vernacular note_general from non-roman 500' do
+    rec = make_rec
+    rec << MARC::DataField.new('500', ' ', ' ',
+                               ['a', '中国广告年鉴'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_general']
+    expect(result).to eq(
+                        [{ 'value' => '中国广告年鉴', 'lang' => 'cjk' }]
+                      )
+  end
+
   it '(MTA) sets note_issuance' do
     result = note_issuance['note_issuance']
     expect(result).to eq(

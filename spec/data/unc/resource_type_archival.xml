@@ -1,0 +1,199 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+<leader>00000cpcaa2200685Ia 4500</leader>
+  <controlfield tag='008'>910202i18411881xxu                 eng d</controlfield>
+  <controlfield tag='007'>hd afu---baau</controlfield>
+  <controlfield tag='001'>23045579</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20140603023441.0</controlfield>
+  <datafield ind1=' ' ind2=' ' tag='010'>
+    <subfield code='b'>ms 78001894</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='035'>
+    <subfield code='a'>(OCoLC)23045579</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='040'>
+    <subfield code='a'>NOC</subfield>
+    <subfield code='b'>eng</subfield>
+    <subfield code='c'>NOC</subfield>
+    <subfield code='d'>NOC</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>NOC</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='043'>
+    <subfield code='a'>n-usu--</subfield>
+    <subfield code='a'>n-us-ar</subfield>
+    <subfield code='a'>n-us-mo</subfield>
+    <subfield code='a'>n-us---</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='049'>
+    <subfield code='a'>NOCC</subfield>
+  </datafield>
+  <datafield ind1='1' ind2=' ' tag='100'>
+    <subfield code='a'>Chew, Francis Thornton,</subfield>
+    <subfield code='d'>1841-1893.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='245'>
+    <subfield code='a'>Francis Thornton Chew papers,</subfield>
+    <subfield code='f'>1841-1881.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='300'>
+    <subfield code='a'>5</subfield>
+    <subfield code='f'>items</subfield>
+    <subfield code='a'>(0.5 linear ft.)</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>In the Southern Historical Collection, University of North Carolina at Chapel Hill (#148).</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>Master microfilm (M-148) held by: NcU.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='500'>
+    <subfield code='a'>Microfilm filmed by University of North Carolina, Library, Photographic Service, 1979 and 2004.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='520'>
+    <subfield code='a'>The collection includes a diary (2 volumes), 1863-1865, written while Chew was in Bermuda, Nova Scotia, England, and France on a secret mission, and sailing around the world on the raider &quot;Shenandoah&quot;; an autobiography, written in 1881, covering the period of the diary as well as Chew&apos;s growing up in Arkansas and Missouri, his education at Annapolis, 1859-1861, and Confederate service, 1861-1862; a picture of the &quot;Shenandoah&quot;; and a map of its voyage.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='520'>
+    <subfield code='a'>Microfilm contents: Reel 1. v.1-2. -- Reel 2. Transcript of autobiography and photo and map.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='530'>
+    <subfield code='a'>Diary (2 vols.) is available on microfilm.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='541'>
+    <subfield code='c'>Acquired</subfield>
+    <subfield code='d'>1940 and earlier.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='545'>
+    <subfield code='a'>Francis Thornton Chew was a Confederate naval officer.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='600'>
+    <subfield code='a'>Chew, Francis Thornton,</subfield>
+    <subfield code='d'>1841-1893.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='610'>
+    <subfield code='a'>Confederate States of America.</subfield>
+    <subfield code='b'>Navy</subfield>
+    <subfield code='x'>Officers</subfield>
+    <subfield code='v'>Diaries.</subfield>
+  </datafield>
+  <datafield ind1='1' ind2='0' tag='610'>
+    <subfield code='a'>Confederate States of America.</subfield>
+    <subfield code='b'>Navy</subfield>
+    <subfield code='x'>Sea life.</subfield>
+  </datafield>
+  <datafield ind1='2' ind2='0' tag='610'>
+    <subfield code='a'>Shenandoah (Cruiser)</subfield>
+  </datafield>
+  <datafield ind1='2' ind2='0' tag='610'>
+    <subfield code='a'>United States Naval Academy</subfield>
+    <subfield code='x'>Students</subfield>
+    <subfield code='x'>History</subfield>
+    <subfield code='y'>19th century.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Autobiographies</subfield>
+    <subfield code='z'>Southern States.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Children</subfield>
+    <subfield code='z'>Arkansas</subfield>
+    <subfield code='x'>History</subfield>
+    <subfield code='y'>19th century.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Children</subfield>
+    <subfield code='z'>Missouri</subfield>
+    <subfield code='x'>History</subfield>
+    <subfield code='y'>19th century.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Families</subfield>
+    <subfield code='z'>Arkansas</subfield>
+    <subfield code='x'>Social life and customs.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='650'>
+    <subfield code='a'>Families</subfield>
+    <subfield code='z'>Missouri</subfield>
+    <subfield code='x'>Social life and customs.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='651'>
+    <subfield code='a'>Arkansas</subfield>
+    <subfield code='x'>Social life and customs.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='651'>
+    <subfield code='a'>Confederate States of America</subfield>
+    <subfield code='x'>Foreign relations.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='651'>
+    <subfield code='a'>Missouri</subfield>
+    <subfield code='x'>Social life and customs.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='651'>
+    <subfield code='a'>United States</subfield>
+    <subfield code='x'>History</subfield>
+    <subfield code='y'>Civil War, 1861-1865</subfield>
+    <subfield code='v'>Maps.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='0' tag='651'>
+    <subfield code='a'>United States</subfield>
+    <subfield code='x'>History</subfield>
+    <subfield code='y'>Civil War, 1861-1865</subfield>
+    <subfield code='v'>Personal narratives, Confederate.</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2='7' tag='655'>
+    <subfield code='a'>Diaries.</subfield>
+    <subfield code='2'>lcgft</subfield>
+  </datafield>
+  <datafield ind1='4' ind2='2' tag='856'>
+    <subfield code='3'>Finding aid</subfield>
+    <subfield code='u'>http://finding-aids.lib.unc.edu/00148/</subfield>
+  </datafield>
+  <datafield ind1=' ' ind2=' ' tag='907'>
+    <subfield code='a'>b2379581</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i3419960</subfield>
+    <subfield code='l'>wadc</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>24</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>HALR-8793-00001</subfield>
+    <subfield code='p'>099#9</subfield>
+    <subfield code='q'>|a148</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i10372749</subfield>
+    <subfield code='l'>dgaa</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>67</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00048270663</subfield>
+    <subfield code='p'>099#9</subfield>
+    <subfield code='q'>|aM-148</subfield>
+    <subfield code='v'>reel 1</subfield>
+    <subfield code='n'>See Preservation staff for assistance with this microfilm. Use of this reel may require production of a use copy.</subfield>
+  </datafield>
+  <datafield ind1='9' ind2='1' tag='999'>
+    <subfield code='i'>i10372752</subfield>
+    <subfield code='l'>dgaa</subfield>
+    <subfield code='s'>o</subfield>
+    <subfield code='t'>67</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='b'>00048270654</subfield>
+    <subfield code='p'>099#9</subfield>
+    <subfield code='q'>|aM-148</subfield>
+    <subfield code='v'>reel 2</subfield>
+    <subfield code='n'>See Preservation staff for assistance with this microfilm. Use of this reel may require production of a use copy.</subfield>
+  </datafield>
+  <datafield ind1='0' ind2='0' tag='999'>
+    <subfield code='a'>2014-06-03 00:00:00-04</subfield>
+    <subfield code='c'>2004-10-01 09:25:00-04</subfield>
+    <subfield code='u'>2016-09-01 17:36:55-04</subfield>
+  </datafield>
+  </record>
+</collection>

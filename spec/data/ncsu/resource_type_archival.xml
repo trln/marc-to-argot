@@ -1,0 +1,438 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>06043npcaa2200757Ka 4500</leader>
+  <controlfield tag="001">ocn521064822</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20120801032038.0</controlfield>
+  <controlfield tag="008">100219i19472010ncu                 eng d</controlfield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+    <subfield code="c">NRC</subfield>
+    <subfield code="e">dacs</subfield>
+    <subfield code="d">NRC</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)521064822</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+  </datafield>
+  <datafield tag="110" ind1="2" ind2=" ">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">Department of Sociology and Anthropology</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">North Carolina State University, College of Humanities and Social Sciences, Department of Sociology and Anthropology records,</subfield>
+    <subfield code="f">1947-2010</subfield>
+    <subfield code="h">[manuscript].</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">54.79</subfield>
+    <subfield code="f">linear ft.</subfield>
+    <subfield code="a">(32</subfield>
+    <subfield code="f">cartons +</subfield>
+    <subfield code="a">3</subfield>
+    <subfield code="f">archival boxes +</subfield>
+    <subfield code="a">3</subfield>
+    <subfield code="f">legal boxes +</subfield>
+    <subfield code="a">3</subfield>
+    <subfield code="f">archival half boxes +</subfield>
+    <subfield code="a">6</subfield>
+    <subfield code="f">cardboxes)</subfield>
+  </datafield>
+  <datafield tag="351" ind1=" " ind2=" ">
+    <subfield code="a">This collection has not yet undergone full archival processing; materials are arranged in the order received.</subfield>
+  </datafield>
+  <datafield tag="506" ind1=" " ind2=" ">
+    <subfield code="a">Portions of this collection have restricted access.  Please consult the Special Collections Research Center for more information.</subfield>
+  </datafield>
+  <datafield tag="545" ind1=" " ind2=" ">
+    <subfield code="a">The North Carolina State University Department of Sociology and Anthropology dates back to 1920. The department has programs of study, research, extension and outreach in two colleges, the College of Humanities and Social Sciences, CHASS, and the College of Agriculture and LifeSciences, CALS.</subfield>
+  </datafield>
+  <datafield tag="520" ind1="3" ind2=" ">
+    <subfield code="a">The records of the North Carolina State University Department of Sociology and Anthropology contain correspondence, memoranda, curricula guides, handbooks, study guides, cards from a departmental card catalog, photographs of former faculty, and accreditation standards regarding farm policy review, community council, curricula, research progress reports, international programs, community development extension programs, and the Ellen Winston Lecture and Development Fund. Material also includes information about a rural economic development training program in Pakistan. The correspondence and files are primarily of Ronald C. Wimberley, Dept. of Sociology and Anthropology Head. Materials range in date from 1911 to 2010.</subfield>
+  </datafield>
+  <datafield tag="541" ind1=" " ind2=" ">
+    <subfield code="c">Transferred from the</subfield>
+    <subfield code="a">North Carolina State University Dept. of Sociology and Anthropology.</subfield>
+  </datafield>
+  <datafield tag="555" ind1=" " ind2=" ">
+    <subfield code="a">Collection guide available.</subfield>
+  </datafield>
+  <datafield tag="580" ind1=" " ind2=" ">
+    <subfield code="a">Forms part of the College of Humanities and Social Sciences Records (UA 120)</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="0">
+    <subfield code="a">Wimberley, Ronald C.</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="0">
+    <subfield code="a">Winston, Ellen,</subfield>
+    <subfield code="d">1903-1984.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Anthropology</subfield>
+    <subfield code="x">Study and teaching (Higher)</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State College</subfield>
+    <subfield code="x">History.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University</subfield>
+    <subfield code="x">History.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">College of Agriculture and Life Sciences.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">College of Humanities and Social Sciences.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">Department of Sociology and Anthropology</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Sociology, Rural</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Sociology</subfield>
+    <subfield code="x">Study and teaching (Higher)</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="773" ind1="1" ind2=" ">
+    <subfield code="t">College of Humanities and Social Science Records (UA 120)</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="2">
+    <subfield code="y">View NCSU Libraries&apos; online guide</subfield>
+    <subfield code="u">http://www.lib.ncsu.edu/findingaids/ua120_021/</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="2">
+    <subfield code="3">Finding aid available</subfield>
+    <subfield code="u">http://www.lib.ncsu.edu/findingaids/ua120_021/</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="2">
+    <subfield code="3">Collection guide available</subfield>
+    <subfield code="u">http://www.lib.ncsu.edu/findingaids/ua120_021/</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">999484</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20110923</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">10</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">HAJN-9058-00001</subfield>
+    <subfield code="l">ARCHIVES</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/20/1998</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 1</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267142O</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/9/2005</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 2</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267143P</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/9/2005</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 3</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267048T</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/9/2005</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 4</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267049U</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/9/2005</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 5</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267050M</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/9/2005</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 6</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267051N</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">8/9/2005</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 HALF BOX 7</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02267346U</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">1/22/2007</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 BOX 8</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02244277S</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">1/14/2009</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 HALF BOX 10</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02246737V</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">N</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">1/27/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 11</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245564S</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 12</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245565T</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 13</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245542O</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 14</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245543P</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 15</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245553Q</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 16</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245554R</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 17</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245555S</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 18</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245562Q</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 BOX 19</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245563R</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 20</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245566U</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/22/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARDBOX 21</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02935671X</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/23/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARDBOX 22</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02935672Y</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/23/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARDBOX 23</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02935673Z</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/23/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARDBOX 24</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02935674-</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">9/23/2011</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">UA 120.021 CARTON 25</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02245572R</subfield>
+    <subfield code="l">SPEC-D</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">10/19/2011</subfield>
+  </datafield>
+</record>
+</collection>

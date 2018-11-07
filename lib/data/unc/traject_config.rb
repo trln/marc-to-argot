@@ -329,5 +329,7 @@ each_record do |rec, cxt|
     ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   end
 
+  remove_print_from_archival_material(cxt)
+
   Logging.mdc.clear
 end

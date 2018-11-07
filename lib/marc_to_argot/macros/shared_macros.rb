@@ -10,6 +10,7 @@ require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/publication_year'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/series_statement'
+require 'marc_to_argot/macros/shared/statement_of_responsibility'
 require 'marc_to_argot/macros/shared/subject_genre'
 require 'marc_to_argot/macros/shared/title'
 require 'marc_to_argot/macros/shared/title_variant'
@@ -38,6 +39,7 @@ module MarcToArgot
       include PhysicalMedia
       include ResourceType
       include SeriesStatement
+      include StatementOfResponsibility
       include SubjectGenre
       include Title
       include TitleVariant

@@ -400,8 +400,7 @@ end
 ######
 
 unless settings["override"].include?("statement_of_responsibility")
-  to_field "statement_of_responsibility",
-           basic_vernacular_field(settings["specs"][:statement_of_responsibility])
+  to_field "statement_of_responsibility", statement_of_responsibility
 end
 
 unless settings["override"].include?("edition")

@@ -269,6 +269,60 @@ module MarcToArgot
         end
 
         ################################################
+        # subject remapping methods
+        ######
+        # NOTE: currently all subject heading (and subdivisions) that need to be remapped
+        #  are TOPICAL (i.e. not chronological, geographic, or genre). All of the code in
+        #  this section will need to be revised if we need to remap non-topical subject
+        #  segments in the future. However, that seems pretty unlikely. Most offensive or
+        #  otherwise problematic terms in LCSH are topical
+
+        # Subjects to be remapped are specified and must match at the whole heading-or-subdivision
+        #  level. This is to ensure we don't end up inadvertently changing stuff that shouldn't be
+        #  changed. For example,
+        #    "Poor -- Medical care" should be remapped to "Poor people -- Medical care"
+        #  but
+        #    "Poor children -- United States" should not be remapped to "Poor people children --
+        #      United States"
+
+        def remap_subjects(rec, cxt, mappings)
+          to_remap = subject_segments_to_remap(rec, cxt, mappings)
+          remap_subject_topical(rec, cxt, mappings, to_remap) if to_remap
+          remap_subject_headings(rec, cxt, mappings, to_remap) if to_remap
+        end
+        
+        # Given a record and its context,
+        # returns array of subject segments that need to be remapped.
+        def subject_segments_to_remap(rec, cxt, mappings)
+          subject_segments = cxt.output_hash['subject_topical']
+          return subject_segments & mappings.keys if subject_segments
+        end
+
+        def remap_subject_topical(rec, cxt, mappings, to_remap)
+          subject_topics = cxt.output_hash['subject_topical']
+          to_remap.each do |prob|
+            subject_topics.delete(prob)
+            subject_topics << mappings[prob]
+          end
+          cxt.output_hash['subject_topical'] = subject_topics
+        end
+
+        def remap_subject_headings(rec, cxt, mappings, to_remap)
+          subject_headings = cxt.output_hash['subject_headings']
+          subjects_remapped = []
+          to_remap.each do |prob|
+            subject_headings.each do |sh|
+            if sh[:value].split(' -- ').include?(prob)
+              subjects_remapped << sh[:value]
+              sh[:value] = sh[:value].sub(prob, mappings[prob])
+            end
+          end
+        end
+        cxt.output_hash['subject_headings'] = subject_headings
+        cxt.output_hash['subject_headings_remapped'] = subjects_remapped
+        end
+        
+        ################################################
         # subject genre helpers
         ######
 

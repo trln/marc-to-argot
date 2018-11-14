@@ -1,7 +1,8 @@
 # coding: utf-8
 require 'spec_helper'
+include MarcToArgot::Macros::Shared::SubjectGenre
 
-describe MarcToArgot do
+describe MarcToArgot::Macros::Shared::SubjectGenre do
   include Util
   let(:subject1) { run_traject_json('unc', 'subject1', 'mrc') }
   let(:subject2) { run_traject_json('unc', 'subject2', 'mrc') }
@@ -348,7 +349,7 @@ describe MarcToArgot do
                           "教材"
                         )
     end
-
+    
     it '(MTA) sets genre_headings from 880 field' do
       result = vern655ara['genre_headings']
       expect(result).to include(
@@ -412,6 +413,7 @@ describe MarcToArgot do
                           'Undocumented immigrants'
                          ])
       end
-
     end
+
+
 end

@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 describe MarcToArgot do
-  include Util::TrajectRunTest
+  include Util
   let(:subject1) { run_traject_json('unc', 'subject1', 'mrc') }
   let(:subject2) { run_traject_json('unc', 'subject2', 'mrc') }
   let(:subject3) { run_traject_json('unc', 'subject3', 'mrc') }
@@ -355,5 +355,63 @@ describe MarcToArgot do
                           { 'value' => 'أعمال مبكرة إلى 1800',
                             'lang' => 'ara' }
                         )
+    end
+
+    context 'when problematic subject headings present' do
+      let(:argot1) { rec = make_rec
+        rec << MARC::DataField.new('650', ' ', '0',
+                                 ['a', 'Illegal aliens'],
+                                 ['x', 'Services for'],
+                                 ['z', 'United States.'])
+        rec << MARC::DataField.new('650', ' ', '0',
+                                 ['a', 'Poor'],
+                                 ['x', 'Medical care'],
+                                 ['z', 'United States.'])
+        rec << MARC::DataField.new('650', ' ', '0',
+                                 ['a', 'Poor children'],
+                                 ['x', 'Dental care'],
+                                 ['z', 'United States.'])
+        rec << MARC::DataField.new('650', ' ', '0',
+                                 ['a', 'Poor.'])
+        rec << MARC::DataField.new('650', ' ', '0',
+                                 ['a', 'Inoffensive heading'],
+                                 ['x', 'Hideous subdivision'],
+                                 ['z', 'United States.'])
+        run_traject_on_record('unc', rec)
+      }
+
+      it '(MTA) remaps subject heading to better language' do
+        sh = argot1['subject_headings'].map { |e| e[:value] }.sort
+        expect(sh).to eq([
+                          'Inoffensive heading -- Better subdivision -- United States',
+                          'Poor children -- Dental care -- United States',
+                          'Poor people',
+                          'Poor people -- Medical care -- United States',
+                          'Undocumented immigrants -- Services for -- United States'
+                         ])
+      end
+
+      it '(MTA) sends problematic heading through as searchable-only' do 
+        shr = argot1['subject_headings_remapped']
+        expect(shr).to eq(['Illegal aliens -- Services for -- United States',
+                           'Poor -- Medical care -- United States',
+                           'Poor',
+                           'Inoffensive heading -- Hideous subdivision -- United States'
+                          ])
+      end
+
+      it '(MTA) remaps subject_topical values to better language' do
+        sf = argot1['subject_topical'].sort
+        expect(sf).to eq(['Better subdivision',
+                          'Dental care',
+                          'Inoffensive heading',
+                          'Medical care',
+                          'Poor children',
+                          'Poor people',
+                          'Services for',
+                          'Undocumented immigrants'
+                         ])
+      end
+
     end
 end

@@ -342,6 +342,8 @@ end
 
 unless settings["override"].include?("subject_headings")
   to_field 'subject_headings', subject_headings
+  each_record do |rec, acc|
+  end
 end
 
 unless settings["override"].include?("genre_headings")
@@ -368,6 +370,41 @@ unless settings['override'].include?('subject_genre')
   to_field 'subject_genre', subject_genre
 end
 
+################################################
+# Remap problematic subject headings
+######
+subject_remappings = Traject::TranslationMap.new('shared/subject_heading_remappings').hash
+problem_subject_strings = subject_remappings.keys
+
+unless settings['override'].include?('subject_headings') || settings['override'].include?('subject_topical')
+  each_record do |rec, cxt|
+    subject_topical = cxt.output_hash['subject_topical']
+
+    if subject_topical
+      subjects_to_remap = subject_topical & problem_subject_strings
+      unless subjects_to_remap.empty?
+        subject_headings = cxt.output_hash['subject_headings']
+        subjects_remapped = []
+        subjects_to_remap.each do |prob_sub|
+          # remove problematic segment from subject_topical and add remapped segment
+          subject_topical.delete(prob_sub)
+          subject_topical << subject_remappings[prob_sub]
+          # do substitutions in subject headings
+          subject_headings.each do |sh|
+            if sh[:value].split(' -- ').include?(prob_sub)
+              subjects_remapped << sh[:value]
+              sh[:value] = sh[:value].sub(prob_sub, subject_remappings[prob_sub])
+            end
+          end
+        end
+        cxt.output_hash['subject_topical'] = subject_topical
+        cxt.output_hash['subject_headings'] = subject_headings
+        cxt.output_hash['subject_headings_remapped'] = subjects_remapped
+      end
+    end
+  end
+end
+   
 ################################################
 # Format -- Resource Type, Characteristics, Physical Media, etc.
 ######

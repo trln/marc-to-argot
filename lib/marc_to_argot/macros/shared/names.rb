@@ -17,6 +17,7 @@ module MarcToArgot
               names = assemble_names_hash(field)
 
               acc << names unless names.empty?
+              acc.uniq!
               Logging.mdc.delete('field')
             end
           end

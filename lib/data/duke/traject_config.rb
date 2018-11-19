@@ -44,6 +44,12 @@ to_field 'institution', literal('duke')
 #########
 to_field 'names', names
 
+##################
+# Bookplate
+#########
+to_field 'bookplate', extract_marc("796z")
+
+
 ################################################
 # Items
 ######
@@ -336,5 +342,6 @@ end
 
 each_record do |rec, ctx|
   remove_print_from_archival_material(ctx)
+  add_bookplate_to_notes_local(ctx)
   Logging.mdc.clear
 end

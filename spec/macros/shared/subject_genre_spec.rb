@@ -137,7 +137,17 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
                       )
   end
 
-  it '(MTA) sets and deduplicates subject_chronological' do
+    it '(MTA) sets subject_topical from 690 a and x' do
+      rec = make_rec
+      rec << MARC::DataField.new('690', ' ', ' ', ['a', 'foo'], ['x', 'oof'])
+      argot = run_traject_on_record('unc', rec)
+      result_top = argot['subject_topical']
+      result_sh = argot['subject_headings']
+      expect(result_top).to eq(['Foo', 'Oof'])
+      expect(result_sh).to eq([{ :value => 'Foo -- Oof' }])
+    end
+
+    it '(MTA) sets and deduplicates subject_chronological' do
     result = subject1['subject_chronological']
     expect(result).to eq(
                         [
@@ -378,26 +388,51 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
                                  ['a', 'Inoffensive heading'],
                                  ['x', 'Hideous subdivision'],
                                  ['z', 'United States.'])
+        rec << MARC::DataField.new('650', ' ', '0',
+                                 ['a', 'Illegal Aliens'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                 ['a', 'Illegal Aliens'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                 ['a', 'Netherlands'],
+                                 ['x', 'Social Conditions'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                 ['a', 'Illegal Aliens'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                 ['a', 'Netherlands'],
+                                 ['x', 'Social Conditions'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                 ['a', 'Illegal Aliens'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                 ['a', 'Netherlands'],
+                                 ['x', 'Social Conditions'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'Illegal Aliens'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'Netherlands'],
+                                   ['x', 'Social Conditions'])
         run_traject_on_record('unc', rec)
-      }
+                                  }
 
       it '(MTA) remaps subject heading to better language' do
         sh = argot1['subject_headings'].map { |e| e[:value] }.sort
         expect(sh).to eq([
-                          'Inoffensive heading -- Better subdivision -- United States',
+                           'Inoffensive heading -- Better subdivision -- United States',
+                           'Netherlands -- Social Conditions',
                           'Poor children -- Dental care -- United States',
                           'Poor people',
                           'Poor people -- Medical care -- United States',
+                          'Undocumented immigrants',
                           'Undocumented immigrants -- Services for -- United States'
                          ])
       end
 
       it '(MTA) sends problematic heading through as searchable-only' do 
-        shr = argot1['subject_headings_remapped']
-        expect(shr).to eq(['Illegal aliens -- Services for -- United States',
-                           'Poor -- Medical care -- United States',
+        shr = argot1['subject_headings_remapped'].sort
+        expect(shr).to eq(['Illegal Aliens',
+                           'Illegal aliens -- Services for -- United States',
+                           'Inoffensive heading -- Hideous subdivision -- United States',
                            'Poor',
-                           'Inoffensive heading -- Hideous subdivision -- United States'
+                           'Poor -- Medical care -- United States'
                           ])
       end
 
@@ -407,13 +442,24 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
                           'Dental care',
                           'Inoffensive heading',
                           'Medical care',
+                          'Netherlands',
                           'Poor children',
                           'Poor people',
                           'Services for',
+                          'Social Conditions',
                           'Undocumented immigrants'
                          ])
       end
     end
 
+    context 'when no subject headings present' do
+      let(:argot2) { rec = make_rec
+        run_traject_on_record('unc', rec)
+      }
 
+      it '(MTA) does not fall over trying to remap nil headings' do
+        sh = argot2['subject_headings']
+        expect(sh).to be_nil
+      end
+    end
 end

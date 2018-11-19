@@ -6,12 +6,12 @@
 #  $aPoor children$xMedical care DOES NOT GET REMAPPED
 # This requires some repetition here in the mappings, but it is clearer and safer
 
-Aliens: "Noncitizens"
-Alien detention centers: "Immigrant detention centers"
-Children of illegal aliens: "Children of undocumented immigrants"
-Hideous subdivision: "Better subdivision"
-Illegal alien children: "Undocumented immigrant children"
-Illegal aliens: "Undocumented immigrants"
-Illegal aliens in literature: "Undocumented immigrants in literature"
-Poor: "Poor people"
-Women illegal aliens: "Women undocumented immigants"
+aliens: "Noncitizens"
+alien detention centers: "Immigrant detention centers"
+children of illegal aliens: "Children of undocumented immigrants"
+hideous subdivision: "Better subdivision"
+illegal alien children: "Undocumented immigrant children"
+illegal aliens: "Undocumented immigrants"
+illegal aliens in literature: "Undocumented immigrants in literature"
+poor: "Poor people"
+women illegal aliens: "Women undocumented immigants"

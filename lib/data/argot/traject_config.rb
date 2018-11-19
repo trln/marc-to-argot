@@ -374,9 +374,9 @@ end
 # Remap problematic subject headings
 ######
 unless settings['override'].include?('subject_headings') || settings['override'].include?('subject_topical')
-  subject_remappings = Traject::TranslationMap.new('shared/subject_heading_remappings').hash
+
   each_record do |rec, cxt|
-    remap_subjects(rec, cxt, subject_remappings)
+    remap_subjects(rec, cxt)
   end
 end
    

@@ -97,7 +97,8 @@ module MarcToArgot
                    '653|*3|a:'\
                    '653|*4|a:'\
                    '656ax:'\
-                   '657ax'
+                   '657ax:'\
+                   '690a:690x'
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
 
               values = collect_subjects(field, spec)
@@ -282,39 +283,69 @@ module MarcToArgot
         #  changed. For example,
         #    "Poor -- Medical care" should be remapped to "Poor people -- Medical care"
         #  but
-        #    "Poor children -- United States" should not be remapped to "Poor people children --
+        #    "Poor children -- United States" should NOT be remapped to "Poor people children --
         #      United States"
+        SUBJECT_REMAP = Traject::TranslationMap.new('shared/subject_heading_remappings').hash
+        REMAP_SEGMENTS = SUBJECT_REMAP.keys.to_set
 
-        def remap_subjects(rec, cxt, mappings)
-          to_remap = subject_segments_to_remap(rec, cxt, mappings)
-          remap_subject_topical(rec, cxt, mappings, to_remap) if to_remap
-          remap_subject_headings(rec, cxt, mappings, to_remap) if to_remap
+        def remap_subjects(rec, cxt)
+          to_remap = get_remap_instructions(rec, cxt)
+          remap_subject_topical(rec, cxt, to_remap) if to_remap
+          remap_subject_headings(rec, cxt, to_remap) if to_remap
         end
         
         # Given a record and its context,
-        # returns array of subject segments that need to be remapped.
-        def subject_segments_to_remap(rec, cxt, mappings)
-          subject_segments = cxt.output_hash['subject_topical']
-          return subject_segments & mappings.keys if subject_segments
+        # returns hash of subject segments that need to be remapped.
+        #  {'Illegal Aliens' => 'Undocumented immigrants' }
+        # "Illegal Aliens" (note non-standard capitalization) appears in record.
+        # It should be mapped to "Undocumented immigrants"
+        # The vast majority of subject segments will not need to be
+        #  remapped and we need to
+        #   - identify subject segments to remap case INsensitively, but
+        #   - provide remapped replacement segments with the proper capitalization
+        # Using this hash is an attempt to pass record specific instructions about what
+        #  to replace/remap without ridiculous amounts of repeated iterative processes
+        def get_remap_instructions(rec, cxt)
+          sub_segments = cxt.output_hash['subject_topical']
+          to_remap = get_remap_values(sub_segments) if sub_segments
+          remap_config = prep_remapping_instructions(sub_segments, to_remap) if to_remap
+          return remap_config if remap_config
         end
 
-        def remap_subject_topical(rec, cxt, mappings, to_remap)
+        # Returns array of subject segments from record that need to be remapped
+        # (or returns nil)
+        def get_remap_values(subject_segments)
+          subject_segments_lc = subject_segments.map(&:downcase).to_set
+          to_remap = subject_segments_lc & REMAP_SEGMENTS
+          return to_remap unless to_remap.empty?
+        end
+
+        # returns hash with remapping substitution instructions
+        #   { 'Value to replace in record'=>'Replacement value' }
+        def prep_remapping_instructions(sub_segments, to_remap)
+          remap_segments_a = sub_segments.select{ |s| to_remap.include?(s.downcase) }
+          remap_segments_h = remap_segments_a.map{ |s| [s, s.downcase] }.to_h
+          to_remap = remap_segments_h.map{ |inrec, lower| [inrec, SUBJECT_REMAP[lower]] }
+          return to_remap
+        end
+
+        def remap_subject_topical(rec, cxt, to_remap)
           subject_topics = cxt.output_hash['subject_topical']
-          to_remap.each do |prob|
-            subject_topics.delete(prob)
-            subject_topics << mappings[prob]
+          to_remap.each do |inrec, replacement|
+            subject_topics.delete(inrec)
+            subject_topics << replacement
           end
-          cxt.output_hash['subject_topical'] = subject_topics
+          cxt.output_hash['subject_topical'] = subject_topics.uniq
         end
 
-        def remap_subject_headings(rec, cxt, mappings, to_remap)
+        def remap_subject_headings(rec, cxt, to_remap)
           subject_headings = cxt.output_hash['subject_headings']
           subjects_remapped = []
-          to_remap.each do |prob|
+          to_remap.each do |inrec, replacement|
             subject_headings.each do |sh|
-            if sh[:value].split(' -- ').include?(prob)
+            if sh[:value].split(' -- ').include?(inrec)
               subjects_remapped << sh[:value]
-              sh[:value] = sh[:value].sub(prob, mappings[prob])
+              sh[:value] = sh[:value].sub(inrec, replacement)
             end
           end
         end
@@ -389,6 +420,8 @@ module MarcToArgot
             %w[a k v x y z]
           when '662'
             %w[a b c d f g h]
+          when '690'
+            %w[a x]
           else
             %w[na]
           end

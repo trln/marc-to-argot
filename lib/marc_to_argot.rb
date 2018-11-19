@@ -12,13 +12,15 @@ require 'marc'
 require 'traject/argot_semantics'
 require 'traject/argot_writer'
 
-# Other Helpers
+# Other Helpers (standard library)
+require 'json'
+require 'set'
+require 'time'
+require 'yaml'
 
+# Other Helpers
 require 'library_stdnums'
 require 'thor'
-require 'json'
-require 'yaml'
-require 'time'
 require 'ext/marc/data_field'
 require 'ext/marc/control_field'
 require 'ext/marc/record'

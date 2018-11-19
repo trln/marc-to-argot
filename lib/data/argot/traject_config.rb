@@ -96,7 +96,7 @@ end
 
 unless settings['override'].include?('date_cataloged')
   to_field 'date_cataloged' do |rec, acc|
-    cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first
+    cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first.to_s.strip
     begin
       acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
     rescue ArgumentError => e

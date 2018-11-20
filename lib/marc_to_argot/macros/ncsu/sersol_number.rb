@@ -8,12 +8,9 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached('035a').each_matching_line(rec) do |field, spec, extractor|
               ids = field.subfields.select { |sf| sf.code == 'a' }.map(&:value).map(&:strip)
-              ids.select! { |x| /^(\(WaSeSS\)ssj)?\d{5,}$/.match(x) }
+              ids.select! { |x| /^(\(WaSeSS\))?\s*ss(j|ib)\d{5,}$/.match(x) }
               ids.map! { |x| x.sub('(WaSeSS)', '') }              
-              acc << ids
-              acc.compact!
-              acc.flatten!
-              acc.reject!(&:empty?)
+              ids.each {|i| acc << i unless i.empty?}
               acc.uniq!
             end
           end

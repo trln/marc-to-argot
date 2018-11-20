@@ -1,5 +1,4 @@
 describe MarcToArgot do
-  include Util::TrajectRunTest
   let(:oclc) { run_traject_json('ncsu', 'ejournal') }
   let(:no_oclc) { run_traject_json('ncsu', 'no-oclc-ejournal') }
 

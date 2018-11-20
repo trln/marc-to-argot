@@ -33,7 +33,10 @@ module MarcToArgot
       # @param field [MARC::DataField] the field to check for a finding aid URL
       def url_for_finding_aid?(field)
         substring_present_in_subfield?(field, 'u', 'library.duke.edu/rubenstein/findingaids') ||
-          substring_present_in_subfield?(field, 'y', 'collection guide')
+          substring_present_in_subfield?(field, 'y', 'collection guide') ||
+          substring_present_in_subfield?(field, '3', 'collection guide') ||
+          substring_present_in_subfield?(field, 'y', 'finding aid') ||
+          substring_present_in_subfield?(field, '3', 'finding aid')
       end
 
       # OCLC Number & Rollup ID
@@ -95,6 +98,15 @@ module MarcToArgot
         def ebook_location_codes
           %w[DKK FRDK1 FRDK2 FRDK3 PDK PKKI PKKR PKKZ
              PKXKR PLK1 PLK2 PLKR PLXKR PZK1 PZK2]
+        end
+      end
+
+      def add_bookplate_to_notes_local(ctx)
+        if ctx.output_hash.key?('bookplate')
+          bookplate = ctx.output_hash['bookplate'].map { |bp| { 'value' => bp } }
+          local_notes = ctx.output_hash.fetch('note_local', [])
+          ctx.output_hash['note_local'] = local_notes.concat(bookplate)
+          ctx.output_hash.delete('bookplate')
         end
       end
 

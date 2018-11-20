@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 describe MarcToArgot do
-  include Util::TrajectRunTest
+  include Util
   let(:series) { run_traject_json('unc', 'series_statement', 'mrc') }
 
   it '(MTA) sets series_statement' do
@@ -24,5 +24,37 @@ describe MarcToArgot do
                          {'value'=>'Memoirs of the Geological Survey of India ; v. 123 (QE295.A4) = Bhāratīya Bhūvijñānika Sarvekshaṇa ke saṃsmaraṇa ; khaṇḍa 123'}
                         ]
                       )
+  end
+
+  xit '(MTA) sets series_statement from linked 880 field' do
+    rec = make_rec
+    rec << MARC::DataField.new('490', '1', ' ',
+                               ['6', '880-04'],
+                               ['a', 'Seri︠i︡a "Biblioteka Samizdata" ;'],
+                               ['v', 'no. 2'])
+    rec << MARC::DataField.new('880', '1', ' ',
+                               ['6', '490-04/(N'],
+                               ['a', 'Серия "Библиотека Самиздата" ;'],
+                               ['v', 'no. 2'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['series_statement']
+    expect(result).to eq([
+                           { 'value' => 'Seri︠i︡a "Biblioteka Samizdata" ; no. 2' },
+                           { 'value' => 'Серия "Библиотека Самиздата" ; no. 2',
+                             'lang' => 'rus' }
+                         ])
+  end
+
+  xit '(MTA) sets series_statement from non-Roman 490 field' do
+    rec = make_rec
+    rec << MARC::DataField.new('490', '1', ' ',
+                               ['a', 'Серия "Библиотека Самиздата" ;'],
+                               ['v', 'no. 2'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['series_statement']
+    expect(result).to eq([
+                           { 'value' => 'Серия "Библиотека Самиздата" ; no. 2',
+                             'lang' => 'rus' }
+                         ])
   end
 end

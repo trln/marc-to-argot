@@ -14,7 +14,7 @@ describe MarcToArgot do
     )
   end
 
-  it 'sets serials solution id as rollup id if no oclc id' do
+  it 'use sersol_number for rollup id if no oclc id' do
     expect(no_oclc['rollup_id']).to(
       eq('ssj0037072')
     )

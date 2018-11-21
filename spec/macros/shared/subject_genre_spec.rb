@@ -287,6 +287,16 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
       expect(result_chron).to eq(['21st century'])
     end
 
+    it '(MTA) sets separate subject headings from repeated 653 subfields' do
+      rec = make_rec
+      rec << MARC::DataField.new('653', '0', '0',
+                                 ['a', 'Cats'],
+                                 ['a', 'Goats'])
+      argot = run_traject_on_record('unc', rec)
+      sh = argot['subject_headings'].map { |e| e[:value] }.sort
+      expect(sh).to eq(['Cats', 'Goats'])
+    end
+    
     it '(MTA) sets separate genre headings values from 382 subfields' do
       result = genre6['genre_headings']
       expect(result).to include(

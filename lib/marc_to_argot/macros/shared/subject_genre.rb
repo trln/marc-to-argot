@@ -34,15 +34,29 @@ module MarcToArgot
                    '691abvxyz:'\
                    '695a'
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
-              field_values = {}
-
+              headings = []
+              
               value = collect_and_join_subjects(field, spec, ' -- ')
               lang = Vernacular::ScriptClassifier.new(field, value).classify
 
-              field_values[:value] = value unless value.nil? || value.empty?
-              field_values[:lang] = lang unless lang.nil? || lang.empty?
+              # From a 653, create one subject heading per subfield
+              if field.tag == '653' && value
+                value.split(' -- ').each do |val|
+                  field_values = {}
+                  field_values[:value] = val unless val.nil? || val.empty?
+                  field_values[:lang] = lang unless lang.nil? || lang.empty?
+                  headings << field_values
+                end
 
-              acc << field_values if field_values.has_key?(:value)
+              # From all other fields, create one joined heading from each field
+              else
+                field_values = {}
+                field_values[:value] = value unless value.nil? || value.empty?
+                field_values[:lang] = lang unless lang.nil? || lang.empty?
+                headings << field_values
+              end
+
+              headings.each { |h| acc << h if h.has_key?(:value) }
               acc.uniq!
             end
           end
@@ -322,6 +336,7 @@ module MarcToArgot
 
         # returns hash with remapping substitution instructions
         #   { 'Value to replace in record'=>'Replacement value' }
+        # Capitalization in record varies.
         def prep_remapping_instructions(sub_segments, to_remap)
           remap_segments_a = sub_segments.select{ |s| to_remap.include?(s.downcase) }
           remap_segments_h = remap_segments_a.map{ |s| [s, s.downcase] }.to_h
@@ -412,8 +427,6 @@ module MarcToArgot
             %w[v x y z]
           when '651'
             %w[g x v y z]
-          when '653'
-            %w[a]
           when '655'
             %w[v x y z]
           when '656'

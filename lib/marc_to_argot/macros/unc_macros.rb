@@ -4,6 +4,7 @@ module MarcToArgot
     module UNC
       require 'marc_to_argot/macros/unc/holdings'
       require 'marc_to_argot/macros/unc/resource_type'
+      require 'marc_to_argot/macros/unc/rollup'
       require 'marc_to_argot/macros/unc/shared_records'
       require 'marc_to_argot/macros/unc/urls'
       
@@ -12,6 +13,7 @@ module MarcToArgot
 
       include Holdings
       include ResourceType
+      include Rollup
       include SharedRecords
       include Urls
 

@@ -41,8 +41,8 @@ describe MarcToArgot::Macros::NCSU::Items do
   let(:xx_call_no) { run_traject_json('ncsu', 'xx_call_no_audiobook') }
 
   context 'NCSU' do
-    it 'does not have a copy_no for an item with no copy_no' do
-      expect(marc_to_item(no_copy_no_item)['copy_no']).to be_nil
+    it 'does not have a copy_no' do
+      expect(marc_to_item(copy_no_item)['copy_no']).to eq('')
     end
 
     it 'does not tag BOOKBOT/STACKS as library_use_only' do

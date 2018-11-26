@@ -26,6 +26,8 @@ to_field 'physical_media', physical_media
 
 to_field 'resource_type', resource_type
 
+to_field 'sersol_number', sersol_number
+
 def shadowed_location?(item)
   %w[BOTMISSING ACQ-S MISSING].include?(item['loc_n'])
 end
@@ -71,6 +73,10 @@ each_record do |rec, ctx|
   end
   
   remove_print_from_archival_material(ctx)
+
+  if ctx.output_hash['sersol_number'] && ctx.output_hash['rollup_id'].nil?
+    ctx.output_hash['rollup_id'] = ctx.output_hash['sersol_number'].first
+  end
 
   Logging.mdc.clear
 end

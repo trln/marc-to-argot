@@ -8,6 +8,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/ncsu/items'
       require 'marc_to_argot/macros/ncsu/physical_media'
       require 'marc_to_argot/macros/ncsu/resource_type'
+      require 'marc_to_argot/macros/ncsu/sersol_number'
 
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -15,6 +16,7 @@ module MarcToArgot
       include Summaries
       include Items
       include PhysicalMedia
+      include SersolNumber
 
       MarcExtractor = Traject::MarcExtractor
 

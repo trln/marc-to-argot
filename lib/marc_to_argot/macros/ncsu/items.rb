@@ -130,8 +130,9 @@ module MarcToArgot
             mapped = SUBFIELDS.fetch(code, key: nil)[:key]
             item[mapped] = subfield.value unless mapped.nil?
           end
-          item['copy_no'] = "c. #{item['copy_no']}" if item['copy_no'] 
+          item['copy_no'] = '' if item['copy_no']
           item_status!(item)
+          item['call_no'] = item['call_no'].gsub(/^XX.*$/i,'') if item['call_no'] && !item['call_no'].empty?
           item
         end
 

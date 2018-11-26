@@ -38,13 +38,11 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:audiobook) { run_traject_json('ncsu', 'audiobook') }
 
+  let(:xx_call_no) { run_traject_json('ncsu', 'xx_call_no_audiobook') }
+
   context 'NCSU' do
     it 'does not have a copy_no for an item with no copy_no' do
       expect(marc_to_item(no_copy_no_item)['copy_no']).to be_nil
-    end
-
-    it 'prepends c. to the copy_no when present' do
-      expect(marc_to_item(copy_no_item)['copy_no']).to start_with('c. ')
     end
 
     it 'does not tag BOOKBOT/STACKS as library_use_only' do
@@ -108,5 +106,9 @@ describe MarcToArgot::Macros::NCSU::Items do
       expect(audiobook['location_hierarchy']).to be_empty
     end
 
+    it 'removes call no when call_no begins with XX' do
+      item = JSON.parse(xx_call_no['items'].first)
+      expect(item['call_no']).to eq('')
+    end
   end
 end

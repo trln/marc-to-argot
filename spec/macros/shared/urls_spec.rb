@@ -177,9 +177,11 @@ describe MarcToArgot::Macros::Shared::Urls do
       f1 = MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'], ['3', 'finding aid'])
       f2 = MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'], ['3', 'Finding Aid '])
       f3 = MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'], ['3', 'Link to Finding aid'])
+      f4 = MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'], ['3', 'Finding aid:'])
       expect(url_for_finding_aid?(f1)).to eq(true)
       expect(url_for_finding_aid?(f2)).to eq(true)
       expect(url_for_finding_aid?(f3)).to eq(true)
+      expect(url_for_finding_aid?(f4)).to eq(true)
     end
 
     it 'otherwise, returns false' do

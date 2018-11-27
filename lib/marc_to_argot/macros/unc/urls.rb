@@ -49,7 +49,7 @@ module MarcToArgot
         end
 
         def template_proxy(url)
-          return url.gsub('http://libproxy.lib.unc.edu/login?url=', '{proxyPrefix}')
+          return url.gsub('http://libproxy.lib.unc.edu/login?url=', '{+proxyPrefix}')
         end
       end
     end

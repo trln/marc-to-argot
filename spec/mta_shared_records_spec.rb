@@ -88,7 +88,7 @@ describe MarcToArgot do
       result = asp1['url']
       expect(result).to eq(
                           [
-                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
+                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
                           ]
                         )
     end
@@ -97,7 +97,7 @@ describe MarcToArgot do
       result = asp2['url']
       expect(result).to eq(
                           [
-                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"note\":\"Part 3\"}"                            
+                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"note\":\"Part 3\"}"                            
                           ]
                         )
     end

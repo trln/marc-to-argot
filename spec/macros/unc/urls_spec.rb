@@ -121,7 +121,7 @@ describe MarcToArgot::Macros::UNC::Urls do
     it '(UNC) returns url with proxy prefix as a URL template parameter' do
       url = 'http://libproxy.lib.unc.edu/login?url=https://blahblah'
       v = template_proxy(url)
-      expect(v).to eq('{proxyPrefix}https://blahblah')
+      expect(v).to eq('{+proxyPrefix}https://blahblah')
     end
   end
 end

@@ -5,7 +5,7 @@ module MarcToArgot
       module Items
         SUBFIELDS = {
           i: { key: 'item_id' },
-          c: { key: 'copy_no' },
+          # c: { key: 'copy_no' },
           m: { key: 'loc_b' },
           o: { key: 'notes' },
           a: { key: 'call_no' },
@@ -130,9 +130,9 @@ module MarcToArgot
             mapped = SUBFIELDS.fetch(code, key: nil)[:key]
             item[mapped] = subfield.value unless mapped.nil?
           end
-          item['copy_no'] = '' if item['copy_no']
+          item['copy_no'] = ''
           item_status!(item)
-          item['call_no'] = item['call_no'].gsub(/^XX.*$/i,'') if item['call_no'] && !item['call_no'].empty?
+          item['call_no'] = '' if item.fetch('call_no','').downcase.start_with?('xx')
           item
         end
 

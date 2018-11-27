@@ -50,53 +50,6 @@ describe MarcToArgot::Macros::Shared::Urls do
       end
     end
 
-    context 'When 856 ind2 = 0 or 1 (AND $3 does NOT contain "thumbnail" or "finding aid")' do
-      it '(MTA) writes url[type] = fulltext' do
-        rec = make_rec
-        rec << MARC::DataField.new('856', '4', '0', ['u', 'http://this.org'])
-        rec << MARC::DataField.new('856', '4', '1', ['u', 'http://that.io'])
-        url = return_argot_url_field(rec)
-        expect(url[0]['type']).to eq('fulltext')
-        expect(url[1]['type']).to eq('fulltext')
-      end
-    end
-
-    context 'When 856 ind2 = 2 (AND $3 does NOT contain "thumbnail" or "finding aid")' do
-      it '(MTA) writes url[type] = related' do
-        rec = make_rec
-        rec << MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'])
-        url = return_argot_url_field(rec)
-        expect(url[0]['type']).to eq('related')
-      end
-    end
-
-    context 'When 856 ind2 = something other than 0, 1, 2 (AND $3 does NOT contain "thumbnail" or "finding aid")' do
-      it '(MTA) writes url[type] = other' do
-        rec = make_rec
-        rec << MARC::DataField.new('856', '4', '8', ['u', 'http://this.org'])
-        url = return_argot_url_field(rec)
-        expect(url[0]['type']).to eq('other')
-      end
-    end
-
-    context 'When 856 $3 contains "finding aid" (regardless of ind2 value)' do
-      it '(MTA) writes url[type] = findingaid' do
-        rec = make_rec
-        rec << MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'], ['3', 'Finding aid:'])
-        url = return_argot_url_field(rec)
-        expect(url[0]['type']).to eq('findingaid')
-      end
-    end
-    
-    context 'When 856 $3 contains "thumbnail" (regardless of ind2 value)' do
-      it '(MTA) writes url[type] = thumbnail' do
-        rec = make_rec
-        rec << MARC::DataField.new('856', '4', '2', ['u', 'http://this.org'], ['3', 'Thumbnail image'])
-        url = return_argot_url_field(rec)
-        expect(url[0]['type']).to eq('thumbnail')
-      end
-    end
-
     context 'When 856$y present' do
       it '(MTA) writes $y content to url[text]' do
         rec = make_rec

@@ -2,6 +2,7 @@ require 'marc_to_argot/macros/shared/call_numbers'
 require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/helpers'
 require 'marc_to_argot/macros/shared/imprint'
+require 'marc_to_argot/macros/shared/language'
 require 'marc_to_argot/macros/shared/misc_id'
 require 'marc_to_argot/macros/shared/names'
 require 'marc_to_argot/macros/shared/notes'
@@ -31,6 +32,7 @@ module MarcToArgot
       include Edition
       include Helpers
       include Imprint
+      include Language
       include MiscId
       include Names
       include Notes

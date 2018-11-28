@@ -110,7 +110,7 @@ end
 ######
 
 unless settings['override'].include?('lang')
-  to_field 'language', argot_languages
+  to_field 'language', language
 end
 
 unless settings["override"].include?("lang_code")

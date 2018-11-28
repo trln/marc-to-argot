@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<record type="Bibliographic">
+<leader>     nam a22002293u 4500 </leader>
+<controlfield tag="001">DUKE008363191 </controlfield>
+<controlfield tag="005">20180716094013.0 </controlfield>
+<controlfield tag="006">m^^^^^^^^d^^^^^^^^ </controlfield>
+<controlfield tag="007">cr^^n^^^^^^^^^ </controlfield>
+<controlfield tag="008">180717nuuuu^^^^||||||||o||||||||^|||||^d </controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">(WaSeSS)ssib031808849 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">WaSeSS</subfield>
+ <subfield code="c">WaSeSS</subfield>
+ <subfield code="d">WaSeSS </subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">Kodak Photo CD system (part 2)</subfield>
+ <subfield code="h">[electronic resource] /</subfield>
+ <subfield code="c">Adam Matthews Digital (Firm) </subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">[S.l.] :</subfield>
+ <subfield code="b">[s.n.] </subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 online resource </subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Title from content provider. </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="0">
+ <subfield code="a">Electronic books. </subfield>
+</datafield>
+<datafield tag="710" ind1="1" ind2=" ">
+ <subfield code="a">Adam Matthews Digital (Firm) </subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="y">get it@Duke</subfield>
+ <subfield code="u">https://getitatduke.library.duke.edu/?sid=sersol&amp;SS_jc=TC_031808849&amp;title=Kodak%20Photo%20CD%20system%20%28part%202%29 </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">EB</subfield>
+ <subfield code="b">Electronic books </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book </subfield>
+</datafield>
+<datafield tag="944" ind1=" " ind2=" ">
+ <subfield code="a">ssib031808849 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET </subfield>
+</datafield>
+</record>
+</collection>

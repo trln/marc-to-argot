@@ -50,6 +50,13 @@ describe MarcToArgot do
     )
   end
 
+  it '(Duke) generates rollup_id from sersol number' do
+    result = run_traject_json('duke', 'sersol_rollup', 'xml')
+    expect(result['rollup_id']).to(
+      eq('ssib031808849')
+    )
+  end
+
   it '(Duke) does NOT generate a rollup_id for Duke special collections records' do
     result = run_traject_json('duke', 'special_collections', 'mrc')
     expect(result['rollup_id']).to(be_nil)

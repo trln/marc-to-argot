@@ -230,6 +230,12 @@ module MarcToArgot
             ctx.output_hash.delete('physical_media') if ctx.output_hash['physical_media'].empty?
           end
         end
+
+        def set_sersol_rollup_id(ctx)
+          if ctx.output_hash['sersol_number'] && ctx.output_hash['rollup_id'].nil?
+            ctx.output_hash['rollup_id'] = ctx.output_hash['sersol_number'].first
+          end
+        end
       end
     end
   end

@@ -29,6 +29,12 @@ end
 to_field "oclc_number", oclc_number
 
 ################################################
+# Serials Solutions Number
+######
+
+to_field 'sersol_number', sersol_number
+
+################################################
 # Rollup ID
 ######
 
@@ -343,5 +349,6 @@ end
 each_record do |rec, ctx|
   remove_print_from_archival_material(ctx)
   add_bookplate_to_notes_local(ctx)
+  set_sersol_rollup_id(ctx)
   Logging.mdc.clear
 end

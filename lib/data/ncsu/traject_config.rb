@@ -74,9 +74,7 @@ each_record do |rec, ctx|
   
   remove_print_from_archival_material(ctx)
 
-  if ctx.output_hash['sersol_number'] && ctx.output_hash['rollup_id'].nil?
-    ctx.output_hash['rollup_id'] = ctx.output_hash['sersol_number'].first
-  end
+  set_sersol_rollup_id(ctx)
 
   Logging.mdc.clear
 end

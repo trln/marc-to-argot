@@ -34,14 +34,18 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:no_copy_no_item) { fixture_items[:no_copy_no] }
 
+  let(:xx_call_no_item) { fixture_items[:xx_no] }
+
   let(:bbr_record) { run_traject_json('ncsu', 'bbr') }
 
-  let(:audiobook) { run_traject_json('ncsu', 'audiobook') }
+  let(:audiobook_record) { run_traject_json('ncsu', 'audiobook') }
 
-  let(:xx_call_no) { run_traject_json('ncsu', 'xx_call_no_audiobook') }
+  let(:xx_call_no_record) { run_traject_json('ncsu', 'xx_call_no_audiobook') }
+
+  let(:open_access_record) { run_traject_json('ncsu', 'open_access_ejournal') }
 
   context 'NCSU' do
-    it 'does not have a copy_no' do
+    it 'has a blank copy_no' do
       expect(marc_to_item(copy_no_item)['copy_no']).to eq('')
     end
 
@@ -103,12 +107,16 @@ describe MarcToArgot::Macros::NCSU::Items do
     end
 
     it 'excludes ONLINE library from location hierarchy' do
-      expect(audiobook['location_hierarchy']).to be_empty
+      expect(audiobook_record['location_hierarchy']).to be_empty
     end
 
     it 'removes call no when call_no begins with XX' do
-      item = JSON.parse(xx_call_no['items'].first)
+      item = JSON.parse(xx_call_no_record['items'].first)
       expect(item['call_no']).to eq('')
+    end
+
+    it 'does not output xx call_no' do
+      expect(marc_to_item(xx_call_no_item)['call_no']).to eq('')
     end
   end
 end

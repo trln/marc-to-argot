@@ -56,8 +56,8 @@ module MarcToArgot
       end
 
       def open_access!(urls, items)
-        if items.any? { |i| i['item_cat_2'] == 'OPENACCESS' }
-          urls.each{ |u| u['open'] = true if u['type'] == 'fulltext' }
+        if items.any? { |i| i['loc_b'] == 'ONLINE' && i['item_cat_2'] == 'OPENACCESS' }
+          urls.select{ |u| u['type'] == 'fulltext'}.each{ |u| u['restricted'] = false}         
         end
       end
 

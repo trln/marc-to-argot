@@ -26,7 +26,7 @@ describe MarcToArgot do
                       )
   end
 
-  xit '(MTA) sets series_statement from linked 880 field' do
+  it '(MTA) sets series_statement from linked 880 field' do
     rec = make_rec
     rec << MARC::DataField.new('490', '1', ' ',
                                ['6', '880-04'],
@@ -45,7 +45,7 @@ describe MarcToArgot do
                          ])
   end
 
-  xit '(MTA) sets series_statement from non-Roman 490 field' do
+  it '(MTA) sets series_statement from non-Roman 490 field' do
     rec = make_rec
     rec << MARC::DataField.new('490', '1', ' ',
                                ['a', 'Серия "Библиотека Самиздата" ;'],

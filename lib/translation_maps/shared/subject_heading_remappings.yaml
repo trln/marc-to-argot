@@ -1,0 +1,17 @@
+# Specifies remappings for problematic LCSH
+# Headings to remap must be specified at the whole subdivision level.
+# Only entire subfield values are replaced. For example:
+#  $aPoor$xMedical care -> Poor people -- Medical care
+# BUT:
+#  $aPoor children$xMedical care DOES NOT GET REMAPPED
+# This requires some repetition here in the mappings, but it is clearer and safer
+
+aliens: "Noncitizens"
+alien detention centers: "Immigrant detention centers"
+children of illegal aliens: "Children of undocumented immigrants"
+hideous subdivision: "Better subdivision"
+illegal alien children: "Undocumented immigrant children"
+illegal aliens: "Undocumented immigrants"
+illegal aliens in literature: "Undocumented immigrants in literature"
+poor: "Poor people"
+women illegal aliens: "Women undocumented immigants"

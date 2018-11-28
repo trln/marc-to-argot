@@ -110,7 +110,7 @@ end
 ######
 
 unless settings['override'].include?('lang')
-  to_field 'language', argot_languages
+  to_field 'language', language
 end
 
 unless settings["override"].include?("lang_code")
@@ -342,6 +342,8 @@ end
 
 unless settings["override"].include?("subject_headings")
   to_field 'subject_headings', subject_headings
+  each_record do |rec, acc|
+  end
 end
 
 unless settings["override"].include?("genre_headings")
@@ -368,6 +370,16 @@ unless settings['override'].include?('subject_genre')
   to_field 'subject_genre', subject_genre
 end
 
+################################################
+# Remap problematic subject headings
+######
+unless settings['override'].include?('subject_headings') || settings['override'].include?('subject_topical')
+
+  each_record do |rec, cxt|
+    remap_subjects(rec, cxt)
+  end
+end
+   
 ################################################
 # Format -- Resource Type, Characteristics, Physical Media, etc.
 ######

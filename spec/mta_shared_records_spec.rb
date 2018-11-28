@@ -56,7 +56,7 @@ describe MarcToArgot do
     it '(UNC) sets open access URL without discarding $3 values' do
       result = dwsgpo2['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"text\":\"Spanish\",\"restricted\":\"false\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"note\":\"Spanish\",\"restricted\":\"false\"}"                            
                         )
     end
     
@@ -88,16 +88,16 @@ describe MarcToArgot do
       result = asp1['url']
       expect(result).to eq(
                           [
-                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
+                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
                           ]
                         )
     end
 
-    it '(UNC) keeps 856$3 values in url[text]' do
+    it '(UNC) keeps 856$3 values in url[note]' do
       result = asp2['url']
       expect(result).to eq(
                           [
-                            "{\"href\":\"{proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"text\":\"Part 3\"}"                            
+                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"note\":\"Part 3\"}"                            
                           ]
                         )
     end

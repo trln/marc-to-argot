@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200505 i 4500 </leader>
+<controlfield tag="001">DUKE008367546 </controlfield>
+<controlfield tag="005">20181012112456.0 </controlfield>
+<controlfield tag="008">180704s2018^^^^fr^ac^^^^b^^^^010^0^fre^d </controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">^^2018386810 </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9782705697105</subfield>
+ <subfield code="q">(pbk.) </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">2705697101 </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9782705697112 </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">270569711X </subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">1043484303 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">Fr-PaAMA</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">DLC</subfield>
+ <subfield code="d">LTSCA</subfield>
+ <subfield code="d">AUXAM</subfield>
+ <subfield code="d">OCLCF</subfield>
+ <subfield code="d">OCLCO </subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">lccopycat </subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">e-fr--- </subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP </subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+ <subfield code="a">PQ241</subfield>
+ <subfield code="b">.J87 2018 </subfield>
+</datafield>
+<datafield tag="082" ind1=" " ind2="4">
+ <subfield code="a">800 </subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">"Jusqu'au sombre plaisir d'un coeur mélancolique" :</subfield>
+ <subfield code="b">études de littérature française du XVIIe siècle offertes à Patrick Dandrey /</subfield>
+ <subfield code="c">sous la direction de Delphine Amstutz, Boris Donné, Guillaume Peureux et Bernard Teyssandier. </subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">Paris :</subfield>
+ <subfield code="b">Hermann,</subfield>
+ <subfield code="c">[2018] </subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">450 pages :</subfield>
+ <subfield code="b">illustrations ;</subfield>
+ <subfield code="c">24 cm </subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent </subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia </subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier </subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Includes bibliographical references. </subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">"Patrick Dandrey, bibliographie": pages 432-446. </subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="6">
+ <subfield code="a">Molière,</subfield>
+ <subfield code="d">1622-1673</subfield>
+ <subfield code="x">Critique et interprétation. </subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="6">
+ <subfield code="a">La Fontaine, Jean de,</subfield>
+ <subfield code="d">1621-1695</subfield>
+ <subfield code="x">Critique et interprétation. </subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="7">
+ <subfield code="a">La Fontaine, Jean de,</subfield>
+ <subfield code="d">1621-1695.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00039661 </subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="7">
+ <subfield code="a">Molière,</subfield>
+ <subfield code="d">1622-1673.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00034253 </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">French literature</subfield>
+ <subfield code="y">17th century</subfield>
+ <subfield code="x">History and criticism. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="6">
+ <subfield code="a">Littérature française</subfield>
+ <subfield code="y">17e siècle</subfield>
+ <subfield code="x">Histoire et critique. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">French literature.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00934688 </subfield>
+</datafield>
+<datafield tag="648" ind1=" " ind2="7">
+ <subfield code="a">1600-1699</subfield>
+ <subfield code="2">fast </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Criticism, interpretation, etc.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01411635 </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Dandrey, Patrick,</subfield>
+ <subfield code="e">honouree. </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Amstutz, Delphine,</subfield>
+ <subfield code="e">editor. </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Donné, Boris,</subfield>
+ <subfield code="d">1968-</subfield>
+ <subfield code="e">editor. </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Peureux, Guillaume,</subfield>
+ <subfield code="e">editor. </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Teyssandier, Bernard,</subfield>
+ <subfield code="e">editor. </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book </subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20181023 </subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="h">PQ241</subfield>
+ <subfield code="i">.J87 2018</subfield>
+ <subfield code="D">x </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PQ241 .J87 2018</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04816195Y </subfield>
+ <subfield code="s">20180725</subfield>
+ <subfield code="u">20181023</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">008487962 </subfield>
+</datafield>
+</record>
+</collection>

@@ -1,3 +1,5 @@
+require 'active_support'
+
 module MarcToArgot
   module Macros
     module Shared
@@ -52,9 +54,9 @@ module MarcToArgot
               if title.length > non_filing
                 title = title.slice(non_filing, title.length)
               end
-              titles << title unless title.nil? || title.empty?
+              titles << normalize_string_for_sorting(title) unless title.nil? || title.empty?
             end
-            acc << titles.first
+            acc << titles.reverse.join(' ')
           end
         end
 
@@ -68,6 +70,30 @@ module MarcToArgot
         def extract_final_punct(value)
           match = value.strip.match(/[[:punct:]]$/)
           match[0].gsub(']', '') unless match.nil?
+        end
+
+        def normalize_string_for_sorting(str)
+          # Apply NFKD normalization to the string.
+          # See: http://www.unicode.org/reports/tr15/tr15-29.html
+          kd = ActiveSupport::Multibyte::Chars.new(str).downcase.normalize(:kd)
+          # Select the codepoints that are not combining diacritics.
+          codepoints = kd.codepoints.select { |c| c < 0x0300 || c > 0x036F }
+          # Convert the Unicode codepoints back to a string.
+          normed = codepoints.pack("U*")
+          # Replace '&' with 'and'
+          normed.gsub!(' & ', ' and ')
+          # Replace common ligatures
+          normed.gsub!('æ','ae')
+          normed.gsub!('œ', 'oe')
+          # Replace hyphens, dashes, slashes with a space.
+          # See: https://www.niso.org/sites/default/files/2017-08/tr03.pdf
+          normed.gsub!(/[\-—\\\/]/,   ' ')
+          # Remove other punctuation marks
+          normed.gsub!(/[[:punct:]]/, '')
+          # Replace two or more spaces with a single space.
+          normed.gsub!(/\s{2,}/, ' ')
+          # Remove any leading or trailing whitespace.
+          normed.strip
         end
       end
     end

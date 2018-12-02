@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200433 i 4500 </leader>
+<controlfield tag="001">DUKE006500677 </controlfield>
+<controlfield tag="005">20150901203133.0 </controlfield>
+<controlfield tag="008">150127t20152015dcu^^^^^^b^^^^000^0^eng^c </controlfield>
+<datafield tag="019" ind1=" " ind2=" ">
+ <subfield code="a">904954128</subfield>
+ <subfield code="a">907100150 </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">0309367409 </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9780309367400 </subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">900828374 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">YDXCP</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">YDXCP</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">AZS</subfield>
+ <subfield code="d">NRZ</subfield>
+ <subfield code="d">BTCTA</subfield>
+ <subfield code="d">CDX</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">NRZ </subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc </subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us--- </subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP </subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">QC100.U6</subfield>
+ <subfield code="b">N372 2015 </subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">TA404.2</subfield>
+ <subfield code="b">.N386 2015 </subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+ <subfield code="a">389/.62072073</subfield>
+ <subfield code="2">23 </subfield>
+</datafield>
+<datafield tag="110" ind1="2" ind2=" ">
+ <subfield code="a">National Research Council (U.S.).</subfield>
+ <subfield code="b">Panel on Review of the Material Measurement Laboratory at the National Institute of Standards and Technology,</subfield>
+ <subfield code="e">author. </subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="3">
+ <subfield code="a">An assessment of the National Institute of Standards and Technology Material Measurement Laboratory :</subfield>
+ <subfield code="b">fiscal year 2014 /</subfield>
+ <subfield code="c">Panel on Review of the Material Measurement Laboratory at the National Institute of Standards and Technology, Committee on NIST Technical Programs, Laboratory Assessments Board, Division on Engineering and Physical Sciences, National Research Council of the National Academies. </subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">Washington, D.C. :</subfield>
+ <subfield code="b">The National Academies Press,</subfield>
+ <subfield code="c">[2015] </subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="4">
+ <subfield code="c">©2015 </subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">ix, 73 pages ;</subfield>
+ <subfield code="c">28 cm </subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent </subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia </subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier </subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Includes bibliographical references. </subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+ <subfield code="a">The Charge to the Panel and the Assessment Process -- Applied Chemicals and Materials Division -- Biomolecular Measurement Division -- Biosystems and Biomaterials Division -- Chemical Sciences Division -- Materials Measurement Science Division -- Materials Science and Engineering Division -- Key Findings and Recommendations </subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">"The National Institute of Standards and Technology's (NIST's) Material Measurement Laboratory (MML) is our nation's reference laboratory for measurements in the chemical, biological, and materials sciences and engineering. Staff of the MML develop state-of-the-art measurement techniques and conduct fundamental research related to measuring the composition, structure, and properties of substances. Tools that include reference materials, data, and measurement services are developed to support industries that range from transportation to biotechnology and to address problems such as climate change, environmental sciences, renewable energy, health care, infrastructure, food safety and nutrition, and forensics. This report assesses the scientific and technical work performed by NIST's Material Measurement Laboratory. In particular, the report assesses the organization's technical programs, the portfolio of scientific expertise within the organization, the adequacy of the organization's facilities, equipment, and human resources, and the effectiveness by which the organization disseminates its program outputs."-- Publisher's description </subfield>
+</datafield>
+<datafield tag="610" ind1="2" ind2="0">
+ <subfield code="a">Material Measurement Laboratory (U.S.)</subfield>
+ <subfield code="x">Evaluation. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Materials science</subfield>
+ <subfield code="x">Research</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="x">Evaluation. </subfield>
+</datafield>
+<datafield tag="776" ind1="0" ind2="8">
+ <subfield code="i">Electronic version:</subfield>
+ <subfield code="t">Assessment of the national institute of standards and technology material measurement laboratory.</subfield>
+ <subfield code="d">Washington, District of Columbia : The National Academies Press, 2015</subfield>
+ <subfield code="z">9780309367417</subfield>
+ <subfield code="w">(OCoLC)903963767 </subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="3">National Academies Press</subfield>
+ <subfield code="u">http://www.nap.edu/openbook.php?record_id=21660 </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book </subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20151023 </subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="h">QC100.U6</subfield>
+ <subfield code="i">N372 2015</subfield>
+ <subfield code="D">x </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">QC100.U6 N372 2015</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04928909+ </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151028</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298731 </subfield>
+</datafield>
+</record>
+</collection>

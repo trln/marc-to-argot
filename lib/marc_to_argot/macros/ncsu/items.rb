@@ -62,7 +62,9 @@ module MarcToArgot
           if location_status.nil?
             simple_status || "Unknown - #{current}"
           else
-            location_status
+            # dup because otherwise we potentially modify the copy that's stored
+            # in the LOCATION_AVAILABILITY hash
+            location_status.dup
           end
         end
 
@@ -120,7 +122,7 @@ module MarcToArgot
         # computes and updates item status
         def item_status!(item)
           item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
-          item['status'] << ' (Library use only)' if library_use_only?(item)
+          item['status'] = item['status'] + ' (Library use only)' if library_use_only?(item)
         end
 
         def marc_to_item(field)

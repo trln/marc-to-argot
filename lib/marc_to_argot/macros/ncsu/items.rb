@@ -7,7 +7,7 @@ module MarcToArgot
           i: { key: 'item_id' },
           # c: { key: 'copy_no' },
           m: { key: 'loc_b' },
-          o: { key: 'notes' },
+          # o: { key: 'notes' },
           a: { key: 'call_no' },
           k: { key: 'loc_current' },
           l: { key: 'loc_n' },

@@ -55,6 +55,30 @@ module MarcToArgot
         end
       end
 
+      def url
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("856uyz3").each_matching_line(rec) do |field, spec, extractor|
+            url = {}
+            url[:href] = url_href_value(field)
+
+            next if url[:href].nil? || url[:href].empty?
+
+            url[:type] = url_type_value(field)
+            url[:text] = url_text(field) unless url_text(field).empty?
+            url[:note] = url_note(field) unless url_note(field).empty?
+
+            acc << url.to_json
+          end
+        end
+      end
+
+      # @param field [MARC::DataField] the field to use to assemble URL note
+      def url_note(field)
+        subfield_values = collect_subfield_values_by_code(field, '3')
+        subfield_values += collect_subfield_values_by_code(field, 'z')
+        [subfield_values.join(' ')].reject(&:empty?).join(' ')
+      end
+
       def open_access!(urls, items)
         if items.any? { |i| i['loc_b'] == 'ONLINE' && i['item_cat_2'] == 'OPENACCESS' }
           urls.select{ |u| u['type'] == 'fulltext'}.each{ |u| u['restricted'] = false}         

@@ -1,0 +1,421 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>02276nam a2200289   4500</leader>
+  <controlfield tag="001">ocm99882330e </controlfield>
+  <controlfield tag="003">UnM</controlfield>
+  <controlfield tag="005">20010523182718.0</controlfield>
+  <controlfield tag="006">m    g   d        </controlfield>
+  <controlfield tag="007">cr bn |||a|bb|</controlfield>
+  <controlfield tag="008">840817s1708    enk     s     00    eng d</controlfield>
+  <datafield tag="037" ind1=" " ind2=" ">
+    <subfield code="a">CL2105000002</subfield>
+    <subfield code="b">ProQuest Information and Learning. 300 N. Zeeb Rd., Ann Arbor, MI 48106</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">Cu-RivES</subfield>
+    <subfield code="c">Cu-RivES</subfield>
+    <subfield code="d">CStRLIN</subfield>
+    <subfield code="d">Cu-RivES</subfield>
+    <subfield code="e">dcrb</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Jones, D.</subfield>
+    <subfield code="q">(David),</subfield>
+    <subfield code="d">fl. 1676-1720.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="4">
+    <subfield code="a">The life of Leopold, late Emperor of Germany, &amp;c.</subfield>
+    <subfield code="h">[electronic resource] :</subfield>
+    <subfield code="b">Containing the difficulties and particulars of his election. Of his first war in Hungary under the conduct of the famous Count Nicholas Serini. Peace with the Turks, and mutual ambassies. Conspiracy of the Counts Peter Serini, Nadasti and Frangipani. First war against France, and imbroilments with the Hungarians. Rise and progress of Tekeli. [double bracket] Peace with France, infractions of it. Second war with the Turks, his wonderful victories, sieges and conquests. Characters of his generals. Second war with France on the Rhine, and in Italy, and the intrigues and articles of the peace. Treaty of Carlowitz, and revolt of the Hungarians. Of his last war against the French and Bavarians, in Itlay and the empire. Of his death and character at large.</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">The second edition.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">London, :</subfield>
+    <subfield code="b">Printed for James Knapton at the Crown, Maurice Atkins at the Golden Ball in St. Paul&apos;s Church-yard, and Richard Burrough and John Baker, at the Sun and Moon in Cornhill.,</subfield>
+    <subfield code="c">1708.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">[1]+ p.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Attributed to David Jones.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Fragment: title page only.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Reproduction of original in the British Library.</subfield>
+  </datafield>
+  <datafield tag="510" ind1="4" ind2=" ">
+    <subfield code="a">Early English books tract supplement interim guide</subfield>
+    <subfield code="c">Harl.5986[165]</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Electronic reproduction.</subfield>
+    <subfield code="b">Ann Arbor, Mich. :</subfield>
+    <subfield code="c">UMI,</subfield>
+    <subfield code="d">1999-</subfield>
+    <subfield code="f">(Early English books online)</subfield>
+    <subfield code="n">Digital version of: (Early English books, Tract supplement ; E3:3[162])</subfield>
+    <subfield code="7">s1999    miun s</subfield>
+  </datafield>
+  <datafield tag="600" ind1="0" ind2="0">
+    <subfield code="a">Leopold</subfield>
+    <subfield code="b">I,</subfield>
+    <subfield code="c">Holy Roman Emperor,</subfield>
+    <subfield code="d">1640-1705</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="0">
+    <subfield code="a">Title pages</subfield>
+    <subfield code="z">England</subfield>
+    <subfield code="y">18th century.</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Early English books online.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&amp;res_id=xri:eebo&amp;rft_val_fmt=&amp;rft_id=xri:eebo:image:203706</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>01574nam a2200289   4500</leader>
+  <controlfield tag="001">ocm99882331e </controlfield>
+  <controlfield tag="003">UnM</controlfield>
+  <controlfield tag="005">20010523182718.0</controlfield>
+  <controlfield tag="006">m    g   d        </controlfield>
+  <controlfield tag="007">cr bn |||a|bb|</controlfield>
+  <controlfield tag="008">840821s1706    enk     s     00    eng d</controlfield>
+  <datafield tag="037" ind1=" " ind2=" ">
+    <subfield code="a">CL2105000002</subfield>
+    <subfield code="b">ProQuest Information and Learning. 300 N. Zeeb Rd., Ann Arbor, MI 48106</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">Cu-RivES</subfield>
+    <subfield code="c">Cu-RivES</subfield>
+    <subfield code="d">CStRLIN</subfield>
+    <subfield code="d">Cu-RivES</subfield>
+    <subfield code="e">dcrb</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Clarke, Samuel,</subfield>
+    <subfield code="d">1675-1729.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="2">
+    <subfield code="a">A letter to Mr Dodwell;</subfield>
+    <subfield code="h">[electronic resource] :</subfield>
+    <subfield code="b">wherein all the arguments in his Epistolary discourse against the immortality of the soul are particularly answered, and the judgment of the fathers concerning that matter truly represented. /</subfield>
+    <subfield code="c">By Samuel Clarke, ...</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">The second edition.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">London, :</subfield>
+    <subfield code="b">Printed by W. Botham; for James Knapton, at the Crown in St Paul&apos;s Church-Yard.,</subfield>
+    <subfield code="c">1706.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">[1]+ p.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Fragment: title page only.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Reproduction of original in the British Library.</subfield>
+  </datafield>
+  <datafield tag="510" ind1="4" ind2=" ">
+    <subfield code="a">Early English books tract supplement interim guide</subfield>
+    <subfield code="c">Harl.5987[103]</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Electronic reproduction.</subfield>
+    <subfield code="b">Ann Arbor, Mich. :</subfield>
+    <subfield code="c">UMI,</subfield>
+    <subfield code="d">1999-</subfield>
+    <subfield code="f">(Early English books online)</subfield>
+    <subfield code="n">Digital version of: (Early English books, Tract supplement ; E3:4[98])</subfield>
+    <subfield code="7">s1999    miun s</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Immortality</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Soul</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="0">
+    <subfield code="a">Title pages</subfield>
+    <subfield code="z">England</subfield>
+    <subfield code="y">18th century.</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Early English books online.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&amp;res_id=xri:eebo&amp;rft_val_fmt=&amp;rft_id=xri:eebo:image:194829</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>01558nam a2200337   4500</leader>
+  <controlfield tag="001">ocm99882332e </controlfield>
+  <controlfield tag="003">UnM</controlfield>
+  <controlfield tag="005">20010523182718.0</controlfield>
+  <controlfield tag="006">m    g   d        </controlfield>
+  <controlfield tag="007">cr bn |||a|bb|</controlfield>
+  <controlfield tag="008">841206s1728    enk     s     00    eng d</controlfield>
+  <datafield tag="037" ind1=" " ind2=" ">
+    <subfield code="a">CL2105000001</subfield>
+    <subfield code="b">ProQuest Information and Learning. 300 N. Zeeb Rd., Ann Arbor, MI 48106</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">Cu-RivES</subfield>
+    <subfield code="c">Cu-RivES</subfield>
+    <subfield code="d">CStRLIN</subfield>
+    <subfield code="d">Cu-RivES</subfield>
+    <subfield code="e">dcrb</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Two new ballads.</subfield>
+    <subfield code="h">[electronic resource] :</subfield>
+    <subfield code="b">The L-ds address to K. G. II.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[London :</subfield>
+    <subfield code="b">s.n.,</subfield>
+    <subfield code="c">1728]</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 sheet ([1] p.).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Imprint from Foxon.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Verse: &quot;Thank ye, most great and martial sir ...&quot;</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">A new ballad has verse: &quot;Hither from farthest east to west ...&quot;</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Printed in two columns.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Reproduction of original in the British Library.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2=" ">
+    <subfield code="a">L--ds address to K.G. II. -- New ballad.</subfield>
+  </datafield>
+  <datafield tag="510" ind1="4" ind2=" ">
+    <subfield code="a">Foxon</subfield>
+    <subfield code="c">T587</subfield>
+  </datafield>
+  <datafield tag="510" ind1="4" ind2=" ">
+    <subfield code="a">Early English books tract supplement interim guide</subfield>
+    <subfield code="c">C.161.f.2[76]</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Electronic reproduction.</subfield>
+    <subfield code="b">Ann Arbor, Mich. :</subfield>
+    <subfield code="c">UMI,</subfield>
+    <subfield code="d">1999-</subfield>
+    <subfield code="f">(Early English books online)</subfield>
+    <subfield code="n">Digital version of: (Early English books; Tract supplement ; A3:5[78])</subfield>
+    <subfield code="7">s1999    miun s</subfield>
+  </datafield>
+  <datafield tag="600" ind1="0" ind2="0">
+    <subfield code="a">George</subfield>
+    <subfield code="b">II,</subfield>
+    <subfield code="c">King of Great Britain,</subfield>
+    <subfield code="d">1683-1760</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Ballads, English</subfield>
+    <subfield code="y">18th century.</subfield>
+  </datafield>
+  <datafield tag="740" ind1="0" ind2="2">
+    <subfield code="a">L--rds address to K.G. II.</subfield>
+  </datafield>
+  <datafield tag="740" ind1="0" ind2="2">
+    <subfield code="a">New ballad.</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Early English books online.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&amp;res_id=xri:eebo&amp;rft_val_fmt=&amp;rft_id=xri:eebo:image:182465</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>01470nam a2200289   4500</leader>
+  <controlfield tag="001">ocm99882333e </controlfield>
+  <controlfield tag="003">UnM</controlfield>
+  <controlfield tag="005">20010523182718.0</controlfield>
+  <controlfield tag="006">m    g   d        </controlfield>
+  <controlfield tag="007">cr bn |||a|bb|</controlfield>
+  <controlfield tag="008">841206s1708    enk     s     00    eng d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">T025954</subfield>
+  </datafield>
+  <datafield tag="037" ind1=" " ind2=" ">
+    <subfield code="a">CL2105000001</subfield>
+    <subfield code="b">ProQuest Information and Learning. 300 N. Zeeb Rd., Ann Arbor, MI 48106</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">Cu-RivES</subfield>
+    <subfield code="c">Cu-RivES</subfield>
+    <subfield code="d">CStRLIN</subfield>
+    <subfield code="d">Cu-RivES</subfield>
+    <subfield code="e">dcrb</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Gregg, William,</subfield>
+    <subfield code="d">d. 1708.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="2">
+    <subfield code="a">A true copy of the paper left by Mr. William Gregg, who suffered for high-treason the 28th day of April, 1708.</subfield>
+    <subfield code="h">[electronic resource].</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[London] :</subfield>
+    <subfield code="b">Printed for J. Morphew, near Stationers-hall,</subfield>
+    <subfield code="c">1708.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 sheet ([1] p.).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Reproduction of original in the British Library.</subfield>
+  </datafield>
+  <datafield tag="510" ind1="4" ind2=" ">
+    <subfield code="a">Early English books tract supplement interim guide</subfield>
+    <subfield code="c">515.l.2[206].</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Electronic reproduction.</subfield>
+    <subfield code="b">Ann Arbor, Mich. :</subfield>
+    <subfield code="c">UMI,</subfield>
+    <subfield code="d">1999-</subfield>
+    <subfield code="f">(Early English books online)</subfield>
+    <subfield code="n">Digital version of: (Early English books; Tract supplement ; C17:1[204])</subfield>
+    <subfield code="7">s1999    miun s</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="0">
+    <subfield code="a">Gregg, William,</subfield>
+    <subfield code="d">d. 1708.</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Last words</subfield>
+    <subfield code="z">England</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Executions and executioners</subfield>
+    <subfield code="z">England</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Treason</subfield>
+    <subfield code="z">England</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Early English books online.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&amp;res_id=xri:eebo&amp;rft_val_fmt=&amp;rft_id=xri:eebo:image:189701</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>01677nam a2200325   4500</leader>
+  <controlfield tag="001">ocm99882334e </controlfield>
+  <controlfield tag="003">UnM</controlfield>
+  <controlfield tag="005">20010523182718.0</controlfield>
+  <controlfield tag="006">m    g   d        </controlfield>
+  <controlfield tag="007">cr bn |||a|bb|</controlfield>
+  <controlfield tag="008">840330s1702    enk     s     00    eng d</controlfield>
+  <datafield tag="037" ind1=" " ind2=" ">
+    <subfield code="a">CL2105000002</subfield>
+    <subfield code="b">ProQuest Information and Learning. 300 N. Zeeb Rd., Ann Arbor, MI 48106</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">Cu-RivES</subfield>
+    <subfield code="c">Cu-RivES</subfield>
+    <subfield code="d">CStRLIN</subfield>
+    <subfield code="d">Cu-RivES</subfield>
+    <subfield code="e">dcrb</subfield>
+  </datafield>
+  <datafield tag="130" ind1="0" ind2=" ">
+    <subfield code="a">Letters from the dead to the living.</subfield>
+    <subfield code="p">Part 1.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Letters from the dead to the living,</subfield>
+    <subfield code="h">[electronic resource] /</subfield>
+    <subfield code="c">by Mr. Tho. Brown, Capt. Ayloff, Mr. Hen. Barker, &amp;c. viz. from Jo. Haines of merry memory, to his friends at Wills ... [et al.]. And several others with their answers.</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">The second edition.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">London, :</subfield>
+    <subfield code="b">[s.n.],</subfield>
+    <subfield code="c">printed in the year, 1702.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">[1]+ p.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">The letters are partly original, and partly translated from French.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Only a portion of the letters are by Brown.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Fragment: title page only.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Reproduction of original in the British Library.</subfield>
+  </datafield>
+  <datafield tag="510" ind1="4" ind2=" ">
+    <subfield code="a">Early English books tract supplement interim guide</subfield>
+    <subfield code="c">Harl.5986[155]</subfield>
+  </datafield>
+  <datafield tag="533" ind1=" " ind2=" ">
+    <subfield code="a">Electronic reproduction.</subfield>
+    <subfield code="b">Ann Arbor, Mich. :</subfield>
+    <subfield code="c">UMI,</subfield>
+    <subfield code="d">1999-</subfield>
+    <subfield code="f">(Early English books online)</subfield>
+    <subfield code="n">Digital version of: (Early English books, Tract supplement ; E3:3[152])</subfield>
+    <subfield code="7">s1999    miun s</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Letters</subfield>
+    <subfield code="v">Early works to 1800.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Brown, Thomas,</subfield>
+    <subfield code="d">1663-1704.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Ayloffe, W.</subfield>
+    <subfield code="q">(William).</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Barker, Henry,</subfield>
+    <subfield code="d">fl. 1700.</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Early English books online.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">http://gateway.proquest.com/openurl?ctx_ver=Z39.88-2003&amp;res_id=xri:eebo&amp;rft_val_fmt=&amp;rft_id=xri:eebo:image:203695</subfield>
+  </datafield>
+</record>
+</collection>

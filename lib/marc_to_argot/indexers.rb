@@ -21,10 +21,17 @@ module MarcToArgot
       include MarcToArgot::Macros::NCSU
     end
 
+    class EEBO < Traject::Indexer
+      include MarcToArgot::Macros::NCSU
+    end
+
+
     VALUES = { duke: Duke,
                nccu: NCCU,
                ncsu: NCSU,
-               unc: UNC
+               unc: UNC,
+               eebo: EEBO
+
     }.freeze
 
     # Loads the appropriate indexer for the collection

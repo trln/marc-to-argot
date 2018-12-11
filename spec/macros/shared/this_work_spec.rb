@@ -17,6 +17,7 @@ describe MarcToArgot do
   let(:this_work12) { run_traject_json('unc', 'this_work12', 'mrc') }
   let(:this_work13) { run_traject_json('unc', 'this_work13', 'mrc') }
   let(:this_work14) { run_traject_json('unc', 'this_work14', 'mrc') }
+  let(:this_work15) { run_traject_json('unc', 'this_work15', 'mrc') }
   let(:this_work1) { run_traject_json('unc', 'this_work_v1', 'mrc') }
   let(:this_work2) { run_traject_json('unc', 'this_work_v2', 'mrc') }
   let(:this_work3) { run_traject_json('unc', 'this_work_v3', 'mrc') }  
@@ -130,9 +131,34 @@ describe MarcToArgot do
       end
 
       context 'AND 240 field NOT present' do
-        it '(MTA) does NOT set this_work field' do
+        it '(MTA) sets index-only this_work field from 100 and 245' do
           result = this_work06['this_work']
-          expect(result).to be_nil
+          expect(result).to eq([
+                                 { 'type'=>'this',
+                                   'author'=>'Myers, Johnnie Sue.',
+                                   'title'=>['Gathering place', 'Volume 1'],
+                                   'title_nonfiling'=>'The gathering place : Volume 1 /',
+                                   'display'=>'false'}
+                               ]
+                              )
+        end
+
+        context 'AND linked 880s present' do
+          xit '(MTA) sets index-only this_work field from 100 and 245 and equivalent linked fields' do
+            result = this_work15['this_work']
+            expect(result).to eq([
+                                   { 'type'=>'this',
+                                     'author'=>'Arenskiĭ, K.',
+                                     'title'=>['Pisʹma v Khollivud'],
+                                     'display'=>'false'},
+                                   { 'type'=>'this',
+                                     'author'=>'Аренский, К.',
+                                     'title'=>['Письма в Холливуд'],
+                                     'lang'=>'rus',
+                                     'display'=>'false'}
+                                 ]
+                                )
+          end
         end
       end
     end
@@ -191,9 +217,15 @@ describe MarcToArgot do
       end
 
       context 'AND 240 field NOT present' do
-        it '(MTA) does NOT set this_work' do
+        it '(MTA) sets index-only this_work from 111 and 245' do
           result = this_work10['this_work']
-          expect(result).to be_nil
+          expect(result).to eq(
+                              [{ 'type'=>'this',
+                                 'author'=>"International Congress of Prehistoric and Protohistoric Sciences (14th : 2001 : Université de Liège)",
+                                 'title'=>["Problème de l'étain à l'origine de la métallurgie.", 'Section 11'],
+                                 'title_nonfiling'=>"Le problème de l'étain à l'origine de la métallurgie. Section 11 :",
+                                 'display'=>'false' }
+                              ])
         end
       end
     end
@@ -234,9 +266,12 @@ describe MarcToArgot do
   end
 
   context 'no 1XX with title subfields, 240, or 130 fields present' do
-    it '(MTA) does NOT set this_work' do
+    it '(MTA) sets index-only this_work from 245' do
       result = this_work14['this_work']
-      expect(result).to be_nil
+      expect(result).to eq([{ 'type'=>'this',
+                              'title'=>['A&E Classroom.', 'The Class of the 20th Century - 1963-1968'],
+                              'display'=>'false'
+                            }])
     end
   end
 end

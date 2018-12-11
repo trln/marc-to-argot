@@ -36,6 +36,8 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:xx_call_no_item) { fixture_items[:xx_no] }
 
+  let(:item_note_item) { fixture_items[:item_note] }
+
   let(:bbr_record) { run_traject_json('ncsu', 'bbr') }
 
   let(:audiobook_record) { run_traject_json('ncsu', 'audiobook') }
@@ -43,6 +45,8 @@ describe MarcToArgot::Macros::NCSU::Items do
   let(:xx_call_no_record) { run_traject_json('ncsu', 'xx_call_no_audiobook') }
 
   let(:open_access_record) { run_traject_json('ncsu', 'open_access_ejournal') }
+
+  let(:item_with_notes_record) { run_traject_json('ncsu', 'music-recording-with-notes') }
 
   context 'NCSU' do
     it 'has a blank copy_no' do
@@ -110,13 +114,23 @@ describe MarcToArgot::Macros::NCSU::Items do
       expect(audiobook_record['location_hierarchy']).to be_empty
     end
 
-    it 'removes call no when call_no begins with XX' do
+    it 'outputs empty string for call_no when call_no begins with XX' do
       item = JSON.parse(xx_call_no_record['items'].first)
       expect(item['call_no']).to eq('')
     end
 
-    it 'does not output xx call_no' do
+    it 'outputs empty string for xx call_no' do
       expect(marc_to_item(xx_call_no_item)['call_no']).to eq('')
+    end
+
+    it 'does not output item notes' do
+      expect(marc_to_item(item_note_item)['notes']).to be_nil
+    end
+
+    it 'removes item notes' do
+      item = JSON.parse(item_with_notes_record['items'].first)
+      puts item.to_s
+      expect(item['notes']).to be_nil
     end
   end
 end

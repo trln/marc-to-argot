@@ -8,6 +8,7 @@ describe MarcToArgot::Macros do
 
   let(:open_access_record) { run_traject_json('ncsu', 'open_access_ejournal') }
   let(:ejournal) { run_traject_json('ncsu', 'ejournal') }
+  let(:url_note_record) { run_traject_json('ncsu', 'audiobook') }
 
   context 'NCSU' do
     it 'outputs restricted=false if there is an 856 and online and open access' do
@@ -23,6 +24,11 @@ describe MarcToArgot::Macros do
       urls.each do |u|
         expect(u['restricted']).to be nil
       end
+    end
+
+    it 'should output url note from the 856$z field' do
+      url = url_note_record['url'].map { |u| JSON.parse(u) }.first
+      expect(url['note']).to eq('Available to participating NC libraries through NC LIVE.')
     end
   end
 end

@@ -2,6 +2,11 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for Duke records
     module Duke
+      autoload :Items, 'marc_to_argot/macros/duke/items'
+      autoload :Urls, 'marc_to_argot/macros/duke/urls'
+
+      include MarcToArgot::Macros::Duke::Items
+      include MarcToArgot::Macros::Duke::Urls
       include MarcToArgot::Macros::Shared
 
       # Sets the list of MARC org codes that are local.
@@ -16,27 +21,6 @@ module MarcToArgot
         l = rec.fields('856')
         return false if !l.find { |f| ['0'].include?(f.indicator2) }.nil?
         true
-      end
-
-      # For duke records add a proxy prefix if it's missing
-      def url_href_value(field)
-        href = collect_subfield_values_by_code(field, 'u').first.to_s.strip
-        if url_type_value(field) == 'fulltext' &&
-          !href.match(/proxy\.lib\.duke\.edu.*url=/)
-          "https://proxy.lib.duke.edu/login?url=#{href}"
-        else
-          href
-        end
-      end
-
-      # tests whether the field contains a URL for a finding aid
-      # @param field [MARC::DataField] the field to check for a finding aid URL
-      def url_for_finding_aid?(field)
-        substring_present_in_subfield?(field, 'u', 'library.duke.edu/rubenstein/findingaids') ||
-          substring_present_in_subfield?(field, 'y', 'collection guide') ||
-          substring_present_in_subfield?(field, '3', 'collection guide') ||
-          substring_present_in_subfield?(field, 'y', 'finding aid') ||
-          substring_present_in_subfield?(field, '3', 'finding aid')
       end
 
       # OCLC Number & Rollup ID

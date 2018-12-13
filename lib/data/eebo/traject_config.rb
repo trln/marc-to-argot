@@ -9,8 +9,6 @@ to_field 'id', extract_marc('001', first: true) do |rec, acc|
   Logging.mdc['record_id'] = acc.first
 end
 
-to_field 'names', names
-
 
 ################################################
 # Local ID

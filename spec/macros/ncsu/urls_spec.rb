@@ -9,6 +9,8 @@ describe MarcToArgot::Macros do
   let(:open_access_record) { run_traject_json('ncsu', 'open_access_ejournal') }
   let(:ejournal) { run_traject_json('ncsu', 'ejournal') }
   let(:url_note_record) { run_traject_json('ncsu', 'audiobook') }
+  let(:multiple_url_note_record) { run_traject_json('ncsu', 'multiple-856-notes') }
+  let(:empty_url_note_record) { run_traject_json('ncsu', 'empty-856-notes') }
 
   context 'NCSU' do
     it 'outputs restricted=false if there is an 856 and online and open access' do
@@ -29,6 +31,16 @@ describe MarcToArgot::Macros do
     it 'should output url note from the 856$z field' do
       url = url_note_record['url'].map { |u| JSON.parse(u) }.first
       expect(url['note']).to eq('Available to participating NC libraries through NC LIVE.')
+    end
+
+    it 'should concatenate multiple 856$3$z fields to url note' do
+      url = multiple_url_note_record['url'].map { |u| JSON.parse(u) }.first
+      expect(url['note']).to eq("Gale Cengage Learning, Smithsonian Collections Online: World's Fairs and Expositions: Visions of Tomorrow; Gale Cengage Learning")
+    end
+
+    it 'should not output url["note"] when 856$3$z are empty' do
+      url = empty_url_note_record['url'].map { |u| JSON.parse(u) }.first
+      expect(url['note']).to be_nil
     end
   end
 end

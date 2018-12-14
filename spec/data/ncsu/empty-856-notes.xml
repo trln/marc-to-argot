@@ -1,0 +1,116 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>02299nam a2200397 i 4500</leader>
+  <controlfield tag="001">SMIT000385</controlfield>
+  <controlfield tag="003">MiFhGG</controlfield>
+  <controlfield tag="005">20150214201936.0</controlfield>
+  <controlfield tag="006">m    |   d |      </controlfield>
+  <controlfield tag="007">cr |n||||||||n</controlfield>
+  <controlfield tag="008">980529s1897    be      o     100 0 fre d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) SMIT000385</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)904657474</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">MIGCL</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">UtOrBLW</subfield>
+    <subfield code="e">rda</subfield>
+  </datafield>
+  <datafield tag="111" ind1="2" ind2=" ">
+    <subfield code="a">Congrès international colonial</subfield>
+    <subfield code="d">(1897 :</subfield>
+    <subfield code="c">Brussels, Belgium)</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Congrès international colonial :</subfield>
+    <subfield code="b">sous le haut patronage de S.M. le Roi des Belges ... /</subfield>
+    <subfield code="c">pour la Commission d&apos;Organisation, le Commissaire du Gouvernement prés la XIVe section, Léon Janssen ; le Président de la XIVe section, Baron Lambert.</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="1">
+    <subfield code="a">Brux[elles] :</subfield>
+    <subfield code="b">Imp. des Travaux publics,</subfield>
+    <subfield code="c">[1897?]</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 online resource (4 unnumbered pages).</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">text</subfield>
+    <subfield code="b">txt</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">computer</subfield>
+    <subfield code="b">c</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">online resource</subfield>
+    <subfield code="b">cr</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="490" ind1="1" ind2=" ">
+    <subfield code="a">Smithsonian collections online : world&apos;s fairs and expositions : visions of tomorrow</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Caption title.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">At head of title: Exposition internationale de Bruxelles 1897, XIVe section.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Reproduction of the original from the Smithsonian Libraries.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">An invitation to attend the Congrès international colonial, which will be held on Aug. 16-19, 1897, in Brussels.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Colonies</subfield>
+    <subfield code="v">Congresses.</subfield>
+  </datafield>
+  <datafield tag="711" ind1="2" ind2=" ">
+    <subfield code="a">Exposition internationale Bruxelles-Tervueren</subfield>
+    <subfield code="d">(1897),</subfield>
+    <subfield code="j">host institution.</subfield>
+  </datafield>
+  <datafield tag="773" ind1=" " ind2=" ">
+    <subfield code="a">Gale Cengage Learning, Smithsonian Collections Online</subfield>
+  </datafield>
+  <datafield tag="830" ind1=" " ind2="0">
+    <subfield code="a">Smithsonian collections online : world&apos;s fairs and expositions : visions of tomorrow.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="3"></subfield>
+    <subfield code="u">https://proxying.lib.ncsu.edu/index.php?url=http://find.galegroup.com/openurl/openurl?url_ver=Z39.88-2004&amp;url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&amp;res_id=info:sid/gale:SMIT&amp;ctx_enc=info:ofi:enc:UTF-8&amp;rft_val_fmt=info:ofi/fmt:kev:mtx:unknown&amp;rft.artnum=BIBJUB047717205&amp;req_dat=info:sid/gale:ugnid:ncsu_main</subfield>
+    <subfield code="z"></subfield>
+    <subfield code="y">View resource online (NCSU only)</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20180814</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">4411038</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="h">ONLINEBOOK</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">XX(4411038.1)</subfield>
+    <subfield code="w">AUTO</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">4411038-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">EBOOK</subfield>
+    <subfield code="u">8/14/2018</subfield>
+  </datafield>
+</record>
+</collection>

@@ -76,7 +76,7 @@ module MarcToArgot
       def url_note(field)
         subfield_values = collect_subfield_values_by_code(field, '3')
         subfield_values += collect_subfield_values_by_code(field, 'z')
-        [subfield_values.join('; ')].reject(&:empty?).join('; ')
+        subfield_values.reject(&:empty?).join('; ')
       end
 
       def open_access!(urls, items)

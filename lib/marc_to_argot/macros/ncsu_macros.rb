@@ -8,6 +8,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/ncsu/items'
       require 'marc_to_argot/macros/ncsu/physical_media'
       require 'marc_to_argot/macros/ncsu/resource_type'
+	  require 'marc_to_argot/macros/ncsu/shared_records'
 
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -15,6 +16,7 @@ module MarcToArgot
       include Summaries
       include Items
       include PhysicalMedia
+	  include SharedRecords
 
       MarcExtractor = Traject::MarcExtractor
 
@@ -97,6 +99,18 @@ module MarcToArgot
         substring_present_in_subfield?(fld, 'u', 'www.lib.ncsu.edu/findingaids')
       end
 
+	  def process_shared_records!(rec, ctx, urls)
+	    set_shared_records!(rec, ctx)
+		puts ctx.clipboard.to_s
+		return unless ctx.clipboard[:shared_record_set] == 'nclive'
+		ctx.output_hash["record_data_source"] = ["ILSMARC" , "Shared Records" , "NCLIVE"]
+	    ctx.output_hash["virtual_collection"] = ["TRLN Shared Records." , "NC LIVE videos."]
+		ctx.output_hash["institution"] = %w[duke nccu ncsu unc]
+		urls.select {|u| u["type"]== "fulltext"}.each do |u|
+          u["href"] = '{+proxyPrefix}' + u["href"] unless u["href"].match?[/^{\+proxyPrefix}/]
+		end
+	  end
+	     
       # checks whether there are any physical items;
       # this implementation looks at whether there are any
       # items in a library other than ONLINE

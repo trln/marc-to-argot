@@ -40,6 +40,8 @@ each_record do |rec, ctx|
   items.each { |i| i.delete('item_cat_2') }
   logger.info "Skipping #{ctx.output_hash['id']} (no items)" if items.empty?
   ctx.skip! if items.empty?
+  #handle tlrn videos
+  process_shared_records!(rec, ctx, urls)
   if serial?(rec)
     libraries = items.map { |i| i['loc_b'] }.uniq
 
@@ -71,6 +73,7 @@ each_record do |rec, ctx|
       ctx.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
     end
   end
+
 
   remove_print_from_archival_material(ctx)
 

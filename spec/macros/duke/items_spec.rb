@@ -43,5 +43,10 @@ describe MarcToArgot::Macros::Duke::Items do
         eq(['duke', 'duke:dukelaww', 'law', 'law:lawdukw'])
       )
     end
+
+    it 'keeps all the items even when they have the same call number' do
+      result = run_traject('duke', 'multi-items-same-cn', 'xml')
+      expect(JSON.parse(result)['items'].length).to eq(8)
+    end
   end
 end

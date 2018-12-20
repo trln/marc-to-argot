@@ -3,9 +3,11 @@ module MarcToArgot
     # Macros and useful functions for Duke records
     module Duke
       autoload :Items, 'marc_to_argot/macros/duke/items'
+      autoload :SharedRecords, 'marc_to_argot/macros/duke/shared_records'
       autoload :Urls, 'marc_to_argot/macros/duke/urls'
 
       include MarcToArgot::Macros::Duke::Items
+      include MarcToArgot::Macros::Duke::SharedRecords
       include MarcToArgot::Macros::Duke::Urls
       include MarcToArgot::Macros::Shared
 
@@ -17,9 +19,13 @@ module MarcToArgot
 
       # Check for physical item record returns true unless it
       # has an 856 where the first indicator is 0.
-      def physical_access?(rec, _ctx = {})
+      # or if the broad or narrow location codes are empty
+      # after removing all online locations.
+      def physical_access?(rec, ctx = {})
         l = rec.fields('856')
-        return false if !l.find { |f| ['0'].include?(f.indicator2) }.nil?
+        return false if !l.find { |f| ['0'].include?(f.indicator2) }.nil? ||
+                          ((ctx.clipboard.fetch(:loc_b, []) - ['ONLINE', 'DUKIR', '', nil]).empty?) ||
+                          ((ctx.clipboard.fetch(:loc_n, []) - ['FRDE', 'database', 'LINRE', 'PEI']).empty?)
         true
       end
 

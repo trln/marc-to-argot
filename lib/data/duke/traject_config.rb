@@ -1,4 +1,13 @@
 ################################################
+# Add shared record info to clipboard
+# if applicable
+######
+
+each_record do |rec, cxt|
+  set_shared_record_set_code(rec, cxt)
+end
+
+################################################
 # Primary ID
 ######
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
@@ -21,6 +30,11 @@ to_field 'local_id' do |rec, acc, context|
 
   acc << local_id
 end
+
+################################################
+# URL handling (also for shared records)
+######
+to_field "url", url
 
 ################################################
 # OCLC Number
@@ -69,6 +83,30 @@ to_field 'items', extract_items
 
 to_field 'holdings', extract_holdings
 
+# ################################################
+# # Access Type
+# ######
+
+to_field 'access_type' do |rec, acc, ctx|
+  acc << 'Online' if online_access?(rec)
+  acc << 'At the Library' if physical_access?(rec, ctx)
+end
+
+# ################################################
+# # Date Cataloged
+# ######
+
+to_field 'date_cataloged' do |rec, acc|
+  cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged])
+                                    .extract(rec).first.to_s.strip
+  begin
+    acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
+  rescue ArgumentError => e
+    Logging.mdc['field'] = settings['specs'][:date_cataloged].to_s
+    logger.warn("date_cataloged value cannot be parsed: #{e}")
+    Logging.mdc.delete('field')
+  end
+end
 
 # ################################################
 # # Final each_record block
@@ -77,10 +115,22 @@ to_field 'holdings', extract_holdings
 each_record do |rec, ctx|
   remove_print_from_archival_material(ctx)
   add_bookplate_to_notes_local(ctx)
+
+  # Remove Rollup ID from special collections records
+  # Otherwise set rollup id to SerSol number if not already set.
   if ctx.clipboard.fetch('special_collections', false)
     ctx.output_hash.delete('rollup_id')
   else
     set_sersol_rollup_id(ctx)
   end
+
+  # Set Availability and Physical Media for Online resources.
+  if ctx.output_hash.fetch('access_type', []).include?('Online')
+    ctx.output_hash['available'] = 'Available'
+    physical_media = ctx.output_hash.fetch('physical_media', [])
+    ctx.output_hash['physical_media'] = physical_media << 'Online'
+  end
+
+  add_shared_record_data(ctx) if ctx.clipboard.fetch(:shared_record_set, false)
   Logging.mdc.clear
 end

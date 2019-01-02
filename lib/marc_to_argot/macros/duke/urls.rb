@@ -2,8 +2,6 @@ module MarcToArgot
   module Macros
     module Duke
       module Urls
-        include MarcToArgot::Macros::Shared::Urls
-
         def url
           lambda do |rec, acc, ctx|
             Traject::MarcExtractor.cached("856uy3").each_matching_line(rec) do |field, spec, extractor|

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200229Ia 4500</leader>
+<controlfield tag="001">DUKE000527715</controlfield>
+<controlfield tag="005">19860813112904.0</controlfield>
+<controlfield tag="008">830210s1982^^^^xx^^^^^^^b^^^^000^0^eng^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">09209891</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="c">NDD</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Hoff, Jean Louise.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="4">
+ <subfield code="a">The petrography of the Blowing Rock gneiss, Grandfather Mountain window, North Carolina /</subfield>
+ <subfield code="c">by Jean Louise Hoff.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="c">1982.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">ix, 196 leaves ;</subfield>
+ <subfield code="c">29 cm.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Typescript.</subfield>
+</datafield>
+<datafield tag="502" ind1=" " ind2=" ">
+ <subfield code="a">Thesis (M.S.)--Duke University, 1982.</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Bibliography: leaves 161-168.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Gneiss</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="z">Grandfather Mountain.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Gneiss</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="z">Blowing Rock Region.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Petrology</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="z">Grandfather Mountain.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Petrology</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="z">Blowing Rock Region.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Duke University.</subfield>
+ <subfield code="b">Department of Geology.</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">DT</subfield>
+ <subfield code="b">Duke Theses</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSK</subfield>
+ <subfield code="h">M.S.</subfield>
+ <subfield code="i">H698P</subfield>
+ <subfield code="i">1982</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">ARCH</subfield>
+ <subfield code="c">PSAT</subfield>
+ <subfield code="h">M.S.</subfield>
+ <subfield code="i">H698P</subfield>
+ <subfield code="i">1982</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">ARCH</subfield>
+ <subfield code="c">PSAT</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">M.S. H698P 1982</subfield>
+ <subfield code="n">c.1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D02123526L </subfield>
+ <subfield code="s">20010613</subfield>
+ <subfield code="u">20070820</subfield>
+ <subfield code="v">20011214</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000527715</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSK</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">M.S. H698P 1982</subfield>
+ <subfield code="n">c.1</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D01479950Z </subfield>
+ <subfield code="s">19930808</subfield>
+ <subfield code="u">20070211</subfield>
+ <subfield code="v">20180818</subfield>
+ <subfield code="w">7</subfield>
+ <subfield code="k">000527715</subfield>
+</datafield>
+</record>
+</collection>

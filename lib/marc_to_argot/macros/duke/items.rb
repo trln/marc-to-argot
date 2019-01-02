@@ -57,14 +57,23 @@ module MarcToArgot
               item.delete('status_code')
               item.delete('due_date')
 
-              items << item
+              ctx.clipboard[:loc_b] ||= []
+              ctx.clipboard[:loc_b] << item['loc_b']
+              ctx.clipboard[:loc_n] ||= []
+              ctx.clipboard[:loc_n] << item['loc_n']
+
+              items << item unless (item['loc_b'] == 'DUKIR' ||
+                                    item['loc_n'] == 'PEI' ||
+                                    item['loc_n'] == 'LINRE' ||
+                                    item['loc_n'] == 'database')
             end
 
             if items.length > 1
               normed = items.map do |i|
                 [NormalizeCallNumber.normalize_cn_and_copy_info("#{i.fetch('call_no', '')} #{i.fetch('copy_no', '')}"), i]
-              end.to_h
-              sorted_items = normed.sort.map { |k, v| v }
+              end
+              normed.sort_by! { |x| x[0] }
+              sorted_items = normed.map { |x| x[1] }
               acc.concat(sorted_items.map(&:to_json))
             else
               acc.concat(items.map(&:to_json))

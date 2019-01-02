@@ -19,7 +19,7 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   let(:resource_type_15) { run_traject_json('duke', 'resource_type_15', 'mrc') }
   let(:resource_type_16) { run_traject_json('duke', 'resource_type_16', 'mrc') }
   let(:resource_type_17) { run_traject_json('duke', 'resource_type_17', 'mrc') }
-  let(:resource_type_18) { run_traject_json('duke', 'resource_type_18', 'mrc') }
+  let(:resource_type_18) { run_traject_json('duke', 'resource_type_18', 'xml') }
   let(:resource_type_19) { run_traject_json('duke', 'resource_type_19', 'mrc') }
   let(:resource_type_20) { run_traject_json('unc', 'resource_type_20', 'xml') }
   let(:resource_type_21) { run_traject_json('unc', 'resource_type_21', 'xml') }

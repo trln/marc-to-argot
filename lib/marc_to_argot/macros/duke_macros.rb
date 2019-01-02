@@ -2,14 +2,20 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for Duke records
     module Duke
-      autoload :Items, 'marc_to_argot/macros/duke/items'
-      autoload :SharedRecords, 'marc_to_argot/macros/duke/shared_records'
-      autoload :Urls, 'marc_to_argot/macros/duke/urls'
+      require 'marc_to_argot/macros/duke/items'
+      require 'marc_to_argot/macros/duke/physical_media'
+      require 'marc_to_argot/macros/duke/resource_type'
+      require 'marc_to_argot/macros/duke/shared_records'
+      require 'marc_to_argot/macros/duke/urls'
+
+      # Include this first. Then load Duke Macros.
+      include MarcToArgot::Macros::Shared
 
       include MarcToArgot::Macros::Duke::Items
+      include MarcToArgot::Macros::Duke::PhysicalMedia
+      include MarcToArgot::Macros::Duke::ResourceType
       include MarcToArgot::Macros::Duke::SharedRecords
       include MarcToArgot::Macros::Duke::Urls
-      include MarcToArgot::Macros::Shared
 
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?
@@ -54,41 +60,6 @@ module MarcToArgot
         oclc_numbers.select! { |x| /^(\(OCoLC\))?\d{8,}$/.match(x) }
         oclc_numbers.map! { |x| x.sub('(OCoLC)', '') }
         oclc_numbers
-      end
-
-      # Physical Media Override
-
-      class PhysicalMedia::PhysicalMediaClassifier
-        # Checks the 940$c for any cases where the narrow location
-        # includes an ebook location code. See #ebook_location_codes below.
-        def e_reader?
-          item_fields(record).find do |field|
-            field.subfields.select { |sf| sf.code == 'c' }.find { |sfc| ebook_location_codes.include?(sfc.value) }
-          end
-        end
-
-        # Checks the 940$h for call numbers that include the
-        # substring "kindle."
-        def e_reader_kindle?
-          item_fields(record).find do |field|
-            field.subfields.select { |sf| sf.code == 'h' }.find { |sfc| sfc.value.downcase.include?('kindle') }
-          end
-        end
-
-        def item_fields(record)
-          @item_fields ||= begin
-            item_fields = []
-            Traject::MarcExtractor.cached('940', alternate_script: false).each_matching_line(record) do |field|
-              item_fields << field
-            end
-            item_fields
-          end
-        end
-
-        def ebook_location_codes
-          %w[DKK FRDK1 FRDK2 FRDK3 PDK PKKI PKKR PKKZ
-             PKXKR PLK1 PLK2 PLKR PLXKR PZK1 PZK2]
-        end
       end
 
       def add_bookplate_to_notes_local(ctx)

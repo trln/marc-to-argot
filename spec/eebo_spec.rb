@@ -16,7 +16,9 @@ describe MarcToArgot::Indexers::EEBO do
 	expect(JSON.parse(urls.first)["href"]).to start_with("{+proxyPrefix}")	
 	expect(rec["id"]).to start_with("EEBO")
 	expect(rec["record_data_source"]).to eq(["MARC", "Shared Records", "EEBO"])
+        expect(rec["virtual_collection"]). to eq(["TRLN Shared Records. Early English Books Online."])
 	expect(rec["institution"]).to eq(["ncsu", "unc", "duke"])
+        expect(rec["access_type"]).to eq(["Online"])
     end
   end
 end

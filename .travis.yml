@@ -5,5 +5,5 @@ rvm:
   - 2.5.1
 
 before_install: 
-  - gem uninstall bundler
+  - "find /home/travis/.rvm/rubies -wholename '*default/bundler-*.gemspec' -delete"
   - gem install bundler --version 1.17.3

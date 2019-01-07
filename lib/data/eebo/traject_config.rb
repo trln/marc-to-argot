@@ -31,6 +31,10 @@ to_field 'record_data_source' do |rec,acc|
 	["MARC", "Shared Records" , "EEBO"].each {|i| acc<<i}
 end
 
+to_field 'access_type', literal("Online")
+	
+to_field 'virtual_collection', literal("TRLN Shared Records. Early English Books Online.") 
+
 to_field 'url', extract_marc('856u', first: true) do |_rec, acc|
   acc.map! do |u|
    {"href"=>"{+proxyPrefix}#{u}",

@@ -4,4 +4,4 @@ rvm:
   - 2.4.3
   - 2.5.1
 
-before_install: gem install bundler
+before_install: gem install bundler --version 1.17.3

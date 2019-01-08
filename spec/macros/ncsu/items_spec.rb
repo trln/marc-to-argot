@@ -100,14 +100,14 @@ describe MarcToArgot::Macros::NCSU::Items do
 
     it 'correctly tags HSL location for VETMED' do
       expect(vetmed['location_hierarchy']).to include('hsl')
-      expect(vetmed['location_hierarchy']).to include('hsl:ncsuvetmed')
+      expect(vetmed['location_hierarchy']).to include('hsl:hslncsuvetmed')
     end
 
     it 'does not tag HSL location when no VETMED' do
       aggregate_failures 'records without VETMED items' do
         no_vetmed_records.each do |rec|
           expect(rec['location_hierarchy']).not_to include('hsl')
-          expect(rec['location_hierarchy']).not_to include('hsl:ncsuvetmed')
+          expect(rec['location_hierarchy']).not_to include('hsl:hslncsuvetmed')
         end
       end
     end

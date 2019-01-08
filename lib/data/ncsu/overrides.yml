@@ -2,6 +2,7 @@
 - id
 - local_id
 - rollup_id
+- issn
 - institution
 - items
 - access_type

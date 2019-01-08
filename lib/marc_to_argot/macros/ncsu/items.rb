@@ -151,7 +151,7 @@ module MarcToArgot
           ctx.output_hash['virtual_collection'] = vcs unless vcs.empty?
           visible_loc_items = items.reject { |i| NO_FACET_LOCATIONS.include?(i['loc_b']) }
           loc_hier = arrays_to_hierarchy(visible_loc_items.map { |x| ['ncsu', x['loc_b']] })
-          loc_hier << 'hsl' << 'hsl:ncsuvetmed' if visible_loc_items.any? { |i| i['loc_b'] == 'VETMED' }
+          loc_hier << 'hsl' << 'hsl:hslncsuvetmed' if visible_loc_items.any? { |i| i['loc_b'] == 'VETMED' }
           ctx.output_hash['location_hierarchy'] = loc_hier
         end
 

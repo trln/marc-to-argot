@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim">
+  <marc:record>
+  <marc:leader>01609cas a2200325Ia 4500</marc:leader>
+  <marc:controlfield tag="008">920317c19929999miuar         1   a0eng d</marc:controlfield>
+  <marc:datafield tag="035" ind1=" " ind2=" ">
+    <marc:subfield code="a">(OCoLC)25485593</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="040" ind1=" " ind2=" ">
+    <marc:subfield code="a">NRC</marc:subfield>
+    <marc:subfield code="c">NRC</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="111" ind1="2" ind2=" ">
+    <marc:subfield code="a">Michigan Veterinary Conference.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="245" ind1="1" ind2="4">
+    <marc:subfield code="a">The ... Michigan Veterinary Conference.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="246" ind1="1" ind2="8">
+    <marc:subfield code="a">Michigan Veterinary Conference proceedings</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="260" ind1=" " ind2=" ">
+    <marc:subfield code="a">Lansing, Mich. :</marc:subfield>
+    <marc:subfield code="b">The Conference,</marc:subfield>
+    <marc:subfield code="c">1992-</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="300" ind1=" " ind2=" ">
+    <marc:subfield code="a">v. :</marc:subfield>
+    <marc:subfield code="b">ill. ;</marc:subfield>
+    <marc:subfield code="c">27 cm.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="362" ind1="0" ind2=" ">
+    <marc:subfield code="a">1992-</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="500" ind1=" " ind2=" ">
+    <marc:subfield code="a">Title from cover.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="550" ind1=" " ind2=" ">
+    <marc:subfield code="a">1992- cosponsored by MSU College of Veterinary Medicine and Michigan Veterinary Medical Association.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="596" ind1=" " ind2=" ">
+    <marc:subfield code="a">4</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="0">
+    <marc:subfield code="a">Veterinary medicine</marc:subfield>
+    <marc:subfield code="v">Congresses.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="710" ind1="2" ind2="0">
+    <marc:subfield code="a">Michigan State University.</marc:subfield>
+    <marc:subfield code="b">College of Veterinary Medicine.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="710" ind1="2" ind2="0">
+    <marc:subfield code="a">Michigan Veterinary Medical Association.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="780" ind1="0" ind2="0">
+    <marc:subfield code="a">Michigan Veterinary Conference.</marc:subfield>
+    <marc:subfield code="t">Program</marc:subfield>
+    <marc:subfield code="w">(OCoLC)22226344</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="918" ind1=" " ind2=" ">
+    <marc:subfield code="a">794376</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="919" ind1=" " ind2=" ">
+    <marc:subfield code="a">ACR-3040</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="948" ind1=" " ind2=" ">
+    <marc:subfield code="a">06/15/1993</marc:subfield>
+    <marc:subfield code="b">03/23/1995</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">SF605 .M534 1992</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S00831714O</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">VETMED</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SRLCIRC</marc:subfield>
+    <marc:subfield code="u">8/2/1993</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">SF605 .M534 1993</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02839929%</marc:subfield>
+    <marc:subfield code="d">2/16/2006</marc:subfield>
+    <marc:subfield code="e">2/2/2006</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">VETMED</marc:subfield>
+    <marc:subfield code="n">4</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SRLCIRC</marc:subfield>
+    <marc:subfield code="u">8/2/1993</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">SF605 .M534 1994</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02839922Z</marc:subfield>
+    <marc:subfield code="d">8/30/2015</marc:subfield>
+    <marc:subfield code="e">8/9/2015</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">VETMED</marc:subfield>
+    <marc:subfield code="n">4</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SRLCIRC</marc:subfield>
+    <marc:subfield code="u">5/10/1994</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">SF605 .M534 1995</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02839926$</marc:subfield>
+    <marc:subfield code="d">2/16/2006</marc:subfield>
+    <marc:subfield code="e">2/2/2006</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">VETMED</marc:subfield>
+    <marc:subfield code="n">3</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SRLCIRC</marc:subfield>
+    <marc:subfield code="u">6/5/1995</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">SF605 .M534 1996</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02839927/</marc:subfield>
+    <marc:subfield code="d">2/16/2006</marc:subfield>
+    <marc:subfield code="e">2/2/2006</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">VETMED</marc:subfield>
+    <marc:subfield code="n">4</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SRLCIRC</marc:subfield>
+    <marc:subfield code="u">4/17/1996</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">SF605 .M534 1997</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02839928+</marc:subfield>
+    <marc:subfield code="d">2/16/2006</marc:subfield>
+    <marc:subfield code="e">2/2/2006</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">VETMED</marc:subfield>
+    <marc:subfield code="n">3</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SRLCIRC</marc:subfield>
+    <marc:subfield code="u">10/30/1997</marc:subfield>
+  </marc:datafield>
+</marc:record>
+</marc:collection>
+

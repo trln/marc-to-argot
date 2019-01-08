@@ -1,13 +1,21 @@
 ################################################
 # Primary ID
 ######
+#
+count = 0
+skips = 0
+last_id_seen = '<none>'
+
+each_record do |_|
+  count += 1
+end
+
 to_field 'id', extract_marc('918a', first: true) do |rec, acc|
   acc.collect! { |s| "NCSU#{s}" }
   Logging.mdc['record_id'] = acc.first
 end
 
 to_field 'names', names
-
 
 ################################################
 # Local ID
@@ -33,12 +41,14 @@ def shadowed_location?(item)
 end
 
 each_record do |rec, ctx|
+  last_id_seen = ctx.output_hash['id']
   items = ctx.clipboard['items']
   items.reject! { |i| shadowed_location?(i) }
   urls = ctx.output_hash.fetch('url', []).map{ |u| JSON.parse(u) }
   open_access!(urls, items)
   items.each { |i| i.delete('item_cat_2') }
   logger.info "Skipping #{ctx.output_hash['id']} (no items)" if items.empty?
+  skips += 1 if items.empty?
   ctx.skip! if items.empty?
   if serial?(rec)
     libraries = items.map { |i| i['loc_b'] }.uniq
@@ -77,4 +87,8 @@ each_record do |rec, ctx|
   set_sersol_rollup_id(ctx)
 
   Logging.mdc.clear
+end
+
+after_processing do
+  logger.info "I saw #{count} records in total, skipped #{skips}; last seen was #{last_id_seen}"
 end

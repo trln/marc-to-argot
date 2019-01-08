@@ -48,7 +48,7 @@ module Util
   def load_json_multiple(json_data)
     records = []
     p = Yajl::Parser.new
-    p.on_parse_complete=->(x) { records << x}
+    p.on_parse_complete = ->(x) { records << x }
     p.parse(json_data)
     records
   end

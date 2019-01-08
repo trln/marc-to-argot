@@ -48,6 +48,10 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:item_with_notes_record) { run_traject_json('ncsu', 'music-recording-with-notes') }
 
+  let(:vetmed) { run_traject_json('ncsu', 'vetmed-location-hsl') }
+
+  let(:no_vetmed_records) { load_json_multiple(run_traject('ncsu', 'base')) }
+
   context 'NCSU' do
     it 'has a blank copy_no' do
       expect(marc_to_item(copy_no_item)['copy_no']).to eq('')
@@ -94,6 +98,20 @@ describe MarcToArgot::Macros::NCSU::Items do
       expect(item_status!(hillMonograph)).not_to match(/library use only/i)
     end
 
+    it 'correctly tags HSL location for VETMED' do
+      expect(vetmed['location_hierarchy']).to include('hsl')
+      expect(vetmed['location_hierarchy']).to include('hsl:ncsuvetmed')
+    end
+
+    it 'does not tag HSL location when no VETMED' do
+      aggregate_failures 'records without VETMED items' do
+        no_vetmed_records.each do |rec|
+          expect(rec['location_hierarchy']).not_to include('hsl')
+          expect(rec['location_hierarchy']).not_to include('hsl:ncsuvetmed')
+        end
+      end
+    end
+
     it 'munges bookBot item locations' do
       remap_item_locations!(bookbotStacksItem)
       expect(bookbotStacksItem['loc_b']).to eq('HUNT')
@@ -129,7 +147,6 @@ describe MarcToArgot::Macros::NCSU::Items do
 
     it 'removes item notes' do
       item = JSON.parse(item_with_notes_record['items'].first)
-      puts item.to_s
       expect(item['notes']).to be_nil
     end
   end

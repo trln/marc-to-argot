@@ -7,11 +7,10 @@ module MarcToArgot
         # Further processing is based on this code value
         def set_shared_records!(rec, cxt)
           shared_set = nil
-		  puts "setting_shared_recs"
-          Traject::MarcExtractor.cached('710|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+          Traject::MarcExtractor.cached('710|2 |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
             value = field.to_s.downcase
             case value
-            when /NC LIVE digital media collection/
+            when /nc live digital media collection/i
               cxt.clipboard[:shared_record_set] = 'nclive'
             end
           end

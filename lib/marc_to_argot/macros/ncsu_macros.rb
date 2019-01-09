@@ -101,13 +101,12 @@ module MarcToArgot
 
 	  def process_shared_records!(rec, ctx, urls)
 	    set_shared_records!(rec, ctx)
-		puts ctx.clipboard.to_s
 		return unless ctx.clipboard[:shared_record_set] == 'nclive'
 		ctx.output_hash["record_data_source"] = ["ILSMARC" , "Shared Records" , "NCLIVE"]
 	    ctx.output_hash["virtual_collection"] = ["TRLN Shared Records." , "NC LIVE videos."]
 		ctx.output_hash["institution"] = %w[duke nccu ncsu unc]
 		urls.select {|u| u["type"]== "fulltext"}.each do |u|
-          u["href"] = '{+proxyPrefix}' + u["href"] unless u["href"].match?[/^{\+proxyPrefix}/]
+          u["href"] = '{+proxyPrefix}' + u["href"] unless u["href"].match?(/^{\+proxyPrefix}/)
 		end
 	  end
 	     

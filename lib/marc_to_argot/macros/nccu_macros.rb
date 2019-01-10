@@ -17,14 +17,6 @@ module MarcToArgot
         substring_present_in_subfield?(fld, 'u', 'https://finding-aids.lib.unc.edu/')
       end
 
-      def online_access?(_rec, libraries = [])
-        libraries.include?('ONLINE')
-      end
-
-      def physical_access?(_rec, libraries = [])
-        !libraries.find { |x| x != 'ONLINE' }.nil?
-      end
-
       def rollup_id
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("035a").each_matching_line(rec) do |field, spec, extractor|

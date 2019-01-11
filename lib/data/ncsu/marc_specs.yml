@@ -9,23 +9,6 @@ isbn:
     - 020a
     - 020z
     - 776z
-issn: 
-  primary:
-    - 440x
-  linking:
-    - 760xz
-    - 762xz
-    - 765xz
-    - 767xz
-    - 770xz
-    - 772xz
-    - 773xz
-    - 774xz
-    - 780xz
-    - 785xz
-  series:
-    - 490x
-
 date_cataloged:
   - 909a
 publisher_etc:

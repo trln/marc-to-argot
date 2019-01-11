@@ -8,7 +8,8 @@ module MarcToArgot
       require 'marc_to_argot/macros/ncsu/items'
       require 'marc_to_argot/macros/ncsu/physical_media'
       require 'marc_to_argot/macros/ncsu/resource_type'
-	  require 'marc_to_argot/macros/ncsu/shared_records'
+	    require 'marc_to_argot/macros/ncsu/shared_records'
+      require 'marc_to_argot/macros/ncsu/issns'
 
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -16,7 +17,8 @@ module MarcToArgot
       include Summaries
       include Items
       include PhysicalMedia
-	  include SharedRecords
+      include SharedRecords
+      include ISSNS
 
       MarcExtractor = Traject::MarcExtractor
 

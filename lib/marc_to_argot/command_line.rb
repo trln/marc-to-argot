@@ -120,6 +120,7 @@ module MarcToArgot
         rescue StandardError => e
           puts "OH NO YOU DI'INT"
           log.fatal e.message
+          exit 4
         end
       end
 

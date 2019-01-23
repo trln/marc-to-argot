@@ -37,7 +37,8 @@ module MarcToArgot
           'REPAIR' => 'Being fixed/mended',
           'PRESERV' => 'Preservation',
           'RESHELVING' => 'Just returned',
-          'CATALOGING' => 'In Process'
+          'CATALOGING' => 'In Process',
+          'HOLDS' => 'On Hold'
         }.freeze
 
         #not currently used, but could be helpful in the future

@@ -28,6 +28,8 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:hillReference) { stringhash(loc_b: 'DHHILL', loc_n: 'REF', type: 'BOOKNOCIRC') }
 
+  let(:item_on_hold) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', loc_current: 'HOLDS') }
+
   let(:fixture_items) { yaml_to_item_fields('ncsu', 'items') }
 
   let(:copy_no_item) { fixture_items[:copy_no] }
@@ -100,6 +102,11 @@ describe MarcToArgot::Macros::NCSU::Items do
 
     it 'does not add library use only to a standard monograph' do
       expect(item_status!(hillMonograph)).not_to match(/library use only/i)
+    end
+
+    it 'returns On Hold for items with loc_current as HOLDS' do
+      item_status!(item_on_hold)
+      expect(item_on_hold['status']).to match(/on hold/i)
     end
 
     it 'correctly tags HSL location for VETMED' do

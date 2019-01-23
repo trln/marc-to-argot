@@ -40,12 +40,32 @@ module MarcToArgot
           'CATALOGING' => 'In Process'
         }.freeze
 
+        #not currently used, but could be helpful in the future
+        OFFSITE_SPEC_COLLECTIONS = Set.new(%w[ARCHIVES STACKS METCALF SPEC SPEC-OD MANUSCRIPT
+                                   AUCTIONCAT PRESERV MAPS OVERSIZE OVERSIZE2 FACULTYPUB
+                                   REF-OVER MICROFORMS SATELLITE SAT-OV SAT-OV2 SMALLBOOK]).freeze
+
+        SPEC_COLL_NOT_REQUESTABLE = Set.new(%w[EXHIBITS REF FACPUBS-RR]).freeze
+
+        OFFSITE_LIB = Set.new(%w[DUKELSC SATELLITE BOOKBOT]).freeze
+
         def virtual_collection(item)
           item['loc_b'] != 'LRL' && LOC_COLLECTIONS.include?(item['loc_n']) && item['loc_n']
         end
 
         def get_location(item)
           [item['loc_b'], item['loc_n']]
+        end
+
+        # Offsite & requestable
+        def offsite?(item)
+          return true if OFFSITE_LIB.include?(item['loc_b'])
+
+          case item['loc_b']
+          when 'SPECCOLL'
+            return true unless SPEC_COLL_NOT_REQUESTABLE.include?(item['loc_n'])
+          end
+          false
         end
 
         def item_status(current, home)
@@ -122,6 +142,7 @@ module MarcToArgot
         # computes and updates item status
         def item_status!(item)
           item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
+          item['status'] = 'Available upon request' if item['status'] == 'Available' && offsite?(item)
           item['status'] = item['status'] + ' (Library use only)' if library_use_only?(item)
         end
 
@@ -133,8 +154,8 @@ module MarcToArgot
             item[mapped] = subfield.value unless mapped.nil?
           end
           item['copy_no'] = ''
-          item_status!(item)
           item['call_no'] = '' if item.fetch('call_no','').downcase.start_with?('xx')
+          item_status!(item)
           item
         end
 

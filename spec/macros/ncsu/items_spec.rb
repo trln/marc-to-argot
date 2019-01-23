@@ -50,6 +50,10 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:vetmed) { run_traject_json('ncsu', 'vetmed-location-hsl') }
 
+  let(:speccoll_offsite_manuscript) { run_traject_json('ncsu', 'manuscript') }
+
+  let(:govdoc) { run_traject_json('ncsu', 'govdoc') }
+
   let(:no_vetmed_records) { load_json_multiple(run_traject('ncsu', 'base')) }
 
   context 'NCSU' do
@@ -149,5 +153,16 @@ describe MarcToArgot::Macros::NCSU::Items do
       item = JSON.parse(item_with_notes_record['items'].first)
       expect(item['notes']).to be_nil
     end
+
+    it 'offsite items have status available upon request' do
+      item = JSON.parse(speccoll_offsite_manuscript['items'].first)
+      expect(item['status']).to include('Available upon request')
+    end
+
+    it 'bookbot items have status available upon request' do
+      item = JSON.parse(govdoc['items'].first)
+      expect(item['status']).to include('Available upon request')
+    end
+
   end
 end

@@ -30,6 +30,10 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:item_on_hold) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', loc_current: 'HOLDS') }
 
+  let(:item_on_reserve) { stringhash(loc_b: 'DHHILL', loc_n: 'TEXTBOOK', type: 'COREBOOK') }
+
+  let(:kindle_item) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', type: 'EBOOK') }
+
   let(:fixture_items) { yaml_to_item_fields('ncsu', 'items') }
 
   let(:copy_no_item) { fixture_items[:copy_no] }
@@ -90,6 +94,16 @@ describe MarcToArgot::Macros::NCSU::Items do
     it 'tags reserves as current_as_home' do
       remap_item_locations!(hillReserve)
       expect(hillReserve['loc_n']).to eq('RESERVES')
+    end
+
+    it 'alternate way to catch reserve items to change their status' do
+      item_status!(item_on_reserve)
+      expect(item_on_reserve['status']).to match(/available - on reserve/i)
+    end
+
+    it 'change status for kindle items' do
+      item_status!(kindle_item)
+      expect(kindle_item['status']).to match(/available - libraries kindle only/i)
     end
 
     it 'adds library use only to reference/booknocirc item' do

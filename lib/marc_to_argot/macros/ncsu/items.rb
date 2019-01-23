@@ -38,7 +38,7 @@ module MarcToArgot
           'PRESERV' => 'Preservation',
           'RESHELVING' => 'Just returned',
           'CATALOGING' => 'In Process',
-          'HOLDS' => 'On Hold'
+          'HOLDS' => 'On hold for another user'
         }.freeze
 
         #not currently used, but could be helpful in the future
@@ -66,6 +66,18 @@ module MarcToArgot
           when 'SPECCOLL'
             return true unless SPEC_COLL_NOT_REQUESTABLE.include?(item['loc_n'])
           end
+          false
+        end
+
+        def reserve?(item)
+          return true if item['type'] == 'COREBOOK' && item['loc_n'] == 'TEXTBOOK'
+
+          false
+        end
+
+        def kindle?(item)
+          return true if item['type'] == 'EBOOK' && item['loc_b'] != 'ONLINE'
+
           false
         end
 
@@ -143,7 +155,15 @@ module MarcToArgot
         # computes and updates item status
         def item_status!(item)
           item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
-          item['status'] = 'Available upon request' if item['status'] == 'Available' && offsite?(item)
+          if item['status'] == 'Available'
+            if offsite?(item)
+              item['status'] = 'Available upon request'
+            elsif reserve?(item)
+              item['status'] = 'Available - On Reserve'
+            elsif kindle?(item)
+              item['status'] = 'Available - Libraries Kindle only'
+            end
+          end
           item['status'] = item['status'] + ' (Library use only)' if library_use_only?(item)
         end
 

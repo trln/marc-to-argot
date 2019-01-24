@@ -56,6 +56,8 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:vetmed) { run_traject_json('ncsu', 'vetmed-location-hsl') }
 
+  let(:bookbot_oversize) { run_traject_json('ncsu', 'bookbot-oversize') }
+
   let(:speccoll_offsite_manuscript) { run_traject_json('ncsu', 'manuscript') }
 
   let(:govdoc) { run_traject_json('ncsu', 'govdoc') }
@@ -94,6 +96,12 @@ describe MarcToArgot::Macros::NCSU::Items do
     it 'tags reserves as current_as_home' do
       remap_item_locations!(hillReserve)
       expect(hillReserve['loc_n']).to eq('RESERVES')
+    end
+
+    it 'change loc_b,loc_n to Hunt,Bookbot for items in bookbot library' do
+      item = JSON.parse(bookbot_oversize['items'].first)
+      expect(item['loc_b']).to match(/hunt/i)
+      expect(item['loc_n']).to match(/bookbot/i)
     end
 
     it 'alternate way to catch reserve items to change their status' do

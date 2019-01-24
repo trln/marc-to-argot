@@ -37,8 +37,18 @@ module MarcToArgot
           'REPAIR' => 'Being fixed/mended',
           'PRESERV' => 'Preservation',
           'RESHELVING' => 'Just returned',
-          'CATALOGING' => 'In Process'
+          'CATALOGING' => 'In Process',
+          'HOLDS' => 'On hold for another user'
         }.freeze
+
+        #not currently used, but could be helpful in the future
+        OFFSITE_SPEC_COLLECTIONS = Set.new(%w[ARCHIVES STACKS METCALF SPEC SPEC-OD MANUSCRIPT
+                                   AUCTIONCAT PRESERV MAPS OVERSIZE OVERSIZE2 FACULTYPUB
+                                   REF-OVER MICROFORMS SATELLITE SAT-OV SAT-OV2 SMALLBOOK]).freeze
+
+        SPEC_COLL_NOT_REQUESTABLE = Set.new(%w[EXHIBITS REF FACPUBS-RR]).freeze
+
+        OFFSITE_LIB = Set.new(%w[DUKELSC SATELLITE BOOKBOT]).freeze
 
         def virtual_collection(item)
           item['loc_b'] != 'LRL' && LOC_COLLECTIONS.include?(item['loc_n']) && item['loc_n']
@@ -46,6 +56,29 @@ module MarcToArgot
 
         def get_location(item)
           [item['loc_b'], item['loc_n']]
+        end
+
+        # Offsite & requestable
+        def offsite?(item)
+          return true if OFFSITE_LIB.include?(item['loc_b'])
+
+          case item['loc_b']
+          when 'SPECCOLL'
+            return true unless SPEC_COLL_NOT_REQUESTABLE.include?(item['loc_n'])
+          end
+          false
+        end
+
+        def reserve?(item)
+          return true if item['type'] == 'COREBOOK' && item['loc_n'] == 'TEXTBOOK'
+
+          false
+        end
+
+        def kindle?(item)
+          return true if item['type'] == 'EBOOK' && item['loc_b'] != 'ONLINE'
+
+          false
         end
 
         def item_status(current, home)
@@ -88,7 +121,7 @@ module MarcToArgot
           lib, loc = get_location(item)
           if lib == 'BOOKBOT'
             item['loc_b'] = 'HUNT'
-            item['loc_n'] = 'BOOKBOT' if loc == 'STACKS'
+            item['loc_n'] = 'BOOKBOT'
           end
           item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
           item['loc_n'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
@@ -122,6 +155,15 @@ module MarcToArgot
         # computes and updates item status
         def item_status!(item)
           item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
+          if item['status'] == 'Available'
+            if offsite?(item)
+              item['status'] = 'Available upon request'
+            elsif reserve?(item)
+              item['status'] = 'Available - On Reserve'
+            elsif kindle?(item)
+              item['status'] = 'Available - Libraries Kindle only'
+            end
+          end
           item['status'] = item['status'] + ' (Library use only)' if library_use_only?(item)
         end
 
@@ -133,8 +175,8 @@ module MarcToArgot
             item[mapped] = subfield.value unless mapped.nil?
           end
           item['copy_no'] = ''
-          item_status!(item)
           item['call_no'] = '' if item.fetch('call_no','').downcase.start_with?('xx')
+          item_status!(item)
           item
         end
 

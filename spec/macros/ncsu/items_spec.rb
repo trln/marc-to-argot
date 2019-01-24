@@ -28,6 +28,12 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:hillReference) { stringhash(loc_b: 'DHHILL', loc_n: 'REF', type: 'BOOKNOCIRC') }
 
+  let(:item_on_hold) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', loc_current: 'HOLDS') }
+
+  let(:item_on_reserve) { stringhash(loc_b: 'DHHILL', loc_n: 'TEXTBOOK', type: 'COREBOOK') }
+
+  let(:kindle_item) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', type: 'EBOOK') }
+
   let(:fixture_items) { yaml_to_item_fields('ncsu', 'items') }
 
   let(:copy_no_item) { fixture_items[:copy_no] }
@@ -49,6 +55,12 @@ describe MarcToArgot::Macros::NCSU::Items do
   let(:item_with_notes_record) { run_traject_json('ncsu', 'music-recording-with-notes') }
 
   let(:vetmed) { run_traject_json('ncsu', 'vetmed-location-hsl') }
+
+  let(:bookbot_oversize) { run_traject_json('ncsu', 'bookbot-oversize') }
+
+  let(:speccoll_offsite_manuscript) { run_traject_json('ncsu', 'manuscript') }
+
+  let(:govdoc) { run_traject_json('ncsu', 'govdoc') }
 
   let(:no_vetmed_records) { load_json_multiple(run_traject('ncsu', 'base')) }
 
@@ -86,6 +98,22 @@ describe MarcToArgot::Macros::NCSU::Items do
       expect(hillReserve['loc_n']).to eq('RESERVES')
     end
 
+    it 'change loc_b,loc_n to Hunt,Bookbot for items in bookbot library' do
+      item = JSON.parse(bookbot_oversize['items'].first)
+      expect(item['loc_b']).to match(/hunt/i)
+      expect(item['loc_n']).to match(/bookbot/i)
+    end
+
+    it 'alternate way to catch reserve items to change their status' do
+      item_status!(item_on_reserve)
+      expect(item_on_reserve['status']).to match(/available - on reserve/i)
+    end
+
+    it 'change status for kindle items' do
+      item_status!(kindle_item)
+      expect(kindle_item['status']).to match(/available - libraries kindle only/i)
+    end
+
     it 'adds library use only to reference/booknocirc item' do
       expect(item_status!(hillReference)).to match(/library use only/i)
     end
@@ -96,6 +124,11 @@ describe MarcToArgot::Macros::NCSU::Items do
 
     it 'does not add library use only to a standard monograph' do
       expect(item_status!(hillMonograph)).not_to match(/library use only/i)
+    end
+
+    it 'returns On Hold for items with loc_current as HOLDS' do
+      item_status!(item_on_hold)
+      expect(item_on_hold['status']).to match(/on hold/i)
     end
 
     it 'correctly tags HSL location for VETMED' do
@@ -149,5 +182,16 @@ describe MarcToArgot::Macros::NCSU::Items do
       item = JSON.parse(item_with_notes_record['items'].first)
       expect(item['notes']).to be_nil
     end
+
+    it 'offsite items have status available upon request' do
+      item = JSON.parse(speccoll_offsite_manuscript['items'].first)
+      expect(item['status']).to include('Available upon request')
+    end
+
+    it 'bookbot items have status available upon request' do
+      item = JSON.parse(govdoc['items'].first)
+      expect(item['status']).to include('Available upon request')
+    end
+
   end
 end

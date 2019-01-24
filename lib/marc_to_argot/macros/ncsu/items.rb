@@ -121,7 +121,7 @@ module MarcToArgot
           lib, loc = get_location(item)
           if lib == 'BOOKBOT'
             item['loc_b'] = 'HUNT'
-            item['loc_n'] = 'BOOKBOT' if loc == 'STACKS'
+            item['loc_n'] = 'BOOKBOT'
           end
           item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
           item['loc_n'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'

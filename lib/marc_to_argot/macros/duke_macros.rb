@@ -23,16 +23,11 @@ module MarcToArgot
         %w[NcD NcD-B NcD-D NcD-L NcD-M NcD-W NcDurDH]
       end
 
-      # Check for physical item record returns true unless it
-      # has an 856 where the first indicator is 0.
-      # or if the broad or narrow location codes are empty
-      # after removing all online locations.
+      # If there's anything present in the physical_items
+      # clipboard array then there ought to be at least
+      # one physical item on the record.
       def physical_access?(rec, ctx = {})
-        l = rec.fields('856')
-        return false if !l.find { |f| ['0'].include?(f.indicator2) }.nil? ||
-                          ((ctx.clipboard.fetch(:loc_b, []) - ['ONLINE', 'DUKIR', '', nil]).empty?) ||
-                          ((ctx.clipboard.fetch(:loc_n, []) - ['FRDE', 'database', 'LINRE', 'PEI']).empty?)
-        true
+        return true if ctx.clipboard.fetch(:physical_items, []).any?
       end
 
       # OCLC Number & Rollup ID

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200349Ia 4500</leader>
+<controlfield tag="001">DUKE002777313</controlfield>
+<controlfield tag="003">OCoLC</controlfield>
+<controlfield tag="005">20090225164324.0</controlfield>
+<controlfield tag="008">000830s2000^^^^vau^^^^^^^^^^f000^0^eng^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">44906540</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NWH</subfield>
+ <subfield code="c">NWH</subfield>
+ <subfield code="d">COU</subfield>
+ <subfield code="d">NDK</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDKY</subfield>
+ <subfield code="c">1 [M00147449T]</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+ <subfield code="a">658.15224</subfield>
+ <subfield code="b">N27g</subfield>
+</datafield>
+<datafield tag="096" ind1=" " ind2=" ">
+ <subfield code="a">Q 180.55 .G6</subfield>
+ <subfield code="b">N277gp 2000</subfield>
+</datafield>
+<datafield tag="096" ind1=" " ind2=" ">
+ <subfield code="a">Q180.55G6</subfield>
+ <subfield code="b">N21g 2000</subfield>
+</datafield>
+<datafield tag="110" ind1="2" ind2=" ">
+ <subfield code="a">National Science Foundation (U.S.)</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Grant proposal guide /</subfield>
+ <subfield code="c">National Science Foundation.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Arlington, VA :</subfield>
+ <subfield code="b">National Science Foundation,</subfield>
+ <subfield code="c">2000.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">xi, 45 p. ;</subfield>
+ <subfield code="c">28 cm.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Title from cover.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">"NSF 01-2 (Replaces NSF 00-2)"--Cover.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">"October 2000"--Cover.</subfield>
+</datafield>
+<datafield tag="530" ind1=" " ind2=" ">
+ <subfield code="a">Also available on the Internet.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Science</subfield>
+ <subfield code="x">Research grants</subfield>
+ <subfield code="z">United States.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Research grants</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="v">Handbooks, manuals, etc.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="2">
+ <subfield code="a">Research Support as Topic.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="2">
+ <subfield code="a">United States.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="2">
+ <subfield code="a">Financing, Government.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="a">NSF (Series) ;</subfield>
+ <subfield code="v">01-2.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="a">Grant proposal guide</subfield>
+ <subfield code="u">http://www.nsf.gov/publications/pub_summ.jsp?ods_key=gpg</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2=" ">
+ <subfield code="t">b320160</subfield>
+ <subfield code="x">DUML</subfield>
+ <subfield code="A">available to Duke users at address: http://www.nsf.gov/cgi-bin/getpub?gpg</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PEI</subfield>
+ <subfield code="x">DUML</subfield>
+ <subfield code="A">available to Duke users at address: http://www.nsf.gov/cgi-bin/getpub?gpg</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b"/>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+ <subfield code="w">0</subfield>
+</datafield>
+</record>
+</collection>

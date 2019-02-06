@@ -129,6 +129,9 @@ each_record do |rec, ctx|
     ctx.output_hash['available'] = 'Available'
     physical_media = ctx.output_hash.fetch('physical_media', [])
     ctx.output_hash['physical_media'] = physical_media << 'Online'
+    if ctx.output_hash.fetch('access_type', []) == ['Online']
+      ctx.output_hash['physical_media'].delete('Print')
+    end
   end
 
   add_shared_record_data(ctx) if ctx.clipboard.fetch(:shared_record_set, false)

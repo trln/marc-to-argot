@@ -3,6 +3,57 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util::TrajectRunTest
 
+  let(:access_type_01) { run_traject_json('duke', 'access_type_01', 'xml') }
+  let(:access_type_02) { run_traject_json('duke', 'access_type_02', 'xml') }
+  let(:access_type_03) { run_traject_json('duke', 'access_type_03', 'xml') }
+  let(:access_type_04) { run_traject_json('duke', 'access_type_04', 'xml') }
+  let(:access_type_05) { run_traject_json('duke', 'access_type_05', 'xml') }
+
+  it '(Duke) sets access_type and physical_media for access_type_01' do
+    expect(access_type_01['access_type']).to(
+      eq(['Online'])
+    )
+    expect(access_type_01['physical_media']).to(
+      eq(['Online'])
+    )
+  end
+
+  it '(Duke) sets access_type and physical_media for access_type_02' do
+    expect(access_type_02['access_type']).to(
+      eq(['Online'])
+    )
+    expect(access_type_02['physical_media']).to(
+      eq(['Online'])
+    )
+  end
+
+  it '(Duke) sets access_type and physical_media for access_type_03' do
+    expect(access_type_03['access_type']).to(
+      eq(['Online', 'At the Library'])
+    )
+    expect(access_type_03['physical_media']).to(
+      eq(['Print', 'Online'])
+    )
+  end
+
+  it '(Duke) sets access_type and physical_media for access_type_04' do
+    expect(access_type_04['access_type']).to(
+      eq(['Online'])
+    )
+    expect(access_type_04['physical_media']).to(
+      eq(['Online'])
+    )
+  end
+
+  it '(Duke) sets access_type and physical_media for access_type_05' do
+    expect(access_type_05['access_type']).to(
+      eq(['Online', 'At the Library'])
+    )
+    expect(access_type_05['physical_media']).to(
+      eq(['Print', 'Online'])
+    )
+  end
+
   it '(Duke) generates oclc_number' do
     result = run_traject_json('duke', 'rollup_id', 'mrc')
     expect(result['oclc_number']).to(
@@ -48,4 +99,6 @@ describe MarcToArgot do
     result = run_traject_json('duke', 'prefixed_id', 'mrc')
     expect(result['id']).to eq('DUKE002959320')
   end
+
+
 end

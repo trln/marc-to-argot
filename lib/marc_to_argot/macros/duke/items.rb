@@ -57,15 +57,12 @@ module MarcToArgot
               item.delete('status_code')
               item.delete('due_date')
 
-              ctx.clipboard[:loc_b] ||= []
-              ctx.clipboard[:loc_b] << item['loc_b']
-              ctx.clipboard[:loc_n] ||= []
-              ctx.clipboard[:loc_n] << item['loc_n']
-
-              items << item unless (item['loc_b'] == 'DUKIR' ||
-                                    item['loc_n'] == 'PEI' ||
-                                    item['loc_n'] == 'LINRE' ||
-                                    item['loc_n'] == 'database')
+              unless online_item?(item) # Filter out online items.
+                items << item
+                # Save physical items to clipboard for use later.
+                ctx.clipboard[:physical_items] ||= []
+                ctx.clipboard[:physical_items] << item
+              end
             end
 
             if items.length > 1
@@ -88,6 +85,18 @@ module MarcToArgot
 
             map_call_numbers!(ctx, items)
           end
+        end
+
+        def online_item?(item)
+          item['loc_b'] == 'DUKIR' ||
+          item['loc_b'] == 'ONLINE' ||
+          item['loc_b'] == '' ||
+          item['loc_n'] == 'PEI' ||
+          item['loc_n'] == 'FRDE' ||
+          item['loc_n'] == 'PENTL' ||
+          item['loc_n'] == 'MELEC' ||
+          item['loc_n'] == 'LINRE' ||
+          item['loc_n'] == 'database'
         end
 
         ################################################

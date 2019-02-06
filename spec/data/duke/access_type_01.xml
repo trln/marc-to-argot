@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cai a22006257i 4500</leader>
+<controlfield tag="001">DUKE005197601</controlfield>
+<controlfield tag="005">20160525094318.0</controlfield>
+<controlfield tag="006">m^^^^^^^^u^^^^^^^^</controlfield>
+<controlfield tag="007">cr^mn|||||||||</controlfield>
+<controlfield tag="008">070719c20069999maudr^d^oiai^^0^^^a2eng^c</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">^^2016200494</subfield>
+</datafield>
+<datafield tag="012" ind1=" " ind2=" ">
+ <subfield code="l">1</subfield>
+</datafield>
+<datafield tag="019" ind1=" " ind2=" ">
+ <subfield code="a">123348654</subfield>
+ <subfield code="a">427644804</subfield>
+ <subfield code="a">463779038</subfield>
+ <subfield code="a">668993613</subfield>
+ <subfield code="a">770649277</subfield>
+</datafield>
+<datafield tag="022" ind1="0" ind2=" ">
+ <subfield code="a">2472-0690</subfield>
+ <subfield code="2">1</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">810138970</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">LND</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">LND</subfield>
+ <subfield code="d">IDL</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">DLC</subfield>
+ <subfield code="d">TXH</subfield>
+ <subfield code="d">TXA</subfield>
+ <subfield code="d">TXJ</subfield>
+ <subfield code="d">ALAUL</subfield>
+ <subfield code="d">DEBBG</subfield>
+ <subfield code="d">GWDNB</subfield>
+ <subfield code="d">NRC</subfield>
+ <subfield code="d">NOC</subfield>
+ <subfield code="d">LGG</subfield>
+ <subfield code="d">ZCU</subfield>
+ <subfield code="d">UAB</subfield>
+ <subfield code="d">CNNAI</subfield>
+ <subfield code="d">UMC</subfield>
+ <subfield code="d">OCLCO</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+ <subfield code="a">nsdp</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="1" ind2="0">
+ <subfield code="a">ISSN RECORD</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+ <subfield code="a">025.06001305</subfield>
+ <subfield code="2">22</subfield>
+</datafield>
+<datafield tag="222" ind1=" " ind2="0">
+ <subfield code="a">Academic search complete</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">Academic search complete.</subfield>
+</datafield>
+<datafield tag="246" ind1="1" ind2="3">
+ <subfield code="a">ASC</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">Ipswich, MA :</subfield>
+ <subfield code="b">EBSCO Publishing,</subfield>
+ <subfield code="c">2006-</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 online resource</subfield>
+</datafield>
+<datafield tag="310" ind1=" " ind2=" ">
+ <subfield code="a">Updated daily</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">computer</subfield>
+ <subfield code="b">c</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">online resource</subfield>
+ <subfield code="b">cr</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="362" ind1="1" ind2=" ">
+ <subfield code="a">Began 2006.</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">A scholarly, multidisciplinary database providing indexing and abstracts for monographs, reports, conference proceedings, and journals. Offers coverage of many areas of academic study including: archaeology, area studies, astronomy, biology, chemistry, civil engineering, electrical engineering, ethnic &amp; multicultural studies, food science &amp; technology, general science, geography, geology, law, mathematics, mechanical engineering, music, physics, psychology, religion &amp; theology, and women's studies.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Periodicals</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Periodicals</subfield>
+ <subfield code="v">Abstracts.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Humanities</subfield>
+ <subfield code="x">Periodicals</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Social sciences</subfield>
+ <subfield code="x">Periodicals</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Education</subfield>
+ <subfield code="x">Periodicals</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Science</subfield>
+ <subfield code="v">Periodicals</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="6">
+ <subfield code="a">Périodiques savants</subfield>
+ <subfield code="v">Bases de données.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="6">
+ <subfield code="a">Périodiques</subfield>
+ <subfield code="v">Bases de données.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="6">
+ <subfield code="a">Livres</subfield>
+ <subfield code="x">Recensions</subfield>
+ <subfield code="v">Bases de données.</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="0">
+ <subfield code="a">Online databases.</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="0">
+ <subfield code="a">Electronic reference sources.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">EBSCO Publishing (Firm),</subfield>
+ <subfield code="e">publisher.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="u">https://search.ebscohost.com/login.aspx?authtype=ip,uid&amp;profile=ehost&amp;defaultdb=a9h</subfield>
+ <subfield code="y">get it@Duke</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">MetaLib</subfield>
+ <subfield code="b">DUK00128</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">DB</subfield>
+ <subfield code="b">Research Databases</subfield>
+</datafield>
+<datafield tag="944" ind1=" " ind2=" ">
+ <subfield code="a">ESX</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20120124</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+ <subfield code="w">0</subfield>
+</datafield>
+</record>
+</collection>

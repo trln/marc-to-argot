@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     nam a2200493 i 4500</leader>
+<controlfield tag="001">DUKE008574710</controlfield>
+<controlfield tag="005">20181126093936.0</controlfield>
+<controlfield tag="006">m^^^^^^^^d^^^^^^^^</controlfield>
+<controlfield tag="007">cr^^n^^^^^^^^^</controlfield>
+<controlfield tag="008">150213t20151997oncsgz^ odiz^ ^n^ ^ eng^d</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9781442659957</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9780802078261</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">(WaSeSS)ssj0001495618</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">903441052</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">CL</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="c">CL</subfield>
+ <subfield code="d">CaBNVSL</subfield>
+ <subfield code="d">CaPaEBR</subfield>
+ <subfield code="d">WaSeSS</subfield>
+</datafield>
+<datafield tag="041" ind1="1" ind2=" ">
+ <subfield code="a">fro</subfield>
+ <subfield code="e">fro</subfield>
+ <subfield code="e">eng</subfield>
+ <subfield code="h">fro</subfield>
+ <subfield code="g">eng</subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">M2110</subfield>
+ <subfield code="b">.P89 1997eb</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+ <subfield code="a">783.6</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">Prions en chantant</subfield>
+ <subfield code="h">[electronic resource] :</subfield>
+ <subfield code="b">devotional songs of the trouvères /</subfield>
+ <subfield code="c">edited and translated by Marcia Jenneth Epstein.</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2="0">
+ <subfield code="a">Devotional songs of the trouvères.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Toronto [Ontario] ;</subfield>
+ <subfield code="a">Buffalo [New York] :</subfield>
+ <subfield code="b">University of Toronto Press,</subfield>
+ <subfield code="c">[1997]</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 online resource (1 online resource (x pages, 340 pages of music).)</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+ <subfield code="a">Toronto medieval texts and translations,</subfield>
+ <subfield code="x">0821-4344 ;</subfield>
+ <subfield code="v">11</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Unaccompanied melodies, in original and modern notation.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Sixty-one songs in the manuscripts Paris, Bibliothèque nationale Fr. 24406 and N.A.Fr. 1050.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Issued as part of the Canadian Electronic Library. Canadian publishers collection.</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Includes bibliographical references (pages 85-89) and indexes.</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+ <subfield code="a">&apos;Prions en chantant.&apos; The manuscript sources of the Trouvère songs as visual records -- The Trouvère devotional songs in the context of popular culture -- The texts -- The music -- Appendix A : notational forms -- The songs. Introduction to the edition -- List of songs -- The devotional songs of manuscripts X and V -- Appendix B : additional stanzas -- Appendix C : Alternative musical notation.</subfield>
+</datafield>
+<datafield tag="506" ind1=" " ind2=" ">
+ <subfield code="a">Access restricted to authorized users and institutions.</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+ <subfield code="a">Songs in Old French, with English translation.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Sacred songs, Unaccompanied.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Trouvère songs.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Songs, Old French.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Sacred vocal music</subfield>
+ <subfield code="z">France</subfield>
+ <subfield code="y">500-1400.</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="0">
+ <subfield code="a">Electronic books.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Epstein, Marcia Jenneth,</subfield>
+ <subfield code="d">1951-</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Canadian Electronic Library (Firm)</subfield>
+</datafield>
+<datafield tag="776" ind1="0" ind2="8">
+ <subfield code="i">Print version:</subfield>
+ <subfield code="w">(DLC) 98700283</subfield>
+ <subfield code="z">9780802078261</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="a">Toronto medieval texts and translations ;</subfield>
+ <subfield code="v">11.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="a">Canadian Electronic Library.</subfield>
+ <subfield code="p">Canadian publishers collection.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="y">get it@Duke</subfield>
+ <subfield code="u">https://getitatduke.library.duke.edu/?sid=sersol&amp;SS_jc=TC0001495618&amp;title=Prions%20en%20chantant%20%3A%20devotional%20songs%20of%20the%20trouv%C3%A8res</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">EB</subfield>
+ <subfield code="b">Electronic books</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="944" ind1=" " ind2=" ">
+ <subfield code="a">ssj0001495618</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+</datafield>
+</record>
+</collection>

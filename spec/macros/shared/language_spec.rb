@@ -105,6 +105,15 @@ describe MarcToArgot::Macros::Shared::Language do
         expect(get_008_lang_code(rec)).to be_nil
       end
     end
+
+    context 'When 008 has multibyte characters and the bytes get separated' do
+      let(:bad_008) { run_traject_json('duke', 'multibyte_char_in_008', 'xml') }
+
+      it 'returns nil' do
+        result = bad_008['lang_code']
+        expect(result).to be_nil
+      end
+    end
   end
 
   describe 'get_041_lang_codes' do

@@ -114,7 +114,13 @@ unless settings['override'].include?('lang')
 end
 
 unless settings["override"].include?("lang_code")
-  to_field "lang_code", extract_marc("008[35-37]")
+  to_field 'lang_code' do |rec, acc|
+    # It is possible to accumulate invalid UTF-8 bytes if the 008
+    # contains multibyte characters (it happens...). So we check for
+    # a valid encoding before accumulating the value.
+    code = MarcExtractor.new("008[35-37]").extract(rec).first
+    acc << code if code && code.valid_encoding?
+  end
 end
 
 ################################################

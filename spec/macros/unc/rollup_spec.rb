@@ -144,7 +144,8 @@ describe MarcToArgot::Macros::UNC::Rollup do
                               '001' => '1234',
                               '003' => 'abc',
                               '019' => ['2222', '3333'],
-                              '035' => ['(aaa)4444', '(zzz)6666']
+                              '035' => ['(aaa)4444', '(zzz)6666'],
+                              '035z' => ['(aaa)5555', '(zzz)7777']
                             })
     end
 
@@ -153,46 +154,47 @@ describe MarcToArgot::Macros::UNC::Rollup do
       rec << MARC::DataField.new('019', ' ', ' ',
                                  ['o', 'S-123'])
       rec << MARC::DataField.new('035', ' ', ' ',
-                                 ['z', '(aaa)5555'])
+                                 ['q', '(aaa)5555'])
       rec << MARC::DataField.new('035', ' ', ' ',
-                                 ['z', '(zzz)7777'])
+                                 ['q', '(zzz)7777'])
 
       id_data = get_id_data(rec)
       expect(id_data).to eq({
                               '001' => '',
                               '003' => '',
                               '019' => [],
-                              '035' => []
+                              '035' => [],
+                              '035z' => []
                             })
     end
   end
 
   describe 'set_oclc_number' do
     it 'returns hash value of Argot oclc_number field if either or both subelement (value, old) will be populated' do
-      id_data = { '001' => '123', '003' => 'OCoLC', '019' => ['222', '333'], '035' => [] }
+      id_data = { '001' => '123', '003' => 'OCoLC', '019' => ['222', '333'], '035' => [], '035z' => [] }
       expect(set_oclc_number(id_data)).to eq({ 'value' => '123', 'old' => ['222', '333'] })
-      id_data = { '001' => '', '003' => '', '019' => ['222', '333'], '035' => [] }
+      id_data = { '001' => '', '003' => '', '019' => ['222', '333'], '035' => [], '035z' => [] }
       expect(set_oclc_number(id_data)).to eq({ 'value' => '', 'old' => ['222', '333'] })
-      id_data = { '001' => '123', '003' => 'OCoLC', '019' => [], '035' => [] }
+      id_data = { '001' => '123', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
       expect(set_oclc_number(id_data)).to eq({ 'value' => '123', 'old' => [] })
     end
     it 'returns nil if neither current nor old oclc numbers can be set' do
-      id_data = { '001' => 'EEBO123', '003' => '', '019' => [], '035' => [] }
+      id_data = { '001' => 'EEBO123', '003' => '', '019' => [], '035' => [], '035z' => [] }
       expect(set_oclc_number(id_data)).to be_nil
     end
   end
 
   describe 'set_sersol_number' do
     it 'returns sseb id as ssib id' do
-      id_data = { '001' => 'sseb123', '003' => 'WaSeSS', '019' => [], '035' => [] }
+      id_data = { '001' => 'sseb123', '003' => 'WaSeSS', '019' => [], '035' => [], '035z' => [] }
       expect(set_sersol_number(id_data)).to eq('ssib123')
     end
     it 'returns sse id as ssj id' do
-      id_data = { '001' => 'sse123', '003' => 'WaSeSS', '019' => [], '035' => [] }
+      id_data = { '001' => 'sse123', '003' => 'WaSeSS', '019' => [], '035' => [], '035z' => [] }
       expect(set_sersol_number(id_data)).to eq('ssj123')
     end
     it 'returns nil if no SerialsSolutions id present' do
-      id_data = { '001' => '', '003' => '', '019' => [], '035' => [] }
+      id_data = { '001' => '', '003' => '', '019' => [], '035' => [], '035z' => [] }
       expect(set_sersol_number(id_data)).to be_nil
     end
   end
@@ -202,14 +204,16 @@ describe MarcToArgot::Macros::UNC::Rollup do
       id_data = { '001' => 'EBC445424sub',
                   '003' => 'MiAaPQ',
                   '019' => [],
-                  '035' => ['(OCoLC)437140401'] }
+                  '035' => ['(OCoLC)437140401'],
+                  '035z' => [] }
       expect(set_vendor_id(id_data)).to eq(['EBC445424'])
     end
     it 'returns vendor ids from 019, deduplicating repeated ids' do
       id_data = { '001' => 'EBC445424sub',
                   '003' => 'MiAaPQ',
                   '019' => ['EBC445424'],
-                  '035' => [] }
+                  '035' => [],
+                  '035z' => [] }
       expect(set_vendor_id(id_data)).to eq(['EBC445424'])
     end
     it 'returns vendor ids from 035, deduplicating repeated ids' do
@@ -219,14 +223,16 @@ describe MarcToArgot::Macros::UNC::Rollup do
                   '035' => ['(MiAaPQ)EBC445424',
                             '(Au-PeEL)EBL445424',
                             '(CaONFJC)MIL212944',
-                            '(OCoLC)437140401'] }
+                            '(OCoLC)437140401'],
+                  '035z' => [] }
       expect(set_vendor_id(id_data)).to eq(['EBC445424', 'EBR10167445', 'EBL445424', 'MIL212944'])
     end
     it 'returns nil if there are no vendor ids' do
       id_data = { '001' => '',
                   '003' => '',
                   '019' => [],
-                  '035' => ['(OCoLC)437140401'] }
+                  '035' => ['(OCoLC)437140401'],
+                  '035z' => [] }
       expect(set_vendor_id(id_data)).to be_nil
     end
   end
@@ -242,7 +248,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
     context 'When 001 value is digits only' do
       context 'AND there is no 003' do
         it '(UNC) set oclc_number from 001' do
-          id_data = { '001' => '123', '003' => '', '019' => [], '035' => [] }
+          id_data = { '001' => '123', '003' => '', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('123')
         end
@@ -250,7 +256,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
 
       context 'AND 003 = OCoLC' do
         it '(UNC) set oclc_number from 001' do
-          id_data = { '001' => '123', '003' => 'OCoLC', '019' => [], '035' => [] }
+          id_data = { '001' => '123', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('123')
         end
@@ -258,7 +264,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
 
       context 'AND 003 = NhCcYBP' do
         it '(UNC) set oclc_number from 001' do
-          id_data = { '001' => '123', '003' => 'NhCcYBP', '019' => [], '035' => [] }
+          id_data = { '001' => '123', '003' => 'NhCcYBP', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('123')
         end
@@ -267,7 +273,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
       context 'AND there is NO OCLC number in 035' do
         context 'AND 003 = ItFiC' do
           it '(UNC) does NOT set oclc_number' do
-            id_data = { '001' => '123', '003' => 'ItFiC', '019' => [], '035' => [] }
+            id_data = { '001' => '123', '003' => 'ItFiC', '019' => [], '035' => [], '035z' => [] }
             result = get_oclc_number(id_data)
             expect(result).to be_nil
           end
@@ -276,7 +282,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
 
         context 'AND 003 = DLC' do
           it '(UNC) does NOT set oclc_number' do
-            id_data = { '001' => '123', '003' => 'DLC', '019' => [], '035' => [] }
+            id_data = { '001' => '123', '003' => 'DLC', '019' => [], '035' => [], '035z' => [] }
             result = get_oclc_number(id_data)
             expect(result).to be_nil
           end
@@ -284,7 +290,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
 
         context 'AND 003 = PwmBRO' do
           it '(UNC) does NOT set oclc_number' do
-            id_data = { '001' => '123', '003' => 'PWmBRO', '019' => [], '035' => [] }
+            id_data = { '001' => '123', '003' => 'PWmBRO', '019' => [], '035' => [], '035z' => [] }
             result = get_oclc_number(id_data)
             expect(result).to be_nil
           end
@@ -293,27 +299,51 @@ describe MarcToArgot::Macros::UNC::Rollup do
     end
 
     context 'When 001 = alphabetic prefix, followed by digits' do
+      context 'AND prefix is ssj, ssib, sse, or sseb' do
+        context 'AND 035$z consisting only of digits is present' do
+          it '(UNC) sets oclc_number from 035$z' do
+            id_data = { '001' => 'ssj0002091230', '003' => 'WaSeSS', '019' => [], '035' => [], '035z' => ['213387618'] }
+            result = get_oclc_number(id_data)
+            expect(result).to eq('213387618')
+          end
+        end
+        context 'AND 035$z consisting only of digits NOT present' do
+          it '(UNC) does NOT set oclc_number' do
+            id_data = { '001' => 'ssib001151830', '003' => 'WaSeSS', '019' => [], '035' => [], '035z' => ['(WaSeSS)ssib001151830'] }
+            result = get_oclc_number(id_data)
+            expect(result).to be_nil
+          end
+        end
+        context 'AND 035$a beginning with (OCoLC) is present' do
+          it '(UNC) sets oclc_number from 035$a' do
+            id_data = { '001' => 'sseb123', '003' => 'WaSeSS', '019' => [], '035' => ['(OCoLC)666'], '035z' => [] }
+            result = get_oclc_number(id_data)
+            expect(result).to eq('666')
+          end
+        end
+      end
+      
       context 'AND 003 = OCoLC' do 
         it '(UNC) sets oclc_number from 001 if prefix is: tmp' do
-          id_data = { '001' => 'tmp123', '003' => 'OCoLC', '019' => [], '035' => [] }
+          id_data = { '001' => 'tmp123', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('123')
         end
 
         it '(UNC) sets oclc_number from 001 if prefix is: hsl' do
-          id_data = { '001' => 'hsl123', '003' => 'OCoLC', '019' => [], '035' => [] }
+          id_data = { '001' => 'hsl123', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('123')
         end
 
         it '(UNC) does NOT set oclc_number from 001 when prefix is: moml ' do
-          id_data = { '001' => 'moml123', '003' => 'OCoLC', '019' => [], '035' => [] }
+          id_data = { '001' => 'moml123', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to be_nil
         end
 
         it '(UNC) does NOT set oclc_number from 001 when prefix is: WHO' do
-          id_data = { '001' => 'WHO123', '003' => 'OCoLC', '019' => [], '035' => [] }
+          id_data = { '001' => 'WHO123', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to be_nil
         end
@@ -323,14 +353,14 @@ describe MarcToArgot::Macros::UNC::Rollup do
     context 'When 001 = digits followed by alphanumeric suffix' do
       context 'AND 003 = OCoLC' do
         it '(UNC) sets oclc_number from 001' do
-          id_data = { '001' => '186568905wcmSPR2016', '003' => 'OCoLC', '019' => [], '035' => [] }
+          id_data = { '001' => '186568905wcmSPR2016', '003' => 'OCoLC', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('186568905')
         end
       end
       context 'AND there is no 003' do
         it '(UNC) sets oclc_number from 001' do
-          id_data = { '001' => '186568905wcmSPR2016', '003' => '', '019' => [], '035' => [] }
+          id_data = { '001' => '186568905wcmSPR2016', '003' => '', '019' => [], '035' => [], '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('186568905')
         end
@@ -343,14 +373,15 @@ describe MarcToArgot::Macros::UNC::Rollup do
           id_data = { '001' => '123',
                       '003' => 'ItFiC',
                       '019' => [],
-                      '035' => ['(OCoLC)100', '(EBR)321'] }
+                      '035' => ['(OCoLC)100', '(EBR)321'],
+                      '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('100')
         end
 
         context 'BUT the OCLC 035 value has prefix: (OCoLC)M-ESTCN' do
           it '(UNC) does NOT set oclc_number from this 035' do
-            id_data = { '001' => 'M-ESTCN123', '003' => 'OCoLC', '019' => [], '035' => ['(OCoLC)M-ESTCN123'] }
+            id_data = { '001' => 'M-ESTCN123', '003' => 'OCoLC', '019' => [], '035' => ['(OCoLC)M-ESTCN123'], '035z' => [] }
             result = get_oclc_number(id_data)
             expect(result).to be_nil
           end
@@ -362,7 +393,8 @@ describe MarcToArgot::Macros::UNC::Rollup do
           id_data = { '001' => '123',
                       '003' => 'ItFiC',
                       '019' => [],
-                      '035' => ['(OCoLC)100', '(EBR)321', '(OCoLC)200'] }
+                      '035' => ['(OCoLC)100', '(EBR)321', '(OCoLC)200'],
+                      '035z' => [] }
           result = get_oclc_number(id_data)
           expect(result).to eq('100')
         end
@@ -375,7 +407,8 @@ describe MarcToArgot::Macros::UNC::Rollup do
       id_data = { '001' => '',
                   '003' => 'OCoLC',
                   '019' => ['ocm222', '333wcm2018', '444'],
-                  '035' => [] }
+                  '035' => [],
+                  '035z' => [] }
       result = get_oclc_number_old(id_data)
       expect(result).to eq(['222', '333', '444'])
     end
@@ -383,7 +416,8 @@ describe MarcToArgot::Macros::UNC::Rollup do
       id_data = { '001' => 'EBC308382sub',
                   '003' => 'MiAaPQ',
                   '019' => ['ebr10167445'],
-                  '035' => ['(OCoLC)560404564'] }
+                  '035' => ['(OCoLC)560404564'],
+                  '035z' => [] }
       result = get_oclc_number_old(id_data)
       expect(result).to be_nil
     end

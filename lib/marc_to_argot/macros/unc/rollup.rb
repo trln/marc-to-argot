@@ -27,7 +27,8 @@ module MarcToArgot
           id_data = { '001' => '',
                       '003' => '',
                       '019' => [],
-                      '035' => [] }
+                      '035' => [],
+                      '035z' => [] }
           
           Traject::MarcExtractor.cached('001:003:019:035a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
             case field.tag
@@ -42,6 +43,9 @@ module MarcToArgot
             when '035'
               field.subfields.select{ |sf| sf.code == 'a' }.each do |sf|
                 id_data['035'] << sf.value
+              end
+              field.subfields.select{ |sf| sf.code == 'z' }.each do |sf|
+                id_data['035z'] << sf.value
               end
             end
           end
@@ -114,12 +118,15 @@ module MarcToArgot
         # Otherwise return nil
         # Takes number from 001 if that ID looks like and OCLC number
         # If 001 isn't an OCLC number, look for one in 035
+        # If 001 is a SerialsSolutions#, look for OCLC# in 035$z(digits only)
         def get_oclc_number(id_data)
           the001 = id_data['001']
           the003 = id_data['003']
           oclc035s = get_oclc_035s(id_data['035'])
+          z035_digits_only = id_data['035z'].select { |z| z.match(/^\d+$/) }.first
           return clean_oclc_number(clean_001_or_019(the001)) if oclc_001?(the001, the003)
           return clean_oclc_number(clean_035(oclc035s.first)) if oclc035s
+          return z035_digits_only if the001.start_with?('ss') && z035_digits_only
         end
 
         # Returns value of Argot oclc_number[old] if possible.

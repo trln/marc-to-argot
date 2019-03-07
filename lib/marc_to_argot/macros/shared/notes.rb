@@ -9,6 +9,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("506abcdefu").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
               acc << [label, value].compact.join(': ') if value
@@ -23,6 +24,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("563au").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               note = {}
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
@@ -51,6 +53,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("562abcde").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
               acc << [label, value].compact.join(': ') if value
@@ -83,6 +86,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("555abcdu3").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               case field.indicator1
               when ' '
@@ -153,7 +157,7 @@ module MarcToArgot
 
       def note_general_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when /^(500|518|546|585|586)$/
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '521'
@@ -183,7 +187,7 @@ module MarcToArgot
       end
 
       def note_general_value(field, spec, extractor)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '500'
           unless subfield_5_present?(field)
             extractor.collect_subfields(field, spec).first
@@ -217,7 +221,7 @@ module MarcToArgot
       end
 
       def note_general_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '526'
           if (%w[b c d z] & field.subfields.map(&:code)).any?
             collect_and_join_subfield_values(field, 'a')
@@ -226,7 +230,7 @@ module MarcToArgot
       end
 
       def note_general_indexed(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when /^(504|518|521|556)$/
           'false'
         end
@@ -239,6 +243,7 @@ module MarcToArgot
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("500a:541abcdefhno3:561a:590a").each_matching_line(rec) do |field, spec, extractor|
             next unless subfield_5_absent_or_present_with_local_code?(field)
+
             notes = {}
 
             label = note_local_label(field)
@@ -260,7 +265,7 @@ module MarcToArgot
 
       def note_local_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '500'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '541'
@@ -274,7 +279,7 @@ module MarcToArgot
       end
 
       def note_local_value(field, spec, extractor)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '500'
           if subfield_5_present_with_local_code?(field)
             extractor.collect_subfields(field, spec).first
@@ -289,7 +294,7 @@ module MarcToArgot
       end
 
       def note_local_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '541'
           collect_subfield_values_by_code(field, 'a').join(' ')
         end
@@ -353,7 +358,7 @@ module MarcToArgot
 
       def note_related_work_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '535'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
           labels << 'Originals held by' if field.indicator1 == '1'
@@ -367,14 +372,14 @@ module MarcToArgot
       end
 
       def note_related_work_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '544'
           collect_subfield_values_by_code(field, 'd').join(' ')
         end
       end
 
       def note_related_work_indexed(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '535'
           'false'
         when '544'
@@ -415,7 +420,7 @@ module MarcToArgot
 
       def note_reproduction_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '533'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '534'
@@ -430,7 +435,7 @@ module MarcToArgot
       end
 
       def note_reproduction_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '533'
           field.subfields.select { |sf| %w[c f].include?(sf.code) }.map(&:value).join(' ')
         when '534'
@@ -441,7 +446,7 @@ module MarcToArgot
       end
 
       def note_reproduction_indexed(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '533'
           return 'false' if (%w[c f] & field.subfields.map(&:code)).empty?
         when '534'

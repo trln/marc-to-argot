@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     ntm a2200517Ii 4500</leader>
+<controlfield tag="001">DUKE008004925</controlfield>
+<controlfield tag="005">20170824164227.0</controlfield>
+<controlfield tag="008">170819s1206^^^^xx^^^^^^^^^^^^000^0bara^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">1001364424</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">NDD</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="6">880-01</subfield>
+ <subfield code="a">ʻUtbī, Muḥammad ibn ʻAbd al-Jabbār,</subfield>
+ <subfield code="d">-1035 or 1036,</subfield>
+ <subfield code="e">author.</subfield>
+</datafield>
+<datafield tag="240" ind1="1" ind2="0">
+ <subfield code="6">880-02</subfield>
+ <subfield code="a">Tārīkh al-yamīnī</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="6">880-03</subfield>
+ <subfield code="a">Kitāb al-yamīnī :</subfield>
+ <subfield code="b">sharḥ akhbār al-Sulṭān Yamīn al-Dawlah wa-Amīn al-Millah Abī al-Qāsim Maḥmūd ibn Sabuktakīn, wa-madḥ maqāmātihi fī ʻadīdihi wa-anṣārihi wa-mā yattaṣilu bi-hā min akhbār wulāt al-aṭrāf fī jawārihi /</subfield>
+ <subfield code="c">mimmā jamaʻahu Muḥammad ibn ʻAbd al-Jabbār al-ʻUtbī.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="0">
+ <subfield code="a">[Place of production not identified],</subfield>
+ <subfield code="c">602 [1206]</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">55 leaves ;</subfield>
+ <subfield code="c">243 x 164 mm, bound to 243 x 165 mm</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Manuscript codex.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Title from colophon, leaf 54b.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Physical description: 21 lines per page, written in naskh script, on glazed, laid Arabic paper. Partially vocalized. Section headings and most marginal notes in red. Catchwords. Some insect damage.</subfield>
+</datafield>
+<datafield tag="510" ind1="4" ind2=" ">
+ <subfield code="a">Brockelmann, C. GAL,</subfield>
+ <subfield code="c">volume I, page 314</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">A history of the Ghaznavid ruler Yamīn al-Dawlah Maḥmūd ibn Subaktakīn, 971-1030 (hence the title of the work) and his father Nāṣir al-Dawlah Sabuktakīn (died 997) who ruled in parts of Iran, Afghanistan and Punjab; incomplete at the beginning. Front cover detached.</subfield>
+</datafield>
+<datafield tag="530" ind1=" " ind2=" ">
+ <subfield code="a">Digital version available via Duke University Libraries Digital Collections.</subfield>
+</datafield>
+<datafield tag="541" ind1="1" ind2=" ">
+ <subfield code="c">Gift;</subfield>
+ <subfield code="a">Bruce Lawrence.</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+ <subfield code="a">In Arabic.</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Copy completed in Ramaḍān 602 H [April 1206] (leaf 54b).</subfield>
+</datafield>
+<datafield tag="563" ind1=" " ind2=" ">
+ <subfield code="a">Modern half leather with marbled paper boards. Label on front cover reads "Tārīkh-i yamīnī-i ʻUtbī."</subfield>
+</datafield>
+<datafield tag="600" ind1="0" ind2="0">
+ <subfield code="6">880-04</subfield>
+ <subfield code="a">Mahmud,</subfield>
+ <subfield code="c">Sultan of Ghazni,</subfield>
+ <subfield code="d">971-1030.</subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="0">
+ <subfield code="6">880-05</subfield>
+ <subfield code="a">Sabuktakīn, Nāṣir al-Dawlah,</subfield>
+ <subfield code="c">Emir of Ghazni,</subfield>
+ <subfield code="d">-997.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Ghaznevids</subfield>
+ <subfield code="v">Early works to 1800.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Manuscripts, Arabic.</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Naskhī.</subfield>
+ <subfield code="2">aat</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Manuscripts (document genre)</subfield>
+ <subfield code="2">aat</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Lawrence, Bruce B.,</subfield>
+ <subfield code="e">former owner.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">David M. Rubenstein Rare Book &amp; Manuscript Library.</subfield>
+ <subfield code="k">Manuscript.</subfield>
+ <subfield code="n">Arabic MS 22.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">100-01/</subfield>
+ <subfield code="a">عتبي، محمد بن عبد الجبار،</subfield>
+ <subfield code="d">-1035 or 1036.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2="0">
+ <subfield code="6">240-02/</subfield>
+ <subfield code="a">تاريخ اليميني</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2="0">
+ <subfield code="6">245-03/</subfield>
+ <subfield code="a">كتاب اليميني :</subfield>
+ <subfield code="b">شرح أخبار السلطان يمين الدولة وأمين الملة أبي القاسم محمود بن سبكتكين، ومدح مقاماته في عديده وأنصاره وما يتصل بها من أخبار ولاة الأطراف في جواره /</subfield>
+ <subfield code="c">مما جمعه محمد بن عبد الجبار العتبي.</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">500-00/</subfield>
+ <subfield code="a">Explicit: وقبح [الله مـ]ن عمره على زيادة الاثام ومسآة الانام جيازة الملام [ويرحـ]م الله عبدا قال آمينا</subfield>
+</datafield>
+<datafield tag="880" ind1="0" ind2="0">
+ <subfield code="6">600-04/</subfield>
+ <subfield code="a">محمود،</subfield>
+ <subfield code="c">سلطان غزنة،</subfield>
+ <subfield code="d">971-1030.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2="0">
+ <subfield code="6">600-05/</subfield>
+ <subfield code="a">سبكتكين، ناصر الدولة،</subfield>
+ <subfield code="c">أمير غزنة،</subfield>
+ <subfield code="d">-997.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="y">In Duke Digital Collections</subfield>
+ <subfield code="u">https://idn.duke.edu/ark:/87924/r4ws8kj3r</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">MS</subfield>
+ <subfield code="b">MS All</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">T </subfield>
+ <subfield code="b">Ms Language Material</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20170824</subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRLR</subfield>
+ <subfield code="h">Arabic MS 22</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRLR</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Arabic MS 22</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04580674Y </subfield>
+ <subfield code="s">20170824</subfield>
+ <subfield code="u">20170824</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">008142496</subfield>
+</datafield>
+</record>
+</collection>

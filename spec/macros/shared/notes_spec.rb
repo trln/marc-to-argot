@@ -21,6 +21,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_issuance) { run_traject_json('duke', 'note_issuance', 'mrc') }
   let(:note_local) { run_traject_json('duke', 'note_local', 'mrc') }
   let(:note_local2) { run_traject_json('unc', 'note_local2', 'xml') }
+  let(:note_local3) { run_traject_json('duke', 'note_local_500_880', 'xml') }
   let(:note_methodology) { run_traject_json('duke', 'note_methodology', 'mrc') }
   let(:note_numbering) { run_traject_json('duke', 'note_numbering', 'mrc') }
   let(:note_organization) { run_traject_json('duke', 'note_organization', 'mrc') }
@@ -490,6 +491,20 @@ describe MarcToArgot::Macros::Shared::Notes do
   it '(MTA) does NOT set note_local from field with non-whitelisted $5 value' do
     result = note_local2['note_local']
     expect(result).to eq(nil)
+  end
+
+  it '(MTA) does set note_general from the linked 500 field without a $5 value' do
+    result = note_local3['note_general']
+    expect(result).to include(
+      {'value' => 'Explicit: وقبح [الله مـ]ن عمره على زيادة الاثام ومسآة الانام جيازة الملام [ويرحـ]م الله عبدا قال آمينا' }
+    )
+  end
+
+  it '(MTA) does NOT set note_local from linked 500 field without a $5 value' do
+    result = note_local3['note_local']
+    expect(result).not_to include(
+      {'value' => 'Explicit: وقبح [الله مـ]ن عمره على زيادة الاثام ومسآة الانام جيازة الملام [ويرحـ]م الله عبدا قال آمينا' }
+    )
   end
 
   it '(MTA) sets note_methodology' do

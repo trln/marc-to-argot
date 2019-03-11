@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     nmm a22003375a 4500</leader>
+<controlfield tag="001">DUKE007542272</controlfield>
+<controlfield tag="005">20171130154935.0</controlfield>
+<controlfield tag="006">suu^dss^^^^^0^^^^2</controlfield>
+<controlfield tag="006">m^^^^^^^^d^^^^^^^^</controlfield>
+<controlfield tag="007">cr^mn|||||||||</controlfield>
+<controlfield tag="008">160831s2009^^^^nyu||||^||||^|||||||eng|d</controlfield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">S&amp;P Capital IQ Investment Research.</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">S&amp;P Capital IQ analyst reports</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">AfterMarket Research database</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">After Market Research database</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">Capital IQ AMR AfterMarket Research database</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">S&amp;P Global Market Intelligence investment research</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">AMR reports</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2=" ">
+ <subfield code="a">New York :</subfield>
+ <subfield code="b">Capital IQ</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 online resource</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">Mode of access: World Wide Web.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">For research assistance or technical support with this database, please email reference-librarians@fuqua.duke.edu.</subfield>
+ <subfield code="5">NcD-B</subfield>
+</datafield>
+<datafield tag="506" ind1=" " ind2=" ">
+ <subfield code="a">Personal account access to Capital IQ is contractually limited to current students, faculty, and staff of the Fuqua School of Business. Walk-in access to Capital IQ is limited to Duke University students, faculty and staff. For walk-in access to Capital IQ, request a password card at The Ford Library circulation desk.</subfield>
+ <subfield code="5">NcD-B</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">S&amp;P Capital IQ Investment Research is a module within the S&amp;P Capital IQ database. After logging in to Capital IQ, select the "Research" tab. The database contains company research and analyst reports from over 1,700 brokerage houses, investment banks, and research firms.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Business enterprises</subfield>
+ <subfield code="x">Finance</subfield>
+ <subfield code="v">Databases.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Business</subfield>
+ <subfield code="x">Company Information.</subfield>
+ <subfield code="2">local</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Online databases.</subfield>
+ <subfield code="2">lcgft</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Capital IQ (Firm)</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="a">https://library.fuqua.duke.edu/fuquaonly/capiqreg.htm</subfield>
+ <subfield code="y">Click to connect</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">DB</subfield>
+ <subfield code="b">Research Databases</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">M </subfield>
+ <subfield code="b">Digital</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20160902</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2=" ">
+ <subfield code="b">FORD</subfield>
+ <subfield code="c">FRDE</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">FORD</subfield>
+ <subfield code="c">FRDE</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+ <subfield code="w">0</subfield>
+</datafield>
+</record>
+</collection>

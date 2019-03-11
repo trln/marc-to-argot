@@ -25,6 +25,11 @@ module MarcToArgot
           end
         end
 
+        def url_href_value(field)
+          [collect_subfield_values_by_code(field, 'u').first,
+           collect_subfield_values_by_code(field, 'a').first].compact.reject(&:empty?).first
+        end
+
         # assembles a string from the 856 subfields y to use for the URL text
         # @param field [MARC::DataField] the field to use to assemble URL text
         def url_text(field)

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>00853cam a22002891  4500</leader>
+<controlfield tag="001">DUKE002102327</controlfield>
+<controlfield tag="003">OCoLC</controlfield>
+<controlfield tag="005">19960423183719.0</controlfield>
+<controlfield tag="008">840717s1963^^^^nyub^^^^^b^^^^000^0^eng^c</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">63014927 //r962</subfield>
+</datafield>
+<datafield tag="015" ind1=" " ind2=" ">
+ <subfield code="a">GB63-19433</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">00503275</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">DLC/ICU</subfield>
+ <subfield code="c">CGU</subfield>
+ <subfield code="d">DLC</subfield>
+ <subfield code="d">UKM</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">e-ge---</subfield>
+</datafield>
+<datafield tag="049" ind1="1" ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+ <subfield code="a">Q127.G3</subfield>
+ <subfield code="b">S55</subfield>
+</datafield>
+<datafield tag="050" ind1="9" ind2="9">
+ <subfield code="a">Q127.G3</subfield>
+ <subfield code="b">S55 1963</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="0">
+ <subfield code="a">509.431</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+ <subfield code="a">509.43</subfield>
+ <subfield code="b">S631S</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Slamecka, Vladimir.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Science in East Germany.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">New York,</subfield>
+ <subfield code="b">Columbia University Press,</subfield>
+ <subfield code="c">1963.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">viii, 124 p.</subfield>
+ <subfield code="b">map.</subfield>
+ <subfield code="c">25 cm.</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Bibliography: p. [121]-124.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Science</subfield>
+ <subfield code="z">Germany (East)</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Technology</subfield>
+ <subfield code="z">Germany (East)</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Science</subfield>
+ <subfield code="z">Germany (East)</subfield>
+ <subfield code="v">Bibliography.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Technology</subfield>
+ <subfield code="z">Germany (East)</subfield>
+ <subfield code="v">Bibliography.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Research</subfield>
+ <subfield code="z">Germany (East)</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="h">Q127.G3</subfield>
+ <subfield code="i">S55 1963</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q127.G3 S55 1963</subfield>
+ <subfield code="n">c.1</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D01125003C </subfield>
+ <subfield code="s">19970918</subfield>
+ <subfield code="u">20060803</subfield>
+ <subfield code="v">19971009</subfield>
+ <subfield code="w">1</subfield>
+ <subfield code="k">002102327</subfield>
+</datafield>
+</record>
+</collection>

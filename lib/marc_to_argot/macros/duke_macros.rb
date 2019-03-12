@@ -54,6 +54,7 @@ module MarcToArgot
         oclc_numbers = field.subfields.select { |sf| sf.code == 'a' }.map(&:value).map(&:strip)
         oclc_numbers.select! { |x| /^(\(OCoLC\))?\d{8,}$/.match(x) }
         oclc_numbers.map! { |x| x.sub('(OCoLC)', '') }
+        oclc_numbers.map! { |x| x.sub(/^0+/, '') }
         oclc_numbers
       end
 

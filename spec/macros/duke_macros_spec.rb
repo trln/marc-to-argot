@@ -73,4 +73,14 @@ describe MarcToArgot::Macros::Duke do
       expect(output).to eq(exp)
     end
   end
+
+  it 'removes leading zeros from oclc numbers' do
+    result = run_traject_json('duke', 'oclc_leading_zeros', 'xml')
+    expect(result['oclc_number']).to(eq({"value"=>"503275"}))
+  end
+
+  it 'sets rollup_id from oclc number with leading zeros removed' do
+    result = run_traject_json('duke', 'oclc_leading_zeros', 'xml')
+    expect(result['rollup_id']).to(eq("OCLC503275"))
+  end
 end

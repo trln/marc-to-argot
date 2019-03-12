@@ -72,6 +72,7 @@ module MarcToArgot
              artfl-project.uchicago.edu
              stephanus.tlg.uci.edu
              ropercenter.uconn.edu
+             ropercenter.cornell.edu
              vha.usc.edu
              bmc.lib.umich.edu
              rotunda.upress.virginia.edu

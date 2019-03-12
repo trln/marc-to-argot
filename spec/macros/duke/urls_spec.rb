@@ -5,6 +5,7 @@ describe MarcToArgot::Macros::Duke::Urls do
 
   let(:needs_proxy) { run_traject_json('duke', 'needs_proxy', 'xml') }
   let(:open_access) { run_traject_json('duke', 'open_access', 'xml') }
+  let(:open_access_exception) { run_traject_json('duke', 'open_access_exception', 'xml') }
   let(:oupe_shared) { run_traject_json('duke', 'oupe', 'xml') }
   let(:link_in_subfield_a) { run_traject_json('duke', 'link_in_subfield_a', 'xml') }
 
@@ -19,6 +20,12 @@ describe MarcToArgot::Macros::Duke::Urls do
     it 'sets restricted to false for open access URLs' do
       expect(JSON.parse(open_access['url'][0])['restricted']).to(
         eq('false')
+      )
+    end
+
+    it 'adds a proxy prefix to open access exception matches' do
+      expect(JSON.parse(open_access_exception['url'][0])['href']).to(
+        eq('https://proxy.lib.duke.edu/login?url=https://ropercenter.cornell.edu')
       )
     end
 

@@ -1,3 +1,4 @@
+# coding: utf-8
 module MarcToArgot
   module Macros
     module Shared
@@ -28,6 +29,7 @@ module MarcToArgot
             media << 'Blu-ray' if blu_ray?
             media << 'Braille or other tactile material' if braille?
             media << 'CD' if cd?
+            media << 'CD-ROM' if cdrom?
             media << 'Chart' if chart?
             media << 'Diskette' if diskette?
             media << 'DVD' if dvd?
@@ -130,6 +132,14 @@ module MarcToArgot
             end
           end
 
+          def cdrom?
+            record.fields('007').find do |field|
+              field.value.byteslice(0) == 'c' &&
+                field.value.byteslice(1) == 'o' &&
+                field.value.byteslice(4) == 'g'
+            end
+          end
+                    
           def chart?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'k' &&
@@ -161,49 +171,49 @@ module MarcToArgot
 
           def film_08_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'a'
             end
           end
 
           def film_09_5_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'c'
             end
           end
 
           def film_16_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'd'
             end
           end
 
           def film_28_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'e'
             end
           end
 
           def film_35_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'f'
             end
           end
 
           def film_70_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'g'
             end
           end
 
           def film_super_08_mm?
             record.fields('007').find do |field|
-              field.value.byteslice(0) == 'g' &&
+              %w[g m].include?(field.value.byteslice(0)) &&
               field.value.byteslice(7) == 'b'
             end
           end
@@ -296,25 +306,70 @@ module MarcToArgot
           # for a print item. I've duplicated how the out of the box Traject format
           # classifier determines if a record is "print." Seems OK. Can revisit.
           def print?
-            # record.fields('007').find do |field|
-            #   field.value.byteslice(0) == 't'
-            # end
-            rda338 = record.find_all do |field|
-              field.tag == "338" && field['2'] == "rdacarrier"
-            end
+            gmd = record['245']['h'] if record['245']
 
-            if rda338.length > 0
-              rda338.find do |field|
-                field.subfields.find do |sf|
-                  (sf.code == "a" && %w{volume card sheet}.include?(sf.value)) ||
-                  (sf.code == "b" && %w{nc no nb}.include?(sf.value))
-                end
-              end
-            else
-              (((a245 = record['245']) && a245['h'] && a245['h'].downcase) || "".length) == 0
+            # has explicit carrier field value indicating print-type resource
+            if print_carrier?
+              return true
+            # lacks gmd and 300 field indicates print-type resource
+            elsif gmd.nil? && print_300?
+              return true
+            # has 007 begining with t, followed by a, b, or d
+            # this is NOT frequently used now but can be expected to be used more in the future
+            # UNC data cleanup plan will use this to disambiguate physical_media without
+            #  altering descriptive data in the records
+            elsif print_007?
+              return true
             end
           end
 
+          def print_007?
+            arr = record.find_all { |f| f.tag == '007' && f.value.byteslice(0) == 't' && %w[a b d].include?(f.value.byteslice(1)) }
+            return true if arr.length > 0
+          end
+          
+          def print_carrier?
+            # I'm not specifying $2 must be rdacarrier because that isn't always recorded
+            arr = record.find_all { |f| f.tag == 338 }
+            return false if arr.empty?
+            arr.select! { |field|
+              field.to_s =~ /(?:\$a (?:volume|card|sheet)|\$b n[cob])/
+            }
+            return true if arr.length > 0
+          end
+
+          # passed an array of 300$a values, returns true if any match common print
+          # physical description conventions
+          def print_300?
+            # create array of all 300$a values in record
+            # 300 is repeatable and $a is repeatable within it
+            arr = []
+            record.each_by_tag('300') { |f| arr << f.find_all { |sf| sf.code == 'a' } }
+            arr.flatten!
+            arr.map! { |e| e.value }
+            arr.reject! { |e| e['online'] || e['electronic'] }
+            arr.select! { |e|
+              e.strip =~ /[0-9\] ][pvlℓ](?:\s?[:;.,]+|)$ #extent + abbrev (no period) unit
+                          |^\s*[pvlℓ]\s*(?:[:;.,]+|)$  #abbrev (no period) unit without extent
+                          |[0-9\]]\s*(?:[:;.,]+|)$       #Assume print where extent recorded without unit
+                          |(?:                         #Expected, standard print unit values
+                            atlas|broadsides?|cards?|columns
+                            |fasc\.|fascicles?
+                            |foliation
+                            |maps?
+                            |pamphlets?
+                            |p\.|pgs?\.|pages?|pagings?|pagination
+                            |parts?|pts?\. # unit used frequently for printed music
+                            |plates?|portfolios?|posters?|[^o]prints?
+                            |ℓ\.|l\.|leaf|[lℓ]eaves|lvs\.
+                            |scores?|sheets?
+                            |v\.|vols?|volumes?
+                          ) 
+                        /ix
+            }
+            return true if arr.length > 0
+          end
+          
           def record_07_inch?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 's' &&

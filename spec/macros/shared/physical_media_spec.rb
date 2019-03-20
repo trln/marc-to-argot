@@ -3,6 +3,119 @@ require 'spec_helper'
 
 describe MarcToArgot::Macros::Shared::PhysicalMedia do
   include Util::TrajectRunTest
+
+  def make_rec
+    rec = MARC::Record.new
+    rec << MARC::ControlField.new('008', ' ' * 40)
+    return rec
+  end
+
+  it '(MTA) Sets physical_media to CD-ROM' do
+    rec = make_rec
+    rec << MARC::ControlField.new('007', 'co mg ---|||||')
+    argot = run_traject_on_record('unc', rec)
+    expect(argot['physical_media']).to eq(['CD-ROM'])
+  end
+
+  it '(MTA) Sets physical_media as expected' do
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '374 p'))
+    pm1 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm1).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '374 p :'))
+    pm2 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm2).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '192 p;'))
+    pm3 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm3).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', 'v ;'))
+    pm4 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm4).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', 'xviii, 233p,.'))
+    pm5 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm5).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '1 print :'))
+    pm6 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm6).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::ControlField.new('007', 'kh b')
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '2 photoprints :'))
+    pm7 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm7).to eq(['Photograph/picture'])
+
+    rec = make_rec
+    rec << MARC::ControlField.new('007', 'hd af|---||||')
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '6 microfilm reels ;'))
+    pm8 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm8).to eq(['Microform', 'Microform > Microfilm'])
+
+    # Where extent is recorded without unit, assume print
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '165 ;'))
+    pm9 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm9).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::ControlField.new('007', 'ta')
+    pm10 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm10).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '6 discs. 12 in. 33 1/3 rpm. microgroove.'))
+    pm11 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm11).to be_nil
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '[2],16,26,43,[1]p ;'))
+    pm12 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm12).to eq(['Print'])
+
+    rec = make_rec
+    rec << MARC::ControlField.new('007', 'mr baaafun|||||||------')
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '11 reels of 11 (ca. 9315 ft.) :'))
+    pm13 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm13).to eq(['35 mm film'])
+
+    rec = make_rec
+    rec << MARC::ControlField.new('007', 'aj cznzn')
+    rec << MARC::ControlField.new('007', 'cr cnu||||||||')
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', '1 electronic map :'))
+    pm14 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm14).to be_nil # Online gets added outside the macro proper
+
+    rec = make_rec
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', 'maps :'))
+    pm15 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm15).to eq(['Print'])
+
+    
+end
+
   let(:physical_media_35mm) { run_traject_json('duke', 'physical_media_35mm', 'mrc') }
   let(:physical_media_art) { run_traject_json('duke', 'physical_media_art', 'mrc') }
   let(:physical_media_audiocassette) { run_traject_json('duke', 'physical_media_audiocassette', 'mrc') }

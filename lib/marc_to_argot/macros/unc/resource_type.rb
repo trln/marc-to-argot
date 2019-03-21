@@ -19,12 +19,19 @@ module MarcToArgot
           
           def unc_formats
             formats = get_general_formats
+
+            # General logic sets these on way more things than they should
+            formats.delete('Dataset -- Statistical')
+            formats.delete('Dataset -- Geospatial')
+            
             if unc_archival?
               formats << 'Archival and manuscript material'
             end
-            if unc_manuscript?
-              formats = []
-              formats << 'Archival and manuscript material'
+            if unc_dataset_geospatial?
+              formats << 'Dataset -- Geospatial'
+            end
+            if unc_dataset_statistical?
+              formats << 'Dataset -- Statistical'
             end
             if unc_manuscript?
               formats = []
@@ -40,6 +47,7 @@ module MarcToArgot
               formats << 'Thesis/Dissertation'
               formats << 'Book' unless has_502?
             end
+            
             formats.uniq
           end
 
@@ -72,7 +80,22 @@ module MarcToArgot
                              ( lang_rec_type? && %w[a c d m].include?(record.leader.byteslice(7)))
                            )
           end
-          
+
+          def get_iii_mattype
+            the999s = record.fields('999')
+            bib999arr = the999s.select { |f| f.indicator1 == '0' }
+            bib999 = bib999arr.first
+            bib999['m'] if bib999
+          end
+
+          def unc_dataset_statistical?
+            return true if get_iii_mattype == '8'
+          end
+
+          def unc_dataset_geospatial?
+            return true if get_iii_mattype == '7'
+          end
+                    
           def unc_manuscript?
             return true if manuscript_lang_rec_type? unless has_502?
           end

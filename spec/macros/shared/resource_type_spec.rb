@@ -289,6 +289,14 @@ describe MarcToArgot::Macros::Shared::ResourceType do
           expect(rt).to eq(['Book', 'Map'])
         end
       end
+      context 'AND 007/01 = j' do
+        it '(UNC) set Map' do
+          rec = make_rec
+          rec << MARC::ControlField.new('007', 'aj')
+          rt = run_traject_on_record('unc', rec)['resource_type']
+          expect(rt).to eq(['Map'])
+        end
+      end
     end
 
 end

@@ -23,7 +23,6 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   let(:resource_type_19) { run_traject_json('duke', 'resource_type_19', 'mrc') }
   let(:resource_type_20) { run_traject_json('unc', 'resource_type_20', 'xml') }
   let(:resource_type_21) { run_traject_json('unc', 'resource_type_21', 'xml') }
-  let(:resource_type_22) { run_traject_json('unc', 'resource_type_22', 'mrc') }
   let(:resource_type_23) { run_traject_json('unc', 'resource_type_23', 'mrc') }
   let(:resource_type_24) { run_traject_json('unc', 'resource_type_24', 'mrc') }
   let(:resource_type_25) { run_traject_json('unc', 'resource_type_25', 'mrc') }
@@ -143,21 +142,64 @@ describe MarcToArgot::Macros::Shared::ResourceType do
     result = resource_type_21['resource_type']
     expect(result).to include('Video') && include('Kit')
   end
-    
-  context '006/00 = m' do
-    context '006/09 = c' do
-      it '(UNC) does NOT set as Image' do
-        a = resource_type_22['resource_type']
-        expect(a).to_not include('Image')
+
+  
+  context 'LDR/06 = m' do
+    context 'AND 008/26 = c' do
+      it '(MTA) does not set as Software/multimedia' do
+        rec = make_rec
+        rec.leader[6] = 'm'
+        rec['008'].value[26] = 'c'
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to be_nil
+      end
+    end
+    context 'AND 008/26 = f' do
+      it '(MTA) set as Software/multimedia' do
+        rec = make_rec
+        rec.leader[6] = 'm'
+        rec['008'].value[26] = 'f'
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to eq(['Software/multimedia'])
+      end
+    end
+    context 'AND 008/26 = g' do
+      it '(MTA) set as Game and Software/multimedia' do
+        rec = make_rec
+        rec.leader[6] = 'm'
+        rec['008'].value[26] = 'g'
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to eq(['Game', 'Software/multimedia'])
+      end
+    end
+    context 'AND 008/26 = i' do
+      it '(MTA) set as Software/multimedia' do
+        rec = make_rec
+        rec.leader[6] = 'm'
+        rec['008'].value[26] = 'i'
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to eq(['Software/multimedia'])
+      end
+    end
+    context 'AND 008/26 = m' do
+      it '(MTA) does not set as Software/multimedia' do
+        rec = make_rec
+        rec.leader[6] = 'm'
+        rec['008'].value[26] = 'm'
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to be_nil
       end
     end
   end
 
   context 'LDR/06 = g' do
-    context '008/33 = v' do
+    context 'AND 008/33 = v' do
       it '(UNC) sets as Video' do
-        a = resource_type_22['resource_type']
-        expect(a).to include('Video')
+        rec = make_rec
+        rec.leader[6] = 'g'
+        rec['008'].value[33] = 'v'
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to include('Video')
       end
     end
   end
@@ -170,5 +212,83 @@ describe MarcToArgot::Macros::Shared::ResourceType do
       end
     end
   end
+
+
+  context '006/00 = m' do
+    context 'AND 006/09 = c' do
+      it '(UNC) does NOT set as Image or Software/multimedia' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm     o  c')
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to be_nil
+      end
+    end
+    context 'AND 006/09 = f' do
+      it '(UNC) set as Software/multimedia' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm        f')
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to eq(['Software/multimedia'])
+      end
+    end
+    context 'AND 006/09 = g' do
+      it '(UNC) set as Game and Software/multimedia' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm        g')
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to eq(['Game', 'Software/multimedia'])
+      end
+    end
+    context 'AND 006/09 = i' do
+      it '(UNC) set as Software/multimedia' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm        i')
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to eq(['Software/multimedia'])
+      end
+    end
+    context 'AND 006/09 = m' do
+      it '(UNC) does not set' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm        m')
+        rt = run_traject_on_record('unc', rec)['resource_type']
+        expect(rt).to be_nil
+      end
+      it '(NCSU) does not set' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm        m')
+        rt = run_traject_on_record('ncsu', rec)['resource_type']
+        expect(rt).to be_nil
+      end
+      it '(DUKE) set as Software/multimedia' do
+        rec = make_rec
+        rec << MARC::ControlField.new('006', 'm        m')
+        rt = run_traject_on_record('duke', rec)['resource_type']
+        expect(rt).to eq(['Software/multimedia'])
+      end
+    end
+  end
+
+    context '006/00 = s' do
+      context 'AND 006/04 = w' do
+        it '(UNC) set as Web site' do
+          rec = make_rec
+          rec << MARC::ControlField.new('006', 's   w')
+          rt = run_traject_on_record('unc', rec)['resource_type']
+          expect(rt).to eq(['Web page or site'])
+        end
+      end
+    end
+
+    context '007/00 = a' do
+      context 'AND 007/01 = d' do
+        it '(UNC) set Book and Map (these are Atlases)' do
+          rec = make_rec
+          rec << MARC::ControlField.new('007', 'ad')
+          rt = run_traject_on_record('unc', rec)['resource_type']
+          expect(rt).to eq(['Book', 'Map'])
+        end
+      end
+    end
 
 end

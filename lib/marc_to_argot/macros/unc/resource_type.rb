@@ -62,7 +62,9 @@ module MarcToArgot
           def computer_rec_type?
             record.leader.byteslice(6) == 'm'
           end
-          
+
+
+
           def unc_archival?
             archival_control? && archival_bib_level?
           end
@@ -115,6 +117,11 @@ module MarcToArgot
             return true unless match006s.empty?
           end
 
+          # Software/multimedia
+          def software_mm_comp_file_types
+            %w[b f g i]
+           end
+          
           # Text corpus
           # LDR/06 = m AND 008/26 = d AND 006/00 = a AND 336 contains dataset or cod
           def unc_text_corpus?

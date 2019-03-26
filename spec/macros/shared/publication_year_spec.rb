@@ -4,13 +4,6 @@ include MarcToArgot::Macros::Shared::PublicationYear
 
 describe MarcToArgot do
   include Util::TrajectRunTest
-
-  def make_rec
-    rec = MARC::Record.new
-    rec << MARC::ControlField.new('008', ' ' * 40)
-    return rec
-  end
-
   describe MarcToArgot::Macros::Shared::PublicationYear do
     context 'DateType = b' do
       context 'AND no 260/4 date' do

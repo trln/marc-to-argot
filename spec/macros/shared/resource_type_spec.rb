@@ -11,7 +11,7 @@ describe MarcToArgot::Macros::Shared::ResourceType do
   let(:resource_type_07) { run_traject_json('duke', 'resource_type_07', 'mrc') }
   let(:resource_type_08) { run_traject_json('duke', 'resource_type_08', 'mrc') }
   let(:resource_type_09) { run_traject_json('duke', 'resource_type_09', 'mrc') }
-  let(:resource_type_10) { run_traject_json('duke', 'resource_type_10', 'mrc') }
+  let(:resource_type_10) { run_traject_json('duke', 'resource_type_10', 'xml') }
   let(:resource_type_11) { run_traject_json('duke', 'resource_type_11', 'mrc') }
   let(:resource_type_12) { run_traject_json('duke', 'resource_type_12', 'mrc') }
   let(:resource_type_13) { run_traject_json('duke', 'stats1', 'mrc') }
@@ -260,11 +260,11 @@ describe MarcToArgot::Macros::Shared::ResourceType do
         rt = run_traject_on_record('ncsu', rec)['resource_type']
         expect(rt).to be_nil
       end
-      it '(DUKE) set as Software/multimedia' do
+      it '(DUKE) does not set' do
         rec = make_rec
         rec << MARC::ControlField.new('006', 'm        m')
         rt = run_traject_on_record('duke', rec)['resource_type']
-        expect(rt).to eq(['Software/multimedia'])
+        expect(rt).to be_nil
       end
     end
   end

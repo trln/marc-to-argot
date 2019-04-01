@@ -38,10 +38,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 12.0'
   s.add_development_dependency 'rspec', '~> 3.0'
 
-  unless is_java
-    s.add_development_dependency 'yajl-ruby', '>= 1.3.1'
-  end
-
   # pick our JSON library to install depending on the platform
   if is_java
     s.platform = 'java'

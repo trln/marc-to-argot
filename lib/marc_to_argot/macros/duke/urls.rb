@@ -86,7 +86,9 @@ module MarcToArgot
              ccrd.usc.cuhk.edu.hk
              bna.birds.cornell.edu
              woolf-center.southernct.edu
-             theindex.princeton.edu]
+             theindex.princeton.edu
+             prde.upress.virginia.edu
+             hapi.ucla.edu]
         end
 
         # tests whether the field contains a URL for a finding aid

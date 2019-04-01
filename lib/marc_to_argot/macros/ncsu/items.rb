@@ -50,6 +50,11 @@ module MarcToArgot
 
         OFFSITE_LIB = Set.new(%w[DUKELSC SATELLITE BOOKBOT]).freeze
 
+
+        def shadowed_location?(item)
+          %w[BOTMISSING ACQ-S MISSING].include?(item['loc_n'])
+        end
+
         def virtual_collection(item)
           item['loc_b'] != 'LRL' && LOC_COLLECTIONS.include?(item['loc_n']) && item['loc_n']
         end
@@ -203,9 +208,10 @@ module MarcToArgot
             Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
               item = marc_to_item(field)
               remap_item_locations!(item)
-              #item.delete('item_cat_2')
-              items << item
-              acc << item.to_json if item
+              unless shadowed_location?(item)
+                items << item 
+                acc << item.to_json if item 
+              end
             end
             populate_context!(items, rec, ctx)
             map_call_numbers!(ctx, items)

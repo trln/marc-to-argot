@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>01686cmm a2200409Ia 4500</leader>
+<controlfield tag="001">DUKE002506741</controlfield>
+<controlfield tag="003">OCoLC</controlfield>
+<controlfield tag="005">19981001081618.0</controlfield>
+<controlfield tag="007">couug-^^^^</controlfield>
+<controlfield tag="008">951109s1994^^^^ilu^^^^^^^^b^^^^^^^^eng^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">33453103</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">IUL</subfield>
+ <subfield code="c">IUL</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us---</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">[Computer][disc] NDD9</subfield>
+ <subfield code="d">[</subfield>
+ <subfield code="v">=disc]</subfield>
+ <subfield code="v">1-10</subfield>
+</datafield>
+<datafield tag="090" ind1=" " ind2=" ">
+ <subfield code="a">HE355</subfield>
+ <subfield code="b">.T54 1994</subfield>
+</datafield>
+<datafield tag="099" ind1=" " ind2=" ">
+ <subfield code="a">C16</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">TIGER 92</subfield>
+ <subfield code="h">[electronic resource] :</subfield>
+ <subfield code="b">U.S. streets &amp; U.S. boundaries for Windows.</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2="0">
+ <subfield code="a">U.S. streets &amp; U.S. boundaries for Windows</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">U.S. streets and U.S. boundaries for Windows</subfield>
+</datafield>
+<datafield tag="246" ind1="2" ind2=" ">
+ <subfield code="a">US streets &amp; US boundaries for Windows</subfield>
+</datafield>
+<datafield tag="246" ind1="2" ind2=" ">
+ <subfield code="a">US streets and US boundaries for Windows</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+ <subfield code="a">Version 1.0.</subfield>
+</datafield>
+<datafield tag="256" ind1=" " ind2=" ">
+ <subfield code="a">Computer programs and data.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Winnetka, IL :</subfield>
+ <subfield code="b">Wessex, Inc.,</subfield>
+ <subfield code="c">c1994.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">10 computer laser optical discs ;</subfield>
+ <subfield code="c">4 3/4 in.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Title from user's guide.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Edition statement and date of publication from disc label.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">"ArcView format."</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+ <subfield code="a">Northeast -- Northwest &amp; Southwest -- Midwest &amp; Southeast -- Plains &amp; South Central -- East -- West &amp; Central.</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">A desk-top mapping package to view, store, and create maps, along with demographic data and geographic features.</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">System requirements: 80386 processor; 8MB RAM; Windows 3.1; 3.5" high density floppy drive; CD-ROM drive.</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">Disc characteristics: CD-ROM.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Streets</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Street addresses</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">United States</subfield>
+ <subfield code="x">Boundaries</subfield>
+ <subfield code="v">Indexes.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">United States</subfield>
+ <subfield code="x">Geography</subfield>
+ <subfield code="v">Software.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Wessex, Inc.</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">M </subfield>
+ <subfield code="b">Digital</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2=" ">
+ <subfield code="b">DOCS</subfield>
+ <subfield code="c">PGDRC</subfield>
+ <subfield code="h">C16</subfield>
+ <subfield code="x">*cfr\or</subfield>
+ <subfield code="D">v</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DOCS</subfield>
+ <subfield code="c">PGDRC</subfield>
+ <subfield code="d"/>
+ <subfield code="h">C16</subfield>
+ <subfield code="n">disc1-10 c.1</subfield>
+ <subfield code="o">21</subfield>
+ <subfield code="q"/>
+ <subfield code="r">CDROM</subfield>
+ <subfield code="p">HAYY-1625-00001 </subfield>
+ <subfield code="s">19981001</subfield>
+ <subfield code="u">20060803</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">002506741</subfield>
+</datafield>
+</record>
+</collection>

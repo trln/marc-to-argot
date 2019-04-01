@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
 <record type="Bibliographic">
-<record type="Bibliographic">
 <leader>     nam a2200397 a 4500</leader>
 <controlfield tag="001">DUKE005438458</controlfield>
 <controlfield tag="005">20120521115551.0</controlfield>

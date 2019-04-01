@@ -424,7 +424,7 @@ module MarcToArgot
           def software_mm_comp_file_types
             %w[b f g i]
           end
-          
+
           def software_multimedia?
             marc_leader_06_match = record.leader.byteslice(6) == 'm'
             marc_008_26_match = record.fields('008').find do |field|

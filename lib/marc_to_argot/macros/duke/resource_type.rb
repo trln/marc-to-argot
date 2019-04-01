@@ -9,11 +9,6 @@ module MarcToArgot
                              .find { |sfc| sfc.value.downcase.include?('duke theses') }
             end
           end
-
-          def software_mm_comp_file_types
-            %w[b f g i m]
-          end
-
         end
       end
     end

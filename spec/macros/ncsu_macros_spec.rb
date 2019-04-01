@@ -14,7 +14,7 @@ describe MarcToArgot::Macros::NCSU do
     records.each_with_index do |rec, idx|
       output = indexer.map_record(rec)
       exp = expected_rollups[idx]
-      expect(output.length).to eq(exp.length), "Record #{idx +1} in error, output #{output}, expected #{exp}" unless exp.nil?
+      expect(output.length).to eq(exp.length), "Record #{idx+1} in error, output #{output}, expected #{exp}" unless exp.nil?
       expect(output['rollup_id']).to eq(exp)
     end
   end

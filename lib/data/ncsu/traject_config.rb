@@ -38,20 +38,17 @@ to_field 'sersol_number', sersol_number
 
 to_field 'issn', ncsu_issn(settings['specs'][:issn])
 
-def shadowed_location?(item)
-  %w[BOTMISSING ACQ-S MISSING].include?(item['loc_n'])
-end
-
 each_record do |rec, ctx|
   last_id_seen = ctx.output_hash['id']
   items = ctx.clipboard['items']
-  items.reject! { |i| shadowed_location?(i) }
   urls = ctx.output_hash.fetch('url', []).map { |u| JSON.parse(u) }
   open_access!(urls, items)
   items.each { |i| i.delete('item_cat_2') }
-  logger.info "Skipping #{ctx.output_hash['id']} (no items)" if items.empty?
-  skips += 1 if items.empty?
-  ctx.skip! if items.empty?
+  if items.empty?
+    logger.info "Skipping #{ctx.output_hash['id']} (no items)"
+    skips += 1
+    ctx.skip!
+  end
   #handle trln videos
   process_shared_records!(rec, ctx, urls)
   if serial?(rec)

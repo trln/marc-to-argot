@@ -1,11 +1,11 @@
-require 'marc_to_argot/macros/shared/call_numbers'
-require 'marc_to_argot/macros/shared/creator_main'
-require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/helpers'
+require 'marc_to_argot/macros/shared/call_numbers'
+require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/imprint'
 require 'marc_to_argot/macros/shared/language'
 require 'marc_to_argot/macros/shared/misc_id'
 require 'marc_to_argot/macros/shared/names'
+require 'marc_to_argot/macros/shared/creator_main'
 require 'marc_to_argot/macros/shared/notes'
 require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
@@ -30,14 +30,14 @@ module MarcToArgot
     # defined here, and overriden in institution-specific modules in the
     # same namespace.
     module Shared
-      include CallNumbers
-      include CreatorMain
-      include Edition
       include Helpers
+      include CallNumbers
+      include Edition
       include Imprint
       include Language
       include MiscId
       include Names
+      include CreatorMain
       include Notes
       include PhysicalDescription
       include PublicationYear

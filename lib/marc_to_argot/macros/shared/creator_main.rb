@@ -1,17 +1,11 @@
-# coding: utf-8
-
-require_relative './names'
-
 module MarcToArgot
   module Macros
     module Shared
       module CreatorMain
-        include MarcToArgot::Macros::Shared::Names
-        
         def creator_main
           lambda do |rec, acc|
             creators = []
-            
+
             Traject::MarcExtractor.cached('100:110:111')
                                   .each_matching_line(rec) do |field, spec, extractor|
 
@@ -31,10 +25,9 @@ module MarcToArgot
           if rel_part.length > 0
             name_part << ', ' unless name_part.end_with?('-')
           end
-          
+
           name_part + rel_part.join(', ')
         end
-        
       end
     end
   end

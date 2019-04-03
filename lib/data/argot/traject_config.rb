@@ -14,8 +14,8 @@
 # the record being processed
 self.logger = Yell.new do |l|
   l.adapter :logging_adapter,
-    level: settings.fetch(:log_level, :info),
-    appender: settings.fetch(:appender, :stderr)
+            level: settings.fetch(:log_level, :info),
+            appender: settings.fetch(:appender, :stderr)
 end
 
 ################################################
@@ -385,7 +385,7 @@ unless settings['override'].include?('subject_headings') || settings['override']
     remap_subjects(rec, cxt)
   end
 end
-   
+
 ################################################
 # Format -- Resource Type, Characteristics, Physical Media, etc.
 ######
@@ -437,15 +437,16 @@ unless settings['override'].include?('institution')
 end
 
 unless settings['override'].include?('access_type')
-each_record do |rec, context|
-  access_type = context.output_hash['access_type']
-  if access_type
-    physical_media = context.output_hash['physical_media']
-    if physical_media
-      physical_media << 'Online' if access_type.include?('Online')
-    else
-      context.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
+  each_record do |rec, cxt|
+    access_type = cxt.output_hash['access_type']
+    if access_type
+      physical_media = cxt.output_hash['physical_media']
+      if physical_media
+        physical_media << 'Online' if access_type.include?('Online')
+      else
+        cxt.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
+      end
     end
   end
 end
-end
+

@@ -149,6 +149,10 @@ unless settings["override"].include?("names")
   to_field "names", names
 end
 
+unless settings['override'].include?('creator_main')
+  to_field 'creator_main', creator_main
+end
+
 ################################################
 # Title
 ######

@@ -1,4 +1,5 @@
 require 'marc_to_argot/macros/shared/call_numbers'
+require 'marc_to_argot/macros/shared/creator_main'
 require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/helpers'
 require 'marc_to_argot/macros/shared/imprint'
@@ -30,6 +31,7 @@ module MarcToArgot
     # same namespace.
     module Shared
       include CallNumbers
+      include CreatorMain
       include Edition
       include Helpers
       include Imprint

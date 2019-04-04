@@ -11,12 +11,15 @@ module MarcToArgot
             value = field.to_s.downcase
             case value
             when /asp/
-              cxt.clipboard[:shared_record_set] = 'asp'
+              shared_set = 'asp'
             when /dwsgpo/
-              cxt.clipboard[:shared_record_set] = 'dws'
+              shared_set = 'dws'
             when /troup/
-              cxt.clipboard[:shared_record_set] = 'oupp'
+              shared_set = 'oupp'
             end
+
+            cxt.clipboard[:shared_record_set] = shared_set if shared_set
+            shared_set
           end
           
         end

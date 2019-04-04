@@ -1,7 +1,8 @@
 # coding: utf-8
 require 'spec_helper'
+include MarcToArgot::Macros::UNC::SharedRecords
 
-describe MarcToArgot do
+describe MarcToArgot::Macros::UNC::SharedRecords do
   include Util::TrajectRunTest
   let(:troup1) { run_traject_json('unc', 'troup1', 'mrc') }
   let(:dwsgpo1) { run_traject_json('unc', 'dwsgpo1', 'mrc') }
@@ -10,6 +11,19 @@ describe MarcToArgot do
   let(:asp1) { run_traject_json('unc', 'asp1', 'mrc') }
   let(:asp2) { run_traject_json('unc', 'asp2', 'mrc') }
 
+  #argot = run_traject_on_record('unc', rec)
+
+  describe 'set_shared_record_set_code' do
+    it 'identifies CRL records' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ', ' ',
+                                 ['a', 'ASPFLON']
+                                )
+      result = set_shared_record_set_code(rec, {})
+      expect(result).to eq('asp')
+    end
+  end
+  
   context 'When shared record set is OUPP' do
     it '(UNC) does NOT set TRLN location facet hierarchy for TRLN shared print' do
       result = troup1['location_hierarchy']

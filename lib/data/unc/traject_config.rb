@@ -68,7 +68,8 @@ end
 each_record do |rec, cxt|
   # identify shared record set members
   # this must come before URLs and shared records fields are processed
-  set_shared_record_set_code(rec, cxt)
+  shared_record_set = id_shared_record_set(rec)
+  cxt.clipboard[:shared_record_set] = shared_record_set if shared_record_set
 
   # set oclc_number, sersol_number, rollup_id from 001, 003, 035
   rollup_related_ids(rec, cxt)

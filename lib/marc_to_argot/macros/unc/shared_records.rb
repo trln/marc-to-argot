@@ -5,9 +5,9 @@ module MarcToArgot
 
         # If record is part of a shared record set, set the code for the set
         # Further processing is based on this code value
-        def set_shared_record_set_code(rec, cxt)
+        def id_shared_record_set(rec)
           shared_set = nil
-          Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+          Traject::MarcExtractor.cached('919|  |a:773|0 |t', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
             value = field.to_s.downcase
             case value
             when /asp/
@@ -16,12 +16,11 @@ module MarcToArgot
               shared_set = 'dws'
             when /troup/
               shared_set = 'oupp'
+            when /center for research libraries \(crl\) eresources \(online collection\)/
+              shared_set = 'crl'
             end
-
-            cxt.clipboard[:shared_record_set] = shared_set if shared_set
-            shared_set
           end
-          
+            shared_set          
         end
 
 

@@ -13,14 +13,23 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
 
   #argot = run_traject_on_record('unc', rec)
 
-  describe 'set_shared_record_set_code' do
-    it 'identifies CRL records' do
+  describe 'id_shared_record_set' do
+    it 'identifies ASP records' do
       rec = make_rec
       rec << MARC::DataField.new('919', ' ', ' ',
                                  ['a', 'ASPFLON']
                                 )
-      result = set_shared_record_set_code(rec, {})
+      result = id_shared_record_set(rec)
       expect(result).to eq('asp')
+    end
+
+    it 'identifies CRL records' do
+      rec = make_rec
+      rec << MARC::DataField.new('773', '0', ' ',
+                                 ['t', 'Center for Research Libraries (CRL) eResources (online collection)']
+                                )
+      result = id_shared_record_set(rec)
+      expect(result).to eq('crl')
     end
   end
   

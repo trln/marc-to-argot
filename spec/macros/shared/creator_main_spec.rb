@@ -6,9 +6,11 @@ describe MarcToArgot::Macros::Shared::CreatorMain do
   context 'record has 100 field' do
     it '(MTA) sets creator_main from 100' do
       rec = make_rec
-      rec << MARC::DataField.new('100', ' ', '1', ['a', 'Doe, Jane,'], ['d', '1970-'])
+      rec << MARC::DataField.new('100', ' ', '1', ['a', 'Doe, Jane,'],
+                                 ['d', '1970-'],
+                                 ['e', 'author'])
       rt = run_traject_on_record('unc', rec)['creator_main']
-      expect(rt).to eq(['Doe, Jane, 1970-'])
+      expect(rt).to eq(['Doe, Jane, 1970- author'])
     end
 
     context '100 has redundant $e and $4' do

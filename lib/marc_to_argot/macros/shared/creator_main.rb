@@ -23,7 +23,11 @@ module MarcToArgot
           rel_part = names_rel(field)
 
           if rel_part.length > 0
-            name_part << ', ' unless name_part.end_with?('-')
+            if name_part.end_with?('-')
+              name_part << ' '
+            else
+              name_part << ', '
+            end
           end
 
           name_part + rel_part.join(', ')

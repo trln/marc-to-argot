@@ -5,17 +5,13 @@ include MarcToArgot::Macros::UNC::Items
 describe MarcToArgot::Macros::UNC::Items do
   include Util::TrajectRunTest
 
-      # rec << MARC::DataField.new('999', '9', '1',
-      #                          ['i', 'i1147335'],
-      #                          ['l', 'ddda'],
-      #                          ['s', '-'],
-      #                          ['t', '0'],
-      #                          ['c', '1'],
-      #                          ['o', '18'],
-      #                          ['b', '123'],
-      #                          ['p', '090##'],
-      #                          ['q', '|aPB1423.C8 G7']
-      #                         )
+  it '(UNC) does not set item or barcodes field if no item data' do
+    rec = make_rec
+    argot = run_traject_on_record('unc', rec)
+    expect(argot['items']).to be_nil
+    expect(argot['barcodes']).to be_nil
+  end
+
   let(:b7667969result) { run_traject_json('unc', 'b7667969')['items'][0] }
 
   it '(UNC) sets item cn_scheme to ALPHANUM when call_no is in 099 (single item record)' do

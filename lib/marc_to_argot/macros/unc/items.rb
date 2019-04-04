@@ -23,11 +23,12 @@ module MarcToArgot
             end
 
             #set barcodes field
-            cxt.output_hash['barcodes'] = items.map { |i| i['barcode'] }.compact
+            barcodes = items.map { |i| i['barcode'] }.compact
+            cxt.output_hash['barcodes'] = barcodes if barcodes.length > 0
 
             items = items.map { |i| i.delete('barcode'); i.to_json }
             
-            cxt.output_hash['items'] = items
+            cxt.output_hash['items'] = items if items.length > 0
        end
 
         def assemble_item(field)

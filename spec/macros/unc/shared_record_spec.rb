@@ -11,8 +11,6 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
   let(:asp1) { run_traject_json('unc', 'asp1', 'mrc') }
   let(:asp2) { run_traject_json('unc', 'asp2', 'mrc') }
 
-  #argot = run_traject_on_record('unc', rec)
-
   describe 'id_shared_record_set' do
     it 'identifies ASP records' do
       rec = make_rec
@@ -57,6 +55,38 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = oupp1['virtual_collection']
       expect(result).to eq(
                           ['TRLN Shared Records. Oxford University Press print titles.']
+                        )
+    end
+  end
+
+  context 'When shared record set is CRL' do
+    it '(UNC) record is assigned to UNC, Duke, NCSU' do
+      rec = make_rec
+      rec << MARC::DataField.new('773', '0', ' ',
+                                 ['t', 'Center for Research Libraries (CRL) eResources (online collection)'])
+      result = run_traject_on_record('unc', rec)['institution']
+      expect(result).to eq(
+                          ['unc', 'duke', 'ncsu']
+                        )
+    end
+
+    it '(UNC) record_data_source includes "Shared Records" and "CRL"' do
+      rec = make_rec
+      rec << MARC::DataField.new('773', '0', ' ',
+                                 ['t', 'Center for Research Libraries (CRL) eResources (online collection)'])
+      result = run_traject_on_record('unc', rec)['record_data_source']
+      expect(result).to eq(
+                          ['ILSMARC', 'Shared Records', 'CRL']
+                        )
+    end
+
+    it '(UNC) virtual_collection includes "TRLN Shared Records. Center for Research Libraries (CRL) e-resources."' do
+      rec = make_rec
+      rec << MARC::DataField.new('773', '0', ' ',
+                                 ['t', 'Center for Research Libraries (CRL) eResources (online collection)'])
+      result = run_traject_on_record('unc', rec)['virtual_collection']
+      expect(result).to eq(
+                          ['TRLN Shared Records. Center for Research Libraries (CRL) e-resources.']
                         )
     end
   end

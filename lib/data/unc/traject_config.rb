@@ -86,6 +86,13 @@ each_record do |rec, cxt|
 
   # Add and manipulate fields for TRLN shared records
   case cxt.clipboard[:shared_record_set]
+  when 'crl'
+    add_institutions(cxt, ['duke', 'ncsu'])
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'CRL')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Center for Research Libraries (CRL) e-resources.')
+    ar = cxt.output_hash['note_access_restrictions']
+    ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   when 'dws'
     add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
     add_record_data_source(cxt, 'Shared Records')

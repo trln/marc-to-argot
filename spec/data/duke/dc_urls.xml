@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200481Ka 4500</leader>
+<controlfield tag="001">DUKE008630645</controlfield>
+<controlfield tag="005">20181213111121.0</controlfield>
+<controlfield tag="008">141120s1997^^^^ncu^^^^^o^^^^^000^0^eng^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">896425368</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">COA</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="c">COA</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">OCLCA</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCLCA</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCL</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us---</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">Women's Liberation Movement Print Culture /</subfield>
+ <subfield code="c">Duke University Libraries Digital Collections Program.</subfield>
+</datafield>
+<datafield tag="256" ind1=" " ind2=" ">
+ <subfield code="a">Electronic text and image data.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">[Durham, N.C.] :</subfield>
+ <subfield code="b">Duke University Libraries Digital Collections Program,</subfield>
+ <subfield code="c">1997.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 online resource</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">computer</subfield>
+ <subfield code="b">c</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">online resource</subfield>
+ <subfield code="b">cr</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">Mode of access: World Wide Web.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Title from title screen (viewed Nov. 20, 2014).</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">"Manifestos, speeches, essays, and other materials documenting various aspects of the Women's Movement in the United States in the 1960s and 1970s."--Title screen.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Feminism</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">20th century.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Feminism</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">20th century</subfield>
+ <subfield code="v">Sources.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Libraries</subfield>
+ <subfield code="x">Special collections.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Women's studies.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Women's rights</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">20th century.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Women's studies.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01178850</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Women's rights.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01178818</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Libraries</subfield>
+ <subfield code="x">Special collections.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00997450</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Feminism.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00922671</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="7">
+ <subfield code="a">United States.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01204155</subfield>
+</datafield>
+<datafield tag="648" ind1=" " ind2="7">
+ <subfield code="a">1900 - 1999</subfield>
+ <subfield code="2">fast</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">History.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01411628</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Sources.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01423900</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Valk, Anne M.,</subfield>
+ <subfield code="d">1964-</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Gordon, Linda.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Baxandall, Rosalyn,</subfield>
+ <subfield code="d">1939-2015.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Duke University Libraries.</subfield>
+</datafield>
+<datafield tag="780" ind1="0" ind2="0">
+ <subfield code="t">Documents from the women's liberation movement</subfield>
+ <subfield code="w">(OCoLC)38568827</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="u">https://repository.duke.edu/dc/wlmpc</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+</datafield>
+</record>
+</collection>

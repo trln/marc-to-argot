@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200049Ii 450 </leader>
+<controlfield tag="001">001378390</controlfield>
+<controlfield tag="001">DUKE001378390</controlfield>
+<controlfield tag="005">20161128162004.0</controlfield>
+<controlfield tag="005">20161128162004.0</controlfield>
+<controlfield tag="008">870330r15561555it^^^^^^^^^^^^000^0^ita^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">15431528</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">CLU</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="e">dcrmb</subfield>
+ <subfield code="c">CLU</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCLCG</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCLCA</subfield>
+ <subfield code="d">OCLCF</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCLCO</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">PN6349</subfield>
+ <subfield code="b">.G43d 1556</subfield>
+</datafield>
+<datafield tag="050" ind1="9" ind2="7">
+ <subfield code="a">PN6349</subfield>
+ <subfield code="b">.G43 1556</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Giovio, Paolo,</subfield>
+ <subfield code="d">1483-1552,</subfield>
+ <subfield code="e">author.</subfield>
+</datafield>
+<datafield tag="240" ind1="1" ind2="0">
+ <subfield code="a">Dialogo dell'imprese militari et amorose</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Ragionamento di mons. Paolo Giouie sopra i motti, &amp; disegni d'arme, &amp; d'amore, che communemente chiamano imprese /</subfield>
+ <subfield code="c">con un discorso di Girolame Ruscelli, interno allo stesso soggette.</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">Ragionamento di mons. Paolo Giovie sopra i motti, &amp; disegni d'arme, &amp; d'amore, che communemente chiamano imprese</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+ <subfield code="a">Ragionamento sopra i motti, &amp; disegni d'arme, &amp; d'amore</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">In Venetia :</subfield>
+ <subfield code="b">Appresso Giordano Ziletti, all'insegna della Stella,</subfield>
+ <subfield code="c">MDLVI [1556]</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">[16], 236 [that is, 232] pages ;</subfield>
+ <subfield code="c">15 cm (8vo)</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="340" ind1=" " ind2=" ">
+ <subfield code="m">8vo</subfield>
+ <subfield code="2">rda</subfield>
+</datafield>
+<datafield tag="386" ind1=" " ind2=" ">
+ <subfield code="n">gdr</subfield>
+ <subfield code="a">Men</subfield>
+ <subfield code="2">lcdgt</subfield>
+</datafield>
+<datafield tag="386" ind1=" " ind2=" ">
+ <subfield code="n">occ</subfield>
+ <subfield code="a">Physicians</subfield>
+ <subfield code="2">lcdgt</subfield>
+</datafield>
+<datafield tag="386" ind1=" " ind2=" ">
+ <subfield code="n">occ</subfield>
+ <subfield code="a">Historians</subfield>
+ <subfield code="2">lcdgt</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">First edition published in 1555 under title: Dialogo dell' imprese militari et amorose.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">"Discorso di Girolamo Rvscelli interno all' inuentioni dell' imprese, dell' insegne, de' motti, &amp; delle liuree": pages 113-236.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">First illustrated edition appeared in Lyons in 1559. Consult Praz, M. Studies in seventeenth-century imagery. London, 1947, volume 2, pages 69-70.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Printing statement appears after date on title page.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Signatures: A-P⁸ Q⁴.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Numbers 161-164 omitted in the paging.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Printer's device on title page; historiated initials; head- and tail-pieces.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Errata: page 236.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Dedicated to Giovanni Matteo Bembo.</subfield>
+</datafield>
+<datafield tag="510" ind1="4" ind2=" ">
+ <subfield code="a">EDIT16,</subfield>
+ <subfield code="c">CNCE 21204</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 3: With armorial bookplate, with motto: So volere, so attendere.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="541" ind1=" " ind2=" ">
+ <subfield code="c">Purchase;</subfield>
+ <subfield code="a">Rubenstein Library copy 1: Lisa Unger Baskin;</subfield>
+ <subfield code="d">062015</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Acquired as part of the Lisa Unger Baskin Collection (David M. Rubenstein Rare Book &amp; Manuscript Library).</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Acquired as part of the Sallie Bingham Center for Women's History and Culture.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Former owner: Lisa Unger Baskin.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Marginalia in Italian throughout.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Number 2 in a volume of 2 titles bound together; bound with: Del tempio alla diuina signora donna Giovanna d'Aragona.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="563" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Full brown calf over boards; blind tooling and blind-stamped centerpiece on front and back covers.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="583" ind1="1" ind2=" ">
+ <subfield code="a">Cataloged</subfield>
+ <subfield code="z">Rubenstein Library copy 1: Cataloging completed with funds provided by Claire Foerster and Daniel Bernstein;</subfield>
+ <subfield code="d">2016</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="583" ind1="1" ind2=" ">
+ <subfield code="3">Rubenstein Library copy 2, copy 3</subfield>
+ <subfield code="a">former call number: E G514R</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Emblems</subfield>
+ <subfield code="v">Early works to 1800.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Mottoes</subfield>
+ <subfield code="v">Early works to 1800.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Devices (Heraldry)</subfield>
+ <subfield code="v">Early works to 1800.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Devices (Heraldry)</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00891970</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Emblems.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst00908357</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Mottoes.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01028213</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Emblem books.</subfield>
+ <subfield code="2">rbgenr</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Baskin, Lisa Unger,</subfield>
+ <subfield code="e">former owner.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Lisa Unger Baskin Collection (David M. Rubenstein Rare Book &amp; Manuscript Library)</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Sallie Bingham Center for Women's History and Culture.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Ruscelli, Girolamo,</subfield>
+ <subfield code="d">-approximately 1565,</subfield>
+ <subfield code="e">contributor.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Ziletti, Giordano,</subfield>
+ <subfield code="d">active 16th century,</subfield>
+ <subfield code="e">printer.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Bembo, Matteo Giovanni,</subfield>
+ <subfield code="d">1491-1570,</subfield>
+ <subfield code="e">dedicatee.</subfield>
+</datafield>
+<datafield tag="752" ind1=" " ind2=" ">
+ <subfield code="a">Italy</subfield>
+ <subfield code="d">Venice.</subfield>
+ <subfield code="2">naf</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+ <subfield code="a">ITM</subfield>
+ <subfield code="b">007822778</subfield>
+ <subfield code="l">DUK50</subfield>
+ <subfield code="v">[bound-with]</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBD</subfield>
+ <subfield code="h">PN6349</subfield>
+ <subfield code="i">.G43 1556</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRL</subfield>
+ <subfield code="h">PQ4623.G82</subfield>
+ <subfield code="i">D45 1555</subfield>
+ <subfield code="k">12mo</subfield>
+ <subfield code="x">bound-with</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBD</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PN6349 .G43 1556</subfield>
+ <subfield code="n">c.2</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D99073712 </subfield>
+ <subfield code="s">19980107</subfield>
+ <subfield code="u">20161117</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">001378390</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBD</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PN6349 .G43 1556</subfield>
+ <subfield code="n">c.3</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D99073711. </subfield>
+ <subfield code="s">19950210</subfield>
+ <subfield code="u">20161117</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">001378390</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRL</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PQ4623.G82 D45 1555 12mo</subfield>
+ <subfield code="n">[bound-with] c.1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D05056932U </subfield>
+ <subfield code="s">20161114</subfield>
+ <subfield code="u">20161209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007822778</subfield>
+</datafield>
+</record>
+</collection>

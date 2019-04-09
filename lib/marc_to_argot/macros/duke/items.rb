@@ -11,6 +11,8 @@ module MarcToArgot
             lcc_top = Set.new
             items = []
             barcodes = []
+            shelf_numbers = []
+            lc_call_nos_normed = []
 
             Traject::MarcExtractor.cached('940', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
@@ -48,9 +50,22 @@ module MarcToArgot
 
               item['status'] = ItemStatus.set_status(rec, item)
 
-              if item.fetch('cn_scheme', '') == '0'
+              if item.fetch('cn_scheme', '') == '0' && item.fetch('call_no', nil)
                 item['cn_scheme'] = 'LC'
-                lcc_top.add(item['call_no'][0, 1])
+                lcc_top.add(item.fetch('call_no', '')[0, 1])
+              end
+
+              # Add all normalized LC Call Nos to lc_call_nos_normed field
+              # for searching.
+              # And add all shelving control numbers
+              # to shelf_numbers for searching.
+              case item.fetch('cn_scheme', '')
+              when 'LC'
+                lc_call_nos_normed << Lcsort.normalize(item.fetch('call_no', '').strip)
+              when '4'
+                if item.fetch('loc_b', '') != 'SCL'
+                  shelf_numbers << item.fetch('call_no', '').strip
+                end
               end
 
               item.delete('process_state')
@@ -82,6 +97,8 @@ module MarcToArgot
             ctx.output_hash['available'] = 'Available' if ItemStatus.is_available?(items)
             ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(locations) if locations
             ctx.output_hash['barcodes'] = barcodes if barcodes.any?
+            ctx.output_hash['shelf_numbers'] = shelf_numbers.uniq.compact if shelf_numbers.any?
+            ctx.output_hash['lc_call_nos_normed'] = lc_call_nos_normed.uniq.compact if lc_call_nos_normed.any?
 
             map_call_numbers!(ctx, items)
           end

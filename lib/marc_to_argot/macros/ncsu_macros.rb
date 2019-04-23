@@ -89,6 +89,10 @@ module MarcToArgot
         end
       end
 
+      def local?(ctx)
+        ctx.output_hash['institution'] == ['ncsu']
+      end
+
       def is_available?(items)
         items.any? { |i| i.fetch('status', '').match?(/^avail/i) || i['loc_b'] == 'ONLINE' }
       end

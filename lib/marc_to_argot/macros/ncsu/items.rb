@@ -213,6 +213,7 @@ module MarcToArgot
                 acc << item.to_json if item 
               end
             end
+            items = MarcToArgot::Macros::NCSU::ItemUtils.sort_items(items)
             populate_context!(items, rec, ctx)
             map_call_numbers!(ctx, items)
           end

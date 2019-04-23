@@ -34,16 +34,15 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_development_dependency 'bundler', '>= 1.16'
+  s.add_development_dependency 'bundler', '~> 2.0'
   s.add_development_dependency 'rake', '~> 12.0'
   s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'yajl-ruby', '>= 1.3.1'
 
   # pick our JSON library to install depending on the platform
   if is_java
     s.platform = 'java'
     s.add_runtime_dependency 'jar-dependencies', ['~> 0.3', '>=0.3.9']
-    s.requirements << 'jar org.noggit:noggit, 0.7'
+    s.requirements << 'jar org.noggit:noggit, 0.8'
   else
     s.platform = 'ruby'
     s.add_runtime_dependency 'yajl-ruby', ['>=1.3.1']

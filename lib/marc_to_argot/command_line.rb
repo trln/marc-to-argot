@@ -96,6 +96,7 @@ module MarcToArgot
 
       # only set the output file if ''output' doesn't look like an IO object already.
       settings['output_file'] = output unless output.respond_to?(:read)
+      settings['processing_thread_pool'] = '6'
 
       conf_files = ["#{data_dir}/extensions.rb", "#{data_dir}/argot/traject_config.rb","#{data_dir}/#{collection}/traject_config.rb"]
 
@@ -141,7 +142,7 @@ module MarcToArgot
         end
       else
         warn(e)
-        warn(e.backrace.join("\t\n"))
+        warn(e.backtrace.join("\t\n"))
       end
       raise e
     end

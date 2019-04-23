@@ -143,7 +143,7 @@ module MarcToArgot
           lib, loc = get_location(item)
           lib_cases = lib == 'SPECCOLL'
           loc_cases = case loc
-                      when 'GAMELAB', 'VRSTUDIO', /^SPEC/, /^REF/
+                      when 'GAMELAB', /^VR/, /^SPEC/, /^REF/
                         true
                       else
                         false

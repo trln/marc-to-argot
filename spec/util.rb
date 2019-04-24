@@ -1,7 +1,11 @@
 require 'yaml'
 require 'traject'
 require 'marc_to_argot'
-require 'yajl'
+if RUBY_PLATFORM =~ /java/
+  java_import 'org.noggit.ObjectBuilder'
+else
+  require 'yajl'
+end
 
 # Utilities for specs
 module Util

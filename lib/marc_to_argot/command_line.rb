@@ -141,7 +141,7 @@ module MarcToArgot
         end
       else
         warn(e)
-        warn(e.backrace.join("\t\n"))
+        warn(e.backtrace.join("\t\n"))
       end
       raise e
     end

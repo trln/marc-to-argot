@@ -143,7 +143,7 @@ module MarcToArgot
           lib, loc = get_location(item)
           lib_cases = lib == 'SPECCOLL'
           loc_cases = case loc
-                      when 'GAMELAB', 'VRSTUDIO', /^SPEC/, /^REF/
+                      when 'GAMELAB', /^VR/, /^SPEC/, /^REF/
                         true
                       else
                         false
@@ -213,6 +213,7 @@ module MarcToArgot
                 acc << item.to_json if item 
               end
             end
+            items = MarcToArgot::Macros::NCSU::ItemUtils.sort_items(items)
             populate_context!(items, rec, ctx)
             map_call_numbers!(ctx, items)
           end

@@ -12,6 +12,8 @@ describe MarcToArgot::Macros do
   let(:multiple_url_note_record) { run_traject_json('ncsu', 'multiple-856-notes') }
   let(:empty_url_note_record) { run_traject_json('ncsu', 'empty-856-notes') }
 
+  let(:ejournal_with_856) { run_traject_json('ncsu', 'ejournal_with_856') }
+
   context 'NCSU' do
     it 'outputs restricted=false if there is an 856 and online and open access' do
       urls = open_access_record['url'].map { |u| JSON.parse(u) }
@@ -41,6 +43,17 @@ describe MarcToArgot::Macros do
     it 'should not output url["note"] when 856$3$z are empty' do
       url = empty_url_note_record['url'].map { |u| JSON.parse(u) }.first
       expect(url['note']).to be_nil
+    end
+
+    context 'Journals' do 
+
+      it 'should only output a link to journals if 856 is present' do
+        local_id = ejournal_with_856['local_id']['value']
+        urls = ejournal_with_856['url'].map { |u| JSON.parse(u) }
+        expect(ejournal['institution']).to eq(['ncsu'])
+        expect(urls.length).to eq(1)
+        expect(urls.first['href']).to include("catkey=#{local_id}")
+      end
     end
   end
 end

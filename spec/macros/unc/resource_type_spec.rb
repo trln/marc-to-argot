@@ -3,12 +3,6 @@ require 'spec_helper'
 describe MarcToArgot::Macros::UNC::ResourceType do
   include Util::TrajectRunTest
 
-  def make_rec
-    rec = MARC::Record.new
-    rec << MARC::ControlField.new('008', ' ' * 40)
-    return rec
-  end
-
   let(:archives1) { run_traject_json('unc', 'archives1', 'mrc') }
   let(:archives2) { run_traject_json('unc', 'archives2', 'mrc') }
   let(:archives3) { run_traject_json('unc', 'archives3', 'mrc') }

@@ -2,6 +2,7 @@ module MarcToArgot
   module Macros
     module UNC
       module FindingAid
+        require 'open-uri'
         def finding_aid_enhanceable?(rec)
           return 'nps' if has_nps_id?(rec)
           return 'ead' if collection_or_subunit?(rec) &&
@@ -29,20 +30,32 @@ module MarcToArgot
         end
 
         def get_finding_aid_id(rec)
-          if has_nps_id?(rec)
-          else
-            
-          end
+          url = get_finding_aid_urls(rec).first
+          return url.sub('https://finding-aids.lib.unc.edu/', '').gsub('/', '')
+        end
+
+        def get_nps_id(rec)
+          id_fields = rec.find_all { |f| f.tag == '919' && f.indicator1 == '0' &&
+                                      f.indicator2 == ' ' &&
+                                     f['a'] =~ /^nps/ }
+          id_fields.first['a']
         end
 
         def get_finding_aid_urls(rec)
           url_fields = rec.find_all { |f| f.tag == '856' && f.indicator1 == '4' &&
                                       f.indicator2 == '2' &&
                                       f['u'] =~ /https?:\/\/finding-aids\.lib\.unc\.edu\/[0-9A-Z]/ }
-          urls = url_fields.map { |f| f['u'] }
+          urls = url_fields.map { |f| f['u'].sub('http:', 'https:') }
           urls
         end
-        
+
+        def get_ead_uri(id)
+          "https://finding-aids.lib.unc.edu/ead/#{id}.xml"
+        end
+
+        def get_ead(id)
+          Nokogiri::XML(open(get_ead_uri(id)))
+        end
       end
     end
   end

@@ -104,7 +104,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'get_finding_aid_id' do
-    xit '(UNC) gets finding aid id from url for real finding aids' do
+    it '(UNC) gets EAD id from url for real finding aids' do
       rec = make_rec
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://finding-aids.lib.unc.edu/03287/'])
@@ -112,16 +112,39 @@ describe MarcToArgot::Macros::UNC::FindingAid do
     end
   end
 
-    describe 'get_finding_aid_urls' do
+  describe 'get_nps_id' do
+    it '(UNC) gets EAD id from url for NPS titles' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', '0', ' ',
+                                 ['a', 'nps36049712'])
+      expect(get_nps_id(rec)).to eq('nps36049712')
+    end
+  end
+
+  describe 'get_finding_aid_urls' do
     it '(UNC) gets finding aid urls' do
       rec = make_rec
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://finding-aids.lib.unc.edu/03287/'])
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://finding-aids.lib.unc.edu/PN2020.D92/'])
-      arr = ['http://finding-aids.lib.unc.edu/03287/',
-             'http://finding-aids.lib.unc.edu/PN2020.D92/']
+      arr = ['https://finding-aids.lib.unc.edu/03287/',
+             'https://finding-aids.lib.unc.edu/PN2020.D92/']
       expect(get_finding_aid_urls(rec)).to eq(arr)
+    end
+  end
+
+  describe 'get_ead_uri' do
+    it '(UNC) builds URI to EAD XML file from EAD or NPS ID' do
+      uri = 'https://finding-aids.lib.unc.edu/ead/03287.xml'
+      expect(get_ead_uri('03287')).to eq(uri)
+    end
+  end
+
+  describe 'get_ead' do
+    it '(UNC) gets EAD XML file for ID' do
+      ead = get_ead('03287')
+      expect(ead).to be_a Nokogiri::XML::Document
     end
   end
 end

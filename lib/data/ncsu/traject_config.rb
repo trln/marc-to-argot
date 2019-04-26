@@ -52,15 +52,19 @@ each_record do |rec, ctx|
   #handle trln videos
   process_shared_records!(rec, ctx, urls)
   if serial?(rec)
-    libraries = items.map { |i| i['loc_b'] }.uniq
+    # throw out any catalogued URLs for serials, instead prefer
+    # journals link
+    if local?(ctx)
+      urls = ctx.output_hash['url'] = []
+    end
 
+    libraries = items.map { |i| i['loc_b'] }.uniq
+    loc_id = ctx.output_hash['local_id'].first[:value]
+    href = "https://www.lib.ncsu.edu/journals/more_info.php?catkey=#{loc_id}"
     if online_access?(rec, libraries)
-      loc_id = ctx.output_hash['local_id'].first[:value]
-      href = "https://www.lib.ncsu.edu/journals/more_info.php?catkey=#{loc_id}"
       urls << { type: 'fulltext', href: href, text: 'View available online access'}
     else
-      title_esc = URI.escape(ctx.output_hash['title_main'].first[:value])
-      href= "https://www.lib.ncsu.edu/journals/search.php?type=keywords&search=#{title_esc}"
+      # rely on matched records on catkey for link
       urls << { type: 'other', href: href, text: 'Search for online access' }
     end
   end
@@ -82,7 +86,6 @@ each_record do |rec, ctx|
       ctx.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
     end
   end
-
 
   remove_print_from_archival_material(ctx)
 

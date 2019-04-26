@@ -22,7 +22,7 @@ describe MarcToArgot do
   it 'generates multiple barcodes for test record' do
     barcodes = multi_barcode['barcodes']
     expect(barcodes).to be_a(Array)
-    expect(barcodes).to eq(expected_barcodes)
+    expect(barcodes).to match_array(expected_barcodes)
   end
 
   it 'generates empty barcode attribute for record with no barcoded items' do

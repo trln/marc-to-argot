@@ -5,6 +5,7 @@ module MarcToArgot
     # Macros for NCSU-specific tasks
     module NCSU
       require 'marc_to_argot/macros/ncsu/summaries'
+      require 'marc_to_argot/macros/ncsu/item_utils'
       require 'marc_to_argot/macros/ncsu/items'
       require 'marc_to_argot/macros/ncsu/physical_media'
       require 'marc_to_argot/macros/ncsu/resource_type'
@@ -87,6 +88,10 @@ module MarcToArgot
         if items.any? { |i| i['loc_b'] == 'ONLINE' && i['item_cat_2'] == 'OPENACCESS' }
           urls.select{ |u| u['type'] == 'fulltext'}.each{ |u| u['restricted'] = false}         
         end
+      end
+
+      def local?(ctx)
+        ctx.output_hash['institution'] == ['ncsu']
       end
 
       def is_available?(items)

@@ -147,4 +147,54 @@ describe MarcToArgot::Macros::UNC::FindingAid do
       expect(ead).to be_a Nokogiri::XML::Document
     end
   end
+
+  describe 'get_biog_hist_note' do
+    it '(UNC) extracts biographical history note' do
+      x = '<ead><archdesc><bioghist><head>Heading</head><p>First <title render="italic">part</title>.</p><p>Second part.</p></bioghist></archdesc></ead>'
+      xml = Nokogiri::XML(x)
+      result = ['First part.', 'Second part.']
+      expect(get_biog_hist_note(xml)).to eq(result)
+    end
+
+    it '(UNC) handles p, ignores chronlist, eventgrp in bioghist note' do
+      # Punting on dealing with chronlists for now. Unlikely to bear any uniquely informative
+      #  keywords. We're going to have to redo all these mappings for ArchivesSpace
+      #  eventually anyway.
+      # real example of both p and chronlist (with single events in eventgrp): SHC/04975.xml
+      # both p and chronlist with normal chronitems: UARS/40011.xml
+      doc = Nokogiri::XML <<-EOXML
+<ead>
+  <archdesc>
+    <bioghist>
+      <head>Heading</head>
+      <p>First <title render="italic">part</title>.</p>
+      <chronlist>
+        <chronitem>
+          <date>1944</date>
+          <eventgrp>
+            <event>Thing happened</event>
+          </eventgrp>
+        </chronitem>
+        <chronitem>
+          <date>1945</date>
+          <eventgrp>
+            <event>Thing happened</event>
+            <event>Another thing happened</event>
+          </eventgrp>
+        </chronitem>
+        <chronitem>
+          <date>1946</date>
+          <event>Last thing happened</event>
+        </chronitem>
+      </chronlist>
+    </bioghist>
+  </archdesc>
+</ead>
+EOXML
+      result = [
+        'First part.'
+      ]
+      expect(get_biog_hist_note(doc)).to eq(result)
+    end
+  end
 end

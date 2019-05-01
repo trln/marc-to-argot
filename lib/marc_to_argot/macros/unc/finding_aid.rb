@@ -54,7 +54,20 @@ module MarcToArgot
         end
 
         def get_ead(id)
-          Nokogiri::XML(open(get_ead_uri(id)))
+          Nokogiri::XML(open(get_ead_uri(id)),&:noblanks)
+        end
+
+        def get_biog_hist_note(ead)
+          biog = ead.xpath("/ead/archdesc/bioghist/*")
+          unless biog.empty?
+            bnote = []
+            #discard head node
+            biog = biog.reject { |n| n.name == 'head' }
+            biog.each do |n|
+              bnote << n.text if n.name == 'p'
+            end
+            bnote
+          end
         end
       end
     end

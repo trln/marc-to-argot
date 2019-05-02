@@ -3,10 +3,14 @@ module MarcToArgot
     module UNC
       module LocalSubjectGenre
 
+        include MarcToArgot::Macros::Shared::SubjectGenre
+
         def local_subject_genre(rec, cxt)
           if rec.leader[6] == 'g'
             mrc_genre_fields(rec, cxt)
           end
+
+          local_geog_fields(rec, cxt)
         end
 
         def mrc_genre_fields(rec, cxt)
@@ -23,42 +27,33 @@ module MarcToArgot
         def is_local_genre?(field)
           return true if field.tag == '690' && field['2'] == 'local'
         end
-        
-        # If record is part of a shared record set, set the code for the set
-        # Further processing is based on this code value
-        def set_shared_record_set_code(rec, cxt)
-          shared_set = nil
-          value = field.to_s.downcase
-          case value
-          when /asp/
-            cxt.clipboard[:shared_record_set] = 'asp'
-          when /dwsgpo/
-            cxt.clipboard[:shared_record_set] = 'dws'
-          when /troup/
-            cxt.clipboard[:shared_record_set] = 'oupp'
+
+        def local_geog_fields(rec, cxt)
+          acc = []
+          Traject::MarcExtractor.cached('691z').each_matching_line(rec) do |field, spec|
+            values = collect_subjects(field, spec)
+            acc.concat(values) unless values.nil? || values.empty?
           end
-        end
-        
+
+          Traject::MarcExtractor.cached('691ag').each_matching_line(rec) do |field, spec|
+            value = collect_and_join_subjects(field, spec, ' -- ')
+            acc << value unless value.nil? || value.empty?
+          end
+
+          acc.flatten!
+          
+          unless acc.empty?
+            if cxt.output_hash.has_key?('subject_geographic')
+              acc.each { |val| cxt.output_hash['subject_geographic'] << val }
+            else
+              cxt.output_hash['subject_geographic'] = acc
+            end
+            cxt.output_hash['subject_geographic'].uniq!
+          end
       end
-
-
-      def add_institutions(cxt, institution_array)
-        institution_array.each { |i| cxt.output_hash['institution'] << i } 
+      
+      
       end
-
-      def add_record_data_source(cxt, value)
-        cxt.output_hash['record_data_source'] << value
-      end
-
-      def add_virtual_collection(cxt, value)
-        if cxt.output_hash['virtual_collection']
-          cxt.output_hash['virtual_collection'] << value
-        else
-          cxt.output_hash['virtual_collection'] = [value]
-        end
-      end
-
     end
   end
 end
-

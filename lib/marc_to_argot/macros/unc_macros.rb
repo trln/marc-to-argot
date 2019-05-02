@@ -2,6 +2,7 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for UNC records
     module UNC
+      require 'marc_to_argot/macros/unc/genre_mrc'
       require 'marc_to_argot/macros/unc/holdings'
       require 'marc_to_argot/macros/unc/resource_type'
       require 'marc_to_argot/macros/unc/rollup'
@@ -11,6 +12,7 @@ module MarcToArgot
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
+      include GenreMrc
       include Holdings
       include ResourceType
       include Rollup

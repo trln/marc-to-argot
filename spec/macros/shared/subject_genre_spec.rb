@@ -137,6 +137,12 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
                       )
   end
 
+    # 690s have other subfields...
+  # |aSocial work education|zUnited States|vPeriodicals.
+  # |aAuthors' presentation copies (Provenance)|zFrance|y20th century.|2rbprov
+  # |aUniversity of North Carolina at Chapel Hill.|bLibrary.|bNorth Carolina Collection|xCelebrations.
+  # |aYeats, W. B.|q(William Butler),|d1865-1939|vCollective records.
+  # |aPopular Approach|9KIE subject caption|8k
     it '(MTA) sets subject_topical from 690 a and x' do
       rec = make_rec
       rec << MARC::DataField.new('690', ' ', ' ', ['a', 'foo'], ['x', 'oof'])

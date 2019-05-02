@@ -2,7 +2,7 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for UNC records
     module UNC
-      require 'marc_to_argot/macros/unc/genre_mrc'
+      require 'marc_to_argot/macros/unc/local_subject_genre'
       require 'marc_to_argot/macros/unc/finding_aid'
       require 'marc_to_argot/macros/unc/holdings'
       require 'marc_to_argot/macros/unc/items'
@@ -14,7 +14,7 @@ module MarcToArgot
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
-      include GenreMrc
+      include LocalSubjectGenre
       include FindingAid
       include Holdings
       include Items

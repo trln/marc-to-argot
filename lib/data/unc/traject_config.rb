@@ -84,6 +84,9 @@ each_record do |rec, cxt|
     holdings(rec, cxt)
   end
 
+  # add genre_mrc field
+  local_subject_genre(rec, cxt)
+  
   # Add and manipulate fields for TRLN shared records
   case cxt.clipboard[:shared_record_set]
   when 'crl'

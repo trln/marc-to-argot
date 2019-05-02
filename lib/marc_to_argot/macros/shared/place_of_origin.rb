@@ -48,6 +48,7 @@ module MarcToArgot
               keep_sfs = %w[a b c d f g h]
               sfs = field.subfields.map { |sf| sf if keep_sfs.include?(sf.code)}.compact
               sfs.each { |sf| sf.value = sf.value.strip.gsub(/ +/, ' ') }
+              sfs.each { |sf| sf.value = sf.value.gsub(/\.$/, '') }
               s_value = get_searchable_752(sfs)
               f_value = get_facetable_752(sfs)
               places << place_hash(s_value, f_value)

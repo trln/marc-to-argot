@@ -14,7 +14,7 @@ describe MarcToArgot::Macros::Shared::PlaceOfOrigin do
       rec << MARC::DataField.new('752', ' ', ' ',
                                  ['a', 'United States'],
                                  ['b', 'North Carolina'],
-                                 ['c', 'Wake '],
+                                 ['c', 'Wake. '],
                                  ['d', 'Raleigh'])
       result = run_traject_on_record('unc', rec)['place_of_origin']
       expect(result).to eq([{
@@ -31,7 +31,7 @@ describe MarcToArgot::Macros::Shared::PlaceOfOrigin do
       result = run_traject_on_record('unc', rec)['place_of_origin']
       expect(result).to eq([{
                              'facet' => ['United States', 'District of Columbia', 'Washington (D.C.)'],
-                             'search' => ['United States--District of Columbia--Washington.']
+                             'search' => ['United States--District of Columbia--Washington']
                            }])
     end
     it '(MTA) extracts facetable New York (state) and New York (city) values' do

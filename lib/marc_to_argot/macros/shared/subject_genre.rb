@@ -435,6 +435,8 @@ module MarcToArgot
             %w[a b c d f g h]
           when '690'
             %w[a x]
+          when '691'
+            %w[g x v y z]
           else
             %w[na]
           end

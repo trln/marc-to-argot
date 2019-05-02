@@ -454,3 +454,7 @@ unless settings['override'].include?('access_type')
   end
 end
 
+unless settings['override'].include?('place_of_origin')
+  to_field 'place_of_origin', place_of_origin
+end
+

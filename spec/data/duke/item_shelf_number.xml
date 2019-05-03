@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     ngm a2200577Ia 4500</leader>
+<controlfield tag="001">DUKE001095122</controlfield>
+<controlfield tag="005">20050413103404.0</controlfield>
+<controlfield tag="007">vd^cvaizu</controlfield>
+<controlfield tag="008">050413s2000^^^^cc^---^^^^^^^^^^^^vlchi^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">58971951</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="c">NDD</subfield>
+</datafield>
+<datafield tag="041" ind1="0" ind2=" ">
+ <subfield code="a">chi</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDE</subfield>
+</datafield>
+<datafield tag="066" ind1=" " ind2=" ">
+ <subfield code="c">$1</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="6">880-01</subfield>
+ <subfield code="a">Chun</subfield>
+ <subfield code="h">[videorecording] =</subfield>
+ <subfield code="b">Spring /</subfield>
+ <subfield code="c">Zhonglian ying ye gong si she zhi.</subfield>
+</datafield>
+<datafield tag="246" ind1="1" ind2=" ">
+ <subfield code="a">Spring</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="6">880-02</subfield>
+ <subfield code="a">Dalian Shi :</subfield>
+ <subfield code="b">Dalian yin xiang chu ban she ;</subfield>
+ <subfield code="a">[s.l.] :</subfield>
+ <subfield code="b">Guangzhou qiao jia ren wen hua chuan bo you xian gong si zong jing xiao,</subfield>
+ <subfield code="c">[2002?].</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">2 videodiscs :</subfield>
+ <subfield code="b">sd., b&amp;w ;</subfield>
+ <subfield code="c">4 3/4 in.</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+ <subfield code="6">880-03</subfield>
+ <subfield code="a">Zao qi Zhongguo dian ying (1927-1949 nian)</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">VCD.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="6">880-04</subfield>
+ <subfield code="a">The story based on the novel of "Chun" by Ba Jin.</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">Video compact discs playable on VCD player with version 2.0</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+ <subfield code="a">Dialogue in Mandarin.</subfield>
+</datafield>
+<datafield tag="508" ind1=" " ind2=" ">
+ <subfield code="6">880-05</subfield>
+ <subfield code="a">Dao yan, gai bian: Zhong Xiaoyang ; she ying: Huang Shaofen.</subfield>
+</datafield>
+<datafield tag="511" ind1="1" ind2=" ">
+ <subfield code="6">880-06</subfield>
+ <subfield code="a">Wu Chufan, Zhou Manhua, Zhang Fan, Zhang Wan, Wang Danfeng.</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">Shuying, the third daughter of Gao Keming, who has been struggling against her father's style of feudal arrangement in her marriage. Later Shuying gets the support from all of her cousins to escape from her father's control...</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Feature films</subfield>
+ <subfield code="z">China.</subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="0">
+ <subfield code="6">880-07</subfield>
+ <subfield code="a">Ba, Jin,</subfield>
+ <subfield code="d">1904-2005.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-08</subfield>
+ <subfield code="a">Zhong, Xiaoyang.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-09</subfield>
+ <subfield code="a">Huang, Shaofen.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-10</subfield>
+ <subfield code="a">Zhou, Manhua.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-11</subfield>
+ <subfield code="a">Wang, Danfeng,</subfield>
+ <subfield code="d">1925-</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="6">880-12</subfield>
+ <subfield code="a">Zhang, Fan.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="6">880-13</subfield>
+ <subfield code="a">Zhonglian ying ye gong si.</subfield>
+</datafield>
+<datafield tag="880" ind1="0" ind2="0">
+ <subfield code="6">245-01/</subfield>
+ <subfield code="a">春</subfield>
+ <subfield code="h">[videorecording] =</subfield>
+ <subfield code="b">Spring /</subfield>
+ <subfield code="c">中联影业公司摄制.</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">260-02/</subfield>
+ <subfield code="a">大连市 :</subfield>
+ <subfield code="b">大连音像出版社 ;</subfield>
+ <subfield code="a">[s.l.] :</subfield>
+ <subfield code="b">广州悄佳人文化传播有�公司总经销,</subfield>
+ <subfield code="c">[2000?]</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">490-03/</subfield>
+ <subfield code="a">早期中囯电影 (1927-1949 年)</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">500-04/</subfield>
+ <subfield code="a">The story based on the novel of 「春」by 巴金.</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">508-05/</subfield>
+ <subfield code="a">导演, 改编: 仲小扬 ; 摄影: 黄绍芬.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">511-06/</subfield>
+ <subfield code="a">吴楚帆, 周曼华, 张帆, 张琬, 王丹凤.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">600-07/</subfield>
+ <subfield code="a">巴金,</subfield>
+ <subfield code="d">1904-2005.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-08/</subfield>
+ <subfield code="a">仲小扬.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-09/</subfield>
+ <subfield code="a">黄绍芬.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-10/</subfield>
+ <subfield code="a">周曼华.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-11/</subfield>
+ <subfield code="a">王丹凤,</subfield>
+ <subfield code="d">1925-</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">700-12/</subfield>
+ <subfield code="a">张帆.</subfield>
+</datafield>
+<datafield tag="880" ind1="2" ind2=" ">
+ <subfield code="6">710-13/</subfield>
+ <subfield code="a">中联影业公司.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="6">880-14</subfield>
+ <subfield code="a">Zao qi Zhongguo dian ying, 1927-1949.</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2="0">
+ <subfield code="6">830-14/</subfield>
+ <subfield code="a">早期中囯电影 (1927-1949 年)</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">G </subfield>
+ <subfield code="b">Visual</subfield>
+</datafield>
+<datafield tag="852" ind1="4" ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSLV1</subfield>
+ <subfield code="h">DVD 4176</subfield>
+ <subfield code="D">v</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSLV1</subfield>
+ <subfield code="d">4</subfield>
+ <subfield code="h">DVD 4176</subfield>
+ <subfield code="n">disc 1-2 c.1</subfield>
+ <subfield code="o">19</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">DVD</subfield>
+ <subfield code="p">D02864379$ </subfield>
+ <subfield code="s">20050413</subfield>
+ <subfield code="u">20080719</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">001095122</subfield>
+</datafield>
+</record>
+</collection>

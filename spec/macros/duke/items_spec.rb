@@ -26,6 +26,20 @@ describe MarcToArgot::Macros::Duke::Items do
       )
     end
 
+    it 'extracts and normalizes call numbers' do
+      result = run_traject_json('duke', 'items_bound_with')
+      expect(result['lc_call_nos_normed']).to(
+        eq(['PN.6349.G43.1556', 'PQ.4623.G82.D45--15550012MO'])
+      )
+    end
+
+    it 'extracts shelving control numbers' do
+      result = run_traject_json('duke', 'item_shelf_number')
+      expect(result['shelf_numbers']).to(
+        eq(['DVD 4176'])
+      )
+    end
+
     it 'generates holdings data' do
       result = run_traject_json('duke', 'holdings', 'mrc')
       expect(result['holdings']).to(

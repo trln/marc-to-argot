@@ -454,7 +454,10 @@ unless settings['override'].include?('access_type')
   end
 end
 
-unless settings['override'].include?('place_of_origin')
-  to_field 'place_of_origin', place_of_origin
+unless settings['override'].include?('origin_place_search')
+  to_field 'origin_place_search', origin_place_search
 end
 
+unless settings['override'].include?('origin_place_facet')
+  to_field 'origin_place_facet', origin_place_facet
+end

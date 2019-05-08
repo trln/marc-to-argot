@@ -7,11 +7,11 @@ require 'marc_to_argot/macros/shared/misc_id'
 require 'marc_to_argot/macros/shared/names'
 require 'marc_to_argot/macros/shared/creator_main' #placed here because it requires names
 require 'marc_to_argot/macros/shared/notes'
+require 'marc_to_argot/macros/shared/origin_place'
 require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/publication_year'
 require 'marc_to_argot/macros/shared/resource_type'
-require 'marc_to_argot/macros/shared/place_of_origin' #placed here because it requires resource_type
 require 'marc_to_argot/macros/shared/series_statement'
 require 'marc_to_argot/macros/shared/sersol_number'
 require 'marc_to_argot/macros/shared/statement_of_responsibility'
@@ -40,11 +40,11 @@ module MarcToArgot
       include Names
       include CreatorMain #placed here because it requires names
       include Notes
+      include OriginPlace
       include PhysicalDescription
       include PublicationYear
       include PhysicalMedia
       include ResourceType
-      include PlaceOfOrigin #placed here because it requires resource type
       include SeriesStatement
       include SersolNumber
       include StatementOfResponsibility

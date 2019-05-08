@@ -55,7 +55,9 @@ module MarcToArgot
 
         def url_restricted?(href, type)
           exception_matches = open_access_exceptions.select { |e| href.match(e) }.any?
-          return false if href.match(/(\.edu)|(\.gov)/) && !exception_matches && type == 'fulltext'
+          return false if (href.match(/(\.edu)|(\.gov)/) &&
+                          !exception_matches && type == 'fulltext') ||
+                          href.match(/repository\.duke\.edu\/dc/)
           true
         end
 
@@ -64,14 +66,12 @@ module MarcToArgot
              metasearch
              journals.uchicago
              humanities.uchicago
-             muse.edu
              getitatduke
              duke.edu
              .com
              ARTFL
              artfl-project.uchicago.edu
              stephanus.tlg.uci.edu
-             ropercenter.uconn.edu
              ropercenter.cornell.edu
              vha.usc.edu
              bmc.lib.umich.edu
@@ -84,7 +84,6 @@ module MarcToArgot
              ets.umdl.umich.edu
              ehrafworldcultures.yale.edu
              ccrd.usc.cuhk.edu.hk
-             bna.birds.cornell.edu
              woolf-center.southernct.edu
              theindex.princeton.edu
              prde.upress.virginia.edu

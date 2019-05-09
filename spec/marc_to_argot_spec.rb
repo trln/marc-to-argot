@@ -41,10 +41,9 @@ describe MarcToArgot do
   end
 
   it 'generates record_data_source value for UNC' do
-    b1082803argot = run_traject_json('unc', 'b1082803')
-    expect(b1082803argot['record_data_source']).to(
-      eq(['ILSMARC'])
-    )
+    rec = make_rec
+    result = run_traject_on_record('unc', rec)['record_data_source']
+    expect(result).to eq(['ILSMARC'])
   end
 
   it 'generates record_data_source value for Duke' do

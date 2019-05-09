@@ -32,7 +32,7 @@ module MarcToArgot
             # write them out to argot
             argotholdings = []
             tmp_holdings.each { |hrec| argotholdings << hrec.to_argot }
-            cxt.output_hash['holdings'] = argotholdings
+            cxt.output_hash['holdings'] = argotholdings if argotholdings.length > 0
 #            puts "AH: #{argotholdings}"
           end
         end

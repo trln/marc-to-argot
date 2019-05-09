@@ -244,7 +244,7 @@ module MarcToArgot
             unless to_map.empty?
               to_map.each do |bytevals|
                 genre_values << map_byte_value_to_genre(bytevals['lit_form'])
-                genre_values << 'Biography' if bytevals['bio'].scrub =~ /[abcd]/
+                genre_values << 'Biography' if bytevals['bio'] && bytevals['bio'].scrub =~ /[abcd]/
               end
             end
           end
@@ -435,6 +435,8 @@ module MarcToArgot
             %w[a b c d f g h]
           when '690'
             %w[a x]
+          when '691'
+            %w[g x v y z]
           else
             %w[na]
           end

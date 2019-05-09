@@ -1,4 +1,5 @@
-# coding: iso-8859-1
+# coding: utf-8
+
 require 'spec_helper'
 include MarcToArgot::Macros::Shared::PublicationYear
 
@@ -430,8 +431,8 @@ describe MarcToArgot do
         d = get_date('[197-?]', 500, 2024, 'var_field', 500)
         expect(d).to eq(1974)
       end
-      it 'extracts 2017 from \'[2017];©2018\'' do
-        d = get_date('[2017];©2018', 500, 2024, 'var_field', 500)
+      it 'extracts 2017 from \'[2017];Â©2018\'' do
+        d = get_date('[2017];Â©2018', 500, 2024, 'var_field', 500)
         expect(d).to eq(2017)
       end
       it 'extracts 1950 from \'[between 1950 and 1959?]\'' do

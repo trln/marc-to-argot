@@ -5,8 +5,9 @@ require 'marc_to_argot/macros/shared/imprint'
 require 'marc_to_argot/macros/shared/language'
 require 'marc_to_argot/macros/shared/misc_id'
 require 'marc_to_argot/macros/shared/names'
-require 'marc_to_argot/macros/shared/creator_main'
+require 'marc_to_argot/macros/shared/creator_main' #placed here because it requires names
 require 'marc_to_argot/macros/shared/notes'
+require 'marc_to_argot/macros/shared/origin_place'
 require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
 require 'marc_to_argot/macros/shared/publication_year'
@@ -37,8 +38,9 @@ module MarcToArgot
       include Language
       include MiscId
       include Names
-      include CreatorMain
+      include CreatorMain #placed here because it requires names
       include Notes
+      include OriginPlace
       include PhysicalDescription
       include PublicationYear
       include PhysicalMedia

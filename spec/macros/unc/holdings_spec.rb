@@ -22,6 +22,12 @@ describe MarcToArgot do
   let(:holdings16) { run_traject_json('unc', 'holdings16') }
   let(:holdings17) { run_traject_json('unc', 'holdings17') }
   
+  it '(UNC) does not set holdings field if no holdings data' do
+    rec = make_rec
+    argot = run_traject_on_record('unc', rec)
+    expect(argot['holdings']).to be_nil
+  end
+
   it '(UNC) sets holdings locations' do
     expect(b1246383argot['holdings'][0]).to(
       include("\"loc_b\":\"trln\",\"loc_n\":\"trln\"")

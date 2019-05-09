@@ -2,28 +2,26 @@ require 'spec_helper'
 
 describe MarcToArgot do
   include Util::TrajectRunTest
-  let(:b1082803argot) { run_traject_json('unc', 'b1082803') }
-  let(:b1246383argot) { run_traject_json('unc', 'b1246383') }
-  let(:b1319986argot) { run_traject_json('unc', 'b1319986') }
   let(:cat_date) { run_traject_json('unc', 'cat_date') }
   let(:cat_date2) { run_traject_json('unc', 'cat_date2') }
   
   it '(UNC) does not set virtual collection from 919$a' do
-    expect(b1082803argot['virtual_collection']).to(
-      eq(nil)
-    )
+    rec = make_rec
+    rec << MARC::DataField.new('919', ' ', ' ',
+                               ['a', 'testcoll']
+                              )
+    result = run_traject_on_record('unc', rec)['virtual_collection']
+    expect(result).to be_nil
   end
 
   it '(UNC) sets virtual collection from 919$t' do
-    expect(b1246383argot['virtual_collection']).to(
-      eq(['testcoll'])
-    )
-  end
-
-  it '(UNC) sets virtual collection from repeated 919$t' do
-    expect(b1319986argot['virtual_collection']).to(
-      eq(['testcoll', 'anothercoll'])
-    )
+    rec = make_rec
+    rec << MARC::DataField.new('919', ' ', ' ',
+                               ['t', 'testcoll'],
+                               ['t', 'another']
+                              )
+    result = run_traject_on_record('unc', rec)['virtual_collection']
+    expect(result).to eq(['testcoll', 'another'])
   end
 
   it '(UNC) sets date_cataloged' do

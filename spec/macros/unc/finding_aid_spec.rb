@@ -142,7 +142,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'get_ead' do
-    xit '(UNC) gets EAD XML file for ID' do
+    it '(UNC) gets EAD XML file for ID' do
       ead = get_ead('03287')
       expect(ead).to be_a Nokogiri::XML::Document
     end

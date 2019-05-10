@@ -16,8 +16,6 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:bookbotStacksItem) { { 'loc_b' => 'BOOKBOT', 'loc_n' => 'STACKS' } }
 
-  let(:serialItem) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', type: 'SERIAL') }
-
   let(:floatgameItem) { stringhash(loc_b: 'DHHILL', loc_n: 'FLOATGAME', type: 'GAME') }
 
   let(:gamelabItem) { stringhash(loc_b: 'HUNT', loc_n: 'GAMELAB', type: 'GAME-4HR') }
@@ -34,7 +32,11 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:kindle_item) { stringhash(loc_b: 'DHHILL', loc_n: 'STACKS', type: 'EBOOK') }
 
-  let(:fixture_items) { yaml_to_item_fields('ncsu', 'items') }
+  let(:fixture_items) do 
+    yaml_to_item_fields('ncsu', 'items').each_with_object({}) do |(k, v), h|
+      h[k] = marc_to_item(v)
+    end
+  end
 
   let(:copy_no_item) { fixture_items[:copy_no] }
 
@@ -66,7 +68,7 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   context 'NCSU' do
     it 'has a blank copy_no' do
-      expect(marc_to_item(copy_no_item)['copy_no']).to eq('')
+      expect(copy_no_item['copy_no']).to eq('')
     end
 
     it 'does not tag BOOKBOT/STACKS as library_use_only' do
@@ -87,10 +89,6 @@ describe MarcToArgot::Macros::NCSU::Items do
 
     it 'maps special collections as library use only' do
       expect(library_use_only?(speccollItem)).to be(true)
-    end
-
-    it 'maps serials as library use only' do
-      expect(library_use_only?(serialItem)).to be(true)
     end
 
     it 'tags reserves as current_as_home' do
@@ -171,11 +169,11 @@ describe MarcToArgot::Macros::NCSU::Items do
     end
 
     it 'outputs empty string for xx call_no' do
-      expect(marc_to_item(xx_call_no_item)['call_no']).to eq('')
+      expect(xx_call_no_item['call_no']).to eq('')
     end
 
     it 'does not output item notes' do
-      expect(marc_to_item(item_note_item)['notes']).to be_nil
+      expect(item_note_item['notes']).to be_nil
     end
 
     it 'removes item notes' do
@@ -193,5 +191,49 @@ describe MarcToArgot::Macros::NCSU::Items do
       expect(item['status']).to include('Available upon request')
     end
 
+    context 'Serials' do
+      context '#library_use_only?' do
+
+        it 'marks serial at DESIGN as library use only' do
+          expect(library_use_only?(fixture_items[:design_serial])).to be(true)
+        end
+
+        it 'marks serial at Hill as circulatable' do
+          expect(library_use_only?(fixture_items[:hill_serial])).to be(false)
+        end
+
+        it 'marks serial at Hunt as circulatable' do
+          expect(library_use_only?(fixture_items[:hunt_serial])).to be(false)
+        end
+      end
+     
+      context 'Status' do
+        it 'marks Design serial as Library use only' do
+          expect(fixture_items[:design_serial]['status']).to include('Library use only')
+        end
+      end
+
+      # FOURTHFLOORCLOSURE
+      context '#hill_fourth_floor?' do
+        it 'tags book with BC call number on fourth floor' do
+          fourth = fixture_items[:fourth_floor_item]
+          expect(hill_fourth_floor?(fourth)).to be(true)
+          expect(fourth['status']).to include("Available upon request")
+        end
+
+        it 'tags book with EB call number as not on fourth floor' do
+          expect(hill_fourth_floor?(fixture_items[:fifth_floor_item])).to be(false)
+          expect(fixture_items[:fifth_floor_item]['status']).to eq('Available')
+        end
+
+        it 'tags Hunt book with BC call number as not on Hill fourth floor' do
+          expect(hill_fourth_floor?(fixture_items[:hunt_ff_range_item])).to be(false)
+          expect(fixture_items[:hunt_ff_range_item]['status']).to eq('Available')
+        end
+
+
+
+      end
+    end
   end
 end

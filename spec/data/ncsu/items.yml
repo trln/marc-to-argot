@@ -12,6 +12,12 @@
     :w: cn_scheme
     :z: item_cat_2
 
+:hill_stacks: &HILLSTACKS
+  :m: DHHILL
+  :l: STACKS
+  :w: LC
+  :k: STACKS
+
 :no_copy_no:
     :i: SN0C0PY
     :m: DHHILL
@@ -28,3 +34,36 @@
 
 :item_note:
     :o: .STAFF. spine falling apart
+
+# FOURTHFLOORCLOSURE
+:fourth_floor_item:
+  :m: DHHILL
+  :l: STACKS
+  :a: BC 101 .Q298
+
+# FOURTHFLOORCLOSURE
+:fifth_floor_item:
+  :m: DHHILL
+  :l: STACKS
+  :a: EM 101 .Q298
+
+# FOURTHFLOORCLOSURE
+:hunt_ff_range_item:
+  :m: HUNT
+  :l: STACKS
+  :a: BC 101 .Q298
+
+
+:hill_serial:
+  <<: *HILLSTACKS
+  :t: SERIAL
+
+:hunt_serial:
+  <<: *HILLSTACKS
+  :t: SERIAL
+  :m: HUNT
+
+:design_serial:
+  <<: *HILLSTACKS
+  :m: DESIGN
+  :t: SERIAL

@@ -19,7 +19,7 @@ module MarcToArgot
 
         NO_FACET_LOCATIONS = %w[ONLINE BBR].freeze
 
-        MAINS = Set.new(%w[DHILL HUNT]).freeze
+        MAINS = Set.new(%w[DHHILL HUNT BOOKBOT]).freeze
 
         # locations that map to virtual collections
         # library does not matter for these, EXCEPT for LRL/TEXTBOOK
@@ -63,9 +63,15 @@ module MarcToArgot
           [item['loc_b'], item['loc_n']]
         end
 
+        # FOURTHFLOORCLOSURE
+        def hill_fourth_floor?(item)
+          cn = item.fetch('call_no', '')
+          item['loc_b'] == 'DHHILL' && item['loc_n'] == 'STACKS' && ( 'A' <= cn &&cn <= 'DB' )
+        end
+
         # Offsite & requestable
         def offsite?(item)
-          return true if OFFSITE_LIB.include?(item['loc_b'])
+          return true if OFFSITE_LIB.include?(item['loc_b']) || hill_fourth_floor?(item)
 
           case item['loc_b']
           when 'SPECCOLL'
@@ -149,11 +155,15 @@ module MarcToArgot
                         false
                       end
           type_cases = case item['type']
-                       when 'BOOKNOCIRC', 'SERIAL', 'MAP', 'CD-ROM-NC'
+                       when 'SERIAL'
+                        # Hill, Hunt circulate; others do not
+                         !MAINS.include?(lib)
+                       when 'BOOKNOCIRC', 'MAP', 'CD-ROM-NC'
                          true
                        else
                          false
                        end
+
           lib_cases || loc_cases || type_cases
         end
 

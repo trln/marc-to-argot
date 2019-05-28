@@ -6,6 +6,10 @@ include MarcToArgot::Macros::Shared::PublicationYear
 describe MarcToArgot do
   include Util::TrajectRunTest
   describe MarcToArgot::Macros::Shared::PublicationYear do
+
+    # 9999 should translate to current year + 1
+    let (:continuing_resource_max) { Time.now.year + 1 }
+
     context 'DateType = b' do
       context 'AND no 260/4 date' do
         it '(MTA) does not set date' do
@@ -38,7 +42,7 @@ describe MarcToArgot do
         rec = make_rec
         rec['008'].value[6..14] = 'c20129999'
         argot = run_traject_on_record('unc', rec)
-        expect(argot['publication_year']).to eq([9999])
+        expect(argot['publication_year']).to eq([continuing_resource_max])
       end
       it '(MTA) does not set from unusable date2' do
         rec = make_rec
@@ -266,11 +270,12 @@ describe MarcToArgot do
     end
 
     context 'DateType = u' do
+
       it '(MTA) sets from usable date2 if present --- 9999 is considered usable' do
         rec = make_rec
         rec['008'].value[6..14] = 'u20129999'
         argot = run_traject_on_record('unc', rec)
-        expect(argot['publication_year']).to eq([9999])
+        expect(argot['publication_year']).to eq([continuing_resource_max])
       end
       it '(MTA) sets from usable date1 if no usable date2' do
         rec = make_rec

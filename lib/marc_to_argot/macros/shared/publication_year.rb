@@ -4,10 +4,15 @@ module MarcToArgot
       module PublicationYear
 
         # Gets called from traject_config to populate the publication_year field
+        # Uses following configuration parameters:
         #  min_year: earliest date we consider to be a usable publication date
         #    Defaults to 500.
         #  max_year: latest date we consider to be a usable publication date
         #    Defaults to current year, plus 6 (due to ridiculous publisher shenanigans)
+        #  cont_pub_max_year: date to use for continuing resources when they 
+        #  are otherwise found to set the publication date to 9999.
+        #    Defaults to current year plus one.
+        #    
         #  range_tolerance: Maximum range we think is informative enough to set a
         #    publication_year from.
         #    Default so 500, which basically just throws out dates where we only know
@@ -16,10 +21,13 @@ module MarcToArgot
           min_year            = options[:min_year] || 500
           max_year            = options[:max_year] || (Time.new.year + 6)
           range_tolerance     = options[:range_tolerance] || 500
+          # max year to show for continuing resources
+          cont_pub_max_year   = options[:cont_pub_max_year] || Time.new().year + 1
           
           lambda do |rec, acc|
             date = set_year_from_008(rec, min_year, max_year, range_tolerance) if field_present?(rec, '008')
             date = set_year_from_varfield(rec, min_year, max_year, range_tolerance) if date == nil
+            date = cont_pub_max_year if date&.to_i == 9999
             acc << date if date
           end
         end

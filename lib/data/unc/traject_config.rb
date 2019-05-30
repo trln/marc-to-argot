@@ -77,6 +77,8 @@ each_record do |rec, cxt|
   # populate URL fields
   url_unc(rec, cxt)
 
+  # set EAD id
+  set_ead_id(rec, cxt)
   # create items and holdings
   # unless staff have added print item/holdings to DWS shared records
   unless cxt.clipboard[:shared_record_set] == 'dws'

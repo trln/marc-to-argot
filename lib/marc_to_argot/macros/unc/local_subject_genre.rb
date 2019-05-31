@@ -10,6 +10,7 @@ module MarcToArgot
           if rec.leader[6] == 'g'
             mrc_genre_fields(rec, cxt)
           end
+          local_chronological_fields(rec, cxt)
           local_genre_fields(rec, cxt)
           local_geog_fields(rec, cxt)
         end
@@ -36,12 +37,30 @@ module MarcToArgot
           return true if lkup
         end
 
+        def local_chronological_fields(rec, cxt)
+          acc = []
+          Traject::MarcExtractor.cached('690y:691y:695y:698a').each_matching_line(rec) do |field, spec|
+            values = collect_subjects(field, spec)
+            acc.concat(values) unless values.nil? || values.empty?
+          end
+
+          acc.flatten!
+          
+          unless acc.empty?
+            if cxt.output_hash.has_key?('subject_chronological')
+              acc.each { |val| cxt.output_hash['subject_chronological'] << val }
+            else
+              cxt.output_hash['subject_chronological'] = acc
+            end
+            cxt.output_hash['subject_chronological'].uniq!
+          end
+        end
+
         def local_genre_fields(rec, cxt)
           acc = []
           Traject::MarcExtractor.cached('690v:691v:695a:695v:698v').each_matching_line(rec) do |field, spec|
             values = collect_subjects(field, spec)
             acc.concat(values) unless values.nil? || values.empty?
-#            acc << value unless value.nil? || value.empty?
           end
 
           acc.flatten!
@@ -58,6 +77,12 @@ module MarcToArgot
         
         def local_geog_fields(rec, cxt)
           acc = []
+
+          Traject::MarcExtractor.cached('690z:695z:698z').each_matching_line(rec) do |field, spec|
+            values = collect_subjects(field, spec)
+            acc.concat(values) unless values.nil? || values.empty?
+          end
+
           Traject::MarcExtractor.cached('691az').each_matching_line(rec) do |field, spec|
             value = collect_and_join_subjects(field, spec, ' -- ')
             acc << value unless value.nil? || value.empty?

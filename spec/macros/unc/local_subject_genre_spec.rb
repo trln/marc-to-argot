@@ -76,16 +76,25 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
 
   describe 'local_genre_fields' do
     context '695 field(s) present' do
-      it '(MTA) sets subject_heading values from 695' do
+      it '(UNC) sets genre_headings values from 695' do
+        rec = make_rec
+        rec << MARC::DataField.new('695', ' ', '7',
+                                   ['a', 'Patents'],
+                                   ['2', 'uncert'])
+        result = run_traject_on_record('unc', rec)['genre_headings'][0][:value]
+        expect(result).to eq('Patents')
+      end
+
+      it '(UNC) does NOT set subject_headings values from 695' do
         rec = make_rec
         rec << MARC::DataField.new('695', ' ', '7',
                                    ['a', 'Patents'],
                                    ['2', 'uncert'])
         result = run_traject_on_record('unc', rec)['subject_headings'][0][:value]
-        expect(result).to eq('Patents')
+        expect(result).to be_nil
       end
 
-      it '(UNC) sets subject_genre values from 695' do
+     it '(UNC) sets subject_genre values from 695' do
         rec = make_rec
         rec << MARC::DataField.new('695', ' ', '7',
                                    ['a', 'Motion pictures'],
@@ -107,11 +116,45 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
           result = run_traject_on_record('unc', rec)['subject_genre'].sort
           expect(result).to eq(['Documentary films', 'Patents'])
         end
-        
       end
     end
   end
 
+  describe 'local_chronological_fields' do
+    context '698 field(s) present' do
+      it '(MTA) sets subject_heading values from 698' do
+        rec = make_rec
+        rec << MARC::DataField.new('698', ' ', '7',
+                                   ['a', 'Local time period'],
+                                   ['2', 'uncert'])
+        result = run_traject_on_record('unc', rec)['subject_headings'][0][:value]
+        expect(result).to eq('Local time period')
+      end
+
+      it '(UNC) sets subject_chronological values from 698' do
+        rec = make_rec
+        rec << MARC::DataField.new('698', ' ', '7',
+                                   ['a', 'Local time period'],
+                                   ['2', 'uncmrcgen'])
+        result = run_traject_on_record('unc', rec)['subject_chronological']
+        expect(result).to eq(['Local time period'])
+      end
+
+      context 'AND 648 field present' do
+        it '(UNC) sets subject_chronological values from 655 and 695' do
+          rec = make_rec
+          rec << MARC::DataField.new('648', ' ', '0',
+                                     ['a', 'Twentieth century.'])
+          rec << MARC::DataField.new('698', ' ', '7',
+                                     ['a', 'Local time period'],
+                                     ['2', 'uncert'])
+          result = run_traject_on_record('unc', rec)['subject_chronological'].sort
+          expect(result).to eq(['Local time period', 'Twentieth century'])
+        end
+      end
+    end
+  end
+  
   describe 'local_geog_fields' do
     context '691 field(s) present' do
       it '(MTA) sets subject_heading values from 691' do
@@ -134,7 +177,7 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
         expect(result).to eq(['North Carolina -- Eastern section'])
       end
 
-      context 'AND 651 field(z) present' do
+      context 'AND 651 field(s) present' do
         it '(UNC) sets subject_geographic values from 651 and 691' do
           rec = make_rec
           rec << MARC::DataField.new('651', ' ', ' ',
@@ -147,6 +190,23 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
                                      ['x', 'Agriculture'])
           result = run_traject_on_record('unc', rec)['subject_geographic'].sort
           expect(result).to eq(['Durham County', 'North Carolina', 'North Carolina -- Eastern section'])
+        end
+        
+      end
+
+      context 'AND 690/5 field(s) with $z present' do
+        it '(UNC) sets subject_geographic values from $z of other local fields' do
+          rec = make_rec
+          rec << MARC::DataField.new('690', ' ', ' ',
+                                     ['a', 'Genocide'],
+                                     ['z', 'Cambodia'],
+                                     ['2', 'uncmrcsub'])
+          rec << MARC::DataField.new('695', ' ', ' ',
+                                     ['a', 'Foreign films'],
+                                     ['z', 'Cambodia'],
+                                     ['2', 'uncmrcgen'])
+          result = run_traject_on_record('unc', rec)['subject_geographic'].sort
+          expect(result).to eq(['Cambodia'])
         end
         
       end

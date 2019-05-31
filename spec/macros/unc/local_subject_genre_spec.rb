@@ -100,8 +100,8 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
                                    ['a', 'Motion pictures'],
                                    ['v', 'Chinese language'],
                                    ['2', 'uncmrcgen'])
-        result = run_traject_on_record('unc', rec)['subject_genre']
-        expect(result).to eq(['Motion pictures', 'Chinese language'])
+        result = run_traject_on_record('unc', rec)['subject_genre'].sort
+        expect(result).to eq(['Chinese language', 'Motion pictures'])
       end
 
       context 'AND 655 field present' do

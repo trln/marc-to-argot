@@ -139,7 +139,7 @@ module MarcToArgot
         def subject_chronological
           lambda do |rec, acc|
             spec = '600y:610y:611y:630y:'\
-                   '648a:650y:651y:'\
+                   '648a:648y:650y:651y:'\
                    '655y:656y:657y'
             local_spec = settings['specs'][:subject_chronological_local]
             spec = spec + ':' + local_spec if local_spec

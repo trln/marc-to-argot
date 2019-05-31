@@ -30,7 +30,8 @@ subject_geographic_local:
 subject_geographic_local_concatenated:
   - 691az
 subject_topical_local:
-  - 690ax
+  - 690abcdfghjklmnopqrstu
+  - 690x
   - 691x
   - 695x
   - 698x

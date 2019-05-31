@@ -74,6 +74,57 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
     end  
   end
 
+  describe 'local_subject_fields' do
+      it '(UNC) sets subject_headings values from 690' do
+        rec = make_rec
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'Family planning'],
+                                   ['x', 'Programs'])
+        result = run_traject_on_record('unc', rec)['subject_headings'][0][:value]
+        expect(result).to eq('Family planning -- Programs')
+
+        rec = make_rec
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'University of North Carolina at Chapel Hill.'],
+                                   ['b', 'School of Medicine'],
+                                   ['v', 'Addresses.'])
+        result = run_traject_on_record('unc', rec)['subject_headings'][0][:value]
+        expect(result).to eq('University of North Carolina at Chapel Hill. School of Medicine -- Addresses')
+
+        rec = make_rec
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'Southern imprints'],
+                                   ['z', 'Georgia.'])
+        result = run_traject_on_record('unc', rec)['subject_headings'][0][:value]
+        expect(result).to eq('Southern imprints -- Georgia')
+      end
+
+      it '(UNC) sets subject_topical values from 690' do
+        rec = make_rec
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'Family planning'],
+                                   ['x', 'Programs'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'University of North Carolina at Chapel Hill.'],
+                                   ['b', 'School of Medicine'],
+                                   ['x', 'History.'])
+        rec << MARC::DataField.new('690', ' ', ' ',
+                                   ['a', 'Southern imprints'],
+                                   ['z', 'Georgia.'])
+        result = run_traject_on_record('unc', rec)['subject_topical'].sort
+        expect(result).to eq(['Family planning', 'History', 'Programs', 'Southern imprints', 'University of North Carolina at Chapel Hill. School of Medicine'])
+      end
+
+      it '(UNC) sets subject_topical values from 695$x' do
+        rec = make_rec
+        rec << MARC::DataField.new('695', ' ', ' ',
+                                   ['a', 'Genre/form'],
+                                   ['x', 'Programs'])
+        result = run_traject_on_record('unc', rec)['subject_topical'].sort
+        expect(result).to eq(['Programs'])
+      end
+  end
+  
   describe 'local_genre_fields' do
     context '695 field(s) present' do
       it '(UNC) sets genre_headings values from 695' do

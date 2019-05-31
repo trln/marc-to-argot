@@ -460,7 +460,7 @@ module MarcToArgot
           when '662'
             %w[a b c d f g h]
           when '690'
-            %w[a x]
+            %w[a v x y z]
           when '691'
             %w[g x v y z]
           when '695'

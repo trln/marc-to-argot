@@ -29,10 +29,10 @@ module MarcToArgot
                    '653|*5|a:'\
                    '656akvxyz:'\
                    '657avxyz:'\
-                   '662abcdfgh:'\
-                   '690ax:'\
-                   '691abvxyz:'\
-                   '695a'
+                   '662abcdfgh'
+            local_spec = settings['specs'][:subject_headings_local]
+            spec = spec + ':' + local_spec if local_spec
+            
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               headings = []
               
@@ -69,6 +69,9 @@ module MarcToArgot
         def genre_headings
           lambda do |rec, acc|
             spec = '382a:382b:382d:382p:384a:567b:600v:610v:611v:630v:647v:648v:650v:651v:653| 6|a:655v:656kv:657v'
+            local_spec = settings['specs'][:genre_headings_local_single_values]
+            spec = spec + ':' + local_spec if local_spec
+            
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               values = collect_subjects(field, spec)
               headings = values.map do |v|
@@ -81,7 +84,11 @@ module MarcToArgot
               acc.concat(headings) unless headings.empty?
             end
 
-            Traject::MarcExtractor.cached('655axyz').each_matching_line(rec) do |field, spec|
+            spec = '655avxyz'
+            local_spec = settings['specs'][:genre_headings_local]
+            spec = spec + ':' + local_spec if local_spec
+            
+            Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               heading = {}
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x y z].include?(sf.code) }, spec)
               lang = Vernacular::ScriptClassifier.new(field, value).classify
@@ -111,8 +118,10 @@ module MarcToArgot
                    '653|*3|a:'\
                    '653|*4|a:'\
                    '656ax:'\
-                   '657ax:'\
-                   '690a:690x'
+                   '657ax'
+            local_spec = settings['specs'][:subject_topical_local]
+            spec = spec + ':' + local_spec if local_spec
+            
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
 
               values = collect_subjects(field, spec)
@@ -132,6 +141,9 @@ module MarcToArgot
             spec = '600y:610y:611y:630y:'\
                    '648a:650y:651y:'\
                    '655y:656y:657y'
+            local_spec = settings['specs'][:subject_chronological_local]
+            spec = spec + ':' + local_spec if local_spec
+            
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
 
               values = collect_subjects(field, spec)
@@ -153,12 +165,19 @@ module MarcToArgot
                    '651z:'\
                    '653|*5|a:655z:656z:'\
                    '657z:662a:662b:662c:662d:662f:662g:662h'
+            local_spec = settings['specs'][:subject_geographic_local]
+            spec = spec + ':' + local_spec if local_spec
+            
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               values = collect_subjects(field, spec)
               acc.concat(values) unless values.nil? || values.empty?
             end
 
-            Traject::MarcExtractor.cached('651ag').each_matching_line(rec) do |field, spec|
+            spec = '651ag'
+            local_spec = settings['specs'][:subject_geographic_local_concatenated]
+            spec = spec + ':' + local_spec if local_spec
+
+            Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               value = collect_and_join_subjects(field, spec, ' -- ')
               acc << value unless value.nil? || value.empty?
             end
@@ -177,12 +196,19 @@ module MarcToArgot
                    '600v:610v:611v:630v:647v:'\
                    '648v:650v:651v:653|*6|a:'\
                    '655v:656v:656k:657v'
+            local_spec = settings['specs'][:subject_genre_local]
+            spec = spec + ':' + local_spec if local_spec
+            
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               values = collect_subjects(field, spec)
               acc.concat(values) unless values.nil? || values.empty?
             end
 
-            Traject::MarcExtractor.cached('655ax').each_matching_line(rec) do |field, spec|
+            spec = '655ax'
+            local_spec = settings['specs'][:subject_genre_local_concatenated]
+            spec = spec + ':' + local_spec if local_spec
+
+            Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x].include?(sf.code) }, spec)
               acc << value unless value.nil? || value.empty?
             end

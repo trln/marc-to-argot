@@ -90,7 +90,7 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
         rec << MARC::DataField.new('695', ' ', '7',
                                    ['a', 'Patents'],
                                    ['2', 'uncert'])
-        result = run_traject_on_record('unc', rec)['subject_headings'][0][:value]
+        result = run_traject_on_record('unc', rec)['subject_headings']
         expect(result).to be_nil
       end
 
@@ -191,7 +191,6 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
           result = run_traject_on_record('unc', rec)['subject_geographic'].sort
           expect(result).to eq(['Durham County', 'North Carolina', 'North Carolina -- Eastern section'])
         end
-        
       end
 
       context 'AND 690/5 field(s) with $z present' do

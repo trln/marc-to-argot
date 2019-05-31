@@ -59,12 +59,6 @@ each_record do |rec, context|
   end
 end
 
-################################################
-# Items
-
-######
-
-
 each_record do |rec, cxt|
   # identify shared record set members
   # this must come before URLs and shared records fields are processed

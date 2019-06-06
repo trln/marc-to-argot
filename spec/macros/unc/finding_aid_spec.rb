@@ -6,7 +6,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   include Util::TrajectRunTest
 
   describe 'collection_or_subunit?' do
-    xit '(UNC) returns true if LDR/07 = c or d' do
+    it '(UNC) returns true if LDR/07 = c or d' do
       rec = make_rec
       rec.leader[7] = 'c'
       expect(collection_or_subunit?(rec)).to eq(true)
@@ -18,13 +18,13 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'has_finding_aid_url?' do
-    xit '(UNC) returns true if 856 42 with finding aid url' do
+    it '(UNC) returns true if 856 42 with finding aid url' do
       rec = make_rec
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://finding-aids.lib.unc.edu/03287/'])
       expect(has_finding_aid_url?(rec)).to eq(true)
     end
-    xit '(UNC) returns false if no finding aid url' do
+    it '(UNC) returns false if no finding aid url' do
       rec = make_rec
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://library.unc.edu'])
@@ -33,13 +33,13 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
   
   describe 'has_nps_id?' do
-    xit '(UNC) returns true if 919 0. where $a starts with nps' do
+    it '(UNC) returns true if 919 0. where $a starts with nps' do
       rec = make_rec
       rec << MARC::DataField.new('919', '0', ' ',
                                  ['a', 'nps3605088x'])
       expect(has_nps_id?(rec)).to eq(true)
     end
-    xit '(UNC) returns false if no nps id' do
+    it '(UNC) returns false if no nps id' do
       rec = make_rec
       rec << MARC::DataField.new('919', '0', ' ',
                                  ['a', 'something else'])
@@ -50,7 +50,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   describe 'finding_aid_enhanceable?' do
     context 'WHEN record has 856 42 with $u matching http://finding-aids.lib.unc.edu/' do
       context 'AND LDR/07 = d' do
-        xit '(UNC) finding_aid_enhanceable? = ead' do
+        it '(UNC) finding_aid_enhanceable? = ead' do
           rec = make_rec
           rec.leader[7] = 'd'
           rec << MARC::DataField.new('856', '4', '2',
@@ -61,7 +61,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
         end
       end
       context 'AND LDR/07 = c' do
-        xit '(UNC) finding_aid_enhanceable? = ead' do
+        it '(UNC) finding_aid_enhanceable? = ead' do
           rec = make_rec
           rec.leader[7] = 'c'
           rec << MARC::DataField.new('856', '4', '2',
@@ -72,7 +72,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
         end
       end
       context 'AND LDR/07 is not c or d' do
-        xit '(UNC) finding_aid_enhanceable? = nil' do
+        it '(UNC) finding_aid_enhanceable? = nil' do
           rec = make_rec
           rec.leader[7] = 'm'
           rec << MARC::DataField.new('856', '4', '2',
@@ -85,7 +85,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
     end
 
     context 'WHEN record has nps id in 919' do
-      xit '(UNC) finding_aid_enhanceable? = nps' do
+      it '(UNC) finding_aid_enhanceable? = nps' do
         rec = make_rec
         rec << MARC::DataField.new('919', '0', ' ',
                                    ['a', 'nps666'])
@@ -95,7 +95,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
     end
 
     context 'WHEN record does not have finding aid url or nps id' do
-      xit '(UNC) finding_aid_enhanceable? = nil' do
+      it '(UNC) finding_aid_enhanceable? = nil' do
         rec = make_rec
         result = finding_aid_enhanceable?(rec)
         expect(result).to be_nil
@@ -104,7 +104,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'get_finding_aid_id' do
-    xit '(UNC) gets EAD id from url for real finding aids' do
+    it '(UNC) gets EAD id from url for real finding aids' do
       rec = make_rec
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://finding-aids.lib.unc.edu/03287/'])
@@ -113,7 +113,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'get_nps_id' do
-    xit '(UNC) gets EAD id from url for NPS titles' do
+    it '(UNC) gets EAD id from url for NPS titles' do
       rec = make_rec
       rec << MARC::DataField.new('919', '0', ' ',
                                  ['a', 'nps36049712'])
@@ -122,7 +122,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'get_finding_aid_urls' do
-    xit '(UNC) gets finding aid urls' do
+    it '(UNC) gets finding aid urls' do
       rec = make_rec
       rec << MARC::DataField.new('856', '4', '2',
                                  ['u', 'http://finding-aids.lib.unc.edu/03287/'])
@@ -135,28 +135,28 @@ describe MarcToArgot::Macros::UNC::FindingAid do
   end
 
   describe 'get_ead_uri' do
-    xit '(UNC) builds URI to EAD XML file from EAD or NPS ID' do
+    it '(UNC) builds URI to EAD XML file from EAD or NPS ID' do
       uri = 'https://finding-aids.lib.unc.edu/ead/03287.xml'
       expect(get_ead_uri('03287')).to eq(uri)
     end
   end
 
   describe 'get_ead' do
-    it '(UNC) gets EAD XML file for ID' do
+    xit '(UNC) gets EAD XML file for ID' do
       ead = get_ead('03287')
       expect(ead).to be_a Nokogiri::XML::Document
     end
   end
 
   describe 'get_biog_hist_note' do
-    xit '(UNC) extracts biographical history note' do
+    it '(UNC) extracts biographical history note' do
       x = '<ead><archdesc><bioghist><head>Heading</head><p>First <title render="italic">part</title>.</p><p>Second part.</p></bioghist></archdesc></ead>'
       xml = Nokogiri::XML(x)
       result = ['First part.', 'Second part.']
       expect(get_biog_hist_note(xml)).to eq(result)
     end
 
-    xit '(UNC) handles p, ignores chronlist, eventgrp in bioghist note' do
+    it '(UNC) handles p, ignores chronlist, eventgrp in bioghist note' do
       # Punting on dealing with chronlists for now. Unlikely to bear any uniquely informative
       #  keywords. We're going to have to redo all these mappings for ArchivesSpace
       #  eventually anyway.

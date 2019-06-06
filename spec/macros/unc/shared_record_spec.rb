@@ -15,7 +15,7 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
     it 'identifies ASP records' do
       rec = make_rec
       rec << MARC::DataField.new('919', ' ', ' ',
-                                 ['a', 'ASPSVFLON']
+                                 ['a', 'ASPFLON']
                                 )
       result = id_shared_record_set(rec)
       expect(result).to eq('asp')

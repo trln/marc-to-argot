@@ -8,17 +8,15 @@ module MarcToArgot
         def id_shared_record_set(rec)
           shared_set = nil
           Traject::MarcExtractor.cached('919|  |a:773|0 |t', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-            value = field.value.downcase
+            value = field.to_s.downcase
             case value
-            when 'aspsvflon'
+            when /asp/
               shared_set = 'asp'
-            when 'aspsvanth'
-              shared_set = 'asp'
-            when 'dwsgpo'
+            when /dwsgpo/
               shared_set = 'dws'
-            when 'troup'
+            when /troup/
               shared_set = 'oupp'
-            when /^center for research libraries \(crl\) eresources \(online collection\)/
+            when /center for research libraries \(crl\) eresources \(online collection\)/
               shared_set = 'crl'
             end
           end

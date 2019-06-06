@@ -125,7 +125,7 @@ module MarcToArgot
           oclc035s = get_oclc_035s(id_data['035'])
           z035_digits_only = id_data['035z'].select { |z| z.match(/^\d+$/) }.first
           return clean_oclc_number(clean_001_or_019(the001)) if oclc_001?(the001, the003)
-          return clean_oclc_number(clean_035(oclc035s.first)) if oclc035s
+          return clean_oclc_number(clean_001_or_019(clean_035(oclc035s.first))) if oclc035s
           return z035_digits_only if the001.start_with?('ss') && z035_digits_only
         end
 

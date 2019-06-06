@@ -49,9 +49,9 @@ module MarcToArgot
             media << 'Large print' if large_print?
             media << 'Laserdisc' if laserdisc?
             media << 'Microform' if microform?
-            media << 'Microform > Microfiche' if microform_microfiche?
-            media << 'Microform > Microfilm' if microform_microfilm?
-            media << 'Microform > Microopaque' if microform_microopaque?
+            media << 'Microform > Microfiche' if microfiche?
+            media << 'Microform > Microfilm' if microfilm?
+            media << 'Microform > Microopaque' if microopaque?
             media << 'Photograph/picture' if photograph_picture?
             media << 'Photographic negative' if photographic_negative?
             media << 'Postcard' if postcard?
@@ -86,6 +86,27 @@ module MarcToArgot
             media << 'Videoreel (Type C)' if videoreel_type_c?
 
             media
+          end
+
+          def get_gmd
+            record['245']['h'] if record['245']
+          end
+
+          def get_form_item_008
+            rectype = record.leader[6]
+            the008 = record['008']
+            the008.value[23] if the008 && %w[a c d i j p].include?(rectype)
+            the008.value[29] if the008 && %w[e f g k o r].include?(rectype)
+          end
+
+          def get_form_item_006
+            the006s = record.fields('006')
+            values = []
+            the006s.each do |f|
+               values << f.value[6] if %w[a t m p c d i j s].include?(f.value[0])
+               values << f.value[12] if %w[e f g k o r].include?(f.value[0])
+            end
+            values.uniq unless values.empty?
           end
 
           def art_reproduction?
@@ -247,30 +268,98 @@ module MarcToArgot
           end
 
           def microform?
+            return true if microform_gmd? || microform_006? || microform_007? || microform_008?
+          end
+
+          def microform_gmd?
+            gmd = get_gmd
+            return true if gmd && gmd['[microform']
+          end
+          
+          def microform_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h'
             end
           end
 
-          def microform_microfilm?
+          def microform_006?
+            return true if get_form_item_006 && get_form_item_006.join('') =~ /[abc]/
+          end
+
+          def microform_008?
+            return true if %w[a b c].include?(get_form_item_008)
+          end
+
+          def microfilm?
+            return true if microfilm_gmd? || microfilm_006? || microfilm_007? || microfilm_008?
+          end
+
+          def microfilm_gmd?
+            gmd = get_gmd
+            return true if gmd && gmd['[microfilm']
+          end
+          
+          def microfilm_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h' &&
               %w[b c d h j].include?(field.value.byteslice(1))
             end
           end
 
-          def microform_microfiche?
+          def microfilm_006?
+            return true if get_form_item_006 && get_form_item_006.include?('a')
+          end
+
+          def microfilm_008?
+            return true if get_form_item_008 == 'a'
+          end
+
+          def microfiche?
+            return true if microfiche_gmd? || microfiche_006? || microfiche_007? || microfiche_008?
+          end
+
+          def microfiche_gmd?
+            gmd = get_gmd
+            return true if gmd && gmd['[microfiche']
+          end
+          
+          def microfiche_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h' &&
               %w[e f].include?(field.value.byteslice(1))
             end
           end
 
-          def microform_microopaque?
+          def microfiche_006?
+            return true if get_form_item_006 && get_form_item_006.include?('b')
+          end
+
+          def microfiche_008?
+            return true if get_form_item_008 == 'b'
+          end
+
+          def microopaque?
+            return true if microopaque_gmd? || microopaque_006? || microopaque_007? || microopaque_008?
+          end
+
+          def microopaque_gmd?
+            gmd = get_gmd
+            return true if gmd && gmd['[microopaque']
+          end
+          
+          def microopaque_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h' &&
               field.value.byteslice(1) == 'g'
             end
+          end
+
+          def microopaque_006?
+            return true if get_form_item_006 && get_form_item_006.include?('c')
+          end
+
+          def microopaque_008?
+            return true if get_form_item_008 == 'c'
           end
 
           def photograph_picture?
@@ -306,7 +395,9 @@ module MarcToArgot
           # for a print item. I've duplicated how the out of the box Traject format
           # classifier determines if a record is "print." Seems OK. Can revisit.
           def print?
-            gmd = record['245']['h'] if record['245']
+            gmd = get_gmd
+            # serials are often print and printed music is clearly print
+            gmd = nil if gmd && ( gmd['[serial]'] || gmd['[printed music]'] )
 
             # has explicit carrier field value indicating print-type resource
             if print_carrier?

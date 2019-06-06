@@ -6,6 +6,7 @@ require 'util'
 require 'marc/record'
 
 RSpec.configure do |c|
+  c.example_status_persistence_file_path = "spec/reports/rspec.txt"
   c.include Util::TrajectRunTest
 end
 

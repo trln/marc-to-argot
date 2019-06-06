@@ -54,7 +54,8 @@ module MarcToArgot
           case field_tag_or_880_linkage_tag(field)
           when '440', '490'
             collect_subfield_values_by_code(field, 'x').map do |v|
-              extract_identifier(v).chomp(';').strip
+              id = extract_identifier(v)
+              id.chomp(';').strip if id
             end
           end
         end

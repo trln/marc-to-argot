@@ -4,6 +4,7 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util
   let(:series) { run_traject_json('unc', 'series_statement', 'mrc') }
+  let(:botched_series) { run_traject_json('duke', 'bad-490', 'xml') }
 
   it '(MTA) sets series_statement' do
     result = series['series_statement']
@@ -56,5 +57,10 @@ describe MarcToArgot do
                            { 'value' => 'Серия "Библиотека Самиздата" ; no. 2',
                              'lang' => 'rus' }
                          ])
+  end
+
+  it 'record processing does not fail if the subfield is present but empty' do
+    result = botched_series['series_statement']
+    expect(result).to eq([{ 'issn' => [nil], 'value' => ', ' }])
   end
 end

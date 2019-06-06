@@ -118,7 +118,7 @@ module MarcToArgot
             if i1 == '0'
               'SUDOC'
             else
-              'OTHERGOVDOC'
+              'ALPHANUM'
             end
           when '090'
             'LC'
@@ -127,6 +127,8 @@ module MarcToArgot
           when '096'
             'NLM'
           when '099'
+            'ALPHANUM'
+          else
             'ALPHANUM'
           end
         end

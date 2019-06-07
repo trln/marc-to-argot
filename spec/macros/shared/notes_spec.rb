@@ -27,6 +27,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_organization) { run_traject_json('duke', 'note_organization', 'mrc') }
   let(:note_performer_credits_01) { run_traject_json('duke', 'note_performer_credits_01', 'mrc') }
   let(:note_performer_credits_02) { run_traject_json('duke', 'note_performer_credits_02', 'mrc') }
+  let(:note_preferred_citation) { run_traject_json('duke', 'note_citation', 'xml')}
   let(:note_production_credits) { run_traject_json('duke', 'note_production_credits', 'mrc') }
   let(:note_related_work_01) { run_traject_json('duke', 'note_related_work_01', 'mrc') }
   let(:note_related_work_02) { run_traject_json('duke', 'note_related_work_02', 'mrc') }
@@ -42,7 +43,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_with) { run_traject_json('duke', 'note_with', 'mrc') }
   let(:note_system_details_vernacular) { run_traject_json('unc', 'vern_note_sys_det', 'mrc') }
   let(:note_use_terms) { run_traject_json('duke', 'note_use_terms', 'xml') }
-  
+
   it '(MTA) sets note_access_restrictions' do
     result = note_access_restrictions['note_access_restrictions']
     expect(result).to eq(
@@ -538,6 +539,13 @@ describe MarcToArgot::Macros::Shared::Notes do
   it '(MTA) sets note_performer_credits when there is NOT a label' do
     result = note_performer_credits_02['note_performer_credits']
     expect(result).to include({ 'value' => 'Netherlands Radio Symphony Orchestra ; Jac van Steen, conductor.' })
+  end
+
+  it '(Duke) sets note_preferred_citation' do
+    result = note_preferred_citation['note_preferred_citation']
+    expect(result).to(
+      eq(['M. F. Wilson diary, David M. Rubenstein Rare Book & Manuscript Library, Duke University.'])
+    )
   end
 
   it '(MTA) sets note_production_credits' do

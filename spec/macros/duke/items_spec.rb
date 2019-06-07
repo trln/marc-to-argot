@@ -47,7 +47,7 @@ describe MarcToArgot::Macros::Duke::Items do
             "\"loc_n\":\"LGEN\"," \
             "\"notes\":[\"Currently received\"]," \
             "\"call_no\":\"KD135 .H3 4th\"," \
-            "\"summary\":\"v.1-v.52; Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
+            "\"summary\":\"Holdings: v.1-v.52; Supplements: Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
       )
     end
 

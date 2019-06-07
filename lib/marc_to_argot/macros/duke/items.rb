@@ -155,9 +155,7 @@ module MarcToArgot
 
               holding['call_no'] = call_number unless call_number.empty?
 
-              summary = [holding.delete('summary'),
-                         holding.delete('index'),
-                         holding.delete('supplement')].compact.join('; ')
+              summary = holdings_summary_with_labels(holding)
 
               holding['summary'] = summary unless summary.empty?
 
@@ -170,6 +168,16 @@ module MarcToArgot
               acc << holding.to_json if holding.any?
             end
           end
+        end
+
+        def holdings_summary_with_labels(holding)
+          labels = ['Holdings',
+                    'Indexes',
+                    'Supplements']
+          summaries = [holding.delete('summary'),
+                       holding.delete('index'),
+                       holding.delete('supplement')]
+          labels.zip(summaries).to_h.reject { |_, v| v.nil?}.to_a.map { |e| e.join(': ') }.join('; ')
         end
 
         ################################################

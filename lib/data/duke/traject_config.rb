@@ -109,6 +109,12 @@ to_field 'date_cataloged' do |rec, acc|
 end
 
 # ################################################
+# # Note Use Terms
+# ######
+
+to_field 'note_use_terms', note_use_terms
+
+# ################################################
 # # Final each_record block
 # ######
 

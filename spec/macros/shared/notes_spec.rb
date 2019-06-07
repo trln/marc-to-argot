@@ -41,6 +41,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_system_details) { run_traject_json('duke', 'note_system_details', 'mrc') }
   let(:note_with) { run_traject_json('duke', 'note_with', 'mrc') }
   let(:note_system_details_vernacular) { run_traject_json('unc', 'vern_note_sys_det', 'mrc') }
+  let(:note_use_terms) { run_traject_json('duke', 'note_use_terms', 'xml') }
   
   it '(MTA) sets note_access_restrictions' do
     result = note_access_restrictions['note_access_restrictions']
@@ -682,6 +683,14 @@ describe MarcToArgot::Macros::Shared::Notes do
                         [ 'Xi tong yao qiu: Blu-ray bo fang she bei ji xiang guan ruan jian.',
                           '系统要求: Blu-ray播放设备及相关软件.'
                         ])
+  end
+
+  it '(Duke) sets note_use_terms' do
+    result = note_use_terms['note_use_terms']
+    expect(result).to(
+      eq(['Vascular plant data: Portion of data provided by John Kartesz and copyrighted. '\
+          'John Kartesz, Biota of North America Program (BONAP).'])
+    )
   end
 
 end

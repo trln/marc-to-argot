@@ -57,6 +57,28 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
           expect(result).to be_nil
         end
       end
+
+      context 'AND 69x present but lacks $2' do
+        it '(UNC) continues on like nothing happened (does not croak)' do
+          rec = make_rec
+          rec.leader[6] = 'g'
+          rec << MARC::DataField.new('690', ' ', '0',
+                                     ['a', 'Animal behavior'])
+          result = run_traject_on_record('unc', rec)['genre_unc_mrc']
+          expect(result).to be_nil
+        end
+      end
+      
+      context 'AND no 69x present' do
+        it '(UNC) continues on like nothing happened (does not croak)' do
+          rec = make_rec
+          rec.leader[6] = 'g'
+          rec << MARC::DataField.new('650', ' ', '0',
+                                     ['a', 'Animal behavior'])
+          result = run_traject_on_record('unc', rec)['genre_unc_mrc']
+          expect(result).to be_nil
+        end
+      end
     end
     context 'LDR/06 != g' do
       it '(UNC) does not set genre_unc_mrc' do
@@ -72,6 +94,15 @@ describe MarcToArgot::Macros::UNC::LocalSubjectGenre do
         expect(result).to be_nil
       end
     end  
+    context 'AND no 69x present' do
+      it '(UNC) continues on like nothing happened (does not croak)' do
+        rec = make_rec
+        rec << MARC::DataField.new('650', ' ', '0',
+                                   ['a', 'Animal behavior'])
+        result = run_traject_on_record('unc', rec)['genre_unc_mrc']
+        expect(result).to be_nil
+      end
+    end
   end
 
   describe 'local_subject_fields' do

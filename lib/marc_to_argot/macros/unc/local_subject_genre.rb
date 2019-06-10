@@ -24,7 +24,7 @@ module MarcToArgot
         end
 
         def is_mrc_heading?(field)
-          return true if field['2'].start_with?('uncmrc')
+          return true if field['2'] && field['2'].start_with?('uncmrc')
         end
 
         def is_mrc_genre_dropdown_value?(field)

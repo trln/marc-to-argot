@@ -146,4 +146,13 @@ describe MarcToArgot::Macros::UNC::ResourceType do
       expect(rt).to include('Dataset -- Geospatial')
     end
   end
+
+  context '919 field containing EQUIP is present' do
+    it '(UNC) resource_type includes Technology and accessories' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ',  ' ', ['a', 'EQUIP'])
+      rt = run_traject_on_record('unc', rec)['resource_type']
+      expect(rt).to include('Technology and accessories')
+    end
+  end
 end

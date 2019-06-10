@@ -177,7 +177,10 @@ module MarcToArgot
           summaries = [holding.delete('summary'),
                        holding.delete('index'),
                        holding.delete('supplement')]
-          labels.zip(summaries).to_h.reject { |_, v| v.nil?}.to_a.map { |e| e.join(': ') }.join('; ')
+          labels.zip(summaries)
+                .reject { |i| i[1].nil? }
+                .map { |e| e.join(': ') }
+                .join('; ')
         end
 
         ################################################

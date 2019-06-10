@@ -329,7 +329,7 @@ module MarcToArgot
       end
 
       ################################################
-      # Note Performer Credits
+      # Note Preferred Citation
       ######
       def note_preferred_citation
         lambda do |rec, acc|

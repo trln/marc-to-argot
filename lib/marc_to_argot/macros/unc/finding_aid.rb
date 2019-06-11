@@ -3,6 +3,21 @@ module MarcToArgot
     module UNC
       module FindingAid
         require 'open-uri'
+        def set_ead_id(rec, cxt)
+          id = get_finding_aid_id(rec) if finding_aid_enhanceable?(rec) == 'ead'
+          if id
+          idhash = {'value' => "UNC FA #{id}",
+                    'display' => 'false',
+                    'type' => 'Finding aid ID'}
+
+          if cxt.output_hash.has_key?('misc_id')
+            cxt.output_hash['misc_id'] << idhash
+          else
+            cxt.output_hash['misc_id'] = [idhash]
+          end
+          end
+        end
+        
         def finding_aid_enhanceable?(rec)
           return 'nps' if has_nps_id?(rec)
           return 'ead' if collection_or_subunit?(rec) &&

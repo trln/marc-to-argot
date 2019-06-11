@@ -33,6 +33,9 @@ module MarcToArgot
             if unc_dataset_statistical?
               formats << 'Dataset -- Statistical'
             end
+            if unc_equip?
+              formats << 'Technology and accessories'
+            end
             if unc_manuscript?
               formats = []
               formats << 'Archival and manuscript material'
@@ -120,7 +123,13 @@ module MarcToArgot
           # Software/multimedia
           def software_mm_comp_file_types
             %w[b f g i]
-           end
+          end
+
+          def unc_equip?
+            any919s = record.fields('919')
+            val919s = any919s.map { |field| field.value.strip } unless any919s.empty?
+            return true if val919s && val919s.include?('EQUIP')
+          end
           
           # Text corpus
           # LDR/06 = m AND 008/26 = d AND 006/00 = a AND 336 contains dataset or cod

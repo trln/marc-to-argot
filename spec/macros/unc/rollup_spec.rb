@@ -320,6 +320,13 @@ describe MarcToArgot::Macros::UNC::Rollup do
             result = get_oclc_number(id_data)
             expect(result).to eq('666')
           end
+          context 'AND that 035$a value is digits followed by alpha suffix' do
+            it '(UNC) strips alpha suffix from end of 035$a' do
+              id_data = { '001' => 'GPVL9933522196501551', '003' => 'CMalG', '019' => [], '035' => ['(OCoLC)874575136gpvl'], '035z' => [] }
+              result = get_oclc_number(id_data)
+              expect(result).to eq('874575136')
+            end
+          end
         end
       end
       

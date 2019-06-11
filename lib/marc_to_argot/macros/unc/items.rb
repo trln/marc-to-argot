@@ -32,10 +32,15 @@ module MarcToArgot
        end
 
         def assemble_item(field)
-          item = {}
-          
+          item = { 'notes' => [] }
+          call_no_tag = ''
+          call_no_i1 = ''
+          call_no_i2 = ''
+          call_no_val = ''
+
           # https://github.com/trln/extract_marcxml_for_argot_unc/blob/master/attached_record_data_mapping.csv
           field.subfields.each do |subfield|
+            
             sf = subfield.code
             subfield.value.gsub!(/\|./, ' ') #remove subfield delimiters and
             subfield.value.strip! #delete leading/trailing spaces
@@ -52,15 +57,13 @@ module MarcToArgot
               item['loc_b'] = subfield.value
               item['loc_n'] = subfield.value
             when 'n'
-              if item.has_key?('notes')
                 item['notes'] << subfield.value
-              else
-                item['notes'] = [subfield.value]
-              end
             when 'p'
-              item['cn_scheme'] = set_cn_scheme(subfield.value[0, 3], subfield.value[3], subfield.value[4])
+              call_no_tag = subfield.value[0, 3]
+              call_no_i1 = subfield.value[3]
+              call_no_i2 = subfield.value[4]
             when 'q'
-              item['call_no'] = subfield.value
+              call_no_val = subfield.value
             when 's'
                 item['status'] = status_map[subfield.value]
             when 'v'
@@ -69,6 +72,20 @@ module MarcToArgot
           end
 
           item['status'] = 'Checked out' if item['due_date']
+
+          if call_no_val.downcase.start_with?('shelved')
+            item['notes'] << call_no_val
+            call_no_val = ''
+          else
+            item['call_no'] = call_no_val
+          end
+
+          if item.has_key?('call_no')
+            item['cn_scheme'] = set_cn_scheme(call_no_tag, call_no_i1, call_no_i2)            
+          end
+
+          item.delete('notes') if item['notes'].length == 0
+          
           item
         end
         
@@ -97,17 +114,21 @@ module MarcToArgot
             'DDC'
           when '083'
             'DDC'
-          when '090'
-            'LC'
-          when '092'
-            'DDC'
           when '086'
             if i1 == '0'
               'SUDOC'
             else
-              'OTHERGOVDOC'
+              'ALPHANUM'
             end
+          when '090'
+            'LC'
+          when '092'
+            'DDC'
+          when '096'
+            'NLM'
           when '099'
+            'ALPHANUM'
+          else
             'ALPHANUM'
           end
         end

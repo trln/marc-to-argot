@@ -43,6 +43,35 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
     expect(pm4).to eq(['Print'])
 
     rec = make_rec
+    rec.leader[5] = 'c'
+    rec.leader[6] = 'a'
+    rec.leader[7] = 's'
+    rec << MARC::ControlField.new('008', '880811d19uu1967mauar         0   a0eng d')
+    rec << MARC::DataField.new('245', '1', '4',
+                               ['a', 'The Harvard Forest and Harvard Black Rock Forest annual report'],
+                               ['h', '[serial] /'],
+                               ['c', 'Harvard University.']
+                              )
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', 'v. ;'))
+    pm4 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm4).to eq(['Print'])
+
+    rec = make_rec
+    rec.leader[5] = 'c'
+    rec.leader[6] = 'a'
+    rec.leader[7] = 's'
+    rec << MARC::ControlField.new('008', '880324d19671970dcuar1   i   f0   a0eng u')
+    rec << MARC::DataField.new('245', '0', '0',
+                               ['a', 'Pacesetters in innovation'],
+                               ['h', '[microfilm serial] /']
+                              )
+    rec << MARC::DataField.new('300', ' ', ' ',
+                               MARC::Subfield.new('a', 'v. ;'))
+    pm4 = run_traject_on_record('unc', rec)['physical_media']
+    expect(pm4).to eq(['Microform > Microfilm'])
+
+    rec = make_rec
     rec << MARC::DataField.new('300', ' ', ' ',
                                MARC::Subfield.new('a', 'xviii, 233p,.'))
     pm5 = run_traject_on_record('unc', rec)['physical_media']

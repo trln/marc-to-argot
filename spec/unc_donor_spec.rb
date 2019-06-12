@@ -21,6 +21,20 @@ describe MarcToArgot do
     )
   end
 
+  it '(UNC) sets donor from 790 with \'From the library of...\'' do
+    rec = make_rec
+    rec << MARC::DataField.new('790', '0',  ' ',
+                               ['a', 'From the library of Gertrude Weil 1879-1971.'])
+    rt = run_traject_on_record('unc', rec)['donor']
+    expect(rt).to(
+      eq([
+           {
+             'value' => 'From the library of Gertrude Weil 1879-1971.'
+           }
+         ])
+    )
+  end
+  
   it '(UNC) sets donor without including relators' do
     rec = make_rec
     rec << MARC::DataField.new('790', '0',  ' ',

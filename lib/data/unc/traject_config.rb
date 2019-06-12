@@ -32,7 +32,11 @@ def process_donor_marc(rec)
       value = []
       field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
       value = value.join(' ').chomp(',')
-      donors << {'value' => "Donated by #{value}"}
+      if value.start_with?('From the library of')
+        donors << { 'value' => value }
+      else
+        donors << {'value' => "Donated by #{value}"}
+      end
     else field.tag == '791'
       included_sfs = %w[a b c d f g]
       value = []

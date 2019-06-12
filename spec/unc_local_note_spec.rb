@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'spec_helper'
 
 describe MarcToArgot do
@@ -5,8 +6,13 @@ describe MarcToArgot do
   let(:corpdonor1) { run_traject_json('unc', '791-1') }
   
   it '(UNC) sets a local note from 791 field with indicators 2b' do
-    expect(corpdonor1['note_local']).to(
-      include(
+    rec = make_rec
+    rec << MARC::DataField.new('590', ' ',  ' ', ['a', 'Test note.'])
+    rec << MARC::DataField.new('791', '2',  ' ', ['a', 'William A. Whitaker Foundation Library Fund.'])
+    rec << MARC::DataField.new('790', '0',  ' ', ['a', 'Scaglione, Aldo D.'])
+    rt = run_traject_on_record('unc', rec)['note_local']
+    expect(rt).to(
+      eq([
            {
              'value' => 'Test note.'
            },
@@ -16,7 +22,7 @@ describe MarcToArgot do
            {
              'value' => 'Donated by Scaglione, Aldo D.'
            }
-         )
+         ])
     )
   end
 

@@ -27,9 +27,9 @@ module MarcToArgot
           places = []
           places << get_searchable_752s(rec)
           places << get_subfield_a_from_260_264_257(rec)
-          places << map_country_code_in_008(rec)
+          places << map_country_code_in_008_15_17(rec)
+          places << map_country_code_in_008_17(rec)
           places << map_country_code_in_044(rec)
-          places << published_in_united_states(rec)
           places.flatten.compact.reject(&:empty?).uniq
         end
 
@@ -66,12 +66,21 @@ module MarcToArgot
           places
         end
 
-        def map_country_code_in_008(rec)
+        def map_country_code_in_008_15_17(rec)
           return unless rec.tags.include?('008')
           rec.fields('008').map do |field|
             code = (field.value.byteslice(15..17) || '').scrub(' ').gsub(/[^a-z]/, '')
             value = countries_marc[code]
             { 'value' => value  } unless value.nil? || value.empty? || code == 'xx'
+          end
+        end
+
+        def map_country_code_in_008_17(rec)
+          return unless rec.tags.include?('008')
+          rec.fields('008').map do |field|
+            code = rec.fields('008').first.value.byteslice(17)
+            value = countries_marc["xx#{code}"]
+            { 'value' => value  } unless value.nil? || value.empty?
           end
         end
 
@@ -87,14 +96,6 @@ module MarcToArgot
             end
           end
           places
-        end
-
-        def published_in_united_states(rec)
-          return unless rec.tags.include?('008') && rec.fields('008')
-                                                       .first
-                                                       .value
-                                                       .byteslice(17) == 'u'
-          { 'value' => 'United States' }
         end
 
         def countries_marc

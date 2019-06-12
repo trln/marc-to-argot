@@ -150,9 +150,9 @@ describe MarcToArgot::Macros::Shared::OriginPlace do
                              {'value' => 'Germany'},
                              {'lang'=>'cjk', 'value'=>'東京'},
                              {'value'=> 'Virginia'},
+                             {'value'=> 'United States'},
                              {'value' => 'Uruguay'},
-                             {'value' => 'Turkey'},
-                             {'value'=> 'United States'}
+                             {'value' => 'Turkey'}
                            ])
     end
   end

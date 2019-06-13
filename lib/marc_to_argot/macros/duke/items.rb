@@ -26,7 +26,7 @@ module MarcToArgot
                 when 'c'
                   item['loc_n'] = subfield.value.strip
                 when 'd'
-                  item['cn_scheme'] = subfield.value
+                  item['cn_scheme'] = subfield.value.strip
                 when 'h'
                   item['call_no'] = subfield.value
                 when 'n'
@@ -50,22 +50,39 @@ module MarcToArgot
 
               item['status'] = ItemStatus.set_status(rec, item)
 
-              if item.fetch('cn_scheme', '') == '0' && item.fetch('call_no', nil)
-                item['cn_scheme'] = 'LC'
-                lcc_top.add(item.fetch('call_no', '')[0, 1])
-              end
-
               # Add all normalized LC Call Nos to lc_call_nos_normed field
               # for searching.
               # And add all shelving control numbers
               # to shelf_numbers for searching.
               case item.fetch('cn_scheme', '')
-              when 'LC'
+              when '0'
                 lc_call_nos_normed << Lcsort.normalize(item.fetch('call_no', '').strip)
               when '4'
                 if item.fetch('loc_b', '') != 'SCL'
                   shelf_numbers << item.fetch('call_no', '').strip
                 end
+              end
+
+              # Now we convert our Aleph numeric codes to
+              # TRLN Discovery ALPHA codes
+              if item.fetch('call_no', nil) && item.fetch('cn_scheme', nil)
+                case item.fetch('cn_scheme', '')
+                when '0'
+                  item['cn_scheme'] = 'LC'
+                  lcc_top.add(item.fetch('call_no', '')[0, 1])
+                when '1'
+                  item['cn_scheme'] = 'DDC'
+                when '2'
+                  item['cn_scheme'] = 'NLM'
+                when '3'
+                  item['cn_scheme'] = 'SUDOC'
+                when '4', '5', '6', '7', '8'
+                  item['cn_scheme'] = 'ALPHANUM'
+                else
+                  item.delete('cn_scheme')
+                end
+              else
+                item.delete('cn_scheme')
               end
 
               item.delete('process_state')

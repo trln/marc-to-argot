@@ -4,6 +4,7 @@ describe MarcToArgot::Macros::Duke::Items do
   include described_class
   let(:item_sort) { run_traject_json('duke', 'item_sort', 'xml') }
 
+
   context 'Duke' do
     it 'puts items in a sensible order' do
       expect(JSON.parse(item_sort['items'][1])['copy_no']).to(
@@ -16,6 +17,26 @@ describe MarcToArgot::Macros::Duke::Items do
       expect(result['items']).to(
         eq(["{\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"cn_scheme\":\"LC\",\"call_no\":\"DF229.T6 C8 1969\","\
             "\"copy_no\":\"c.1\",\"type\":\"BOOK\",\"item_id\":\"D03223637Q\",\"status\":\"Available\"}"])
+      )
+    end
+
+    it 'sets the cn_scheme' do
+      rec = make_rec
+      rec << MARC::DataField.new('940', ' ', ' ',
+                                 ['d', '0'],
+                                 ['h', 'Some Call Number'])
+      rec << MARC::DataField.new('940', ' ', ' ',
+                                 ['d', '1 '],
+                                 ['h', 'Some Call Number'])
+      rec << MARC::DataField.new('940', ' ', ' ',
+                                 ['d', ' '],
+                                 ['h', 'Some Call Number'])
+      result = run_traject_on_record('duke', rec)['items']
+      puts result
+      expect(result).to(
+        eq(['{"cn_scheme":"LC","call_no":"Some Call Number","status":"Available"}',
+            '{"cn_scheme":"DDC","call_no":"Some Call Number","status":"Available"}',
+            '{"call_no":"Some Call Number","status":"Available"}',])
       )
     end
 

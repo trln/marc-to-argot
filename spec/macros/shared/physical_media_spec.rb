@@ -4,12 +4,6 @@ require 'spec_helper'
 describe MarcToArgot::Macros::Shared::PhysicalMedia do
   include Util::TrajectRunTest
 
-  def make_rec
-    rec = MARC::Record.new
-    rec << MARC::ControlField.new('008', ' ' * 40)
-    return rec
-  end
-
   it '(MTA) Sets physical_media to CD-ROM' do
     rec = make_rec
     rec << MARC::ControlField.new('007', 'co mg ---|||||')

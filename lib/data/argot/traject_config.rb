@@ -330,6 +330,9 @@ unless settings["override"].include?("note_serial_dates")
   to_field "note_serial_dates", note_serial_dates
 end
 
+unless settings["override"].include?("note_use_terms")
+  to_field 'note_use_terms', note_use_terms
+end
 ################################################
 # Physical Description
 ######

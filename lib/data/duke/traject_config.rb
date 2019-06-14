@@ -109,12 +109,6 @@ to_field 'date_cataloged' do |rec, acc|
 end
 
 # ################################################
-# # Notes -- Duke Specific
-# ######
-
-to_field 'note_use_terms', note_use_terms
-
-# ################################################
 # # Final each_record block
 # ######
 

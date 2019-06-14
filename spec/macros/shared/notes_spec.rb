@@ -705,11 +705,30 @@ describe MarcToArgot::Macros::Shared::Notes do
                         ])
   end
 
-  it '(Duke) sets note_use_terms' do
+  it '(MTA) sets note_use_terms' do
     result = note_use_terms['note_use_terms']
     expect(result).to(
       eq(['Vascular plant data: Portion of data provided by John Kartesz and copyrighted. '\
           'John Kartesz, Biota of North America Program (BONAP).'])
+    )
+
+    rec = make_rec
+    rec << MARC::DataField.new('540', ' ', ' ',
+                               ['a', 'Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen'],
+                               ['f', 'CC BY-NC-ND 4.0'],
+                               ['2',  'cc'],
+                               ['u', 'http://creativecommons.org/licenses/by-nc-nd/4.0'])
+    rec << MARC::DataField.new('540', ' ', ' ',
+                               ['3', 'Recorded radio programs'],
+                               ['a', 'There are copyright and contractual restrictions applying to the reproduction of most of these recordings;'],
+                               ['b', 'Department of Treasury;'],
+                               ['c', 'Treasury contracts 7-A130 through 39-A179.'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_use_terms']
+    expect(result).to(
+      eq(['Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen CC BY-NC-ND 4.0 http://creativecommons.org/licenses/by-nc-nd/4.0',
+          'Recorded radio programs: There are copyright and contractual restrictions applying to the reproduction of most of these recordings; Department of Treasury; Treasury contracts 7-A130 through 39-A179.']
+      )
     )
   end
 

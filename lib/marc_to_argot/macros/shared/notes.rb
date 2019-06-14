@@ -329,6 +329,21 @@ module MarcToArgot
       end
 
       ################################################
+      # Note Preferred Citation
+      ######
+      def note_preferred_citation
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached('524a').each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+            label = collect_subfield_values_by_code(field, '3').compact.reject(&:empty?).join(': ')
+            label = label.sub(/:\s*$/, '') if label
+            value = extractor.collect_subfields(field, spec).first.gsub(/preferred citation:?\s*/i, '')
+            acc << [label, value].compact.reject(&:empty?).join(': ') if value
+          end
+        end
+      end
+
+      ################################################
       # Note Related Work
       ######
       def note_related_work
@@ -520,7 +535,7 @@ module MarcToArgot
         return value.join(' ')
       end
 
-      
+
       ################################################
       # Note System Details
       ######
@@ -531,6 +546,21 @@ module MarcToArgot
             label = field.subfields.select { |sf| %w[3 i].include?(sf.code) }.map { |sf| sf.value.chomp(':') }
             value = extractor.collect_subfields(field, spec).first
             acc << [*label, value].compact.join(': ') if value
+          end
+        end
+      end
+
+
+      ################################################
+      # Note Use Terms
+      ######
+      def note_use_terms
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached('540abcdfgqu').each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+            label = collect_subfield_values_by_code(field, '3').compact.reject(&:empty?).join(': ')
+            value = extractor.collect_subfields(field, spec).first
+            acc << [label, value].compact.reject(&:empty?).join(': ') if value
           end
         end
       end

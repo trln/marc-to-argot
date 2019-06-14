@@ -27,6 +27,7 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_organization) { run_traject_json('duke', 'note_organization', 'mrc') }
   let(:note_performer_credits_01) { run_traject_json('duke', 'note_performer_credits_01', 'mrc') }
   let(:note_performer_credits_02) { run_traject_json('duke', 'note_performer_credits_02', 'mrc') }
+  let(:note_preferred_citation) { run_traject_json('duke', 'note_citation', 'xml')}
   let(:note_production_credits) { run_traject_json('duke', 'note_production_credits', 'mrc') }
   let(:note_related_work_01) { run_traject_json('duke', 'note_related_work_01', 'mrc') }
   let(:note_related_work_02) { run_traject_json('duke', 'note_related_work_02', 'mrc') }
@@ -41,7 +42,8 @@ describe MarcToArgot::Macros::Shared::Notes do
   let(:note_system_details) { run_traject_json('duke', 'note_system_details', 'mrc') }
   let(:note_with) { run_traject_json('duke', 'note_with', 'mrc') }
   let(:note_system_details_vernacular) { run_traject_json('unc', 'vern_note_sys_det', 'mrc') }
-  
+  let(:note_use_terms) { run_traject_json('duke', 'note_use_terms', 'xml') }
+
   it '(MTA) sets note_access_restrictions' do
     result = note_access_restrictions['note_access_restrictions']
     expect(result).to eq(
@@ -539,6 +541,25 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to include({ 'value' => 'Netherlands Radio Symphony Orchestra ; Jac van Steen, conductor.' })
   end
 
+  it '(Duke) sets note_preferred_citation' do
+    result = note_preferred_citation['note_preferred_citation']
+    expect(result).to(
+      eq(['M. F. Wilson diary, David M. Rubenstein Rare Book & Manuscript Library, Duke University.'])
+    )
+  end
+
+  it '(MTA) sets note_preferred_citation' do
+    rec = make_rec
+    rec << MARC::DataField.new('524', ' ', ' ',
+                               ['a', 'National Center for Health Statistics. Health, United States, 2016: In Brief. Hyattsville, MD. 2017.'],
+                               ['3', 'Dataset:'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_preferred_citation']
+    expect(result).to(
+      eq(['Dataset: National Center for Health Statistics. Health, United States, 2016: In Brief. Hyattsville, MD. 2017.'])
+    )
+  end
+
   it '(MTA) sets note_production_credits' do
     result = note_production_credits['note_production_credits']
     expect(result).to include('Producers, Leslie Midgley, John Sharnik ; director, Russ Bensley.')
@@ -682,6 +703,33 @@ describe MarcToArgot::Macros::Shared::Notes do
                         [ 'Xi tong yao qiu: Blu-ray bo fang she bei ji xiang guan ruan jian.',
                           '系统要求: Blu-ray播放设备及相关软件.'
                         ])
+  end
+
+  it '(MTA) sets note_use_terms' do
+    result = note_use_terms['note_use_terms']
+    expect(result).to(
+      eq(['Vascular plant data: Portion of data provided by John Kartesz and copyrighted. '\
+          'John Kartesz, Biota of North America Program (BONAP).'])
+    )
+
+    rec = make_rec
+    rec << MARC::DataField.new('540', ' ', ' ',
+                               ['a', 'Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen'],
+                               ['f', 'CC BY-NC-ND 4.0'],
+                               ['2',  'cc'],
+                               ['u', 'http://creativecommons.org/licenses/by-nc-nd/4.0'])
+    rec << MARC::DataField.new('540', ' ', ' ',
+                               ['3', 'Recorded radio programs'],
+                               ['a', 'There are copyright and contractual restrictions applying to the reproduction of most of these recordings;'],
+                               ['b', 'Department of Treasury;'],
+                               ['c', 'Treasury contracts 7-A130 through 39-A179.'])
+    argot = run_traject_on_record('duke', rec)
+    result = argot['note_use_terms']
+    expect(result).to(
+      eq(['Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen CC BY-NC-ND 4.0 http://creativecommons.org/licenses/by-nc-nd/4.0',
+          'Recorded radio programs: There are copyright and contractual restrictions applying to the reproduction of most of these recordings; Department of Treasury; Treasury contracts 7-A130 through 39-A179.']
+      )
+    )
   end
 
 end

@@ -6,6 +6,7 @@
 - items
 - local_id
 - note_local
+- note_use_terms
 - oclc_number
 - resource_type
 - rollup_id

@@ -723,7 +723,7 @@ describe MarcToArgot::Macros::Shared::Notes do
                                ['a', 'There are copyright and contractual restrictions applying to the reproduction of most of these recordings;'],
                                ['b', 'Department of Treasury;'],
                                ['c', 'Treasury contracts 7-A130 through 39-A179.'])
-    argot = run_traject_on_record('unc', rec)
+    argot = run_traject_on_record('duke', rec)
     result = argot['note_use_terms']
     expect(result).to(
       eq(['Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen CC BY-NC-ND 4.0 http://creativecommons.org/licenses/by-nc-nd/4.0',

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     ctmaa2200637Ii 4500</leader>
+<controlfield tag="001">DUKE008186835</controlfield>
+<controlfield tag="005">20180730101503.0</controlfield>
+<controlfield tag="006">knnn^^^^^^^^^^^^kn</controlfield>
+<controlfield tag="008">180719m19031904ja^o^^^^^^^^^^000^0^eng^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">1045067119</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">dcrmmss</subfield>
+ <subfield code="c">NDD</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="041" ind1="0" ind2=" ">
+ <subfield code="a">eng</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="090" ind1=" " ind2=" ">
+ <subfield code="a">RL.11641</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Wilson, M. F.,</subfield>
+ <subfield code="e">author,</subfield>
+ <subfield code="e">photographer,</subfield>
+ <subfield code="e">artist.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">M. F. Wilson diary, 1903 September 21-1904 September 20 :</subfield>
+ <subfield code="k">incomplete autograph manuscript.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="0">
+ <subfield code="a">Nagasaki, Japan ; Weihaiwei, China ; various other places,</subfield>
+ <subfield code="c">1903 September 21-1904 September 20.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 volume (196 pages) :</subfield>
+ <subfield code="b">paper, photographs (albumen, silver gelatin), illustrations (ink drawings);</subfield>
+ <subfield code="c">22 x 19 cm housed in box 24 x 21 cm</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="545" ind1=" " ind2=" ">
+ <subfield code="a">M. F. Wilson was a midshipman in the gunroom of the HMS Leviathan, a Royal navy cruiser based in the China Station in 1903. He was also an amateur artist and photographer. Wilson was possibly a resident of Dover, England.</subfield>
+</datafield>
+<datafield tag="520" ind1="8" ind2=" ">
+ <subfield code="a">Diary of life aboard a British war ship, maintained by M. F. Wilson over one year, including entries related to target practice and other drills, preparation of torpedoes, coaling, mooring and unmooring, movements of sailors among the Royal Navy's ships, watches and duties, cleaning and painting, preparations for inspection, and the coming and going of other countries' vessels. He also records activities during free time, including playing football, hockey, rugby, cricket and taking part in boxing matches and hunting parties. Wilson outlines his shore leave excursions to Mato, China; Tokyo; Shanghai; and the Ming Tombs, where he attended dinners and the theater, bathed and swam, or held picnics and hiked. There are descriptions of hotels, bath houses, tea rooms and stores. In an entry for December 12, Wilson notes the purchase of his photographic gear, and in February he announces that war has been declared between Japan and Russia, the progress of which he follows in subsequent entries. Major ports mentioned include Nagasaki, Weihaiwei, China; Hong Kong, Yokohama, Woosung, and Nankin. There are 64 albumen and silver gelatin photographs, probably all taken by Wilson, including panoramas of various harbors, portraits of his shipmates, images of the ship, as well as street scenes taken while on shore leave.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Title devised by cataloger.</subfield>
+</datafield>
+<datafield tag="541" ind1=" " ind2=" ">
+ <subfield code="a">.</subfield>
+ <subfield code="c">Purchase</subfield>
+ <subfield code="d">2018;</subfield>
+ <subfield code="e">2018-0059.</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+ <subfield code="a">In English.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Numbering: 5-154, [42] pages.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Pages 1-4 lacking, 32 pages blank, glossary pages 152-154, 7 pages at end of volume contain photographs, postcards, a newspaper, and Japanese notepaper samples.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Blue goatskin clamshell box.</subfield>
+</datafield>
+<datafield tag="506" ind1="0" ind2=" ">
+ <subfield code="a">Collection is open for research.</subfield>
+</datafield>
+<datafield tag="540" ind1=" " ind2=" ">
+ <subfield code="a">The copyright interests in this collection have not been transferred to Duke University. For more information, consult the copyright section of the Regulations and Procedures of the David M. Rubenstein Rare Book &amp; Manuscript Library.</subfield>
+</datafield>
+<datafield tag="524" ind1=" " ind2=" ">
+ <subfield code="a">Preferred Citation: M. F. Wilson diary, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University.</subfield>
+</datafield>
+<datafield tag="505" ind1="2" ind2=" ">
+ <subfield code="a">Photographs: Hong Kong -- Boat deck, starboard side -- In drydock, Jan 5th 1904 -- In drydock, Jan. 8th 1904 -- Coaling, Jan 8th -- Picnic, Jan 31st, Shoving off -- The gunroom, looking forward -- Yokohama, from the N.E. -- Lin-Kune-Jao from the mainland -- Lin-Kune-Jao (Wei-hai-wei) from the ship -- The Club, Wei-hai-wei -- 6" gun sight -- The Bund - Shanghai -- Shanghai -- The Nankin Road - Shanghai -- Mingh's Tomb -- View from the top of Mingh's Tomb -- H.M.S. Leviathan -- "Eclipse" leaving Hong Kong - Aug. 6th -- Hong Kong from Kowloon Docks -- Long range target, Oct. 1904 -- 'B' Company Officers and Petty Officers.</subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="0">
+ <subfield code="a">Wilson, M. F.</subfield>
+</datafield>
+<datafield tag="610" ind1="1" ind2="0">
+ <subfield code="a">Great Britain.</subfield>
+ <subfield code="b">Royal Navy</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">20th century.</subfield>
+</datafield>
+<datafield tag="610" ind1="2" ind2="0">
+ <subfield code="a">Leviathan (Cruiser)</subfield>
+</datafield>
+<datafield tag="610" ind1="2" ind2="0">
+ <subfield code="a">Leviathan (Cruiser)</subfield>
+ <subfield code="v">Photographs.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Midshipmen</subfield>
+ <subfield code="z">Great Britain</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">20th century.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Russo-Japanese War, 1904-1905.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Sailors</subfield>
+ <subfield code="z">Great Britain.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Ming Tombs (China)</subfield>
+ <subfield code="x">Description and travel.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Ming Tombs (China)</subfield>
+ <subfield code="v">Photographs.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Hong Kong (China)</subfield>
+ <subfield code="v">Photographs.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Shanghai (China)</subfield>
+ <subfield code="x">Description and travel.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Shanghai (China)</subfield>
+ <subfield code="v">Photographs.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Tokyo (Japan)</subfield>
+ <subfield code="x">Description and travel.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Weihai (China)</subfield>
+ <subfield code="v">Photographs.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Yokohama-shi (Japan)</subfield>
+ <subfield code="v">Photographs.</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Diaries.</subfield>
+ <subfield code="2">aat</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Diaries.</subfield>
+ <subfield code="2">lcgft</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Albumen prints.</subfield>
+ <subfield code="2">aat</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Gelatin silver prints.</subfield>
+ <subfield code="2">aat</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Pen and ink drawings.</subfield>
+ <subfield code="2">aat</subfield>
+</datafield>
+<datafield tag="796" ind1="2" ind2="3">
+ <subfield code="a">Hamilton</subfield>
+ <subfield code="e">donor.</subfield>
+ <subfield code="x">Gift of</subfield>
+ <subfield code="z">Gift of the William B Hamilton Fund</subfield>
+</datafield>
+<datafield tag="796" ind1="2" ind2="3">
+ <subfield code="a">Lambeth</subfield>
+ <subfield code="e">donor.</subfield>
+ <subfield code="x">Gift of</subfield>
+ <subfield code="z">Gift of the J. Walter Lambeth Endowment Fund</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+ <subfield code="y">Collection guide</subfield>
+ <subfield code="u">http://library.duke.edu/rubenstein/findingaids/wilsonmf/</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">MS</subfield>
+ <subfield code="b">MS All</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">T </subfield>
+ <subfield code="b">Ms Language Material</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20180719</subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="D">v</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D050987950 </subfield>
+ <subfield code="s">20180213</subfield>
+ <subfield code="u">20180727</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">008304300</subfield>
+</datafield>
+</record>
+</collection>

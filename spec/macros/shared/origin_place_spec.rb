@@ -84,13 +84,11 @@ describe MarcToArgot::Macros::Shared::OriginPlace do
   end
   
   context '752 NOT present' do
-    it '(MTA) does not set origin_place_facet' do
+    it '(MTA) does not fall over' do
       rec = make_rec
       result = run_traject_on_record('unc', rec)['origin_place_facet']
       expect(result).to be_nil
-    end
 
-    it '(MTA) does not set origin_place_search' do
       rec = make_rec
       result = run_traject_on_record('unc', rec)['origin_place_search']
       expect(result).to be_nil
@@ -135,13 +133,25 @@ describe MarcToArgot::Macros::Shared::OriginPlace do
   describe 'get_searchable_places' do
     it 'returns array of searchable place hashes from all relevant fields of record' do
       rec = make_rec
+      rec['008'].value[15..17] = 'vau'
+      rec << MARC::DataField.new('044', ' ', ' ', ['a', 'uy'], ['a', 'tu'])
       rec << MARC::DataField.new('752', ' ', ' ',
                                  ['a', 'Great  Britain'],
                                  ['b', 'England'],
                                  ['d', 'London'])
+      rec << MARC::DataField.new('260', ' ', ' ',
+                                 ['a', 'Germany'],
+                                 ['a', '東京'])
 
       result = get_searchable_places(rec)
-      expect(result).to eq([ {'value' => 'Great Britain--England--London'} ])
+      expect(result).to eq([ {'value' => 'Great Britain--England--London'},
+                             {'value' => 'Germany'},
+                             {'lang'=>'cjk', 'value'=>'東京'},
+                             {'value'=> 'Virginia'},
+                             {'value'=> 'United States'},
+                             {'value' => 'Uruguay'},
+                             {'value' => 'Turkey'}
+                           ])
     end
   end
 end

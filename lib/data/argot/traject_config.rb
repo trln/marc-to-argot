@@ -278,6 +278,10 @@ unless settings["override"].include?("note_performer_credits")
   to_field "note_performer_credits", note_performer_credits
 end
 
+unless settings["override"].include?("note_preferred_citation")
+  to_field 'note_preferred_citation', note_preferred_citation
+end
+
 unless settings["override"].include?("note_production_credits")
   to_field "note_production_credits", extract_marc(settings["specs"][:note_production_credits])
 end

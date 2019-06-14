@@ -548,6 +548,18 @@ describe MarcToArgot::Macros::Shared::Notes do
     )
   end
 
+  it '(MTA) sets note_preferred_citation' do
+    rec = make_rec
+    rec << MARC::DataField.new('524', ' ', ' ',
+                               ['a', 'National Center for Health Statistics. Health, United States, 2016: In Brief. Hyattsville, MD. 2017.'],
+                               ['3', 'Dataset:'])
+    argot = run_traject_on_record('unc', rec)
+    result = argot['note_preferred_citation']
+    expect(result).to(
+      eq(['Dataset: National Center for Health Statistics. Health, United States, 2016: In Brief. Hyattsville, MD. 2017.'])
+    )
+  end
+
   it '(MTA) sets note_production_credits' do
     result = note_production_credits['note_production_credits']
     expect(result).to include('Producers, Leslie Midgley, John Sharnik ; director, Russ Bensley.')

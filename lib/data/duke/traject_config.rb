@@ -114,8 +114,6 @@ end
 
 to_field 'note_use_terms', note_use_terms
 
-to_field 'note_preferred_citation', note_preferred_citation
-
 # ################################################
 # # Final each_record block
 # ######

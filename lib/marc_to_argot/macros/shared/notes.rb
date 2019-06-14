@@ -336,6 +336,7 @@ module MarcToArgot
           Traject::MarcExtractor.cached('524a').each_matching_line(rec) do |field, spec, extractor|
             next unless subfield_5_absent_or_present_with_local_code?(field)
             label = collect_subfield_values_by_code(field, '3').compact.reject(&:empty?).join(': ')
+            label = label.sub(/:\s*$/, '') if label
             value = extractor.collect_subfields(field, spec).first.gsub(/preferred citation:?\s*/i, '')
             acc << [label, value].compact.reject(&:empty?).join(': ') if value
           end

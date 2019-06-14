@@ -84,13 +84,11 @@ describe MarcToArgot::Macros::Shared::OriginPlace do
   end
   
   context '752 NOT present' do
-    it '(MTA) does not set origin_place_facet' do
+    it '(MTA) does not fall over' do
       rec = make_rec
       result = run_traject_on_record('unc', rec)['origin_place_facet']
       expect(result).to be_nil
-    end
 
-    it '(MTA) does not set origin_place_search' do
       rec = make_rec
       result = run_traject_on_record('unc', rec)['origin_place_search']
       expect(result).to be_nil

@@ -84,6 +84,8 @@ each_record do |rec, cxt|
     holdings(rec, cxt)
   end
 
+  process_call_numbers(rec, cxt)
+
   # add genre_mrc field
   local_subject_genre(rec, cxt)
   

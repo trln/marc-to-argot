@@ -12,75 +12,259 @@ describe MarcToArgot::Macros::UNC::Items do
     expect(argot['barcodes']).to be_nil
   end
 
-  let(:b7667969result) { run_traject_json('unc', 'b7667969')['items'][0] }
+  describe 'setting call number values in UNC items' do
+    context 'call_no in 099 field' do
+      it '(UNC) sets alphanumeric call_no correctly' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i10202491'],
+                                   ['l', 'lljd'],
+                                   ['s', '-'],
+                                   ['t', '22'],
+                                   ['c', '1'],
+                                   ['o', '0'],
+                                   ['b', '00047641015'],
+                                   ['p', '099#9'],
+                                   ['q', '|aJ|aVillar'])
+        result = run_traject_on_record('unc', rec)['items'][0]
+        expect(result).to(
+          include("\"cn_scheme\":\"ALPHANUM\"")
+        )
+        expect(result).to(
+          include("\"call_no\":\"J Villar\"")
+        )
+      end
+    end
 
-  it '(UNC) sets item cn_scheme to ALPHANUM when call_no is in 099 (single item record)' do
-    expect(b7667969result).to(
-      include("\"cn_scheme\":\"ALPHANUM\"")
-    )
+    context 'call_no in 086 field' do
+      context 'AND ind1 = 0' do
+        it '(UNC) sets SUDOC call_no correctly' do
+          rec = make_rec
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['i', 'i4808951'],
+                                     ['l', 'dcpf'],
+                                     ['s', '-'],
+                                     ['t', '20'],
+                                     ['c', '1'],
+                                     ['o', '0'],
+                                     ['b', 'HAYZ-5955-00001'],
+                                     ['p', '0860#'],
+                                     ['q', '|aHE 1.1008:H 75/5'])
+
+          result = run_traject_on_record('unc', rec)['items'][0]
+          expect(result).to(
+            include("\"cn_scheme\":\"SUDOC\"")
+          )
+          expect(result).to(
+            include("\"call_no\":\"HE 1.1008:H 75/5\"")
+          )
+        end
+      end
+    end
+
+    context 'call_no in 050 or 090 field' do
+      it '(UNC) sets LC call_no correctly' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i1688265'],
+                                   ['l', 'mmdb'],
+                                   ['s', '-'],
+                                   ['t', '44'],
+                                   ['c', '1'],
+                                   ['o', '1'],
+                                   ['b', '00009823818'],
+                                   ['p', '0501#'],
+                                   ['q', '|aML96.4 .B3'],
+                                   ['v', 'Bd.2'])
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i1688266'],
+                                   ['l', 'mmdb'],
+                                   ['s', '-'],
+                                   ['t', '1'],
+                                   ['c', '2'],
+                                   ['o', '5'],
+                                   ['b', '00012707519'],
+                                   ['p', '090##'],
+                                   ['q', '|aML96.4 .B3'],
+                                   ['v', 'Bd.2'])
+
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result[0]).to(
+          include("\"cn_scheme\":\"LC\"")
+        )
+        expect(result[1]).to(
+          include("\"cn_scheme\":\"LC\"")
+        )
+        expect(result[0]).to(
+          include("\"call_no\":\"ML96.4 .B3\"")
+        )
+        expect(result[1]).to(
+          include("\"call_no\":\"ML96.4 .B3\"")
+        )
+      end
+    end
+
+    context 'call_no in 082 or 092 field' do
+      it '(UNC) sets DDC call_no correctly' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i1688265'],
+                                   ['l', 'mmdb'],
+                                   ['s', '-'],
+                                   ['t', '44'],
+                                   ['c', '1'],
+                                   ['o', '1'],
+                                   ['b', '00009823818'],
+                                   ['p', '082##'],
+                                   ['q', '|a781.9733 M939a2'],
+                                   ['v', 'Bd.2'])
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i1688266'],
+                                   ['l', 'mmdb'],
+                                   ['s', '-'],
+                                   ['t', '1'],
+                                   ['c', '2'],
+                                   ['o', '5'],
+                                   ['b', '00012707519'],
+                                   ['p', '092##'],
+                                   ['q', '|a781.9733 M939a2'],
+                                   ['v', 'Bd.2'])
+
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result[0]).to(
+          include("\"cn_scheme\":\"DDC\"")
+        )
+        expect(result[1]).to(
+          include("\"cn_scheme\":\"DDC\"")
+        )
+        expect(result[0]).to(
+          include("\"call_no\":\"781.9733 M939a2\"")
+        )
+        expect(result[1]).to(
+          include("\"call_no\":\"781.9733 M939a2\"")
+        )
+      end
+    end
   end
 
-  it '(UNC) sets item call_no (alphanumeric) from multiple subfield a values (single item record)' do
-    expect(b7667969result).to(
-      include("\"call_no\":\"J Villar\"")
-    )
+  describe 'setting volume values in UNC items' do
+    context 'volume field is present' do
+      it '(UNC) sets item volume subelement' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i1688265'],
+                                   ['l', 'mmdb'],
+                                   ['s', '-'],
+                                   ['t', '44'],
+                                   ['c', '1'],
+                                   ['o', '1'],
+                                   ['b', '00009823818'],
+                                   ['p', '0501#'],
+                                   ['q', '|aML96.4 .B3'],
+                                   ['v', 'Bd.2'])
+
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result[0]).to(
+          include("\"vol\":\"Bd.2\"")
+        )
+      end
+    end
   end
 
-    # test on b3388632
-  let(:b3388632result) { run_traject_json('unc', 'b3388632')['items'][0] }
+  describe 'setting bib-level availability values from UNC items' do
+    context 'item status = o (In-Library Use Only)' do
+      it '(UNC) sets bib level available to Available' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['i', 'i1688265'],
+                                   ['l', 'mmdb'],
+                                   ['s', 'o'],
+                                   ['t', '44'],
+                                   ['c', '1'],
+                                   ['o', '1'],
+                                   ['b', '00009823818'],
+                                   ['p', '0501#'],
+                                   ['q', '|aML96.4 .B3'],
+                                   ['v', 'Bd.2'])
 
-  it '(UNC) sets item cn_scheme to SUDOC when call_no is in 086 w/i1 = 0 (single item record)' do
-    expect(b3388632result).to(
-      include('"cn_scheme":"SUDOC"')
-    )
+        result = run_traject_on_record('unc', rec)['available']
+        expect(result).to(
+          eq("Available")
+        )
+      end
+    end
+
+    context 'bib has multiple items attached' do
+      context 'AND multiple items have statuses that map to Not Available' do
+        context 'BUT at least one item has a status that maps to Available' do
+          it '(UNC) sets bib level available to Available' do
+            rec = make_rec
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', '-'])
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', '-'],
+                                       ['d', '2066-6-6'])
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', 'm'])
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', 'f'])
+            argot = run_traject_on_record('unc', rec)
+            expect(argot['available']).to eq('Available')
+          end
+        end
+
+        context 'AND no item statuses map to Available' do
+          it '(UNC) does not set bib-level available field' do
+            rec = make_rec
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', 'w']
+                                      )
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', '-'],
+                                       ['d', '2019-6-6']
+                                      )
+            argot = run_traject_on_record('unc', rec)
+            expect(argot['available']).to be_nil
+          end
+        end
+      end
+    end
   end
 
-  # test on b1319986
-  let(:b1319986argot) { run_traject('unc', 'b1319986') }
-  let(:b1319986result0) { JSON.parse(b1319986argot)['items'][0] }
-  let(:b1319986result1) { JSON.parse(b1319986argot)['items'][1] }
+  describe 'setting bib-level location_hierarchy values from UNC items' do
+    context 'bib record has item for valid print location' do
+      it '(UNC) sets bib level location_hierarchy for print location' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1',
+                                   ['l', 'ggda']
+                                  )
+        argot = run_traject_on_record('unc', rec)
+        expect(argot['location_hierarchy']).to eq(['unc', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])
+      end
 
-  it '(UNC) sets item cn_scheme to LC when call_no is in 050' do
-    expect(b1319986result0).to(
-      include("\"cn_scheme\":\"LC\"")
-    )
+      context 'AND has unsuppressed e-resource item' do
+        it '(UNC) sets bib level location_hierarchy for print location only' do
+          rec = make_rec
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['i', 'i1688265'],
+                                     ['l', 'dcpf'],
+                                     ['v', 'Bd.2'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['i', 'i1688265'],
+                                     ['l', 'erra'],
+                                     ['v', 'Bd.2'])
+
+          result = run_traject_on_record('unc', rec)['location_hierarchy']
+          expect(result).to(
+            eq(['unc', 'unc:uncdavy', 'unc:uncdavy:uncdavdoc'])
+          )
+        end
+      end
+    end
   end
 
-  it '(UNC) sets item vol' do
-    expect(b1319986result0).to(
-      include("\"vol\":\"Bd.2\"")
-    )
-  end
-
-  #test on b4069204
-  let(:b4069204argot) { run_traject('unc', 'b4069204') }
-  let(:b4069204result0) { JSON.parse(b4069204argot)['items'][0] }
-
-  it '(UNC) sets item cn_scheme to DDC when call_no is in 092' do
-    expect(b4069204result0).to(
-      include("\"cn_scheme\":\"DDC\"")
-    )
-  end
-
-  #test on b2975416
-  let(:b2975416argot) { run_traject('unc', 'b2975416') }
-  let(:b2975416result) { JSON.parse(b2975416argot)['items'] }
-
-  it '(UNC) sets available to Available if status is In-Library Use Only' do
-    expect(JSON.parse(b2975416argot)['available']).to(
-      eq("Available")
-    )
-  end
-
-  let(:eresloc) { run_traject_json('unc', 'location_eres') }
-
-  it '(UNC) sets location_hierarchy for record with unsuppressed e-items' do
-    expect(eresloc['location_hierarchy']).to(
-      eq(['unc', 'unc:uncdavy', 'unc:uncdavy:uncdavdoc'])
-    )
-  end
-
-  it '(UNC) sets barcodes field' do
+  describe 'setting bib-level location_hierarchy values from UNC items' do
+  it '(UNC) sets bib-level barcodes field' do
     rec = make_rec
     rec << MARC::DataField.new('999', '9', '1',
                                ['b', '123']
@@ -92,7 +276,7 @@ describe MarcToArgot::Macros::UNC::Items do
     expect(argot['barcodes']).to eq(['123', '456'])
   end
 
-  it '(UNC) removes barcode from item json' do
+  it '(UNC) removes barcode data from items field' do
     rec = make_rec
     rec << MARC::DataField.new('999', '9', '1',
                                ['b', '123']
@@ -100,40 +284,6 @@ describe MarcToArgot::Macros::UNC::Items do
     argot = run_traject_on_record('unc', rec)
     expect(argot['items'][0]).not_to include("\"barcode\":")
   end
-
-  it '(UNC) sets available field value to Available if at least one item is available' do
-    rec = make_rec
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['s', '-']
-                              )
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['s', '-'],
-                               ['d', '2019-6-6']
-                              )
-    argot = run_traject_on_record('unc', rec)
-    expect(argot['available']).to eq('Available')
-  end
-  
-  it '(UNC) does not set available field if no items are available' do
-    rec = make_rec
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['s', 'w']
-                              )
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['s', '-'],
-                               ['d', '2019-6-6']
-                              )
-    argot = run_traject_on_record('unc', rec)
-    expect(argot['available']).to be_nil
-  end
-
-  it '(UNC) sets location facet values' do
-    rec = make_rec
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['l', 'ggda']
-                              )
-    argot = run_traject_on_record('unc', rec)
-    expect(argot['location_hierarchy']).to eq(['unc', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])
   end
 
   describe 'assemble_item' do
@@ -186,7 +336,7 @@ describe MarcToArgot::Macros::UNC::Items do
       result = assemble_item(field)['notes']
       expect(result).to eq(['cat', 'goat'])
     end
-end
+  end
   
 
 

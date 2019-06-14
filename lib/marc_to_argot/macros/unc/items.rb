@@ -12,8 +12,6 @@ module MarcToArgot
             #set Availability facet value affirmatively
             cxt.output_hash['available'] = 'Available' if is_available?(items)
 
-            map_call_numbers!(cxt, items)
-
             #set location facet values
             ilocs = items.collect { |it| it['loc_b'] }
             hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten

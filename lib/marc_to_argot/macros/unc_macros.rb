@@ -10,6 +10,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/unc/rollup'
       require 'marc_to_argot/macros/unc/shared_records'
       require 'marc_to_argot/macros/unc/urls'
+      require 'marc_to_argot/macros/unc/call_number'
       
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -22,6 +23,7 @@ module MarcToArgot
       include Rollup
       include SharedRecords
       include Urls
+      include CallNumber
 
       MarcExtractor = Traject::MarcExtractor
       

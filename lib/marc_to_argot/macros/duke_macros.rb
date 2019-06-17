@@ -67,6 +67,28 @@ module MarcToArgot
         end
       end
 
+      # Remove Rollup ID from special collections records
+      # Otherwise set rollup id to SerSol number if not already set.
+      def finalize_rollup_id(ctx)
+        if ctx.clipboard.fetch('special_collections', false)
+          ctx.output_hash.delete('rollup_id')
+        else
+          set_sersol_rollup_id(ctx)
+        end
+      end
+
+      # Set Availability and Physical Media for Online resources.
+      def finalize_values_for_online_resources(ctx)
+        if ctx.output_hash.fetch('access_type', []).include?('Online')
+          ctx.output_hash['available'] = 'Available'
+          physical_media = ctx.output_hash.fetch('physical_media', [])
+          ctx.output_hash['physical_media'] = physical_media << 'Online'
+          if ctx.output_hash.fetch('access_type', []) == ['Online']
+            ctx.output_hash['physical_media'].delete('Print')
+          end
+        end
+      end
+
       # # Example of how to re-open the ResourceTypeClassifier
       # # You can add to or completely override the formats method as needed.
       # # You can also override the default classifying methods e.g. book?

@@ -109,31 +109,21 @@ to_field 'date_cataloged' do |rec, acc|
 end
 
 # ################################################
+# # Internet Archive ARKs
+# ######
+
+to_field 'internet_archive_arks', internet_archive_arks
+
+# ################################################
 # # Final each_record block
 # ######
 
 each_record do |rec, ctx|
   remove_print_from_archival_material(ctx)
   add_bookplate_to_notes_local(ctx)
-
-  # Remove Rollup ID from special collections records
-  # Otherwise set rollup id to SerSol number if not already set.
-  if ctx.clipboard.fetch('special_collections', false)
-    ctx.output_hash.delete('rollup_id')
-  else
-    set_sersol_rollup_id(ctx)
-  end
-
-  # Set Availability and Physical Media for Online resources.
-  if ctx.output_hash.fetch('access_type', []).include?('Online')
-    ctx.output_hash['available'] = 'Available'
-    physical_media = ctx.output_hash.fetch('physical_media', [])
-    ctx.output_hash['physical_media'] = physical_media << 'Online'
-    if ctx.output_hash.fetch('access_type', []) == ['Online']
-      ctx.output_hash['physical_media'].delete('Print')
-    end
-  end
-
-  add_shared_record_data(ctx) if ctx.clipboard.fetch(:shared_record_set, false)
+  add_internet_archive_links(ctx)
+  finalize_rollup_id(ctx)
+  finalize_values_for_online_resources(ctx)
+  add_shared_record_data(ctx)
   Logging.mdc.clear
 end

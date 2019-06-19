@@ -32,7 +32,6 @@ describe MarcToArgot::Macros::Duke::Items do
                                  ['d', ' '],
                                  ['h', 'Some Call Number'])
       result = run_traject_on_record('duke', rec)['items']
-      puts result
       expect(result).to(
         eq(['{"cn_scheme":"LC","call_no":"Some Call Number","status":"Available"}',
             '{"cn_scheme":"DDC","call_no":"Some Call Number","status":"Available"}',

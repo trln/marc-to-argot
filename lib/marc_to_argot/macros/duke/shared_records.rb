@@ -15,6 +15,7 @@ module MarcToArgot
         end
 
         def add_shared_record_data(ctx)
+          return unless ctx.clipboard.fetch(:shared_record_set, false)
           case ctx.clipboard.fetch(:shared_record_set, false)
           when 'oupe'
             ctx.output_hash['virtual_collection'] ||= []

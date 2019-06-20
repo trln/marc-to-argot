@@ -83,4 +83,16 @@ describe MarcToArgot::Macros::Duke do
     result = run_traject_json('duke', 'oclc_leading_zeros', 'xml')
     expect(result['rollup_id']).to(eq("OCLC503275"))
   end
+
+  it 'adds bookplates to local notes' do
+    rec = make_rec
+    rec << MARC::DataField.new('796', ' ', ' ', ['z', 'Gift of the birds.'])
+    result = run_traject_on_record('duke', rec)['note_local']
+    expect(result).to eq([{ 'value' => 'Gift of the birds.'} ])
+  end
+
+  it 'removes Print from Archival records' do
+    result = run_traject_json('duke', 'archival_print', 'xml')
+    expect(result['physical_media']).to be_nil
+  end
 end

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200361I  450 </leader>
+<controlfield tag="001">DUKE000278526</controlfield>
+<controlfield tag="005">20160323150711.0</controlfield>
+<controlfield tag="008">910319s1819^^^^enk^^^^^^^^^^^000^0^eng^d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">03662445</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">(OCoLC)03662445</subfield>
+ <subfield code="b">MiAaHDL</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">JHE</subfield>
+ <subfield code="c">JHE</subfield>
+ <subfield code="d">OCL</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="050" ind1="9" ind2="7">
+ <subfield code="a">PR4350</subfield>
+ <subfield code="b">.E19</subfield>
+</datafield>
+<datafield tag="090" ind1=" " ind2=" ">
+ <subfield code="a">PR4350</subfield>
+ <subfield code="b">1819</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Byron, George Gordon Byron,</subfield>
+ <subfield code="c">Baron,</subfield>
+ <subfield code="d">1788-1824.</subfield>
+</datafield>
+<datafield tag="240" ind1="1" ind2="0">
+ <subfield code="a">Works</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="4">
+ <subfield code="a">The works of Lord Byron.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">London:</subfield>
+ <subfield code="b">John Murray, Albemarle-Street.</subfield>
+ <subfield code="c">1819.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">3 v.</subfield>
+ <subfield code="c">23 cm.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Printer's imprint of Thomas Davison, Whitefriars.</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Bookplate: Thomas Jane Wise.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="563" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Bound in half leather and cloth over boards by Riviere &amp; Son for T.J. Wise.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+ <subfield code="a">Vol. I. Childe Harold's pilgrimage.--Vol. II. The Giaour; The bride of Abydos; The corsair; Lara; The siege of Corinth; Parisina; The prisoner of Chillon; Beppo.--Vol. III. Manfred; Hebrew melodies; Ode to Napoleon Buonaparte; Monody on the death of Sheridan; Lament of Tasso; Poems.</subfield>
+</datafield>
+<datafield tag="583" ind1="1" ind2=" ">
+ <subfield code="3">Rubenstein Library copy</subfield>
+ <subfield code="a">former call number: A-28 B996WO</subfield>
+</datafield>
+<datafield tag="690" ind1=" " ind2=" ">
+ <subfield code="a">Binder</subfield>
+ <subfield code="x">Riviere &amp; Son.</subfield>
+</datafield>
+<datafield tag="690" ind1=" " ind2=" ">
+ <subfield code="a">Provenance</subfield>
+ <subfield code="x">Wise, Thomas James, 1859-1937</subfield>
+ <subfield code="x">Bookplate.</subfield>
+</datafield>
+<datafield tag="690" ind1=" " ind2=" ">
+ <subfield code="a">Provenance</subfield>
+ <subfield code="x">Yorke, Henry Francis Redhead</subfield>
+ <subfield code="x">Bookplate.</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="h">PR4350</subfield>
+ <subfield code="i">.E19</subfield>
+ <subfield code="x">Previously converted record</subfield>
+ <subfield code="z">Bound in half leather and cloth over boards by Riviere &amp; Son for T.J. Wise.</subfield>
+ <subfield code="z">In original publisher's boards.</subfield>
+ <subfield code="D">v</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PR4350 .E19</subfield>
+ <subfield code="n">v.1 c.1</subfield>
+ <subfield code="z">Bookplate: Thomas James Wise.</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D99010397 </subfield>
+ <subfield code="s">19930808</subfield>
+ <subfield code="u">20130110</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000278526</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PR4350 .E19</subfield>
+ <subfield code="n">v.1 c.2</subfield>
+ <subfield code="z">From the library of Henry Francis Redhead Yorke, with his bookplate.</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D99010396. </subfield>
+ <subfield code="s">19930808</subfield>
+ <subfield code="u">20130110</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000278526</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PR4350 .E19</subfield>
+ <subfield code="n">v.2 c.1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03569605Y </subfield>
+ <subfield code="s">20080611</subfield>
+ <subfield code="u">20130110</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000278526</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PR4350 .E19</subfield>
+ <subfield code="n">v.2 c.2</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03569607- </subfield>
+ <subfield code="s">20080611</subfield>
+ <subfield code="u">20130110</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000278526</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PR4350 .E19</subfield>
+ <subfield code="n">v.3 c.1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03569606Z </subfield>
+ <subfield code="s">20080611</subfield>
+ <subfield code="u">20130110</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000278526</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PR4350 .E19</subfield>
+ <subfield code="n">v.3 c.2</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03569608. </subfield>
+ <subfield code="s">20080611</subfield>
+ <subfield code="u">20130110</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">000278526</subfield>
+</datafield>
+<datafield tag="955" ind1=" " ind2=" ">
+ <subfield code="b">ark:/13960/t1gj0rc2x</subfield>
+ <subfield code="q">worksoflordbyron21byro</subfield>
+ <subfield code="z">copy 1</subfield>
+</datafield>
+<datafield tag="955" ind1=" " ind2=" ">
+ <subfield code="b">ark:/13960/t2b86hq03</subfield>
+ <subfield code="q">worksoflordbyron22byro</subfield>
+</datafield>
+</record>
+</collection>

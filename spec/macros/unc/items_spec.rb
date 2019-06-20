@@ -6,12 +6,12 @@ describe MarcToArgot::Macros::UNC::Items do
   include Util::TrajectRunTest
 
   context 'WHEN there is no item data' do
-  it '(UNC) does not set item or barcodes field if no item data' do
-    rec = make_rec
-    argot = run_traject_on_record('unc', rec)
-    expect(argot['items']).to be_nil
-    expect(argot['barcodes']).to be_nil
-  end
+    it '(UNC) does not set item or barcodes field if no item data' do
+      rec = make_rec
+      argot = run_traject_on_record('unc', rec)
+      expect(argot['items']).to be_nil
+      expect(argot['barcodes']).to be_nil
+    end
   end
 
   describe 'setting call number values in UNC items' do
@@ -68,27 +68,11 @@ describe MarcToArgot::Macros::UNC::Items do
       it '(UNC) cn_scheme = LC' do
         rec = make_rec
         rec << MARC::DataField.new('999', '9', '1',
-                                   ['i', 'i1688265'],
-                                   ['l', 'mmdb'],
-                                   ['s', '-'],
-                                   ['t', '44'],
-                                   ['c', '1'],
-                                   ['o', '1'],
-                                   ['b', '00009823818'],
                                    ['p', '0501#'],
-                                   ['q', '|aML96.4 .B3'],
-                                   ['v', 'Bd.2'])
+                                   ['q', '|aML96.4 .B3'])
         rec << MARC::DataField.new('999', '9', '1',
-                                   ['i', 'i1688266'],
-                                   ['l', 'mmdb'],
-                                   ['s', '-'],
-                                   ['t', '1'],
-                                   ['c', '2'],
-                                   ['o', '5'],
-                                   ['b', '00012707519'],
                                    ['p', '090##'],
-                                   ['q', '|aML96.4 .B3'],
-                                   ['v', 'Bd.2'])
+                                   ['q', '|aML96.4 .B3'])
 
         result = run_traject_on_record('unc', rec)['items']
         expect(result[0]).to(
@@ -173,168 +157,132 @@ describe MarcToArgot::Macros::UNC::Items do
     end
   end
 
-  describe 'setting bib-level availability values from UNC items -- ie the one binary (Available/Not Available) value for the bib, which may have multiple items with varying statuses attached' do
+  describe 'setting items[status] and (bib level) availability values from UNC items -- Each item gets its own detailed status. At the bib level, all item statuses are collapsed into one binary (Available/Not Available)' do
     context 'WHEN there is one item record attached to bib' do
-      context 'AND item status = ! (On Hold)' do
-        it '(UNC) available = Not Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', '!'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-        end
-      end
-      context 'AND item status = $, c, d, f, m, n, s, or z (Missing)' do
-        it '(UNC) available = Not Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', '$'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
 
-                  rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'c'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
+      rules = {
+        '!' => {:label => 'On Hold', :available => 'Not Available' },
+        '$' => {:label => 'Missing', :available => 'Not Available' },
+        '-' => {:label => 'Available', :available => 'Available' },
+        'a' => {:label => 'Available', :available => 'Available' },
+        'b' => {:label => 'In Process', :available => 'Not Available' },
+        'c' => {:label => 'Missing', :available => 'Not Available' },
+        'd' => {:label => 'Missing', :available => 'Not Available' },
+        'e' => {:label => 'In Process', :available => 'Not Available' },
+        'f' => {:label => 'Missing', :available => 'Not Available' },
+        'g' => {:label => 'Ask the MRC', :available => 'Available' },
+        'h' => {:label => 'Under Review', :available => 'Not Available' },
+        'j' => {:label => 'Contact Library for Status', :available => 'Available' },
+        'k' => {:label => 'In Process', :available => 'Not Available' },
+        'm' => {:label => 'Missing', :available => 'Not Available' },
+        'n' => {:label => 'Missing', :available => 'Not Available' },
+        'o' => {:label => 'In-Library Use Only', :available => 'Available' },
+        'p' => {:label => 'In Process', :available => 'Not Available' },
+        'r' => {:label => 'Being Repaired', :available => 'Not Available' },
+        's' => {:label => 'Missing', :available => 'Not Available' },
+        't' => {:label => 'In Transit', :available => 'Not Available' },
+        'u' => {:label => 'Not Available', :available => 'Not Available' },
+        'v' => {:label => 'At the Bindery', :available => 'Not Available' },
+        'w' => {:label => 'Withdrawn', :available => 'Not Available' },
+        'z' => {:label => 'Missing', :available => 'Not Available' },        
+      }
 
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'd'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'f'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'm'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-
-                  rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'n'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 's'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'z'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( be_nil)
-        end
-      end
-      context 'AND item status = - or a (Available)' do
-        it '(UNC) available = Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', '-'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( eq("Available"))
-
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'a'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( eq("Available"))
-        end
-      end
-      %w{b e k p}.each do |code|
-      context "AND item status = #{code} (In Process)" do
-          it '(UNC) available = Not Available' do
+      rules.each do |code, data|
+        context "AND item status = #{code}" do
+          it "(UNC) items[status] = #{data[:label]}" do
             rec = make_rec
             rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', code])
+                                       ['s', "#{code}"])
+            result = run_traject_on_record('unc', rec)['items']
+            expect(result[0]).to(
+              include("\"status\":\"#{data[:label]}\""),
+              "with status: #{code}, expected #{data[:label]}, got #{result.inspect}"
+            )
+          end
+          it "(UNC) (bib level, binary) available = #{data[:available]}" do
+            rec = make_rec
+            rec << MARC::DataField.new('999', '9', '1',
+                                       ['s', "#{code}"])
             result = run_traject_on_record('unc', rec)['available']
-            expect(result).to be_nil, "with status:#{code}, expected nil, got #{result.inspect}"
+            case data[:available]
+            when 'Available'
+              expect(result).to eq('Available'), "with status:#{code}, expected #{data[:available]}, got #{result.inspect}"
+            when 'Not Available'
+              expect(result).to be_nil, "with status:#{code}, expected nil, got #{result.inspect}"
+            end
           end
         end
       end
-      context 'AND item status = f (Never Received)' do
-        it '(UNC) available = Available' do
+
+      context "AND item has a due date value (2066-6-6)" do
+        it '(UNC) items[status] = Checked Out' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'o'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( eq("Available"))
+                                     ['s', '-'],
+                                     ['d', '2066-06-06'])
+          result = run_traject_on_record('unc', rec)['items']
+          expect(result[0]).to( include("\"status\":\"Checked Out\"") )
         end
-      end
-      context 'AND item status = o (In-Library Use Only)' do
-        it '(UNC) available = Available' do
+        it '(UNC) (bib level, binary) available = Not Available' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'o'])
+                                     ['s', '-'],
+                                     ['d', '2066-06-06'])
           result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( eq("Available"))
+          expect(result).to be_nil
         end
-      end
-      context 'AND item status = o (In-Library Use Only)' do
-        it '(UNC) available = Available' do
+        it '(UNC) items[due_date] = 20660606' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'o'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( eq("Available"))
+                                     ['s', '-'],
+                                     ['d', '2066-06-06'])
+          result = run_traject_on_record('unc', rec)['items']
+          expect(result[0]).to( include("\"due_date\":\"20660606\"") )
         end
+
       end
-      context 'AND item status = o (In-Library Use Only)' do
-        it '(UNC) available = Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'o'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to( eq("Available"))
-        end
-      end
+
     end
 
     context 'bib has multiple items attached' do
-      context 'AND multiple items have statuses that map to Not Available' do
-        context 'BUT at least one item has a status that maps to Available' do
-          it '(UNC) sets bib level available to Available' do
-            rec = make_rec
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', '-'])
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', '-'],
-                                       ['d', '2066-6-6'])
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', 'm'])
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', 'f'])
-            argot = run_traject_on_record('unc', rec)
-            expect(argot['available']).to eq('Available')
-          end
+      context 'AND status codes of the items are: w, m, b, t, o' do
+        it '(UNC) (bib level, binary) available = Available' do
+          rec = make_rec
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'w'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'm'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'b'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 't'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'o'])
+          argot = run_traject_on_record('unc', rec)
+          expect(argot['available']).to eq('Available')
         end
+      end
 
-        context 'AND no item statuses map to Available' do
-          it '(UNC) does not set bib-level available field' do
-            rec = make_rec
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', 'w']
-                                      )
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', '-'],
-                                       ['d', '2019-6-6']
-                                      )
-            argot = run_traject_on_record('unc', rec)
-            expect(argot['available']).to be_nil
-          end
+      context 'AND status codes of the items are: w, m, b, t, f' do
+        it '(UNC) (bib level, binary) available = Not Available' do
+          rec = make_rec
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'w'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'm'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'b'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 't'])
+          rec << MARC::DataField.new('999', '9', '1',
+                                     ['s', 'f'])
+          argot = run_traject_on_record('unc', rec)
+          expect(argot['available']).to be_nil
         end
       end
     end
   end
+
 
   describe 'setting bib-level location_hierarchy values from UNC items' do
     context 'bib record has item for valid print location' do
@@ -368,83 +316,72 @@ describe MarcToArgot::Macros::UNC::Items do
     end
   end
 
-  describe 'setting bib-level location_hierarchy values from UNC items' do
-  it '(UNC) sets bib-level barcodes field' do
-    rec = make_rec
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['b', '123']
-                              )
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['b', '456']
-                              )
-    argot = run_traject_on_record('unc', rec)
-    expect(argot['barcodes']).to eq(['123', '456'])
-  end
-
-  it '(UNC) removes barcode data from items field' do
-    rec = make_rec
-    rec << MARC::DataField.new('999', '9', '1',
-                               ['b', '123']
-                              )
-    argot = run_traject_on_record('unc', rec)
-    expect(argot['items'][0]).not_to include("\"barcode\":")
-  end
-  end
-
-  describe 'assemble_item' do
-    it '(UNC) does not set copy number 1' do
-      field = MARC::DataField.new('999', '9', '1',
-                                  ['c', '1']
-                                 )
-      result = assemble_item(field)['copy_no']
-      expect(result).to be_nil
+  describe 'barcode processing' do
+    it '(UNC) sets bib-level barcodes field from item data' do
+      rec = make_rec
+      rec << MARC::DataField.new('999', '9', '1',
+                                 ['b', '123']
+                                )
+      rec << MARC::DataField.new('999', '9', '1',
+                                 ['b', '456']
+                                )
+      argot = run_traject_on_record('unc', rec)
+      expect(argot['barcodes']).to eq(['123', '456'])
     end
 
-    it '(UNC) set copy number when > 1' do
-      field = MARC::DataField.new('999', '9', '1',
-                                  ['c', '2']
-                                 )
-      result = assemble_item(field)['copy_no']
-      expect(result).to eq('c. 2')
-    end
-
-    it '(UNC) sets status to Checked out when due date present' do
-      field = MARC::DataField.new('999', '9', '1',
-                                  ['s', '-'],
-                                  ['d', '2019-04-17 04:00:00-04']
-                                 )
-      result = assemble_item(field)['status']
-      expect(result).to eq('Checked out')
-    end
-
-    it '(UNC) does not set due date when item is available' do
-      field = MARC::DataField.new('999', '9', '1',
-                                  ['s', '-']
-                                 )
-      result = assemble_item(field).has_key?('due_date')
-      expect(result).to eq(false)
-    end
-
-    it '(UNC) does not set notes subelement when there are no public notes' do
-      field = MARC::DataField.new('999', '9', '1',
-                                  ['s', '-']
-                                 )
-      result = assemble_item(field).has_key?('notes')
-      expect(result).to eq(false)
-    end
-
-    it '(UNC) compiles multiple public notes' do
-      field = MARC::DataField.new('999', '9', '1',
-                                  ['n', 'cat'],
-                                  ['n', 'goat']
-                                 )
-      result = assemble_item(field)['notes']
-      expect(result).to eq(['cat', 'goat'])
+    it '(UNC) removes barcode data from items[barcode]' do
+      rec = make_rec
+      rec << MARC::DataField.new('999', '9', '1',
+                                 ['b', '123']
+                                )
+      argot = run_traject_on_record('unc', rec)
+      expect(argot['items'][0]).not_to include("\"barcode\":")
     end
   end
-  
 
+  describe 'setting copy numbers' do
+    context 'WHEN item copy number = 1' do
+      it '(UNC) does not set items[copy_number]' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['c', '1']
+                                   )
+        result = assemble_item(field)['copy_no']
+        expect(result).to be_nil
+      end
+    end
 
+    context 'WHEN item copy number > 1' do
+      it '(UNC) sets items[copy_number]' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['c', '2']
+                                   )
+        result = assemble_item(field)['copy_no']
+        expect(result).to eq('c. 2')
+      end
+    end
+  end
 
+  describe 'populating item public notes' do
+    context 'WHEN there are no public notes in the items' do
+      it '(UNC) items[notes] = nil' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['s', '-']
+                                   )
+        result = assemble_item(field).has_key?('notes')
+        expect(result).to eq(false)
+      end
+    end
+
+    context 'WHEN the item record contains multiple public notes' do
+      it '(UNC) extracts all public notes, in order' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['n', 'cat'],
+                                    ['n', 'goat']
+                                   )
+        result = assemble_item(field)['notes']
+        expect(result).to eq(['cat', 'goat'])
+      end
+    end
+  end
 
 end

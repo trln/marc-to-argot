@@ -48,7 +48,7 @@ module MarcToArgot
             when 'c'
               item['copy_no'] = 'c. ' + subfield.value if subfield.value != '1'
             when 'd'
-              item['due_date'] = subfield.value
+              item['due_date'] = subfield.value.gsub('-', '')
             when 'i'
               item['item_id'] = subfield.value
             when 'l'
@@ -69,7 +69,7 @@ module MarcToArgot
             end
           end
 
-          item['status'] = 'Checked out' if item['due_date']
+          item['status'] = 'Checked Out' if item['due_date']
 
           if call_no_val.downcase.start_with?('shelved')
             item['notes'] << call_no_val
@@ -96,7 +96,7 @@ module MarcToArgot
         end
 
         def is_available?(items)
-          available_statuses = ['Ask the MRC', 'Available', 'Contact library for status', 'In-Library Use Only']
+          available_statuses = ['Ask the MRC', 'Available', 'Contact Library for Status', 'In-Library Use Only']
           items.any? { |i| available_statuses.include?(i['status']) rescue false }
         end
 

@@ -25,18 +25,18 @@ module MarcToArgot
           cont_pub_max_year   = options[:cont_pub_max_year] || Time.new().year + 1
           
           lambda do |rec, acc|
-            date = set_year_from_008(rec, min_year, max_year, range_tolerance) if field_present?(rec, '008')
-            date = set_year_from_varfield(rec, min_year, max_year, range_tolerance) if date == nil
+            ff_date_type = rec.date_type
+            date = set_year_from_008(rec, ff_date_type, min_year, max_year, range_tolerance) if field_present?(rec, '008')
+            date = set_year_from_varfield(rec, ff_date_type, min_year, max_year, range_tolerance) if date == nil
             date = cont_pub_max_year if date&.to_i == 9999
             acc << date if date
           end
         end
 
         # retrieves date from 008 if that field exists and data in it is usable
-        def set_year_from_008(rec, min, max, range_tolerance)
-          ff_date_type = rec.date_type
-          ff_date1 = get_date(rec.date1, min, max, 'fixed_field', range_tolerance)
-          ff_date2 = get_date(rec.date2, min, max, 'fixed_field', range_tolerance)
+        def set_year_from_008(rec, ff_date_type, min, max, range_tolerance)
+          ff_date1 = get_date(rec.date1, ff_date_type, min, max, 'fixed_field', range_tolerance)
+          ff_date2 = get_date(rec.date2, ff_date_type, min, max, 'fixed_field', range_tolerance)
 
           case ff_date_type
           when 'b'
@@ -73,7 +73,7 @@ module MarcToArgot
 
         # Retrieves date from the 260 or 264 used as main_imprint if we can't get a usable date
         #  from 008
-        def set_year_from_varfield(rec, min, max, range_tolerance)
+        def set_year_from_varfield(rec, ff_date_type, min, max, range_tolerance)
           imprint_fields = []
           Traject::MarcExtractor.cached("260:264").each_matching_line(rec) do |field, spec, extractor|
             imprint_fields << field
@@ -84,21 +84,27 @@ module MarcToArgot
           main_imprint = select_main_imprint(imprint_fields) unless imprint_fields.empty?
 
           date_sf = main_imprint['c'] if main_imprint
-          date = get_date(date_sf, min, max, 'var_field', range_tolerance) if date_sf
+          date = get_date(date_sf, ff_date_type, min, max, 'var_field', range_tolerance) if date_sf
           return date
         end
 
         # Given single date string from any source field plus other parameters, returns either:
         #  - usable date as integer; or
         #  - nil
-        def get_date(string, min, max, type, range_tolerance)
+        def get_date(string, ff_date_type, min, max, type, range_tolerance)
           the_date = string.strip
 
           # Extract 3-4 character strings beginning with digits and, sometimes, ending with -
           #  from varfield date strings
-          date_matcher = the_date.match(/\d{4}|\d-{2,3}|\d{2}-{1,2}|\d{3}-?/) if type == 'var_field'
-          the_date = date_matcher[0] if date_matcher
-
+          date_matcher = the_date.scan(/\d{4}|\d-{2,3}|\d{2}-{1,2}|\d{3}-?/) if type == 'var_field'
+          if date_matcher
+            if %{c d m u}.include?(ff_date_type)
+              the_date = date_matcher.last
+            else
+              the_date = date_matcher.first
+            end
+          end
+          
           # convert to range based on date source
           # fixed field indicates range with u
           # var field uses -

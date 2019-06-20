@@ -63,8 +63,7 @@ module MarcToArgot
         end
 
         def map_multi_callnum_classification(out, call_numbers)
-          return unless call_numbers.key?('LC')
-          raise ValueError, "#{call_numbers} has no LC call numbers" unless call_numbers['LC']
+          return if !call_numbers.key?('LC') || call_numbers['LC'].nil? || call_numbers['LC'].empty?
           res = []
           call_numbers['LC'].each do |callnum|
             LCC.find_path(callnum).each_with_object([]) do |part, acc|

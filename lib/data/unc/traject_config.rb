@@ -26,13 +26,17 @@ to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collectio
 
 def process_donor_marc(rec)
   donors = []
-  Traject::MarcExtractor.cached('790|1 |abcdgqu:791|2 |abcdfg', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+  Traject::MarcExtractor.cached('790|0 |abcdgqu:791|2 |abcdfg', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
     if field.tag == '790'
       included_sfs = %w[a b c d g q u]
       value = []
       field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
       value = value.join(' ').chomp(',')
-      donors << {'value' => "Donated by #{value}"}
+      if value.start_with?('From the library of')
+        donors << { 'value' => value }
+      else
+        donors << {'value' => "Donated by #{value}"}
+      end
     else field.tag == '791'
       included_sfs = %w[a b c d f g]
       value = []
@@ -79,6 +83,8 @@ each_record do |rec, cxt|
     items(rec, cxt)
     holdings(rec, cxt)
   end
+
+  process_call_numbers(rec, cxt)
 
   # add genre_mrc field
   local_subject_genre(rec, cxt)

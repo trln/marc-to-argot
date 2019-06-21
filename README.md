@@ -2,6 +2,7 @@
 
 Converts MARC input to Argot, TRLN Discovery's shared ingest format.
 
+The Argot format is documented at https://github.com/trln/data-documentation/tree/master/argot
 
 ## CI Status
 

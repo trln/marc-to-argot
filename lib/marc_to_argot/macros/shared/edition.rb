@@ -8,7 +8,7 @@ module MarcToArgot
 
         def edition
           lambda do |rec, acc|
-            Traject::MarcExtractor.cached('250:254')
+            Traject::MarcExtractor.cached('250:251:254')
                                   .each_matching_line(rec) do |field, spec, extractor|
 
               edition = {}
@@ -17,6 +17,9 @@ module MarcToArgot
               when '250'
                 label = collect_and_join_subfield_values(field, '3').chomp(':').strip
                 value = collect_and_join_subfield_values(field, %w[a b])
+              when '251'
+                label = collect_and_join_subfield_values(field, '3').chomp(':').strip
+                value = collect_and_join_subfield_values(field, %w[a])
               when '254'
                 value = collect_and_join_subfield_values(field, %w[a])
               end

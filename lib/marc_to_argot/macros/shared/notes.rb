@@ -247,16 +247,16 @@ module MarcToArgot
             notes = {}
 
             label = note_local_label(field)
-            notes[:label] = label unless label.nil? || label.empty?
+            notes['label'] = label unless label.nil? || label.empty?
 
             value = note_local_value(field, spec, extractor)
-            notes[:value] = value unless value.nil? || value.empty?
+            notes['value'] = value unless value.nil? || value.empty?
 
             indexed_value = note_local_indexed_value(field)
-            notes[:indexed_value] = indexed_value unless indexed_value.nil? || indexed_value.empty?
+            notes['indexed_value'] = indexed_value unless indexed_value.nil? || indexed_value.empty?
 
-            next if (notes[:value].nil? || notes[:value].empty?) &&
-                    (notes[:indexed_value].nil? || notes[:indexed_value].empty?)
+            next if (notes['value'].nil? || notes['value'].empty?) &&
+                    (notes['indexed_value'].nil? || notes['indexed_value'].empty?)
 
             acc << notes
           end

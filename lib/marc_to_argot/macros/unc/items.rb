@@ -12,14 +12,6 @@ module MarcToArgot
             #set Availability facet value affirmatively
             cxt.output_hash['available'] = 'Available' if is_available?(items)
 
-            #set location facet values
-            ilocs = items.collect { |it| it['loc_b'] }
-            hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten
-            clean_loc_strings = hier_loc_code_strings.select { |e| e.nil? == false }
-            if clean_loc_strings.size > 0
-              cxt.output_hash['location_hierarchy'] = explode_hierarchical_strings(clean_loc_strings)
-            end
-
             #set barcodes field
             barcodes = items.map { |i| i['barcode'] }.compact
             cxt.output_hash['barcodes'] = barcodes if barcodes.length > 0
@@ -89,10 +81,6 @@ module MarcToArgot
         
         def status_map
           @status_map ||=Traject::TranslationMap.new('unc/status_map')
-        end
-
-        def loc_hierarchy_map
-          @loc_hierarchy_map ||=Traject::TranslationMap.new('unc/loc_b_to_hierarchy')
         end
 
         def is_available?(items)

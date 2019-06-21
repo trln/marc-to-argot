@@ -64,6 +64,7 @@ each_record do |rec, context|
 end
 
 each_record do |rec, cxt|
+  out = cxt.output_hash
   # identify shared record set members
   # this must come before URLs and shared records fields are processed
   shared_record_set = id_shared_record_set(rec)
@@ -85,7 +86,14 @@ each_record do |rec, cxt|
   end
 
   process_call_numbers(rec, cxt)
+  
+  dummy_items(rec, cxt) if (( out['access_type'] && !out['access_type'].include?('Online') ) ||
+                             out['access_type'].nil? ) &&
+                           out['items'].nil? &&
+                           out['holdings'].nil?
 
+  location_hierarchy(rec, cxt)
+  
   # add genre_mrc field
   local_subject_genre(rec, cxt)
   
@@ -96,7 +104,7 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'CRL')
     add_virtual_collection(cxt, 'TRLN Shared Records. Center for Research Libraries (CRL) e-resources.')
-    ar = cxt.output_hash['note_access_restrictions']
+    ar = out['note_access_restrictions']
     ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   when 'dws'
     add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
@@ -109,11 +117,11 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'OUPP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
   when 'asp'
-    cxt.output_hash['institution'] << 'duke'
+    out['institution'] << 'duke'
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'ASP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
-    ar = cxt.output_hash['note_access_restrictions']
+    ar = out['note_access_restrictions']
     ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   end
 

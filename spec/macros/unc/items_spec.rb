@@ -9,7 +9,6 @@ describe MarcToArgot::Macros::UNC::Items do
     it '(UNC) does not set item or barcodes field if no item data' do
       rec = make_rec
       argot = run_traject_on_record('unc', rec)
-      expect(argot['items']).to be_nil
       expect(argot['barcodes']).to be_nil
     end
   end
@@ -278,39 +277,6 @@ describe MarcToArgot::Macros::UNC::Items do
                                      ['s', 'f'])
           argot = run_traject_on_record('unc', rec)
           expect(argot['available']).to be_nil
-        end
-      end
-    end
-  end
-
-
-  describe 'setting bib-level location_hierarchy values from UNC items' do
-    context 'bib record has item for valid print location' do
-      it '(UNC) sets bib level location_hierarchy for print location' do
-        rec = make_rec
-        rec << MARC::DataField.new('999', '9', '1',
-                                   ['l', 'ggda']
-                                  )
-        argot = run_traject_on_record('unc', rec)
-        expect(argot['location_hierarchy']).to eq(['unc', 'unc:uncrarn', 'unc:uncwil', 'unc:uncwil:uncwilrbc'])
-      end
-
-      context 'AND has unsuppressed e-resource item' do
-        it '(UNC) sets bib level location_hierarchy for print location only' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['i', 'i1688265'],
-                                     ['l', 'dcpf'],
-                                     ['v', 'Bd.2'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['i', 'i1688265'],
-                                     ['l', 'erra'],
-                                     ['v', 'Bd.2'])
-
-          result = run_traject_on_record('unc', rec)['location_hierarchy']
-          expect(result).to(
-            eq(['unc', 'unc:uncdavy', 'unc:uncdavy:uncdavdoc'])
-          )
         end
       end
     end

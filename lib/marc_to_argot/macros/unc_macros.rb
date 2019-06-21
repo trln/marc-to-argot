@@ -11,6 +11,8 @@ module MarcToArgot
       require 'marc_to_argot/macros/unc/shared_records'
       require 'marc_to_argot/macros/unc/urls'
       require 'marc_to_argot/macros/unc/call_number'
+      require 'marc_to_argot/macros/unc/dummy_items'
+      require 'marc_to_argot/macros/unc/location_hierarchy'
       
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -24,7 +26,9 @@ module MarcToArgot
       include SharedRecords
       include Urls
       include CallNumber
-
+      include DummyItems
+      include LocationHierarchy
+      
       MarcExtractor = Traject::MarcExtractor
       
       # Sets the list of MARC org codes that are local.

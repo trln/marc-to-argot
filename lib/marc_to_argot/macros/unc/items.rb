@@ -9,9 +9,6 @@ module MarcToArgot
               items << assemble_item(field)
             end
 
-            #set Availability facet value affirmatively
-            cxt.output_hash['available'] = 'Available' if is_available?(items)
-
             #set barcodes field
             barcodes = items.map { |i| i['barcode'] }.compact
             cxt.output_hash['barcodes'] = barcodes if barcodes.length > 0
@@ -81,11 +78,6 @@ module MarcToArgot
         
         def status_map
           @status_map ||=Traject::TranslationMap.new('unc/status_map')
-        end
-
-        def is_available?(items)
-          available_statuses = ['Ask the MRC', 'Available', 'Contact Library for Status', 'In-Library Use Only']
-          items.any? { |i| available_statuses.include?(i['status']) rescue false }
         end
 
         def set_cn_scheme(marc_tag, i1, i2)

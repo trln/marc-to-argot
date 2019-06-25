@@ -94,7 +94,7 @@ each_record do |rec, cxt|
 
   location_hierarchy(rec, cxt)
 
-  available(rec, cxt)
+  available(rec, cxt) if out['items']
   
   # add genre_mrc field
   local_subject_genre(rec, cxt)

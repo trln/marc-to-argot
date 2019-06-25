@@ -156,59 +156,47 @@ describe MarcToArgot::Macros::UNC::Items do
     end
   end
 
-  describe 'setting items[status] and (bib level) availability values from UNC items -- Each item gets its own detailed status. At the bib level, all item statuses are collapsed into one binary (Available/Not Available)' do
+  describe 'setting items[status] -- Each item record to be displayed gets its own detailed status.' do
     context 'WHEN there is one item record attached to bib' do
 
       rules = {
-        '!' => {:label => 'On Hold', :available => 'Not Available' },
-        '$' => {:label => 'Missing', :available => 'Not Available' },
-        '-' => {:label => 'Available', :available => 'Available' },
-        'a' => {:label => 'Available', :available => 'Available' },
-        'b' => {:label => 'In Process', :available => 'Not Available' },
-        'c' => {:label => 'Missing', :available => 'Not Available' },
-        'd' => {:label => 'Missing', :available => 'Not Available' },
-        'e' => {:label => 'In Process', :available => 'Not Available' },
-        'f' => {:label => 'Missing', :available => 'Not Available' },
-        'g' => {:label => 'Ask the MRC', :available => 'Available' },
-        'h' => {:label => 'Under Review', :available => 'Not Available' },
-        'j' => {:label => 'Contact Library for Status', :available => 'Available' },
-        'k' => {:label => 'In Process', :available => 'Not Available' },
-        'm' => {:label => 'Missing', :available => 'Not Available' },
-        'n' => {:label => 'Missing', :available => 'Not Available' },
-        'o' => {:label => 'In-Library Use Only', :available => 'Available' },
-        'p' => {:label => 'In Process', :available => 'Not Available' },
-        'r' => {:label => 'Being Repaired', :available => 'Not Available' },
-        's' => {:label => 'Missing', :available => 'Not Available' },
-        't' => {:label => 'In Transit', :available => 'Not Available' },
-        'u' => {:label => 'Not Available', :available => 'Not Available' },
-        'v' => {:label => 'At the Bindery', :available => 'Not Available' },
-        'w' => {:label => 'Withdrawn', :available => 'Not Available' },
-        'z' => {:label => 'Missing', :available => 'Not Available' },        
+        '!' => 'On Hold',
+        '$' => 'Missing',
+        '-' => 'Available',
+        'a' => 'Available',
+        'b' => 'In Process',
+        'c' => 'Missing',
+        'd' => 'Missing',
+        'e' => 'In Process',
+        'f' => 'Missing',
+        'g' => 'Ask the MRC',
+        'h' => 'Under Review',
+        'j' => 'Contact Library for Status',
+        'k' => 'In Process',
+        'm' => 'Missing',
+        'n' => 'Missing',
+        'o' => 'In-Library Use Only',
+        'p' => 'In Process',
+        'r' => 'Being Repaired',
+        's' => 'Missing',
+        't' => 'In Transit',
+        'u' => 'Not Available',
+        'v' => 'At the Bindery',
+        'w' => 'Withdrawn',
+        'z' => 'Missing',        
       }
 
-      rules.each do |code, data|
+      rules.each do |code, label|
         context "AND item status = #{code}" do
-          it "(UNC) items[status] = #{data[:label]}" do
+          it "(UNC) items[status] = #{label}" do
             rec = make_rec
             rec << MARC::DataField.new('999', '9', '1',
                                        ['s', "#{code}"])
             result = run_traject_on_record('unc', rec)['items']
             expect(result[0]).to(
-              include("\"status\":\"#{data[:label]}\""),
-              "with status: #{code}, expected #{data[:label]}, got #{result.inspect}"
+              include("\"status\":\"#{label}\""),
+              "with status: #{code}, expected #{label}, got #{result.inspect}"
             )
-          end
-          it "(UNC) (bib level, binary) available = #{data[:available]}" do
-            rec = make_rec
-            rec << MARC::DataField.new('999', '9', '1',
-                                       ['s', "#{code}"])
-            result = run_traject_on_record('unc', rec)['available']
-            case data[:available]
-            when 'Available'
-              expect(result).to eq('Available'), "with status:#{code}, expected #{data[:available]}, got #{result.inspect}"
-            when 'Not Available'
-              expect(result).to be_nil, "with status:#{code}, expected nil, got #{result.inspect}"
-            end
           end
         end
       end
@@ -222,14 +210,6 @@ describe MarcToArgot::Macros::UNC::Items do
           result = run_traject_on_record('unc', rec)['items']
           expect(result[0]).to( include("\"status\":\"Checked Out\"") )
         end
-        it '(UNC) (bib level, binary) available = Not Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', '-'],
-                                     ['d', '2066-06-06'])
-          result = run_traject_on_record('unc', rec)['available']
-          expect(result).to be_nil
-        end
         it '(UNC) items[due_date] = 20660606' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
@@ -237,46 +217,6 @@ describe MarcToArgot::Macros::UNC::Items do
                                      ['d', '2066-06-06'])
           result = run_traject_on_record('unc', rec)['items']
           expect(result[0]).to( include("\"due_date\":\"20660606\"") )
-        end
-
-      end
-
-    end
-
-    context 'bib has multiple items attached' do
-      context 'AND status codes of the items are: w, m, b, t, o' do
-        it '(UNC) (bib level, binary) available = Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'w'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'm'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'b'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 't'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'o'])
-          argot = run_traject_on_record('unc', rec)
-          expect(argot['available']).to eq('Available')
-        end
-      end
-
-      context 'AND status codes of the items are: w, m, b, t, f' do
-        it '(UNC) (bib level, binary) available = Not Available' do
-          rec = make_rec
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'w'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'm'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'b'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 't'])
-          rec << MARC::DataField.new('999', '9', '1',
-                                     ['s', 'f'])
-          argot = run_traject_on_record('unc', rec)
-          expect(argot['available']).to be_nil
         end
       end
     end

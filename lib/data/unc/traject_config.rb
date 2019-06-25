@@ -93,6 +93,8 @@ each_record do |rec, cxt|
                            out['holdings'].nil?
 
   location_hierarchy(rec, cxt)
+
+  available(rec, cxt)
   
   # add genre_mrc field
   local_subject_genre(rec, cxt)

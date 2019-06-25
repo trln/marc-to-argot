@@ -13,6 +13,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/unc/call_number'
       require 'marc_to_argot/macros/unc/dummy_items'
       require 'marc_to_argot/macros/unc/location_hierarchy'
+      require 'marc_to_argot/macros/unc/available'
       
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
@@ -28,6 +29,7 @@ module MarcToArgot
       include CallNumber
       include DummyItems
       include LocationHierarchy
+      include Available
       
       MarcExtractor = Traject::MarcExtractor
       

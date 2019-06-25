@@ -78,22 +78,25 @@ each_record do |rec, cxt|
 
   # set EAD id
   set_ead_id(rec, cxt)
-  # create items and holdings
+  
   # unless staff have added print item/holdings to DWS shared records
+  # create items and holdings
   unless cxt.clipboard[:shared_record_set] == 'dws'
     items(rec, cxt)
     holdings(rec, cxt)
   end
 
   process_call_numbers(rec, cxt)
-  
+
+  # create dummy item with "On Order" status if no items, not online, and order record exists
+  # create dummy item with "Contact Library for Status" if the above, but no order record
   dummy_items(rec, cxt) if (( out['access_type'] && !out['access_type'].include?('Online') ) ||
                              out['access_type'].nil? ) &&
                            out['items'].nil? &&
                            out['holdings'].nil?
 
+  # set location_hierarchy and available fields from real and dummy items
   location_hierarchy(rec, cxt)
-
   available(rec, cxt) if out['items']
   
   # add genre_mrc field

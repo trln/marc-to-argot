@@ -9,10 +9,10 @@ module MarcToArgot
         #    Defaults to 500.
         #  max_year: latest date we consider to be a usable publication date
         #    Defaults to current year, plus 6 (due to ridiculous publisher shenanigans)
-        #  cont_pub_max_year: date to use for continuing resources when they 
+        #  cont_pub_max_year: date to use for continuing resources when they
         #  are otherwise found to set the publication date to 9999.
         #    Defaults to current year plus one.
-        #    
+        #
         #  range_tolerance: Maximum range we think is informative enough to set a
         #    publication_year from.
         #    Default so 500, which basically just throws out dates where we only know
@@ -23,7 +23,7 @@ module MarcToArgot
           range_tolerance     = options[:range_tolerance] || 500
           # max year to show for continuing resources
           cont_pub_max_year   = options[:cont_pub_max_year] || Time.new().year + 1
-          
+
           lambda do |rec, acc|
             ff_date_type = rec.date_type
             date = set_year_from_008(rec, ff_date_type, min_year, max_year, range_tolerance) if field_present?(rec, '008')
@@ -98,13 +98,13 @@ module MarcToArgot
           #  from varfield date strings
           date_matcher = the_date.scan(/\d{4}|\d-{2,3}|\d{2}-{1,2}|\d{3}-?/) if type == 'var_field'
           if date_matcher
-            if %{c d m u}.include?(ff_date_type)
+            if %w[c d m u].include?(ff_date_type)
               the_date = date_matcher.last
             else
               the_date = date_matcher.first
             end
           end
-          
+
           # convert to range based on date source
           # fixed field indicates range with u
           # var field uses -
@@ -165,7 +165,7 @@ module MarcToArgot
         # The rest of the methods handle the different date selection methods
         #  for 008 dates, depending on the 008 date type code
         # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-        
+
         # Selects the fixed field date value to use when one is preferred
         #  but the other is allowable. In the cases where this is needed,
         #  sometimes 9999 counts as a valid date and sometimes not.
@@ -203,7 +203,7 @@ module MarcToArgot
         #  Then we return the midpoint
         def date2_accounting_for_date1_in_range(date1, date2, min, max)
           date2 = date2.strip
-                    
+
           usedate = date2.to_i unless is_range?(date2, 'fixed_field')
           usedate = Time.new.year if usedate == 9999
 

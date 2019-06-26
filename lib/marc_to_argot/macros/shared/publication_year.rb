@@ -27,7 +27,7 @@ module MarcToArgot
           lambda do |rec, acc|
             ff_date_type = rec.date_type
             date = set_year_from_008(rec, ff_date_type, min_year, max_year, range_tolerance) if field_present?(rec, '008')
-            date = set_year_from_varfield(rec, ff_date_type, min_year, max_year, range_tolerance) if date == nil
+            date = set_year_from_varfield(rec, min_year, max_year, range_tolerance, ff_date_type) if date == nil
             date = cont_pub_max_year if date&.to_i == 9999
             acc << date if date
           end
@@ -73,7 +73,7 @@ module MarcToArgot
 
         # Retrieves date from the 260 or 264 used as main_imprint if we can't get a usable date
         #  from 008
-        def set_year_from_varfield(rec, ff_date_type, min, max, range_tolerance)
+        def set_year_from_varfield(rec, min, max, range_tolerance, ff_date_type = 's')
           imprint_fields = []
           Traject::MarcExtractor.cached("260:264").each_matching_line(rec) do |field, spec, extractor|
             imprint_fields << field

@@ -9,17 +9,6 @@ module MarcToArgot
               items << assemble_item(field)
             end
 
-            #set Availability facet value affirmatively
-            cxt.output_hash['available'] = 'Available' if is_available?(items)
-
-            #set location facet values
-            ilocs = items.collect { |it| it['loc_b'] }
-            hier_loc_code_strings = ilocs.collect { |loc| loc_hierarchy_map[loc] }.flatten
-            clean_loc_strings = hier_loc_code_strings.select { |e| e.nil? == false }
-            if clean_loc_strings.size > 0
-              cxt.output_hash['location_hierarchy'] = explode_hierarchical_strings(clean_loc_strings)
-            end
-
             #set barcodes field
             barcodes = items.map { |i| i['barcode'] }.compact
             cxt.output_hash['barcodes'] = barcodes if barcodes.length > 0
@@ -48,7 +37,7 @@ module MarcToArgot
             when 'c'
               item['copy_no'] = 'c. ' + subfield.value if subfield.value != '1'
             when 'd'
-              item['due_date'] = subfield.value
+              item['due_date'] = subfield.value.gsub('-', '')
             when 'i'
               item['item_id'] = subfield.value
             when 'l'
@@ -69,7 +58,7 @@ module MarcToArgot
             end
           end
 
-          item['status'] = 'Checked out' if item['due_date']
+          item['status'] = 'Checked Out' if item['due_date']
 
           if call_no_val.downcase.start_with?('shelved')
             item['notes'] << call_no_val
@@ -89,15 +78,6 @@ module MarcToArgot
         
         def status_map
           @status_map ||=Traject::TranslationMap.new('unc/status_map')
-        end
-
-        def loc_hierarchy_map
-          @loc_hierarchy_map ||=Traject::TranslationMap.new('unc/loc_b_to_hierarchy')
-        end
-
-        def is_available?(items)
-          available_statuses = ['Ask the MRC', 'Available', 'Contact library for status', 'In-Library Use Only']
-          items.any? { |i| available_statuses.include?(i['status']) rescue false }
         end
 
         def set_cn_scheme(marc_tag, i1, i2)

@@ -27,13 +27,13 @@ module MarcToArgot
           unless cxt.clipboard[:shared_record_set] == 'dws'
             # create HoldingsRecord objects to process
             tmp_holdings = create_temp_holdings_for_processing(rec)
-            # process them to extract the necessary data
-            tmp_holdings.each { |hrec| hrec.process_holdings_data }
-            # write them out to argot
-            argotholdings = []
-            tmp_holdings.each { |hrec| argotholdings << hrec.to_argot }
-            cxt.output_hash['holdings'] = argotholdings if argotholdings.length > 0
-#            puts "AH: #{argotholdings}"
+            if tmp_holdings && tmp_holdings.length > 0
+              # process them to extract the necessary data
+              tmp_holdings.each { |hrec| hrec.process_holdings_data }
+
+              argotholdings = tmp_holdings.map(&:to_argot)
+              cxt.output_hash['holdings'] = argotholdings if argotholdings.length > 0
+            end
           end
         end
 
@@ -49,12 +49,14 @@ module MarcToArgot
           Traject::MarcExtractor.cached("999|92|").each_matching_line(rec) do |field, spec, extractor|
             id = field['a']
             loc = field['b']
+            next if loc.start_with?('e')
             ct = field['c']
             occ = occ += 1
 
             init_holdings[id] = [id, loc, ct, occ]
           end
 
+          if init_holdings.length > 0
           # field_hash
           #  key = holdings record id
           #  value = array of MARC::DataFields created from 999 93s determined to
@@ -79,7 +81,7 @@ module MarcToArgot
           end
 
           # field_hash values are appended to the relevant parameter array of init_holdings
-          field_hash.each { |k, v| init_holdings[k] << v }
+          field_hash.each { |k, v| init_holdings[k] << v if init_holdings[k] }
 
           # create new HoldingsRecord object 
           holdings_array = []
@@ -92,7 +94,8 @@ module MarcToArgot
           end
 
           # make sure they are in ILS order
-          holdings_array.sort_by { |h| h.occ }
+          return holdings_array.sort_by { |h| h.occ }
+          end
         end
 
 

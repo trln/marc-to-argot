@@ -278,7 +278,7 @@ describe MarcToArgot do
           end
           end
           context 'AND 260/264 date = |c1900-200-' do
-            it '(MTA) pub date = nil (millennium range not usable, will not set pub date from date1 since that would poorly represent the currency of a currently published continuing resource; gets last date from 26X and treats as range)' do
+            it '(MTA) pub date = 2004 (008 dates unusable; gets last date from 26X and treats as range)' do
               rec = make_rec
               rec['008'].value[6..14] = 'c19002uuu'
               rec << MARC::DataField.new('260', ' ', ' ', ['c', '1900-200-'])              

@@ -30,9 +30,8 @@ module MarcToArgot
             if tmp_holdings && tmp_holdings.length > 0
               # process them to extract the necessary data
               tmp_holdings.each { |hrec| hrec.process_holdings_data }
-              # write them out to argot
-              argotholdings = []
-              tmp_holdings.each { |hrec| argotholdings << hrec.to_argot }
+
+              argotholdings = tmp_holdings.map(&:to_argot)
               cxt.output_hash['holdings'] = argotholdings if argotholdings.length > 0
             end
           end
@@ -82,7 +81,7 @@ module MarcToArgot
           end
 
           # field_hash values are appended to the relevant parameter array of init_holdings
-          field_hash.each { |k, v| init_holdings[k] << v }
+          field_hash.each { |k, v| init_holdings[k] << v if init_holdings[k] }
 
           # create new HoldingsRecord object 
           holdings_array = []

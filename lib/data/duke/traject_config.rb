@@ -109,19 +109,12 @@ to_field 'date_cataloged' do |rec, acc|
 end
 
 # ################################################
-# # Internet Archive ARKs
-# ######
-
-to_field 'internet_archive_arks', internet_archive_arks
-
-# ################################################
 # # Final each_record block
 # ######
 
 each_record do |rec, ctx|
   remove_print_from_archival_material(ctx)
   add_bookplate_to_notes_local(ctx)
-  add_internet_archive_links(ctx)
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
   add_shared_record_data(ctx)

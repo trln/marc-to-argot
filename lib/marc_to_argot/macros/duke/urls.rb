@@ -102,6 +102,11 @@ module MarcToArgot
             substring_present_in_subfield?(field, '3', 'finding aid')
         end
 
+        # NOTE: I'm leaving these methods here for future use,
+        # but at the moment we have copyright issues
+        # that prevent us from linking directly to some of
+        # these records in IA.
+
         def internet_archive_arks
           lambda do |rec, acc, ctx|
             Traject::MarcExtractor.cached("955bz").each_matching_line(rec) do |field|

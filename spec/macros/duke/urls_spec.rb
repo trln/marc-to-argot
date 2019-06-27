@@ -50,13 +50,13 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
-    it 'generates a link to internet archive if there is a 955$b' do
+    xit 'generates a link to internet archive if there is a 955$b' do
       expect(JSON.parse(internet_archive_links['url'][0])['href']).to(
         eq('https://n2t.net/ark:/13960/t1gj0rc2x')
       )
     end
 
-    it 'generates a copy note for an internet archive link if there is a 955$z' do
+    xit 'generates a copy note for an internet archive link if there is a 955$z' do
       expect(JSON.parse(internet_archive_links['url'][0])['note']).to(
         eq('copy 1')
       )

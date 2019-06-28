@@ -55,13 +55,21 @@ to_field 'sersol_number', sersol_number
 to_field "rollup_id", rollup_id
 
 ################################################
+# Internet Archive ID
+######
+
+to_field "internet_archive_id", extract_marc('955q')
+
+################################################
 # Institutiuon
 ######
+
 to_field 'institution', literal('duke')
 
 ##################
 # Names
 #########
+
 to_field 'names', names
 
 ##################

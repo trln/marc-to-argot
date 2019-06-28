@@ -3,7 +3,6 @@
 - local_id
 - rollup_id
 - institution
-- internet_archive_id
 - items
 - access_type
 - names

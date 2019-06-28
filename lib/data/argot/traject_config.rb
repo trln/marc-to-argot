@@ -86,11 +86,6 @@ unless settings["override"].include?("upc")
   to_field "upc", upc
 end
 
-unless settings["override"].include?("internet_archive_id")
-  to_field "internet_archive_id",
-           extract_marc(settings["specs"][:internet_archive_id])
-end
-
 ################################################
 # Dates
 ######

@@ -3,6 +3,7 @@
 - local_id
 - rollup_id
 - institution
+- internet_archive_id
 - resource_type
 - url
 - record_data_source

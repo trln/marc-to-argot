@@ -323,6 +323,7 @@ end
 unless settings["override"].include?("note_use_terms")
   to_field 'note_use_terms', note_use_terms
 end
+
 ################################################
 # Physical Description
 ######

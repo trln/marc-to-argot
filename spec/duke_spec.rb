@@ -8,6 +8,7 @@ describe MarcToArgot do
   let(:access_type_03) { run_traject_json('duke', 'access_type_03', 'xml') }
   let(:access_type_04) { run_traject_json('duke', 'access_type_04', 'xml') }
   let(:access_type_05) { run_traject_json('duke', 'access_type_05', 'xml') }
+  let(:internet_archive_id) { run_traject_json('duke', 'internet_archive_id', 'xml') }
 
   it '(Duke) sets access_type and physical_media for access_type_01' do
     expect(access_type_01['access_type']).to(
@@ -100,5 +101,8 @@ describe MarcToArgot do
     expect(result['id']).to eq('DUKE002959320')
   end
 
-
+  it '(Duke) sets the internet archive id from 955$q' do
+    result = internet_archive_id['internet_archive_id']
+    expect(result).to eq(['worksoflordbyron21byro', 'worksoflordbyron22byro'])
+  end
 end

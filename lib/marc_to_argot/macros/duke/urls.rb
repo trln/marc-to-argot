@@ -57,7 +57,9 @@ module MarcToArgot
           exception_matches = open_access_exceptions.select { |e| href.match(e) }.any?
           return false if (href.match(/(\.edu)|(\.gov)/) &&
                           !exception_matches && type == 'fulltext') ||
-                          href.match(/repository\.duke\.edu\/dc/)
+                          href.match(/repository\.duke\.edu\/dc/) ||
+                          href.match(/library\.duke\.edu\/digitalcollections/) ||
+                          href.match(/idn\.duke\.edu\/ark:\/87924/)
           true
         end
 
@@ -100,38 +102,6 @@ module MarcToArgot
             substring_present_in_subfield?(field, '3', 'collection guide') ||
             substring_present_in_subfield?(field, 'y', 'finding aid') ||
             substring_present_in_subfield?(field, '3', 'finding aid')
-        end
-
-        def internet_archive_arks
-          lambda do |rec, acc, ctx|
-            Traject::MarcExtractor.cached("955bz").each_matching_line(rec) do |field|
-              links = {}
-              ark = field.subfields.select { |sf| sf.code == 'b' }.map(&:value).first
-              copy = field.subfields.select { |sf| sf.code == 'z' }.map(&:value).first
-              links[:ark] = ark unless ark.nil? || ark.empty?
-              links[:copy] = copy unless copy.nil? || copy.empty?
-              acc << links unless links.empty?
-            end
-          end
-        end
-
-        def add_internet_archive_links(ctx)
-          if ctx.output_hash.key?('internet_archive_arks') &&
-             !ctx.output_hash.fetch('access_type', []).include?('Online')
-            ctx.output_hash['url'] ||= []
-            ctx.output_hash['internet_archive_arks'].each do |ia|
-              copy = ia.fetch(:copy, '').strip
-              ark = ia.fetch(:ark, '').strip
-              url = {}
-              url[:href] = "https://n2t.net/#{ark}" unless ark.empty?
-              url[:type] = 'fulltext'
-              url[:note] = copy unless copy.empty?
-              url[:restricted] = 'false'
-              ctx.output_hash['url'] << url.to_json unless ark.empty?
-            end
-            ctx.output_hash['access_type'] << 'Online'
-          end
-          ctx.output_hash.delete('internet_archive_arks')
         end
       end
     end

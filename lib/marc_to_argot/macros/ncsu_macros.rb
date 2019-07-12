@@ -29,6 +29,19 @@ module MarcToArgot
         %w[NcRS NcRS-P NcRS-V NcRhSUS]
       end
 
+      # Donor field is computed from 710 (any indicators) where $3
+      # is 'Donor'.  It is used in NCSU frontend to compute filenames
+      # for bookplate images.
+      def donor
+        extor = MarcExtractor.cached('710')
+        lambda do |rec, acc|
+          donors = extor.each_matching_line(rec) do |f|
+            warn(f)
+            acc << f['a'] if f['3'] == 'Donor'
+          end
+        end
+      end
+
       def resource_type
         lambda do |rec, acc, ctx|
           acc << MarcToArgot::Macros::NCSU::ResourceType.classify(rec, ctx.clipboard['items'])

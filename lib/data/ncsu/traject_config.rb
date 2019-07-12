@@ -36,6 +36,8 @@ to_field 'resource_type', resource_type
 
 to_field 'sersol_number', sersol_number
 
+to_field 'donor', donor
+
 to_field 'issn', ncsu_issn(settings['specs'][:issn])
 
 each_record do |rec, ctx|

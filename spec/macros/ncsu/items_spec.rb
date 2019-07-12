@@ -66,6 +66,11 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:no_vetmed_records) { load_json_multiple(run_traject('ncsu', 'base')) }
 
+  let(:metrc_reserve) { fixture_items[:metrc_reserve ] }
+
+
+
+
   context 'NCSU' do
     it 'has a blank copy_no' do
       expect(copy_no_item['copy_no']).to eq('')
@@ -190,6 +195,15 @@ describe MarcToArgot::Macros::NCSU::Items do
       item = JSON.parse(govdoc['items'].first)
       expect(item['status']).to include('Available upon request')
     end
+
+    context 'remamp_item_locations!' do 
+      it 'shows LRL (METRC) reserves as being at METRC' do 
+        expect(metrc_reserve['loc_b']).not_to eq('LRL')
+        remap_item_locations!(metrc_reserve)
+        expect(metrc_reserve['loc_b']).to eq('LRL')
+      end
+    end
+
 
     context 'Serials' do
       context '#library_use_only?' do

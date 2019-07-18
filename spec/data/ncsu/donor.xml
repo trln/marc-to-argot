@@ -77,7 +77,7 @@
       <marcxml:subfield code="b">Centre régional de la productivité et des études économiques.</marcxml:subfield>
     </marcxml:datafield>
     <marcxml:datafield tag="710" ind1="2" ind2="0">
-      <marcxml:subfield code="3">Donor</marcxml:subfield>
+      <marcxml:subfield code="3">Endow</marcxml:subfield>
       <marcxml:subfield code="a">Donor Donorson Foundation</marcxml:subfield>
     </marcxml:datafield>
     <marcxml:datafield tag="830" ind1=" " ind2="0">

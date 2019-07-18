@@ -36,7 +36,7 @@ module MarcToArgot
         extor = MarcExtractor.cached('710')
         lambda do |rec, acc|
           donors = extor.each_matching_line(rec) do |f|
-            acc << f['a'] if f['3'] == 'Donor'
+            acc << f['a'] if f['3'] == 'Endow'
           end
         end
       end

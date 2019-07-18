@@ -237,10 +237,10 @@ module MarcToArgot
               remap_item_locations!(item)
               unless shadowed_location?(item)
                 items << item 
-                acc << item.to_json if item 
               end
             end
             items = MarcToArgot::Macros::NCSU::ItemUtils.sort_items(items)
+            items.each { |i| acc << i.to_json }
             populate_context!(items, rec, ctx)
             map_call_numbers!(ctx, items)
           end

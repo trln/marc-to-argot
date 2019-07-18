@@ -66,6 +66,30 @@ describe MarcToArgot::Macros::NCSU::Items do
 
   let(:no_vetmed_records) { load_json_multiple(run_traject('ncsu', 'base')) }
 
+  let(:metrc_reserve) { fixture_items[:metrc_reserve ] }
+
+
+  let (:dwell_sorted_call_numbers) { [
+    "TH4805 .D88 V.2 NO.3-5 2002", "TH4805 .D88 V.2 NO.6 2002", "TH4805 .D88 V.3 NO.1-3 2002-2003", 
+    "TH4805 .D88 V.3 NO.4,6,8 2003", "TH4805 .D88 V.3 NO.5,7 2003", "TH4805 .D88 V.4 NO.1-2 2003", 
+    "TH4805 .D88 V.4 NO.4-5,7 2004", "TH4805 .D88 V.4 NO.8 2004", "TH4805 .D88 V.5 NO.1 2004", 
+    "TH4805 .D88 V.5 NO.2 2004", "TH4805 .D88 V.5 NO.4,6-7 2005", "TH4805 .D88 V.5 NO.5 2004", 
+    "TH4805 .D88 V.5 NO.8 2005", "TH4805 .D88 V.6 NO.1-2 2005-2006", "TH4805 .D88 V.6 NO.3 2006", 
+    "TH4805 .D88 V.6 NO.9 2006", "TH4805 .D88 V.7 NO.2 2006-2007", "TH4805 .D88 V.7 NO.6 2007", 
+    "TH4805 .D88 V.7 NO.8-10 2007", "TH4805 .D88 V.8 NO.1-3 2007-2008", "TH4805 .D88 V.8 NO.4-6 2008", 
+    "TH4805 .D88 V.8 NO.7-10 2008", "TH4805 .D88 V.9 NO.1-3 2008-2009", "TH4805 .D88 V.9 NO.4-6 2009",
+    "TH4805 .D88 V.9 NO.7-10 2009", "TH4805 .D88 V.10 NO.1-2,4-5 2009-2010", "TH4805 .D88 V.10 NO.6-10 2010", 
+    "TH4805 .D88 V.10 SUPPL 2010", "TH4805 .D88 V.11 NO.1-5 2010-2011", "TH4805 .D88 V.11 NO.6-10 2011", 
+    "TH4805 .D88 V.11 SUPPL. 2011", "TH4805 .D88 V.12 NO.1-5 2011-2012", "TH4805 .D88 V.12 NO.6-10 2012", 
+    "TH4805 .D88 V.13 NO.1-5 2013 SUPPL.", "TH4805 .D88 V.13 NO.6-10 2013", "TH4805 .D88 V.14 NO.1-5 2013-2014", 
+    "TH4805 .D88 V.14 NO.6-11 2014", "TH4805 .D88 V.15 NO.1-5 2014-2015", "TH4805 .D88 V.15 NO.6-10 2015", 
+    "TH4805 .D88 V.16 NO.1-5 2015-2016", "TH4805 .D88 V.16 NO.6-10 2016", "TH4805 .D88 V.16 NO.11 2016", 
+    "TH4805 .D88 V.17 NO.1-3 2017", "TH4805 .D88 V.17 NO.4-6 2017", "TH4805 .D88 V.18 NO.1-3 2018"
+    ]
+  }
+
+  let (:dwell) { run_traject_json('ncsu', 'dwell') }
+
   context 'NCSU' do
     it 'has a blank copy_no' do
       expect(copy_no_item['copy_no']).to eq('')
@@ -189,6 +213,23 @@ describe MarcToArgot::Macros::NCSU::Items do
     it 'bookbot items have status available upon request' do
       item = JSON.parse(govdoc['items'].first)
       expect(item['status']).to include('Available upon request')
+    end
+
+    context 'remamp_item_locations!' do 
+      it 'shows LRL (METRC) reserves as being at METRC' do 
+        expect(metrc_reserve['loc_b']).not_to eq('LRL')
+        remap_item_locations!(metrc_reserve)
+        expect(metrc_reserve['loc_b']).to eq('LRL')
+      end
+    end
+
+    # test that we call sort_items from ItemUtils at the right
+    # time to ensure they're sorted in the output
+    context 'item extraction' do
+      it 'sorts jumbled Dwell items' do
+        actual_call_numbers = dwell['items'].map { |i| JSON.parse(i)['call_no'] }
+        expect(actual_call_numbers).to eq(dwell_sorted_call_numbers)
+      end
     end
 
     context 'Serials' do

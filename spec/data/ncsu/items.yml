@@ -67,3 +67,9 @@
   <<: *HILLSTACKS
   :m: DESIGN
   :t: SERIAL
+
+
+:metrc_reserve:
+  <<: *HILLSTACKS
+  :m: DHHILL
+  :k: RSRV-LRL

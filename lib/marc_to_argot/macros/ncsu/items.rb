@@ -41,6 +41,20 @@ module MarcToArgot
           'HOLDS' => 'On hold for another user'
         }.freeze
 
+
+        # items in these current locations
+        # will keep their original home libraries
+        # even though their reserve desks are at
+        # other ones.
+        RESERVE_LIBRARY_REMAPS = {          
+          'RSRV-HILL' => 'DHHILL',
+          'RSRV-HUNT' => 'HUNT',
+          'RSRV-LRL' => 'LRL',
+          'RSRV-VML' => 'VETMED',
+          'RSRV-DES' => 'DESIGN',
+          'RSRV-NRL' => 'NRL'
+        }.freeze
+
         #not currently used, but could be helpful in the future
         OFFSITE_SPEC_COLLECTIONS = Set.new(%w[ARCHIVES STACKS METCALF SPEC SPEC-OD MANUSCRIPT
                                    AUCTIONCAT PRESERV MAPS OVERSIZE OVERSIZE2 FACULTYPUB
@@ -136,11 +150,14 @@ module MarcToArgot
           end
           item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
           item['loc_n'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
-
+            
           # reserves should pretend they're home.
           if current_as_home?(item['loc_current'])
             item['loc_n'] = item['loc_current']
           end
+
+          item['loc_b'] = RESERVE_LIBRARY_REMAPS[item['loc_n']] if RESERVE_LIBRARY_REMAPS.key?(item['loc_n'])
+
           # now some remappings based on item type
           item['loc_n'] = 'GAME' if item['type'] == 'GAME-4HR'
         end
@@ -220,10 +237,10 @@ module MarcToArgot
               remap_item_locations!(item)
               unless shadowed_location?(item)
                 items << item 
-                acc << item.to_json if item 
               end
             end
             items = MarcToArgot::Macros::NCSU::ItemUtils.sort_items(items)
+            items.each { |i| acc << i.to_json }
             populate_context!(items, rec, ctx)
             map_call_numbers!(ctx, items)
           end

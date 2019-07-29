@@ -102,8 +102,15 @@ each_record do |rec, cxt|
   # add genre_mrc field
   local_subject_genre(rec, cxt)
   
-  # Add and manipulate fields for TRLN shared records
+  # Add and manipulate fields for TRLN shared records and other special record groups
   case cxt.clipboard[:shared_record_set]
+  when 'asp'
+    out['institution'] << 'duke'
+    add_record_data_source(cxt, 'Shared Records')
+    add_record_data_source(cxt, 'ASP')
+    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
+    ar = out['note_access_restrictions']
+    ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   when 'crl'
     add_institutions(cxt, ['duke', 'ncsu'])
     add_record_data_source(cxt, 'Shared Records')
@@ -116,18 +123,15 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'DWS')
     add_virtual_collection(cxt, 'TRLN Shared Records. Documents without shelves.')
+  when 'filmfinder'
+    # MRC's scoped FilmFinder search includes everything in MRC physical locations
+    #  and everything with this virtual_collection value
+    add_virtual_collection(cxt, 'UNC MRC FilmFinder online and special materials')
   when 'oupp'
     add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'OUPP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
-  when 'asp'
-    out['institution'] << 'duke'
-    add_record_data_source(cxt, 'Shared Records')
-    add_record_data_source(cxt, 'ASP')
-    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
-    ar = out['note_access_restrictions']
-    ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   end
 
   remove_print_from_archival_material(cxt)

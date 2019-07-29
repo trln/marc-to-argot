@@ -16,6 +16,8 @@ module MarcToArgot
               shared_set = 'asp'
             when 'dwsgpo'
               shared_set = 'dws'
+            when 'filmfinder'
+              shared_set = 'filmfinder'
             when 'troup'
               shared_set = 'oupp'
             when /^center for research libraries \(crl\) eresources \(online collection\)/

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 describe MarcToArgot::Indexers::EEBO do
   include Util
@@ -7,18 +8,23 @@ describe MarcToArgot::Indexers::EEBO do
 
   it 'extracts a unique id' do
     indexer.instance_eval do
-      to_field 'id', extract_marc("001") 
+      to_field 'id', extract_marc('001')
     end
-    records.each_with_index do |rec, idx|
-	urls=rec["url"]
-	datasource=rec["record_data_source"]
-	expect(urls.length).to eq(1)	
-	expect(JSON.parse(urls.first)["href"]).to start_with("{+proxyPrefix}")	
-	expect(rec["id"]).to start_with("EEBO")
-	expect(rec["record_data_source"]).to eq(["MARC", "Shared Records", "EEBO"])
-        expect(rec["virtual_collection"]). to eq(["TRLN Shared Records. Early English Books Online."])
-	expect(rec["institution"]).to eq(["ncsu", "unc", "duke"])
-        expect(rec["access_type"]).to eq(["Online"])
+    records.each_with_index do |rec, _idx|
+      urls = rec['url']
+      datasource = rec['record_data_source']
+      expect(urls.length).to eq(1)
+      expect(JSON.parse(urls.first)['href']).to start_with('{+proxyPrefix}')
+      expect(rec['id']).to start_with('EEBO')
+      expect(rec['record_data_source']).to eq(['MARC', 'Shared Records', 'EEBO'])
+      expect(rec['virtual_collection']). to eq(['TRLN Shared Records. Early English Books Online.'])
+      expect(rec['institution']).to eq(%w[ncsu unc duke])
+      expect(rec['access_type']).to eq(['Online'])
+    end
+  end
+  it 'sets physical media to online' do
+    records.each do |r|
+      expect(r['physical_media']).to eq(['Online'])
     end
   end
 end

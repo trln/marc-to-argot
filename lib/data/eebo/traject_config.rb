@@ -27,6 +27,8 @@ to_field 'rollup_id', rollup_id
 
 to_field 'resource_type', literal("Book")
 
+to_field 'physical_media', literal("Online")
+
 to_field 'record_data_source' do |rec,acc| 
 	["MARC", "Shared Records" , "EEBO"].each {|i| acc<<i}
 end

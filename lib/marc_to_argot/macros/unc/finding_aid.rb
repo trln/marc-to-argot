@@ -32,7 +32,7 @@ module MarcToArgot
         def has_finding_aid_url?(rec)
           the856s = rec.find_all { |f| f.tag == '856' && f.indicator1 == '4' &&
                                    f.indicator2 == '2' &&
-                                   f['u'] =~ /https?:\/\/finding-aids\.lib\.unc\.edu\/[0-9A-Z]/ }
+                                   f['u'] =~ /https?:\/\/finding-aids\.lib\.unc\.edu\/[0-9A-Za-z]/ }
           return true if the856s.length > 0
         end
 
@@ -59,7 +59,7 @@ module MarcToArgot
         def get_finding_aid_urls(rec)
           url_fields = rec.find_all { |f| f.tag == '856' && f.indicator1 == '4' &&
                                       f.indicator2 == '2' &&
-                                      f['u'] =~ /https?:\/\/finding-aids\.lib\.unc\.edu\/[0-9A-Z]/ }
+                                      f['u'] =~ /https?:\/\/finding-aids\.lib\.unc\.edu\/[0-9A-Za-z]/ }
           urls = url_fields.map { |f| f['u'].sub('http:', 'https:') }
           urls
         end

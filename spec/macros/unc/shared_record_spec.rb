@@ -30,6 +30,16 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       expect(result).to eq('crl')
     end
   end
+
+  context 'When there is a 919 field containing filmfinder' do
+    it '(UNC) sets FilmFinder virtual_collection field' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ', ' ',
+                                 ['a', 'filmfinder'])
+      result = run_traject_on_record('unc', rec)['virtual_collection']
+      expect(result).to eq(['UNC MRC FilmFinder online and special materials'])
+    end
+  end
   
   context 'When shared record set is OUPP' do
     it '(UNC) does NOT set TRLN location facet hierarchy for TRLN shared print' do

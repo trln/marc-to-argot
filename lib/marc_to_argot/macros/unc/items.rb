@@ -45,6 +45,14 @@ module MarcToArgot
               item['copy_no'] = 'c. ' + subfield.value if subfield.value != '1'
             when 'd'
               item['due_date'] = subfield.value
+            when 'h'
+              next if subfield.value == '0'
+
+              if subfield.value == '1'
+                item['notes'] << '1 hold currently placed on this item'
+              else
+                item['notes'] << "#{subfield.value} holds currently placed on this item"
+              end
             when 'i'
               item['item_id'] = subfield.value
             when 'l'

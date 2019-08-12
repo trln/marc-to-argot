@@ -290,4 +290,30 @@ describe MarcToArgot::Macros::UNC::Items do
     end
   end
 
+  describe 'set note providing hold count' do
+    context 'WHEN there are no holds on the item' do
+      it '(UNC) adds no hold count note' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['h', '0'])
+        result = assemble_item(field)['notes']
+        expect(result).to be_nil
+      end
+    end
+
+    context 'WHEN there are holds on the item' do
+      it '(UNC) adds a hold count note' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['h', '2'])
+        result = assemble_item(field)['notes']
+        expect(result).to eq(['2 holds currently placed on this item'])
+      end
+
+      it '(UNC) uses proper pluralization for a hold count of 1' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['h', '1'])
+        result = assemble_item(field)['notes']
+        expect(result).to eq(['1 hold currently placed on this item'])
+      end
+    end
+  end
 end

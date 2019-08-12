@@ -1,3 +1,3 @@
 module MarcToArgot
-  VERSION = '0.4.38'.freeze
+  VERSION = '0.4.39'.freeze
 end

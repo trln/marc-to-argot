@@ -29,6 +29,13 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = id_shared_record_set(rec)
       expect(result).to eq('crl')
     end
+
+    it 'identifies OUPP records' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ', ' ', ['a', 'TROUP'])
+      result = id_shared_record_set(rec)
+      expect(result).to eq('oupp')
+  end
   end
 
   context 'When there is a 919 field containing filmfinder' do
@@ -66,6 +73,26 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       expect(result).to eq(
                           ['TRLN Shared Records. Oxford University Press print titles.']
                         )
+    end
+
+    context 'When non-OUPP items are present on a OUPP record' do
+      let(:rec) do
+        rec = make_rec
+        rec << MARC::DataField.new('919', ' ', ' ', ['a', 'TROUP'])
+        rec << MARC::DataField.new('999', '9', '1', ['l', "ddda"])
+        rec << MARC::DataField.new('999', '9', '1', ['l', "troup"])
+        rec
+      end
+
+      it '(UNC) non-OUPP items are removed' do
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result.find { |i| i.include? 'ddda' }).to be_nil
+      end
+
+      it '(UNC) OUPP items remain' do
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result.find { |i| i.include? "loc_b\":\"troup" }).to be_truthy
+      end
     end
   end
 

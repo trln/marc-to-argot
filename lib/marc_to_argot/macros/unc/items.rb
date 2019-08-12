@@ -13,6 +13,13 @@ module MarcToArgot
             barcodes = items.map { |i| i['barcode'] }.compact
             cxt.output_hash['barcodes'] = barcodes if barcodes.length > 0
 
+          # non-OUPP items mistakenly cataloged on OUPP shared records display
+          # in the local scope of non-UNC institutions (and make UNC locs
+          # appear in the facets), so do not output them.
+          if cxt.clipboard[:shared_record_set] == 'oupp'
+            items.select! { |i| i['loc_b'] == 'troup' }
+          end
+
             items = items.map { |i| i.delete('barcode'); i.to_json }
             
             cxt.output_hash['items'] = items if items.length > 0

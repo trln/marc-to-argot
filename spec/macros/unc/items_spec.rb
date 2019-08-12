@@ -183,7 +183,7 @@ describe MarcToArgot::Macros::UNC::Items do
         'u' => 'Not Available',
         'v' => 'At the Bindery',
         'w' => 'Withdrawn',
-        'z' => 'Missing',        
+        'z' => 'Missing',
       }
 
       rules.each do |code, label|

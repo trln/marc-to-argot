@@ -183,7 +183,7 @@ describe MarcToArgot::Macros::UNC::Items do
         'u' => 'Not Available',
         'v' => 'At the Bindery',
         'w' => 'Withdrawn',
-        'z' => 'Missing',        
+        'z' => 'Missing',
       }
 
       rules.each do |code, label|
@@ -201,22 +201,22 @@ describe MarcToArgot::Macros::UNC::Items do
         end
       end
 
-      context "AND item has a due date value (2066-6-6)" do
+      context "AND item has a due date value (2019-01-02 03:04:00-05)" do
         it '(UNC) items[status] = Checked Out' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
                                      ['s', '-'],
-                                     ['d', '2066-06-06'])
+                                     ['d', '2019-01-02 03:04:00-05'])
           result = run_traject_on_record('unc', rec)['items']
           expect(result[0]).to( include("\"status\":\"Checked Out\"") )
         end
-        it '(UNC) items[due_date] = 20660606' do
+        it '(UNC) items[due_date] = 2019-01-02 03:04:00-05' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
                                      ['s', '-'],
-                                     ['d', '2066-06-06'])
+                                     ['d', '2019-01-02 03:04:00-05'])
           result = run_traject_on_record('unc', rec)['items']
-          expect(result[0]).to( include("\"due_date\":\"20660606\"") )
+          expect(result[0]).to include("\"due_date\":\"2019-01-02 03:04:00-05\"")
         end
       end
     end
@@ -290,4 +290,30 @@ describe MarcToArgot::Macros::UNC::Items do
     end
   end
 
+  describe 'set note providing hold count' do
+    context 'WHEN there are no holds on the item' do
+      it '(UNC) adds no hold count note' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['h', '0'])
+        result = assemble_item(field)['notes']
+        expect(result).to be_nil
+      end
+    end
+
+    context 'WHEN there are holds on the item' do
+      it '(UNC) adds a hold count note' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['h', '2'])
+        result = assemble_item(field)['notes']
+        expect(result).to eq(['2 holds currently placed on this item'])
+      end
+
+      it '(UNC) uses proper pluralization for a hold count of 1' do
+        field = MARC::DataField.new('999', '9', '1',
+                                    ['h', '1'])
+        result = assemble_item(field)['notes']
+        expect(result).to eq(['1 hold currently placed on this item'])
+      end
+    end
+  end
 end

@@ -29,6 +29,13 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = id_shared_record_set(rec)
       expect(result).to eq('crl')
     end
+
+    it 'identifies OUPP records' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ', ' ', ['a', 'TROUP'])
+      result = id_shared_record_set(rec)
+      expect(result).to eq('oupp')
+    end
   end
 
   context 'When there is a 919 field containing filmfinder' do
@@ -40,7 +47,7 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       expect(result).to eq(['UNC MRC FilmFinder online and special materials'])
     end
   end
-  
+
   context 'When shared record set is OUPP' do
     it '(UNC) does NOT set TRLN location facet hierarchy for TRLN shared print' do
       result = troup1['location_hierarchy']
@@ -66,6 +73,26 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       expect(result).to eq(
                           ['TRLN Shared Records. Oxford University Press print titles.']
                         )
+    end
+
+    context 'When non-OUPP items are present on a OUPP record' do
+      let(:rec) do
+        rec = make_rec
+        rec << MARC::DataField.new('919', ' ', ' ', ['a', 'TROUP'])
+        rec << MARC::DataField.new('999', '9', '1', ['l', "ddda"])
+        rec << MARC::DataField.new('999', '9', '1', ['l', "troup"])
+        rec
+      end
+
+      it '(UNC) non-OUPP items are removed' do
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result.find { |i| i.include? 'ddda' }).to be_nil
+      end
+
+      it '(UNC) OUPP items remain' do
+        result = run_traject_on_record('unc', rec)['items']
+        expect(result.find { |i| i.include? "loc_b\":\"troup" }).to be_truthy
+      end
     end
   end
 
@@ -112,17 +139,17 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
     it '(UNC) sets open access URL' do
       result = dwsgpo1['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS2957\",\"type\":\"fulltext\",\"restricted\":\"false\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS2957\",\"type\":\"fulltext\",\"restricted\":\"false\"}"
                       )
     end
 
     it '(UNC) sets open access URL without discarding $3 values' do
       result = dwsgpo2['url']
       expect(result).to include(
-                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"note\":\"Spanish\",\"restricted\":\"false\"}"                            
+                          "{\"href\":\"http://purl.access.gpo.gov/GPO/LPS32255\",\"type\":\"fulltext\",\"note\":\"Spanish\",\"restricted\":\"false\"}"
                         )
     end
-    
+
     it '(UNC) record_data_source includes "Shared Records" and "DWS"' do
       result = dwsgpo1['record_data_source']
       expect(result).to eq(
@@ -151,7 +178,7 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = asp1['url']
       expect(result).to eq(
                           [
-                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"                            
+                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"
                           ]
                         )
     end
@@ -160,7 +187,7 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = asp2['url']
       expect(result).to eq(
                           [
-                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"note\":\"Part 3\"}"                            
+                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"note\":\"Part 3\"}"
                           ]
                         )
     end
@@ -190,7 +217,7 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       expect(result).to eq(
                           ['Access limited to authenticated users. Unlimited simultaneous users.']
                         )
-    end    
+    end
   end
 
 end

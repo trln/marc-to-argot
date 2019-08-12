@@ -78,7 +78,7 @@ each_record do |rec, cxt|
 
   # set EAD id
   set_ead_id(rec, cxt)
-  
+
   # unless staff have added print item/holdings to DWS shared records
   # create items and holdings
   unless cxt.clipboard[:shared_record_set] == 'dws'
@@ -98,10 +98,10 @@ each_record do |rec, cxt|
   # set location_hierarchy and available fields from real and dummy items
   location_hierarchy(rec, cxt)
   available(rec, cxt) if out['items']
-  
+
   # add genre_mrc field
   local_subject_genre(rec, cxt)
-  
+
   # Add and manipulate fields for TRLN shared records and other special record groups
   case cxt.clipboard[:shared_record_set]
   when 'asp'

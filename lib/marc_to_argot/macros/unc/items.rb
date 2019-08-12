@@ -37,7 +37,7 @@ module MarcToArgot
             when 'c'
               item['copy_no'] = 'c. ' + subfield.value if subfield.value != '1'
             when 'd'
-              item['due_date'] = subfield.value.gsub('-', '')
+              item['due_date'] = subfield.value
             when 'i'
               item['item_id'] = subfield.value
             when 'l'

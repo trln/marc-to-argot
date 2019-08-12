@@ -201,22 +201,22 @@ describe MarcToArgot::Macros::UNC::Items do
         end
       end
 
-      context "AND item has a due date value (2066-6-6)" do
+      context "AND item has a due date value (2019-01-02 03:04:00-05)" do
         it '(UNC) items[status] = Checked Out' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
                                      ['s', '-'],
-                                     ['d', '2066-06-06'])
+                                     ['d', '2019-01-02 03:04:00-05'])
           result = run_traject_on_record('unc', rec)['items']
           expect(result[0]).to( include("\"status\":\"Checked Out\"") )
         end
-        it '(UNC) items[due_date] = 20660606' do
+        it '(UNC) items[due_date] = 2019-01-02 03:04:00-05' do
           rec = make_rec
           rec << MARC::DataField.new('999', '9', '1',
                                      ['s', '-'],
-                                     ['d', '2066-06-06'])
+                                     ['d', '2019-01-02 03:04:00-05'])
           result = run_traject_on_record('unc', rec)['items']
-          expect(result[0]).to( include("\"due_date\":\"20660606\"") )
+          expect(result[0]).to include("\"due_date\":\"2019-01-02 03:04:00-05\"")
         end
       end
     end

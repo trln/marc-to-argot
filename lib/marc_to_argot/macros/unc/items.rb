@@ -77,9 +77,8 @@ module MarcToArgot
 
           if call_no_val.downcase.start_with?('shelved')
             item['notes'] << call_no_val
-            call_no_val = ''
           else
-            item['call_no'] = call_no_val
+            item['call_no'] = call_no_val unless call_no_val == ''
           end
 
           if item.has_key?('call_no')

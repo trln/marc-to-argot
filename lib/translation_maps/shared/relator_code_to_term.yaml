@@ -1,3 +1,4 @@
+---
 abr: abridger
 acp: art copyist
 act: actor
@@ -38,7 +39,6 @@ bsl: bookseller
 cas: caster
 ccp: conceptor
 chr: choreographer
-clb: collaborator
 cli: client
 cll: calligrapher
 clr: colorist
@@ -112,7 +112,7 @@ evp: event place
 exp: expert
 fac: facsimilist
 fds: film distributor
-fld: field director
+fld: film director
 flm: film editor
 fmd: film director
 fmk: filmmaker
@@ -122,7 +122,6 @@ fnd: funder
 fpy: first party
 frg: forger
 gis: geographic information specialist
-grt: graphic technician
 his: host institution
 hnr: honoree
 hst: host
@@ -258,7 +257,6 @@ tyg: typographer
 uvp: university place
 vac: voice actor
 vdg: videographer
-voc: vocalist
 wac: writer of added commentary
 wal: writer of added lyrics
 wam: writer of accompanying material

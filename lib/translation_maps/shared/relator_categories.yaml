@@ -1,6 +1,7 @@
+---
 abridger: contributor
 actor: contributor
-adapter: contributor
+adapter: uncategorized
 addressee: other
 analyst: uncategorized
 animator: contributor
@@ -18,11 +19,11 @@ assignee: uncategorized
 associated name: uncategorized
 attributed name: uncategorized
 auctioneer: uncategorized
-author in quotations or text abstracts: contributor
-author of afterword, colophon, etc.: contributor
-author of dialog: creator
-author of introduction, etc.: contributor
 author: creator
+author in quotations or text abstracts: uncategorized
+author of afterword, colophon, etc.: uncategorized
+author of dialog: creator
+author of introduction, etc.: uncategorized
 autographer: other
 bibliographic antecedent: uncategorized
 binder: other
@@ -35,43 +36,42 @@ bookplate designer: uncategorized
 bookseller: uncategorized
 braille embosser: manufacturer
 broadcaster: publisher
-calligrapher: contributor
+calligrapher: uncategorized
 cartographer: creator
 caster: manufacturer
 censor: uncategorized
 choreographer: creator
 cinematographer: other
 client: uncategorized
-collaborator: contributor
 collection registrar: other
 collector: other
 collotyper: manufacturer
 colorist: uncategorized
-commentator for written text: contributor
 commentator: contributor
+commentator for written text: uncategorized
 compiler: creator
+complainant: uncategorized
 complainant-appellant: uncategorized
 complainant-appellee: uncategorized
-complainant: uncategorized
 composer: creator
 compositor: uncategorized
-conceptor: contributor
+conceptor: uncategorized
 conductor: contributor
 conservator: uncategorized
-consultant to a project: contributor
 consultant: other
+consultant to a project: uncategorized
+contestant: uncategorized
 contestant-appellant: uncategorized
 contestant-appellee: uncategorized
-contestant: uncategorized
+contestee: uncategorized
 contestee-appellant: uncategorized
 contestee-appellee: uncategorized
-contestee: uncategorized
-contractor: contributor
+contractor: uncategorized
 contributor: contributor
 copyright claimant: uncategorized
 copyright holder: uncategorized
 corrector: uncategorized
-correspondent: contributor
+correspondent: uncategorized
 costume designer: contributor
 court governed: other
 court reporter: contributor
@@ -83,49 +83,48 @@ data contributor: uncategorized
 data manager: uncategorized
 dedicatee: other
 dedicator: other
+defendant: other
 defendant-appellant: uncategorized
 defendant-appellee: uncategorized
-defendant: other
 degree granting institution: other
 degree supervisor: other
-delineator: contributor
+delineator: uncategorized
 depicted: uncategorized
 depositor: owner
 designer: creator
 director: director
 dissertant: creator
 distribution place: uncategorized
-distributor: publisher
+distributor: uncategorized
 donor: owner
 draftsman: contributor
 dubious author: uncategorized
+editor: editor
 editor of compilation: editor
 editor of moving image work: contributor
-editor: editor
 electrician: uncategorized
 electrotyper: uncategorized
 enacting jurisdiction: creator
-engineer: contributor
+engineer: uncategorized
 engraver: manufacturer
 etcher: manufacturer
 event place: uncategorized
 expert: uncategorized
-facsimilist: contributor
+facsimilist: uncategorized
 field director: uncategorized
 film director: director
 film distributor: distributor
-film editor: contributor
+film editor: uncategorized
 film producer: other
 filmmaker: director
 first party: uncategorized
-forger: contributor
+forger: uncategorized
 former owner: owner
 funder: uncategorized
 geographic information specialist: uncategorized
-graphic technician: creator
 honoree: other
-host institution: other
 host: contributor
+host institution: other
 illuminator: other
 illustrator: contributor
 inscriber: other
@@ -136,21 +135,21 @@ inventor: creator
 issuing body: publisher
 judge: other
 jurisdiction governed: other
-laboratory director: uncategorized
 laboratory: uncategorized
+laboratory director: uncategorized
 landscape architect: creator
 lead: uncategorized
 lender: uncategorized
+libelant: uncategorized
 libelant-appellant: uncategorized
 libelant-appellee: uncategorized
-libelant: uncategorized
+libelee: uncategorized
 libelee-appellant: uncategorized
 libelee-appellee: uncategorized
-libelee: uncategorized
 librettist: creator
 licensee: uncategorized
 licensor: uncategorized
-lighting designer: contributor
+lighting designer: uncategorized
 lithographer: manufacturer
 lyricist: creator
 manufacture place: uncategorized
@@ -159,13 +158,13 @@ marbler: uncategorized
 markup editor: uncategorized
 medium: other
 metadata contact: uncategorized
-metal-engraver: contributor
+metal-engraver: uncategorized
 minute taker: contributor
 moderator: contributor
 monitor: uncategorized
 music copyist: uncategorized
 musical director: contributor
-musician: contributor
+musician: uncategorized
 narrator: contributor
 onscreen presenter: contributor
 opponent: uncategorized
@@ -181,28 +180,28 @@ patron: uncategorized
 performer: contributor
 permitting agency: uncategorized
 photographer: creator
+plaintiff: other
 plaintiff-appellant: uncategorized
 plaintiff-appellee: uncategorized
-plaintiff: other
 platemaker: manufacturer
 praeses: creator
 presenter: contributor
-printer of plates: uncategorized
 printer: manufacturer
+printer of plates: uncategorized
 printmaker: manufacturer
 process contact: uncategorized
-producer: contributor
+producer: uncategorized
 production company: other
 production designer: contributor
 production manager: uncategorized
-production personnel: contributor
+production personnel: uncategorized
 production place: uncategorized
 programmer: creator
 project director: uncategorized
 proofreader: uncategorized
 provider: publisher
 publication place: uncategorized
-publisher: publisher
+publisher: uncategorized
 publishing director: uncategorized
 puppeteer: contributor
 radio director: director
@@ -210,29 +209,29 @@ radio producer: other
 recording engineer: contributor
 recordist: contributor
 redaktor: uncategorized
-renderer: contributor
-reporter: contributor
+renderer: uncategorized
+reporter: uncategorized
 repository: uncategorized
-research team head: contributor
-research team member: contributor
-researcher: contributor
+research team head: uncategorized
+research team member: uncategorized
+researcher: uncategorized
+respondent: creator
 respondent-appellant: uncategorized
 respondent-appellee: uncategorized
-respondent: creator
-responsible party: contributor
-restager: contributor
+responsible party: uncategorized
+restager: uncategorized
 restorationist: other
-reviewer: contributor
+reviewer: uncategorized
 rubricator: uncategorized
-scenarist: contributor
-scientific advisor: contributor
+scenarist: uncategorized
+scientific advisor: uncategorized
 screenwriter: creator
-scribe: contributor
+scribe: uncategorized
 sculptor: creator
 second party: uncategorized
-secretary: contributor
+secretary: uncategorized
 seller: owner
-set designer: contributor
+set designer: uncategorized
 setting: uncategorized
 signer: uncategorized
 singer: contributor
@@ -241,7 +240,7 @@ speaker: contributor
 sponsor: other
 stage director: contributor
 stage manager: uncategorized
-standards body: contributor
+standards body: uncategorized
 stereotyper: uncategorized
 storyteller: contributor
 supporting host: uncategorized
@@ -256,13 +255,12 @@ translator: contributor
 type designer: uncategorized
 typographer: uncategorized
 university place: uncategorized
-videographer: contributor
-vocalist: contributor
+videographer: uncategorized
 voice actor: contributor
 witness: uncategorized
-wood engraver: contributor
-woodcutter: contributor
-writer of accompanying material: contributor
+wood engraver: uncategorized
+woodcutter: uncategorized
+writer of accompanying material: uncategorized
 writer of added commentary: contributor
 writer of added lyrics: contributor
 writer of added text: contributor

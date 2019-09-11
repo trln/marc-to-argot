@@ -104,13 +104,6 @@ each_record do |rec, cxt|
 
   # Add and manipulate fields for TRLN shared records and other special record groups
   case cxt.clipboard[:shared_record_set]
-  when 'asp'
-    out['institution'] << 'duke'
-    add_record_data_source(cxt, 'Shared Records')
-    add_record_data_source(cxt, 'ASP')
-    add_virtual_collection(cxt, 'TRLN Shared Records. Alexander Street Press videos.')
-    ar = out['note_access_restrictions']
-    ar.map{ |e| e.gsub!('UNC Chapel Hill-', '') } if ar
   when 'crl'
     add_institutions(cxt, ['duke', 'ncsu'])
     add_record_data_source(cxt, 'Shared Records')

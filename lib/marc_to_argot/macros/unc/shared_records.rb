@@ -16,10 +16,6 @@ module MarcToArgot
           Traject::MarcExtractor.cached('919|  |a:773|0 |t', alternate_script: false).each_matching_line(rec) do |field, _spec, _extractor|
             value = field.value.downcase
             case value
-            when 'aspsvflon'
-              shared_set = 'asp'
-            when 'aspsvanth'
-              shared_set = 'asp'
             when 'dwsgpo'
               shared_set = 'dws'
             when 'troup'
@@ -46,7 +42,6 @@ module MarcToArgot
             cxt.output_hash['virtual_collection'] = [value]
           end
         end
-
       end
     end
   end

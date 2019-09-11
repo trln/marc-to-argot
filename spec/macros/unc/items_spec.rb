@@ -1,4 +1,5 @@
 # coding: utf-8
+
 require 'spec_helper'
 include MarcToArgot::Macros::UNC::Items
 
@@ -128,6 +129,24 @@ describe MarcToArgot::Macros::UNC::Items do
         expect(result[1]).to(
           include("\"call_no\":\"781.9733 M939a2\"")
         )
+      end
+    end
+
+    context 'WHEN item has no call number' do
+      it '(UNC) cn_scheme is not set' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1', ['i', 'i1688265'])
+
+        result = run_traject_on_record('unc', rec)['items'].first
+        expect(result).to_not include("\"cn_scheme\"")
+      end
+
+      it '(UNC) call_no is not set' do
+        rec = make_rec
+        rec << MARC::DataField.new('999', '9', '1', ['i', 'i1688265'])
+
+        result = run_traject_on_record('unc', rec)['items'].first
+        expect(result).to_not include("\"call_no\"")
       end
     end
   end

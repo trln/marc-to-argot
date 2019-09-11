@@ -8,19 +8,8 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
   let(:dwsgpo1) { run_traject_json('unc', 'dwsgpo1', 'mrc') }
   let(:dwsgpo2) { run_traject_json('unc', 'dwsgpo2', 'mrc') }
   let(:oupp1) { run_traject_json('unc', 'oupp1', 'mrc') }
-  let(:asp1) { run_traject_json('unc', 'asp1', 'mrc') }
-  let(:asp2) { run_traject_json('unc', 'asp2', 'mrc') }
 
   describe 'id_shared_record_set' do
-    it 'identifies ASP records' do
-      rec = make_rec
-      rec << MARC::DataField.new('919', ' ', ' ',
-                                 ['a', 'ASPSVFLON']
-                                )
-      result = id_shared_record_set(rec)
-      expect(result).to eq('asp')
-    end
-
     it 'identifies CRL records' do
       rec = make_rec
       rec << MARC::DataField.new('773', '0', ' ',
@@ -36,15 +25,21 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = id_shared_record_set(rec)
       expect(result).to eq('oupp')
     end
-  end
 
-  context 'When there is a 919 field containing filmfinder' do
-    it '(UNC) sets FilmFinder virtual_collection field' do
+    it 'does NOT identify ASP records' do
       rec = make_rec
       rec << MARC::DataField.new('919', ' ', ' ',
-                                 ['a', 'filmfinder'])
-      result = run_traject_on_record('unc', rec)['virtual_collection']
-      expect(result).to eq(['UNC MRC FilmFinder online and special materials'])
+                                 ['a', 'ASPSVFLON']
+                                )
+      result = id_shared_record_set(rec)
+      expect(result).to be_nil
+    end
+
+    it 'does NOT identify filmfinder records' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ', ' ', ['a', 'filmfinder'])
+      result = id_shared_record_set(rec)
+      expect(result).to be_nil
     end
   end
 
@@ -171,53 +166,4 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
                         )
     end
   end
-
-
-  context 'When shared record set is ASP' do
-    it '(UNC) creates URL template for ASP recs' do
-      result = asp1['url']
-      expect(result).to eq(
-                          [
-                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\"}"
-                          ]
-                        )
-    end
-
-    it '(UNC) keeps 856$3 values in url[note]' do
-      result = asp2['url']
-      expect(result).to eq(
-                          [
-                            "{\"href\":\"{+proxyPrefix}https://www.aspresolver.com/aspresolver.asp?ANTH;764084\",\"type\":\"fulltext\",\"note\":\"Part 3\"}"
-                          ]
-                        )
-    end
-    it '(UNC) record is assigned to unc and duke only' do
-      result = asp1['institution']
-      expect(result).to eq(
-                          ['unc', 'duke']
-                        )
-    end
-
-    it '(UNC) record_data_source includes "Shared Records" and "ASP"' do
-      result = asp1['record_data_source']
-      expect(result).to eq(
-                          ['ILSMARC', 'Shared Records', 'ASP']
-                        )
-    end
-
-    it '(UNC) virtual_collection includes "TRLN Shared Records. Alexander Street Press videos."' do
-      result = asp1['virtual_collection']
-      expect(result).to eq(
-                          ['TRLN Shared Records. Alexander Street Press videos.']
-                        )
-    end
-
-    it '(UNC) removes UNC-specific wording in note_access_restrictions' do
-      result = asp1['note_access_restrictions']
-      expect(result).to eq(
-                          ['Access limited to authenticated users. Unlimited simultaneous users.']
-                        )
-    end
-  end
-
 end

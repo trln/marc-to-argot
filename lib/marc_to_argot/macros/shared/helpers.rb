@@ -14,7 +14,7 @@ module MarcToArgot
           tags = record.tags
           tags.include?(field_tag)
         end
-        
+
         # tests whether a field's subfields with a particular code
         # contain any instance of a substring
         # @param field [MARC::DataField] the field to check for a subfield substring
@@ -177,16 +177,34 @@ module MarcToArgot
 
         # Break up a MARC field with repeating id-bearing subfields
         # Allows determination of what qualifying info goes with what ID
+        #
+        # The goal is to take a field like:
+        #   |a1111|bnot-a-qualifier|qcloth|qv.10|z2222|qpbk|z...
+        # and split it into multiple fields containing one id subfield and any
+        # qualifying subfields that follow, like:
+        #   |a1111|qcloth|qv.10
+        #   |z2222|qpbk
+        #   |z...
+        #
+        # Note: Qualifying subfields that precede the first id subfield are
+        #   dropped (where before they would result in a NoMethodError).
+        #
+        #   It might be okay to assume that in '|qpbk|z2222' the |q applies to
+        #   the only |z, but it is less clear with something like:
+        #     |qfoo|z2222|qv.10|z3333|qv.20
+        #   what the '|qfoo' is supposed to apply to. And, regardless, both
+        #   cases seem to be non-standard MARC.
+        #
         # PARAMETERS:
         # field (MARC::DataField) - the original MARC field
         # id_subfields (String) - subfield codes known to bear ID values
         # qual_subfields (String) - subfield codes where entire value is expected to be qualifying info
         # RETURNS:
         # Array of MARC::DataField objects, with only one id-bearing subfield each
-        # Tag, indicators, and $2 from original field are carried over. 
+        # Tag, indicators, and $2 from original field are carried over.
         def split_complex_id_field(field, id_subfields, qual_subfields)
           split_fields = []
-          fieldbuild = ''
+          fieldbuild = nil
           data_source_code = get_data_source_code(field)
 
           #check whether there are any id_subfields in the field.
@@ -203,7 +221,8 @@ module MarcToArgot
                   fieldbuild.subfields << MARC::Subfield.new('2', data_source_code)
                 end
               elsif qual_subfields.include?(sf.code)
-                fieldbuild.subfields << sf
+                # Qualifying sfs preceding the first id sf are dropped
+                fieldbuild.subfields << sf if fieldbuild
               end
             end
             split_fields

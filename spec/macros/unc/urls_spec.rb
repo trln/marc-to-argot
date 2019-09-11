@@ -67,6 +67,17 @@ describe MarcToArgot::Macros::UNC::Urls do
         expect(url[0]['restricted']).to eq('false')
       end
     end
+
+    context 'when rec is non-shared filmfinder' do
+      it '(UNC) does not use a proxy template' do
+        rec = make_rec
+        url = 'http://libproxy.lib.unc.edu/login?url=http://this.org'
+        rec << MARC::DataField.new('856', '4', '0', ['u', url])
+        rec << MARC::DataField.new('919', ' ', ' ', ['a', 'filmfinder'])
+        argot_url = return_argot_url_field(rec)
+        expect(argot_url.first['href']).to start_with('http://libproxy.lib.unc')
+      end
+    end
   end
 
   describe 'is_proxied?' do

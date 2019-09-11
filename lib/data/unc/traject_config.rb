@@ -123,15 +123,17 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'DWS')
     add_virtual_collection(cxt, 'TRLN Shared Records. Documents without shelves.')
-  when 'filmfinder'
-    # MRC's scoped FilmFinder search includes everything in MRC physical locations
-    #  and everything with this virtual_collection value
-    add_virtual_collection(cxt, 'UNC MRC FilmFinder online and special materials')
   when 'oupp'
     add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'OUPP')
     add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
+  end
+
+  if filmfinder?(rec)
+    # MRC's scoped FilmFinder search includes everything in MRC physical
+    # locations and everything with this virtual_collection value
+    add_virtual_collection(cxt, 'UNC MRC FilmFinder online and special materials')
   end
 
   remove_print_from_archival_material(cxt)

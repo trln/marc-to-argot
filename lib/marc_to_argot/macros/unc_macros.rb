@@ -14,7 +14,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/unc/dummy_items'
       require 'marc_to_argot/macros/unc/location_hierarchy'
       require 'marc_to_argot/macros/unc/available'
-      
+
       include Traject::Macros::Marc21Semantics
       include MarcToArgot::Macros::Shared
 
@@ -30,9 +30,9 @@ module MarcToArgot
       include DummyItems
       include LocationHierarchy
       include Available
-      
+
       MarcExtractor = Traject::MarcExtractor
-      
+
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?
       def local_marc_org_codes
@@ -59,6 +59,12 @@ module MarcToArgot
         end
       end
 
+      def filmfinder?(rec)
+        Traject::MarcExtractor.cached('919|  |a:', alternate_script: false).each_matching_line(rec) do |field, _spec, _extractor|
+          return true if field.value.casecmp('filmfinder').zero?
+        end
+        false
+      end
     end
   end
 end

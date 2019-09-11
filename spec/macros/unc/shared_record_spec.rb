@@ -36,15 +36,12 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
       result = id_shared_record_set(rec)
       expect(result).to eq('oupp')
     end
-  end
 
-  context 'When there is a 919 field containing filmfinder' do
-    it '(UNC) sets FilmFinder virtual_collection field' do
+    it 'does not identify filmfinder records' do
       rec = make_rec
-      rec << MARC::DataField.new('919', ' ', ' ',
-                                 ['a', 'filmfinder'])
-      result = run_traject_on_record('unc', rec)['virtual_collection']
-      expect(result).to eq(['UNC MRC FilmFinder online and special materials'])
+      rec << MARC::DataField.new('919', ' ', ' ', ['a', 'filmfinder'])
+      result = id_shared_record_set(rec)
+      expect(result).to be_nil
     end
   end
 
@@ -207,9 +204,9 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
 
     it '(UNC) virtual_collection includes "TRLN Shared Records. Alexander Street Press videos."' do
       result = asp1['virtual_collection']
-      expect(result).to eq(
-                          ['TRLN Shared Records. Alexander Street Press videos.']
-                        )
+      expect(result).to include(
+        'TRLN Shared Records. Alexander Street Press videos.'
+      )
     end
 
     it '(UNC) removes UNC-specific wording in note_access_restrictions' do
@@ -219,5 +216,4 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
                         )
     end
   end
-
 end

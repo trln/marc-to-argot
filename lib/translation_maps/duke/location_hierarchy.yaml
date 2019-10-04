@@ -33,6 +33,13 @@ PLV8: duke;dukelily;dukelilydeds
 PLR: duke;dukelily;dukelilyrece
 PLX1: duke;dukelily;dukelilyrees
 PLX2: duke;dukelily;dukelilyrees
+PLX3: duke;dukelily;dukelilyrees
+TLW: duke;dukelily;dukelilycure
+TLV8: duke;dukelily;dukelilydeds
+TLR: duke;dukelily;dukelilyrece
+TLX1: duke;dukelily;dukelilyrees
+TLX2: duke;dukelily;dukelilyrees
+TLX3: duke;dukelily;dukelilyrees
 MARIN: duke;dukemarb
 MCL: duke;dukemedr|hsl;hsldukr
 MARCH: duke;dukemedr;dukemedrares|hsl;hsldukr;hsldukrares
@@ -88,6 +95,7 @@ PKRG: duke;dukeperk;dukeperkdace
 PKRGC: duke;dukeperk;dukeperkdace
 PK7: duke;dukeperk;dukeperkdurs
 PKE: duke;dukeperk;dukeperkeaon
+TL2: duke;dukeperk;dukeperkeaon
 PK6: duke;dukeperk;dukeperkiaom
 PKW: duke;dukeperk;dukeperknehy
 PKR: duke;dukeperk;dukeperkrece

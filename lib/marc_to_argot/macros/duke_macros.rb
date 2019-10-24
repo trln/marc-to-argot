@@ -58,12 +58,11 @@ module MarcToArgot
         oclc_numbers
       end
 
-      def add_bookplate_to_notes_local(ctx)
-        if ctx.output_hash.key?('bookplate')
-          bookplate = ctx.output_hash['bookplate'].map { |bp| { 'value' => bp } }
+      def add_donor_to_indexed_note_local(ctx)
+        if ctx.output_hash.key?('donor')
+          donor = ctx.output_hash['donor'].map { |d| { 'indexed_value' => d } }
           local_notes = ctx.output_hash.fetch('note_local', [])
-          ctx.output_hash['note_local'] = local_notes.concat(bookplate)
-          ctx.output_hash.delete('bookplate')
+          ctx.output_hash['note_local'] = local_notes.concat(donor)
         end
       end
 

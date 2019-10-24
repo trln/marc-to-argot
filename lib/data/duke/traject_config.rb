@@ -73,9 +73,9 @@ to_field 'institution', literal('duke')
 to_field 'names', names
 
 ##################
-# Bookplate
+# Donor
 #########
-to_field 'bookplate', extract_marc("796z")
+to_field 'donor', extract_marc("796z")
 
 
 # ################################################
@@ -122,7 +122,7 @@ end
 
 each_record do |rec, ctx|
   remove_print_from_archival_material(ctx)
-  add_bookplate_to_notes_local(ctx)
+  add_donor_to_indexed_note_local(ctx)
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
   add_shared_record_data(ctx)

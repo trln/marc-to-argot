@@ -71,6 +71,7 @@ unless settings["override"].include?("isbn")
       end
       acc << isbn if !isbn.empty?
     end
+    acc.uniq!
   end
 end
 

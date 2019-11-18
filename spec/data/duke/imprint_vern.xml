@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a2200325Ia 4500</leader>
+<controlfield tag="001">DUKE003822457</controlfield>
+<controlfield tag="005">20080108150716.0</controlfield>
+<controlfield tag="008">061108s2006^^^^ru^af^^^^b^^^^000^0^ruso^</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">5901609816 (Izd-vo "SAGA")</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9785901609811 (Izd-vo "SAGA")</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">5352014746 (Izd-vo "Azbuka-klassika)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9785352014745 (Izd-vo "Azbuka-klassika)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">5020264008 (Izd-vo "Nauka")</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9785020264007 (Izd-vo "Nauka")</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">75381224</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">VA@</subfield>
+ <subfield code="c">VA@</subfield>
+ <subfield code="d">WAU</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="066" ind1=" " ind2=" ">
+ <subfield code="c">(N</subfield>
+</datafield>
+<datafield tag="090" ind1=" " ind2=" ">
+ <subfield code="a">PG3056</subfield>
+ <subfield code="b">.A4 2006</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="6">880-01</subfield>
+ <subfield code="a">Alʹfonsov, V.</subfield>
+ <subfield code="q">(Vladimir)</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="6">880-02</subfield>
+ <subfield code="a">Slova i kraski :</subfield>
+ <subfield code="b">ocherki iz istorii tvorcheskikh svi͡azeĭ poėtov i khudozhnikov /</subfield>
+ <subfield code="c">V. Alʹfonsov.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="6">880-03</subfield>
+ <subfield code="a">Sankt-Peterburg :</subfield>
+ <subfield code="b">"SAGA" ;</subfield>
+ <subfield code="b">"Azbuka-klassika" ;</subfield>
+ <subfield code="b">"Nauka,"</subfield>
+ <subfield code="c">2006.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">309 p., 16 p. of plates :</subfield>
+ <subfield code="b">ill. ;</subfield>
+ <subfield code="c">17 cm.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Russian poetry</subfield>
+ <subfield code="y">20th century</subfield>
+ <subfield code="x">History and criticism.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Art and literature.</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2=" ">
+ <subfield code="6">100-01/</subfield>
+ <subfield code="a">Альфонсов, В.</subfield>
+ <subfield code="q">(Владимир)</subfield>
+</datafield>
+<datafield tag="880" ind1="1" ind2="0">
+ <subfield code="6">245-02/</subfield>
+ <subfield code="a">Слова и краски :</subfield>
+ <subfield code="b">очерки из истории творческих связей поэтов и художников /</subfield>
+ <subfield code="c">В. Альфонсов.</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">260-03/</subfield>
+ <subfield code="a">Санкт-Петербург :</subfield>
+ <subfield code="b">"САГА" ;</subfield>
+ <subfield code="b">"Азбука-классика" ;</subfield>
+ <subfield code="b">"Наука,"</subfield>
+ <subfield code="c">2006.</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="h">PG3056</subfield>
+ <subfield code="i">.A4 2006</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PG3056 .A4 2006</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03315905Q </subfield>
+ <subfield code="s">20070118</subfield>
+ <subfield code="u">20100701</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">003830408</subfield>
+</datafield>
+</record>
+</collection>

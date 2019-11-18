@@ -10,17 +10,20 @@ module MarcToArgot
         # accumulates an array of JSON blobs with main imprint data from a record.
         def imprint_main
           lambda do |rec, acc|
-            main_imprints = []
-            main_imprints << imprint_main_extractor(rec, alternate_script: false)
-            main_imprints << imprint_main_extractor(rec, alternate_script: :only)
-            acc.concat main_imprints.compact unless main_imprints.empty?
+            collect_main_imprint_values(rec, acc, :assemble_imprint_hash)
+          end
+        end
+
+        def publisher_location
+          lambda do |rec, acc|
+            collect_main_imprint_values(rec, acc, :publisher_location_values)
           end
         end
 
         # accumulates an array of JSON blobs with all imprint data from a record
         # (but only if more than 1).
         def imprint_multiple
-          lambda do |rec, acc|
+          lambda do |rec, acc, ctx|
             imprint_fields = []
 
             Traject::MarcExtractor.cached("260:264").each_matching_line(rec) do |field, spec, extractor|
@@ -28,14 +31,22 @@ module MarcToArgot
             end
 
             if imprint_fields.length > 1
-              imprint_fields.each do |field|
-                acc << assemble_imprint_hash(field).to_json
+              imprint_hash = imprint_fields.map do |field|
+                assemble_imprint_hash(field)
               end
+            acc.concat(imprint_hash) unless imprint_hash.to_s == ctx.output_hash['imprint_main'].to_s
             end
           end
         end
 
-        def imprint_main_extractor(rec, options)
+        def collect_main_imprint_values(rec, acc, assembly_method)
+          main_imprints = []
+          main_imprints << imprint_main_extractor(rec, assembly_method, alternate_script: false)
+          main_imprints << imprint_main_extractor(rec, assembly_method, alternate_script: :only)
+          acc.concat main_imprints.flatten.compact unless main_imprints.empty?
+        end
+
+        def imprint_main_extractor(rec, assembly_method, options)
           imprint_fields = []
 
           Traject::MarcExtractor.cached("260:264", options).each_matching_line(rec) do |field, spec, extractor|
@@ -44,7 +55,14 @@ module MarcToArgot
 
           main_imprint = select_main_imprint(imprint_fields)
 
-          main_imprint ? assemble_imprint_hash(main_imprint).to_json : nil
+          main_imprint ? send(assembly_method, main_imprint) : nil
+        end
+
+        def publisher_location_values(main_imprint)
+          imprint_subfields = main_imprint.subfields.select { |sf| sf.value if sf.code == 'a' }
+          imprint_subfields.compact.map do |sf|
+            sf.value.strip.gsub(/\s[:;]$/, '').gsub(/[\[\]]/, '').chomp(',')
+          end
         end
 
         # assembles a hash of imprint data to serialize
@@ -55,7 +73,7 @@ module MarcToArgot
           imprint_hash[:label] = imprint_label(field)
           imprint_hash[:value] = imprint_value(field)
 
-          imprint_hash.delete_if { |k, v| v.nil? || v.empty? }
+          imprint_hash.delete_if { |k, v| v.nil? || v.empty? }.to_json
         end
 
         # sets the imprint type based on field tag and/or 2nd indicator value

@@ -132,6 +132,10 @@ unless settings["override"].include?("publisher")
                                                :trim_punctuation => true)
 end
 
+unless settings["override"].include?("publisher_location")
+  to_field "publisher_location", publisher_location
+end
+
 ################################################
 # Names
 ######

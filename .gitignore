@@ -11,3 +11,4 @@
 .ruby-version
 /marc_to_argot-*.gem
 /*.log
+.DS_Store

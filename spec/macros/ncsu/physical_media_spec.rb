@@ -52,7 +52,7 @@ describe MarcToArgot::Macros::NCSU::PhysicalMedia do
   it 'assigns Microfiche to a MICROFICHE' do
     ctx = macro_context(bookbot_microfiche_item)
     physical_media.call(*ctx)
-    expect(ctx[1]).to eq(['Microform > Microfiche'])
+    expect(ctx[1]).to eq(['Microfiche'])
   end
 
   it 'correctly maps physical_media for e-reader record 1' do
@@ -60,7 +60,7 @@ describe MarcToArgot::Macros::NCSU::PhysicalMedia do
   end
 
   it 'correctly maps physical_media for e-reader record 2' do
-    expect(test_2['physical_media']).to eq(['Microform > Microfiche'])
+    expect(test_2['physical_media']).to eq(['Microfiche'])
   end
 
   it 'Does NOT set physical_media to Print if resource_type is Archival' do

@@ -34,9 +34,9 @@ module MarcToArgot
             media << 'Diskette' if diskette?
             media << 'DVD' if dvd?
             media << 'E-reader or player' if e_reader?
-            media << 'E-reader or player > Kindle' if e_reader_kindle?
-            media << 'E-reader or player > Nook' if e_reader_nook?
-            media << 'E-reader or player > Playaway device' if e_reader_playaway_device?
+            media << 'Kindle e-reader' if e_reader_kindle?
+            media << 'Nook e-reader' if e_reader_nook?
+            media << 'Playaway audio player' if e_reader_playaway_device?
             media << '8 mm film' if film_08_mm?
             media << '9.5 mm film' if film_09_5_mm?
             media << '16 mm film' if film_16_mm?
@@ -49,9 +49,9 @@ module MarcToArgot
             media << 'Large print' if large_print?
             media << 'Laserdisc' if laserdisc?
             media << 'Microform' if microform?
-            media << 'Microform > Microfiche' if microfiche?
-            media << 'Microform > Microfilm' if microfilm?
-            media << 'Microform > Microopaque' if microopaque?
+            media << 'Microfiche' if microfiche?
+            media << 'Microfilm' if microfilm?
+            media << 'Microopaque' if microopaque?
             media << 'Photograph/picture' if photograph_picture?
             media << 'Photographic negative' if photographic_negative?
             media << 'Postcard' if postcard?
@@ -66,10 +66,10 @@ module MarcToArgot
             media << 'Shellac record' if record_shellac?
             media << 'Vinyl record' if record_vinyl?
             media << 'Remote-sensing image' if remote_sensing_image?
-            media << 'Remote-sensing image > Meteorological' if rsi_meteorological?
-            media << 'Remote-sensing image > Mixed uses' if rsi_mixed_uses?
-            media << 'Remote-sensing image > Space observing' if rsi_space_observing?
-            media << 'Remote-sensing image > Surface observing' if rsi_surface_observing?
+            media << 'Remote-sensing image, meteorological' if rsi_meteorological?
+            media << 'Remote-sensing image, mixed uses' if rsi_mixed_uses?
+            media << 'Remote-sensing image, space observing' if rsi_space_observing?
+            media << 'Remote-sensing image, surface observing' if rsi_surface_observing?
             media << 'Sheet' if sheet?
             media << 'Slides' if slides?
             media << 'Technical drawing' if technical_drawing?
@@ -160,7 +160,7 @@ module MarcToArgot
                 field.value.byteslice(4) == 'g'
             end
           end
-                    
+
           def chart?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'k' &&
@@ -275,7 +275,7 @@ module MarcToArgot
             gmd = get_gmd
             return true if gmd && gmd['[microform']
           end
-          
+
           def microform_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h'
@@ -298,7 +298,7 @@ module MarcToArgot
             gmd = get_gmd
             return true if gmd && gmd['[microfilm']
           end
-          
+
           def microfilm_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h' &&
@@ -322,7 +322,7 @@ module MarcToArgot
             gmd = get_gmd
             return true if gmd && gmd['[microfiche']
           end
-          
+
           def microfiche_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h' &&
@@ -346,7 +346,7 @@ module MarcToArgot
             gmd = get_gmd
             return true if gmd && gmd['[microopaque']
           end
-          
+
           def microopaque_007?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 'h' &&
@@ -418,7 +418,7 @@ module MarcToArgot
             arr = record.find_all { |f| f.tag == '007' && f.value.byteslice(0) == 't' && %w[a b d].include?(f.value.byteslice(1)) }
             return true if arr.length > 0
           end
-          
+
           def print_carrier?
             # I'm not specifying $2 must be rdacarrier because that isn't always recorded
             arr = record.find_all { |f| f.tag == 338 }
@@ -455,12 +455,12 @@ module MarcToArgot
                             |ℓ\.|l\.|leaf|[lℓ]eaves|lvs\.
                             |scores?|sheets?
                             |v\.|vols?|volumes?
-                          ) 
+                          )
                         /ix
             }
             return true if arr.length > 0
           end
-          
+
           def record_07_inch?
             record.fields('007').find do |field|
               field.value.byteslice(0) == 's' &&

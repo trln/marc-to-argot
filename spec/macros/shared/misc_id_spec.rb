@@ -67,7 +67,9 @@ describe MarcToArgot::Macros::Shared::MiscId do
         'type' => 'GPO Item Number',
         'qual' => 'microfiche'},
        {'value' => 'Serial no. 107-25 (United States. Congress. House. Committee on Financial Services)',
-        'type' => 'Report Number'}]
+        'type' => 'Report Number'},
+        {"display"=>"false", "value"=>"3047014"},
+        {"display"=>"false", "value"=>"003047014"}]
     )
   end
 

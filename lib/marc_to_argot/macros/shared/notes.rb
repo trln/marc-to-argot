@@ -348,13 +348,14 @@ module MarcToArgot
       ######
       def note_related_work
         lambda do |rec, acc|
-          Traject::MarcExtractor.cached("535abcdg:544abcden:580a").each_matching_line(rec) do |field, spec, extractor|
+          Traject::MarcExtractor.cached("535abcdg:544abcden:580a:581az").each_matching_line(rec) do |field, spec, extractor|
             notes = {}
 
             label = note_related_work_label(field)
             notes[:label] = label unless label.nil? || label.empty?
 
-            value = extractor.collect_subfields(field, spec).first
+            # value = extractor.collect_subfields(field, spec).first
+            value = note_related_work_value(field, spec, extractor)
             notes[:value] = value unless value.nil? || value.empty?
 
             indexed_value = note_related_work_indexed_value(field)
@@ -381,9 +382,37 @@ module MarcToArgot
         when '544'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
           labels << 'Related materials' if %w[0 1].include?(field.indicator1)
+        when '581'
+          if field.subfields.map(&:code).include?('3')
+            sf3 = collect_subfield_values_by_code(field, '3').join(' ')
+            labels << "Publications relating to #{sf3.downcase}"
+          else
+            labels << 'Related publications'
+          end
         end
 
         labels.compact.reject(&:empty?).join(': ')
+      end
+
+      def note_related_work_value(field, spec, extractor)
+        value = []
+        case field_tag_or_880_linkage_tag(field)
+        when '535'
+          value = extractor.collect_subfields(field, spec).first
+        when '544'
+          value = extractor.collect_subfields(field, spec).first
+        when '580'
+          value = extractor.collect_subfields(field, spec).first
+        when '581'
+          field.subfields.each do |sf|
+            if sf.code == 'z'
+              value << "ISBN #{sf.value}"
+            elsif sf.code =~ /[a]/
+              value << sf.value
+            end
+          end
+          return value.join(' ')
+        end
       end
 
       def note_related_work_indexed_value(field)
@@ -400,6 +429,8 @@ module MarcToArgot
         when '544'
           'false' unless field.subfields.map(&:code).include?('d')
         when '580'
+          'false'
+        when '581'
           'false'
         end
       end

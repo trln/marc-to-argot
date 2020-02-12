@@ -63,7 +63,7 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
     rec << MARC::DataField.new('300', ' ', ' ',
                                MARC::Subfield.new('a', 'v. ;'))
     pm4 = run_traject_on_record('unc', rec)['physical_media']
-    expect(pm4).to eq(['Microform > Microfilm'])
+    expect(pm4).to eq(['Microfilm'])
 
     rec = make_rec
     rec << MARC::DataField.new('300', ' ', ' ',
@@ -89,7 +89,7 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
     rec << MARC::DataField.new('300', ' ', ' ',
                                MARC::Subfield.new('a', '6 microfilm reels ;'))
     pm8 = run_traject_on_record('unc', rec)['physical_media']
-    expect(pm8).to eq(['Microform', 'Microform > Microfilm'])
+    expect(pm8).to eq(['Microform', 'Microfilm'])
 
     # Where extent is recorded without unit, assume print
     rec = make_rec
@@ -136,7 +136,7 @@ describe MarcToArgot::Macros::Shared::PhysicalMedia do
     pm15 = run_traject_on_record('unc', rec)['physical_media']
     expect(pm15).to eq(['Print'])
 
-    
+
 end
 
   let(:physical_media_35mm) { run_traject_json('duke', 'physical_media_35mm', 'mrc') }
@@ -161,7 +161,7 @@ end
   let(:pm2) { run_traject_json('duke', 'url0', 'mrc') }
   let(:resource_type_archival) { run_traject_json('duke', 'resource_type_archival', 'xml')}
   let(:resource_type_archival_unc) { run_traject_json('unc', 'resource_type_archival', 'xml')}
-  
+
   it '(MTA) Sets physical_media to 35 mm film' do
     result = physical_media_35mm['physical_media']
     expect(result).to eq(['35 mm film'])
@@ -197,19 +197,19 @@ end
     expect(result).to eq(['Flash card'])
   end
 
-  it '(MTA) Sets physical_media to Microform > Microfiche' do
+  it '(MTA) Sets physical_media to Microfiche' do
     result = physical_media_microfiche['physical_media']
-    expect(result).to eq(['Microform','Microform > Microfiche'])
+    expect(result).to eq(['Microform','Microfiche'])
   end
 
-  it '(MTA) Sets physical_media to Microform > Microfilm' do
+  it '(MTA) Sets physical_media to Microfilm' do
     result = physical_media_microfilm['physical_media']
-    expect(result).to eq(['Microform','Microform > Microfilm'])
+    expect(result).to eq(['Microform','Microfilm'])
   end
 
-  it '(MTA) Sets physical_media to Microform > Microopaque' do
+  it '(MTA) Sets physical_media to Microopaque' do
     result = physical_media_microopaque['physical_media']
-    expect(result).to eq(['Microform','Microform > Microopaque'])
+    expect(result).to eq(['Microform','Microopaque'])
   end
 
   it '(MTA) Sets physical_media to 7" record, 45 rpm record, etc.' do
@@ -227,9 +227,9 @@ end
     expect(result).to eq(['12" record', '33 1/3 rpm record', 'Vinyl record'])
   end
 
-  it '(MTA) Sets physical_media to Remote-sensing image > Surface observing' do
+  it '(MTA) Sets physical_media to Remote-sensing image, surface observing' do
     result = physical_media_rsi_surface['physical_media']
-    expect(result).to eq(['Print', 'Remote-sensing image','Remote-sensing image > Surface observing'])
+    expect(result).to eq(['Print', 'Remote-sensing image','Remote-sensing image, surface observing'])
   end
 
   it '(MTA) Sets physical_media to Videocassette (U-matic)' do

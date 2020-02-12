@@ -384,9 +384,8 @@ module MarcToArgot
           labels << 'Related materials' if %w[0 1].include?(field.indicator1)
         when '581'
           if field.subfields.map(&:code).include?('3')
-          # unless collect_subfield_values_by_code(field, '3').nil?
-            labels << collect_subfield_values_by_code(field, '3').join(' ')
-            labels << 'Publications relating to'
+            sf3 = collect_subfield_values_by_code(field, '3').join(' ')
+            labels << "Publications relating to #{sf3.downcase}"
           else
             labels << 'Related publications'
           end

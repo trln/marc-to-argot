@@ -121,6 +121,7 @@ end
 # ######
 
 each_record do |rec, ctx|
+  index_bib_id(ctx)
   remove_print_from_archival_material(ctx)
   add_donor_to_indexed_note_local(ctx)
   finalize_rollup_id(ctx)

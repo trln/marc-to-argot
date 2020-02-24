@@ -102,4 +102,10 @@ describe MarcToArgot::Macros::Duke do
     result = run_traject_json('duke', 'archival_print', 'xml')
     expect(result['physical_media']).to be_nil
   end
+
+  it 'adds the bib number as an indexed only misc_id' do
+    result = run_traject_json('duke', 'archival_print', 'xml')
+    expect(result['misc_id']).to include({"display"=>"false", "value"=>"005314421"})
+    expect(result['misc_id']).to include({"display"=>"false", "value"=>"5314421"})
+  end
 end

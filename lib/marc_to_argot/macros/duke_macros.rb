@@ -88,6 +88,16 @@ module MarcToArgot
         end
       end
 
+      def index_bib_id(ctx)
+        if ctx.output_hash.key?('id')
+          zero_padded_id = ctx.output_hash['id'].first.gsub(/^DUKE/, '')
+          id = zero_padded_id.gsub(/^[0]+/,'')
+          misc_id = ctx.output_hash.fetch('misc_id', [])
+          ctx.output_hash['misc_id'] = misc_id.concat([assemble_id_hash(id, display: 'false'),
+                                                       assemble_id_hash(zero_padded_id, display: 'false')])
+        end
+      end
+
       # # Example of how to re-open the ResourceTypeClassifier
       # # You can add to or completely override the formats method as needed.
       # # You can also override the default classifying methods e.g. book?

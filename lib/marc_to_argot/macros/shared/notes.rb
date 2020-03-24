@@ -354,7 +354,6 @@ module MarcToArgot
             label = note_related_work_label(field)
             notes[:label] = label unless label.nil? || label.empty?
 
-            # value = extractor.collect_subfields(field, spec).first
             value = note_related_work_value(field, spec, extractor)
             notes[:value] = value unless value.nil? || value.empty?
 
@@ -395,23 +394,17 @@ module MarcToArgot
       end
 
       def note_related_work_value(field, spec, extractor)
-        value = []
         case field_tag_or_880_linkage_tag(field)
-        when '535'
-          value = extractor.collect_subfields(field, spec).first
-        when '544'
-          value = extractor.collect_subfields(field, spec).first
-        when '580'
-          value = extractor.collect_subfields(field, spec).first
+        when '535', '544', '580'
+          extractor.collect_subfields(field, spec).first
         when '581'
-          field.subfields.each do |sf|
+          field.subfields.map do |sf|
             if sf.code == 'z'
-              value << "ISBN #{sf.value}"
+              "ISBN #{sf.value}"
             elsif sf.code =~ /[a]/
-              value << sf.value
+              sf.value
             end
-          end
-          return value.join(' ')
+          end.compact.reject(&:empty?).join(' ')
         end
       end
 

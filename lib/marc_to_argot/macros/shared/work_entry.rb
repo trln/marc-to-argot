@@ -186,7 +186,7 @@ module MarcToArgot
         end
 
         def collect_subfield_e_labels(field)
-          translation_map = Traject::TranslationMap.new("marc_languages")
+          translation_map = Traject::TranslationMap.new('shared/marc_languages')
           languages = field.subfields.select { |sf| sf.code == 'e' }.map do |sf|
             translation_map[sf.value]
           end

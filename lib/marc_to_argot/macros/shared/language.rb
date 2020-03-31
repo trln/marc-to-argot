@@ -3,9 +3,9 @@ module MarcToArgot
     module Shared
       module Language
 
-        LANG_MAP = Traject::TranslationMap.new("marc_languages")
+        LANG_MAP = Traject::TranslationMap.new('shared/marc_languages')
         KEEP_041_SUBFIELDS = 'adeg'
-        
+
         # accumulates an array of JSON blobs with URL data from a record.
         def language
           lambda do |rec, acc|
@@ -38,7 +38,7 @@ module MarcToArgot
               codes << get_non_translation_lang_codes(field) unless is_translation?(field)
             end
           end
-          
+
           codes.flatten unless codes.empty?
         end
 
@@ -87,7 +87,7 @@ module MarcToArgot
           return false if field.indicator1 == '0'
           true
         end
-        
+
         # Given the value of a subfield [String]
         # Returns true if length of value is evenly divisible by 3
         # Otherwise, false
@@ -97,7 +97,7 @@ module MarcToArgot
           false
         end
 
-        
+
         # Given [Array] of MARC language codes
         # Returns [Array] of human readable language names
         def translate_codes(codes)
@@ -139,7 +139,7 @@ end
   #         good_subfields.collect do |sf|
   #           if sf.value.length == 3
   #             value = sf.value
-  #           elsif 
+  #           elsif
   #           else
   #             value = sf.value.chars.each_slice(3).map(&:join)
   #           end

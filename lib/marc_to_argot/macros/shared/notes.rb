@@ -588,6 +588,20 @@ module MarcToArgot
           end
         end
       end
+
+
+      ################################################
+      # Note With
+      ######
+      def note_with
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("501a").each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+
+            acc << extractor.collect_subfields(field, spec).first
+          end
+        end
+      end
     end
   end
 end

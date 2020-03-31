@@ -73,6 +73,8 @@ module MarcToArgot
             spec = [shared_spec, local_spec].compact.join(':')
 
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+
               values = collect_subjects(field, spec)
               headings = values.map do |v|
                 lang = Vernacular::ScriptClassifier.new(field, v).classify
@@ -89,6 +91,8 @@ module MarcToArgot
             spec = [shared_spec, local_spec].compact.join(':')
 
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+
               heading = {}
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x y z].include?(sf.code) }, spec)
               lang = Vernacular::ScriptClassifier.new(field, value).classify
@@ -145,6 +149,7 @@ module MarcToArgot
             spec = [shared_spec, local_spec].compact.join(':')
 
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
 
               values = collect_subjects(field, spec)
 
@@ -169,6 +174,8 @@ module MarcToArgot
             spec = [shared_spec, local_spec].compact.join(':')
 
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+
               values = collect_subjects(field, spec)
               acc.concat(values) unless values.nil? || values.empty?
             end
@@ -200,6 +207,8 @@ module MarcToArgot
             spec = [shared_spec, local_spec].compact.join(':')
 
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+
               values = collect_subjects(field, spec)
               acc.concat(values) unless values.nil? || values.empty?
             end
@@ -209,6 +218,8 @@ module MarcToArgot
             spec = [shared_spec, local_spec].compact.join(':')
 
             Traject::MarcExtractor.cached(spec).each_matching_line(rec) do |field, spec|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+
               value = collect_655axyz(field, field.subfields.select { |sf| %w[a x].include?(sf.code) }, spec)
               acc << value unless value.nil? || value.empty?
             end
@@ -333,7 +344,7 @@ module MarcToArgot
           remap_subject_topical(rec, cxt, to_remap) if to_remap
           remap_subject_headings(rec, cxt, to_remap) if to_remap
         end
-        
+
         # Given a record and its context,
         # returns hash of subject segments that need to be remapped.
         #  {'Illegal Aliens' => 'Undocumented immigrants' }
@@ -393,7 +404,7 @@ module MarcToArgot
         cxt.output_hash['subject_headings'] = subject_headings
         cxt.output_hash['subject_headings_remapped'] = subjects_remapped
         end
-        
+
         ################################################
         # subject genre helpers
         ######

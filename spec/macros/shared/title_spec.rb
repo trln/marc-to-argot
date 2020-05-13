@@ -3,36 +3,25 @@ describe MarcToArgot::Macros::Shared::Title do
   include described_class
 
   context '#short_title' do
-    let(:macro) { short_title }
-    let(:short_title_context) do
-      ctx = Traject::Indexer::Context.new
-      ctx.output_hash['title_main'] = [{ value: 'A Short Title.' }]
-      ctx
+    it 'extracts a short title' do
+      rec = make_rec
+      rec << MARC::DataField.new('245', '0', '0', ['a', 'A Short Title.'], ['b', 'Subtitle'], ['z', '9789575433741'])
+      result = run_traject_on_record('ncsu', rec)
+      expect(result['short_title'].first).to eq('A Short Title')
     end
 
-    let(:long_title_context) do
-      ctx = Traject::Indexer::Context.new
-      ctx.output_hash['title_main'] = [{ value: 'Not Really a Short Title at All.' }]
-      ctx
+    it 'does not extract a short title when short_title is too long' do
+      rec = make_rec
+      rec << MARC::DataField.new('245', '0', '0', ['a', 'Not Really a Short Title at All.'], ['z', '9789575433741'])
+      result = run_traject_on_record('ncsu', rec)
+      expect(result['short_title']).to be_nil
     end
 
-    it 'extracts a short title when output hash is populated' do
-      acc = []
-      macro.call([], acc, short_title_context)
-      expect(acc.first).to eq('A Short Title')
-    end
-
-    it 'does not extract a short title when title_main is too long' do
-      acc = []
-      macro.call([], acc, long_title_context)
-      expect(acc).to be_empty
-    end
-
-    it 'does not error out when title_main is not populated' do
-      ctx = Traject::Indexer::Context.new
-      acc = []
-      macro.call([], acc, ctx)
-      expect(acc).to be_empty
+    it 'does not error out when short_title is not populated' do
+      rec = make_rec
+      rec << MARC::DataField.new('245', '0', '0', ['z', '9789575433741'])
+      result = run_traject_on_record('ncsu', rec)
+      expect(result['short_title']).to be_nil
     end
   end
 

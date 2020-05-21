@@ -17,6 +17,13 @@ describe MarcToArgot do
                       )
   end
 
+  it '(MTA) sets short_title' do
+    rec = make_rec
+    rec << MARC::DataField.new('245', '0', '0', ['a', 'three word title :'], ['b', 'subtitle'], ['z', '9789575433741'])
+    result = run_traject_on_record('ncsu', rec)
+    expect(result['short_title'].first).to eq('three word title')
+  end
+
   it '(MTA) sets title_sort' do
     result = title1['title_sort']
     expect(result).to eq(
@@ -54,5 +61,3 @@ describe MarcToArgot do
   end
 
 end
-
-

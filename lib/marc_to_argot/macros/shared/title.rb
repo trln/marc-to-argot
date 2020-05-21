@@ -24,23 +24,24 @@ module MarcToArgot
           end
         end
 
-        # extracts a short title from title_main (if appropriate)
-        # @param [Fixnum] max_length the maximum word length in a title
-        # that will be extracted.
-        # NOTE: this lambda assumes that title_main will already be populated,
-        # in the output hash, so this macro should only be invoked after
-        # #title_main
+        # sets a short_title if the length of 245a is equal to or less than max_length
+        # NOTE: max_length currently counts any character that is separated by whitespace as
+        #   a value in the words array. For example, "A four word title :" is currently
+        #   calculated as having the length of 5 and thus gets cut
         def short_title(max_length = 4)
-          lambda do |_, acc, ctx|
-            output_hash = ctx.output_hash
-            main_title = output_hash.fetch('title_main', '')
-            return if main_title.empty?
+          lambda do |rec, acc|
+            Traject::MarcExtractor.cached("245a").each_matching_line(rec) do |field, spec, extractor|
 
-            words = main_title.first[:value].split(/\s+/)
-            if words.length <= max_length
-              # strip any punctuation off the last word
-              words[-1] = words[-1].gsub(/[^a-z0-9]$/i, '')
-              acc << words.join(' ')
+              value = collect_and_join_subfield_values(field, 'a')
+              return if value.empty?
+
+              words = value.split(/\s+/)
+              if words.length <= max_length
+                # strip any punctuation off the last word
+                words[-1] = words[-1].gsub(/[^a-z0-9]$/i, '')
+                value = words.reject(&:empty?).join(' ')
+                acc << value unless value.nil? || value.empty?
+              end
             end
           end
         end

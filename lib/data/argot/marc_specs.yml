@@ -12,6 +12,10 @@ isbn:
   - 020a
   - 020z
   - 776z
+primary_isbn:
+  - 020a
+  - 020z
+  - 776z  
 issn:
   primary:
     - 022a

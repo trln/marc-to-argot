@@ -39,15 +39,15 @@ module MarcToArgot
                                        .join(' ')
         end
 
+        # NOTE: Proxy prefix is now added to 856 field in Aleph
+        #       and no longer added here as part of the data pipeline.
+        #       Continue to add the proxy placeholder for shared records.
+        #       Remove Duke proxy prefix from shared records.
         def add_duke_proxy(href, type, ctx)
           if type == 'fulltext' &&
             ctx.clipboard.fetch(:shared_record_set, false).present? &&
             url_restricted?(href, type)
-            "{+proxyPrefix}#{href}"
-          elsif type == 'fulltext' &&
-            url_restricted?(href, type) &&
-            !href.match(/proxy\.lib\.duke\.edu.*url=/)
-            "https://proxy.lib.duke.edu/login?url=#{href}"
+            "{+proxyPrefix}#{href.gsub('https://login.proxy.lib.duke.edu/login?url=', '')}"
           else
             href
           end

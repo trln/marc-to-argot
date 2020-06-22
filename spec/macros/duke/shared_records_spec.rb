@@ -30,6 +30,12 @@ describe MarcToArgot::Macros::Duke::SharedRecords do
       )
     end
 
+    it 'removes the Duke proxy if present' do
+      expect(oupe['url']).to(
+        eq(['{"href":"{+proxyPrefix}http://dx.doi.org/10.5743/cairo/9789774161032.001.0001","type":"fulltext"}'])
+      )
+    end
+
     it 'does not include a location_hierarchy' do
       expect(oupe.fetch('location_hierarchy', nil)).to be_nil
     end

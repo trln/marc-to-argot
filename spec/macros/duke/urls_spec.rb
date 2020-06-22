@@ -11,10 +11,9 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:link_in_subfield_a) { run_traject_json('duke', 'link_in_subfield_a', 'xml') }
 
   context 'Duke' do
-    it 'adds a proxy prefix to restricted, fulltext URLs' do
+    it 'does not add a proxy prefix to restricted, fulltext URLs' do
       expect(JSON.parse(needs_proxy['url'][0])['href']).to(
-        eq('https://proxy.lib.duke.edu/login?url='\
-          'http://site.ebrary.com/lib/dukelibraries/docDetail.action?docID=11017131')
+        eq('http://site.ebrary.com/lib/dukelibraries/docDetail.action?docID=11017131')
       )
     end
 
@@ -30,9 +29,9 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
-    it 'adds a proxy prefix to open access exception matches' do
+    it 'does not add a proxy prefix to open access exception matches' do
       expect(JSON.parse(open_access_exception['url'][0])['href']).to(
-        eq('https://proxy.lib.duke.edu/login?url=https://ropercenter.cornell.edu')
+        eq('https://ropercenter.cornell.edu')
       )
     end
 
@@ -44,8 +43,7 @@ describe MarcToArgot::Macros::Duke::Urls do
 
     it 'sets the href value from subfield a if there is no subfield u' do
       expect(JSON.parse(link_in_subfield_a['url'][0])['href']).to(
-        eq('https://proxy.lib.duke.edu/login?url='\
-           'https://library.fuqua.duke.edu/fuquaonly/capiqreg.htm')
+        eq('https://library.fuqua.duke.edu/fuquaonly/capiqreg.htm')
       )
     end
   end

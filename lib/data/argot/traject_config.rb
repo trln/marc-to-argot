@@ -102,6 +102,10 @@ unless settings["override"].include?("upc")
   to_field "upc", upc
 end
 
+unless settings["override"].include?("primary_upc")
+  to_field "primary_upc", primary_upc
+end
+
 ################################################
 # Dates
 ######

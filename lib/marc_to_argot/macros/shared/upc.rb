@@ -19,6 +19,20 @@ module MarcToArgot
           end
         end
 
+        def primary_upc
+          lambda do |rec, acc|
+            Traject::MarcExtractor.cached('024adz')
+                                  .each_matching_line(rec) do |field, spec, extractor|                                                          
+              case field.tag
+              when '024'
+                upc = upc_024(field).select { |u| u['qual'] != 'exclude' }
+                                    .map { |u| u['value'] }
+                acc.concat upc          
+              end
+            end
+            acc.uniq!
+          end
+        end
 
         ################################################
         # MARC 024 Processor
@@ -31,7 +45,6 @@ module MarcToArgot
 
           if field.indicator1 == '1'
             split_fields = split_complex_id_field(field, id_subfields, qual_subfields)
-
             split_fields.each do |sfield|
               id_hash = assemble_id_hash(upc_value_from_024(sfield, id_subfields),
                                          qual: gather_qualifiers(sfield, id_subfields, qual_subfields),

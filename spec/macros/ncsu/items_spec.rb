@@ -253,28 +253,6 @@ describe MarcToArgot::Macros::NCSU::Items do
           expect(fixture_items[:design_serial]['status']).to include('Library use only')
         end
       end
-
-      # FOURTHFLOORCLOSURE
-      context '#hill_fourth_floor?' do
-        it 'tags book with BC call number on fourth floor' do
-          fourth = fixture_items[:fourth_floor_item]
-          expect(hill_fourth_floor?(fourth)).to be(true)
-          expect(fourth['status']).to include("Available upon request")
-        end
-
-        it 'tags book with EB call number as not on fourth floor' do
-          expect(hill_fourth_floor?(fixture_items[:fifth_floor_item])).to be(false)
-          expect(fixture_items[:fifth_floor_item]['status']).to eq('Available')
-        end
-
-        it 'tags Hunt book with BC call number as not on Hill fourth floor' do
-          expect(hill_fourth_floor?(fixture_items[:hunt_ff_range_item])).to be(false)
-          expect(fixture_items[:hunt_ff_range_item]['status']).to eq('Available')
-        end
-
-
-
-      end
     end
   end
 end

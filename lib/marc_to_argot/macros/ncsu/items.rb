@@ -77,15 +77,9 @@ module MarcToArgot
           [item['loc_b'], item['loc_n']]
         end
 
-        # FOURTHFLOORCLOSURE
-        def hill_fourth_floor?(item)
-          cn = item.fetch('call_no', '')
-          item['loc_b'] == 'DHHILL' && item['loc_n'] == 'STACKS' && ( 'A' <= cn &&cn <= 'DB' )
-        end
-
         # Offsite & requestable
         def offsite?(item)
-          return true if OFFSITE_LIB.include?(item['loc_b']) || hill_fourth_floor?(item)
+          return true if OFFSITE_LIB.include?(item['loc_b'])
 
           case item['loc_b']
           when 'SPECCOLL'

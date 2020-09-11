@@ -98,28 +98,43 @@ describe MarcToArgot::Macros::UNC::Urls do
   end
 
   describe 'is_restricted?' do
-    context 'URL is proxied' do
+    it '(UNC) restriction detection is case-insensitive' do
+      url = 'http://VB3LK7EB4T.search.serialssolutions.com/blahblah'
+      v = is_restricted?(url)
+      expect(v).to eq(true)
+    end
+    context 'when URL is proxied' do
       it '(UNC) returns true' do
         url = 'http://libproxy.lib.unc.edu/login?url=https://blahblah'
         v = is_restricted?(url)
         expect(v).to eq(true)
       end
     end
-    context 'URL begins with http://unc.kanopystreaming.com' do
+    context 'when a Kanopy URL', :aggregate_failures do
       it '(UNC) returns true' do
         url = 'http://unc.kanopystreaming.com/blahblah'
         v = is_restricted?(url)
         expect(v).to eq(true)
+
+        https = 'https://unc.kanopy.com/blahblah'
+        expect(is_restricted?(https)).to be true
       end
     end
-    context 'URL begins with http://vb3lk7eb4t.search.serialssolutions.com' do
+    context 'when a Serials Solutions URL' do
       it '(UNC) returns true' do
         url = 'http://vb3lk7eb4t.search.serialssolutions.com/blahblah'
         v = is_restricted?(url)
         expect(v).to eq(true)
       end
     end
-    context 'URL does NOT begin with restricted URL string' do
+    context 'when URL uses UNC Incommon entityID' do
+      it '(UNC) returns true' do
+        url = 'https://catalog.hathitrust.org/Record/001665338?signon=swle:urn:mace:incommon:unc.edu'
+        v = is_restricted?(url)
+        expect(v).to eq(true)
+      end
+    end
+    context 'when URL does NOT begin with restricted URL string' do
       it '(UNC) returns nil value' do
         url = 'https://purl.fdlp.gov/GPO/gpo92270'
         v = is_restricted?(url)

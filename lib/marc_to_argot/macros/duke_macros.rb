@@ -50,6 +50,17 @@ module MarcToArgot
         end
       end
 
+      def primary_oclc
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
+            if !field.value.include?('exclude')
+              first_oclc_number = fetch_oclc_numbers(field).first
+              acc << "OCLC#{first_oclc_number}" unless first_oclc_number.nil? || first_oclc_number.empty?
+            end
+          end
+        end
+      end
+
       def fetch_oclc_numbers(field)
         oclc_numbers = field.subfields.select { |sf| sf.code == 'a' }.map(&:value).map(&:strip)
         oclc_numbers.select! { |x| /^(\(OCoLC\))?\d{8,}$/.match(x) }

@@ -100,8 +100,8 @@ module MarcToArgot
               not_standard = true
               category = relator_categories_local[rel]
             end
-            logger.warn "Non-standard relator term '#{rel}' not mapped to a relator category." if category.nil?
-            logger.warn "Relator term '#{rel}' not a standard relator term, but was mapped to a relator category." if not_standard && category
+            #logger.warn "Non-standard relator term '#{rel}' not mapped to a relator category." if category.nil?
+            #logger.warn "Relator term '#{rel}' not a standard relator term, but was mapped to a relator category." if not_standard && category
             category
           end
           type = (names_category_order & type).first

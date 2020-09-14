@@ -29,6 +29,7 @@ module MarcToArgot
           name['name'] = names_name(field)
           name['rel'] = names_rel(field)
           name['type'] = names_type(field, name['rel'])
+          name['id'] = names_id(field)
 
           lang = Vernacular::ScriptClassifier.new(field, name['name']).classify
           name['lang'] = lang unless lang.nil? || lang.empty?
@@ -50,6 +51,13 @@ module MarcToArgot
           end
 
           name.gsub(/(?<!\s[A-Z])[\.,]\s?$/, '').strip
+        end
+
+        def names_id(field)
+          case field_tag_or_880_linkage_tag(field)
+          when '100', '700'
+            collect_subfield_values_by_code(field, '0').first
+          end
         end
 
         def names_rel(field)

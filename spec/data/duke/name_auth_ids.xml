@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cas a2200649 i 4500</leader>
+<controlfield tag="001">DUKE009640001</controlfield>
+<controlfield tag="005">20200713154720.0</controlfield>
+<controlfield tag="008">900414d19891989nyuar^^^^^^^^^0^^^^0eng^c</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">sf 97091324</subfield>
+</datafield>
+<datafield tag="012" ind1=" " ind2=" ">
+ <subfield code="i">9702</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">21377294</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">EEM</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">EEM</subfield>
+ <subfield code="d">DLC</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">CRU</subfield>
+ <subfield code="d">DLC</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCLCF</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">OCLCA</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+ <subfield code="a">Comic Book 03780</subfield>
+</datafield>
+<datafield tag="050" ind1="1" ind2="4">
+ <subfield code="a">PN6728.5.D3</subfield>
+ <subfield code="b">B54</subfield>
+</datafield>
+<datafield tag="090" ind1=" " ind2=" ">
+ <subfield code="a">PN6728.B533541</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+ <subfield code="a">Blackhawk annual.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">New York, NY :</subfield>
+ <subfield code="b">DC Comics,</subfield>
+ <subfield code="c">1989.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">volumes :</subfield>
+ <subfield code="b">color illustrations ;</subfield>
+ <subfield code="c">26 cm</subfield>
+</datafield>
+<datafield tag="310" ind1=" " ind2=" ">
+ <subfield code="a">Annual</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="362" ind1="1" ind2=" ">
+ <subfield code="a">Began and ceased with 1 (1989)</subfield>
+</datafield>
+<datafield tag="588" ind1=" " ind2=" ">
+ <subfield code="a">Description based on: 1 (1989); title from indicia.</subfield>
+</datafield>
+<datafield tag="588" ind1=" " ind2=" ">
+ <subfield code="a">Latest issue consulted: 1 (1989)</subfield>
+</datafield>
+<datafield tag="541" ind1=" " ind2=" ">
+ <subfield code="c">Gift;</subfield>
+ <subfield code="a">Rubenstein Library copy 1: Gift of Edwin and Terry Murray.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Acquired as part of the Edwin and Terry Murray Collection (David M. Rubenstein Rare Book &amp; Manuscript Library).</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="600" ind1="0" ind2="0">
+ <subfield code="a">Blackhawk</subfield>
+ <subfield code="c">(Fictitious character from DC Comics, Inc.)</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/no2018138909</subfield>
+ <subfield code="v">Comic books, strips, etc.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001401</subfield>
+ <subfield code="v">Periodicals.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+</datafield>
+<datafield tag="600" ind1="0" ind2="0">
+ <subfield code="a">Lady Blackhawk</subfield>
+ <subfield code="c">(Fictitious character)</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/no2016149241</subfield>
+ <subfield code="v">Comic books, strips, etc.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001401</subfield>
+ <subfield code="v">Periodicals.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Comic books, strips, etc.</subfield>
+ <subfield code="v">Periodicals.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh2008101233</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">War</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh85145114</subfield>
+ <subfield code="v">Comic books, strips, etc.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001401</subfield>
+ <subfield code="v">Periodicals.</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Comic books, strips, etc.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">http://id.worldcat.org/fast/869145</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">War comics.</subfield>
+ <subfield code="2">lcgft</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/genreForms/gf2014026589</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Comics (Graphic works)</subfield>
+ <subfield code="2">lcgft</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/genreForms/gf2014026266</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Comic books.</subfield>
+ <subfield code="2">rbgenr</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Periodicals.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">http://id.worldcat.org/fast/1411641</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Gold, Mike,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/no00027267</subfield>
+ <subfield code="e">editor.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Wozniak, Chris,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/no2014030546</subfield>
+ <subfield code="e">penciller.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Jones, Malcolm,</subfield>
+ <subfield code="c">III,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n92056103</subfield>
+ <subfield code="e">inker.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Pasko, Martin,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n88615552</subfield>
+ <subfield code="e">author.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Burchett, Rick,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n95056637</subfield>
+ <subfield code="e">penciller.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Wray, William,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n2006093032</subfield>
+ <subfield code="e">inker.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Ziuko, Tom,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n2015063743</subfield>
+ <subfield code="e">colorist.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Haynie, Steve,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/no2011143766</subfield>
+ <subfield code="e">letterer.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Maggin, Elliot S.,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n84166423</subfield>
+ <subfield code="e">author.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Rockwell, Richard,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n2003036752</subfield>
+ <subfield code="e">penciller,</subfield>
+ <subfield code="e">inker.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Vesik, Helen,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/no2010057069</subfield>
+ <subfield code="e">colorist.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Barreto, Eduardo,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n92057393</subfield>
+ <subfield code="e">penciller,</subfield>
+ <subfield code="e">inker.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">DC Comics, Inc.,</subfield>
+ <subfield code="0">http://id.loc.gov/authorities/names/n78008251</subfield>
+ <subfield code="e">publisher.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Edwin and Terry Murray Collection (David M. Rubenstein Rare Book &amp; Manuscript Library).</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="752" ind1=" " ind2=" ">
+ <subfield code="a">United States</subfield>
+ <subfield code="b">New York (State)</subfield>
+ <subfield code="d">New York,</subfield>
+ <subfield code="e">publication place.</subfield>
+ <subfield code="2">naf</subfield>
+</datafield>
+<datafield tag="850" ind1=" " ind2=" ">
+ <subfield code="a">DLC</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">AU@</subfield>
+ <subfield code="b">000013135154</subfield>
+</datafield>
+<datafield tag="905" ind1=" " ind2=" ">
+ <subfield code="a">MARCIVE 20200818</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AS</subfield>
+ <subfield code="b">Serial</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20200713</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBQ</subfield>
+ <subfield code="h">PN6728.B533541</subfield>
+ <subfield code="A">no.1(1989)</subfield>
+ <subfield code="D">y</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRBQ</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PN6728.B533541</subfield>
+ <subfield code="n">no.1(1989) c.1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">RO</subfield>
+ <subfield code="r">SER</subfield>
+ <subfield code="p">B1897903 </subfield>
+ <subfield code="s">20200713</subfield>
+ <subfield code="u">20200713</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">010794699</subfield>
+</datafield>
+</record>
+</collection>

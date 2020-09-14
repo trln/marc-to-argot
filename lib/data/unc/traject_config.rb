@@ -129,6 +129,10 @@ each_record do |rec, cxt|
     add_virtual_collection(cxt, 'UNC MRC FilmFinder online and special materials')
   end
 
+  if ncdhc?(rec)
+    cxt.output_hash['record_data_source'] = ['MARC', 'NCDHC']
+  end
+
   remove_print_from_archival_material(cxt)
 
   Logging.mdc.clear

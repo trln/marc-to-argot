@@ -65,6 +65,13 @@ module MarcToArgot
         end
         false
       end
+
+      def ncdhc?(rec)
+        Traject::MarcExtractor.cached('907|  |a:', alternate_script: false).each_matching_line(rec) do |field, _spec, _extractor|
+          return true if field.value.start_with?('NCDHC')
+        end
+        false
+      end
     end
   end
 end

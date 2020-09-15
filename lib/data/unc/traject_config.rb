@@ -79,9 +79,8 @@ each_record do |rec, cxt|
   # set EAD id
   set_ead_id(rec, cxt)
 
-  # unless staff have added print item/holdings to DWS shared records
-  # create items and holdings
-  unless cxt.clipboard[:shared_record_set] == 'dws'
+  # Unless record is in a shared set that is e-only, create items and holdings
+  unless cxt.clipboard[:shared_record_set] && !shared_physical?(cxt.clipboard[:shared_record_set])
     items(rec, cxt)
     holdings(rec, cxt)
   end

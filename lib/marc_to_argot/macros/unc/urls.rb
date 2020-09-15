@@ -18,7 +18,7 @@ module MarcToArgot
             url_text = url_text(field)
             url_text = "Available via the UNC-Chapel Hill Libraries" if url_text.empty? && url[:type] == 'fulltext'
             url_text = '' if cxt.clipboard[:shared_record_set]
-            
+
             url[:text] = url_text unless url_text.empty?
             url[:note] = url_note(field) unless url_note(field).empty?
 
@@ -28,18 +28,20 @@ module MarcToArgot
             if cxt.clipboard[:shared_record_set] && url[:restricted] == nil
               url[:href] = template_proxy(url[:href])
             end
-            
+
             urls << url.to_json
           end
 
           cxt.output_hash['url'] = urls unless urls.empty?
         end
 
-
-        def is_restricted?(url)
+        def is_restricted?(href)
+          url = href.downcase
           return true if is_proxied?(url)
-          return true if url.start_with?('http://unc.kanopystreaming.com')
-          return true if url.start_with?('http://vb3lk7eb4t.search.serialssolutions.com')
+          return true if url.match(/unc\.kanopystreaming\.com/) ||
+                         url.match(/unc\.kanopy\.com/)
+          return true if url.match(/vb3lk7eb4t\.search\.serialssolutions\.com/)
+          return true if url.match(/incommon:unc\.edu/)
           return false
         end
 

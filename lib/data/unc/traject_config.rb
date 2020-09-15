@@ -79,9 +79,8 @@ each_record do |rec, cxt|
   # set EAD id
   set_ead_id(rec, cxt)
 
-  # unless staff have added print item/holdings to DWS shared records
-  # create items and holdings
-  unless cxt.clipboard[:shared_record_set] == 'dws'
+  # Unless record is in a shared set that is e-only, create items and holdings
+  unless cxt.clipboard[:shared_record_set] && !shared_physical?(cxt.clipboard[:shared_record_set])
     items(rec, cxt)
     holdings(rec, cxt)
   end
@@ -127,6 +126,10 @@ each_record do |rec, cxt|
     # MRC's scoped FilmFinder search includes everything in MRC physical
     # locations and everything with this virtual_collection value
     add_virtual_collection(cxt, 'UNC MRC FilmFinder online and special materials')
+  end
+
+  if ncdhc?(rec)
+    cxt.output_hash['record_data_source'] = ['MARC', 'NCDHC']
   end
 
   remove_print_from_archival_material(cxt)

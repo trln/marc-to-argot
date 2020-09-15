@@ -3,6 +3,9 @@ module MarcToArgot
     module UNC
       module SharedRecords
 
+        # shared record sets that include print/physical items
+        PHYSICAL_SETS = ['oupp']
+
         # If record is part of a shared record set, set the code for the set
         # Further processing is based on this code value
         #
@@ -25,6 +28,10 @@ module MarcToArgot
             end
           end
           shared_set
+        end
+
+        def shared_physical?(shared)
+          PHYSICAL_SETS.include?(shared)
         end
 
         def add_institutions(cxt, institution_array)

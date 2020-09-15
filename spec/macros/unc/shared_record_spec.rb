@@ -43,6 +43,36 @@ describe MarcToArgot::Macros::UNC::SharedRecords do
     end
   end
 
+  context 'When shared record set includes physical items' do
+    let(:rec) do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ', ' ', ['a', 'TROUP'])
+      rec << MARC::DataField.new('999', '9', '1', ['l', "troup"])
+      rec
+    end
+
+    it '(UNC) sets physical items' do
+      result = run_traject_on_record('unc', rec)['items']
+      expect(result.find { |i| i.include? 'troup' }).to be_truthy
+    end
+  end
+
+  context 'When shared record set is e-only' do
+    let(:rec) do
+      rec = make_rec
+      rec << MARC::DataField.new('773', '0', ' ',
+        ['t', 'Center for Research Libraries (CRL) eResources (online collection)']
+       )
+      rec << MARC::DataField.new('999', '9', '1', ['l', "ddda"])
+      rec
+    end
+
+    it '(UNC) does not set any physical items on the record' do
+      result = run_traject_on_record('unc', rec)['items']
+      expect(result.find { |i| i.include? 'ddda' }).to be_nil
+    end
+  end
+
   context 'When shared record set is OUPP' do
     it '(UNC) does NOT set TRLN location facet hierarchy for TRLN shared print' do
       result = troup1['location_hierarchy']

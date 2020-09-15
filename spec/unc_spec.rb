@@ -31,6 +31,11 @@ describe MarcToArgot do
     expect(result).to eq(['UNC MRC FilmFinder online and special materials'])
   end
 
+  it '(UNC) sets correct record_data_source for NCDHC records' do
+    ncdhc = run_traject_json('unc', 'ncdhc')
+    expect(ncdhc['record_data_source']).to eq(['MARC', 'NCDHC'])
+  end
+
   it '(UNC) sets date_cataloged' do
     expect(cat_date['date_cataloged']).to(
       eq(['2004-10-01T04:00:00Z'])

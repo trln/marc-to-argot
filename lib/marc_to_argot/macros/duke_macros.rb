@@ -50,15 +50,17 @@ module MarcToArgot
         end
       end
 
-      def primary_oclc
+      def primary_oclc    
         lambda do |rec, acc|
-          Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
-            if !field.value.include?('exclude')
-              first_oclc_number = fetch_oclc_numbers(field).first
-              acc << "OCLC#{first_oclc_number}" unless first_oclc_number.nil? || first_oclc_number.empty?
+          if field_035q = Traject::MarcExtractor.cached("035q")
+            if field_035q && !field_035q.extract(rec).include?('exclude')
+              Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
+                first_oclc_number = fetch_oclc_numbers(field).first
+                acc << "#{first_oclc_number}" unless first_oclc_number.nil? || first_oclc_number.empty?
+              end
             end
           end
-        end
+        end   
       end
 
       def fetch_oclc_numbers(field)

@@ -72,23 +72,6 @@ module MarcToArgot
         end
       end
 
-      def primary_oclc
-        control_number_extor = MarcExtractor.cached('001')
-        cni_extor = MarcExtractor.cached('003')
-        lambda do |rec, acc, _|
-          base = oclcnum.call(rec, acc)
-          acc << base.first unless base.empty?
-          if cni_extor.extract(rec).first == 'OCoLC'
-            oclc = control_number_extor.extract(rec).first
-            acc << oclc.gsub(/^\D*/, '') unless oclc.nil?
-          end
-          acc.compact!
-          acc.reject!(&:empty?)
-          acc.uniq!
-          acc.map! { |x| "OCLC#{x}" }
-        end
-      end
-
       def url
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("856uyz3").each_matching_line(rec) do |field, spec, extractor|

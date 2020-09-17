@@ -111,7 +111,7 @@ describe MarcToArgot::Macros::Duke do
 
   it 'sets primary_oclc when $q does not contain the string ‘exclude’' do
     result = run_traject_json('duke', 'oclc_leading_zeros', 'xml')
-    expect(result['primary_oclc']).to(eq(["OCLC503275"]))
+    expect(result['primary_oclc']).to(eq(['503275']))
   end
 
   it 'sets primary_oclc to nil when $q contains the string ‘exclude’' do

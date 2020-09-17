@@ -18,8 +18,6 @@ to_field 'rollup_id', rollup_id
 
 to_field 'names', names
 
-to_field 'primary_oclc', primary_oclc
-
 
 
 each_record do |rec, ctx|

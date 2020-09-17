@@ -1,0 +1,107 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+	<leader>01067cam a2200337I  4500</leader>
+<controlfield tag="001">u100000</controlfield>
+<controlfield tag="001">ocm00297041</controlfield>
+<controlfield tag="003">SIRSI</controlfield>
+<controlfield tag="005">19850613184005.0</controlfield>
+<controlfield tag="008">720501s1966    nyua     b    00000 eng  </controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+	<subfield code="a">   66010189</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+	<subfield code="a">(Sirsi) AAK-6765</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+	<subfield code="a">DLC</subfield>
+	<subfield code="c">WSU</subfield>
+	<subfield code="d">OCL</subfield>
+	<subfield code="d">SOI</subfield>
+	<subfield code="d">NLS</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+	<subfield code="a">NLSA</subfield>
+	<subfield code="c">1</subfield>
+	<subfield code="c">2</subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2=" ">
+	<subfield code="a">PZ5.H736</subfield>
+	<subfield code="b">Bo3</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+	<subfield code="a">808.8</subfield>
+	<subfield code="b">H74b, 1966</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+	<subfield code="a">028.5</subfield>
+	<subfield code="b">H745b</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2="0">
+	<subfield code="a">Hollowell, Lillian,</subfield>
+	<subfield code="e">ed.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="2">
+	<subfield code="a">A book of children's literature.</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+	<subfield code="a">3d ed.</subfield>
+</datafield>
+<datafield tag="260" ind1="0" ind2=" ">
+	<subfield code="a">New York,</subfield>
+	<subfield code="b">Holt, Rinehart and Winston</subfield>
+	<subfield code="c">[1966]</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+	<subfield code="a">xi, 580 p.</subfield>
+	<subfield code="b">illus.</subfield>
+	<subfield code="c">26 cm.</subfield>
+</datafield><datafield tag="504" ind1=" " ind2=" ">
+<subfield code="a">Includes bibliographies.</subfield>
+</datafield>
+<datafield tag="596" ind1=" " ind2=" ">
+	<subfield code="a">2</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+	<subfield code="a">Children's literature</subfield>
+	<subfield code="x">Collections.</subfield>
+</datafield><datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Children's literature</subfield>
+<subfield code="x">Bibliography.</subfield>
+</datafield><datafield tag="948" ind1=" " ind2=" ">
+<subfield code="a">01/27/1995</subfield>
+<subfield code="b">09/26/1995</subfield>
+</datafield>
+<datafield tag="918" ind1=" " ind2=" ">
+	<subfield code="a">100000</subfield>
+</datafield>
+<datafield tag="019" ind1=" " ind2=" ">
+	<subfield code="a">1025721</subfield>
+</datafield>
+<datafield tag="059" ind1=" " ind2=" ">
+	<subfield code="l">LIB SCI/PROF</subfield>
+	<subfield code="t">BOOK</subfield>
+	<subfield code="k">REGULAR</subfield>
+	<subfield code="i">3213000076188</subfield>
+	<subfield code="n">DD</subfield>
+	<subfield code="p">PROF.</subfield>
+	<subfield code="a">028.5</subfield>
+	<subfield code="b">H745b</subfield>
+	<subfield code="m">2</subfield>
+</datafield>
+<datafield tag="999" ind1=" " ind2=" ">
+	<subfield code="a">PROF 028.5 H745b</subfield>
+	<subfield code="w">DEWEY</subfield>
+	<subfield code="c">1</subfield>
+	<subfield code="i">3213000076188</subfield>
+	<subfield code="d">8/19/1997</subfield>
+	<subfield code="l">PROFCOLL</subfield>
+	<subfield code="m">SLIS</subfield>
+	<subfield code="n">3</subfield>
+	<subfield code="r">Y</subfield>
+	<subfield code="s">Y</subfield>
+	<subfield code="t">BOOK</subfield>
+	<subfield code="u">2/3/1995</subfield>
+	<subfield code="x">PROFESSNL</subfield>
+</datafield>
+</record>
+</collection>

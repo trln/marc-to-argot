@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <collection xmlns="http://www.loc.gov/MARC21/slim">
 <record>
   <leader>01883cgm a2200433   4500</leader>
@@ -30,10 +31,8 @@
     <subfield code="q">exclude</subfield>
   </datafield>
   <datafield tag="035" ind1=" " ind2=" ">
-    <subfield code="a">(OCoLC)2455979</subfield>
     <subfield code="z">(OCoLC)3112578</subfield>
     <subfield code="z">(OCoLC)5608751</subfield>
-    <subfield code="q">exclude</subfield>
   </datafield>
   <datafield tag="043" ind1=" " ind2=" ">
     <subfield code="a">n-us---</subfield>

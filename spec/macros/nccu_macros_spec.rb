@@ -63,7 +63,7 @@ describe MarcToArgot::Macros::NCCU do
 
     it 'sets rollup_id when $a contains (Sirsi) and $q does not contain the string ‘exclude’' do
     result = run_traject_json('nccu', 'primary_oclc_sirsi', 'xml')
-    expect(result['rollup_id']).to(eq('OCLC0297041'))
+    expect(result['rollup_id']).to(eq('OCLC297041'))
   end
 
   it 'sets rollup_id when there is no 035$a' do

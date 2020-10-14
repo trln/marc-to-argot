@@ -55,6 +55,12 @@ to_field 'sersol_number', sersol_number
 to_field "rollup_id", rollup_id
 
 ################################################
+# Primary OCLC
+######
+
+to_field "primary_oclc", primary_oclc
+
+################################################
 # Internet Archive ID
 ######
 

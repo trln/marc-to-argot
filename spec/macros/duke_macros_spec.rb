@@ -108,4 +108,14 @@ describe MarcToArgot::Macros::Duke do
     expect(result['misc_id']).to include({"display"=>"false", "value"=>"005314421"})
     expect(result['misc_id']).to include({"display"=>"false", "value"=>"5314421"})
   end
+
+  it 'sets primary_oclc when $q does not contain the string ‘exclude’' do
+    result = run_traject_json('duke', 'oclc_leading_zeros', 'xml')
+    expect(result['primary_oclc']).to(eq(['503275']))
+  end
+
+  it 'sets primary_oclc to nil when $q contains the string ‘exclude’' do
+    result = run_traject_json('duke', 'primary_oclc_exclude', 'xml')
+    expect(result['primary_oclc']).to be_nil
+  end
 end

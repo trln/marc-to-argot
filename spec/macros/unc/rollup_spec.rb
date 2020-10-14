@@ -28,6 +28,10 @@ describe MarcToArgot::Macros::UNC::Rollup do
       result = argot['rollup_id']
       expect(result).to be_nil
     end
+    it '(UNC) does not set primary_oclc' do
+      result = argot['primary_id']
+      expect(result).to be_nil
+    end
   end
   
   context 'When there is a current OCLC number data in record' do
@@ -48,6 +52,40 @@ describe MarcToArgot::Macros::UNC::Rollup do
     it '(UNC) sets rollup_id from oclc_number' do
       result = argot['rollup_id']
       expect(result).to eq('OCLC1234')
+    end
+
+    it '(UNC) sets primary_oclc from oclc_number' do
+      result = argot['primary_oclc']
+      expect(result).to eq('1234')
+    end
+  end
+
+  context 'When there is a current OCLC number data in record and 035$q includes exclude' do
+    let(:argot) {
+      rec = make_rec
+      rec << MARC::ControlField.new('001', '1234')
+      rec << MARC::ControlField.new('003', '')
+      rec << MARC::DataField.new('019', ' ', ' ',
+                                 ['a', '2222'])
+      rec << MARC::DataField.new('035', ' ', ' ',
+                                 ['a', '2222'],
+                                 ['q', 'exclude'])
+      argot = run_traject_on_record('unc', rec)
+    }
+    
+    it '(UNC) sets oclc_number field' do
+      result = argot['oclc_number']
+      expect(result).to eq({ 'value' => '1234',
+                             'old' => ['2222'] })
+    end
+    it '(UNC) sets rollup_id from oclc_number' do
+      result = argot['rollup_id']
+      expect(result).to eq('OCLC1234')
+    end
+
+    it '(UNC) sets primary_oclc to nil' do
+      result = argot['primary_oclc']
+      expect(result).to be_nil
     end
   end
 
@@ -86,6 +124,10 @@ describe MarcToArgot::Macros::UNC::Rollup do
           result = argot['oclc_number']
           expect(result).to be_nil
         end
+        it '(UNC) does NOT set primary_oclc field' do
+          result = argot['primary_oclc']
+          expect(result).to be_nil
+        end
         it '(UNC) sets sersol_number' do
           expect(argot['sersol_number']).to eq('ssib123')
         end
@@ -106,6 +148,10 @@ describe MarcToArgot::Macros::UNC::Rollup do
 
           it '(UNC) does NOT set oclc_number field' do
             result = argot['oclc_number']
+            expect(result).to be_nil
+          end
+          it '(UNC) does NOT set primary_oclc' do
+            result = argot['primary_oclc']
             expect(result).to be_nil
           end
           it '(UNC) does NOT set sersol_number' do
@@ -145,6 +191,7 @@ describe MarcToArgot::Macros::UNC::Rollup do
                               '003' => 'abc',
                               '019' => ['2222', '3333'],
                               '035' => ['(aaa)4444', '(zzz)6666'],
+                              "035q"=>[],
                               '035z' => ['(aaa)5555', '(zzz)7777']
                             })
     end
@@ -164,7 +211,8 @@ describe MarcToArgot::Macros::UNC::Rollup do
                               '003' => '',
                               '019' => [],
                               '035' => [],
-                              '035z' => []
+                              '035z' => [],
+                              '035q' => ["(aaa)5555", "(zzz)7777"]
                             })
     end
   end

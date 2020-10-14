@@ -17,6 +17,9 @@ module MarcToArgot
           
           rollup = set_rollup(oclc_number, ss_number, vendor_number)
           cxt.output_hash['rollup_id'] = rollup if rollup
+
+          primary_oclc = set_primary_oclc(oclc_number, id_data)
+          cxt.output_hash['primary_oclc'] = primary_oclc if primary_oclc
         end
 
         # given record, returns hash that is used by all the other methods
@@ -28,7 +31,8 @@ module MarcToArgot
                       '003' => '',
                       '019' => [],
                       '035' => [],
-                      '035z' => [] }
+                      '035z' => [],
+                      '035q' => []}
           
           Traject::MarcExtractor.cached('001:003:019:035a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
             case field.tag
@@ -46,6 +50,9 @@ module MarcToArgot
               end
               field.subfields.select{ |sf| sf.code == 'z' }.each do |sf|
                 id_data['035z'] << sf.value
+              end
+              field.subfields.select{ |sf| sf.code == 'q' }.each do |sf|
+                id_data['035q'] << sf.value
               end
             end
           end
@@ -112,6 +119,13 @@ module MarcToArgot
           return ss_number if ss_number
           return vendor_number.first if vendor_number
           return nil
+        end
+
+        def set_primary_oclc(oclc_number, id_data)
+          if id_data['035q'] && !id_data['035q'].include?("exclude")         
+            return oclc_number['value'] unless oclc_number.nil? || oclc_number['value'].empty?
+            return nil
+          end  
         end
 
         # Returns value of Argot oclc_number[value] if possible.

@@ -45,18 +45,17 @@ module MarcToArgot
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("035a").each_matching_line(rec) do |field, spec, extractor|
             if field.value.include?('(OCoLC)')
-              acc << field.value.gsub(/^\(OCoLC\)(\d+)$/, 'OCLC\1')
+              acc << field.value.gsub(/^\(OCoLC\)(\d+)([\w|()]*)$/, 'OCLC\1')
             elsif field.value.include?('(Sirsi)')
               Traject::MarcExtractor.cached("001").each_matching_line(rec) do |field, spec, extractor|
-                if field.value.match(/^(ocm|ocn|on)?0\d+$/)
-                  acc << field.value.gsub(/^(ocm|ocn|on)?0(\d+)$/, 'OCLC\2')
+                if field.value.match(/^(ocm|ocn|on)0*\d+$/)
+                  acc << field.value.gsub(/^(ocm|ocn|on)0*(\d+)$/, 'OCLC\2')
                 end  
               end 
-            end 
+            end
           end
         end    
       end
-
     end
   end
 end

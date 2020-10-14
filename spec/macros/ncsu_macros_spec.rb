@@ -19,4 +19,14 @@ describe MarcToArgot::Macros::NCSU do
       expect(output['rollup_id']).to eq(exp)
     end
   end
+
+  it 'sets primary_oclc 035$q does not contain the string ‘exclude’' do
+    result = run_traject_json('ncsu', 'archival_material', 'xml')
+    expect(result['primary_oclc']).to eq(['566307606'])
+  end  
+
+  it 'sets primary_oclc to nil when 035$q contains the string ‘exclude’' do
+    result = run_traject_json('ncsu', 'primary_oclc_exclude', 'xml')
+    expect(result['primary_oclc']).to be_nil
+  end
 end

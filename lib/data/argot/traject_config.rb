@@ -46,6 +46,10 @@ unless settings["override"].include?("oclc_number")
   to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc_number])
 end
 
+unless settings["override"].include?("primary_oclc")
+  to_field "primary_oclc", argot_primary_oclc(settings["specs"][:primary_oclc])
+end
+
 unless settings["override"].include?("ead_id")
   # to_field "ead_id", literal("")
 end

@@ -35,6 +35,28 @@ module Traject::Macros
       end
     end
 
+    ################################################
+    # Lambda for Primary OCLC Number
+    ######
+    def argot_primary_oclc(config)
+      lambda do |rec, acc|
+        st = []
+        field_035q = MarcExtractor.cached('035q')
+        if !field_035q.extract(rec).include?('exclude')
+          config.each do |key, spec|
+            extractor = MarcExtractor.cached(spec, separator: nil)
+            oclc_num = extractor.extract(rec).collect! do |o|
+              Marc21Semantics.oclcnum_extract(o)
+            end.compact 
+            st << oclc_num.uniq
+
+          end
+          acc << st.flatten.first unless st.nil? || st.empty?
+      end
+    end
+    end
+
+
     # ################################################
     # # Lambda for ISSN
     # ######

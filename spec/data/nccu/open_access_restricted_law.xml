@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+	<leader>02525cai a2200445Ka 4500</leader>
+	<controlfield tag="001">u1000000</controlfield>
+	<controlfield tag="003">SIRSI</controlfield>
+	<controlfield tag="005">20161018044212.0</controlfield>
+	<controlfield tag="006">m     o  d        </controlfield>
+	<controlfield tag="007">cr mn|||||||||</controlfield>
+	<controlfield tag="008">050519c20029999vau x w o b   0    2eng d</controlfield>
+	<datafield tag="040" ind1=" " ind2=" ">
+		<subfield code="a">BNA</subfield>
+		<subfield code="b">eng</subfield>
+		<subfield code="c">BNA</subfield>
+		<subfield code="d">BNA</subfield>
+		<subfield code="d">OCLCQ</subfield>
+		<subfield code="d">BNA</subfield>
+		<subfield code="d">OCLCA</subfield>
+		<subfield code="d">OCLCF</subfield>
+		<subfield code="d">OCLCO</subfield>
+		<subfield code="d">OCLCQ</subfield>
+		<subfield code="d">BNA</subfield>
+	</datafield>
+	<datafield tag="035" ind1=" " ind2=" ">
+		<subfield code="a">(OCoLC)60402982</subfield>
+	</datafield>
+	<datafield tag="043" ind1=" " ind2=" ">
+		<subfield code="a">n-us---</subfield>
+	</datafield>
+	<datafield tag="050" ind1=" " ind2="4">
+		<subfield code="a">KF6289.A1</subfield>
+		<subfield code="b">T35 no. 767-3rd (INTERNET)</subfield>
+	</datafield>
+	<datafield tag="049" ind1=" " ind2=" ">
+		<subfield code="a">BNAM</subfield>
+	</datafield>
+	
+	<datafield tag="100" ind1="1" ind2=" ">
+		<subfield code="a">Doloboff, Joseph M.,</subfield>
+		<subfield code="d">1959-</subfield>
+	</datafield>
+	<datafield tag="245" ind1="1" ind2="0">
+		<subfield code="a">Redemptions /</subfield>
+		<subfield code="c">Joseph M. Doloboff, George C. Koutouras and assisted by Bill Ling ; in revision of a prior version by Joseph M. Doloboff [and others].</subfield>
+	</datafield>
+	<datafield tag="260" ind1=" " ind2=" ">
+		<subfield code="a">Arlington, VA :</subfield>
+		<subfield code="b">Tax Management,</subfield>
+		<subfield code="c">[©2002]-</subfield>
+	</datafield>
+	<datafield tag="310" ind1=" " ind2=" ">
+		<subfield code="a">Updated irregularly</subfield>
+	</datafield>
+	<datafield tag="336" ind1=" " ind2=" ">
+		<subfield code="a">text</subfield>
+		<subfield code="b">txt</subfield>
+		<subfield code="2">rdacontent</subfield>
+	</datafield>
+	<datafield tag="337" ind1=" " ind2=" ">
+		<subfield code="a">computer</subfield>
+		<subfield code="b">c</subfield>
+		<subfield code="2">rdamedia</subfield>
+	</datafield>
+	<datafield tag="338" ind1=" " ind2=" ">
+		<subfield code="a">online resource</subfield>
+		<subfield code="b">cr</subfield>
+		<subfield code="2">rdacarrier</subfield>
+	</datafield>
+	<datafield tag="490" ind1="1" ind2=" ">
+		<subfield code="a">U.S. income portfolios ;</subfield>
+		<subfield code="v">767-3rd</subfield>
+	</datafield>
+	<datafield tag="538" ind1=" " ind2=" ">
+		<subfield code="a">Mode of access: World Wide Web.</subfield>
+	</datafield>
+	<datafield tag="500" ind1=" " ind2=" ">
+		<subfield code="a">Published: Washington, D.C., 2002-2007.</subfield>
+	</datafield>
+	<datafield tag="520" ind1=" " ind2=" ">
+		<subfield code="a">" ... discusses the tax effects of a stock redemption both to the redeeming corporation and the redeemed shareholder and analyzes the categories of [section] 302. In addition to discussing the applicable rules and tax consequences, this Portfolio emphasizes practical problems and planning techniques."</subfield>
+	</datafield>
+	<datafield tag="505" ind1="0" ind2=" ">
+		<subfield code="a">Detailed analysis. Introduction -- History -- Definition of a redemption -- Tax consequences of a redemption -- Section 302(b)(3) -- complete termination of shareholder's interest -- Section 302(b)(2) -- substantially disproportionate redemptions -- Section 302(b)(1) -- not essentially equivalent to a dividend -- Partial liquidation: [Section] 302(b)(4) and [Section] 302(e) -- Constructive stock ownership: [Section] 318 -- Bootstrap acquisitions and related topics -- Other special issues -- Working papers.</subfield>
+	</datafield>
+	<datafield tag="504" ind1=" " ind2=" ">
+		<subfield code="a">Includes bibliographical references.</subfield>
+	</datafield>
+	<datafield tag="500" ind1=" " ind2=" ">
+		<subfield code="a">Title from title screen (viewed Nov. 11, 2012).</subfield>
+	</datafield>
+	<datafield tag="650" ind1=" " ind2="0">
+		<subfield code="a">Stocks</subfield>
+		<subfield code="x">Taxation</subfield>
+		<subfield code="z">United States.</subfield>
+	</datafield>
+	<datafield tag="700" ind1="1" ind2=" ">
+		<subfield code="a">Koutouras, George C.</subfield>
+	</datafield>
+	<datafield tag="700" ind1="1" ind2=" ">
+		<subfield code="a">Ling, Bill.</subfield>
+	</datafield>
+	<datafield tag="710" ind1="2" ind2=" ">
+		<subfield code="a">Tax Management Inc.</subfield>
+	</datafield>
+	<datafield tag="776" ind1="0" ind2="8">
+		<subfield code="i">Print version:</subfield>
+		<subfield code="a">Doloboff, Joseph M., 1959-</subfield>
+		<subfield code="t">Redemptions.</subfield>
+		<subfield code="d">Arlington, Va. : Tax Management Inc., ©2012-</subfield>
+		<subfield code="z">9781558719705</subfield>
+		<subfield code="w">(OCoLC)815972987</subfield>
+	</datafield>
+	<datafield tag="830" ind1=" " ind2="0">
+	<subfield code="a">Tax management portfolios ;</subfield>
+	<subfield code="v">767-3rd.</subfield>
+	</datafield>
+	<datafield tag="856" ind1="4" ind2="0">
+	<subfield code="u">https://www.bloomberglaw.com/product/tax/citation/tm%20767</subfield>
+	</datafield>
+	<datafield tag="994" ind1=" " ind2=" ">
+	<subfield code="a">C0</subfield>
+	<subfield code="b">BNA</subfield>
+	</datafield>
+	<datafield tag="596" ind1=" " ind2=" ">
+	<subfield code="a">3</subfield>
+	</datafield>
+	<datafield tag="999" ind1=" " ind2=" ">
+		<subfield code="a">XX(1000000.1)</subfield>
+		<subfield code="w">BNA</subfield>
+		<subfield code="c">1</subfield>
+		<subfield code="i">1000000-1001</subfield>
+		<subfield code="l">BNA</subfield>
+		<subfield code="m">LAW</subfield>
+		<subfield code="r">Y</subfield>
+		<subfield code="s">Y</subfield>
+		<subfield code="t">BNA</subfield>
+		<subfield code="u">9/10/2010</subfield>
+		<subfield code="x">BNA</subfield>
+	</datafield>
+</record>
+</collection>

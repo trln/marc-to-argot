@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+<leader>04179cam a2200685 a 4500</leader>
+<controlfield tag="001">u1000258</controlfield>
+<controlfield tag="003">SIRSI</controlfield>
+<controlfield tag="005">20100914161220.0</controlfield>
+<controlfield tag="008">100416s2010    enk      b    001 0 eng d</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+<subfield code="a">  2010217932</subfield>
+</datafield>
+<datafield tag="015" ind1=" " ind2=" ">
+<subfield code="a">GBB061556</subfield>
+<subfield code="2">bnb</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">9780521762762</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">0521762766</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(OCoLC)351331783</subfield>
+<subfield code="z">(OCoLC)496546294</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">BTCTA</subfield>
+<subfield code="c">BTCTA</subfield>
+<subfield code="d">DLC</subfield>
+<subfield code="d">YDXCP</subfield>
+<subfield code="d">BWK</subfield>
+<subfield code="d">SUC</subfield>
+<subfield code="d">NLGGC</subfield>
+<subfield code="d">RCJ</subfield>
+<subfield code="d">BWX</subfield>
+<subfield code="d">AGL</subfield>
+<subfield code="d">UKM</subfield>
+<subfield code="d">CDX</subfield>
+<subfield code="d">GEBAY</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+<subfield code="a">lccopycat</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+<subfield code="a">K3240</subfield>
+<subfield code="b">.H8482 2010</subfield>
+</datafield>
+<datafield tag="070" ind1="0" ind2=" ">
+<subfield code="a">K3240</subfield>
+<subfield code="b">.H8482 2010</subfield>
+</datafield>
+<datafield tag="082" ind1=" " ind2=" ">
+<subfield code="a">320.5</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+<subfield code="a">86.81</subfield>
+<subfield code="2">bcl</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a">Human rights and climate change /</subfield>
+<subfield code="c">edited by Stephen Humphreys ; with a foreword by Mary Robinson.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+<subfield code="a">Cambridge ;</subfield>
+<subfield code="a">New York :</subfield>
+<subfield code="b">Cambridge University Press,</subfield>
+<subfield code="c">c2010.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">xx, 348 p. ;</subfield>
+<subfield code="c">24 cm.</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+<subfield code="a">Includes bibliographical references and index.</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2="0">
+<subfield code="g">Introduction:</subfield>
+<subfield code="t">Human rights and climate change /</subfield>
+<subfield code="r">Stephen Humphreys --</subfield>
+<subfield code="t">Competing claims : human rights and climate harms /</subfield>
+<subfield code="r">Stephen Humphreys --</subfield>
+<subfield code="t">Climate change, human rights and moral thresholds /</subfield>
+<subfield code="r">Simon Caney --</subfield>
+<subfield code="t">Equitable utilization of the atmosphere : a rights-based approach to climate change? /</subfield>
+<subfield code="r">Dinah Shelton --</subfield>
+<subfield code="t">Climate change, human rights and corporate accountability /</subfield>
+<subfield code="r">Peter Newell --</subfield>
+<subfield code="t">Rethinking human rights : the impact of climate change on the dominant discourse /</subfield>
+<subfield code="r">Sam Adelman --</subfield>
+<subfield code="t">The Kyoto Protocol and vulnerability : human rights and equity dimensions /</subfield>
+<subfield code="r">Philippe Cullet --</subfield>
+<subfield code="t">Forests, climate change and human rights : managing risks and trade-offs /</subfield>
+<subfield code="r">Frances Seymour --</subfield>
+<subfield code="t">Climate change and the right to the highest attainable standard of health /</subfield>
+<subfield code="r">Paul Hunt and Rajat Khosla --</subfield>
+<subfield code="t">Human rights and vulnerability to climate change /</subfield>
+<subfield code="r">Jon Barnett --</subfield>
+<subfield code="t">Climate change, evolution of disasters and inequality /</subfield>
+<subfield code="r">John C. Mutter and Kye Mesa Barnard --</subfield>
+<subfield code="t">Conceiving justice : articulating common causes in distinct regimes /</subfield>
+<subfield code="r">Stephen Humphreys.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Human rights.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Climatic changes</subfield>
+<subfield code="x">Law and legislation.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Global warming</subfield>
+<subfield code="x">Law and legislation.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Climatic changes</subfield>
+<subfield code="x">Political aspects</subfield>
+<subfield code="z">Developing countries.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+<subfield code="a">Humphreys, Stephen.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+<subfield code="3">Table of contents only</subfield>
+<subfield code="u">http://www.loc.gov/catdir/enhancements/fy1009/2010217932-t.html</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+<subfield code="3">Publisher description</subfield>
+<subfield code="u">http://www.loc.gov/catdir/enhancements/fy1009/2010217932-d.html</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+<subfield code="3">Contributor biographical information</subfield>
+<subfield code="u">http://www.loc.gov/catdir/enhancements/fy1009/2010217932-b.html</subfield>
+</datafield>
+<datafield tag="948" ind1=" " ind2=" ">
+<subfield code="h">HELD BY NC# - 199 OTHER HOLDINGS</subfield>
+</datafield>
+<datafield tag="994" ind1=" " ind2=" ">
+<subfield code="a">Z0</subfield>
+<subfield code="b">NC#</subfield>
+</datafield>
+<datafield tag="909" ind1=" " ind2=" ">
+<subfield code="a">20100914</subfield>
+</datafield>
+<datafield tag="918" ind1=" " ind2=" ">
+<subfield code="a">1000258</subfield>
+</datafield>
+<datafield tag="016" ind1="7" ind2=" ">
+<subfield code="a">015509425</subfield>
+<subfield code="2">Uk</subfield>
+</datafield>
+<datafield tag="019" ind1=" " ind2=" ">
+<subfield code="a">496546294</subfield>
+</datafield>
+<datafield tag="938" ind1=" " ind2=" ">
+<subfield code="a">Baker and Taylor</subfield>
+<subfield code="b">BTCP</subfield>
+<subfield code="n">BK0008390343</subfield>
+</datafield>
+<datafield tag="938" ind1=" " ind2=" ">
+<subfield code="a">YBP Library Services</subfield>
+<subfield code="b">YANK</subfield>
+<subfield code="n">3056006</subfield>
+</datafield>
+<datafield tag="938" ind1=" " ind2=" ">
+<subfield code="a">Blackwell Book Service</subfield>
+<subfield code="b">BBUS</subfield>
+<subfield code="n">R4829114</subfield>
+<subfield code="c">$95.00</subfield>
+</datafield>
+<datafield tag="938" ind1=" " ind2=" ">
+<subfield code="a">Coutts Information Services</subfield>
+<subfield code="b">COUT</subfield>
+<subfield code="n">9737812</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">351331783</subfield>
+<subfield code="z">BTCTA</subfield>
+<subfield code="b">BAKER &amp; TAYLOR INC TECH SERV &amp; PROD DEV</subfield>
+<subfield code="d">URI</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="k">DDC</subfield>
+<subfield code="p">lccopycat</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100626</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">500837002</subfield>
+<subfield code="z">CUD</subfield>
+<subfield code="b">CAMBRIDGE UNIV</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="k">DDC</subfield>
+<subfield code="u">20100720</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">519497473</subfield>
+<subfield code="z">RCJ</subfield>
+<subfield code="b">STANFORD UNIV, ROBERT CROWN LAW LIBR</subfield>
+<subfield code="h">Full OCLC member</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="k">DDC</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100711</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">548731516</subfield>
+<subfield code="z">PUL</subfield>
+<subfield code="b">PRINCETON UNIV</subfield>
+<subfield code="h">Full OCLC member</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100701</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">561539711</subfield>
+<subfield code="z">GXR</subfield>
+<subfield code="b">YALE UNIV, LAW SCH LIBR</subfield>
+<subfield code="h">Full OCLC member</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100720</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">607459822</subfield>
+<subfield code="z">N15</subfield>
+<subfield code="b">NEW YORK UNIV, GROUP BATCHLOAD</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="k">DDC</subfield>
+<subfield code="u">20100720</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">617356136</subfield>
+<subfield code="z">BOL</subfield>
+<subfield code="b">UNIV OF CALIFORNIA BERKELEY LAW LIBR</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100709</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">618512563</subfield>
+<subfield code="z">CSFLA</subfield>
+<subfield code="b">UNIV OF SAN FRANCISCO, LAW SCH</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="k">DDC</subfield>
+<subfield code="p">lccopycat</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100728</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">635860631</subfield>
+<subfield code="z">BOL</subfield>
+<subfield code="b">UNIV OF CALIFORNIA BERKELEY LAW LIBR</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100702</subfield>
+</datafield>
+<datafield tag="952" ind1=" " ind2=" ">
+<subfield code="a">652412004</subfield>
+<subfield code="z">STF</subfield>
+<subfield code="b">STANFORD UNIV LIBR</subfield>
+<subfield code="h">Full</subfield>
+<subfield code="i">LCC</subfield>
+<subfield code="t">Contents</subfield>
+<subfield code="u">20100810</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+<subfield code="a">AU@</subfield>
+<subfield code="b">000045002332</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+<subfield code="a">NLGGC</subfield>
+<subfield code="b">321071875</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+<subfield code="a">GBVCP</subfield>
+<subfield code="b">614990262</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+<subfield code="a">CDX</subfield>
+<subfield code="b">9737812</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+<subfield code="a">GEBAY</subfield>
+<subfield code="b">11634076</subfield>
+</datafield>
+<datafield tag="596" ind1=" " ind2=" ">
+<subfield code="a">3</subfield>
+</datafield>
+<datafield tag="999" ind1=" " ind2=" ">
+<subfield code="a">K3240 .H8482 2010</subfield>
+<subfield code="w">LC</subfield>
+<subfield code="c">1</subfield>
+<subfield code="i">3213060120835</subfield>
+<subfield code="d">11/11/2010</subfield>
+<subfield code="e">10/20/2010</subfield>
+<subfield code="l">STACKS</subfield>
+<subfield code="m">LAW</subfield>
+<subfield code="n">2</subfield>
+<subfield code="r">Y</subfield>
+<subfield code="s">Y</subfield>
+<subfield code="t">BOOK</subfield>
+<subfield code="u">9/14/2010</subfield>
+</datafield>
+</record>
+</collection>

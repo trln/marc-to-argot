@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+<leader>01014cam a22003131  4500</leader>
+<controlfield tag="001">u100221</controlfield>
+<controlfield tag="001">ocm00302717</controlfield>
+<controlfield tag="003">SIRSI</controlfield>
+<controlfield tag="005">19850911192534.0</controlfield>
+<controlfield tag="008">850725s1968    nyu    j      00001 engm </controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+<subfield code="a">   68028750 /AC/r85</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(Sirsi) AAK-6988</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">DLC</subfield>
+<subfield code="c">DLC</subfield>
+<subfield code="d">m.c.</subfield>
+<subfield code="d">NLS</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+<subfield code="a">NLSC</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2=" ">
+<subfield code="a">PZ7.W473</subfield>
+<subfield code="b">Dr</subfield>
+</datafield>
+<datafield tag="082" ind1=" " ind2=" ">
+<subfield code="a">[Fic]</subfield>
+</datafield>
+<datafield tag="099" ind1=" " ind2=" ">
+<subfield code="a">W498dr</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+<subfield code="a">Wersba, Barbara.</subfield>
+<subfield code="w">cn.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="4">
+<subfield code="a">The dream watcher.</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+<subfield code="a">[1st ed.]</subfield>
+</datafield>
+<datafield tag="260" ind1="0" ind2=" ">
+<subfield code="a">New York,</subfield>
+<subfield code="b">Atheneum,</subfield>
+<subfield code="c">1968.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">171 p.</subfield>
+<subfield code="c">22 cm.</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+<subfield code="a">A teenager considers himself the "All-American" failure until he meets an eccentric old lady who helps him to see the true value of being an individual.</subfield>
+</datafield>
+<datafield tag="596" ind1=" " ind2=" ">
+<subfield code="a">2</subfield>
+</datafield>
+<datafield tag="948" ind1=" " ind2=" ">
+<subfield code="a">01/27/1995</subfield>
+<subfield code="b">09/26/1995</subfield>
+</datafield>
+<datafield tag="918" ind1=" " ind2=" ">
+<subfield code="a">100221</subfield>
+</datafield>
+<datafield tag="019" ind1=" " ind2=" ">
+<subfield code="a">472264</subfield>
+<subfield code="a">9658725</subfield>
+</datafield>
+<datafield tag="059" ind1=" " ind2=" ">
+<subfield code="l">LIB SCI/FIC</subfield>
+<subfield code="t">BOOK</subfield>
+<subfield code="k">REGULAR</subfield>
+<subfield code="i">3213000148110</subfield>
+<subfield code="n">DD</subfield>
+<subfield code="p">FIC.</subfield>
+<subfield code="a">W498r</subfield>
+<subfield code="m">1</subfield>
+</datafield>
+<datafield tag="999" ind1=" " ind2=" ">
+<subfield code="a">FIC W498r</subfield>
+<subfield code="w">DEWEY</subfield>
+<subfield code="c">1</subfield>
+<subfield code="i">3213000148110</subfield>
+<subfield code="d">11/6/1995</subfield>
+<subfield code="l">FICTION</subfield>
+<subfield code="m">SLIS</subfield>
+<subfield code="n">1</subfield>
+<subfield code="r">Y</subfield>
+<subfield code="s">Y</subfield>
+<subfield code="t">BOOK</subfield>
+<subfield code="u">2/3/1995</subfield>
+<subfield code="x">FICTION</subfield>
+</datafield>
+</record>
+<record>
+<leader>02980cgm a2200517Ia 4500</leader>
+<controlfield tag="001">u1002220</controlfield>
+<controlfield tag="003">SIRSI</controlfield>
+<controlfield tag="005">20101205154228.0</controlfield>
+<controlfield tag="007">vd cgaizu</controlfield>
+<controlfield tag="008">080213s2007    nju057 g          vleng d</controlfield>
+<datafield tag="028" ind1="4" ind2="2">
+<subfield code="a">38972</subfield>
+<subfield code="b">Films for the Humanities &amp; Sciences</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(OCoLC)192008088</subfield>
+<subfield code="z">(OCoLC)239499863</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">MNW</subfield>
+<subfield code="c">MNW</subfield>
+<subfield code="d">MNW</subfield>
+<subfield code="d">ELW</subfield>
+<subfield code="d">SINLB</subfield>
+<subfield code="d">REDDC</subfield>
+<subfield code="d">DT5</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+<subfield code="a">n-us---</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+<subfield code="a">[DVD]NCXX</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+<subfield code="a">362.50973</subfield>
+<subfield code="2">22</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+<subfield code="a">Mohan, T. N.</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="4">
+<subfield code="a">The 51st state</subfield>
+<subfield code="h">[videorecording]  /</subfield>
+<subfield code="c">Lathika International Film &amp; Entertainment, Samford Media Group, Howard College of Arts and Sciences, School of Business, Samford University, Bolero Films, Maverick Films present a Media Show production ; screenplay, T.N. Mohan, Julia Sartorio ; produced by Julia Sartorio, Betina Goldman, T.N. Mohan, Cristina Brandner Garcia ; directed by T.N. Mohan.</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2=" ">
+<subfield code="a">Fifty-first state</subfield>
+</datafield>
+<datafield tag="246" ind1="1" ind2=" ">
+<subfield code="i">Title on videodisc label and container:</subfield>
+<subfield code="a">51st state :</subfield>
+<subfield code="b">America's working poor.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+<subfield code="a">Princeton, NJ :</subfield>
+<subfield code="b">Films for the Humanities &amp; Sciences,</subfield>
+<subfield code="c">2007.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">1 videodisc (57 min.) :</subfield>
+<subfield code="b">sd., col. ;</subfield>
+<subfield code="c">4 3/4 in.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+<subfield code="a">Part of the two part series Poverty in America.</subfield>
+</datafield>
+<datafield tag="506" ind1=" " ind2=" ">
+<subfield code="a">Available to LSC students, faculty, and staff.</subfield>
+</datafield>
+<datafield tag="508" ind1=" " ind2=" ">
+<subfield code="a">Director, T.N. Mohan ; screenplay, T.N. Mohan, Julia Sartorio ; producers, Julia Sartorio, Betina Goldman, T.N. Mohan, Cristina Brandner Garcia.</subfield>
+</datafield>
+<datafield tag="511" ind1="0" ind2=" ">
+<subfield code="a">Narrated by Michael Harris.</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+<subfield code="a">"While poverty has traditionally been a problem only for the unemployed, a new demographic of Americans has emerged--the working poor. This program explores the disturbing realities that many people in low-wage jobs face every day--such as having to decide whether to pay the rent, buy groceries, or see a doctor. Viewers will learn how standards of living are often measured, how suburban areas have fostered a particular type of economic hardship, and how welfare-to-work programs have, at times, led to more resistant poverty. The film also draws connections between America's immigration challenges and the swelling numbers of working poor."--Container notes.</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+<subfield code="a">DVD.</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+<subfield code="a">Closed-captioned.</subfield>
+</datafield>
+<datafield tag="590" ind1=" " ind2=" ">
+<subfield code="a">439129 (V)</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Poor</subfield>
+<subfield code="z">United States.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Films for the hearing impaired.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+<subfield code="a">Sartorio, Julia.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+<subfield code="a">Goldman, Betina.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+<subfield code="a">Garcia, Cristina Brandner.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+<subfield code="a">Lathika International Film &amp; Entertainment.</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+<subfield code="a">Films for the Humanities &amp; Sciences (Firm)</subfield>
+</datafield>
+<datafield tag="740" ind1="0" ind2="2">
+<subfield code="a">Welcome to Poverty U.S.A.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+<subfield code="u">https://login.libdb.lsc.edu/login?url=http://www.fmgondemand.com/play/RNQBDD</subfield>
+<subfield code="z">Connect to Digital Video.</subfield>
+</datafield>
+<datafield tag="948" ind1=" " ind2=" ">
+<subfield code="h">HELD BY NCX - 72 OTHER HOLDINGS</subfield>
+</datafield>
+<datafield tag="994" ind1=" " ind2=" ">
+<subfield code="a">Z0</subfield>
+<subfield code="b">NCX</subfield>
+</datafield>
+<datafield tag="909" ind1=" " ind2=" ">
+<subfield code="a">20101205</subfield>
+</datafield>
+<datafield tag="918" ind1=" " ind2=" ">
+<subfield code="a">1002220</subfield>
+</datafield>
+<datafield tag="019" ind1=" " ind2=" ">
+<subfield code="a">239499863</subfield>
+</datafield>
+<datafield tag="596" ind1=" " ind2=" ">
+<subfield code="a">1</subfield>
+</datafield>
+<datafield tag="999" ind1=" " ind2=" ">
+<subfield code="a">DVD 1703</subfield>
+<subfield code="w">LC</subfield>
+<subfield code="c">1</subfield>
+<subfield code="i">3213008884666</subfield>
+<subfield code="d">10/19/2015</subfield>
+<subfield code="e">4/1/2012</subfield>
+<subfield code="f">4/18/2019</subfield>
+<subfield code="g">5</subfield>
+<subfield code="l">SHEPARDAV</subfield>
+<subfield code="m">SHEPARD</subfield>
+<subfield code="n">7</subfield>
+<subfield code="r">Y</subfield>
+<subfield code="s">Y</subfield>
+<subfield code="t">DVD</subfield>
+<subfield code="u">12/5/2010</subfield>
+</datafield>
+</record>
+<record>
+<leader>03199cgm a2200757Ka 4500</leader>
+</collection>

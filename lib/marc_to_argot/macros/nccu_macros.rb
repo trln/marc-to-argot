@@ -28,7 +28,7 @@ module MarcToArgot
             url[:type] = url_type_value(field)
             url[:text] = url_text(field) unless url_text(field).empty?
             url[:note] = url_note(field) unless url_note(field).empty?
-            url[:restricted] = 'false' unless url_restricted?(url[:href], url[:type])
+            url[:restricted] = url_restricted?(url[:href], url[:type])
 
             acc << url.to_json if !acc.include?(url.to_json)
 
@@ -37,8 +37,7 @@ module MarcToArgot
       end
 
       def url_restricted?(href, type)
-        return false if href.match(/(\.edu)|(\.gov)/) && type == 'fulltext'
-        true
+        return false unless href.match(/(\.edu)|(\.gov)|(bloomberglaw)/) != nil && type == 'fulltext'
       end
 
       def rollup_id

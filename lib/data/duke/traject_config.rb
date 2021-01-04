@@ -1,13 +1,4 @@
 ################################################
-# Add shared record info to clipboard
-# if applicable
-######
-
-each_record do |rec, cxt|
-  set_shared_record_set_code(rec, cxt)
-end
-
-################################################
 # Primary ID
 ######
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
@@ -132,6 +123,5 @@ each_record do |rec, ctx|
   add_donor_to_indexed_note_local(ctx)
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
-  add_shared_record_data(ctx)
   Logging.mdc.clear
 end

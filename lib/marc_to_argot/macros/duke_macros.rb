@@ -5,7 +5,6 @@ module MarcToArgot
       require 'marc_to_argot/macros/duke/items'
       require 'marc_to_argot/macros/duke/physical_media'
       require 'marc_to_argot/macros/duke/resource_type'
-      require 'marc_to_argot/macros/duke/shared_records'
       require 'marc_to_argot/macros/duke/urls'
 
       # Include this first. Then load Duke Macros.
@@ -14,7 +13,6 @@ module MarcToArgot
       include MarcToArgot::Macros::Duke::Items
       include MarcToArgot::Macros::Duke::PhysicalMedia
       include MarcToArgot::Macros::Duke::ResourceType
-      include MarcToArgot::Macros::Duke::SharedRecords
       include MarcToArgot::Macros::Duke::Urls
 
       # Sets the list of MARC org codes that are local.

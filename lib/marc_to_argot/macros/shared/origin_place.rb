@@ -78,8 +78,8 @@ module MarcToArgot
         def map_country_code_in_008_17(rec)
           return unless rec.tags.include?('008')
           rec.fields('008').map do |field|
-            code = rec.fields('008').first.value.byteslice(17).scrub(' ')
-            value = countries_marc["xx#{code}"]
+            code = rec.fields('008').first.value.byteslice(17)
+            value = countries_marc["xx#{code.scrub(' ')}"] if code
             { 'value' => value  } unless value.nil? || value.empty?
           end
         end

@@ -92,6 +92,8 @@ module MarcToArgot
         #  - usable date as integer; or
         #  - nil
         def get_date(string, ff_date_type, min, max, type, range_tolerance)
+          return unless string
+
           the_date = string.strip
 
           # Extract 3-4 character strings beginning with digits and, sometimes, ending with -

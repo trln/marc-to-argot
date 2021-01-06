@@ -7,7 +7,6 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:open_access) { run_traject_json('duke', 'open_access', 'xml') }
   let(:dc_urls) { run_traject_json('duke', 'dc_urls', 'xml') }
   let(:open_access_exception) { run_traject_json('duke', 'open_access_exception', 'xml') }
-  let(:oupe_shared) { run_traject_json('duke', 'oupe', 'xml') }
   let(:link_in_subfield_a) { run_traject_json('duke', 'link_in_subfield_a', 'xml') }
 
   context 'Duke' do
@@ -32,12 +31,6 @@ describe MarcToArgot::Macros::Duke::Urls do
     it 'does not add a proxy prefix to open access exception matches' do
       expect(JSON.parse(open_access_exception['url'][0])['href']).to(
         eq('https://ropercenter.cornell.edu')
-      )
-    end
-
-    it 'sets the template URL in place of the proxy for shared records' do
-      expect(JSON.parse(oupe_shared['url'][0])['href']).to(
-        eq('{+proxyPrefix}http://dx.doi.org/10.5743/cairo/9789774161032.001.0001')
       )
     end
 

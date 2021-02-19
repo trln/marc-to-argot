@@ -285,4 +285,9 @@ describe MarcToArgot::Macros::Shared::Names do
       }
     )
   end
+
+  it '(MTA) sets entity_ids output hash when name authority IDs are present' do
+      result = name_auth_ids
+      expect(result).to include('entity_id')
+  end
 end

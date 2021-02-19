@@ -123,5 +123,6 @@ each_record do |rec, ctx|
   add_donor_to_indexed_note_local(ctx)
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
+  set_entity_ids!(ctx)
   Logging.mdc.clear
 end

@@ -31,6 +31,8 @@ each_record do |rec, ctx|
     end
   end
 
+  set_entity_ids!(ctx)
+
   remove_print_from_archival_material(ctx)
 
   Logging.mdc.clear

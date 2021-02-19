@@ -48,6 +48,6 @@ end
 
 
 each_record do |rec, ctx|
-  
+  set_entity_ids!(ctx)
   Logging.mdc.clear
 end

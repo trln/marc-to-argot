@@ -89,6 +89,8 @@ each_record do |rec, ctx|
     end
   end
 
+  set_entity_ids!(ctx)
+
   remove_print_from_archival_material(ctx)
 
   set_sersol_rollup_id(ctx)

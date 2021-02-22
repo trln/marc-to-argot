@@ -58,7 +58,7 @@ module MarcToArgot
               end
             end
           end
-        end   
+        end
       end
 
       def fetch_oclc_numbers(field)
@@ -74,6 +74,18 @@ module MarcToArgot
           donor = ctx.output_hash['donor'].map { |d| { 'indexed_value' => d } }
           local_notes = ctx.output_hash.fetch('note_local', [])
           ctx.output_hash['note_local'] = local_notes.concat(donor)
+        end
+      end
+
+      def add_holdings_note_to_indexed_note_local(rec, ctx)
+        holdings_notes = []
+        Traject::MarcExtractor.cached("852z").each_matching_line(rec) do |field, spec, extractor|
+          notes = extractor.collect_subfields(field, spec)
+          notes.each { |note| holdings_notes << { 'indexed_value' => note } if note }
+        end
+        if holdings_notes.any?
+          local_notes = ctx.output_hash.fetch('note_local', [])
+          ctx.output_hash['note_local'] = local_notes.concat(holdings_notes)
         end
       end
 

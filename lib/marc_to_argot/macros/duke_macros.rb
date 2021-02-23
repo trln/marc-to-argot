@@ -48,7 +48,7 @@ module MarcToArgot
         end
       end
 
-      def primary_oclc    
+      def primary_oclc
         lambda do |rec, acc|
           if field_035q = Traject::MarcExtractor.cached("035q")
             if field_035q && !field_035q.extract(rec).include?('exclude')

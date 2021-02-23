@@ -59,7 +59,7 @@ module MarcToArgot
 
           def classifier(pattern)
             char_pattern_match_count = value.scan(pattern).length
-            return true if char_pattern_match_count > 0 && field.tag == '880'
+            return true if char_pattern_match_count > 0 && field.respond_to?(:tag) && field.tag == '880'
             return true if (char_pattern_match_count.to_f / value.length) > 0.1
           end
 

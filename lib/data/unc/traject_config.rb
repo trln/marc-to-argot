@@ -132,6 +132,8 @@ each_record do |rec, cxt|
     cxt.output_hash['record_data_source'] = ['MARC', 'NCDHC']
   end
 
+  set_entity_ids!(cxt)
+
   remove_print_from_archival_material(cxt)
 
   Logging.mdc.clear

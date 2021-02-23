@@ -7,7 +7,7 @@ module MarcToArgot
         ######
 
         def names
-          lambda do |rec, acc|
+          lambda do |rec, acc, ctx|
             Traject::MarcExtractor.cached('100:110:111:700:710:711:720')
                                   .each_matching_line(rec) do |field, spec, extractor|
 
@@ -15,7 +15,6 @@ module MarcToArgot
               next unless subfield_5_absent_or_present_with_local_code?(field)
               Logging.mdc['field'] = field.tag
               names = assemble_names_hash(field)
-
               acc << names unless names.empty?
               acc.uniq!
               Logging.mdc.delete('field')
@@ -29,6 +28,7 @@ module MarcToArgot
           name['name'] = names_name(field)
           name['rel'] = names_rel(field)
           name['type'] = names_type(field, name['rel'])
+          name['id'] = names_id(field)
 
           lang = Vernacular::ScriptClassifier.new(field, name['name']).classify
           name['lang'] = lang unless lang.nil? || lang.empty?
@@ -50,6 +50,13 @@ module MarcToArgot
           end
 
           name.gsub(/(?<!\s[A-Z])[\.,]\s?$/, '').strip
+        end
+
+        def names_id(field)
+          case field_tag_or_880_linkage_tag(field)
+          when '100', '700'
+            collect_subfield_values_by_code(field, '0').first
+          end
         end
 
         def names_rel(field)
@@ -140,6 +147,14 @@ module MarcToArgot
             !(%w[t k] & field.subfields.map(&:code)).any?
           else
             true
+          end
+        end
+
+        def set_entity_ids!(ctx)
+          names = ctx.output_hash.fetch('names', [])
+          unless names.empty?
+            all_name_ids = names.collect {|n| n['id'] }.compact.uniq.map{ |x| x.sub(/.*\/([a-z0-9]+)$/, 'lcnaf:\1') }
+            ctx.output_hash['entity_id'] = all_name_ids if all_name_ids
           end
         end
       end

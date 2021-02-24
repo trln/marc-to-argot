@@ -98,6 +98,15 @@ describe MarcToArgot::Macros::Duke do
     expect(result['donor']).to eq(['Gift of L.A.G.'])
   end
 
+  it 'adds public holdings notes to an indexed-only local note' do
+    result = run_traject_json('duke', 'holdings_note', 'xml')
+    expect(result['note_local']).to eq(
+      [{ 'indexed_value' => 'A holdings note' },
+       { 'indexed_value' => 'Another holdings note' },
+       { 'indexed_value' => 'A third holdings note' }]
+    )
+  end
+
   it 'removes Print from Archival records' do
     result = run_traject_json('duke', 'archival_print', 'xml')
     expect(result['physical_media']).to be_nil

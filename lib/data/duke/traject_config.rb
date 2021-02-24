@@ -121,6 +121,7 @@ each_record do |rec, ctx|
   index_bib_id(ctx)
   remove_print_from_archival_material(ctx)
   add_donor_to_indexed_note_local(ctx)
+  add_holdings_note_to_indexed_note_local(rec, ctx)
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
   set_entity_ids!(ctx)

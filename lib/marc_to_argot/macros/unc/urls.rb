@@ -38,16 +38,33 @@ module MarcToArgot
         def is_restricted?(href)
           url = href.downcase
           return true if is_proxied?(url)
-          return true if url.match(/unc\.kanopystreaming\.com/) ||
-                         url.match(/unc\.kanopy\.com/)
-          return true if url.match(/vb3lk7eb4t\.search\.serialssolutions\.com/)
-          return true if url.match(/incommon:unc\.edu/)
-          return false
+          return true if unproxied_restricted.select { |e| url.include?(e) }.any?
+          false
+        end
+
+        # Domains or substrings for URLs that are not proxied but are
+        # nevertheless restricted to UNC affiliates (usually through Shib/SSO
+        # or login by an individual or Law school username/password)
+        def unproxied_restricted
+          %w[incommon:unc.edu
+             ebookcentral.proquest.com
+             overdrive.com
+             swankmp.net
+             unc.kanopy.com
+             unc.kanopystreaming.com
+             vb3lk7eb4t.search.serialssolutions.com
+             bloomberglaw.com
+             cali.org
+             heinonline.org
+             lexis.com
+             thomsonreuters.com
+             westlaw.com]
         end
 
         def is_proxied?(url)
-          return true if url.start_with?('http://libproxy.lib.unc.edu/login?url=')
-          return false
+          return true if url =~ %r{^http://[^/]*libproxy.lib.unc.edu}
+          return true if url.start_with?('http://lawlibproxy2.unc.edu')
+          false
         end
 
         def template_proxy(url)

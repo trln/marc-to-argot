@@ -88,7 +88,21 @@ describe MarcToArgot::Macros::UNC::Urls do
         expect(v).to eq(true)
       end
     end
-    context 'URL does not begin with http://libproxy.lib.unc.edu/login?url=' do
+    context 'URL uses alternate libproxy URL construction' do
+      it '(UNC) returns true' do
+        url = 'http://www-example-com.libproxy.lib.unc.edu/blahblah'
+        v = is_proxied?(url)
+        expect(v).to eq(true)
+      end
+    end
+    context 'URL uses Law Library proxy' do
+      it '(UNC) returns true' do
+        url = 'http://lawlibproxy2.unc.edu:2048/login?url=https://blahblah'
+        v = is_proxied?(url)
+        expect(v).to eq(true)
+      end
+    end
+    context 'URL does not use a UNC proxy' do
       it '(UNC) returns nil value' do
         url = 'https://blahblah'
         v = is_proxied?(url)
@@ -110,31 +124,18 @@ describe MarcToArgot::Macros::UNC::Urls do
         expect(v).to eq(true)
       end
     end
-    context 'when a Kanopy URL', :aggregate_failures do
+    context 'when URL includes an unproxied, restricted URL', :aggregate_failures do
       it '(UNC) returns true' do
-        url = 'http://unc.kanopystreaming.com/blahblah'
-        v = is_restricted?(url)
-        expect(v).to eq(true)
-
-        https = 'https://unc.kanopy.com/blahblah'
-        expect(is_restricted?(https)).to be true
+        urls = %w[
+          https://catalog.hathitrust.org/Record/001665338?signon=swle:urn:mace:incommon:unc.edu
+          http://unc.kanopystreaming.com/blahblah
+          https://unc.kanopy.com/blahblah
+          http://vb3lk7eb4t.search.serialssolutions.com/blahblah
+        ]
+        urls.each { |url| expect(is_restricted?(url)).to be true }
       end
     end
-    context 'when a Serials Solutions URL' do
-      it '(UNC) returns true' do
-        url = 'http://vb3lk7eb4t.search.serialssolutions.com/blahblah'
-        v = is_restricted?(url)
-        expect(v).to eq(true)
-      end
-    end
-    context 'when URL uses UNC Incommon entityID' do
-      it '(UNC) returns true' do
-        url = 'https://catalog.hathitrust.org/Record/001665338?signon=swle:urn:mace:incommon:unc.edu'
-        v = is_restricted?(url)
-        expect(v).to eq(true)
-      end
-    end
-    context 'when URL does NOT begin with restricted URL string' do
+    context 'when URL does NOT contain a restricted URL' do
       it '(UNC) returns nil value' do
         url = 'https://purl.fdlp.gov/GPO/gpo92270'
         v = is_restricted?(url)

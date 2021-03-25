@@ -60,7 +60,8 @@ end
 
 unless settings["override"].include?("isbn")
   to_field "isbn" do |rec, acc|
-    Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
+    Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false)
+                          .each_matching_line(rec) do |field, spec, extractor|
       str = extractor.collect_subfields(field, spec).first
       isbn = {}
       if str
@@ -81,15 +82,24 @@ end
 
 unless settings["override"].include?("primary_isbn")
   to_field "primary_isbn" do |rec, acc|
-    Traject::MarcExtractor.cached(settings["specs"][:primary_isbn], :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
-      str = extractor.collect_subfields(field, spec).first
-      if str
-        explode = str.split
-        if(StdNum::ISBN.checkdigit(explode[0]) && !explode[1..-1].join(" ").include?("exclude"))
-          primary_isbn = explode[0]
+    Traject::MarcExtractor.cached(settings["specs"][:primary_isbn], :alternate_script => false)
+                          .each_matching_line(rec) do |field, spec, extractor|
+      exclude = false
+      field.subfields.find do |sf|
+        if sf.code == "q" && sf.value == "exclude"
+          exclude = true
         end
       end
-      acc << primary_isbn if primary_isbn
+      if !exclude
+        str = extractor.collect_subfields(field, spec).first
+        if str
+          explode = str.split
+          if StdNum::ISBN.checkdigit(explode[0])
+            primary_isbn = explode[0]
+          end
+        end
+        acc << primary_isbn if primary_isbn
+      end
     end
   end
 end

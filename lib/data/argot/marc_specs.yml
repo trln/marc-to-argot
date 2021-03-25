@@ -15,7 +15,7 @@ isbn:
 primary_isbn:
   - 020a
   - 020z
-  - 776z
+  - 020q
 primary_oclc: 
   value:
     - 035a

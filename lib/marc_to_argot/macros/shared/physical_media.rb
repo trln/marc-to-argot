@@ -9,7 +9,7 @@ module MarcToArgot
 
         def physical_media
           lambda do |rec, acc|
-            acc.concat PhysicalMediaClassifier.new(rec).media
+            acc.concat PhysicalMediaClassifier.new(rec).media if physical_access?(rec)
           end
         end
 

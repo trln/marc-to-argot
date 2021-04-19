@@ -66,4 +66,14 @@ describe MarcToArgot::Macros::NCSU::PhysicalMedia do
   it 'Does NOT set physical_media to Print if resource_type is Archival' do
     expect(resource_type_archival_ncsu.fetch('physical_media', [])).not_to include('Print')
   end
+
+  it '(MTA NCSU) Does NOT set physical_media if there are no items' do
+    result = test_1.fetch('physical_media', [])
+    expect(result).to eq(['Online'])
+  end
+
+  it '(MTA NCSU) Sets physical_media if there are items' do
+    result = test_2.fetch('physical_media', [])
+    expect(result).to include('Microfiche')
+  end
 end

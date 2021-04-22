@@ -72,6 +72,38 @@ module MarcToArgot
         end
         false
       end
+
+      def process_donor_marc(rec)
+        donors = []
+        Traject::MarcExtractor.cached('790|0 |abcdgqu:791|2 |abcdfg', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
+          if field.tag == '790'
+            included_sfs = %w[a b c d g q u]
+            value = []
+            field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
+            value = value.join(' ').chomp(',')
+            if value.start_with?('From the library of')
+              donors << {'value' => value}
+            else
+              donors << {'value' => "Donated by #{value}"}
+            end
+          elsif field.tag == '791'
+            included_sfs = %w[a b c d f g]
+            value = []
+            field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
+            value = value.join(' ').chomp(',')
+            donors << {'value' => "Purchased using funds from the #{field.value}"}
+          end
+        end
+        donors
+      end
+
+      def add_donors_as_local_notes(ctx)
+        return unless ctx.output_hash.key?('donor')
+
+        donor = ctx.output_hash['donor']
+        local_notes = ctx.output_hash.fetch('note_local', [])
+        ctx.output_hash['note_local'] = local_notes.concat(donor)
+      end
     end
   end
 end

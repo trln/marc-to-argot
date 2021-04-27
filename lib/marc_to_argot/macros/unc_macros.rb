@@ -97,10 +97,10 @@ module MarcToArgot
         donors
       end
 
-      def add_donors_as_local_notes(ctx)
+      def add_donors_as_indexed_only_local_notes(ctx)
         return unless ctx.output_hash.key?('donor')
 
-        donor = ctx.output_hash['donor']
+        donor = ctx.output_hash['donor'].map { |d| {'indexed_value' => d['value']} }
         local_notes = ctx.output_hash.fetch('note_local', [])
         ctx.output_hash['note_local'] = local_notes.concat(donor)
       end

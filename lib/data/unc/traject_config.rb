@@ -100,7 +100,7 @@ each_record do |rec, cxt|
     cxt.output_hash['record_data_source'] = ['MARC', 'NCDHC']
   end
 
-  add_donors_as_local_notes(cxt)
+  add_donors_as_indexed_only_local_notes(cxt)
   set_entity_ids!(cxt)
 
   remove_print_from_archival_material(cxt)

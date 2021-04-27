@@ -49,6 +49,7 @@ module MarcToArgot
           %w[incommon:unc.edu
              ebookcentral.proquest.com
              overdrive.com
+             panopto.com
              swankmp.net
              unc.kanopy.com
              unc.kanopystreaming.com

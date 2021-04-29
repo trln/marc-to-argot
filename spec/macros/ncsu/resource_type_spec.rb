@@ -25,6 +25,7 @@ describe MarcToArgot::Macros::NCSU::ResourceType do
   context 'item type-based' do
     let(:archival) { run_traject_json('ncsu', 'archival_material') }
     let(:audiobook) { run_traject_json('ncsu', 'audiobook') }
+    let(:test_item_type) { run_traject_json('ncsu', 'ncsu_item_type_is_test') }
 
     it 'correctly detects archival materials' do
       expect(archival['resource_type']).to eq(['Archival and manuscript material'])
@@ -32,6 +33,10 @@ describe MarcToArgot::Macros::NCSU::ResourceType do
 
     it 'correct detects an audiobook' do
       expect(audiobook['resource_type']).to eq(['Audiobook'])
+    end
+
+    it 'correctly detects a test' do
+      expect(test_item_type['resource_type']).to eq(['Book', 'Test'])
     end
   end
 

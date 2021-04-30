@@ -1,0 +1,81 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01742cam a2200241Ia 4500</leader>
+  <controlfield tag="008">160325s2012                  000 0 eng d</controlfield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NCR</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">NCR</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Renick, Mari Jo.</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/names/no90007582</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Self-Perception Profile for Learning Disabled Students :</subfield>
+    <subfield code="b">Manual and Questionnaires /</subfield>
+    <subfield code="c">Mari Jo Renick and Susan Harter.</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">1988/2012.</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="1">
+    <subfield code="a">Denver, CO :</subfield>
+    <subfield code="b">University of Denver,</subfield>
+    <subfield code="c">2012.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">67 pages ;</subfield>
+    <subfield code="c">28 cm</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">text</subfield>
+    <subfield code="b">txt</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">unmediated</subfield>
+    <subfield code="b">n</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">volume</subfield>
+    <subfield code="b">nc</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Learning disabled children and adolescents (typically defines as with the normal IQ range but having deficits in specific cognitive areas) make finer differentiations within the scholastic realm. That is, some LD students have a general positive perception of their overall intelligence, consistent with messages that they receive from teachers and counselors and parents, but make discriminations between particular school subjects based on their particular deficits. Thus, this measure taps nine specific domains: General Intellectual Ability, Reading Competence, Math Competence, Writing Competence, Spelling Competence, Social Competence, Athletic Competence, Physical Appearance, and Behavioral Competence. In addition, a tenth subscale taps Global Self-Worth. Total of 46 items. We have found that this instrument is effective for both LD children and adolescents.</subfield>
+  </datafield>
+  <datafield tag="590" ind1=" " ind2=" ">
+    <subfield code="a">Security level: A.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">6</subfield>
+  </datafield>
+  <datafield tag="690" ind1=" " ind2=" ">
+    <subfield code="a">Personality.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Harter, Susan.</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/names/n87936606</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">3566922</subfield>
+  </datafield>
+  <datafield tag="917" ind1=" " ind2=" ">
+    <subfield code="a">u3566922</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">S00739644X</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S00739646Z</subfield>
+    <subfield code="l">TESTCOL</subfield>
+    <subfield code="m">LRL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">TEST</subfield>
+    <subfield code="u">3/25/2016</subfield>
+  </datafield>
+</record>
+</collection>

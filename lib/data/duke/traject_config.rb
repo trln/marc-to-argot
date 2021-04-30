@@ -88,6 +88,18 @@ to_field 'items', extract_items
 
 to_field 'holdings', extract_holdings
 
+
+# ################################################
+# # Physical Media
+# ######
+
+
+to_field 'physical_media' do |rec, acc, ctx|
+  if physical_access?(rec, ctx)
+    acc.concat PhysicalMediaClassifier.new(rec).media
+  end
+end
+
 # ################################################
 # # Access Type
 # ######

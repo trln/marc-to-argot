@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a22004214a 4500</leader>
+<controlfield tag="001">DUKE004142550</controlfield>
+<controlfield tag="005">20090820084810.0</controlfield>
+<controlfield tag="008">090528t20092008enka^^^^^bq^^^001^0^eng^^</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">2009278752</subfield>
+</datafield>
+<datafield tag="015" ind1=" " ind2=" ">
+ <subfield code="a">GBA8D9604</subfield>
+ <subfield code="2">bnb</subfield>
+</datafield>
+<datafield tag="016" ind1="7" ind2=" ">
+ <subfield code="a">014853125</subfield>
+ <subfield code="2">Uk</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9781855661806 (acid-free paper)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">1855661802 (acid-free paper)</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">244766206</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">UKM</subfield>
+ <subfield code="c">UKM</subfield>
+ <subfield code="d">DLC</subfield>
+ <subfield code="d">BTCTA</subfield>
+ <subfield code="d">YDXCP</subfield>
+ <subfield code="d">UPM</subfield>
+ <subfield code="d">C#P</subfield>
+ <subfield code="d">IXA</subfield>
+ <subfield code="d">BWX</subfield>
+ <subfield code="d">CDX</subfield>
+ <subfield code="d">IQU</subfield>
+ <subfield code="d">IG#</subfield>
+ <subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+ <subfield code="a">PN1993.5.A7</subfield>
+ <subfield code="b">B875 2009</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+ <subfield code="a">791.43098209048</subfield>
+ <subfield code="2">22</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Burucúa, Constanza.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Confronting the 'Dirty War' in Argentine cinema, 1983-1993 :</subfield>
+ <subfield code="b">memory and gender in historical representations /</subfield>
+ <subfield code="c">Constanza Burucúa.</subfield>
+</datafield>
+<datafield tag="246" ind1="3" ind2="0">
+ <subfield code="a">'Dirty War' in Argentine cinema, 1983-1993</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Woodbridge, Suffolk, UK ;</subfield>
+ <subfield code="a">Rochester, NY :</subfield>
+ <subfield code="b">Tamesis,</subfield>
+ <subfield code="c">2009.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">231 p. :</subfield>
+ <subfield code="b">ill. ;</subfield>
+ <subfield code="c">24 cm.</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+ <subfield code="a">Colección Támesis. Serie A, Monografias ;</subfield>
+ <subfield code="v">271</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Includes bibliographical references (p. [209]-220) and index.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Includes filmography (p. [221]-223).</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Motion pictures</subfield>
+ <subfield code="z">Argentina</subfield>
+ <subfield code="x">History.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Memory in motion pictures.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Gender identity in motion pictures.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Argentina</subfield>
+ <subfield code="x">In motion pictures.</subfield>
+</datafield>
+<datafield tag="651" ind1=" " ind2="0">
+ <subfield code="a">Argentina</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">Dirty War, 1976-1983</subfield>
+ <subfield code="x">Influence.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="a">Colección Támesis.</subfield>
+ <subfield code="n">Serie A,</subfield>
+ <subfield code="p">Monografías ;</subfield>
+ <subfield code="v">271.</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">BWX</subfield>
+ <subfield code="b">R6770161</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">CDX</subfield>
+ <subfield code="b">8726920</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">IG#</subfield>
+ <subfield code="b">9781855661806</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20090826</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">LILLY</subfield>
+ <subfield code="c">PLI</subfield>
+ <subfield code="h">PN1993.5.A7</subfield>
+ <subfield code="i">B875 2009</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LILLY</subfield>
+ <subfield code="c">PLI</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PN1993.5.A7 B875 2009</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03725290S </subfield>
+ <subfield code="s">20090304</subfield>
+ <subfield code="u">20091028</subfield>
+ <subfield code="v">20161127</subfield>
+ <subfield code="w">5</subfield>
+ <subfield code="k">004142611</subfield>
+</datafield>
+</record>
+</collection>

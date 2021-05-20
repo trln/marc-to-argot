@@ -241,7 +241,7 @@ module MarcToArgot
       ######
       def note_local
         lambda do |rec, acc|
-          Traject::MarcExtractor.cached("500a:541abcdefhno3:561a:590a").each_matching_line(rec) do |field, spec, extractor|
+          Traject::MarcExtractor.cached("500a:541abcdefhno3:561a:583abcdefhijklnouz:590a").each_matching_line(rec) do |field, spec, extractor|
             next unless subfield_5_absent_or_present_with_local_code?(field)
 
             notes = {}
@@ -273,6 +273,9 @@ module MarcToArgot
         when '561'
           labels << 'Ownership history'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
+        when '583'
+          labels << 'Action note'
+          labels << collect_subfield_values_by_code(field, '3').join(' ')
         end
 
         labels.compact.reject(&:empty?).join(': ')
@@ -288,6 +291,10 @@ module MarcToArgot
           unless field.indicator1 == '0'
             extractor.collect_subfields(field, spec).first
           end
+        when '583'
+          if field.indicator1 == '1'
+            extractor.collect_subfields(field, spec).first
+          end  
         else
           extractor.collect_subfields(field, spec).first
         end

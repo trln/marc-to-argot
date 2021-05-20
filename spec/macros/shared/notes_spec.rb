@@ -4,6 +4,7 @@ require 'spec_helper'
 describe MarcToArgot::Macros::Shared::Notes do
   include Util
   let(:note_access_restrictions) { run_traject_json('duke', 'note_access_restrictions', 'mrc') }
+  let(:note_action) { run_traject_json('duke', 'DUKE001378390', 'xml') }
   let(:note_admin_history) { run_traject_json('duke', 'note_admin_history', 'mrc') }
   let(:note_binding) { run_traject_json('duke', 'note_binding', 'mrc') }
   let(:note_cited_in1) { run_traject_json('unc', 'note_cited_in1', 'mrc') }
@@ -49,6 +50,17 @@ describe MarcToArgot::Macros::Shared::Notes do
     expect(result).to eq(
                         ['A label: Access restricted to subscribing institutions.']
                       )
+  end
+
+  it '(MTA) sets action note' do
+    result = note_action['note_local']
+    puts result
+    expect(result).to include({ 'label' => 'Action note: Rubenstein Library copy 2, copy 3', 
+                                'value' => 'former call number: E G514R'}, 
+                              { 'label' => 'Action note', 
+                                'value' => 'Cataloged Rubenstein Library copy 1: '\
+                                'Cataloging completed with funds provided by '\
+                                'Claire Foerster and Daniel Bernstein; 2016'})
   end
 
   xit '(MTA) sets note_admin_history' do

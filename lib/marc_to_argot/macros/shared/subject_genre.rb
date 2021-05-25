@@ -323,11 +323,7 @@ module MarcToArgot
         ################################################
         # subject remapping methods
         ######
-        # NOTE: currently all subject heading (and subdivisions) that need to be remapped
-        #  are TOPICAL (i.e. not chronological, geographic, or genre). All of the code in
-        #  this section will need to be revised if we need to remap non-topical subject
-        #  segments in the future. However, that seems pretty unlikely. Most offensive or
-        #  otherwise problematic terms in LCSH are topical
+        # NOTE: remapping is now supported for topical, chronological, geographic, and genre terms.
 
         # Subjects to be remapped are specified and must match at the whole heading-or-subdivision
         #  level. This is to ensure we don't end up inadvertently changing stuff that shouldn't be
@@ -337,72 +333,75 @@ module MarcToArgot
         #    "Poor children -- United States" should NOT be remapped to "Poor people children --
         #      United States"
         SUBJECT_REMAP = Traject::TranslationMap.new('shared/subject_heading_remappings').hash
-        REMAP_SEGMENTS = SUBJECT_REMAP.keys.to_set
+        REMAP_SEGMENTS = SUBJECT_REMAP.keys
 
-        def remap_subjects(rec, cxt)
-          to_remap = get_remap_instructions(rec, cxt)
-          remap_subject_topical(rec, cxt, to_remap) if to_remap
-          remap_subject_headings(rec, cxt, to_remap) if to_remap
+        def remap_subjects(rec, ctx)
+          remap_subject_facets(rec, ctx, 'subject_topical')
+          remap_subject_facets(rec, ctx, 'subject_geographic')
+          remap_subject_facets(rec, ctx, 'subject_chronological')
+          remap_subject_facets(rec, ctx, 'subject_genre')
+          remap_headings(rec, ctx, 'subject_headings')
+          remap_headings(rec, ctx, 'genre_headings')
         end
 
-        # Given a record and its context,
-        # returns hash of subject segments that need to be remapped.
-        #  {'Illegal Aliens' => 'Undocumented immigrants' }
-        # "Illegal Aliens" (note non-standard capitalization) appears in record.
-        # It should be mapped to "Undocumented immigrants"
-        # The vast majority of subject segments will not need to be
-        #  remapped and we need to
-        #   - identify subject segments to remap case INsensitively, but
-        #   - provide remapped replacement segments with the proper capitalization
-        # Using this hash is an attempt to pass record specific instructions about what
-        #  to replace/remap without ridiculous amounts of repeated iterative processes
-        def get_remap_instructions(rec, cxt)
-          sub_segments = cxt.output_hash['subject_topical']
-          to_remap = get_remap_values(sub_segments) if sub_segments
-          remap_config = prep_remapping_instructions(sub_segments, to_remap) if to_remap
-          return remap_config if remap_config
-        end
+        # Remap uncoordinated terms used in facets
+        # The fields have the form of an array of terms
+        # ['term one', 'term two', 'term three']
+        def remap_subject_facets(rec, ctx, key)
+          subjects_in_record = ctx.output_hash[key]
+          return unless subjects_in_record
 
-        # Returns array of subject segments from record that need to be remapped
-        # (or returns nil)
-        def get_remap_values(subject_segments)
-          subject_segments_lc = subject_segments.map(&:downcase).to_set
-          to_remap = subject_segments_lc & REMAP_SEGMENTS
-          return to_remap unless to_remap.empty?
-        end
-
-        # returns hash with remapping substitution instructions
-        #   { 'Value to replace in record'=>'Replacement value' }
-        # Capitalization in record varies.
-        def prep_remapping_instructions(sub_segments, to_remap)
-          remap_segments_a = sub_segments.select{ |s| to_remap.include?(s.downcase) }
-          remap_segments_h = remap_segments_a.map{ |s| [s, s.downcase] }.to_h
-          to_remap = remap_segments_h.map{ |inrec, lower| [inrec, SUBJECT_REMAP[lower]] }
-          return to_remap
-        end
-
-        def remap_subject_topical(rec, cxt, to_remap)
-          subject_topics = cxt.output_hash['subject_topical']
-          to_remap.each do |inrec, replacement|
-            subject_topics.delete(inrec)
-            subject_topics << replacement
+          remapped_segments = subjects_in_record.map do |orig_subj|
+            subject_segment_remapper(orig_subj)
           end
-          cxt.output_hash['subject_topical'] = subject_topics.uniq
+
+          ctx.output_hash[key] = remapped_segments.uniq
         end
 
-        def remap_subject_headings(rec, cxt, to_remap)
-          subject_headings = cxt.output_hash['subject_headings']
-          subjects_remapped = []
-          to_remap.each do |inrec, replacement|
-            subject_headings.each do |sh|
-            if sh[:value].split(' -- ').include?(inrec)
-              subjects_remapped << sh[:value]
-              sh[:value] = sh[:value].sub(inrec, replacement)
+        # Remap coordinated terms used in facets
+        # The fields have the form of an array of hashes.
+        # [{ value: 'term one -- term two -- term three' }]
+        def remap_headings(rec, ctx, key)
+          headings_in_record = ctx.output_hash[key]
+          return unless headings_in_record
+
+          ctx.output_hash[key] = remapped_headings(headings_in_record)
+          rej_headings = rejected_headings(headings_in_record)
+          return if rej_headings.empty?
+
+          ctx.output_hash["#{key}_remapped"] = rej_headings
+        end
+
+        # Break apart, remap if needed, and recombine
+        # coordinated terms.
+        def remapped_headings(original_subjects)
+          remapped = original_subjects.map do |orig_subj|
+            segments = orig_subj[:value].split(' -- ')
+            remapped_segments = segments.map do |segment|
+              subject_segment_remapper(segment)
             end
+            orig_subj.merge({ value: remapped_segments.join(' -- ') })
           end
+
+          remapped.flatten.uniq
         end
-        cxt.output_hash['subject_headings'] = subject_headings
-        cxt.output_hash['subject_headings_remapped'] = subjects_remapped
+
+        # Identify and return any headings that have been remapped.
+        def rejected_headings(original_headings)
+          rejected = original_headings.select do |heading|
+            (heading[:value].split(' -- ').map(&:downcase) & REMAP_SEGMENTS).any?
+          end
+
+          rejected.map { |s| s[:value] }
+        end
+
+        # Remap uncoordinated terms if needed.
+        def subject_segment_remapper(segment)
+          if REMAP_SEGMENTS.include?(segment.downcase)
+            SUBJECT_REMAP[segment.downcase]
+          else
+            segment
+          end
         end
 
         ################################################

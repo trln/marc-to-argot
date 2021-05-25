@@ -21,6 +21,7 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
   let(:vern650v) { run_traject_json('unc', 'vern650v', 'mrc') }
   let(:vern655ara) { run_traject_json('unc', 'vern655ara', 'mrc') }
   let(:duke_genre_edge_case) { run_traject_json('duke', 'subject_genre_655_edge_case', 'xml') }
+  let(:remapping_chrono) { run_traject_json('duke', 'DUKE004142550', 'xml')}
 
   it '(MTA) sets subject_headings from any source' do
     result = subject1['subject_headings']
@@ -429,6 +430,13 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
         run_traject_on_record('unc', rec)
                                   }
 
+      let(:genre_case) do
+        rec = make_rec
+        rec << MARC::DataField.new('600', ' ', ' ',
+                                 ['v', 'Hideous Subdivision'])
+        run_traject_on_record('unc', rec)
+      end
+
       it '(MTA) remaps subject heading to better language' do
         sh = argot1['subject_headings'].map { |e| e[:value] }.sort
         expect(sh).to eq([
@@ -442,7 +450,7 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
                          ])
       end
 
-      it '(MTA) sends problematic heading through as searchable-only' do 
+      it '(MTA) sends problematic heading through as searchable-only' do
         shr = argot1['subject_headings_remapped'].sort
         expect(shr).to eq(['Illegal Aliens',
                            'Illegal aliens -- Services for -- United States',
@@ -465,6 +473,28 @@ describe MarcToArgot::Macros::Shared::SubjectGenre do
                           'Social Conditions',
                           'Undocumented immigrants'
                          ])
+      end
+
+      it '(MTA) remaps subject_chronological values to better language' do
+        result = remapping_chrono['subject_chronological']
+        expect(result).to eq(['Terrorismo de Estado, Argentina, 1976-1983'])
+      end
+
+      it '(MTA) remaps subject_headings with chronological terms to better language' do
+        result = remapping_chrono['subject_headings']
+        expect(result).to(
+          include({ 'value' => 'Argentina -- History -- Terrorismo de Estado, Argentina, 1976-1983 -- Influence' })
+        )
+      end
+
+      it '(MTA) remaps subject_genre values to better language' do
+        result = genre_case['subject_genre']
+        expect(result).to eq(['Better subdivision'])
+      end
+
+      it '(MTA) remaps genre_heading values to better language' do
+        result = genre_case['genre_headings']
+        expect(result).to eq([{ value: 'Better subdivision' }])
       end
     end
 

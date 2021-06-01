@@ -24,30 +24,6 @@ to_field 'resource_type', resource_type
 # set virtual_collection from 919$t
 to_field 'virtual_collection', extract_marc(settings['specs'][:virtual_collection], :separator => nil)
 
-def process_donor_marc(rec)
-  donors = []
-  Traject::MarcExtractor.cached('790|0 |abcdgqu:791|2 |abcdfg', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-    if field.tag == '790'
-      included_sfs = %w[a b c d g q u]
-      value = []
-      field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
-      value = value.join(' ').chomp(',')
-      if value.start_with?('From the library of')
-        donors << { 'value' => value }
-      else
-        donors << {'value' => "Donated by #{value}"}
-      end
-    else field.tag == '791'
-      included_sfs = %w[a b c d f g]
-      value = []
-      field.subfields.each { |sf| value << sf.value if included_sfs.include?(sf.code) }
-      value = value.join(' ').chomp(',')
-      donors << {'value' => "Purchased using funds from the #{field.value}"}
-    end
-  end
-  return donors
-end
-
 to_field 'donor' do |rec, acc|
   donors = process_donor_marc(rec)
   donors.each { |d| acc << d } if donors.size > 0
@@ -55,16 +31,7 @@ end
 
 to_field "note_local", note_local
 
-each_record do |rec, context|
-  donors = process_donor_marc(rec)
-  if donors.size > 0
-    context.output_hash['note_local'] ||= []
-    donors.each { |d| context.output_hash['note_local'] << d }
-  end
-end
-
 each_record do |rec, cxt|
-  out = cxt.output_hash
   # identify shared record set members
   # this must come before URLs and shared records fields are processed
   shared_record_set = id_shared_record_set(rec)
@@ -86,7 +53,21 @@ each_record do |rec, cxt|
   end
 
   process_call_numbers(rec, cxt)
+end
 
+to_field 'access_type' do |rec, acc, cxt|
+  acc << 'Online' if online_access?(rec)
+  acc << 'At the Library' if physical_access?(rec, cxt)
+end
+
+to_field 'physical_media' do |rec, acc, cxt|
+  if physical_access?(rec, cxt)
+    acc.concat PhysicalMediaClassifier.new(rec).media
+  end
+end
+
+each_record do |rec, cxt|
+  out = cxt.output_hash
   # create dummy item with "On Order" status if no items, not online, and order record exists
   # create dummy item with "Contact Library for Status" if the above, but no order record
   dummy_items(rec, cxt) if (( out['access_type'] && !out['access_type'].include?('Online') ) ||
@@ -97,6 +78,14 @@ each_record do |rec, cxt|
   # set location_hierarchy and available fields from real and dummy items
   location_hierarchy(rec, cxt)
   available(rec, cxt) if out['items']
+
+  # Set availability and physical_media for online resources
+  access_type = cxt.output_hash.fetch('access_type', [])
+  if access_type.include?('Online')
+    cxt.output_hash['available'] = 'Available'
+    physical_media = cxt.output_hash.fetch('physical_media', [])
+    cxt.output_hash['physical_media'] = physical_media << 'Online'
+  end
 
   # add genre_mrc field
   local_subject_genre(rec, cxt)
@@ -132,6 +121,7 @@ each_record do |rec, cxt|
     cxt.output_hash['record_data_source'] = ['MARC', 'NCDHC']
   end
 
+  add_donors_as_indexed_only_local_notes(cxt)
   set_entity_ids!(cxt)
 
   remove_print_from_archival_material(cxt)

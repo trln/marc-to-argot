@@ -1,0 +1,161 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>02313nas a2200469 a 4500</leader>
+  <controlfield tag='001'>10827510</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20130912082000.0</controlfield>
+  <controlfield tag='008'>840611c19839999ncumr pbbs   f0    0eng c</controlfield>
+  <controlfield tag='007'>he bmb024bbca</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>sn 87042587</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(GPO)97104240</subfield>
+  </datafield>
+  <datafield tag='037' ind1=' ' ind2=' '>
+    <subfield code='b'>National Climatic Data Center, Federal Building, Asheville, N.C. 28801</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>GPO</subfield>
+    <subfield code='b'>eng</subfield>
+    <subfield code='c'>GPO</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>GPA</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>OCLCQ</subfield>
+    <subfield code='d'>GPO</subfield>
+    <subfield code='d'>MvI</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>pcc</subfield>
+  </datafield>
+  <datafield tag='043' ind1=' ' ind2=' '>
+    <subfield code='a'>n-us-az</subfield>
+  </datafield>
+  <datafield tag='074' ind1=' ' ind2=' '>
+    <subfield code='a'>0274-E-03 (online)</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 55.287/4:</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>C 55.286/6-3:</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Arizona monthly local climatological data</subfield>
+    <subfield code='h'>[microform].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>[Asheville, N.C.] :</subfield>
+    <subfield code='b'>DOC, NOAA, NESDIS, NCDC</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>volumes ;</subfield>
+    <subfield code='c'>28 cm</subfield>
+  </datafield>
+  <datafield tag='310' ind1=' ' ind2=' '>
+    <subfield code='a'>Monthly</subfield>
+  </datafield>
+  <datafield tag='336' ind1=' ' ind2=' '>
+    <subfield code='a'>text</subfield>
+    <subfield code='b'>txt</subfield>
+    <subfield code='2'>rdacontent</subfield>
+  </datafield>
+  <datafield tag='337' ind1=' ' ind2=' '>
+    <subfield code='a'>microform</subfield>
+    <subfield code='b'>h</subfield>
+    <subfield code='2'>rdamedia</subfield>
+  </datafield>
+  <datafield tag='338' ind1=' ' ind2=' '>
+    <subfield code='a'>microfiche</subfield>
+    <subfield code='b'>he</subfield>
+    <subfield code='2'>rdacarrier</subfield>
+  </datafield>
+  <datafield tag='362' ind1='1' ind2=' '>
+    <subfield code='a'>Began with Oct. 1983.</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Previously classed: C 55.287/4:</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Microfiche ceased.</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Direct requests for paper copy subscription to the publisher: U.S. Dept. of Commerce, National Climatic Data Center, Federal Bldg., Asheville, N.C. 28801-2696.</subfield>
+  </datafield>
+  <datafield tag='530' ind1=' ' ind2=' '>
+    <subfield code='a'>Available via Internet for individual cities.</subfield>
+  </datafield>
+  <datafield tag='533' ind1=' ' ind2=' '>
+    <subfield code='a'>Microfiche.</subfield>
+    <subfield code='m'>&lt;Nov. 1983&gt;-199</subfield>
+    <subfield code='b'>[Asheville, N.C. :</subfield>
+    <subfield code='c'>National Climatic Data Center].</subfield>
+    <subfield code='e'>microfiche : negative.</subfield>
+  </datafield>
+  <datafield tag='588' ind1='0' ind2=' '>
+    <subfield code='a'>Nov. 1983; title from header.</subfield>
+  </datafield>
+  <datafield tag='588' ind1='0' ind2=' '>
+    <subfield code='a'>Nov. 1983; title from header.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Meteorology</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh85084334</subfield>
+    <subfield code='z'>Arizona</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n79034873</subfield>
+    <subfield code='v'>Statistics</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001414</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='0'>
+    <subfield code='a'>Arizona</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n79034873</subfield>
+    <subfield code='x'>Climate</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh00007747</subfield>
+    <subfield code='v'>Statistics</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001414</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+  </datafield>
+  <datafield tag='710' ind1='2' ind2=' '>
+    <subfield code='a'>National Climatic Data Center (U.S.)</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n83004739</subfield>
+  </datafield>
+  <datafield tag='856' ind1='4' ind2='1'>
+    <subfield code='u'>https://purl.fdlp.gov/GPO/LPS1384</subfield>
+    <subfield code='3'>click on provided links to display issues available; then click on index of city codes to view particular issues</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b3410672</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c3557136</subfield>
+    <subfield code='b'>erra</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c3557136</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>552210</subfield>
+    <subfield code='h'>C 55.287/4:</subfield>
+    <subfield code='z'>For holdings, ask at Davis Reference Desk.</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c3557136</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>e</subfield>
+    <subfield code='p'>HAZE-5035-00001</subfield>
+    <subfield code='t'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2013-10-07 00:00:00-04</subfield>
+    <subfield code='c'>2004-10-05 07:58:02-04</subfield>
+    <subfield code='u'>2020-10-14 15:38:52-04</subfield>
+    <subfield code='m'>a</subfield>
+  </datafield>
+</record>
+</collection>

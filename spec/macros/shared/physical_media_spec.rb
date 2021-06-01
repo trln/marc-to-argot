@@ -287,10 +287,12 @@ end
     result = resource_type_archival_unc.fetch('physical_media', [])
     expect(result).not_to include('Print')
   end
-  
+
   #Clear physical media labels when there are no physical holdings
   let(:unc_no_items) { run_traject_json('unc', 'UNCb2978655', 'xml')}
   let(:unc_with_items) { run_traject_json('unc', 'UNCb4243452', 'xml')}
+  let(:unc_shared_eonly) { run_traject_json('unc', 'UNCb7655176', 'xml')}
+  let(:unc_eonly_holdings) { run_traject_json('unc', 'UNCb3410672', 'xml')}
   let(:duke_no_items) { run_traject_json('duke', 'DUKE003894579', 'xml')}
   let(:duke_with_items) { run_traject_json('duke', 'DUKE003271109', 'xml')}
   let(:nccu_no_items) { run_traject_json('nccu', 'physical_media1', 'xml')}
@@ -298,6 +300,16 @@ end
 
   it '(MTA UNC) Does NOT set physical_media if there are no items' do
     result = unc_no_items.fetch('physical_media', [])
+    expect(result).to eq(['Online'])
+  end
+
+  it '(MTA UNC) Does NOT set physical_media for e-only shared records' do
+    result = unc_shared_eonly.fetch('physical_media', [])
+    expect(result).to eq(['Online'])
+  end
+
+  it '(MTA UNC) Does NOT set physical_media if only e-holdings records attached' do
+    result = unc_eonly_holdings.fetch('physical_media', [])
     expect(result).to eq(['Online'])
   end
 

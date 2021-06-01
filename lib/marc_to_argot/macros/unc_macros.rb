@@ -40,23 +40,21 @@ module MarcToArgot
       end
 
       # tests whether the record has any physical items
-      # this implementation asks whether there are any 999 fields that:
-      #  - have i1=9 (in all records, dates are output to 999 w/i1=0), and
-      #  - have i2<3 (i.e. an unsuppressed item or holding record exists)
+      # Because some items/holdings encoded in the marc are ignored
+      # (e.g. items/holdings on e-only shared records; e-holdings records),
+      # this implementation checks for the presence of items/holdings data
+      # in the processed argot.
       # Records with ONLY an order record will NOT be assigned an
       #  access_type value, given that it is presumed the item is on order
       #  and not at all accessible yet.
-      # @param rec [MARC::Record] the record to be checked.
-      # @param _ctx [Object] extra context or data to be used in the test
+      # @param _rec [MARC::Record] the record to be checked.
+      # @param ctx [Object] extra context or data to be used in the test
       #   (for overrides)
-      def physical_access?(rec, _ctx = {})
-        checkfields = []
-        rec.each_by_tag('999') { |f| checkfields << f if f.indicator1 == '9' && f.indicator2.to_i < 3}
-        if checkfields.size > 0
-          return true
-        else
-          return false
-        end
+      def physical_access?(_rec, ctx)
+        return true if (ctx.output_hash.fetch('items', []).any? ||
+                        ctx.output_hash.fetch('holdings', []).any?)
+
+        false
       end
 
       def filmfinder?(rec)

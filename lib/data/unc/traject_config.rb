@@ -32,7 +32,6 @@ end
 to_field "note_local", note_local
 
 each_record do |rec, cxt|
-  out = cxt.output_hash
   # identify shared record set members
   # this must come before URLs and shared records fields are processed
   shared_record_set = id_shared_record_set(rec)
@@ -54,7 +53,21 @@ each_record do |rec, cxt|
   end
 
   process_call_numbers(rec, cxt)
+end
 
+to_field 'access_type' do |rec, acc, cxt|
+  acc << 'Online' if online_access?(rec)
+  acc << 'At the Library' if physical_access?(rec, cxt)
+end
+
+to_field 'physical_media' do |rec, acc, cxt|
+  if physical_access?(rec, cxt)
+    acc.concat PhysicalMediaClassifier.new(rec).media
+  end
+end
+
+each_record do |rec, cxt|
+  out = cxt.output_hash
   # create dummy item with "On Order" status if no items, not online, and order record exists
   # create dummy item with "Contact Library for Status" if the above, but no order record
   dummy_items(rec, cxt) if (( out['access_type'] && !out['access_type'].include?('Online') ) ||
@@ -65,6 +78,14 @@ each_record do |rec, cxt|
   # set location_hierarchy and available fields from real and dummy items
   location_hierarchy(rec, cxt)
   available(rec, cxt) if out['items']
+
+  # Set availability and physical_media for online resources
+  access_type = cxt.output_hash.fetch('access_type', [])
+  if access_type.include?('Online')
+    cxt.output_hash['available'] = 'Available'
+    physical_media = cxt.output_hash.fetch('physical_media', [])
+    cxt.output_hash['physical_media'] = physical_media << 'Online'
+  end
 
   # add genre_mrc field
   local_subject_genre(rec, cxt)

@@ -54,42 +54,8 @@ module MarcToArgot
         end
 
         def url_restricted?(href, type)
-          exception_matches = open_access_exceptions.select { |e| href.match(e) }.any?
-          return false if (href.match(/(\.edu)|(\.gov)/) &&
-                          !exception_matches && type == 'fulltext') ||
-                          href.match(/repository\.duke\.edu\/dc/) ||
-                          href.match(/library\.duke\.edu\/digitalcollections/) ||
-                          href.match(/idn\.duke\.edu\/ark:\/87924/)
-          true
-        end
-
-        def open_access_exceptions
-          %w[catdir
-             metasearch
-             journals.uchicago
-             humanities.uchicago
-             getitatduke
-             duke.edu
-             .com
-             ARTFL
-             artfl-project.uchicago.edu
-             stephanus.tlg.uci.edu
-             ropercenter.cornell.edu
-             vha.usc.edu
-             bmc.lib.umich.edu
-             rotunda.upress.virginia.edu
-             quod.lib.umich.edu
-             muse.jhu.edu
-             press.jhu.edu
-             ica1.princeton.edu
-             hapi.gseis.ucla.edu
-             ets.umdl.umich.edu
-             ehrafworldcultures.yale.edu
-             ccrd.usc.cuhk.edu.hk
-             woolf-center.southernct.edu
-             theindex.princeton.edu
-             prde.upress.virginia.edu
-             hapi.ucla.edu]
+          type == 'fulltext' &&
+            href.downcase.include?('https://login.proxy.lib.duke.edu/login?url=')
         end
 
         # tests whether the field contains a URL for a finding aid

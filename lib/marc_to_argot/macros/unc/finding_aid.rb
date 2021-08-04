@@ -4,8 +4,14 @@ module MarcToArgot
       module FindingAid
         require 'open-uri'
         def set_ead_id(rec, cxt)
-          id = get_finding_aid_id(rec) if finding_aid_enhanceable?(rec) == 'ead'
-          if id
+          id = case finding_aid_enhanceable?(rec)
+               when 'ead'
+                 get_finding_aid_id(rec)
+               when 'nps'
+                 get_nps_id(rec)
+               end
+          return unless id
+
           idhash = {'value' => "UNC FA #{id}",
                     'display' => 'false',
                     'type' => 'Finding aid ID'}
@@ -15,9 +21,8 @@ module MarcToArgot
           else
             cxt.output_hash['misc_id'] = [idhash]
           end
-          end
         end
-        
+
         def finding_aid_enhanceable?(rec)
           return 'nps' if has_nps_id?(rec)
           return 'ead' if collection_or_subunit?(rec) &&

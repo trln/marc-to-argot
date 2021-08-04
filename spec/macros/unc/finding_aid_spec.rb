@@ -16,6 +16,15 @@ describe MarcToArgot::Macros::UNC::FindingAid do
                           'type' => 'Finding aid ID'}])
   end
 
+  it '(UNC) sets ead id for NPS EADs' do
+    rec = make_rec
+    rec << MARC::DataField.new('919', '0', ' ', ['a', 'nps3605088x'])
+    result = run_traject_on_record('unc', rec)['misc_id']
+    expect(result).to eq([{'value' => 'UNC FA nps3605088x',
+                          'display' => 'false',
+                          'type' => 'Finding aid ID'}])
+  end
+
   describe 'collection_or_subunit?' do
     it '(UNC) returns true if LDR/07 = c or d' do
       rec = make_rec
@@ -42,7 +51,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
       expect(has_finding_aid_url?(rec)).to be_nil
     end
   end
-  
+
   describe 'has_nps_id?' do
     it '(UNC) returns true if 919 0. where $a starts with nps' do
       rec = make_rec

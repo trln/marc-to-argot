@@ -16,6 +16,15 @@ describe MarcToArgot::Macros::UNC::FindingAid do
                           'type' => 'Finding aid ID'}])
   end
 
+  it '(UNC) sets ead id for NPS EADs' do
+    rec = make_rec
+    rec << MARC::DataField.new('919', '0', ' ', ['a', 'nps3605088x'])
+    result = run_traject_on_record('unc', rec)['misc_id']
+    expect(result).to eq([{'value' => 'UNC FA nps3605088x',
+                          'display' => 'false',
+                          'type' => 'Finding aid ID'}])
+  end
+
   describe 'collection_or_subunit?' do
     it '(UNC) returns true if LDR/07 = c or d' do
       rec = make_rec
@@ -42,7 +51,7 @@ describe MarcToArgot::Macros::UNC::FindingAid do
       expect(has_finding_aid_url?(rec)).to be_nil
     end
   end
-  
+
   describe 'has_nps_id?' do
     it '(UNC) returns true if 919 0. where $a starts with nps' do
       rec = make_rec
@@ -142,70 +151,6 @@ describe MarcToArgot::Macros::UNC::FindingAid do
       arr = ['https://finding-aids.lib.unc.edu/03287/',
              'https://finding-aids.lib.unc.edu/PN2020.D92/']
       expect(get_finding_aid_urls(rec)).to eq(arr)
-    end
-  end
-
-  describe 'get_ead_uri' do
-    it '(UNC) builds URI to EAD XML file from EAD or NPS ID' do
-      uri = 'https://finding-aids.lib.unc.edu/ead/03287.xml'
-      expect(get_ead_uri('03287')).to eq(uri)
-    end
-  end
-
-  describe 'get_ead' do
-    xit '(UNC) gets EAD XML file for ID' do
-      ead = get_ead('03287')
-      expect(ead).to be_a Nokogiri::XML::Document
-    end
-  end
-
-  describe 'get_biog_hist_note' do
-    it '(UNC) extracts biographical history note' do
-      x = '<ead><archdesc><bioghist><head>Heading</head><p>First <title render="italic">part</title>.</p><p>Second part.</p></bioghist></archdesc></ead>'
-      xml = Nokogiri::XML(x)
-      result = ['First part.', 'Second part.']
-      expect(get_biog_hist_note(xml)).to eq(result)
-    end
-
-    it '(UNC) handles p, ignores chronlist, eventgrp in bioghist note' do
-      # Punting on dealing with chronlists for now. Unlikely to bear any uniquely informative
-      #  keywords. We're going to have to redo all these mappings for ArchivesSpace
-      #  eventually anyway.
-      # real example of both p and chronlist (with single events in eventgrp): SHC/04975.xml
-      # both p and chronlist with normal chronitems: UARS/40011.xml
-      doc = Nokogiri::XML <<-EOXML
-<ead>
-  <archdesc>
-    <bioghist>
-      <head>Heading</head>
-      <p>First <title render="italic">part</title>.</p>
-      <chronlist>
-        <chronitem>
-          <date>1944</date>
-          <eventgrp>
-            <event>Thing happened</event>
-          </eventgrp>
-        </chronitem>
-        <chronitem>
-          <date>1945</date>
-          <eventgrp>
-            <event>Thing happened</event>
-            <event>Another thing happened</event>
-          </eventgrp>
-        </chronitem>
-        <chronitem>
-          <date>1946</date>
-          <event>Last thing happened</event>
-        </chronitem>
-      </chronlist>
-    </bioghist>
-  </archdesc>
-</ead>
-EOXML
-      result = [
-        'First part.'
-      ]
-      expect(get_biog_hist_note(doc)).to eq(result)
     end
   end
 end

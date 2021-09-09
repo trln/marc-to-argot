@@ -7,7 +7,10 @@
 # This requires some repetition here in the mappings, but it is clearer and safer
 
 aliens: "Noncitizens"
+alien criminals: "Noncitizen criminals"
 alien detention centers: "Immigrant detention centers"
+alien labor: "Noncitizen labor"
+alien property: "Foreign assets"
 child slaves: "Enslaved children"
 children of illegal aliens: "Children of undocumented immigrants"
 dirty war, 1976-1983: "Terrorismo de Estado, Argentina, 1976-1983"

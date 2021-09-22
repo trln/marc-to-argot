@@ -23,6 +23,13 @@ describe MarcToArgot::Macros::Shared::Title do
       result = run_traject_on_record('ncsu', rec)
       expect(result['short_title']).to be_nil
     end
+
+    it 'does not error out when MARC field is whitespace-only' do
+      rec = make_rec
+      rec << MARC::DataField.new('245', '0', '0', ['a', ' '])
+      result = run_traject_on_record('ncsu', rec)
+      expect(result['short_title']).to be_nil
+    end
   end
 
   context 'short title in 245 and linked 880 present' do

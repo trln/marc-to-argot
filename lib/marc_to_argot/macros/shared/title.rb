@@ -36,6 +36,8 @@ module MarcToArgot
               return if value.empty?
 
               words = value.split(/\s+/)
+              return if words.empty?
+
               if words.length <= max_length
                 # strip any punctuation off the last word
                 words[-1] = words[-1].gsub(/[^a-z0-9]$/i, '')

@@ -1,0 +1,193 @@
+<collection xmlns='http://www.loc.gov/MARC21/slim'>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+  <leader>02327cas a2200613 a 4500</leader>
+  <controlfield tag="001">ssj0018862</controlfield>
+  <controlfield tag="003">WaSeSS</controlfield>
+  <controlfield tag="005">20170816080626.0</controlfield>
+  <controlfield tag="006">m        d        </controlfield>
+  <controlfield tag="007">cr  n         </controlfield>
+  <controlfield tag="008">870819d19872007enkqx p s     0    0eng c</controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">sn 89036039</subfield>
+  </datafield>
+  <datafield tag="016" ind1="7" ind2=" ">
+    <subfield code="a">8806593</subfield>
+    <subfield code="2">DNLM</subfield>
+  </datafield>
+  <datafield tag="016" ind1="7" ind2=" ">
+    <subfield code="a">SR0058209</subfield>
+    <subfield code="z">SR0074113</subfield>
+    <subfield code="2">DNLM</subfield>
+  </datafield>
+  <datafield tag="016" ind1="7" ind2=" ">
+    <subfield code="a">AA10689182</subfield>
+    <subfield code="2">JP-ToKJK</subfield>
+  </datafield>
+  <datafield tag="022" ind1=" " ind2=" ">
+    <subfield code="y">0269-8803 (print)</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) ssj0018862</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0018862</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">CLU</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">CLU</subfield>
+    <subfield code="d">NLM</subfield>
+    <subfield code="d">GUA</subfield>
+    <subfield code="d">HUL</subfield>
+    <subfield code="d">EYM</subfield>
+    <subfield code="d">NST</subfield>
+    <subfield code="d">SYS</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">CUS</subfield>
+    <subfield code="d">NLGGC</subfield>
+    <subfield code="d">GUA</subfield>
+    <subfield code="d">HLS</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">OCLCF</subfield>
+    <subfield code="d">OCLCO</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">CUS</subfield>
+    <subfield code="d">OCLCO</subfield>
+    <subfield code="d">FC@</subfield>
+    <subfield code="d">OCLCO</subfield>
+    <subfield code="d">WaSeSS</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">pcc</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">QP360</subfield>
+    <subfield code="b">.J72 e-journal</subfield>
+  </datafield>
+  <datafield tag="060" ind1="0" ind2="0">
+    <subfield code="a">W1</subfield>
+    <subfield code="b">JO858T</subfield>
+  </datafield>
+  <datafield tag="130" ind1="0" ind2=" ">
+    <subfield code="a">Journal of psychophysiology (Online)</subfield>
+  </datafield>
+  <datafield tag="210" ind1="1" ind2=" ">
+    <subfield code="a">J. psychophysiol.</subfield>
+  </datafield>
+  <datafield tag="222" ind1=" " ind2="0">
+    <subfield code="a">Journal of psychophysiology</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Journal of psychophysiology</subfield>
+    <subfield code="h">[electronic resource].</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Oxford :</subfield>
+    <subfield code="b">Oxford University Press,</subfield>
+    <subfield code="c">&#169;1987-</subfield>
+  </datafield>
+  <datafield tag="310" ind1=" " ind2=" ">
+    <subfield code="a">Four issues yearly</subfield>
+  </datafield>
+  <datafield tag="362" ind1="0" ind2=" ">
+    <subfield code="a">Vol. 1, no. 1 (Mar. 1987)-</subfield>
+  </datafield>
+  <datafield tag="362" ind1="1" ind2=" ">
+    <subfield code="a">Ceased with vol. 21, no. 3/4 (2007).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Title from cover.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="550" ind1=" " ind2=" ">
+    <subfield code="a">Published jointly by: the British and German Psychophysiology Societies, 1987- ; The Scandinavian and Dutch Psychophysiology Societies, &lt;1989-&gt;</subfield>
+  </datafield>
+  <datafield tag="588" ind1=" " ind2=" ">
+    <subfield code="a">Final issue consulted.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Psychophysiology</subfield>
+    <subfield code="v">Periodicals.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="2">
+    <subfield code="a">Psychophysiology.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="2">
+    <subfield code="a">Periodicals.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Psychophysiology Society (Great Britain)</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Deutsche Gesellschaft fu&#776;r Psychophysiologie und Ihre Anwendung.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Scandinavian Psychophysiology Society.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Dutch Psychophysiology Society.</subfield>
+  </datafield>
+  <datafield tag="776" ind1="0" ind2="8">
+    <subfield code="i">Print version:</subfield>
+    <subfield code="t">Journal of psychophysiology</subfield>
+    <subfield code="x">0269-8803</subfield>
+    <subfield code="w">(DLC)sn 89036039 </subfield>
+    <subfield code="w">(OCoLC)16513165</subfield>
+  </datafield>
+  <datafield tag="785" ind1="0" ind2="8">
+    <subfield code="i">Continued online:</subfield>
+    <subfield code="t">Journal of psychophysiology (Online)</subfield>
+    <subfield code="w">(DLC)  2006242000</subfield>
+    <subfield code="w">(OCoLC)52760273</subfield>
+  </datafield>
+  <datafield tag="853" ind1="0" ind2="0">
+    <subfield code="8">1</subfield>
+    <subfield code="a">v.</subfield>
+    <subfield code="b">no.</subfield>
+    <subfield code="i">(year)</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="h">ONL-EJOUR</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0018862</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0018862</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0018862</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)247437634</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0018862</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20110204</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2359581</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">QP360 .J72 e-journal</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">2359581-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">N</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">EJOURNAL</subfield>
+    <subfield code="u">2/4/2011</subfield>
+    <subfield code="0">360MARC</subfield>
+  </datafield>
+</record>
+
+</collection>

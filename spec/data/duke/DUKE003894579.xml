@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     nas a2200481 a 4500</leader>
+<controlfield tag="001">DUKE003894579</controlfield>
+<controlfield tag="003">OCoLC</controlfield>
+<controlfield tag="005">20070918180050.0</controlfield>
+<controlfield tag="007">he^bmb024bbca</controlfield>
+<controlfield tag="008">940310c19uu9999dcuar^^^b^^^^f0^^^^0eng^c</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">sn 94027749</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">29943247</subfield>
+</datafield>
+<datafield tag="037" ind1=" " ind2=" ">
+ <subfield code="b">National Technical Information Service, 5285 Port Royal Rd., Springfield, VA 22161</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">GPO</subfield>
+ <subfield code="c">GPO</subfield>
+ <subfield code="d">OCL</subfield>
+ <subfield code="d">GPO</subfield>
+ <subfield code="d">MvI</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">lcd</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us---</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">[MF]NDHE</subfield>
+</datafield>
+<datafield tag="074" ind1=" " ind2=" ">
+ <subfield code="a">0830-D (MF)</subfield>
+</datafield>
+<datafield tag="074" ind1=" " ind2=" ">
+ <subfield code="a">0830-D (online)</subfield>
+</datafield>
+<datafield tag="086" ind1="0" ind2=" ">
+ <subfield code="a">NAS 1.15:</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+ <subfield code="a">x</subfield>
+</datafield>
+<datafield tag="099" ind1=" " ind2=" ">
+ <subfield code="a">NAS 1.15:</subfield>
+</datafield>
+<datafield tag="110" ind1="1" ind2=" ">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">President.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Aeronautics and space report of the President ... activities</subfield>
+ <subfield code="h">[microform] /</subfield>
+ <subfield code="c">Executive Office of the President, National Aeronautics and Space Council.</subfield>
+</datafield>
+<datafield tag="246" ind1="1" ind2=" ">
+ <subfield code="i">Vol. for fiscal year &lt;2000-&gt; have subtitle:</subfield>
+ <subfield code="a">Fiscal year ... activities</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Washington, D.C. :</subfield>
+ <subfield code="b">The Council :</subfield>
+ <subfield code="b">For sale by the Supt. of Docs., U.S. G.P.O.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">v. :</subfield>
+ <subfield code="b">ill. ;</subfield>
+ <subfield code="c">27 cm.</subfield>
+</datafield>
+<datafield tag="310" ind1=" " ind2=" ">
+ <subfield code="a">Annual</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Description based on: 1971.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Latest issue consulted: 2000.</subfield>
+</datafield>
+<datafield tag="515" ind1=" " ind2=" ">
+ <subfield code="a">Reports for 1971-1988 cover calendar years 1971-1988; 1989-1990 combined issue covers calendar year 1989 and fiscal year 1990; reports for 1991- cover fiscal years 1991- .</subfield>
+</datafield>
+<datafield tag="530" ind1=" " ind2=" ">
+ <subfield code="a">Distributed also in paper version to depository libraries under Supt. of Docs. class no.: NAS 1.52:; also distributed in microfiche version under class no.: NAS 1.83:.</subfield>
+</datafield>
+<datafield tag="530" ind1=" " ind2=" ">
+ <subfield code="a">Some issues also available via Internet from the NASA Headquarters web site. Address as of 1/30/99: http://www.hq.nasa.gov/office/pao/History/presrep.htm; current access is available via PURL.</subfield>
+</datafield>
+<datafield tag="550" ind1=" " ind2=" ">
+ <subfield code="a">Issued by: National Aeronautics and Space Council, &lt;1971&gt;-1972; by: National Aeronautics and Space Administration, 1973-.</subfield>
+</datafield>
+<datafield tag="533" ind1=" " ind2=" ">
+ <subfield code="a">Microfiche.</subfield>
+ <subfield code="m">&lt;1988-1998,2000&gt;:[Gaps]</subfield>
+ <subfield code="b">[Washington, D.C. :</subfield>
+ <subfield code="c">National Aeronautics and Space Administration.</subfield>
+ <subfield code="e">microfiches : negative.</subfield>
+ <subfield code="f">(NASA-TM).</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Astronautics</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="v">Periodicals.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Aeronautics</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="v">Periodicals.</subfield>
+</datafield>
+<datafield tag="776" ind1="1" ind2=" ">
+ <subfield code="c">Original</subfield>
+ <subfield code="x">0277-6499</subfield>
+ <subfield code="w">(DLC) 81642321</subfield>
+ <subfield code="w">(OCoLC)5924866</subfield>
+</datafield>
+<datafield tag="780" ind1="0" ind2="0">
+ <subfield code="a">United States. President.</subfield>
+ <subfield code="t">Aeronautics and space report of the President</subfield>
+</datafield>
+<datafield tag="710" ind1="1" ind2=" ">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">National Aeronautics and Space Council.</subfield>
+</datafield>
+<datafield tag="710" ind1="1" ind2=" ">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">National Aeronautics and Space Administration.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="a">NASA technical memorandum.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="u">http://purl.access.gpo.gov/GPO/LPS726</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AS</subfield>
+ <subfield code="b">Serial</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">H </subfield>
+ <subfield code="b">Microform</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20070918</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+</datafield>
+</record>
+</collection>

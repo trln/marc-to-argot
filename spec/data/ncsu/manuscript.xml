@@ -1,0 +1,123 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>04812npcaa2200409Ka 4500</leader>
+  <controlfield tag="001">ocn464696814</controlfield>
+  <controlfield tag="005">20091118031525.0</controlfield>
+  <controlfield tag="008">091110i19451991xxu                 eng d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o464696814</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o464696814</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+    <subfield code="c">NRC</subfield>
+    <subfield code="e">dacs</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)464696814</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">MC 00042</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Matsumoto, George,</subfield>
+    <subfield code="d">1922-</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">George Matsumoto papers,</subfield>
+    <subfield code="f">1945-1991</subfield>
+    <subfield code="h">[manuscript].</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">12.5</subfield>
+    <subfield code="f">linear feet</subfield>
+  </datafield>
+  <datafield tag="506" ind1=" " ind2=" ">
+    <subfield code="a">Collection is open for research; access requires at least 24 hours advance notice.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">The bulk of these papers and drawings document the architectural practice of George Matsumoto and Associates between 1948 and 1961.  There are five series including correspondence, publications and photographs, mounted photographs, reduced blueprints , and drawings and sketches.  The years 1948-1961 correspond to his residence in Raleigh, North Carolina and his tenure on the faculty of the School of Design at North Carolina State University.  Known for his innovative and award-winning modern designs, projects in the collection include residential work chiefly in Raleigh, but also in Chapel Hill, Sedgefield, Roanoke Rapids, North Carolina, and Richmond, Virginia.  The collection also includes blueprints from selected commercial projects from his practice in California between 1961 and 1991 including the Bechtel Engineering Center at the University of California at Berkeley.  There is a series of correspondence that provides information on Matsumoto&apos;s relationship with his North Carolina and Virginia clients and the larger triangular relationship between the architect, client, and builder. Photographs by Joseph Molitor document completed projects and also were used by Matsumoto for publications of his own projects.  Tear sheets and photographs comprise a Publications and Photographs Series for most of Matsumoto&apos;s North Carolina projects.  The collection relates solely to Matsumoto&apos;s architectural practice, and there is limited information regarding Matsumoto&apos;s personal life or teaching career.  Formats include correspondence, publications, scrapbooks, photographs, architectural drawings, blueprints, specifications, and sketches.</subfield>
+  </datafield>
+  <datafield tag="541" ind1=" " ind2=" ">
+    <subfield code="a">Gift of George Matsumoto, FAIA</subfield>
+    <subfield code="d">1996.</subfield>
+  </datafield>
+  <datafield tag="545" ind1=" " ind2=" ">
+    <subfield code="a">George Matsumoto, former Professor of Architecture at North Carolina State University (1957-1961) and prominent San Francisco, California architect (1961-1991) was born in San Francisco on July 16th, 1922. His educational background and professional career focused on architecture beginning in 1943 with a Bachelor of Art, Architecture, from Washington University, St. Louis, Missouri. He earned a Master of Art with honors, in 1945, from Cranbrook Academy of Art, Bloomfield Hills, Michigan, studying under Eliel Saarinen. Upon graduation, Matsumoto became Senior Designer at Skidmore, Owings and Merrill in Chicago, Illinois, and Senior Planner-Designer the following year at Saarinen and Swanson, Birmingham, Michigan. In 1947 he was a principal architect in Kansas City, Missouri, as well as an instructor in architecture at the University of Oklahoma. In 1948, Matsumoto was appointed Assistant Professor of Architecture. He became an Associate Professor in 1951 and by 1957 had the title of professor. From 1961-1967, he continued his teaching career, Professor, College of Design  at the University of California. At the same time, Matsumoto and Associates&apos; award-winning designs are known on both coasts, having had commercial and residential successes that include projects in California, North Carolina, Florida,  New York, and Virginia. Some of these designs are worth noting: the Bechtel Engineering Center at Berkeley; several North Carolina  residences: Poole Lake House; Julian Residence; and the Thrower Residence.  Impressive photographs by Joseph Moliter and Matsumoto&apos;s drawings and sketches depict the architect&apos;s fine reputation and talents.</subfield>
+  </datafield>
+  <datafield tag="555" ind1="0" ind2=" ">
+    <subfield code="a">Collection guide available.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Architects</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Architectural drawing</subfield>
+    <subfield code="y">20th century</subfield>
+    <subfield code="z">North Carolina.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Architecture</subfield>
+    <subfield code="z">United States.</subfield>
+  </datafield>
+  <datafield tag="610" ind1="2" ind2="0">
+    <subfield code="a">North Carolina State University.</subfield>
+    <subfield code="b">School of Design.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">Raleigh (N.C.)</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">San Francisco (Calif.)</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="2">
+    <subfield code="u">http://www.lib.ncsu.edu/findingaids/mc00042/</subfield>
+    <subfield code="y">NCSU Libraries&apos; collection guide</subfield>
+  </datafield>
+  <datafield tag="852" ind1=" " ind2=" ">
+    <subfield code="a">North Carolina State University Libraries.</subfield>
+    <subfield code="b">Special Collections Research Center</subfield>
+    <subfield code="e">D.H. Hill Library, Campus Box 7111, Raleigh, NC 27695-7111</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">AIV-8825</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">961741</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">AIV-8825</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">961741</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">10</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">MC 00042</subfield>
+    <subfield code="w">ALPHANUM</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">HAV-001</subfield>
+    <subfield code="d">1/28/2016</subfield>
+    <subfield code="e">11/5/2015</subfield>
+    <subfield code="l">MANUSCRIPT</subfield>
+    <subfield code="m">SPECCOLL</subfield>
+    <subfield code="n">6</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">MANUSCRIPT</subfield>
+    <subfield code="u">6/16/2012</subfield>
+  </datafield>
+</record>
+</collection>

@@ -12,6 +12,13 @@ isbn:
   - 020a
   - 020z
   - 776z
+primary_isbn:
+  - 020a
+  - 020z
+  - 020q
+primary_oclc: 
+  value:
+    - 035a
 issn:
   primary:
     - 022a
@@ -44,8 +51,6 @@ note_supplement:
   - 525a
 note_toc:
   - 505agrt
-note_with:
-  - 501a
 oclc_number:
   value:
     - 035a
@@ -56,5 +61,3 @@ publisher:
   - 264b
 title:
   - 245abnp
-statement_of_responsibility:
-  - 245c

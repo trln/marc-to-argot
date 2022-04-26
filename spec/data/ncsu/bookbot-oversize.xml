@@ -1,0 +1,237 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>04290nam a22004094a 4500</leader>
+  <controlfield tag="001">BAS-3555</controlfield>
+  <controlfield tag="005">20030102085553.0</controlfield>
+  <controlfield tag="008">020329s2003    flua     bf   001 0 eng  </controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">  2002067051</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">0849312469 (alk. paper)</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o49530089</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)49530089</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="c">DLC</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">OrLoB-B</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">pcc</subfield>
+  </datafield>
+  <datafield tag="050" ind1="0" ind2="0">
+    <subfield code="a">HV8073</subfield>
+    <subfield code="b">.F5835 2003</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">363.25</subfield>
+    <subfield code="2">21</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Forensic science :</subfield>
+    <subfield code="b">an introduction to scientific and investigative techniques /</subfield>
+    <subfield code="c">edited by Stuart H. James, Jon J. Nordby.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Boca Raton, Fla. :</subfield>
+    <subfield code="b">CRC Press,</subfield>
+    <subfield code="c">c2003.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">xxviii, 689 p. :</subfield>
+    <subfield code="b">ill. (some col.) ;</subfield>
+    <subfield code="c">29 cm.</subfield>
+  </datafield>
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">&quot;Forensic websites&quot;: p. 615-620.</subfield>
+  </datafield>
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">Includes bibliographical references and index.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="8" ind2="0">
+    <subfield code="g">Sect. III.</subfield>
+    <subfield code="t">Forensic Science in the Laboratory -- </subfield>
+    <subfield code="g">Ch. 10.</subfield>
+    <subfield code="t">The Forensic Laboratory /</subfield>
+    <subfield code="r">Linda P. Netzel -- </subfield>
+    <subfield code="g">Ch. 11.</subfield>
+    <subfield code="t">Identification and Characterization of Blood and Bloodstains /</subfield>
+    <subfield code="r">Robert P. Spalding -- </subfield>
+    <subfield code="g">Ch. 12.</subfield>
+    <subfield code="t">Identification of Biological Fluids and Stains /</subfield>
+    <subfield code="r">Andrew Greenfield and Monica M. Sloan -- </subfield>
+    <subfield code="g">Ch. 13.</subfield>
+    <subfield code="t">Techniques of DNA Analysis /</subfield>
+    <subfield code="r">George T. Duncan, Martin L. Tracey and Eric Stauffer -- </subfield>
+    <subfield code="g">Ch. 14.</subfield>
+    <subfield code="t">Microanalysis and Examination of Trace Evidence /</subfield>
+    <subfield code="r">Thomas A. Kubic and Nicholas Petraco -- </subfield>
+    <subfield code="g">Ch. 15.</subfield>
+    <subfield code="t">Fingerprints /</subfield>
+    <subfield code="r">Robert E. Gaensslen and Kimberly R. Young -- </subfield>
+    <subfield code="g">Ch. 16.</subfield>
+    <subfield code="t">Forensic Footwear Evidence /</subfield>
+    <subfield code="r">William J. Bodziak --</subfield>
+  </datafield>
+  <datafield tag="505" ind1="8" ind2="0">
+    <subfield code="g">Ch. 17.</subfield>
+    <subfield code="t">Forensic Tire Impression and Tire Track Evidence /</subfield>
+    <subfield code="r">William J. Bodziak -- </subfield>
+    <subfield code="g">Ch. 18.</subfield>
+    <subfield code="t">Firearm and Tool Mark Examinations /</subfield>
+    <subfield code="r">Walter F. Rowe -- </subfield>
+    <subfield code="g">Ch. 19.</subfield>
+    <subfield code="t">Questioned Documents /</subfield>
+    <subfield code="r">Frank H. Norwitch and Howard Seiden -- </subfield>
+    <subfield code="g">Ch. 20.</subfield>
+    <subfield code="t">Analysis of Controlled Substances /</subfield>
+    <subfield code="r">Donnell R. Christian, Jr. -- </subfield>
+    <subfield code="g">Sect. IV.</subfield>
+    <subfield code="t">Forensic Engineering -- </subfield>
+    <subfield code="g">Ch. 21.</subfield>
+    <subfield code="t">Structural Failures /</subfield>
+    <subfield code="r">Randall K. Noon -- </subfield>
+    <subfield code="g">Ch. 22.</subfield>
+    <subfield code="t">Basic Fire and Explosion Investigation /</subfield>
+    <subfield code="r">David R. Redsicker -- </subfield>
+    <subfield code="g">Ch. 23.</subfield>
+    <subfield code="t">Vehicular Accident Reconstruction /</subfield>
+    <subfield code="r">Randall K. Noon -- </subfield>
+    <subfield code="g">Sect. V.</subfield>
+    <subfield code="t">Cybertechnology and Forensic Science -- </subfield>
+    <subfield code="g">Ch. 24.</subfield>
+    <subfield code="t">Use of Computers in Forensic Science /</subfield>
+    <subfield code="r">Zeno Geradts --</subfield>
+  </datafield>
+  <datafield tag="505" ind1="8" ind2="0">
+    <subfield code="g">Ch. 25.</subfield>
+    <subfield code="t">Investigation of Computer-Related Crime /</subfield>
+    <subfield code="r">Peter Stephenson -- </subfield>
+    <subfield code="g">Sect. VI.</subfield>
+    <subfield code="t">Forensic Application of the Social Sciences -- </subfield>
+    <subfield code="g">Ch. 26.</subfield>
+    <subfield code="t">Forensic Psychology /</subfield>
+    <subfield code="r">Louis B. Schlesinger -- </subfield>
+    <subfield code="g">Ch. 27.</subfield>
+    <subfield code="t">Forensic Psychiatry /</subfield>
+    <subfield code="r">Robert L. Sadoff -- </subfield>
+    <subfield code="g">Ch. 28.</subfield>
+    <subfield code="t">Serial Offenders: Linking Cases by Modus Operandi and Signature /</subfield>
+    <subfield code="r">Robert D. Keppel -- </subfield>
+    <subfield code="g">Ch. 29.</subfield>
+    <subfield code="t">Criminal Personality Profiling /</subfield>
+    <subfield code="r">Michael R. Napier and Kenneth P. Baker -- </subfield>
+    <subfield code="g">Sect. VII.</subfield>
+    <subfield code="t">Legal and Ethical Issues in Forensic Science -- </subfield>
+    <subfield code="g">Ch. 30.</subfield>
+    <subfield code="t">Countering Chaos: Logic, Ethics, and the Criminal Justice System /</subfield>
+    <subfield code="r">Jon J. Nordby -- </subfield>
+    <subfield code="g">Ch. 31.</subfield>
+    <subfield code="t">Forensic Science and the Law /</subfield>
+    <subfield code="r">Terrence F. Kiely -- </subfield>
+    <subfield code="g">Ch. 32.</subfield>
+    <subfield code="t">Legal Issues in Forensic DNA /</subfield>
+    <subfield code="r">Susan Herrero --</subfield>
+  </datafield>
+  <datafield tag="505" ind1="8" ind2="0">
+    <subfield code="g">App. A.</subfield>
+    <subfield code="t">DNA Advisory Board (DAB) Guidelines -- </subfield>
+    <subfield code="g">App. B.</subfield>
+    <subfield code="t">Biohazard Safety Precautions -- </subfield>
+    <subfield code="g">App. C.</subfield>
+    <subfield code="t">Forensic Websites -- </subfield>
+    <subfield code="g">App. D.</subfield>
+    <subfield code="t">Trigonometric Tables: Sine and Tangent Functions -- </subfield>
+    <subfield code="g">App. E.</subfield>
+    <subfield code="t">Metric Measurements and Equivalents.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2="0">
+    <subfield code="g">Ch. 1.</subfield>
+    <subfield code="t">Here We Stand: What a Forensic Scientist Does /</subfield>
+    <subfield code="r">Jon J. Nordby -- </subfield>
+    <subfield code="g">Sect. I.</subfield>
+    <subfield code="t">Forensic Pathology and Related Specialties -- </subfield>
+    <subfield code="g">Ch. 2.</subfield>
+    <subfield code="t">The Role of the Forensic Pathologist /</subfield>
+    <subfield code="r">Ronald K. Wright -- </subfield>
+    <subfield code="g">Ch. 3.</subfield>
+    <subfield code="t">Investigation of Traumatic Deaths /</subfield>
+    <subfield code="r">Ronald K. Wright -- </subfield>
+    <subfield code="g">Ch. 4.</subfield>
+    <subfield code="t">Forensic Toxicology /</subfield>
+    <subfield code="r">John Joseph Fenton -- </subfield>
+    <subfield code="g">Ch. 5.</subfield>
+    <subfield code="t">Forensic Odontology /</subfield>
+    <subfield code="r">R. Tom Glass -- </subfield>
+    <subfield code="g">Ch. 6.</subfield>
+    <subfield code="t">Forensic Anthropology /</subfield>
+    <subfield code="r">Marcella H. Sorg -- </subfield>
+    <subfield code="g">Ch. 7.</subfield>
+    <subfield code="t">Forensic Taphonomy /</subfield>
+    <subfield code="r">William D. Haglund -- </subfield>
+    <subfield code="g">Sect. II.</subfield>
+    <subfield code="t">Evaluation of the Crime Scene -- </subfield>
+    <subfield code="g">Ch. 8.</subfield>
+    <subfield code="t">Crime Scene Investigation /</subfield>
+    <subfield code="r">Marilyn T. Miller -- </subfield>
+    <subfield code="g">Ch. 9.</subfield>
+    <subfield code="t">Recognition of Bloodstain Patterns /</subfield>
+    <subfield code="r">Stuart H. James, Paul E. Kish and T. Paulette Sutton --</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">1 14</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Forensic sciences</subfield>
+    <subfield code="v">Handbooks, manuals, etc.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Criminal investigation</subfield>
+    <subfield code="v">Handbooks, manuals, etc.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Evidence, Criminal</subfield>
+    <subfield code="v">Handbooks, manuals, etc.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Crime laboratories</subfield>
+    <subfield code="v">Handbooks, manuals, etc.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">James, Stuart H.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Nordby, Jon J.</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">ASM-4273</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">ASM-4273</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">353233</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">HV8073 .F5835 2003</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S02320771M</subfield>
+    <subfield code="d">6/8/2014</subfield>
+    <subfield code="e">4/25/2011</subfield>
+    <subfield code="l">OVERSIZE</subfield>
+    <subfield code="m">BOOKBOT</subfield>
+    <subfield code="n">13</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">BOOK</subfield>
+    <subfield code="u">11/23/2004</subfield>
+  </datafield>
+</record>
+</collection>

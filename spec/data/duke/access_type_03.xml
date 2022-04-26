@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>01888cam a2200349 a 4500</leader>
+<controlfield tag="001">DUKE002778512</controlfield>
+<controlfield tag="003">OCoLC</controlfield>
+<controlfield tag="005">20001026090231.0</controlfield>
+<controlfield tag="008">001025s2000^^^^dcuab^^^^^^^^f000^0^eng^c</controlfield>
+<datafield tag="019" ind1=" " ind2=" ">
+ <subfield code="a">tmp97236498</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">45227915</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="d">GPO</subfield>
+ <subfield code="d">DLC</subfield>
+ <subfield code="d">MvI</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us---</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDHS</subfield>
+</datafield>
+<datafield tag="074" ind1=" " ind2=" ">
+ <subfield code="a">1045-A (online)</subfield>
+</datafield>
+<datafield tag="074" ind1=" " ind2=" ">
+ <subfield code="a">1045-B (online)</subfield>
+</datafield>
+<datafield tag="086" ind1="0" ind2=" ">
+ <subfield code="a">Y 4.P 96/10:S.HRG.106-618</subfield>
+ <subfield code="z">Y 4.P 96/10:2000024059</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+ <subfield code="a">x</subfield>
+</datafield>
+<datafield tag="099" ind1=" " ind2=" ">
+ <subfield code="a">Y 4.P 96/10:S.HRG.106-618</subfield>
+</datafield>
+<datafield tag="110" ind1="1" ind2=" ">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">Congress.</subfield>
+ <subfield code="b">Senate.</subfield>
+ <subfield code="b">Committee on Environment and Public Works.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Water infrastructure :</subfield>
+ <subfield code="b">hearing before the Committee on Environment and Public Works, United States Senate, One Hundred Sixth Congress, first session on S. 968 ... S. 914 ... S. 1699 ... October 7, 1999.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Washington :</subfield>
+ <subfield code="b">U.S. G.P.O. :</subfield>
+ <subfield code="b">For sale by the U.S. G.P.O., Supt. of Docs., Congressional Sales Office,</subfield>
+ <subfield code="c">2000.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">iv, 108 p. : ill., maps ;</subfield>
+ <subfield code="c">24 cm.</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+ <subfield code="a">S. hrg. ;</subfield>
+ <subfield code="v">106-618</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">"Printed for the use of the Committee on Environment and Public Works."</subfield>
+</datafield>
+<datafield tag="538" ind1=" " ind2=" ">
+ <subfield code="a">Available via Internet from the GPO Access web site. Addresses as of 10/24/00: http://frwebgate.access.gpo.gov/cgi-bin/useftp.cgi?IPaddress=162.140.64.21&amp;filename=63228.wais&amp;directory=/diskb/wais/data/106s̲enateẖearings (text file), http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=106s̲enateẖearings&amp;docid=f:63228.pdf (PDF file); current access is available via PURLs.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Water resources development</subfield>
+ <subfield code="x">Law and legislation</subfield>
+ <subfield code="z">United States.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Water</subfield>
+ <subfield code="x">Pollution</subfield>
+ <subfield code="x">Law and legislation</subfield>
+ <subfield code="z">United States.</subfield>
+</datafield>
+<datafield tag="810" ind1="1" ind2=" ">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">Congress.</subfield>
+ <subfield code="b">Senate.</subfield>
+ <subfield code="t">S. hrg. ;</subfield>
+ <subfield code="v">106-618.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="3">Text version:</subfield>
+ <subfield code="u">http://purl.access.gpo.gov/GPO/LPS6427</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="3">PDF version:</subfield>
+ <subfield code="u">http://purl.access.gpo.gov/GPO/LPS6387</subfield>
+ <subfield code="z">Adobe Acrobat Reader required</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2="0">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSGS</subfield>
+ <subfield code="h">Y 4.P 96/10:S.HRG.106-618</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSGS</subfield>
+ <subfield code="d"/>
+ <subfield code="h">Y 4.P 96/10:S.HRG.106-618</subfield>
+ <subfield code="n">c.1</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D01477697+ </subfield>
+ <subfield code="s">20001116</subfield>
+ <subfield code="u">20080206</subfield>
+ <subfield code="v">20010507</subfield>
+ <subfield code="w">1</subfield>
+ <subfield code="k">002778512</subfield>
+</datafield>
+</record>
+</collection>

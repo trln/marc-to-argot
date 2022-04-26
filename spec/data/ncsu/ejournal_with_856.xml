@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd"
+  xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01741nas a2200397 a 4500</leader>
+  <controlfield tag="001">ocm72549382</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20080805092136.0</controlfield>
+  <controlfield tag="006">m        d        </controlfield>
+  <controlfield tag="007">cr cn#||||||||</controlfield>
+  <controlfield tag="008">061011c20059999cauar   s     1    0eng d</controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">  2008242209</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)72549382</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">SUC</subfield>
+    <subfield code="c">SUC</subfield>
+    <subfield code="d">SUC</subfield>
+    <subfield code="d">MYG</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">lcd</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">amb</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">QA76.575 e-journal</subfield>
+  </datafield>
+  <datafield tag="111" ind1="2" ind2=" ">
+    <subfield code="a">International Conference on Automated Production of Cross Media Content for Multi-channel Distribution.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Proceedings</subfield>
+    <subfield code="h">[electronic resource] /</subfield>
+    <subfield code="c">International Conference on Automated Production of Cross Media Content for Multi-channel Distribution.</subfield>
+  </datafield>
+  <datafield tag="246" ind1="1" ind2="3">
+    <subfield code="a">AXMEDIS</subfield>
+  </datafield>
+  <datafield tag="246" ind1="3" ind2=" ">
+    <subfield code="a">International Conference on Automated Production of Cross Media Content for Multi-channel Distribution</subfield>
+  </datafield>
+  <datafield tag="246" ind1="1" ind2=" ">
+    <subfield code="i">IEEExplore title:</subfield>
+    <subfield code="a">Automated Production of Cross Media Content for Multi-channel Distribution, International Conference on</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Los Alamitos, Calif. :</subfield>
+    <subfield code="b">IEEE Computer Society,</subfield>
+    <subfield code="c">c2005-</subfield>
+  </datafield>
+  <datafield tag="310" ind1=" " ind2=" ">
+    <subfield code="a">Annual</subfield>
+  </datafield>
+  <datafield tag="362" ind1="1" ind2=" ">
+    <subfield code="a">Began with 1st (30 Nov.-2 Dec. 2005).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Description based on first issue; title from PDF of title page (IEEExplore, viewed Aug. 4, 2008).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Latest issue consulted: 3rd (28-30 Nov. 2007).</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of Access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Multimedia systems</subfield>
+    <subfield code="x">Data processing</subfield>
+    <subfield code="v">Congresses.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Music</subfield>
+    <subfield code="x">Data processing</subfield>
+    <subfield code="v">Congresses.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="u">http://proxying.lib.ncsu.edu/index.php?url=http://ieeexplore.ieee.org/xpl/conhome.jsp?punumber=1001526</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20071109</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">1993971</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">QA76.575 E-JOURNAL</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">1993971-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">EJOURNAL</subfield>
+    <subfield code="u">11/9/2007</subfield>
+  </datafield>
+</record>
+</collection>

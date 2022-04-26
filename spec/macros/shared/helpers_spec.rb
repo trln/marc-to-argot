@@ -177,6 +177,15 @@ describe MarcToArgot::Macros::Shared::Helpers do
       end
     end
 
+    describe 'split_complex_id_field' do
+      subject { idhelper.new }
+
+      it 'completes even when first qualifier subfield precedes first id subfield' do
+        field = MARC::DataField.new('024','8','1',
+                                    MARC::Subfield.new('q', 'cloth'),
+                                    MARC::Subfield.new('z', '9790706392622'))
+        expect(subject.split_complex_id_field(field, 'az', 'dq')).to be_truthy
+      end
+    end
   end
 end
-

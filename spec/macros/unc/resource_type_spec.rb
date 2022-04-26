@@ -2,6 +2,7 @@
 require 'spec_helper'
 describe MarcToArgot::Macros::UNC::ResourceType do
   include Util::TrajectRunTest
+
   let(:archives1) { run_traject_json('unc', 'archives1', 'mrc') }
   let(:archives2) { run_traject_json('unc', 'archives2', 'mrc') }
   let(:archives3) { run_traject_json('unc', 'archives3', 'mrc') }
@@ -18,9 +19,11 @@ describe MarcToArgot::Macros::UNC::ResourceType do
   
   context 'LDR/06 (rec type) is computer file (m)' do
     context 'AND 008/26 (type of computer file) is numeric data (a)' do
-      it '(UNC) resource_type will include Dataset -- Statistical' do
-        a = stats1['resource_type']
-        expect(a).to include('Dataset -- Statistical')
+      context 'AND III mattype is NOT 8' do
+        it '(UNC) resource_type will not include Dataset -- Statistical' do
+          a = stats1['resource_type']
+          expect(a).to_not include('Dataset -- Statistical')
+        end
       end
     end
     context 'AND 008/26 (type of computer file) is document (d)' do
@@ -106,11 +109,12 @@ describe MarcToArgot::Macros::UNC::ResourceType do
 
   context '006/00 (form) is computer file (m)' do
     context 'AND 006/09 (type of computer file) is numeric data (a)' do
-      it '(UNC) resource_type will include Dataset -- Statistical' do
-        a = stats2['resource_type']
-        expect(a).to include('Dataset -- Statistical')
+      context 'AND III mattype is NOT 8' do
+        it '(UNC) resource_type will include Dataset -- Statistical' do
+          a = stats2['resource_type']
+          expect(a).to_not include('Dataset -- Statistical')
+        end
       end
-
     end
   end
 
@@ -125,5 +129,30 @@ describe MarcToArgot::Macros::UNC::ResourceType do
     end
   end
 
+  context 'III mattype is 8' do
+    it '(UNC) resource_type includes Dataset -- Statistical' do
+      rec = make_rec
+      rec << MARC::DataField.new('999', '0',  '0', ['m', '8'])
+      rt = run_traject_on_record('unc', rec)['resource_type']
+      expect(rt).to include('Dataset -- Statistical')
+    end
+  end
 
+  context 'III mattype is 7' do
+    it '(UNC) resource_type includes Dataset -- Geospatial' do
+      rec = make_rec
+      rec << MARC::DataField.new('999', '0',  '0', ['m', '7'])
+      rt = run_traject_on_record('unc', rec)['resource_type']
+      expect(rt).to include('Dataset -- Geospatial')
+    end
+  end
+
+  context '919 field containing EQUIP is present' do
+    it '(UNC) resource_type includes Technology and accessories' do
+      rec = make_rec
+      rec << MARC::DataField.new('919', ' ',  ' ', ['a', 'EQUIP'])
+      rt = run_traject_on_record('unc', rec)['resource_type']
+      expect(rt).to include('Technology and accessories')
+    end
+  end
 end

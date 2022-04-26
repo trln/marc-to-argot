@@ -1,10 +1,10 @@
-## Traject configurations start by loading this file, and then they load 
+## Traject configurations start by loading this file, and then they load
 # institution/configuration specific files.  In order of execution, this means
 # that any field that is *not* overridden in an institution/configuration
 # specific file happens *after* any field that is mapped in this file.
 
 # The loader 'includes' shared macros in this file, and includes
-# institution-specific macros (if any) for the sub-configurations.  
+# institution-specific macros (if any) for the sub-configurations.
 # What this means is that any macros (or methods) used in this file
 # will be the 'shared' versions, which may not be what you want.
 
@@ -13,9 +13,9 @@
 # us to set a mapped diagnostic context which can contain information about
 # the record being processed
 self.logger = Yell.new do |l|
-  l.adapter :logging_adapter, 
-    level: settings.fetch(:log_level, :warn), 
-    appender: settings.fetch(:appender, :stderr)
+  l.adapter :logging_adapter,
+            level: settings.fetch(:log_level, :info),
+            appender: settings.fetch(:appender, :stderr)
 end
 
 ################################################
@@ -46,6 +46,10 @@ unless settings["override"].include?("oclc_number")
   to_field "oclc_number", argot_oclc_number(settings["specs"][:oclc_number])
 end
 
+unless settings["override"].include?("primary_oclc")
+  to_field "primary_oclc", argot_primary_oclc(settings["specs"][:primary_oclc])
+end
+
 unless settings["override"].include?("ead_id")
   # to_field "ead_id", literal("")
 end
@@ -56,7 +60,8 @@ end
 
 unless settings["override"].include?("isbn")
   to_field "isbn" do |rec, acc|
-    Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false).each_matching_line(rec) do |field, spec, extractor|
+    Traject::MarcExtractor.cached(settings["specs"][:isbn], :alternate_script => false)
+                          .each_matching_line(rec) do |field, spec, extractor|
       str = extractor.collect_subfields(field, spec).first
       isbn = {}
       if str
@@ -70,6 +75,31 @@ unless settings["override"].include?("isbn")
         end
       end
       acc << isbn if !isbn.empty?
+    end
+    acc.uniq!
+  end
+end
+
+unless settings["override"].include?("primary_isbn")
+  to_field "primary_isbn" do |rec, acc|
+    Traject::MarcExtractor.cached(settings["specs"][:primary_isbn], :alternate_script => false)
+                          .each_matching_line(rec) do |field, spec, extractor|
+      exclude = false
+      field.subfields.find do |sf|
+        if sf.code == "q" && sf.value == "exclude"
+          exclude = true
+        end
+      end
+      if !exclude
+        str = extractor.collect_subfields(field, spec).first
+        if str
+          explode = str.split
+          if StdNum::ISBN.checkdigit(explode[0])
+            primary_isbn = explode[0]
+          end
+        end
+        acc << primary_isbn if primary_isbn
+      end
     end
   end
 end
@@ -86,17 +116,21 @@ unless settings["override"].include?("upc")
   to_field "upc", upc
 end
 
+unless settings["override"].include?("primary_upc")
+  to_field "primary_upc", primary_upc
+end
+
 ################################################
 # Dates
 ######
 
 unless settings["override"].include?("publication_year")
-  to_field "publication_year", marc_publication_date
+  to_field "publication_year", publication_year
 end
 
 unless settings['override'].include?('date_cataloged')
   to_field 'date_cataloged' do |rec, acc|
-    cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first
+    cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged]).extract(rec).first.to_s.strip
     begin
       acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
     rescue ArgumentError => e
@@ -110,11 +144,7 @@ end
 ######
 
 unless settings['override'].include?('lang')
-  to_field 'language', argot_languages
-end
-
-unless settings["override"].include?("lang_code")
-  to_field "lang_code", extract_marc("008[35-37]")
+  to_field 'language', language
 end
 
 ################################################
@@ -135,6 +165,10 @@ unless settings["override"].include?("publisher")
                                                :trim_punctuation => true)
 end
 
+unless settings["override"].include?("publisher_location")
+  to_field "publisher_location", publisher_location
+end
+
 ################################################
 # Names
 ######
@@ -143,12 +177,20 @@ unless settings["override"].include?("names")
   to_field "names", names
 end
 
+unless settings['override'].include?('creator_main')
+  to_field 'creator_main', creator_main
+end
+
 ################################################
 # Title
 ######
 
 unless settings["override"].include?("title_main")
   to_field "title_main", title_main
+end
+
+unless settings['override'].include?('short_title')
+  to_field 'short_title', short_title
 end
 
 unless settings["override"].include?("title_sort")
@@ -264,6 +306,10 @@ unless settings["override"].include?("note_performer_credits")
   to_field "note_performer_credits", note_performer_credits
 end
 
+unless settings["override"].include?("note_preferred_citation")
+  to_field 'note_preferred_citation', note_preferred_citation
+end
+
 unless settings["override"].include?("note_production_credits")
   to_field "note_production_credits", extract_marc(settings["specs"][:note_production_credits])
 end
@@ -305,11 +351,15 @@ unless settings["override"].include?("note_toc")
 end
 
 unless settings["override"].include?("note_with")
-  to_field "note_with", extract_marc(settings["specs"][:note_with])
+  to_field "note_with", note_with
 end
 
 unless settings["override"].include?("note_serial_dates")
   to_field "note_serial_dates", note_serial_dates
+end
+
+unless settings["override"].include?("note_use_terms")
+  to_field 'note_use_terms', note_use_terms
 end
 
 ################################################
@@ -338,6 +388,8 @@ end
 
 unless settings["override"].include?("subject_headings")
   to_field 'subject_headings', subject_headings
+  each_record do |rec, acc|
+  end
 end
 
 unless settings["override"].include?("genre_headings")
@@ -362,6 +414,16 @@ end
 
 unless settings['override'].include?('subject_genre')
   to_field 'subject_genre', subject_genre
+end
+
+################################################
+# Remap problematic subject headings
+######
+unless settings['override'].include?('subject_headings') || settings['override'].include?('subject_topical')
+
+  each_record do |rec, cxt|
+    remap_subjects(rec, cxt)
+  end
 end
 
 ################################################
@@ -396,8 +458,7 @@ end
 ######
 
 unless settings["override"].include?("statement_of_responsibility")
-  to_field "statement_of_responsibility",
-           basic_vernacular_field(settings["specs"][:statement_of_responsibility])
+  to_field "statement_of_responsibility", statement_of_responsibility
 end
 
 unless settings["override"].include?("edition")
@@ -413,4 +474,26 @@ unless settings['override'].include?('institution')
     inst = %w[unc duke nccu ncsu]
     acc.concat(inst)
   end
+end
+
+unless settings['override'].include?('access_type')
+  each_record do |rec, cxt|
+    access_type = cxt.output_hash['access_type']
+    if access_type
+      physical_media = cxt.output_hash['physical_media']
+      if physical_media
+        physical_media << 'Online' if access_type.include?('Online')
+      else
+        cxt.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
+      end
+    end
+  end
+end
+
+unless settings['override'].include?('origin_place_search')
+  to_field 'origin_place_search', origin_place_search
+end
+
+unless settings['override'].include?('origin_place_facet')
+  to_field 'origin_place_facet', origin_place_facet
 end

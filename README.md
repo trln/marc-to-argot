@@ -2,6 +2,7 @@
 
 Converts MARC input to Argot, TRLN Discovery's shared ingest format.
 
+The Argot format is documented at https://github.com/trln/data-documentation/tree/master/argot
 
 ## CI Status
 
@@ -32,7 +33,7 @@ List of options for the create command
 | Processing Thread Pool | -z | integer | 3 | integer |
 
 
-## Insitutuional Specs
+## Institutional Specs
 Spec files define the map between MARC fields and the Argot model. Each institution will manage their own spec file, located in `lib/data/<inst>/marc_specs.yml`.
 **NOTE:** Each attribute in the yaml file should either be an array of Marc specs **OR** a hash of nested attributes
 

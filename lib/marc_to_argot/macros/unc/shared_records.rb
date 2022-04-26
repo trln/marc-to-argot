@@ -3,29 +3,39 @@ module MarcToArgot
     module UNC
       module SharedRecords
 
-        # Gets resource type based on a mix of fixed fields,
-        # item types, and itemcat2 (Sirsi)
-        def set_shared_record_set_code(rec, cxt)
-          shared_set = ''
-          Traject::MarcExtractor.cached('919|  |a', alternate_script: false).each_matching_line(rec) do |field, spec, extractor|
-            value = field.to_s.downcase
+        # shared record sets that include print/physical items
+        PHYSICAL_SETS = ['oupp']
+
+        # If record is part of a shared record set, set the code for the set
+        # Further processing is based on this code value
+        #
+        # This should be limited to sets of records that are shared with at
+        # least one other TRLN institution. It is not a good means to add
+        # a virtual collection field to local UNC records; shared record
+        # set processing can have side effects not appropriate for local
+        # records.
+        def id_shared_record_set(rec)
+          shared_set = nil
+          Traject::MarcExtractor.cached('919|  |a:773|0 |t', alternate_script: false).each_matching_line(rec) do |field, _spec, _extractor|
+            value = field.value.downcase
             case value
-            when /asp/
-              cxt.clipboard[:shared_record_set] = 'asp'
-            when /dwsgpo/
-              cxt.clipboard[:shared_record_set] = 'dws'
-            when /troup/
-              cxt.clipboard[:shared_record_set] = 'oupp'
-            else
-              cxt.clipboard[:shared_record_set] = 'na'
+            when 'dwsgpo'
+              shared_set = 'dws'
+            when 'troup'
+              shared_set = 'oupp'
+            when /^center for research libraries \(crl\) eresources \(online collection\)/
+              shared_set = 'crl'
             end
           end
-          
+          shared_set
         end
 
+        def shared_physical?(shared)
+          PHYSICAL_SETS.include?(shared)
+        end
 
         def add_institutions(cxt, institution_array)
-          institution_array.each { |i| cxt.output_hash['institution'] << i } 
+          institution_array.each { |i| cxt.output_hash['institution'] << i }
         end
 
         def add_record_data_source(cxt, value)
@@ -39,7 +49,6 @@ module MarcToArgot
             cxt.output_hash['virtual_collection'] = [value]
           end
         end
-
       end
     end
   end

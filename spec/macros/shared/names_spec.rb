@@ -20,6 +20,7 @@ describe MarcToArgot::Macros::Shared::Names do
   let(:vnames01) { run_traject_json('unc', 'vern_names01', 'mrc') }
   let(:vnames02) { run_traject_json('unc', 'vern_names02', 'mrc') }
   let(:vnames03) { run_traject_json('unc', 'vern_names03', 'mrc') }
+  let(:name_auth_ids) { run_traject_json('duke', 'name_auth_ids', 'xml')}
 
   it '(MTA) sets names, prioritizing director type over creator type' do
     result = names01['names']
@@ -271,5 +272,22 @@ describe MarcToArgot::Macros::Shared::Names do
                             'lang'=>'cjk'
                           }
                         ])
+  end
+
+  it '(MTA) sets name authority ids as an attribute' do
+    result = name_auth_ids['names']
+    expect(result[0]).to eq(
+      {
+        'id' => 'http://id.loc.gov/authorities/names/no00027267',
+        'name' => 'Gold, Mike',
+        'rel' => ['editor'],
+        'type' => 'editor'
+      }
+    )
+  end
+
+  it '(MTA) sets entity_ids output hash when name authority IDs are present' do
+      result = name_auth_ids
+      expect(result).to include('entity_id')
   end
 end

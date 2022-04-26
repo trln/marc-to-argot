@@ -21,5 +21,19 @@ to_field 'names', names
 
 
 each_record do |rec, ctx|
+  access_type = ctx.output_hash['access_type']
+  if access_type
+    physical_media = ctx.output_hash['physical_media']
+    if physical_media
+      physical_media << 'Online' if access_type.include?('Online')
+    else
+      ctx.output_hash['physical_media'] = ['Online'] if access_type.include?('Online')
+    end
+  end
+
+  set_entity_ids!(ctx)
+
+  remove_print_from_archival_material(ctx)
+
   Logging.mdc.clear
 end

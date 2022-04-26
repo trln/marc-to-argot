@@ -1,10 +1,21 @@
 require 'yaml'
 require 'traject'
 require 'marc_to_argot'
-require 'yajl'
+if RUBY_PLATFORM =~ /java/
+  java_import 'org.noggit.ObjectBuilder'
+else
+  require 'yajl'
+end
 
 # Utilities for specs
 module Util
+  # create a brief, simple MARC record that to be populated directly for testing
+  def make_rec
+    rec = MARC::Record.new
+    rec << MARC::ControlField.new('008', ' ' * 40)
+    return rec
+  end
+
   def data_path(name)
     File.join(File.expand_path('data', __dir__), name)
   end
@@ -41,8 +52,8 @@ module Util
   def load_json_multiple(json_data)
     records = []
     p = Yajl::Parser.new
-    p.on_object_complete { |x| records << x}
-    p.parse(data)
+    p.on_parse_complete = ->(x) { records << x }
+    p.parse(json_data)
     records
   end
 
@@ -62,7 +73,8 @@ module Util
         'processing_thread_pool' => 1,
         'marc_source.type' => marc_source_type,
         'marc_source.encoding' => 'utf-8',
-        'override' => override
+        'override' => override,
+        'log_level' => :error
       }
     end
 
@@ -125,5 +137,12 @@ module Util
     def run_traject_json(collection, file, extension = 'xml')
       JSON.parse(run_traject(collection, file, extension))
     end
+
+    # Runs traject on a single MARC record and returns JSON
+    def run_traject_on_record(collection, record)
+      indexer = load_indexer(collection, 'mrc')
+      indexer.map_record(record)
+    end
+
   end
 end

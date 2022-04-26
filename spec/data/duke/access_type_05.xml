@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a22004334a 4500</leader>
+<controlfield tag="001">DUKE003422651</controlfield>
+<controlfield tag="005">20060623151351.0</controlfield>
+<controlfield tag="008">060227s2006^^^^nyu^^^^^^^^^^^000^0^eng^c</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">006074023X</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">64386907</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="c">NDD</subfield>
+ <subfield code="d">BAKER</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">DPL</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us-nc</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="9" ind2="7">
+ <subfield code="a">GV885.72.N8</subfield>
+ <subfield code="b">B598 2006</subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">GV885.72.N8</subfield>
+ <subfield code="b">B598 2006</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+ <subfield code="a">796.323/09756</subfield>
+ <subfield code="2">22</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Blythe, Will.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">To hate like this is to be happy forever :</subfield>
+ <subfield code="b">a thoroughly obsessive, intermittently uplifting and occasionally unbiased account of the Duke-North Carolina basketball rivalry /</subfield>
+ <subfield code="c">Will Blythe.</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+ <subfield code="a">1st ed.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">New York, NY :</subfield>
+ <subfield code="b">HarperCollins,</subfield>
+ <subfield code="c">c2006.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">357 p. ;</subfield>
+ <subfield code="c">24 cm.</subfield>
+</datafield>
+<datafield tag="530" ind1=" " ind2=" ">
+ <subfield code="a">Also available via the World Wide Web.</subfield>
+</datafield>
+<datafield tag="583" ind1="1" ind2=" ">
+ <subfield code="3">Rubenstein Library copy</subfield>
+ <subfield code="a">former call number: GV885.72.N8 B598 2006</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Basketball</subfield>
+ <subfield code="z">North Carolina.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Basketball</subfield>
+ <subfield code="x">Social aspects</subfield>
+ <subfield code="z">North Carolina.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Basketball fans</subfield>
+ <subfield code="z">North Carolina.</subfield>
+</datafield>
+<datafield tag="610" ind1="2" ind2="0">
+ <subfield code="a">North Carolina Tar Heels (Basketball team)</subfield>
+</datafield>
+<datafield tag="610" ind1="2" ind2="0">
+ <subfield code="a">Duke Blue Devils (Basketball team)</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Sports rivalries</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="x">History</subfield>
+ <subfield code="y">20th century.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Regionalism and sports.</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="u">http://www.netLibrary.com/urlapi.asp?action=summary&amp;v=1&amp;bookid=149668</subfield>
+ <subfield code="y">get it@Duke</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSL</subfield>
+ <subfield code="h">GV885.72.N8</subfield>
+ <subfield code="i">B598 2006</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">ARCH</subfield>
+ <subfield code="c">PAQ</subfield>
+ <subfield code="h">GV885.72.N8</subfield>
+ <subfield code="i">B598 2006</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">LILLY</subfield>
+ <subfield code="c">PLI</subfield>
+ <subfield code="h">GV885.72.N8</subfield>
+ <subfield code="i">B598 2006</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="h">GV885.72.N8</subfield>
+ <subfield code="i">B598 2006</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">ARCH</subfield>
+ <subfield code="c">PAQ</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">GV885.72.N8 B598 2006</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D02856594$ </subfield>
+ <subfield code="s">20060517</subfield>
+ <subfield code="u">20060622</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">003444379</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LSC</subfield>
+ <subfield code="c">PSL</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">GV885.72.N8 B598 2006</subfield>
+ <subfield code="n">c.2</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04803901P </subfield>
+ <subfield code="s">20150219</subfield>
+ <subfield code="u">20160302</subfield>
+ <subfield code="v">20180404</subfield>
+ <subfield code="w">3</subfield>
+ <subfield code="k">003444379</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">GV885.72.N8 B598 2006</subfield>
+ <subfield code="n">c.2</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03348566Z </subfield>
+ <subfield code="s">20060623</subfield>
+ <subfield code="u">20120612</subfield>
+ <subfield code="v">20180213</subfield>
+ <subfield code="w">28</subfield>
+ <subfield code="k">003444379</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">GV885.72.N8 B598 2006</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03081324L </subfield>
+ <subfield code="s">20060307</subfield>
+ <subfield code="u">20170907</subfield>
+ <subfield code="v">20160315</subfield>
+ <subfield code="w">25</subfield>
+ <subfield code="k">003444379</subfield>
+</datafield>
+</record>
+</collection>

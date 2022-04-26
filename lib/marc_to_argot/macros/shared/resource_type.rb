@@ -87,6 +87,8 @@ module MarcToArgot
           # LDR/06 = a,t AND LDR/07 = a, c, d, or m AND 008/24-27 (all) != m
           # OR
           # 006/00 = a, t AND 006/07-10 (all) != m
+          # OR
+          # 007/00 = a AND 007/01 = d (Atlases are books AND Maps)
           def book?
             marc_leader_06_match = %w[a t].include?(record.leader.byteslice(6))
             marc_leader_07_match = %w[a c d m].include?(record.leader.byteslice(7))
@@ -99,10 +101,15 @@ module MarcToArgot
                 !(field.value.byteslice(7..10) || '').scrub(' ').split('').include?('m')
             end
 
+            atlas_007_match = record.fields('007').find do |field|
+              field.value.byteslice(0..1) == 'ad'
+            end
+            
             return true if (marc_leader_06_match &&
                            marc_leader_07_match &&
                            marc_008_24_27_match) ||
-                           marc_006_match
+                           marc_006_match ||
+                           atlas_007_match
           end
 
           # Database
@@ -232,8 +239,6 @@ module MarcToArgot
           # Image
           # LDR/06 = k
           # OR
-          # LDR/06 = m AND 008/26 = c
-          # OR
           # LDR/06 = g AND 008/33 = a, c, I, k, l, n, p, s, t
           # OR
           # 006/00 = k
@@ -241,11 +246,6 @@ module MarcToArgot
           # 006/00 = g AND 006/16 = a, c, I, k, l, n, p, s, t
           def image?
             marc_leader_06_k_match = record.leader.byteslice(6) == 'k'
-
-            marc_leader_06_m_match = record.leader.byteslice(6) == 'm'
-            marc_008_26_match = record.fields('008').find do |field|
-              field.value.byteslice(26) == 'c'
-            end
 
             marc_leader_06_g_match = record.leader.byteslice(6) == 'g'
             marc_008_33_match = record.fields('008').find do |field|
@@ -259,7 +259,6 @@ module MarcToArgot
             end
 
             return true if marc_leader_06_k_match ||
-                           (marc_leader_06_m_match && marc_008_26_match) ||
                            (marc_leader_06_g_match && marc_008_33_match) ||
                            marc_006_match
           end
@@ -304,6 +303,8 @@ module MarcToArgot
           # LDR/06 = e, f
           # OR
           # 006/00 = e, f
+          # OR
+          # 007/00 = a
           def map?
             marc_leader_06_match = %w[e f].include?(record.leader.byteslice(6))
 
@@ -311,7 +312,11 @@ module MarcToArgot
               %w[e f].include?(field.value.byteslice(0))
             end
 
-            return true if marc_leader_06_match || marc_006_match
+            marc_007_match = record.fields('007').find do |field|
+              field.value.byteslice(0) == 'a'
+            end
+
+            return true if marc_leader_06_match || marc_006_match || marc_007_match
           end
 
           # Music recording
@@ -412,18 +417,23 @@ module MarcToArgot
           end
 
           # Software/multimedia
-          # LDR/06 = m AND 008/26 = b, c, g, i, m
+          # LDR/06 = m AND 008/26 = b, f, g, i
           # OR
-          # 006/00 = m AND 006/09 = b, c, g, i, m
+          # 006/00 = m AND 006/09 = b, f, g, i
+
+          def software_mm_comp_file_types
+            %w[b f g i]
+          end
+
           def software_multimedia?
             marc_leader_06_match = record.leader.byteslice(6) == 'm'
             marc_008_26_match = record.fields('008').find do |field|
-              %w[b c g i m].include?(field.value.byteslice(26))
+              software_mm_comp_file_types.include?(field.value.byteslice(26))
             end
 
             marc_006_match = record.fields('006').find do |field|
               field.value.byteslice(0) == 'm' &&
-                %w[b c g i m].include?(field.value.byteslice(9))
+                software_mm_comp_file_types.include?(field.value.byteslice(9))
             end
 
             return true if (marc_leader_06_match && marc_008_26_match) ||
@@ -477,7 +487,7 @@ module MarcToArgot
           # Web page or site
           # LDR/06 = a AND LDR/07 = b, i, or s AND 008/21 = w
           # OR
-          # 006/00 = a AND 006/04 = w
+          # 006/00 = s AND 006/04 = w
           def webpage_site?
             marc_leader_06_match = record.leader.byteslice(6) == 'a'
             marc_leader_07_match = %w[b i s].include?(record.leader.byteslice(7))
@@ -486,7 +496,7 @@ module MarcToArgot
             end
 
             marc_006_match = record.fields('006').find do |field|
-              field.value.byteslice(0) == 'a' &&
+              field.value.byteslice(0) == 's' &&
                 field.value.byteslice(4) == 'w'
             end
 

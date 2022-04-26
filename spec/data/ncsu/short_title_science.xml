@@ -1,0 +1,239 @@
+<collection xmlns='http://www.loc.gov/MARC21/slim'>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+  <leader>02328cas a2200469 a 4500</leader>
+  <controlfield tag="008">790725d19791986dcumx1p       0uuua0eng  </controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   80644238</subfield>
+    <subfield code="z">sc 80002342</subfield>
+    <subfield code="z">sn 79003776</subfield>
+  </datafield>
+  <datafield tag="022" ind1="0" ind2=" ">
+    <subfield code="a">0193-4511 (print)</subfield>
+  </datafield>
+  <datafield tag="022" ind1=" " ind2=" ">
+    <subfield code="l">0193-4511</subfield>
+  </datafield>
+  <datafield tag="030" ind1=" " ind2=" ">
+    <subfield code="a">SCEHDK</subfield>
+  </datafield>
+  <datafield tag="032" ind1=" " ind2=" ">
+    <subfield code="a">514090</subfield>
+    <subfield code="b">USPS</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o05206521</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)5206521</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NSD</subfield>
+    <subfield code="c">NSD</subfield>
+    <subfield code="d">HUL</subfield>
+    <subfield code="d">NSD</subfield>
+    <subfield code="d">NLM</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">OCL</subfield>
+    <subfield code="d">m.c.</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">NST</subfield>
+    <subfield code="d">NSD</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">NST</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">OCL</subfield>
+    <subfield code="d">NST</subfield>
+    <subfield code="d">SER</subfield>
+    <subfield code="d">NST</subfield>
+    <subfield code="d">RCS</subfield>
+    <subfield code="d">NRC</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">nsdp</subfield>
+    <subfield code="a">lc</subfield>
+  </datafield>
+  <datafield tag="082" ind1=" " ind2=" ">
+    <subfield code="a">505</subfield>
+  </datafield>
+  <datafield tag="130" ind1="0" ind2=" ">
+    <subfield code="a">Science (Washington, D.C. : Monthly)</subfield>
+  </datafield>
+  <datafield tag="222" ind1=" " ind2="0">
+    <subfield code="a">Science</subfield>
+    <subfield code="b">(Washington. 1979)</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Science.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Washington, D.C. :</subfield>
+    <subfield code="b">American Association for the Advancement of Science],</subfield>
+    <subfield code="c">-1986.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">7 v. :</subfield>
+    <subfield code="b">ill. ;</subfield>
+    <subfield code="c">28 cm.</subfield>
+  </datafield>
+  <datafield tag="310" ind1=" " ind2=" ">
+    <subfield code="a">Ten issues yearly</subfield>
+    <subfield code="b">&lt;Mar. 1981&gt;-1986</subfield>
+  </datafield>
+  <datafield tag="362" ind1="0" ind2=" ">
+    <subfield code="a">[Vol. 1, no. 1] (Nov./Dec. 1979)-v. 7, no. 6 (July/Aug. 1986).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Description based on: [Vol. 2, no. 2] (Mar. 1981); title from cover.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Issues for Nov./Dec. 1979-1986 include a year designation in conjuction with the title, e.g. Science 80.</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">1</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Science</subfield>
+    <subfield code="v">Periodicals.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Technology</subfield>
+    <subfield code="v">Periodicals.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2="0">
+    <subfield code="a">American Association for the Advancement of Science.</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">510555</subfield>
+  </datafield>
+  <datafield tag="919" ind1=" " ind2=" ">
+    <subfield code="a">ABO-2466</subfield>
+  </datafield>
+  <datafield tag="948" ind1=" " ind2=" ">
+    <subfield code="a">06/15/1993</subfield>
+    <subfield code="b">08/05/1999</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.1 1979/1980</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721604L</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.2 1981</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721605M</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.3 1982</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721606N</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.4 1983</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721607O</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.5 1984</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721608P</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.6 1985</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721609Q</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 v.7 1986 Jan.-Aug.</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S01721610I</subfield>
+    <subfield code="d">5/11/2015</subfield>
+    <subfield code="e">5/7/2015</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="n">1</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">4/2/2002</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 V.7 1986 JAN.-AUG.</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">510555-9001</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">12/1/2016</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 V.7 1986 JAN.-AUG.</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">510555-10001</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">12/1/2016</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">Q1 .S354 V.7 1986 JAN.-AUG.</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">2</subfield>
+    <subfield code="i">510555-10002</subfield>
+    <subfield code="l">STACKS</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">SERIAL</subfield>
+    <subfield code="u">2/24/2017</subfield>
+  </datafield>
+</record>
+</collection>

@@ -1,4 +1,5 @@
 # Argot attributes you do not want parsed by the default argot configuration
+- access_type
 - cataloged_date
 - donor
 - id
@@ -6,9 +7,10 @@
 - items
 - local_id
 - note_local
+- note_use_terms
 - oclc_number
+- physical_media
 - resource_type
 - rollup_id
 - sersol_number
 - url
-- names

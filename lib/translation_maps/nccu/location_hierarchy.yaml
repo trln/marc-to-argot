@@ -1,16 +1,5 @@
 CMC: nccu;nccucmcy
 MUSIC: nccu;nccumusc
-LAW: nccu;ncculaww
+LAW: nccu;ncculaww|law;lawnccuw
 SHEPARD: nccu;nccushed
 SLIS: nccu;nccusche
-
-#SHEPARD
-ARCHIVE: nccu;nccushed;nccuarchives
-ARCHIVES: nccu;nccushed;nccuarchives
-GOVTDOCS: nccu;nccushed;nccugovdocs
-LSSTACKS: nccu;nccushed;nccustacks
-MEDIA: nccu;nccushed;nccumedia
-REFERENCE: nccu;nccushed;nccureference
-RESERVEAV: nccu;nccushed;nccureserve
-RESERVES: nccu;nccushed;nccureserve
-STACKS: nccu;nccushed;nccustacks

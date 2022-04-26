@@ -19,12 +19,22 @@ module MarcToArgot
           
           def unc_formats
             formats = get_general_formats
+
+            # General logic sets these on way more things than they should
+            formats.delete('Dataset -- Statistical')
+            formats.delete('Dataset -- Geospatial')
+            
             if unc_archival?
               formats << 'Archival and manuscript material'
             end
-            if unc_manuscript?
-              formats = []
-              formats << 'Archival and manuscript material'
+            if unc_dataset_geospatial?
+              formats << 'Dataset -- Geospatial'
+            end
+            if unc_dataset_statistical?
+              formats << 'Dataset -- Statistical'
+            end
+            if unc_equip?
+              formats << 'Technology and accessories'
             end
             if unc_manuscript?
               formats = []
@@ -40,6 +50,7 @@ module MarcToArgot
               formats << 'Thesis/Dissertation'
               formats << 'Book' unless has_502?
             end
+            
             formats.uniq
           end
 
@@ -54,7 +65,9 @@ module MarcToArgot
           def computer_rec_type?
             record.leader.byteslice(6) == 'm'
           end
-          
+
+
+
           def unc_archival?
             archival_control? && archival_bib_level?
           end
@@ -72,7 +85,22 @@ module MarcToArgot
                              ( lang_rec_type? && %w[a c d m].include?(record.leader.byteslice(7)))
                            )
           end
-          
+
+          def get_iii_mattype
+            the999s = record.fields('999')
+            bib999arr = the999s.select { |f| f.indicator1 == '0' }
+            bib999 = bib999arr.first
+            bib999['m'] if bib999
+          end
+
+          def unc_dataset_statistical?
+            return true if get_iii_mattype == '8'
+          end
+
+          def unc_dataset_geospatial?
+            return true if get_iii_mattype == '7'
+          end
+                    
           def unc_manuscript?
             return true if manuscript_lang_rec_type? unless has_502?
           end
@@ -92,6 +120,17 @@ module MarcToArgot
             return true unless match006s.empty?
           end
 
+          # Software/multimedia
+          def software_mm_comp_file_types
+            %w[b f g i]
+          end
+
+          def unc_equip?
+            any919s = record.fields('919')
+            val919s = any919s.map { |field| field.value.strip } unless any919s.empty?
+            return true if val919s && val919s.include?('EQUIP')
+          end
+          
           # Text corpus
           # LDR/06 = m AND 008/26 = d AND 006/00 = a AND 336 contains dataset or cod
           def unc_text_corpus?

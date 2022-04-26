@@ -1,6 +1,6 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <marcxml:collection xmlns:marcxml="http://www.loc.gov/MARC21/slim">
- <marcxml:record>
+<?xml version="1.0" encoding="UTF-8"?>
+<marcxml:collection xmlns:marcxml="http://www.loc.gov/MARC21/slim">
+  <marcxml:record>
     <!-- Record that somehow got through even though its items are all in shadowed locations  -->
     <marcxml:leader>01283cam a2200301Ka 4500</marcxml:leader>
     <marcxml:controlfield tag="001">4535</marcxml:controlfield>
@@ -46,7 +46,7 @@
       <marcxml:subfield code="c">1</marcxml:subfield>
       <marcxml:subfield code="i">HAFU-4976-00001</marcxml:subfield>
       <marcxml:subfield code="l">ACQ-S</marcxml:subfield>
-      <marcxml:subfield code="m">BOOKBOT</marcxml:subfield>
+      <marcxml:subfield code="m">HUNT</marcxml:subfield>
       <marcxml:subfield code="r">Y</marcxml:subfield>
       <marcxml:subfield code="s">Y</marcxml:subfield>
       <marcxml:subfield code="t">MICROFICHE</marcxml:subfield>

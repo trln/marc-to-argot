@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cpcaa2200469Ia 4500 </leader>
+<controlfield tag="001">DUKE006500578 </controlfield>
+<controlfield tag="005">20150807133058.0 </controlfield>
+<controlfield tag="008">150319i17502014ncu^^^^^^^^^^^^^^^^^eng^^ </controlfield>
+<datafield tag="024" ind1="8" ind2=" ">
+ <subfield code="a">jhfnc</subfield>
+ <subfield code="d">DUKEPLEAD </subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">905223578 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NDD</subfield>
+ <subfield code="e">dacs</subfield>
+ <subfield code="c">NDD</subfield>
+ <subfield code="d">NDD</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">NDD </subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP </subfield>
+</datafield>
+<datafield tag="110" ind1="2" ind2=" ">
+ <subfield code="a">Jewish Heritage Foundation of North Carolina. </subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Jewish Heritage Foundation of North Carolina records,</subfield>
+ <subfield code="f">1750-2014 and undated. </subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">34.1</subfield>
+ <subfield code="f">linear ft. </subfield>
+</datafield>
+<datafield tag="351" ind1=" " ind2=" ">
+ <subfield code="a">The collection is arranged into four series: Administrative records, Exhibits, events and projects, Subject files, and Audiovisual. </subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Cataloged from items. </subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Acquired as part of the Jewish Heritage Foundation of North Carolina Collection. </subfield>
+</datafield>
+<datafield tag="520" ind1="8" ind2=" ">
+ <subfield code="a">The Jewish Heritage Foundation of North Carolina records span the years 1750 to 2014 and document the origins and daily operations of the organization, which preserves and presents the history of the Jewish people of North Carolina through public programming, exhibits, and other projects. The collection includes documents and digital material related to the planning, funding, and carrying out of various exhibits, events and projects, especially the multimedia program "Down Home: Jewish Life in North Carolina." Also present are primary and secondary research materials collected by JHFNC historian Leonard Rogoff related to the history and culture of Jews in North Carolina and southern Jewish identity. </subfield>
+</datafield>
+<datafield tag="520" ind1="8" ind2=" ">
+ <subfield code="a">Types of materials in the collection include financial statements, meeting minutes, correspondence, reports, typescripts, newsletters, marketing materials, photographs, research notes, and audiovisual material. Digital materials include photographs, administrative and promotional materials, and project design materials. </subfield>
+</datafield>
+<datafield tag="541" ind1=" " ind2=" ">
+ <subfield code="a">Gift of the Jewish Heritage Foundation of North Carolina. </subfield>
+</datafield>
+<datafield tag="555" ind1=" " ind2=" ">
+ <subfield code="a">Finding aid in repository and on the Web. </subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Removed from the Jewish Heritage Foundation of North Carolina collection. </subfield>
+</datafield>
+<datafield tag="545" ind1=" " ind2=" ">
+ <subfield code="a">The Jewish Heritage Foundation of North Carolina (JHFNC) is an independent organization dedicated to preserving and presenting the history of the Jewish people of North Carolina. Through public programming and exhibits, the JHFNC aspires to educate and showcase the richness of Jewish Life as well as promote a familiarity with the culture and lifestyle of Jews to the general public. </subfield>
+</datafield>
+<datafield tag="600" ind1="1" ind2="0">
+ <subfield code="a">Rogoff, Leonard. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Jewish art</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="v">Exhibitions. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Jewish families</subfield>
+ <subfield code="z">North Carolina. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Jews</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="x">History. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Jews</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="x">Social life and customs. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Jews</subfield>
+ <subfield code="z">United States</subfield>
+ <subfield code="x">Identity. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Judaism</subfield>
+ <subfield code="x">History. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Museums</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="z">Durham. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Nonprofit organizations</subfield>
+ <subfield code="z">North Carolina</subfield>
+ <subfield code="z">Durham. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Rabbis</subfield>
+ <subfield code="z">North Carolina. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Synagogues</subfield>
+ <subfield code="z">North Carolina. </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Audiovisual materials.</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Documentaries.</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Photographs.</subfield>
+ <subfield code="2">aat </subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Rogoff, Leonard. </subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Jewish Heritage Foundation of North Carolina Collection (David M. Rubenstein Rare Book &amp; Manuscript Library, Durham, NC) </subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+ <subfield code="y">Collection guide</subfield>
+ <subfield code="u">http://library.duke.edu/rubenstein/findingaids/jhfnc/ </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">MS</subfield>
+ <subfield code="b">MS All </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">P </subfield>
+ <subfield code="b">Mixed Material </subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20150319 </subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="D">v </subfield>
+</datafield>
+<datafield tag="852" ind1="8" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRMS</subfield>
+ <subfield code="h">Oversize MSS Box Run A:29</subfield>
+ <subfield code="D">v </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Oversize MSS Box Run A:29</subfield>
+ <subfield code="n">Ovsz. Folder 1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q"/>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655831W </subfield>
+ <subfield code="s">20150728</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650442P </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 10</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650451P </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 11</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650452Q </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 12</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650453R </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 13</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650454S </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 14</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650455T </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 15</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650456U </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 16</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650457V </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 17</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650458W </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 18</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650459X </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 19</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650460P </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 2</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650443Q </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 20</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650461Q </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 21</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650462R </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 22</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650463S </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 23</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650464T </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 24</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650465U </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 25</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650466V </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 26</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650467W </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 27</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650468X </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 28</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650469Y </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 29</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650470Q </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 3</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650444R </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 30</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650472S </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 31</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655809. </subfield>
+ <subfield code="s">20150706</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 32</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655827. </subfield>
+ <subfield code="s">20150726</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 33</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655828 </subfield>
+ <subfield code="s">20150726</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 34</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655829$ </subfield>
+ <subfield code="s">20150726</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 35</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655830V </subfield>
+ <subfield code="s">20150728</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 36</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655837 </subfield>
+ <subfield code="s">20150804</subfield>
+ <subfield code="u">20151008</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 37</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655838$ </subfield>
+ <subfield code="s">20150804</subfield>
+ <subfield code="u">20151008</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 38</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655839/ </subfield>
+ <subfield code="s">20150804</subfield>
+ <subfield code="u">20151008</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 39</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04655840W </subfield>
+ <subfield code="s">20150804</subfield>
+ <subfield code="u">20151008</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 4</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650445S </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 5</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650446T </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 6</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650447U </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 7</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650448V </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 8</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650449W </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSMS</subfield>
+ <subfield code="d">8</subfield>
+ <subfield code="h">Library Service Center</subfield>
+ <subfield code="n">Box 9</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">MSS</subfield>
+ <subfield code="p">D04650450O </subfield>
+ <subfield code="s">20150319</subfield>
+ <subfield code="u">20151209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">007298668 </subfield>
+</datafield>
+</record>
+</collection>

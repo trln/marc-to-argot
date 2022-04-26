@@ -2,9 +2,11 @@
 - id
 - local_id
 - rollup_id
+- issn
 - institution
 - items
 - access_type
 - physical_media
 - resource_type
 - names
+- sersol_number

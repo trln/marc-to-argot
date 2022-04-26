@@ -4,3 +4,34 @@ date_cataloged:
   - 999|00|a
 virtual_collection:
   - 919t
+genre_headings_local:
+  - 695avxyz
+subject_headings_local:
+  - 690abcdgqvxyz
+  - 691abgvxyz
+  - 698avxyz
+subject_chronological_local:
+  - 698a
+  - 698y
+  - 690y
+  - 691y
+  - 695y
+subject_genre_local:
+  - 695v
+  - 690v
+  - 691v
+  - 698v
+subject_genre_local_concatenated:
+  - 695ax
+subject_geographic_local:
+  - 690z
+  - 695z
+  - 698z
+subject_geographic_local_concatenated:
+  - 691az
+subject_topical_local:
+  - 690abcdfghjklmnopqrstu
+  - 690x
+  - 691x
+  - 695x
+  - 698x

@@ -5,7 +5,6 @@ require 'logger'
 module MarcToArgot
   # The class that executes for the Argot command line utility.
   class CommandLine < Thor
-
     map %w[--version -v] => :__version
 
     desc '--version, -v', 'print the version'
@@ -34,7 +33,7 @@ module MarcToArgot
      `$HOME/.gem/ruby/[ruby version]/gems/marc_to_argot_${VERSION}/lib/data/[collection]`
 
      but that can change depending on how you installed the gem.
-     LONGDESC
+    LONGDESC
 
     method_option   :pretty,
                     type: :boolean,
@@ -121,21 +120,29 @@ module MarcToArgot
         rescue StandardError => e
           puts "OH NO YOU DI'INT"
           log.fatal e.message
+          exit 4
         end
       end
 
-      traject_indexer.logger.info("traject (#{Traject::VERSION}) executing with: ")
+      traject_indexer.logger.info("traject (#{Traject::VERSION}) executing with:")
 
       io = input.respond_to?(:read) ? input : File.open(input, 'r')
       filename = input.to_s
       traject_indexer.settings['command_line.filename'] = filename if filename
-
-      result = traject_indexer.process(io)     
-      return result
-    rescue Exception => e
+      traject_indexer.process(io)
+    rescue StandardError => e
       # Try to log unexpected exceptions if possible
-      puts "WHAT?  #{e.message}"
-      traject_indexer && traject_indexer.logger &&  traject_indexer.logger.fatal("Traject::CommandLine: Unexpected exception, terminating execution: #{e.backtrace}") rescue nil
+      if traject_indexer && traject_indexer.logger
+        begin
+          backtrace = e.backtrace.join("\t\n")
+          traject_indexer.logger.fatal("Traject::CommandLine: Unexpected exception #{e} -- backtrace:\n#{backtrace}")
+        rescue StandardError => ex
+          warn("Unable to write error to traject logger: #{ex}")
+        end
+      else
+        warn(e)
+        warn(e.backtrace.join("\t\n"))
+      end
       raise e
     end
   end

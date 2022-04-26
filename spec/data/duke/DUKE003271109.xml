@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>01380cas a2200349 a 4500</leader>
+<controlfield tag="001">DUKE003271109</controlfield>
+<controlfield tag="003">OCoLC</controlfield>
+<controlfield tag="005">20031223154429.0</controlfield>
+<controlfield tag="007">he^bmb024bbca^^^^^^^</controlfield>
+<controlfield tag="008">031210c19uu9999dcuar^^^b^^^^f0^^^^0eng^d</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">2003230283</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">53879208</subfield>
+</datafield>
+<datafield tag="037" ind1=" " ind2=" ">
+ <subfield code="b">Paper version available from: Minerals Management Service, 1849 C St., NW, Washington, DC 20240</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">VOD</subfield>
+ <subfield code="c">VOD</subfield>
+ <subfield code="d">GPO</subfield>
+ <subfield code="d">MvI</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">lcd</subfield>
+</datafield>
+<datafield tag="043" ind1=" " ind2=" ">
+ <subfield code="a">n-us---</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">[Micro]NDHS</subfield>
+</datafield>
+<datafield tag="074" ind1=" " ind2=" ">
+ <subfield code="a">0671-C-01 (MF) (online)</subfield>
+</datafield>
+<datafield tag="086" ind1="0" ind2=" ">
+ <subfield code="a">I 72.1/2:</subfield>
+ <subfield code="z">I 19.1:2001</subfield>
+</datafield>
+<datafield tag="092" ind1=" " ind2=" ">
+ <subfield code="a">x</subfield>
+</datafield>
+<datafield tag="099" ind1=" " ind2=" ">
+ <subfield code="a">I 72.1/2:</subfield>
+</datafield>
+<datafield tag="110" ind1="1" ind2=" ">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">Minerals Management Service.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Annual financial report</subfield>
+ <subfield code="h">[microform].</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">[Washington, D.C.] :</subfield>
+ <subfield code="b">Minerals Management Service</subfield>
+</datafield>
+<datafield tag="310" ind1=" " ind2=" ">
+ <subfield code="a">Annual</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Description based on: Fiscal year 2001.</subfield>
+</datafield>
+<datafield tag="530" ind1=" " ind2=" ">
+ <subfield code="a">Current issue also available via the Internet at the MMS web site. Address as of 12/23/03: http://www.mms.gov/adm/budget.html; current access available via PURL.</subfield>
+</datafield>
+<datafield tag="533" ind1=" " ind2=" ">
+ <subfield code="a">Microfiche.</subfield>
+ <subfield code="m">&lt;2001-&gt;</subfield>
+ <subfield code="b">[Washington, D.C.] :</subfield>
+ <subfield code="c">Supt. of Docs., U.S. G.P.O.</subfield>
+ <subfield code="e">microfiches : negative.</subfield>
+</datafield>
+<datafield tag="610" ind1="1" ind2="0">
+ <subfield code="a">United States.</subfield>
+ <subfield code="b">Minerals Management Service.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Mines and mineral resources</subfield>
+ <subfield code="z">United States.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Continental shelf</subfield>
+ <subfield code="z">United States.</subfield>
+</datafield>
+<datafield tag="776" ind1="1" ind2=" ">
+ <subfield code="c">Original</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="1">
+ <subfield code="3">Current issue:</subfield>
+ <subfield code="u">http://purl.access.gpo.gov/GPO/LPS41424</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AS</subfield>
+ <subfield code="b">Serial</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">H </subfield>
+ <subfield code="b">Microform</subfield>
+</datafield>
+<datafield tag="852" ind1=" " ind2=" ">
+ <subfield code="b">DOCS</subfield>
+ <subfield code="c">PGSM</subfield>
+ <subfield code="h">I 72.1/2:</subfield>
+ <subfield code="D">y</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DOCS</subfield>
+ <subfield code="c">PGSM</subfield>
+ <subfield code="d"/>
+ <subfield code="h">I 72.1/2:</subfield>
+ <subfield code="n">c.1</subfield>
+ <subfield code="o">18</subfield>
+ <subfield code="q"/>
+ <subfield code="r">MFICH</subfield>
+ <subfield code="p">HBNS-8745-00001 </subfield>
+ <subfield code="s">20040206</subfield>
+ <subfield code="u">20040206</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">003271109</subfield>
+</datafield>
+</record>
+</collection>

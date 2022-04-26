@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01883cgm a2200433   4500</leader>
+  <controlfield tag="001">u1142402</controlfield>
+  <controlfield tag="003">SIRSI</controlfield>
+  <controlfield tag="005">20160727153620.0</controlfield>
+  <controlfield tag="007">go c|bdf|</controlfield>
+  <controlfield tag="007">go c|bff|</controlfield>
+  <controlfield tag="008">750520s1975    xxunnn e          fneng  </controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">   75733828</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">DLC</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">DLC</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">OCLCF</subfield>
+    <subfield code="d">OCLCO</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">[RC]NCXF</subfield>
+  </datafield>
+  <datafield tag="019" ind1=" " ind2=" ">
+    <subfield code="a">3112578</subfield>
+    <subfield code="a">5608751</subfield>
+  </datafield>
+  <datafield tag="024" ind1="1" ind2=" ">
+    <subfield code="a">hein4792868</subfield>
+    <subfield code="q">exclude</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="z">(OCoLC)3112578</subfield>
+    <subfield code="z">(OCoLC)5608751</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">n-us---</subfield>
+  </datafield>
+  <datafield tag="082" ind1="1" ind2="0">
+    <subfield code="a">781.7</subfield>
+  </datafield>
+  <datafield tag="090" ind1=" " ind2=" ">
+    <subfield code="a">RC</subfield>
+    <subfield code="b">5493</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="3">
+    <subfield code="a">An Audiou visual history of American folk music. #h [filmstrip].</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="b">Educational Audio Visual,</subfield>
+    <subfield code="c">1975.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">5 filmstrips.</subfield>
+    <subfield code="b">color.</subfield>
+    <subfield code="c">35 mm.</subfield>
+    <subfield code="e">and 5 phonodiscs (2 s. each; 1 s. for manual projector, 1 s. for automatic projector), 12 in., 33 1/3 rpm.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Part 1, 73 fr., 16 min.; pt. 2, 70 fr., 20 min.; pt. 3, 74 fr., 19 min.; pt. 4, 56 fr., 20 min.; pt. 5, 44 fr., 16 min.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Also issued with phonotape in cassette.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">With teacher&apos;s notes.</subfield>
+  </datafield>
+  <datafield tag="508" ind1=" " ind2=" ">
+    <subfield code="a">Script and research, Robert Norman; narrator, Norman Rose; editor, Beatrice Fuhring.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">The first three parts trace the main themes of American folk music from Indian music to the music that immigrants brought to the New World. The last two parts view American history as seen through the music of each period.</subfield>
+  </datafield>
+  <datafield tag="590" ind1=" " ind2=" ">
+    <subfield code="a">(F).</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Folk music</subfield>
+    <subfield code="z">United States</subfield>
+    <subfield code="x">History and criticism.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="7">
+    <subfield code="a">Folk music.</subfield>
+    <subfield code="2">fast</subfield>
+    <subfield code="0">(OCoLC)fst00929383</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="7">
+    <subfield code="a">United States.</subfield>
+    <subfield code="2">fast</subfield>
+    <subfield code="0">(OCoLC)fst01204155</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Criticism, interpretation, etc.</subfield>
+    <subfield code="2">fast</subfield>
+    <subfield code="0">(OCoLC)fst01411635</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Educational Audio Visual, Inc.</subfield>
+  </datafield>
+  <datafield tag="029" ind1="1" ind2=" ">
+    <subfield code="a">AU@</subfield>
+    <subfield code="b">000022513524</subfield>
+  </datafield>
+  <datafield tag="029" ind1="1" ind2=" ">
+    <subfield code="a">AU@</subfield>
+    <subfield code="b">000026976446</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">Z0</subfield>
+    <subfield code="b">NCX</subfield>
+  </datafield>
+  <datafield tag="948" ind1=" " ind2=" ">
+    <subfield code="h">HELD BY NCX - 27 OTHER HOLDINGS</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">5</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">MUSIC RC 5493</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">3213009378726</subfield>
+    <subfield code="l">MEDIA</subfield>
+    <subfield code="m">MUSIC</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">VINYL</subfield>
+    <subfield code="u">7/27/2016</subfield>
+  </datafield>
+</record>
+</collection>

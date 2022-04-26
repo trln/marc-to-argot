@@ -3,36 +3,55 @@ require 'spec_helper'
 describe MarcToArgot do
   include Util::TrajectRunTest
 
-  it '(Duke) extracts items' do
-    result = run_traject_json('duke', 'items', 'mrc')
-    expect(result['items']).to(
-      eq(["{\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"cn_scheme\":\"LC\",\"call_no\":\"DF229.T6 C8 1969\","\
-          "\"copy_no\":\"c.1\",\"type\":\"BOOK\",\"item_id\":\"D03223637Q\",\"status\":\"Available\"}"])
+  let(:access_type_01) { run_traject_json('duke', 'access_type_01', 'xml') }
+  let(:access_type_02) { run_traject_json('duke', 'access_type_02', 'xml') }
+  let(:access_type_03) { run_traject_json('duke', 'access_type_03', 'xml') }
+  let(:access_type_04) { run_traject_json('duke', 'access_type_04', 'xml') }
+  let(:access_type_05) { run_traject_json('duke', 'access_type_05', 'xml') }
+  let(:internet_archive_id) { run_traject_json('duke', 'internet_archive_id', 'xml') }
+
+  it '(Duke) sets access_type and physical_media for access_type_01' do
+    expect(access_type_01['access_type']).to(
+      eq(['Online'])
+    )
+    expect(access_type_01['physical_media']).to(
+      eq(['Online'])
     )
   end
 
-  it '(Duke) extracts barcodes' do
-    result = run_traject_json('duke', 'items', 'mrc')
-    expect(result['barcodes']).to(
-      eq(["D03223637Q"])
+  it '(Duke) sets access_type and physical_media for access_type_02' do
+    expect(access_type_02['access_type']).to(
+      eq(['Online'])
+    )
+    expect(access_type_02['physical_media']).to(
+      eq(['Online'])
     )
   end
 
-  it '(Duke) generates holdings data' do
-    result = run_traject_json('duke', 'holdings', 'mrc')
-    expect(result['holdings']).to(
-      eq(["{\"loc_b\":\"LAW\"," \
-          "\"loc_n\":\"LGEN\"," \
-          "\"notes\":[\"Currently received\"]," \
-          "\"call_no\":\"KD135 .H3 4th\"," \
-          "\"summary\":\"v.1-v.52; Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
+  it '(Duke) sets access_type and physical_media for access_type_03' do
+    expect(access_type_03['access_type']).to(
+      eq(['Online', 'At the Library'])
+    )
+    expect(access_type_03['physical_media']).to(
+      eq(['Print', 'Online'])
     )
   end
 
-  it '(Duke) generates the location hierarchy' do
-    result = run_traject('duke', 'holdings', 'mrc')
-    expect(JSON.parse(result)['location_hierarchy']).to(
-      eq(['duke', 'duke:dukelaww', 'law', 'law:lawdukw'])
+  it '(Duke) sets access_type and physical_media for access_type_04' do
+    expect(access_type_04['access_type']).to(
+      eq(['Online'])
+    )
+    expect(access_type_04['physical_media']).to(
+      eq(['Online'])
+    )
+  end
+
+  it '(Duke) sets access_type and physical_media for access_type_05' do
+    expect(access_type_05['access_type']).to(
+      eq(['Online', 'At the Library'])
+    )
+    expect(access_type_05['physical_media']).to(
+      eq(['Print', 'Online'])
     )
   end
 
@@ -47,6 +66,13 @@ describe MarcToArgot do
     result = run_traject_json('duke', 'rollup_id', 'mrc')
     expect(result['rollup_id']).to(
       eq('OCLC12420922')
+    )
+  end
+
+  it '(Duke) generates rollup_id from sersol number' do
+    result = run_traject_json('duke', 'sersol_rollup', 'xml')
+    expect(result['rollup_id']).to(
+      eq('ssib031808849')
     )
   end
 
@@ -73,5 +99,10 @@ describe MarcToArgot do
   it '(Duke) does NOT add a "DUKE" prefix to the record id if it is present.' do
     result = run_traject_json('duke', 'prefixed_id', 'mrc')
     expect(result['id']).to eq('DUKE002959320')
+  end
+
+  it '(Duke) sets the internet archive id from 955$q' do
+    result = internet_archive_id['internet_archive_id']
+    expect(result).to eq(['worksoflordbyron21byro', 'worksoflordbyron22byro'])
   end
 end

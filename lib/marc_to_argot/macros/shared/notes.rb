@@ -9,6 +9,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("506abcdefu").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
               acc << [label, value].compact.join(': ') if value
@@ -23,6 +24,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("563au").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               note = {}
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
@@ -51,6 +53,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("562abcde").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               value = extractor.collect_subfields(field, spec).first
               acc << [label, value].compact.join(': ') if value
@@ -83,6 +86,7 @@ module MarcToArgot
           lambda do |rec, acc|
             Traject::MarcExtractor.cached("555abcdu3").each_matching_line(rec) do |field, spec, extractor|
               next unless subfield_5_absent_or_present_with_local_code?(field)
+
               label = field.subfields.select { |sf| sf.code == '3' }.map(&:value).first
               case field.indicator1
               when ' '
@@ -153,7 +157,7 @@ module MarcToArgot
 
       def note_general_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when /^(500|518|546|585|586)$/
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '521'
@@ -183,7 +187,7 @@ module MarcToArgot
       end
 
       def note_general_value(field, spec, extractor)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '500'
           unless subfield_5_present?(field)
             extractor.collect_subfields(field, spec).first
@@ -217,7 +221,7 @@ module MarcToArgot
       end
 
       def note_general_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '526'
           if (%w[b c d z] & field.subfields.map(&:code)).any?
             collect_and_join_subfield_values(field, 'a')
@@ -226,7 +230,7 @@ module MarcToArgot
       end
 
       def note_general_indexed(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when /^(504|518|521|556)$/
           'false'
         end
@@ -237,21 +241,22 @@ module MarcToArgot
       ######
       def note_local
         lambda do |rec, acc|
-          Traject::MarcExtractor.cached("500a:541abcdefhno3:561a:590a").each_matching_line(rec) do |field, spec, extractor|
+          Traject::MarcExtractor.cached("500a:541abcdefhno3:561a:583abcdefhijklnouz:590a").each_matching_line(rec) do |field, spec, extractor|
             next unless subfield_5_absent_or_present_with_local_code?(field)
+
             notes = {}
 
             label = note_local_label(field)
-            notes[:label] = label unless label.nil? || label.empty?
+            notes['label'] = label unless label.nil? || label.empty?
 
             value = note_local_value(field, spec, extractor)
-            notes[:value] = value unless value.nil? || value.empty?
+            notes['value'] = value unless value.nil? || value.empty?
 
             indexed_value = note_local_indexed_value(field)
-            notes[:indexed_value] = indexed_value unless indexed_value.nil? || indexed_value.empty?
+            notes['indexed_value'] = indexed_value unless indexed_value.nil? || indexed_value.empty?
 
-            next if (notes[:value].nil? || notes[:value].empty?) &&
-                    (notes[:indexed_value].nil? || notes[:indexed_value].empty?)
+            next if (notes['value'].nil? || notes['value'].empty?) &&
+                    (notes['indexed_value'].nil? || notes['indexed_value'].empty?)
 
             acc << notes
           end
@@ -260,7 +265,7 @@ module MarcToArgot
 
       def note_local_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '500'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '541'
@@ -268,13 +273,16 @@ module MarcToArgot
         when '561'
           labels << 'Ownership history'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
+        when '583'
+          labels << 'Action note'
+          labels << collect_subfield_values_by_code(field, '3').join(' ')
         end
 
         labels.compact.reject(&:empty?).join(': ')
       end
 
       def note_local_value(field, spec, extractor)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '500'
           if subfield_5_present_with_local_code?(field)
             extractor.collect_subfields(field, spec).first
@@ -283,13 +291,17 @@ module MarcToArgot
           unless field.indicator1 == '0'
             extractor.collect_subfields(field, spec).first
           end
+        when '583'
+          if field.indicator1 == '1'
+            extractor.collect_subfields(field, spec).first
+          end  
         else
           extractor.collect_subfields(field, spec).first
         end
       end
 
       def note_local_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '541'
           collect_subfield_values_by_code(field, 'a').join(' ')
         end
@@ -324,17 +336,32 @@ module MarcToArgot
       end
 
       ################################################
+      # Note Preferred Citation
+      ######
+      def note_preferred_citation
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached('524a').each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+            label = collect_subfield_values_by_code(field, '3').compact.reject(&:empty?).join(': ')
+            label = label.sub(/:\s*$/, '') if label
+            value = extractor.collect_subfields(field, spec).first.gsub(/preferred citation:?\s*/i, '')
+            acc << [label, value].compact.reject(&:empty?).join(': ') if value
+          end
+        end
+      end
+
+      ################################################
       # Note Related Work
       ######
       def note_related_work
         lambda do |rec, acc|
-          Traject::MarcExtractor.cached("535abcdg:544abcden:580a").each_matching_line(rec) do |field, spec, extractor|
+          Traject::MarcExtractor.cached("535abcdg:544abcden:580a:581az").each_matching_line(rec) do |field, spec, extractor|
             notes = {}
 
             label = note_related_work_label(field)
             notes[:label] = label unless label.nil? || label.empty?
 
-            value = extractor.collect_subfields(field, spec).first
+            value = note_related_work_value(field, spec, extractor)
             notes[:value] = value unless value.nil? || value.empty?
 
             indexed_value = note_related_work_indexed_value(field)
@@ -353,7 +380,7 @@ module MarcToArgot
 
       def note_related_work_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '535'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
           labels << 'Originals held by' if field.indicator1 == '1'
@@ -361,25 +388,49 @@ module MarcToArgot
         when '544'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
           labels << 'Related materials' if %w[0 1].include?(field.indicator1)
+        when '581'
+          if field.subfields.map(&:code).include?('3')
+            sf3 = collect_subfield_values_by_code(field, '3').join(' ')
+            labels << "Publications relating to #{sf3.downcase}"
+          else
+            labels << 'Related publications'
+          end
         end
 
         labels.compact.reject(&:empty?).join(': ')
       end
 
+      def note_related_work_value(field, spec, extractor)
+        case field_tag_or_880_linkage_tag(field)
+        when '535', '544', '580'
+          extractor.collect_subfields(field, spec).first
+        when '581'
+          field.subfields.map do |sf|
+            if sf.code == 'z'
+              "ISBN #{sf.value}"
+            elsif sf.code =~ /[a]/
+              sf.value
+            end
+          end.compact.reject(&:empty?).join(' ')
+        end
+      end
+
       def note_related_work_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '544'
           collect_subfield_values_by_code(field, 'd').join(' ')
         end
       end
 
       def note_related_work_indexed(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '535'
           'false'
         when '544'
           'false' unless field.subfields.map(&:code).include?('d')
         when '580'
+          'false'
+        when '581'
           'false'
         end
       end
@@ -415,7 +466,7 @@ module MarcToArgot
 
       def note_reproduction_label(field)
         labels = []
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '533'
           labels << collect_subfield_values_by_code(field, '3').join(' ')
         when '534'
@@ -430,7 +481,7 @@ module MarcToArgot
       end
 
       def note_reproduction_indexed_value(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '533'
           field.subfields.select { |sf| %w[c f].include?(sf.code) }.map(&:value).join(' ')
         when '534'
@@ -441,7 +492,7 @@ module MarcToArgot
       end
 
       def note_reproduction_indexed(field)
-        case field.tag
+        case field_tag_or_880_linkage_tag(field)
         when '533'
           return 'false' if (%w[c f] & field.subfields.map(&:code)).empty?
         when '534'
@@ -472,23 +523,50 @@ module MarcToArgot
         lambda do |rec, acc|
           Traject::MarcExtractor.cached('510abcux3').each_matching_line(rec) do |field, spec, extractor|
             next unless subfield_5_absent_or_present_with_local_code?(field)
-            label = []
-            values = []
-            field.subfields.each do |sf|
-              if sf.code == 'x'
-                values << "ISSN #{sf.value}"
-              elsif sf.code == '3'
-                label << sf.value.chomp(':')
-              else
-                values << sf.value
-              end
-            end
-            value = values.join(' ')
-            acc << [*label, value].compact.join(': ') if value
+            notes = {}
+
+            label = note_cited_in_label(field)
+            notes[:label] = label unless label.nil? || label.empty?
+
+            value = note_cited_in_value(field, spec, extractor)
+            notes[:value] = value unless value.nil? || value.empty?
+
+            indexed_value = note_cited_in_indexed_value(field)
+            notes[:indexed_value] = indexed_value unless indexed_value.nil? || indexed_value.empty? || indexed_value == value
+
+            next if (notes[:value].nil? || notes[:value].empty?) &&
+                    (notes[:indexed_value].nil? || notes[:indexed_value].empty?)
+
+            acc << notes
           end
         end
       end
-      
+
+      def note_cited_in_label(field)
+        labels = []
+        labels << collect_subfield_values_by_code(field, '3').join(' ')
+        labels.compact.reject(&:empty?).join(': ')
+      end
+
+      def note_cited_in_value(field, spec, extractor)
+        value = []
+        field.subfields.each do |sf|
+          if sf.code == 'x'
+            value << "ISSN #{sf.value}"
+          elsif sf.code =~ /[abcu]/
+            value << sf.value
+          end
+        end
+        return value.join(' ')
+      end
+
+      def note_cited_in_indexed_value(field)
+        value = []
+        field.subfields.each{ |sf| value << sf.value if 'abc'.include?(sf.code) }
+        return value.join(' ')
+      end
+
+
       ################################################
       # Note System Details
       ######
@@ -499,6 +577,35 @@ module MarcToArgot
             label = field.subfields.select { |sf| %w[3 i].include?(sf.code) }.map { |sf| sf.value.chomp(':') }
             value = extractor.collect_subfields(field, spec).first
             acc << [*label, value].compact.join(': ') if value
+          end
+        end
+      end
+
+
+      ################################################
+      # Note Use Terms
+      ######
+      def note_use_terms
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached('540abcdfgqu').each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+            label = collect_subfield_values_by_code(field, '3').compact.reject(&:empty?).join(': ')
+            value = extractor.collect_subfields(field, spec).first
+            acc << [label, value].compact.reject(&:empty?).join(': ') if value
+          end
+        end
+      end
+
+
+      ################################################
+      # Note With
+      ######
+      def note_with
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("501a").each_matching_line(rec) do |field, spec, extractor|
+            next unless subfield_5_absent_or_present_with_local_code?(field)
+
+            acc << extractor.collect_subfields(field, spec).first
           end
         end
       end

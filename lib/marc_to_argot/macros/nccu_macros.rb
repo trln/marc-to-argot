@@ -17,30 +17,44 @@ module MarcToArgot
         substring_present_in_subfield?(fld, 'u', 'https://finding-aids.lib.unc.edu/')
       end
 
-      def online_access?(_rec, libraries = [])
-        libraries.include?('ONLINE')
+      def url
+        lambda do |rec, acc|
+          Traject::MarcExtractor.cached("856uy3").each_matching_line(rec) do |field, spec, extractor|
+            url = {}
+            url[:href] = url_href_value(field)
+
+            next if url[:href].nil? || url[:href].empty?
+
+            url[:type] = url_type_value(field)
+            url[:text] = url_text(field) unless url_text(field).empty?
+            url[:note] = url_note(field) unless url_note(field).empty?
+            url[:restricted] = url_restricted?(url[:href], url[:type])
+
+            acc << url.to_json if !acc.include?(url.to_json)
+
+          end
+        end
       end
 
-      def physical_access?(_rec, libraries = [])
-        !libraries.find { |x| x != 'ONLINE' }.nil?
+      def url_restricted?(href, type)
+        return false unless href.match(/(\.edu)|(\.gov)|(bloomberglaw)/) != nil && type == 'fulltext'
       end
 
       def rollup_id
         lambda do |rec, acc|
           Traject::MarcExtractor.cached("035a").each_matching_line(rec) do |field, spec, extractor|
             if field.value.include?('(OCoLC)')
-              acc << field.value.gsub(/^\(OCoLC\)(\d+)$/, 'OCLC\1')
+              acc << field.value.gsub(/^\(OCoLC\)(\d+)([\w|()]*)$/, 'OCLC\1')
             elsif field.value.include?('(Sirsi)')
               Traject::MarcExtractor.cached("001").each_matching_line(rec) do |field, spec, extractor|
-                if field.value.match(/^(ocm|ocn|on)?0\d+$/)
-                  acc << field.value.gsub(/^(ocm|ocn|on)?0(\d+)$/, 'OCLC\2')
+                if field.value.match(/^(ocm|ocn|on)0*\d+$/)
+                  acc << field.value.gsub(/^(ocm|ocn|on)0*(\d+)$/, 'OCLC\2')
                 end  
               end 
-            end 
+            end
           end
         end    
       end
-
     end
   end
 end

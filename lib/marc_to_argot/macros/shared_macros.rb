@@ -1,13 +1,20 @@
-require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/helpers'
+require 'marc_to_argot/macros/shared/call_numbers'
+require 'marc_to_argot/macros/shared/edition'
 require 'marc_to_argot/macros/shared/imprint'
+require 'marc_to_argot/macros/shared/language'
 require 'marc_to_argot/macros/shared/misc_id'
 require 'marc_to_argot/macros/shared/names'
+require 'marc_to_argot/macros/shared/creator_main' #placed here because it requires names
 require 'marc_to_argot/macros/shared/notes'
+require 'marc_to_argot/macros/shared/origin_place'
 require 'marc_to_argot/macros/shared/physical_description'
 require 'marc_to_argot/macros/shared/physical_media'
+require 'marc_to_argot/macros/shared/publication_year'
 require 'marc_to_argot/macros/shared/resource_type'
 require 'marc_to_argot/macros/shared/series_statement'
+require 'marc_to_argot/macros/shared/sersol_number'
+require 'marc_to_argot/macros/shared/statement_of_responsibility'
 require 'marc_to_argot/macros/shared/subject_genre'
 require 'marc_to_argot/macros/shared/title'
 require 'marc_to_argot/macros/shared/title_variant'
@@ -15,7 +22,6 @@ require 'marc_to_argot/macros/shared/upc'
 require 'marc_to_argot/macros/shared/urls'
 require 'marc_to_argot/macros/shared/vernacular'
 require 'marc_to_argot/macros/shared/work_entry'
-require 'marc_to_argot/macros/shared/call_numbers'
 
 require 'set'
 
@@ -25,16 +31,23 @@ module MarcToArgot
     # defined here, and overriden in institution-specific modules in the
     # same namespace.
     module Shared
-      include Edition
       include Helpers
+      include CallNumbers
+      include Edition
       include Imprint
+      include Language
       include MiscId
       include Names
+      include CreatorMain #placed here because it requires names
       include Notes
+      include OriginPlace
       include PhysicalDescription
+      include PublicationYear
       include PhysicalMedia
       include ResourceType
       include SeriesStatement
+      include SersolNumber
+      include StatementOfResponsibility
       include SubjectGenre
       include Title
       include TitleVariant
@@ -42,7 +55,6 @@ module MarcToArgot
       include Urls
       include Vernacular
       include WorkEntry
-      include CallNumbers
 
       # values to look for in the 856 that indicate
       # a record has online access.
@@ -101,7 +113,7 @@ module MarcToArgot
       # @param rec [MARC::Field] the field to be checked.
       def subfield_5_present_with_local_code?(field)
         subfield_5_present?(field) &&
-          (field.subfields.select { |sf| sf.code == '5' }.map(&:value) &
+          (field.subfields.select { |sf| sf.code == '5' }.map { |sf| sf.value.strip } &
             local_marc_org_codes).any?
       end
     end

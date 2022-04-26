@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>02689cas a2200781 a 4500</leader>
+  <controlfield tag="001">ssj0037072</controlfield>
+  <controlfield tag="003">WaSeSS</controlfield>
+  <controlfield tag="005">20180615070329.0</controlfield>
+  <controlfield tag="006">m        d        </controlfield>
+  <controlfield tag="007">cr  n         </controlfield>
+  <controlfield tag="008">050408c19669999caufr p s     0   a0eng c</controlfield>
+  <datafield tag="010" ind1=" " ind2=" ">
+    <subfield code="a">  2005236647</subfield>
+  </datafield>
+  <datafield tag="016" ind1="7" ind2=" ">
+    <subfield code="a">027348954</subfield>
+    <subfield code="2">DE-101</subfield>
+  </datafield>
+  <datafield tag="016" ind1="7" ind2=" ">
+    <subfield code="a">2184891-9</subfield>
+    <subfield code="2">DE-600</subfield>
+  </datafield>
+  <datafield tag="022" ind1=" " ind2=" ">
+    <subfield code="a">2326-067X (electronic)</subfield>
+  </datafield>
+  <datafield tag="022" ind1=" " ind2=" ">
+    <subfield code="y">0078-7469 (print)</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(WaSeSS)ssj0037072</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">EYM</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="c">EYM</subfield>
+    <subfield code="d">HUL</subfield>
+    <subfield code="d">WEA</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">GBVCP</subfield>
+    <subfield code="d">DLC</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">OCLCF</subfield>
+    <subfield code="d">OCLCO</subfield>
+    <subfield code="d">VT2</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">DEBBG</subfield>
+    <subfield code="d">GILDS</subfield>
+    <subfield code="d">OCLCO</subfield>
+    <subfield code="d">WaSeSS</subfield>
+  </datafield>
+  <datafield tag="041" ind1="0" ind2=" ">
+    <subfield code="a">eng</subfield>
+    <subfield code="a">fre</subfield>
+    <subfield code="a">ita</subfield>
+    <subfield code="a">ger</subfield>
+    <subfield code="a">spa</subfield>
+  </datafield>
+  <datafield tag="042" ind1=" " ind2=" ">
+    <subfield code="a">pcc</subfield>
+    <subfield code="a">nsdp</subfield>
+  </datafield>
+  <datafield tag="050" ind1="1" ind2="4">
+    <subfield code="a">P1.A1 e-journal</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">405</subfield>
+    <subfield code="2">23</subfield>
+  </datafield>
+  <datafield tag="130" ind1="0" ind2=" ">
+    <subfield code="a">Pacific Coast philology (Online)</subfield>
+  </datafield>
+  <datafield tag="222" ind1=" " ind2="0">
+    <subfield code="a">Pacific Coast philology</subfield>
+    <subfield code="b">(Online)</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Pacific Coast philology</subfield>
+    <subfield code="h">[electronic resource].</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Northridge, Calif. :</subfield>
+    <subfield code="b">Philological Association of the Pacific Coast,</subfield>
+    <subfield code="c">1966-</subfield>
+  </datafield>
+  <datafield tag="310" ind1=" " ind2=" ">
+    <subfield code="a">Semiannual,</subfield>
+    <subfield code="b">1981-</subfield>
+  </datafield>
+  <datafield tag="321" ind1=" " ind2=" ">
+    <subfield code="a">Annual,</subfield>
+    <subfield code="b">1966-1980</subfield>
+  </datafield>
+  <datafield tag="362" ind1="0" ind2=" ">
+    <subfield code="a">Vol. 1 (Apr. 1966)-</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Title from title screen (JSTOR, viewed Apr. 13, 2005).</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Place of publication varies.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">In English, French, Italian, German and Spanish.</subfield>
+  </datafield>
+  <datafield tag="550" ind1=" " ind2=" ">
+    <subfield code="a">Published by: Pacific Ancient and Modern Language Association, 1995-</subfield>
+  </datafield>
+  <datafield tag="588" ind1=" " ind2=" ">
+    <subfield code="a">Latest issue consulted: Vol. 44, no. 2 (2009) (JSTOR, viewed Jan. 7, 2013).</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Philology</subfield>
+    <subfield code="v">Periodicals.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="0">
+    <subfield code="a">Electronic journals.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Philological Association of the Pacific Coast.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Pacific Ancient and Modern Language Association.</subfield>
+  </datafield>
+  <datafield tag="776" ind1="1" ind2=" ">
+    <subfield code="t">Pacific Coast philology</subfield>
+    <subfield code="x">0078-7469</subfield>
+    <subfield code="w">(DLC)   77646405</subfield>
+    <subfield code="w">(OCoLC)2449380</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="h">ONL-EJOUR</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20110204</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2362907</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">P1 .A1 e-journal</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">2362907-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">N</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">EJOURNAL</subfield>
+    <subfield code="u">2/4/2011</subfield>
+    <subfield code="0">360MARC</subfield>
+  </datafield>
+</record>
+</collection>

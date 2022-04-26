@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     ctm a2200529 i 450 </leader>
+<controlfield tag="001">DUKE005314421</controlfield>
+<controlfield tag="005">20141028103547.0</controlfield>
+<controlfield tag="008">110922t20122012nyua^^^^^^^^^^001^1^eng^^</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">2011036690</subfield>
+</datafield>
+<datafield tag="016" ind1="7" ind2=" ">
+ <subfield code="a">016034931</subfield>
+ <subfield code="2">Uk</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9780374105389 (alk. paper)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">0374105383 (alk. paper)</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">740628869</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">DLC</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="e">rda</subfield>
+ <subfield code="c">DLC</subfield>
+ <subfield code="d">YDX</subfield>
+ <subfield code="d">BTCTA</subfield>
+ <subfield code="d">YDXCP</subfield>
+ <subfield code="d">BDX</subfield>
+ <subfield code="d">UKMGB</subfield>
+ <subfield code="d">OBE</subfield>
+ <subfield code="d">CDX</subfield>
+ <subfield code="d">ABG</subfield>
+ <subfield code="d">JRS</subfield>
+ <subfield code="d">VP@</subfield>
+ <subfield code="d">OCLCF</subfield>
+</datafield>
+<datafield tag="041" ind1="1" ind2=" ">
+ <subfield code="a">eng</subfield>
+ <subfield code="a">ita</subfield>
+ <subfield code="h">ita</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="9" ind2="7">
+ <subfield code="a">PQ4214</subfield>
+ <subfield code="b">.F74 2012</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+ <subfield code="a">PQ4214</subfield>
+ <subfield code="b">.F74 2012</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="0">
+ <subfield code="a">851/.91</subfield>
+ <subfield code="2">23</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="4">
+ <subfield code="a">The FSG book of twentieth-century Italian poetry :</subfield>
+ <subfield code="b">an anthology /</subfield>
+ <subfield code="c">edited by Geoffrey Brock.</subfield>
+</datafield>
+<datafield tag="246" ind1="1" ind2="0">
+ <subfield code="a">Twentieth-century Italian poetry</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+ <subfield code="a">First edition.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">New York :</subfield>
+ <subfield code="b">Farrar, Straus, Giroux,</subfield>
+ <subfield code="c">[2012]</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="4">
+ <subfield code="c">copyright 2012</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">xliii, 672 pages :</subfield>
+ <subfield code="b">illustrations ;</subfield>
+ <subfield code="c">24 cm</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="561" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: Removed from the Fred Chappell papers.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Rubenstein Library copy 1: In dust jacket, as issued.</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">Includes index.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+ <subfield code="a">4 poems translated by Fred Chappell.</subfield>
+</datafield>
+<datafield tag="505" ind1="2" ind2=" ">
+ <subfield code="a">Two tunnels : a note on translation -- Giovanni Pascoli (1855-1912) -- Salvatore di Giacomo (1860-1934) -- Gabriele d'Annunzio (1863-1938) -- Trilussa (1871-1950) -- Giacomo Balla (1871-1958) -- F.T. Marinetti (1876-1944) -- Ardengo Soffici (1879-1964) -- Farfa (1879-1964) -- Guido Gozzano (1883-1916) -- Umberto Saba (1883-1957) -- Corrado Govoni (1884-1965) -- Dino Campana (1885-1932) -- Clemente Rèbora (1885-1957) -- Aldo Palazzeschi (1885-1974) -- Sergio Corazzini (1886-1959) -- Vincenzo Cardarelli (1887-1959) -- Diego Valeri (1887-1976) -- Camillo Sbarbaro (1888-1967) -- Giuseppe Ungaretti (1888-1970) -- Eugenio Montale (1896-1981) -- Carlo Betocchi (1899-1986) -- Pino Masnata (1901-1968) -- Salvatore Quasimodo (1901-1968) -- Fillia (1904-1936) -- Sandro Penna (1906-1977) -- Cesare Pavese (1908-1950) -- Leonardo Sinisgalli (1908-1981) -- Alfonso Gatto (1909-1976) -- Attilio Bertolucci (1911-2000) -- Antonia Pozzi (1912-1938) -- Giorgio Caproni (1912-1990) --^</subfield>
+</datafield>
+<datafield tag="505" ind1="2" ind2=" ">
+ <subfield code="9">^^</subfield>
+ <subfield code="a">Vittorio Sereni (1913-1983) -- Mario Luzi (1914-2005) -- Giorgio Bassani (1916-2000) -- Franco Fortini (1917-1994) -- Saturno Montanari (1918-1941) -- Primo Levi (1919-1987) -- Nelo Risi (1920- ) -- Leonardo Sciascia (1921-1989) -- Margherita Guidacci (1921-1992) -- Andrea Zanzotto (1921-2011) -- Giorgio Orelli (1921- ) -- Pier Paolo Pasolini (1922-1975) -- Barolo Cattafi (1922-1979) -- Luciano Erba (1922-2010) -- Rocco Scotellaro (1923-1953) -- Giovanni Giudici (1924-2011) -- Raffaello Baldini (1924-2005) -- Alfredo Giuliani (1924-2007) -- Maria Luisa Spaziani (1924- ) -- Alfredo de Palchi (1926- ) -- Franco Loi (1930- ) -- Amelia Rosselli (1930-1996) -- Edoardo Sanguineti (1930-2010) -- Camillo Pennati (1931- ) -- Alda Merini (1931-2009) -- Giovanni Raboni (1932-2004) -- Antonio Porta (1935-1989) -- Lucio Mariani (1936- ) -- Dacia Maraini (1936- ) -- Annalisa Cima (1941- ) -- Vivian Lamarque (1946- ) -- Eugenio de Signoribus (1947- ) -- Franco Buffoni (1948- ) --^</subfield>
+</datafield>
+<datafield tag="505" ind1="2" ind2=" ">
+ <subfield code="9">^^</subfield>
+ <subfield code="a">Patrizia Cavalli (1949- ) -- Umberto Fiori (1949- ) -- Milo de Angelis (1951- ) -- Gianni d'Elia (1953- ) -- Patrizia Valduga (1953- ) -- Antonella Anedda (1955- ) -- Valerio Magrelli (1957- ) -- Fabio Pusterla (1957- ) -- Gabriele Frasca (1957- ).</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">Presents a sample of twentieth-century Italian poems from seventy-three authors with English translations on facing pages.</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+ <subfield code="a">Poems in parallel English and Italian.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Italian poetry</subfield>
+ <subfield code="y">20th century.</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Poems</subfield>
+ <subfield code="z">New York (State)</subfield>
+ <subfield code="z">New York</subfield>
+ <subfield code="y">2012.</subfield>
+ <subfield code="2">rbgenr</subfield>
+</datafield>
+<datafield tag="710" ind1="2" ind2=" ">
+ <subfield code="a">Fred Chappell papers (David M. Rubenstein Rare Book and Manuscript Library, Duke University).</subfield>
+ <subfield code="5">NcD</subfield>
+</datafield>
+<datafield tag="796" ind1="2" ind2="3">
+ <subfield code="a">Raynes</subfield>
+ <subfield code="e">donor.</subfield>
+ <subfield code="x">Gift of</subfield>
+ <subfield code="z">Gift of the Arthur D. Raynes Fund in Imaginative Writing</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Brock, Geoffrey,</subfield>
+ <subfield code="d">1964-</subfield>
+ <subfield code="e">editor.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Chappell, Fred,</subfield>
+ <subfield code="d">1936-</subfield>
+ <subfield code="e">translator.</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">NZ1</subfield>
+ <subfield code="b">14209794</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">AU@</subfield>
+ <subfield code="b">000047788548</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">MS</subfield>
+ <subfield code="b">MS All</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">T </subfield>
+ <subfield code="b">Ms Language Material</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20120501</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK </subfield>
+ <subfield code="h">PQ4214</subfield>
+ <subfield code="i">.F74 2012</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSBO</subfield>
+ <subfield code="h">PQ4214</subfield>
+ <subfield code="i">.F74 2012</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PQ4214 .F74 2012</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"/>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04513038O </subfield>
+ <subfield code="s">20120419</subfield>
+ <subfield code="u">20120501</subfield>
+ <subfield code="v">20150428</subfield>
+ <subfield code="w">5</subfield>
+ <subfield code="k">006117028</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">SCL</subfield>
+ <subfield code="c">PRSBO</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">PQ4214 .F74 2012</subfield>
+ <subfield code="n">c.1</subfield>
+ <subfield code="o">08</subfield>
+ <subfield code="q">DP</subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04718632V </subfield>
+ <subfield code="s">20130326</subfield>
+ <subfield code="u">20141209</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">006117028</subfield>
+</datafield>
+</record>
+</collection>

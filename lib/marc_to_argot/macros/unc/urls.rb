@@ -4,57 +4,73 @@ module MarcToArgot
       module Urls
         include MarcToArgot::Macros::Shared::Urls
 
-        def url(rec, cxt)
+        def url_unc(rec, cxt)
           urls = []
           Traject::MarcExtractor.cached("856uy3").each_matching_line(rec) do |field, spec, extractor|
             url = {}
-            # only use the FIRST $u value
-            url[:href] = collect_subfield_values_by_code(field, 'u').first
+            url[:href] = url_href_value(field)
 
             # don't set value if there is no $u
             next if url[:href].nil? || url[:href].empty?
 
-            # set the url type
             url[:type] = url_type_value(field)
 
-            if cxt.clipboard[:shared_record_set] == 'dws'
-              url[:text] = dws_url_text(field)
-            else
-              url[:text] = normal_url_text(field) unless normal_url_text(field).empty?
+            url_text = url_text(field)
+            url_text = "Available via the UNC-Chapel Hill Libraries" if url_text.empty? && url[:type] == 'fulltext'
+            url_text = '' if cxt.clipboard[:shared_record_set]
+
+            url[:text] = url_text unless url_text.empty?
+            url[:note] = url_note(field) unless url_note(field).empty?
+
+            url[:restricted] = 'false' unless is_restricted?(url[:href])
+
+            # Templatize urls for shared records
+            if cxt.clipboard[:shared_record_set] && url[:restricted] == nil
+              url[:href] = template_proxy(url[:href])
             end
 
             urls << url.to_json
           end
 
-          cxt.output_hash['url'] = urls
-        end
-        
-        # assembles a string from the 856 subfields 3 & y to use for the URL text
-        # @param field [MARC::DataField] the field to use to assemble URL text
-        def normal_url_text(field)
-          subfield_values_y = collect_subfield_values_by_code(field, 'y').map { |val| val.strip }
-
-          if subfield_values_y.empty? && url_type_value(field) == 'fulltext'
-            subfield_values_y << 'Available via the UNC-Chapel Hill Libraries'
-          end
-
-          ([subfield_values_3(field)] + [subfield_values_y.join(' ')]).reject(&:empty?).join(' -- ')
+          cxt.output_hash['url'] = urls unless urls.empty?
         end
 
-        # Return string for use as URL text in DWS shared records
-        def dws_url_text(field)
-          sf3 = subfield_values_3(field)
-          if sf3.empty?
-            "Open Access resource -- Full text available"
-          else
-            "Open Access resource -- #{sf3} -- Full text available"
-          end
+        def is_restricted?(href)
+          url = href.downcase
+          return true if is_proxied?(url)
+          return true if unproxied_restricted.select { |e| url.include?(e) }.any?
+          false
         end
 
-        def subfield_values_3(field)
-          collect_subfield_values_by_code(field, '3').map { |val| val.strip.sub(/ ?\W* ?$/, '')}.join(' ')
+        # Domains or substrings for URLs that are not proxied but are
+        # nevertheless restricted to UNC affiliates (usually through Shib/SSO
+        # or login by an individual or Law school username/password)
+        def unproxied_restricted
+          %w[incommon:unc.edu
+             ebookcentral.proquest.com
+             overdrive.com
+             panopto.com
+             swankmp.net
+             unc.kanopy.com
+             unc.kanopystreaming.com
+             vb3lk7eb4t.search.serialssolutions.com
+             bloomberglaw.com
+             cali.org
+             heinonline.org
+             lexis.com
+             thomsonreuters.com
+             westlaw.com]
         end
 
+        def is_proxied?(url)
+          return true if url =~ %r{^http://[^/]*libproxy.lib.unc.edu}
+          return true if url.start_with?('http://lawlibproxy2.unc.edu')
+          false
+        end
+
+        def template_proxy(url)
+          return url.gsub('http://libproxy.lib.unc.edu/login?url=', '{+proxyPrefix}')
+        end
       end
     end
   end

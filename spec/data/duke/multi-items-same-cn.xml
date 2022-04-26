@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     cam a22013334a 4500</leader>
+<controlfield tag="001">DUKE003991688</controlfield>
+<controlfield tag="005">20171103145215.0</controlfield>
+<controlfield tag="008">071015s2008^^^^iluad^^^^b^^^^001^0^eng^^</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+ <subfield code="a">^^2007042761</subfield>
+</datafield>
+<datafield tag="015" ind1=" " ind2=" ">
+ <subfield code="a">GBA822140</subfield>
+ <subfield code="2">bnb</subfield>
+</datafield>
+<datafield tag="016" ind1="7" ind2=" ">
+ <subfield code="a">014530365</subfield>
+ <subfield code="2">Uk</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9780226065656</subfield>
+ <subfield code="q">(cloth ;</subfield>
+ <subfield code="q">alk. paper)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9780226065663</subfield>
+ <subfield code="q">(pbk. ;</subfield>
+ <subfield code="q">alk. paper)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">0226065650</subfield>
+ <subfield code="q">(cloth ;</subfield>
+ <subfield code="q">alk. paper)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">0226065669</subfield>
+ <subfield code="q">(pbk. ;</subfield>
+ <subfield code="q">alk. paper)</subfield>
+</datafield>
+<datafield tag="024" ind1="8" ind2=" ">
+ <subfield code="a">2724996</subfield>
+</datafield>
+<datafield tag="024" ind1="3" ind2=" ">
+ <subfield code="a">9780226065663</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+ <subfield code="a">175218191</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">DLC</subfield>
+ <subfield code="b">eng</subfield>
+ <subfield code="c">DLC</subfield>
+ <subfield code="d">BTCTA</subfield>
+ <subfield code="d">BAKER</subfield>
+ <subfield code="d">YDXCP</subfield>
+ <subfield code="d">UKM</subfield>
+ <subfield code="d">DAY</subfield>
+ <subfield code="d">SCB</subfield>
+ <subfield code="d">IG#</subfield>
+ <subfield code="d">BWX</subfield>
+ <subfield code="d">YUS</subfield>
+ <subfield code="d">VP@</subfield>
+ <subfield code="d">UPP</subfield>
+ <subfield code="d">STF</subfield>
+ <subfield code="d">NSB</subfield>
+ <subfield code="d">KAAUA</subfield>
+ <subfield code="d">HEBIS</subfield>
+ <subfield code="d">DEBBG</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OCL</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">DEBSZ</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">TUU</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">BDX</subfield>
+ <subfield code="d">RCJ</subfield>
+ <subfield code="d">ZCU</subfield>
+ <subfield code="d">KEC</subfield>
+ <subfield code="d">UA@</subfield>
+ <subfield code="d">OCLCF</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">OVY</subfield>
+ <subfield code="d">RCT</subfield>
+ <subfield code="d">S3O</subfield>
+ <subfield code="d">NLGGC</subfield>
+ <subfield code="d">OCLCQ</subfield>
+ <subfield code="d">MOW</subfield>
+ <subfield code="d">CSO</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">XFF</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">UV1</subfield>
+ <subfield code="d">PIFOP</subfield>
+ <subfield code="d">THHCU</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">MMV</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">FIE</subfield>
+ <subfield code="d">CNUTO</subfield>
+ <subfield code="d">AL5CW</subfield>
+ <subfield code="d">LJW</subfield>
+ <subfield code="d">VGM</subfield>
+ <subfield code="d">IOD</subfield>
+ <subfield code="d">LND</subfield>
+ <subfield code="d">QE2</subfield>
+ <subfield code="d">UEJ</subfield>
+ <subfield code="d">UIU</subfield>
+ <subfield code="d">DCB</subfield>
+ <subfield code="d">OCLCO</subfield>
+ <subfield code="d">MOR</subfield>
+ <subfield code="d">SFR</subfield>
+ <subfield code="d">THHCU</subfield>
+ <subfield code="d">ATSAE</subfield>
+ <subfield code="d">AEBUD</subfield>
+ <subfield code="d">BCLCN</subfield>
+ <subfield code="d">ESU</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+ <subfield code="a">pcc</subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+ <subfield code="a">Q180.55.M4</subfield>
+ <subfield code="b">B66 2008</subfield>
+</datafield>
+<datafield tag="060" ind1="1" ind2="4">
+ <subfield code="a">Q180.55.M4</subfield>
+ <subfield code="b">B725c 2008</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="0">
+ <subfield code="a">001.4/2</subfield>
+ <subfield code="2">22</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">10</subfield>
+ <subfield code="2">ssgn</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">AK 39500</subfield>
+ <subfield code="2">rvk</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">AK 39540</subfield>
+ <subfield code="2">rvk</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">KOM 900f</subfield>
+ <subfield code="2">stub</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">KOM 950f</subfield>
+ <subfield code="2">stub</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">KOM 995f</subfield>
+ <subfield code="2">stub</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">NB 2200</subfield>
+ <subfield code="2">rvk</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">WIS 450f</subfield>
+ <subfield code="2">stub</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">DF 2000</subfield>
+ <subfield code="2">rvk</subfield>
+</datafield>
+<datafield tag="084" ind1=" " ind2=" ">
+ <subfield code="a">EC 2410</subfield>
+ <subfield code="2">rvk</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Booth, Wayne C.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="4">
+ <subfield code="a">The craft of research /</subfield>
+ <subfield code="c">Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams.</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+ <subfield code="a">3rd ed.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="a">Chicago :</subfield>
+ <subfield code="b">University of Chicago Press,</subfield>
+ <subfield code="c">©2008.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">xvii, 317 pages :</subfield>
+ <subfield code="b">illustrations ;</subfield>
+ <subfield code="c">22 cm.</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">unmediated</subfield>
+ <subfield code="b">n</subfield>
+ <subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">volume</subfield>
+ <subfield code="b">nc</subfield>
+ <subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+ <subfield code="a">Chicago guides to writing, editing, and publishing</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Includes bibliographical references and index.</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+ <subfield code="a">pt. 1. Research, researchers, and readers -- Prologue: Becoming a researcher -- Thinking in print : the uses of research, public and private -- Connecting with your reader : (re- )creating yourself and your readers -- pt. 2. Asking questions, finding answers -- Prologue: Planning your project : an overview -- From topics to questions -- From questions to a problem -- From problems to sources -- Engaging sources -- pt. 3. Making a claim and supporting it -- Prologue: Assembling a research argument -- Making good arguments : an overview -- Making claims -- Assembling reasons and evidence -- Acknowledgments and responses -- Warrants -- pt. 4. Planning, drafting, and revising -- Prologue: Planning again -- Planning -- Drafting your report -- Revising your organization and argument -- Communicating evidence visually -- Introductions and conclusions -- Revising style : telling your story clearly -- pt. 5. Some last considerations.</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">This book is a resource for researchers at every level, from first-year undergraduates to research reporters at corporations and government offices. Seasoned researchers and educators, the authors present an updated third edition of their classic handbook which explains how to build an argument that motivates readers to accept a claim; how to anticipate the reservations of readers and to respond to them appropriately; and how to create introductions and conclusions that answer that most demanding question, &quot;So what?&quot;. It includes an expanded discussion of the essential early stages of a research task: planning and drafting a paper. The authors have revised and fully updated their section on electronic research, emphasizing the need to distinguish between trustworthy sources (such as those found in libraries) and less reliable sources found with a quick Web search. A chapter on warrants has also been thoroughly reviewed to make this difficult subject easier for researchers. Throughout, the authors have preserved the amiable tone, the reliable voice, and the sense of directness that have made this book indispensable for anyone undertaking a research project.</subfield>
+</datafield>
+<datafield tag="508" ind1=" " ind2=" ">
+ <subfield code="a">Research, researchers, and readers -- Prologue: Becoming a researcher -- Thinking in print: Uses of research, public and private -- Connecting with your reader: (Re- )creating yourself and your audience -- Asking questions, finding answers -- Prologue: Planning your project - an overview -- From topics to questions -- From questions to a problem -- From problems to sources -- Engaging sources -- Making a claim and supporting it -- Prologue: Assembling a research argument -- Making good arguments: Overview -- Making claims -- Assembling reasons and evidence -- Acknowledgments and responses -- Warrants -- Planning, drafting, and revising -- Prologue: Planning again -- Planning -- Drafting your report -- Revising your organization and argument -- Communicating evidence visually -- Introductions and conclusions-- Revising style: Telling your story clearly -- Some last considerations.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Research</subfield>
+ <subfield code="x">Methodology.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Technical writing.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="4">
+ <subfield code="a">Research</subfield>
+ <subfield code="x">Methodology.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="4">
+ <subfield code="a">Technical writing.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="4">
+ <subfield code="a">Vetenskap</subfield>
+ <subfield code="x">metodik.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Research</subfield>
+ <subfield code="x">Methodology.</subfield>
+ <subfield code="2">blmlsh</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Technical writing.</subfield>
+ <subfield code="2">blmlsh</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Research</subfield>
+ <subfield code="x">Methodology.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01095216</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Technical writing.</subfield>
+ <subfield code="2">fast</subfield>
+ <subfield code="0">(OCoLC)fst01144965</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Methodologie</subfield>
+ <subfield code="2">gnd</subfield>
+ <subfield code="0">(DE-588)4139716-2</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Sozialwissenschaften</subfield>
+ <subfield code="2">gnd</subfield>
+ <subfield code="0">(DE-588)4055916-6</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Wissenschaftlicher Text</subfield>
+ <subfield code="2">gnd</subfield>
+ <subfield code="0">(DE-588)4199679-3</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Wissenschaftliches Arbeiten</subfield>
+ <subfield code="2">gnd</subfield>
+ <subfield code="0">(DE-588)4066571-9</subfield>
+</datafield>
+<datafield tag="650" ind1="1" ind2="7">
+ <subfield code="a">Onderzoek.</subfield>
+ <subfield code="2">gtt</subfield>
+ <subfield code="0">(NL-LeOCL)078610583</subfield>
+</datafield>
+<datafield tag="650" ind1="1" ind2="7">
+ <subfield code="a">Methodologie.</subfield>
+ <subfield code="2">gtt</subfield>
+ <subfield code="0">(NL-LeOCL)078589479</subfield>
+</datafield>
+<datafield tag="650" ind1="1" ind2="7">
+ <subfield code="a">Rapporteren.</subfield>
+ <subfield code="2">gtt</subfield>
+ <subfield code="0">(NL-LeOCL)078643368</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Forskningsmetodik.</subfield>
+ <subfield code="2">sao</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Rapportskrivning.</subfield>
+ <subfield code="2">sao</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Vetenskapligt skrivande.</subfield>
+ <subfield code="2">sao</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Skriftlig framställning.</subfield>
+ <subfield code="2">sao</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Research methodology.</subfield>
+ <subfield code="2">shbe</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Report writing.</subfield>
+ <subfield code="2">shbe</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Research</subfield>
+ <subfield code="x">Methodology.</subfield>
+ <subfield code="2">blmsh</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Technical writing.</subfield>
+ <subfield code="2">blmsh</subfield>
+</datafield>
+<datafield tag="650" ind1="0" ind2="7">
+ <subfield code="a">Methodologie.</subfield>
+ <subfield code="2">swd</subfield>
+</datafield>
+<datafield tag="650" ind1="0" ind2="7">
+ <subfield code="a">Wissenschaftliches Arbeiten.</subfield>
+ <subfield code="2">swd</subfield>
+</datafield>
+<datafield tag="650" ind1="0" ind2="7">
+ <subfield code="a">Sozialwissenschaften.</subfield>
+ <subfield code="2">swd</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="2">
+ <subfield code="a">Research Design.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="2">
+ <subfield code="a">Technical Report.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="2">
+ <subfield code="a">Writing.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Colomb, Gregory G.</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+ <subfield code="a">Williams, Joseph M.</subfield>
+</datafield>
+<datafield tag="796" ind1="1" ind2="3">
+ <subfield code="a">Anon</subfield>
+ <subfield code="e">donor.</subfield>
+ <subfield code="x">Gift of</subfield>
+ <subfield code="z">Gift of Anon</subfield>
+</datafield>
+<datafield tag="880" ind1=" " ind2=" ">
+ <subfield code="6">658-00/</subfield>
+ <subfield code="a">MBA -- 1 เล่ม</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+ <subfield code="a">Chicago guides to writing, editing, and publishing.</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">AU@</subfield>
+ <subfield code="b">000042299262</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">AU@</subfield>
+ <subfield code="b">000044571696</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">DEBBG</subfield>
+ <subfield code="b">BV035232536</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">DEBSZ</subfield>
+ <subfield code="b">279301154</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">HEBIS</subfield>
+ <subfield code="b">198505728</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">IG#</subfield>
+ <subfield code="b">9780226065656</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">NLGGC</subfield>
+ <subfield code="b">404048188</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">NZ1</subfield>
+ <subfield code="b">12067784</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">UNITY</subfield>
+ <subfield code="b">110733347</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">IG#</subfield>
+ <subfield code="b">9780226065656</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">NZ1</subfield>
+ <subfield code="b">12067784</subfield>
+</datafield>
+<datafield tag="029" ind1="1" ind2=" ">
+ <subfield code="a">NLGGC</subfield>
+ <subfield code="b">309902398</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">MARIN</subfield>
+ <subfield code="c">PZ</subfield>
+ <subfield code="h">Q180.55.M4</subfield>
+ <subfield code="i">B66 2008</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">DKU</subfield>
+ <subfield code="c">DKR</subfield>
+ <subfield code="h">Q180.55.M4</subfield>
+ <subfield code="i">B66 2008</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="h">Q180.55.M4</subfield>
+ <subfield code="i">B66 2008</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">DIV</subfield>
+ <subfield code="c">PDR</subfield>
+ <subfield code="h">Q180.55.M4</subfield>
+ <subfield code="i">B66 2008</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">LILLY</subfield>
+ <subfield code="c">PLR</subfield>
+ <subfield code="h">Q180.55.M4</subfield>
+ <subfield code="i">B66 2008</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PKR</subfield>
+ <subfield code="h">Q180.55.M4</subfield>
+ <subfield code="i">B66 2008</subfield>
+ <subfield code="D">x</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DIV</subfield>
+ <subfield code="c">PDR</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D01790306Q </subfield>
+ <subfield code="s">20090129</subfield>
+ <subfield code="u">20090213</subfield>
+ <subfield code="v">20161003</subfield>
+ <subfield code="w">1</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">LILLY</subfield>
+ <subfield code="c">PLR</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03982244W </subfield>
+ <subfield code="s">20090218</subfield>
+ <subfield code="u">20090429</subfield>
+ <subfield code="v">20170420</subfield>
+ <subfield code="w">2</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">MARIN</subfield>
+ <subfield code="c">PZ</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D05177715X </subfield>
+ <subfield code="s">20170905</subfield>
+ <subfield code="u">20170907</subfield>
+ <subfield code="v">20170907</subfield>
+ <subfield code="w">0</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="n">c.2</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q">IL</subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D03715781W </subfield>
+ <subfield code="s">20091003</subfield>
+ <subfield code="u">20180817</subfield>
+ <subfield code="v">20180507</subfield>
+ <subfield code="w">5</subfield>
+ <subfield code="x">20190102</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="n">c.3</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04111391K </subfield>
+ <subfield code="s">20100426</subfield>
+ <subfield code="u">20141212</subfield>
+ <subfield code="v">20170413</subfield>
+ <subfield code="w">24</subfield>
+ <subfield code="x">20190531</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PK</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="o">01</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04326608T </subfield>
+ <subfield code="s">20100826</subfield>
+ <subfield code="u">20181205</subfield>
+ <subfield code="v">20181205</subfield>
+ <subfield code="w">23</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">PERKN</subfield>
+ <subfield code="c">PKR</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">D04067738Z </subfield>
+ <subfield code="s">20080825</subfield>
+ <subfield code="u">20140107</subfield>
+ <subfield code="v">20141204</subfield>
+ <subfield code="w">9</subfield>
+ <subfield code="k">003991892</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DKU</subfield>
+ <subfield code="c">DKR</subfield>
+ <subfield code="d">0</subfield>
+ <subfield code="h">Q180.55.M4 B66 2008</subfield>
+ <subfield code="o">02</subfield>
+ <subfield code="q"></subfield>
+ <subfield code="r">BOOK</subfield>
+ <subfield code="p">K00000118A </subfield>
+ <subfield code="s">20140718</subfield>
+ <subfield code="u">20140930</subfield>
+ <subfield code="v">20161206</subfield>
+ <subfield code="w">1</subfield>
+ <subfield code="k">000000922</subfield>
+</datafield>
+</record>
+</collection>

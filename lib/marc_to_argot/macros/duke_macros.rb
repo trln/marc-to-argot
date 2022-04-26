@@ -2,7 +2,18 @@ module MarcToArgot
   module Macros
     # Macros and useful functions for Duke records
     module Duke
+      require 'marc_to_argot/macros/duke/items'
+      require 'marc_to_argot/macros/duke/physical_media'
+      require 'marc_to_argot/macros/duke/resource_type'
+      require 'marc_to_argot/macros/duke/urls'
+
+      # Include this first. Then load Duke Macros.
       include MarcToArgot::Macros::Shared
+
+      include MarcToArgot::Macros::Duke::Items
+      include MarcToArgot::Macros::Duke::PhysicalMedia
+      include MarcToArgot::Macros::Duke::ResourceType
+      include MarcToArgot::Macros::Duke::Urls
 
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?
@@ -10,18 +21,11 @@ module MarcToArgot
         %w[NcD NcD-B NcD-D NcD-L NcD-M NcD-W NcDurDH]
       end
 
-      # Check for physical item record returns true unless it
-      # has an 856 where the first indicator is 0.
-      def physical_access?(rec, _ctx = {})
-        l = rec.fields('856')
-        return false if !l.find { |f| ['0'].include?(f.indicator2) }.nil?
-        true
-      end
-
-      # tests whether the field contains a URL for a finding aid
-      # @param field [MARC::DataField] the field to check for a finding aid URL
-      def url_for_finding_aid?(field)
-        substring_present_in_subfield?(field, 'y', 'collection guide')
+      # If there's anything present in the physical_items
+      # clipboard array then there ought to be at least
+      # one physical item on the record.
+      def physical_access?(rec, ctx = {})
+        return true if ctx.clipboard.fetch(:physical_items, []).any?
       end
 
       # OCLC Number & Rollup ID
@@ -44,45 +48,76 @@ module MarcToArgot
         end
       end
 
+      def primary_oclc
+        lambda do |rec, acc|
+          if field_035q = Traject::MarcExtractor.cached("035q")
+            if field_035q && !field_035q.extract(rec).include?('exclude')
+              Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
+                first_oclc_number = fetch_oclc_numbers(field).first
+                acc << "#{first_oclc_number}" unless first_oclc_number.nil? || first_oclc_number.empty?
+              end
+            end
+          end
+        end
+      end
+
       def fetch_oclc_numbers(field)
         oclc_numbers = field.subfields.select { |sf| sf.code == 'a' }.map(&:value).map(&:strip)
         oclc_numbers.select! { |x| /^(\(OCoLC\))?\d{8,}$/.match(x) }
         oclc_numbers.map! { |x| x.sub('(OCoLC)', '') }
+        oclc_numbers.map! { |x| x.sub(/^0+/, '') }
         oclc_numbers
       end
 
-      # Physical Media Override
+      def add_donor_to_indexed_note_local(ctx)
+        if ctx.output_hash.key?('donor')
+          donor = ctx.output_hash['donor'].map { |d| { 'indexed_value' => d } }
+          local_notes = ctx.output_hash.fetch('note_local', [])
+          ctx.output_hash['note_local'] = local_notes.concat(donor)
+        end
+      end
 
-      class PhysicalMedia::PhysicalMediaClassifier
-        # Checks the 940$c for any cases where the narrow location
-        # includes an ebook location code. See #ebook_location_codes below.
-        def e_reader?
-          item_fields(record).find do |field|
-            field.subfields.select { |sf| sf.code == 'c' }.find { |sfc| ebook_location_codes.include?(sfc.value) }
+      def add_holdings_note_to_indexed_note_local(rec, ctx)
+        holdings_notes = []
+        Traject::MarcExtractor.cached("852z").each_matching_line(rec) do |field, spec, extractor|
+          notes = extractor.collect_subfields(field, spec)
+          notes.each { |note| holdings_notes << { 'indexed_value' => note } if note }
+        end
+        if holdings_notes.any?
+          local_notes = ctx.output_hash.fetch('note_local', [])
+          ctx.output_hash['note_local'] = local_notes.concat(holdings_notes)
+        end
+      end
+
+      # Remove Rollup ID from special collections records
+      # Otherwise set rollup id to SerSol number if not already set.
+      def finalize_rollup_id(ctx)
+        if ctx.clipboard.fetch('special_collections', false)
+          ctx.output_hash.delete('rollup_id')
+        else
+          set_sersol_rollup_id(ctx)
+        end
+      end
+
+      # Set Availability and Physical Media for Online resources.
+      def finalize_values_for_online_resources(ctx)
+        if ctx.output_hash.fetch('access_type', []).include?('Online')
+          ctx.output_hash['available'] = 'Available'
+          physical_media = ctx.output_hash.fetch('physical_media', [])
+          ctx.output_hash['physical_media'] = physical_media << 'Online'
+          if ctx.output_hash.fetch('access_type', []) == ['Online']
+            ctx.output_hash['physical_media'].delete('Print')
           end
         end
+      end
 
-        # Checks the 940$h for call numbers that include the
-        # substring "kindle."
-        def e_reader_kindle?
-          item_fields(record).find do |field|
-            field.subfields.select { |sf| sf.code == 'h' }.find { |sfc| sfc.value.downcase.include?('kindle') }
-          end
-        end
-
-        def item_fields(record)
-          @item_fields ||= begin
-            item_fields = []
-            Traject::MarcExtractor.cached('940', alternate_script: false).each_matching_line(record) do |field|
-              item_fields << field
-            end
-            item_fields
-          end
-        end
-
-        def ebook_location_codes
-          %w[DKK FRDK1 FRDK2 FRDK3 PDK PKKI PKKR PKKZ
-             PKXKR PLK1 PLK2 PLKR PLXKR PZK1 PZK2]
+      def index_bib_id(ctx)
+        if ctx.output_hash.key?('id')
+          zero_padded_id = ctx.output_hash['id'].first.gsub(/^DUKE/, '')
+          id = zero_padded_id.gsub(/^[0]+/,'')
+          misc_id = ctx.output_hash.fetch('misc_id', [])
+          ctx.output_hash['misc_id'] = misc_id.concat([assemble_id_hash(id, display: 'false'),
+                                                       assemble_id_hash(zero_padded_id, display: 'false')])
         end
       end
 

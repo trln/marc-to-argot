@@ -1,0 +1,166 @@
+<?xml version='1.0'?>
+<collection xmlns='http://www.loc.gov/MARC21/slim' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd'>
+<record>
+  <leader>02130cas a2200457 a 4500</leader>
+  <controlfield tag='001'>53039089</controlfield>
+  <controlfield tag='005'>20030917093441.0</controlfield>
+  <controlfield tag='008'>030917c19uu9999dcuar   b    f0    0eng c</controlfield>
+  <controlfield tag='007'>he bmb024bbca</controlfield>
+  <datafield tag='010' ind1=' ' ind2=' '>
+    <subfield code='a'>  2003231463</subfield>
+  </datafield>
+  <datafield tag='019' ind1=' ' ind2=' '>
+    <subfield code='a'>tmp97312915</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(GPO)99127729</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>GPO</subfield>
+    <subfield code='b'>eng</subfield>
+    <subfield code='c'>GPO</subfield>
+    <subfield code='d'>MvI</subfield>
+  </datafield>
+  <datafield tag='042' ind1=' ' ind2=' '>
+    <subfield code='a'>lcd</subfield>
+  </datafield>
+  <datafield tag='043' ind1=' ' ind2=' '>
+    <subfield code='a'>n-us---</subfield>
+  </datafield>
+  <datafield tag='074' ind1=' ' ind2=' '>
+    <subfield code='a'>0084 (MF)</subfield>
+  </datafield>
+  <datafield tag='074' ind1=' ' ind2=' '>
+    <subfield code='a'>0084 (online)</subfield>
+  </datafield>
+  <datafield tag='086' ind1='0' ind2=' '>
+    <subfield code='a'>A 13.2:UR 1/5/</subfield>
+  </datafield>
+  <datafield tag='245' ind1='0' ind2='0'>
+    <subfield code='a'>Accomplishment report for urban and community forestry</subfield>
+    <subfield code='h'>[microform].</subfield>
+  </datafield>
+  <datafield tag='260' ind1=' ' ind2=' '>
+    <subfield code='a'>[Washington D.C.] :</subfield>
+    <subfield code='b'>United States Dept. of Agriculture, Forest Service</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>volumes :</subfield>
+    <subfield code='b'>illustrations.</subfield>
+  </datafield>
+  <datafield tag='310' ind1=' ' ind2=' '>
+    <subfield code='a'>Annual</subfield>
+  </datafield>
+  <datafield tag='336' ind1=' ' ind2=' '>
+    <subfield code='a'>text</subfield>
+    <subfield code='b'>txt</subfield>
+    <subfield code='2'>rdacontent</subfield>
+  </datafield>
+  <datafield tag='337' ind1=' ' ind2=' '>
+    <subfield code='a'>microform</subfield>
+    <subfield code='b'>h</subfield>
+    <subfield code='2'>rdamedia</subfield>
+  </datafield>
+  <datafield tag='338' ind1=' ' ind2=' '>
+    <subfield code='a'>microfiche</subfield>
+    <subfield code='b'>he</subfield>
+    <subfield code='2'>rdacarrier</subfield>
+  </datafield>
+  <datafield tag='490' ind1='1' ind2=' '>
+    <subfield code='a'>FS</subfield>
+  </datafield>
+  <datafield tag='530' ind1=' ' ind2=' '>
+    <subfield code='a'>Some issues also available via Internet at the FS web site. Address as of: 9/17/03: http://www.fs.fed.us/ucf/publications/index.shtml; latest issue only available via PURL.</subfield>
+  </datafield>
+  <datafield tag='533' ind1=' ' ind2=' '>
+    <subfield code='a'>Microfiche.</subfield>
+    <subfield code='m'>&lt;2001-&gt;</subfield>
+    <subfield code='b'>Washington, D.C.</subfield>
+    <subfield code='c'>Supt. of Docs., U.S. G.P.O.,</subfield>
+    <subfield code='e'>microfiche : negative.</subfield>
+  </datafield>
+  <datafield tag='588' ind1='0' ind2=' '>
+    <subfield code='a'>FY 2001.</subfield>
+  </datafield>
+  <datafield tag='610' ind1='2' ind2='0'>
+    <subfield code='a'>Urban and Community Forestry Program (U.S.)</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/no97065840</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Urban forestry</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh85141314</subfield>
+    <subfield code='z'>United States</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n78095330</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Community forestry</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh2002009922</subfield>
+    <subfield code='z'>United States</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n78095330</subfield>
+    <subfield code='v'>Periodicals.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/subjects/sh99001647</subfield>
+  </datafield>
+  <datafield tag='710' ind1='1' ind2=' '>
+    <subfield code='a'>United States.</subfield>
+    <subfield code='b'>Forest Service.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n79054932</subfield>
+  </datafield>
+  <datafield tag='776' ind1='1' ind2=' '>
+    <subfield code='c'>Original</subfield>
+  </datafield>
+  <datafield tag='830' ind1=' ' ind2='0'>
+    <subfield code='a'>FS (Series)</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n86702969</subfield>
+  </datafield>
+  <datafield tag='856' ind1='4' ind2='1'>
+    <subfield code='3'>Latest issue only:</subfield>
+    <subfield code='u'>https://purl.fdlp.gov/GPO/LPS36251</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b4243452</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i5808748</subfield>
+    <subfield code='l'>dcpf</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>20</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>0</subfield>
+    <subfield code='h'>0</subfield>
+    <subfield code='b'>HBHA-9029-00001</subfield>
+    <subfield code='p'>0860#</subfield>
+    <subfield code='q'>|aA 13.2:UR 1/5</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='2'>
+    <subfield code='a'>c4325113</subfield>
+    <subfield code='b'>dcpfb</subfield>
+    <subfield code='c'>0</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4325113</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>c</subfield>
+    <subfield code='b'>553388</subfield>
+    <subfield code='g'>Microfiche</subfield>
+    <subfield code='h'>A 13.2:UR 1/5</subfield>
+    <subfield code='z'>For holdings, consult Service Desk</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='3'>
+    <subfield code='0'>c4325113</subfield>
+    <subfield code='2'>852</subfield>
+    <subfield code='3'>e</subfield>
+    <subfield code='p'>HBHA-9029-00001</subfield>
+    <subfield code='t'>1</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2004-10-01 00:00:00-04</subfield>
+    <subfield code='c'>2004-10-06 23:30:06-04</subfield>
+    <subfield code='u'>2020-10-14 15:53:34-04</subfield>
+    <subfield code='m'>a</subfield>
+  </datafield>
+</record>
+</collection>

@@ -8,22 +8,31 @@ module MarcToArgot
 
         def edition
           lambda do |rec, acc|
-            Traject::MarcExtractor.cached('250:254', :alternate_script => false)
+            Traject::MarcExtractor.cached('250:251:254')
                                   .each_matching_line(rec) do |field, spec, extractor|
 
               edition = {}
 
-              case field.tag
+              case field_tag_or_880_linkage_tag(field)
               when '250'
                 label = collect_and_join_subfield_values(field, '3').chomp(':').strip
-                edition['label'] = label unless label.empty?
-                edition['value'] = collect_and_join_subfield_values(field, %w[a b])
+                value = collect_and_join_subfield_values(field, %w[a b])
+              when '251'
+                label = collect_and_join_subfield_values(field, '3').chomp(':').strip
+                value = collect_and_join_subfield_values(field, %w[a])
               when '254'
-                edition['value'] = collect_and_join_subfield_values(field, %w[a])
+                value = collect_and_join_subfield_values(field, %w[a])
               end
 
-              acc << edition unless edition.empty?
+              next if value.nil? || value.empty?
 
+              lang = Vernacular::ScriptClassifier.new(field, value).classify
+
+              edition['label'] = label unless label.nil? || label.empty?
+              edition['value'] = value
+              edition['lang'] = lang unless lang.nil? || lang.empty?
+
+              acc << edition unless edition.empty?
             end
           end
         end

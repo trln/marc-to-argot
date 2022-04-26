@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     nam a2200481Li 4500 </leader>
+<controlfield tag="001">DUKE006500627 </controlfield>
+<controlfield tag="003">NhCcYBP </controlfield>
+<controlfield tag="005">20150310083649.1 </controlfield>
+<controlfield tag="006">m^^^^^o^^d^^^^^^^^ </controlfield>
+<controlfield tag="007">cr^|n| </controlfield>
+<controlfield tag="008">150302s2015^^^^cau^^^^^ob^^^^001^0^eng^d </controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">1589483693 (electronic bk.) </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9781589483699 (electronic bk.) </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="z">9781589483682 (pbk. : alk. paper) </subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="z">1589483685 (pbk. : alk. paper) </subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2="9">
+ <subfield code="a">99962273575 </subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">NhCcYBP</subfield>
+ <subfield code="c">NhCcYBP </subfield>
+</datafield>
+<datafield tag="049" ind1=" " ind2=" ">
+ <subfield code="a">NDDP </subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+ <subfield code="a">G70.212</subfield>
+ <subfield code="b">.T74 2015 </subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="4">
+ <subfield code="a">001.30285</subfield>
+ <subfield code="2">23 </subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Travis, Charles,</subfield>
+ <subfield code="d">1964- </subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Abstract machine :</subfield>
+ <subfield code="b">humanities GIS /</subfield>
+ <subfield code="c">Charles B. Travis. </subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+ <subfield code="a">First edition. </subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+ <subfield code="a">Redlands, California :</subfield>
+ <subfield code="b">Esri Pres,</subfield>
+ <subfield code="c">[2015] </subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+ <subfield code="a">1 online resource ( pages cm.) : </subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+ <subfield code="a">text</subfield>
+ <subfield code="b">txt</subfield>
+ <subfield code="2">rdacontent </subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+ <subfield code="a">computer</subfield>
+ <subfield code="2">rdamedia </subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+ <subfield code="a">online resource</subfield>
+ <subfield code="2">rdacarrier </subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+ <subfield code="a">Includes bibliographical references and index. </subfield>
+</datafield>
+<datafield tag="506" ind1=" " ind2=" ">
+ <subfield code="a">Ebrary Single User</subfield>
+ <subfield code="f">EBRSU </subfield>
+</datafield>
+<datafield tag="588" ind1=" " ind2=" ">
+ <subfield code="a">Description based on print version record. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Geographic information systems. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Information storage and retrieval systems</subfield>
+ <subfield code="x">Humanities. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Humanities</subfield>
+ <subfield code="x">Technological innovations. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Humanities</subfield>
+ <subfield code="x">Methodology. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Space and time. </subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+ <subfield code="a">Geography and literature. </subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Electronic books.</subfield>
+ <subfield code="2">lcgft </subfield>
+</datafield>
+<datafield tag="776" ind1="0" ind2="8">
+ <subfield code="i">Print version:</subfield>
+ <subfield code="a">Travis, Charles,.</subfield>
+ <subfield code="t">Abstract machine :.</subfield>
+ <subfield code="d">.</subfield>
+ <subfield code="z">9781589483682</subfield>
+ <subfield code="z">1589483685</subfield>
+ <subfield code="w">(DLC) 2014027420 </subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="u">https://login.proxy.lib.duke.edu/login?url=http://books.google.com/books?id=AVFRAQAAIAAJ</subfield>
+ <subfield code="y">get it@Duke </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">EB</subfield>
+ <subfield code="b">Electronic books </subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book </subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="c">EBR</subfield>
+ <subfield code="D">x </subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="c">EBR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+ <subfield code="w">0 </subfield>
+</datafield>
+</record>
+</collection>

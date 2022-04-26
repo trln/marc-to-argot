@@ -5,9 +5,9 @@ module MarcToArgot
       module Items
         SUBFIELDS = {
           i: { key: 'item_id' },
-          c: { key: 'copy_no' },
+          # c: { key: 'copy_no' },
           m: { key: 'loc_b' },
-          o: { key: 'notes' },
+          # o: { key: 'notes' },
           a: { key: 'call_no' },
           k: { key: 'loc_current' },
           l: { key: 'loc_n' },
@@ -19,7 +19,7 @@ module MarcToArgot
 
         NO_FACET_LOCATIONS = %w[ONLINE BBR].freeze
 
-        MAINS = Set.new(%w[DHILL HUNT]).freeze
+        MAINS = Set.new(%w[DHHILL HUNT BOOKBOT]).freeze
 
         # locations that map to virtual collections
         # library does not matter for these, EXCEPT for LRL/TEXTBOOK
@@ -37,8 +37,37 @@ module MarcToArgot
           'REPAIR' => 'Being fixed/mended',
           'PRESERV' => 'Preservation',
           'RESHELVING' => 'Just returned',
-          'CATALOGING' => 'In Process'
+          'CATALOGING' => 'In Process',
+          'HOLDS' => 'On hold for another user'
         }.freeze
+
+
+        # items in these current locations
+        # will keep their original home libraries
+        # even though their reserve desks are at
+        # other ones.
+        RESERVE_LIBRARY_REMAPS = {          
+          'RSRV-HILL' => 'DHHILL',
+          'RSRV-HUNT' => 'HUNT',
+          'RSRV-LRL' => 'LRL',
+          'RSRV-VML' => 'VETMED',
+          'RSRV-DES' => 'DESIGN',
+          'RSRV-NRL' => 'NRL'
+        }.freeze
+
+        #not currently used, but could be helpful in the future
+        OFFSITE_SPEC_COLLECTIONS = Set.new(%w[ARCHIVES STACKS METCALF SPEC SPEC-OD MANUSCRIPT
+                                   AUCTIONCAT PRESERV MAPS OVERSIZE OVERSIZE2 FACULTYPUB
+                                   REF-OVER MICROFORMS SATELLITE SAT-OV SAT-OV2 SMALLBOOK]).freeze
+
+        SPEC_COLL_NOT_REQUESTABLE = Set.new(%w[EXHIBITS REF FACPUBS-RR]).freeze
+
+        OFFSITE_LIB = Set.new(%w[DUKELSC SATELLITE BOOKBOT]).freeze
+
+
+        def shadowed_location?(item)
+          %w[BOTMISSING ACQ-S MISSING].include?(item['loc_n'])
+        end
 
         def virtual_collection(item)
           item['loc_b'] != 'LRL' && LOC_COLLECTIONS.include?(item['loc_n']) && item['loc_n']
@@ -46,6 +75,29 @@ module MarcToArgot
 
         def get_location(item)
           [item['loc_b'], item['loc_n']]
+        end
+
+        # Offsite & requestable
+        def offsite?(item)
+          return true if OFFSITE_LIB.include?(item['loc_b'])
+
+          case item['loc_b']
+          when 'SPECCOLL'
+            return true unless SPEC_COLL_NOT_REQUESTABLE.include?(item['loc_n'])
+          end
+          false
+        end
+
+        def reserve?(item)
+          return true if item['type'] == 'COREBOOK' && item['loc_n'] == 'TEXTBOOK'
+
+          false
+        end
+
+        def kindle?(item)
+          return true if item['type'] == 'EBOOK' && item['loc_b'] != 'ONLINE'
+
+          false
         end
 
         def item_status(current, home)
@@ -62,7 +114,9 @@ module MarcToArgot
           if location_status.nil?
             simple_status || "Unknown - #{current}"
           else
-            location_status
+            # dup because otherwise we potentially modify the copy that's stored
+            # in the LOCATION_AVAILABILITY hash
+            location_status.dup
           end
         end
 
@@ -86,15 +140,18 @@ module MarcToArgot
           lib, loc = get_location(item)
           if lib == 'BOOKBOT'
             item['loc_b'] = 'HUNT'
-            item['loc_n'] = 'BOOKBOT' if loc == 'STACKS'
+            item['loc_n'] = 'BOOKBOT'
           end
           item['loc_b'] = 'BBR' if loc == 'PRINTDDA' && lib == 'DHHILL'
           item['loc_n'] = "SPECCOLL-#{loc}" if lib == 'SPECCOLL'
-
+            
           # reserves should pretend they're home.
           if current_as_home?(item['loc_current'])
             item['loc_n'] = item['loc_current']
           end
+
+          item['loc_b'] = RESERVE_LIBRARY_REMAPS[item['loc_n']] if RESERVE_LIBRARY_REMAPS.key?(item['loc_n'])
+
           # now some remappings based on item type
           item['loc_n'] = 'GAME' if item['type'] == 'GAME-4HR'
         end
@@ -103,24 +160,37 @@ module MarcToArgot
           lib, loc = get_location(item)
           lib_cases = lib == 'SPECCOLL'
           loc_cases = case loc
-                      when 'GAMELAB', 'VRSTUDIO', /^SPEC/, /^REF/
+                      when 'GAMELAB', /^VR/, /^SPEC/, /^REF/
                         true
                       else
                         false
                       end
           type_cases = case item['type']
-                       when 'BOOKNOCIRC', 'SERIAL', 'MAP', 'CD-ROM-NC'
+                       when 'SERIAL'
+                        # Hill, Hunt circulate; others do not
+                         !MAINS.include?(lib)
+                       when 'BOOKNOCIRC', 'MAP', 'CD-ROM-NC'
                          true
                        else
                          false
                        end
+
           lib_cases || loc_cases || type_cases
         end
 
         # computes and updates item status
         def item_status!(item)
           item['status'] = item_status(item.fetch('loc_current', ''), item['loc_n'])
-          item['status'] << ' (Library use only)' if library_use_only?(item)
+          if item['status'] == 'Available'
+            if offsite?(item)
+              item['status'] = 'Available upon request'
+            elsif reserve?(item)
+              item['status'] = 'Available - On Reserve'
+            elsif kindle?(item)
+              item['status'] = 'Available - Libraries Kindle only'
+            end
+          end
+          item['status'] = item['status'] + ' (Library use only)' if library_use_only?(item)
         end
 
         def marc_to_item(field)
@@ -130,7 +200,8 @@ module MarcToArgot
             mapped = SUBFIELDS.fetch(code, key: nil)[:key]
             item[mapped] = subfield.value unless mapped.nil?
           end
-          item['copy_no'] = "c. #{item['copy_no']}" if item['copy_no'] 
+          item['copy_no'] = ''
+          item['call_no'] = '' if item.fetch('call_no','').downcase.start_with?('xx')
           item_status!(item)
           item
         end
@@ -148,7 +219,8 @@ module MarcToArgot
           ctx.output_hash['virtual_collection'] = vcs unless vcs.empty?
           visible_loc_items = items.reject { |i| NO_FACET_LOCATIONS.include?(i['loc_b']) }
           loc_hier = arrays_to_hierarchy(visible_loc_items.map { |x| ['ncsu', x['loc_b']] })
-          ctx.output_hash['location_hierarchy'] =  loc_hier
+          loc_hier << 'hsl' << 'hsl:hslncsuvetmed' if visible_loc_items.any? { |i| i['loc_b'] == 'VETMED' }
+          ctx.output_hash['location_hierarchy'] = loc_hier
         end
 
         def extract_items
@@ -157,10 +229,12 @@ module MarcToArgot
             Traject::MarcExtractor.cached('999', alternate_script: false).each_matching_line(rec) do |field, _s, _e|
               item = marc_to_item(field)
               remap_item_locations!(item)
-              #item.delete('item_cat_2')
-              items << item
-              acc << item.to_json if item
+              unless shadowed_location?(item)
+                items << item 
+              end
             end
+            items = MarcToArgot::Macros::NCSU::ItemUtils.sort_items(items)
+            items.each { |i| acc << i.to_json }
             populate_context!(items, rec, ctx)
             map_call_numbers!(ctx, items)
           end

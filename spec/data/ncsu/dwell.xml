@@ -1,0 +1,928 @@
+<?xml version='1.0' encoding='utf-8'?>
+<marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim">
+  <marc:record>
+  <marc:leader>08409cas a2201213 a 4500</marc:leader>
+  <marc:controlfield tag="001">ocm44188453</marc:controlfield>
+  <marc:controlfield tag="003">OCoLC</marc:controlfield>
+  <marc:controlfield tag="005">20170425013141.0</marc:controlfield>
+  <marc:controlfield tag="008">000606c20009999caubx p       0   a0eng c</marc:controlfield>
+  <marc:datafield tag="010" ind1=" " ind2=" ">
+    <marc:subfield code="a">   00214883</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="015" ind1=" " ind2=" ">
+    <marc:subfield code="a">023326719</marc:subfield>
+    <marc:subfield code="2">dnb</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="016" ind1="7" ind2=" ">
+    <marc:subfield code="a">20745679</marc:subfield>
+    <marc:subfield code="2">de-600</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="016" ind1="7" ind2=" ">
+    <marc:subfield code="a">023326719</marc:subfield>
+    <marc:subfield code="2">de-101</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="022" ind1=" " ind2=" ">
+    <marc:subfield code="a">1530-5309 (print)</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="022" ind1=" " ind2=" ">
+    <marc:subfield code="l">1530-5309</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="035" ind1=" " ind2=" ">
+    <marc:subfield code="a">(Sirsi) o44188453</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="035" ind1=" " ind2=" ">
+    <marc:subfield code="a">(OCoLC)44188453</marc:subfield>
+    <marc:subfield code="z">(OCoLC)460711805</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="035" ind1=" " ind2=" ">
+    <marc:subfield code="a">(OCoLC)44188453</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="040" ind1=" " ind2=" ">
+    <marc:subfield code="a">NSD</marc:subfield>
+    <marc:subfield code="b">eng</marc:subfield>
+    <marc:subfield code="c">NSD</marc:subfield>
+    <marc:subfield code="d">DLC</marc:subfield>
+    <marc:subfield code="d">NSD</marc:subfield>
+    <marc:subfield code="d">DLC</marc:subfield>
+    <marc:subfield code="d">NSD</marc:subfield>
+    <marc:subfield code="d">MUQ</marc:subfield>
+    <marc:subfield code="d">DLC</marc:subfield>
+    <marc:subfield code="d">OCL</marc:subfield>
+    <marc:subfield code="d">IUL</marc:subfield>
+    <marc:subfield code="d">DLC</marc:subfield>
+    <marc:subfield code="d">OCLCQ</marc:subfield>
+    <marc:subfield code="d">GBVCP</marc:subfield>
+    <marc:subfield code="d">DLC</marc:subfield>
+    <marc:subfield code="d">UPM</marc:subfield>
+    <marc:subfield code="d">OCLCF</marc:subfield>
+    <marc:subfield code="d">OCLCO</marc:subfield>
+    <marc:subfield code="d">COD</marc:subfield>
+    <marc:subfield code="d">OCLCO</marc:subfield>
+    <marc:subfield code="d">PX0</marc:subfield>
+    <marc:subfield code="d">I8M</marc:subfield>
+    <marc:subfield code="d">UPM</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="042" ind1=" " ind2=" ">
+    <marc:subfield code="a">pcc</marc:subfield>
+    <marc:subfield code="a">nsdp</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="049" ind1=" " ind2=" ">
+    <marc:subfield code="a">NRCC</marc:subfield>
+    <marc:subfield code="x">bw</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="050" ind1="0" ind2="0">
+    <marc:subfield code="a">TH4805</marc:subfield>
+    <marc:subfield code="b">.D88</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="082" ind1="1" ind2="0">
+    <marc:subfield code="a">645</marc:subfield>
+    <marc:subfield code="2">13</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="210" ind1="0" ind2=" ">
+    <marc:subfield code="a">Dwell</marc:subfield>
+    <marc:subfield code="b">(San Franc. Calif.)</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="222" ind1=" " ind2="0">
+    <marc:subfield code="a">Dwell</marc:subfield>
+    <marc:subfield code="b">(San Francisco, Calif.)</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="245" ind1="0" ind2="0">
+    <marc:subfield code="a">Dwell.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="260" ind1=" " ind2=" ">
+    <marc:subfield code="a">San Francisco, CA :</marc:subfield>
+    <marc:subfield code="b">Pixie Communications, Inc..</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="264" ind1="3" ind2="1">
+    <marc:subfield code="3">&lt;July/Aug. 2014-&gt; :</marc:subfield>
+    <marc:subfield code="a">San Francisco, CA :</marc:subfield>
+    <marc:subfield code="b">Dwell Media, LLC</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="300" ind1=" " ind2=" ">
+    <marc:subfield code="a">v. :</marc:subfield>
+    <marc:subfield code="b">col. ill. ;</marc:subfield>
+    <marc:subfield code="c">28 cm</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="310" ind1=" " ind2=" ">
+    <marc:subfield code="a">6 issues a year,</marc:subfield>
+    <marc:subfield code="b">2017-</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="321" ind1=" " ind2=" ">
+    <marc:subfield code="a">Bimonthly,</marc:subfield>
+    <marc:subfield code="b">2000-&lt;2002&gt;</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="321" ind1=" " ind2=" ">
+    <marc:subfield code="a">8 issues a year,</marc:subfield>
+    <marc:subfield code="b">&lt;2002&gt;-Oct./Nov. 2005</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="321" ind1=" " ind2=" ">
+    <marc:subfield code="a">9 issues a year,</marc:subfield>
+    <marc:subfield code="b">Dec. 2005/Jan. 2006-June 2006</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="321" ind1=" " ind2=" ">
+    <marc:subfield code="a">10 issues a year,</marc:subfield>
+    <marc:subfield code="b">July/Aug. 2006-2015</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="321" ind1=" " ind2=" ">
+    <marc:subfield code="a">11 issues a year,</marc:subfield>
+    <marc:subfield code="b">2016</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="362" ind1="0" ind2=" ">
+    <marc:subfield code="a">Vol. 1, no. 1 (Oct. 2000)-</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="500" ind1=" " ind2=" ">
+    <marc:subfield code="a">Title from cover.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="525" ind1=" " ind2=" ">
+    <marc:subfield code="a">Has occasional supplements.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="530" ind1=" " ind2=" ">
+    <marc:subfield code="a">Also issued online.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="588" ind1=" " ind2=" ">
+    <marc:subfield code="a">Latest issue consulted: Vol. 17, issue 1 (Jan./Feb. 2017).</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="596" ind1=" " ind2=" ">
+    <marc:subfield code="a">1 2</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="599" ind1=" " ind2=" ">
+    <marc:subfield code="a">2</marc:subfield>
+    <marc:subfield code="b">VOL.19 NO.3 MAY/JUN 2019;</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="0">
+    <marc:subfield code="a">Dwellings</marc:subfield>
+    <marc:subfield code="v">Periodicals.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="0">
+    <marc:subfield code="a">Housekeeping</marc:subfield>
+    <marc:subfield code="v">Periodicals.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="0">
+    <marc:subfield code="a">Interior decoration</marc:subfield>
+    <marc:subfield code="v">Periodicals.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="0">
+    <marc:subfield code="a">Architecture, Domestic</marc:subfield>
+    <marc:subfield code="v">Periodicals.</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="4">
+    <marc:subfield code="a">Architecture, Domestic.</marc:subfield>
+    <marc:subfield code="0">(OCoLC)fst00813666</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="4">
+    <marc:subfield code="a">Dwellings.</marc:subfield>
+    <marc:subfield code="0">(OCoLC)fst00899978</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="4">
+    <marc:subfield code="a">Housekeeping.</marc:subfield>
+    <marc:subfield code="0">(OCoLC)fst00962201</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="650" ind1=" " ind2="4">
+    <marc:subfield code="a">Interior decoration.</marc:subfield>
+    <marc:subfield code="0">(OCoLC)fst00976327</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="770" ind1="0" ind2=" ">
+    <marc:subfield code="t">100 kitchens we love</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="776" ind1="0" ind2="8">
+    <marc:subfield code="i">Online version:</marc:subfield>
+    <marc:subfield code="t">Dwell</marc:subfield>
+    <marc:subfield code="w">(OCoLC)604803419</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="891" ind1="2" ind2="0">
+    <marc:subfield code="9">853</marc:subfield>
+    <marc:subfield code="8">1</marc:subfield>
+    <marc:subfield code="a">v.</marc:subfield>
+    <marc:subfield code="b">no.</marc:subfield>
+    <marc:subfield code="u">10</marc:subfield>
+    <marc:subfield code="v">r</marc:subfield>
+    <marc:subfield code="i">(year)</marc:subfield>
+    <marc:subfield code="j">(month)</marc:subfield>
+    <marc:subfield code="w">10</marc:subfield>
+    <marc:subfield code="x">11</marc:subfield>
+    <marc:subfield code="y">pm11,12/01,02,03,04,05,06,07/08,09,10</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="891" ind1="4" ind2="1">
+    <marc:subfield code="9">863</marc:subfield>
+    <marc:subfield code="8">1.1</marc:subfield>
+    <marc:subfield code="a">6</marc:subfield>
+    <marc:subfield code="b">7</marc:subfield>
+    <marc:subfield code="i">2006</marc:subfield>
+    <marc:subfield code="j">&lt;07/08&gt;</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="909" ind1=" " ind2=" ">
+    <marc:subfield code="a">20070806</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="918" ind1=" " ind2=" ">
+    <marc:subfield code="a">1967069</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="994" ind1=" " ind2=" ">
+    <marc:subfield code="a">C0</marc:subfield>
+    <marc:subfield code="b">NRC</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="019" ind1=" " ind2=" ">
+    <marc:subfield code="a">460711805</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.2 NO.3-5 2002</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02871823V</marc:subfield>
+    <marc:subfield code="d">1/31/2008</marc:subfield>
+    <marc:subfield code="e">1/3/2008</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">8/6/2007</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.7 NO.8-10 2007</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02871822U</marc:subfield>
+    <marc:subfield code="d">4/11/2008</marc:subfield>
+    <marc:subfield code="e">4/11/2008</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">2</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">1/3/2008</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.5 NO.2 2004</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02949163Y</marc:subfield>
+    <marc:subfield code="d">6/5/2008</marc:subfield>
+    <marc:subfield code="e">5/16/2008</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/16/2008</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.4 NO.8 2004</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02949162X</marc:subfield>
+    <marc:subfield code="d">6/5/2008</marc:subfield>
+    <marc:subfield code="e">5/16/2008</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/16/2008</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.8 NO.1-3 2007-2008</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02949161W</marc:subfield>
+    <marc:subfield code="d">6/5/2008</marc:subfield>
+    <marc:subfield code="e">5/16/2008</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/16/2008</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.8 NO.4-6 2008</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02949159$</marc:subfield>
+    <marc:subfield code="d">6/5/2008</marc:subfield>
+    <marc:subfield code="e">5/16/2008</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/16/2008</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.9 NO.1-3 2008-2009</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897527/</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.9 NO.4-6 2009</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897526$</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.3 NO.1-3 2002-2003</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897525</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.6 NO.1-2 2005-2006</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897524.</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.3 NO.4,6,8 2003</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897523-</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.2 NO.6 2002</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897522Z</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.5 NO.4,6-7 2005</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897521Y</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.4 NO.4-5,7 2004</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897520X</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.8 NO.7-10 2008</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02897519+</marc:subfield>
+    <marc:subfield code="d">8/25/2009</marc:subfield>
+    <marc:subfield code="e">7/22/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">7/22/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.9 NO.7-10 2009</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02895652.</marc:subfield>
+    <marc:subfield code="d">1/28/2010</marc:subfield>
+    <marc:subfield code="e">12/15/2009</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/15/2009</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.5 NO.5 2004</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02919045U</marc:subfield>
+    <marc:subfield code="d">7/19/2010</marc:subfield>
+    <marc:subfield code="e">6/8/2010</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">6/8/2010</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.7 NO.2 2006-2007</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02919044T</marc:subfield>
+    <marc:subfield code="d">7/19/2010</marc:subfield>
+    <marc:subfield code="e">6/8/2010</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">6/8/2010</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.10 NO.1-2,4-5 2009-2010</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02916446W</marc:subfield>
+    <marc:subfield code="d">1/28/2011</marc:subfield>
+    <marc:subfield code="e">12/14/2010</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/14/2010</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.10 NO.6-10 2010</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02916445V</marc:subfield>
+    <marc:subfield code="d">2/4/2011</marc:subfield>
+    <marc:subfield code="e">12/14/2010</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/14/2010</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.11 NO.1-5 2010-2011</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02883952.</marc:subfield>
+    <marc:subfield code="d">6/17/2011</marc:subfield>
+    <marc:subfield code="e">5/26/2011</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/26/2011</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.11 NO.6-10 2011</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02881605U</marc:subfield>
+    <marc:subfield code="d">1/11/2012</marc:subfield>
+    <marc:subfield code="e">12/6/2011</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/6/2011</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.12 NO.1-5 2011-2012</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02891324T</marc:subfield>
+    <marc:subfield code="d">6/25/2012</marc:subfield>
+    <marc:subfield code="e">5/30/2012</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/30/2012</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.12 NO.6-10 2012</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02887116X</marc:subfield>
+    <marc:subfield code="d">1/24/2013</marc:subfield>
+    <marc:subfield code="e">12/10/2012</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/10/2012</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.13 NO.1-5 2013 SUPPL.</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02215765S</marc:subfield>
+    <marc:subfield code="d">6/10/2013</marc:subfield>
+    <marc:subfield code="e">5/13/2013</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/13/2013</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.13 NO.6-10 2013</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034184604</marc:subfield>
+    <marc:subfield code="d">1/27/2014</marc:subfield>
+    <marc:subfield code="e">12/16/2013</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/16/2013</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.14 NO.1-5 2013-2014</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034201140</marc:subfield>
+    <marc:subfield code="d">6/17/2014</marc:subfield>
+    <marc:subfield code="e">5/23/2014</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/23/2014</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.14 NO.6-11 2014</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02942886$</marc:subfield>
+    <marc:subfield code="d">6/2/2015</marc:subfield>
+    <marc:subfield code="e">5/11/2015</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/11/2015</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.15 NO.1-5 2014-2015</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02942890Y</marc:subfield>
+    <marc:subfield code="d">6/2/2015</marc:subfield>
+    <marc:subfield code="e">5/11/2015</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/11/2015</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.16 NO.1-5 2015-2016</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034069524</marc:subfield>
+    <marc:subfield code="d">7/6/2016</marc:subfield>
+    <marc:subfield code="e">5/31/2016</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">2</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/31/2016</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.15 NO.6-10 2015</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034069515</marc:subfield>
+    <marc:subfield code="d">7/5/2016</marc:subfield>
+    <marc:subfield code="e">5/31/2016</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">5/31/2016</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.16 NO.6-10 2016</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034237291</marc:subfield>
+    <marc:subfield code="d">1/27/2017</marc:subfield>
+    <marc:subfield code="e">12/5/2016</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/5/2016</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">ACQSER XX(1967069-34001)</marc:subfield>
+    <marc:subfield code="w">AUTO</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">1967069-34001</marc:subfield>
+    <marc:subfield code="l">ACQ-S</marc:subfield>
+    <marc:subfield code="m">DHHILL</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">4/25/2017</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.17 NO.1-3 2017</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034097236</marc:subfield>
+    <marc:subfield code="d">1/31/2018</marc:subfield>
+    <marc:subfield code="e">12/12/2017</marc:subfield>
+    <marc:subfield code="f">1/16/2018</marc:subfield>
+    <marc:subfield code="g">1</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/12/2017</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.16 NO.11 2016</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034097290</marc:subfield>
+    <marc:subfield code="d">2/1/2018</marc:subfield>
+    <marc:subfield code="e">12/12/2017</marc:subfield>
+    <marc:subfield code="f">1/16/2018</marc:subfield>
+    <marc:subfield code="g">1</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">12/12/2017</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.17 NO.4-6 2017</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034006664</marc:subfield>
+    <marc:subfield code="d">10/9/2018</marc:subfield>
+    <marc:subfield code="e">6/21/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">6/21/2018</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.18 NO.1-3 2018</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S034006673</marc:subfield>
+    <marc:subfield code="d">10/9/2018</marc:subfield>
+    <marc:subfield code="e">6/21/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">6/21/2018</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.6 NO.9 2006</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939196$</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/15/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.6 NO.3 2006</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939197/</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.7 NO.6 2007</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939198+</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.10 SUPPL 2010</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939199%</marc:subfield>
+    <marc:subfield code="d">2/26/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.11 SUPPL. 2011</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02960012K</marc:subfield>
+    <marc:subfield code="d">2/26/2019</marc:subfield>
+    <marc:subfield code="e">2/13/2019</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">3</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.3 NO.5,7 2003</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939201Q</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.4 NO.1-2 2003</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939202R</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.5 NO.8 2005</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939203S</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+  <marc:datafield tag="999" ind1=" " ind2=" ">
+    <marc:subfield code="a">TH4805 .D88 V.5 NO.1 2004</marc:subfield>
+    <marc:subfield code="w">LC</marc:subfield>
+    <marc:subfield code="c">1</marc:subfield>
+    <marc:subfield code="i">S02939204T</marc:subfield>
+    <marc:subfield code="d">1/25/2019</marc:subfield>
+    <marc:subfield code="e">11/16/2018</marc:subfield>
+    <marc:subfield code="l">STACKS</marc:subfield>
+    <marc:subfield code="m">DESIGN</marc:subfield>
+    <marc:subfield code="n">1</marc:subfield>
+    <marc:subfield code="r">Y</marc:subfield>
+    <marc:subfield code="s">Y</marc:subfield>
+    <marc:subfield code="t">SERIAL</marc:subfield>
+    <marc:subfield code="u">11/16/2018</marc:subfield>
+    <marc:subfield code="0">GIFT</marc:subfield>
+  </marc:datafield>
+</marc:record>
+</marc:collection>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<record type="Bibliographic">
+<leader>     nam a2200397Ka 4500</leader>
+<controlfield tag="001">DUKE006076103</controlfield>
+<controlfield tag="005">20140513180900.0</controlfield>
+<controlfield tag="006">m^^^^^^^^d^^^^^^^^</controlfield>
+<controlfield tag="007">cr^cn---------</controlfield>
+<controlfield tag="008">130806s2012^^^^nyu^^^^^s^^^^^000^1^eng^d</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+ <subfield code="a">9780307588388 (electronic bk)</subfield>
+</datafield>
+<datafield tag="037" ind1=" " ind2=" ">
+ <subfield code="a">864604E2-0146-46EF-A96D-D9977DC15263</subfield>
+ <subfield code="b">OverDrive, Inc.</subfield>
+ <subfield code="n">http://www.overdrive.com</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+ <subfield code="a">TEFOD</subfield>
+ <subfield code="c">TEFOD</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+ <subfield code="a">Flynn, Gillian,</subfield>
+ <subfield code="d">1971-</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+ <subfield code="a">Gone girl</subfield>
+ <subfield code="h">[electronic resource] :</subfield>
+ <subfield code="b">A Novel.</subfield>
+ <subfield code="c">Gillian Flynn.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+ <subfield code="c">2012.</subfield>
+</datafield>
+<datafield tag="533" ind1=" " ind2=" ">
+ <subfield code="a">Electronic reproduction.</subfield>
+ <subfield code="b">New York :</subfield>
+ <subfield code="c">Crown,</subfield>
+ <subfield code="d">2012.</subfield>
+ <subfield code="n">Requires Adobe Digital Editions (file size: 2371 KB) or Amazon Kindle (file size: N/A KB) or OverDrive Read (file size: N/A KB).</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+ <subfield code="a">Marriage can be a real killer. One of the most critically acclaimed suspense writers of our time, New York Times bestseller Gillian Flynn, takes that statement to its darkest place in this unputdownable masterpiece about a marriage gone terribly, terribly wrong. As The Washington Post proclaimed, her work "draws you in and keeps you reading with the force of a pure but nasty addiction." Gone Girl's toxic mix of sharp-edged wit with deliciously chilling prose creates a nerve-fraying thriller that confounds you at every turn. On a warm summer morning in North Carthage, Missouri, it is Nick and Amy's fifth wedding anniversary. Presents are being wrapped and reservations are being made when Nick Dunne's clever and beautiful wife disappears from their rented McMansion on the Mississippi River. Husband-of-the-Year Nick Dunne isn't doing himself any favors with cringe-worthy daydreams about the slope and shape of his wife's head, but hearing from Amy...</subfield>
+</datafield>
+<datafield tag="521" ind1=" " ind2="0">
+ <subfield code="a">Grade 4</subfield>
+</datafield>
+<datafield tag="521" ind1=" " ind2="2">
+ <subfield code="a">UG/Upper grades (9th-12)</subfield>
+</datafield>
+<datafield tag="521" ind1=" " ind2="8">
+ <subfield code="a">5.6</subfield>
+ <subfield code="b">ATOS Level</subfield>
+</datafield>
+<datafield tag="655" ind1=" " ind2="7">
+ <subfield code="a">Electronic books.</subfield>
+ <subfield code="2">lcgft</subfield>
+</datafield>
+<datafield tag="650" ind1="1" ind2="7">
+ <subfield code="a">Fiction.</subfield>
+ <subfield code="2">OverDrive</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Mystery.</subfield>
+ <subfield code="2">OverDrive</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Suspense.</subfield>
+ <subfield code="2">OverDrive</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="7">
+ <subfield code="a">Thriller.</subfield>
+ <subfield code="2">OverDrive</subfield>
+</datafield>
+<datafield tag="776" ind1="1" ind2=" ">
+ <subfield code="c">Original</subfield>
+ <subfield code="z">030758836X</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="0">
+ <subfield code="u">http://overdrive.library.duke.edu/ContentDetails.htm?ID={864604E2-0146-46EF-A96D-D9977DC15263}</subfield>
+ <subfield code="y">get it@Duke</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+ <subfield code="3">Excerpt</subfield>
+ <subfield code="u">https://samples.overdrive.com/gone-girl?.epub-sample.overdrive.com</subfield>
+ <subfield code="z">Sample</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+ <subfield code="3">Image</subfield>
+ <subfield code="u">http://images.contentreserve.com/ImageType-100/0111-1/{864604E2-0146-46EF-A96D-D9977DC15263}Img100.jpg</subfield>
+ <subfield code="z">Large cover image</subfield>
+</datafield>
+<datafield tag="856" ind1="4" ind2="2">
+ <subfield code="3">Thumbnail</subfield>
+ <subfield code="u">http://images.contentreserve.com/ImageType-200/0111-1/{864604E2-0146-46EF-A96D-D9977DC15263}Img200.jpg</subfield>
+ <subfield code="z">Thumbnail cover image</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">EB</subfield>
+ <subfield code="b">Electronic books</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+ <subfield code="a">AM</subfield>
+ <subfield code="b">Book</subfield>
+</datafield>
+<datafield tag="944" ind1=" " ind2=" ">
+ <subfield code="a">ODN0000686192</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+ <subfield code="b">20140512</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+ <subfield code="b">DUKIR</subfield>
+ <subfield code="o">04</subfield>
+ <subfield code="r">ITNET</subfield>
+</datafield>
+</record>
+</collection>

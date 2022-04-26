@@ -8,6 +8,3 @@ $LOAD_PATH << self_load_path unless $LOAD_PATH.include? self_load_path
 require 'marc_to_argot'
 
 result = MarcToArgot::CommandLine.start(ARGV)
-
-# non-zero exit status on process telling us there's problems.
-exit 1 unless result

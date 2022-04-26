@@ -89,6 +89,7 @@ describe MarcToArgot::Macros::Shared::Imprint do
     }
     let(:imprint_v1) { run_traject_json('unc', 'imprint_v1', 'mrc') }
     let(:imprint_v2) { run_traject_json('unc', 'imprint_v2', 'mrc') }
+    let(:imprint_vern) { run_traject_json('duke', 'imprint_vern') }
 
     it 'extracts imprint_main' do
       indexer.instance_eval do
@@ -170,5 +171,19 @@ describe MarcToArgot::Macros::Shared::Imprint do
                         )
     end
 
+    it 'sets publisher_location from main imprint' do
+      result = imprint_v1['publisher_location']
+      expect(result).to eq(["Moskva", "Москва"])
+    end
+
+    it 'sets imprint_main when there is a single linked field' do
+      result = imprint_vern['imprint_main']
+      expect(result.length).to eq(2)
+    end
+
+    it 'does not set imprint_multiple if it would be same as imprint_main' do
+      result = imprint_vern['imprint_multiple']
+      expect(result).to be nil
+    end
   end
 end

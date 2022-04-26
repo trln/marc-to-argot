@@ -1,0 +1,657 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+<!-- Length implementation at offset 22 should hold a number. Assuming 0 -->
+  <leader>02978nam a2200661   4500</leader>
+  <controlfield tag="001">o852709376</controlfield>
+  <controlfield tag="003">SIRSI</controlfield>
+  <controlfield tag="005">20130718115214.0</controlfield>
+  <controlfield tag="006">m     o  c        </controlfield>
+  <controlfield tag="007">vz czazuu</controlfield>
+  <controlfield tag="007">cr cna||||||||</controlfield>
+  <controlfield tag="008">130712s2011    ncu029        o   vleng d</controlfield>
+  <datafield tag="028" ind1="5" ind2="2">
+    <subfield code="a">563</subfield>
+    <subfield code="b">NC LIVE</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o852709376</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)852709376</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">UTBLW</subfield>
+    <subfield code="c">UTBLW</subfield>
+    <subfield code="d">UTBLW</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">n-us-nc</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">UTBA</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">D570.85.N81</subfield>
+    <subfield code="b">C58 2011</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">City of canvas</subfield>
+    <subfield code="h">[electronic resource] :</subfield>
+    <subfield code="b">the story of Camp Greene /</subfield>
+    <subfield code="c">a film by Jack Dillard ; Deuce Chaps Productions in association with  WTVI and the Charlotte Mecklenburg Library ; executive producer for WTVI, Rick Fills.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">North Carolina :</subfield>
+    <subfield code="b">Charlotte Mecklenburg Library :</subfield>
+    <subfield code="b">WTVI Charlotte,</subfield>
+    <subfield code="c">2011.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 streaming video file (29 min.) :</subfield>
+    <subfield code="b">digital, SWF file, sd., col.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Interviews with subject experts in the Charlotte-Mecklenburg area and archival material.</subfield>
+  </datafield>
+  <datafield tag="508" ind1=" " ind2=" ">
+    <subfield code="a">Writer and producer, Jack Dillard ; editor, Kyndell Bishop ; cinematographer, John Autry.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="0" ind2=" ">
+    <subfield code="a">Tom Hanchett, Larry Sprinkle, Dan Morrill, Grace Mitchell, Lew Powell, Kurt Geske ; narrator, James K. Flynn.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Produced in collaboration with the Charlotte Mecklenburg Library and WTVI Charlotte, this documentary explores Charlotte&apos;s growth after the emergence of the WWI training camp at Camp Greene.</subfield>
+  </datafield>
+  <datafield tag="521" ind1="8" ind2=" ">
+    <subfield code="a">Not rated.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">System requirements: Adobe Flash Player version 9 or higher ; video available in high (1 M), standard (380k), or small (175k).</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">World War, 1914-1918</subfield>
+    <subfield code="z">North Carolina</subfield>
+    <subfield code="z">Charlotte.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">World War, 1914-1918</subfield>
+    <subfield code="z">North Carolina</subfield>
+    <subfield code="z">Mecklenburg County.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Military camps</subfield>
+    <subfield code="z">North Carolina</subfield>
+    <subfield code="z">Charlotte.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">Camp Greene (N.C.)</subfield>
+    <subfield code="x">History.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Documentary films.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Hanchett, Thomas W.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Bishop, Kyndell.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Autry, John.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="0" ind2=" ">
+    <subfield code="a">Christmas Curmudgeon.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Morrill, Dan L.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Sprinkle, Larry.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Mitchell, Miriam Grace.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Powell, Lew.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Geske, Kurt.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Flynn, James K.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">McCrory, Pat,</subfield>
+    <subfield code="q">(Patrick Lloyd),</subfield>
+    <subfield code="d">1956-</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Fills, Rick.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">NC LIVE digital media collection.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Public Library of Charlotte and Mecklenburg County (N.C.)</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">WTVI (Television station : Charlotte, N.C.)</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Deuce Chaps Productions.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="y">View this streaming video via NC LIVE&apos;s website (NCSU only)</subfield>
+    <subfield code="u">https://www.nclive.org/cgi-bin/nclsm?url=https://fod.infobase.com/PortalPlaylists.aspx?customID=54066</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">UTBLW</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808367</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808367</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">D570.85 .N81 C58 2011</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">2808367-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">VID-STREAM</subfield>
+    <subfield code="u">9/13/2013</subfield>
+    <subfield code="z">NCLIVETRLN</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>02900cgm a2200589Ia 4500</leader>
+  <controlfield tag="001">o852710537</controlfield>
+  <controlfield tag="003">SIRSI</controlfield>
+  <controlfield tag="005">20130718115211.0</controlfield>
+  <controlfield tag="006">m     o  c        </controlfield>
+  <controlfield tag="007">vz czazuu</controlfield>
+  <controlfield tag="007">cr cna||||||||</controlfield>
+  <controlfield tag="008">130712s2011    vau084        o   vleng d</controlfield>
+  <datafield tag="028" ind1="5" ind2="2">
+    <subfield code="a">439</subfield>
+    <subfield code="b">NC LIVE</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o852710537</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)852710537</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">UTBLW</subfield>
+    <subfield code="c">UTBLW</subfield>
+    <subfield code="d">UTBLW</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">UTBA</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">F1569.C2</subfield>
+    <subfield code="b">P36 2011</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Panama Canal</subfield>
+    <subfield code="h">[electronic resource] /</subfield>
+    <subfield code="c">CPB ; American Experience Films presents ; produced by Amanda Pollak ; edited by George O&apos;Donnell ; written by Michelle Ferrari ; directed by Stephen Ives.</subfield>
+  </datafield>
+  <datafield tag="246" ind1="1" ind2=" ">
+    <subfield code="a">Gateway to the American century</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Alexandria, Va.] :</subfield>
+    <subfield code="b">PBS Video,</subfield>
+    <subfield code="c">2011.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 streaming video file (84 min.) :</subfield>
+    <subfield code="b">digital, SWF file, sd., col.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2=" ">
+    <subfield code="a">Wonder of the modern world -- The Republic of Panama -- Challenges breaking ground -- John Stevens -- Recruiting workers -- Mosquito eradication -- Roosevelt visits Panama -- The Culebra cut -- Finishing the canal -- Credits.</subfield>
+  </datafield>
+  <datafield tag="508" ind1=" " ind2=" ">
+    <subfield code="a">Director of photography, Andrew Young ; music, Peter Rundquist.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="0" ind2=" ">
+    <subfield code="a">Narrator, Michael Murphy.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">On August 15th, 1914, the Panama Canal opened, connecting the world&apos;s two largest oceans and signaling America&apos;s emergence as a global superpower. This film, using an extraordinary archive of photographs and footage, interviews with canal workers, and firsthand accounts of life in the Canal Zone, unravels the remarkable story of one of the world&apos;s most significant technological achievements.</subfield>
+  </datafield>
+  <datafield tag="521" ind1="8" ind2=" ">
+    <subfield code="a">Not rated.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">System requirements: Adobe Flash Player version 9 or higher ; video available in high (1 M), standard (380k), or small (175k).</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Closed-captioned.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">Panama Canal (Panama)</subfield>
+    <subfield code="x">History.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Documentary films.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Films for the hearing impaired.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Young, Andrew,</subfield>
+    <subfield code="d">1960-</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Ives, Stephen</subfield>
+    <subfield code="4">drt</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Pollak, Amanda</subfield>
+    <subfield code="4">pro</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Ferrari, Michelle.</subfield>
+    <subfield code="4">aus</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Murphy, Michael,</subfield>
+    <subfield code="d">1938-</subfield>
+    <subfield code="4">nrt</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">O&apos;Donnell, George</subfield>
+    <subfield code="c">(Film editor)</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Rundquist, Peter</subfield>
+    <subfield code="4">cmp</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">NC LIVE digital media collection.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Corporation for Public Broadcasting.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">American Experience Films.</subfield>
+  </datafield>
+  <datafield tag="730" ind1="0" ind2=" ">
+    <subfield code="a">American experience (Television program)</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="y">View this streaming video via NC LIVE&apos;s website (NCSU only)</subfield>
+    <subfield code="u">https://www.nclive.org/cgi-bin/nclsm?url=https://fod.infobase.com/PortalPlaylists.aspx?customID=53995</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">UTBLW</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808246</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808246</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">F1569 .C2 P36 2011</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">2808246-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">VID-STREAM</subfield>
+    <subfield code="u">9/13/2013</subfield>
+    <subfield code="z">NCLIVETRLN</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>02786cgm a2200601Ia 4500</leader>
+  <controlfield tag="001">o852710536</controlfield>
+  <controlfield tag="003">SIRSI</controlfield>
+  <controlfield tag="005">20130718115211.0</controlfield>
+  <controlfield tag="006">m     o  c        </controlfield>
+  <controlfield tag="007">vz czazuu</controlfield>
+  <controlfield tag="007">cr cna||||||||</controlfield>
+  <controlfield tag="008">130712s2011    vau085 g      o   vleng d</controlfield>
+  <datafield tag="028" ind1="5" ind2="2">
+    <subfield code="a">438</subfield>
+    <subfield code="b">NC LIVE</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o852710536</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)852710536</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">UTBLW</subfield>
+    <subfield code="c">UTBLW</subfield>
+    <subfield code="d">UTBLW</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">UTBA</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">E467.1.L4</subfield>
+    <subfield code="b">R63 2011</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Robert E. Lee</subfield>
+    <subfield code="h">[electronic resource] /</subfield>
+    <subfield code="c">CPB ; American Experience Films presents.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Alexandria, Va.] :</subfield>
+    <subfield code="b">PBS Video,</subfield>
+    <subfield code="c">2011.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 streaming video file (85 min.) :</subfield>
+    <subfield code="b">digital, SWF file, sd., col.</subfield>
+  </datafield>
+  <datafield tag="490" ind1="0" ind2=" ">
+    <subfield code="a">American experience</subfield>
+  </datafield>
+  <datafield tag="508" ind1=" " ind2=" ">
+    <subfield code="a">Written and produced by Mark Zwonitzer ; editor, Bruce Shaw ; music, Joel Goodman ; director of photography, Michael Chin.</subfield>
+  </datafield>
+  <datafield tag="511" ind1="0" ind2=" ">
+    <subfield code="a">Narrated by Michael Murphy ; voices of Chris Sarandon and Kara Jackson.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">Nearly a century and a half after his death, Robert E. Lee, the leading Confederate general of the American Civil War, remains a source of fascination and, for some, veneration. This American experience film examines the life and reputation of the general, whose military successes made him the scourge of the Union and the hero of the Confederacy, and who was elevated to almost god-like status by his admirers after his death.</subfield>
+  </datafield>
+  <datafield tag="521" ind1="8" ind2=" ">
+    <subfield code="a">Not rated.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">System requirements: Adobe Flash Player version 9 or higher ; video available in high (1 M), standard (380k), or small (175k).</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Closed-captioned.</subfield>
+  </datafield>
+  <datafield tag="600" ind1="1" ind2="0">
+    <subfield code="a">Lee, Robert E.</subfield>
+    <subfield code="q">(Robert Edward),</subfield>
+    <subfield code="d">1807-1870.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Generals</subfield>
+    <subfield code="z">United States</subfield>
+    <subfield code="v">Biography.</subfield>
+  </datafield>
+  <datafield tag="651" ind1=" " ind2="0">
+    <subfield code="a">United States</subfield>
+    <subfield code="x">History</subfield>
+    <subfield code="y">Civil War, 1861-1865.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Documentary films.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Films for the hearing impaired.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Goodman, Joel</subfield>
+    <subfield code="q">(Joel Scott)</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Chin, Michael.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Shaw, Bruce.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Zwonitzer, Mark.</subfield>
+    <subfield code="4">aus</subfield>
+    <subfield code="4">pro</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Murphy, Michael,</subfield>
+    <subfield code="d">1938-</subfield>
+    <subfield code="4">nrt</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Sarandon, Chris.</subfield>
+    <subfield code="4">act</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Jackson, Kara.</subfield>
+    <subfield code="4">act</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">NC LIVE digital media collection.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Corporation for Public Broadcasting.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">American Experience Films.</subfield>
+  </datafield>
+  <datafield tag="730" ind1="0" ind2=" ">
+    <subfield code="a">American experience (Television program)</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="y">View this streaming video via NC LIVE&apos;s website (NCSU only)</subfield>
+    <subfield code="u">https://www.nclive.org/cgi-bin/nclsm?url=https://fod.infobase.com/PortalPlaylists.aspx?customID=53994</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">UTBLW</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808245</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808245</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">E467.1 .L4 R63 2011</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">2808245-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">VID-STREAM</subfield>
+    <subfield code="u">9/13/2013</subfield>
+    <subfield code="z">NCLIVETRLN</subfield>
+  </datafield>
+</record>
+<record>
+  <leader>02383cgm a2200541Ia 4500</leader>
+  <controlfield tag="001">o852709372</controlfield>
+  <controlfield tag="003">SIRSI</controlfield>
+  <controlfield tag="005">20130718115213.0</controlfield>
+  <controlfield tag="006">m     o  c        </controlfield>
+  <controlfield tag="007">vz czazuu</controlfield>
+  <controlfield tag="007">cr cna||||||||</controlfield>
+  <controlfield tag="008">130712s2010    vau054        o   vleng d</controlfield>
+  <datafield tag="028" ind1="5" ind2="2">
+    <subfield code="a">543</subfield>
+    <subfield code="b">NC LIVE</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o852709372</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)852709372</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">UTBLW</subfield>
+    <subfield code="c">UTBLW</subfield>
+    <subfield code="d">UTBLW</subfield>
+  </datafield>
+  <datafield tag="043" ind1=" " ind2=" ">
+    <subfield code="a">s-cl---</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">UTBA</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">TN311</subfield>
+    <subfield code="b">.E44 2010</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Emergency mine rescue</subfield>
+    <subfield code="h">[electronic resource]  /</subfield>
+    <subfield code="c">produced by Pioneer Productions for Nova in association with Channel 4.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">[Alexandria, Va.] :</subfield>
+    <subfield code="b">PBS Video,</subfield>
+    <subfield code="c">2010.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 streaming video file (54 min.) :</subfield>
+    <subfield code="b">digital, SWF file, sd., col.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Originally produced for public television broadcast October 26, 2010 ; remote version viewed November 18, 2010.</subfield>
+  </datafield>
+  <datafield tag="508" ind1=" " ind2=" ">
+    <subfield code="a">Produced and directed by Kate Dart, Nick Evans, and Tom Stubberfield.</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">With special access to the site of the San Jose, Chile, mine, the mining engineers and the miners&apos; families, NOVA chronicles the miners&apos; 69-day ordeal and the work of a global team of engineers who struggled tirelessly around the clock in a desperate bid to bring the trapped miners safely to the surface.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">Mode of access: World Wide Web.</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">System requirements: Adobe Flash Player version 9 or higher ; video available in high (1 M), standard (380k), or small (175k).</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Closed-captioned.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Mine accidents.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Mine rescue work.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Mines and mineral resources</subfield>
+    <subfield code="z">Chile.</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Films for the hearing impaired.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Documentary films.</subfield>
+    <subfield code="2">lcgft</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Dart, Kate.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Evans, Nick.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Stubberfield, Tom.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">NC LIVE digital media collection.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Pioneer Productions.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Channel Four (Great Britain)</subfield>
+  </datafield>
+  <datafield tag="730" ind1="0" ind2=" ">
+    <subfield code="a">Nova (Television program)</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="y">View this streaming video via NC LIVE&apos;s website (NCSU only)</subfield>
+    <subfield code="u">https://www.nclive.org/cgi-bin/nclsm?url=https://fod.infobase.com/PortalPlaylists.aspx?customID=54171</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">UTBLW</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808348</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">2808348</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20130913</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">TN311 .E44 2010</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">2808348-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">VID-STREAM</subfield>
+    <subfield code="u">9/13/2013</subfield>
+    <subfield code="z">NCLIVETRLN</subfield>
+  </datafield>
+</record>
+</collection>

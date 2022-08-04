@@ -78,7 +78,8 @@ module MarcToArgot
         def normalize_string_for_sorting(str)
           # Apply NFKD normalization to the string.
           # See: http://www.unicode.org/reports/tr15/tr15-29.html
-          kd = ActiveSupport::Multibyte::Chars.new(str).downcase.normalize(:kd)
+          kd = str.downcase.unicode_normalize(:nfkd)
+
           # Select the codepoints that are not combining diacritics.
           codepoints = kd.codepoints.select { |c| c < 0x0300 || c > 0x036F }
           # Convert the Unicode codepoints back to a string.

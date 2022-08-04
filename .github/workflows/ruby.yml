@@ -10,7 +10,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: ['2.4.5', '2.5.3', '2.6.2']
+        ruby:
+          - '2.6'
+          - '2.7'
+          - '3.0'
+          - '3.1'
     name: Ruby ${{ matrix.ruby }}
     
     steps:

@@ -45,8 +45,8 @@ module MarcToArgot
         #       Remove Duke proxy prefix from shared records.
         def add_duke_proxy(href, type, ctx)
           if type == 'fulltext' &&
-            ctx.clipboard.fetch(:shared_record_set, false).present? &&
-            url_restricted?(href, type)
+             ctx.clipboard.fetch(:shared_record_set, '').match(/\S/) &&
+             url_restricted?(href, type)
             "{+proxyPrefix}#{href.gsub('https://login.proxy.lib.duke.edu/login?url=', '')}"
           else
             href

@@ -23,7 +23,7 @@ module Util
   def load_yaml(collection, base)
     filename = data_path(File.join(collection, "#{base}.yml"))
     yaml = File.open(filename) do |f|
-      YAML.load(f)
+      YAML.safe_load(f, permitted_classes: [:Symbol], aliases: true)
     end
     yield yaml if block_given?
     yaml

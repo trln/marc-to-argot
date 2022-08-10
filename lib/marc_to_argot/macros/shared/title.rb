@@ -1,5 +1,3 @@
-require 'active_support'
-
 module MarcToArgot
   module Macros
     module Shared

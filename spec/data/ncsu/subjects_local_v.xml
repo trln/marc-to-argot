@@ -1,0 +1,124 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>01491ntm a2200385Ki 4500</leader>
+  <controlfield tag="001">on1268551876</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20210921045332.0</controlfield>
+  <controlfield tag="007">cr mn|||||||||</controlfield>
+  <controlfield tag="008">210921s2021    ncua    obm   000 0 eng d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(Sirsi) o1268551876</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)1268551876</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">NRC</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="e">rda</subfield>
+    <subfield code="c">NRC</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">emb</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Morrow, Zachary Benjamin,</subfield>
+    <subfield code="e">author.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">Sparse-Grid Surrogate Models in Computational Chemistry /</subfield>
+    <subfield code="c">by Zachary Benjamin Morrow.</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="1">
+    <subfield code="a">[Raleigh, North Carolina] :</subfield>
+    <subfield code="b">North Carolina State University,</subfield>
+    <subfield code="c">2021.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 online resource (ix, 187 pages) :</subfield>
+    <subfield code="b">illustrations</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">text</subfield>
+    <subfield code="b">txt</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">computer</subfield>
+    <subfield code="b">c</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">online resource</subfield>
+    <subfield code="b">cr</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="g">polychrome</subfield>
+    <subfield code="2">rdacc</subfield>
+    <subfield code="0">http://rdaregistry.info/termList/RDAColourContent/1003</subfield>
+  </datafield>
+  <datafield tag="347" ind1=" " ind2=" ">
+    <subfield code="a">text file</subfield>
+    <subfield code="2">rdaft</subfield>
+    <subfield code="0">http://rdaregistry.info/termList/fileType/1002</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Includes vita.</subfield>
+  </datafield>
+  <datafield tag="502" ind1=" " ind2=" ">
+    <subfield code="b">Ph.D.</subfield>
+    <subfield code="c">North Carolina State University,</subfield>
+    <subfield code="d">2021.</subfield>
+  </datafield>
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">Includes bibliographical references.</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="0">
+    <subfield code="y">Full text (pdf)</subfield>
+    <subfield code="u">https://www.lib.ncsu.edu/resolver/1840.20/39017</subfield>
+  </datafield>
+  <datafield tag="917" ind1=" " ind2=" ">
+    <subfield code="a">u5284575</subfield>
+  </datafield>
+  <datafield tag="949" ind1=" " ind2=" ">
+    <subfield code="w">ETD</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="t">DISSERTN</subfield>
+    <subfield code="z">OPENACCESS</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="690" ind1=" " ind2=" ">
+    <subfield code="a">North Carolina State University</subfield>
+    <subfield code="v">Theses</subfield>
+    <subfield code="x">Applied Mathematics.</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">5284575</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20210921</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">8</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">XX(5284575.1)</subfield>
+    <subfield code="w">ETD</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">5284575-1001</subfield>
+    <subfield code="l">NET</subfield>
+    <subfield code="m">ONLINE</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">DISSERTN</subfield>
+    <subfield code="u">9/21/2021</subfield>
+    <subfield code="z">OPENACCESS</subfield>
+  </datafield>
+</record>
+</collection>

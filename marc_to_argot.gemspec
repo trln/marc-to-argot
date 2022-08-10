@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'marc_to_argot/version'
+gem_version = File.read(File.expand_path('VERSION', __dir__))
 
 is_java = RUBY_PLATFORM =~ /java/
 
 Gem::Specification.new do |s|
   s.name          = 'marc_to_argot'
-  s.version       = MarcToArgot::VERSION
+  s.version       = gem_version
   s.authors       = ['Luke Aeschleman', 'Cory Lown', 'Kristina Spurgin', 'Adam Constabaris']
   s.email         = ['lukeaeschleman@gmail.com']
 
@@ -48,7 +46,6 @@ Gem::Specification.new do |s|
     s.add_runtime_dependency 'yajl-ruby', ['>=1.3.1']
   end
 
-  s.add_runtime_dependency 'activesupport', '> 6.0'
   s.add_runtime_dependency 'lcsort', '~> 0.9.0'
   s.add_runtime_dependency 'library_stdnums', '~> 1.6'
   s.add_runtime_dependency 'logging', '~> 2.2.2'

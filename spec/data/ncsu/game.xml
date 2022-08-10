@@ -1,0 +1,211 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+  <leader>03207cmm a2200601Ii 4500</leader>
+  <controlfield tag="001">on1299319517</controlfield>
+  <controlfield tag="003">OCoLC</controlfield>
+  <controlfield tag="005">20220315010115.0</controlfield>
+  <controlfield tag="007">co cga||||||||</controlfield>
+  <controlfield tag="008">220225s2022    cau    eq  g        eng d</controlfield>
+  <datafield tag="024" ind1="1" ind2=" ">
+    <subfield code="a">722674221689</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)1299319517</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">IHY</subfield>
+    <subfield code="b">eng</subfield>
+    <subfield code="e">rda</subfield>
+    <subfield code="c">IHY</subfield>
+    <subfield code="d">OPW</subfield>
+    <subfield code="d">INO</subfield>
+    <subfield code="d">ZAC</subfield>
+  </datafield>
+  <datafield tag="041" ind1="1" ind2=" ">
+    <subfield code="g">eng</subfield>
+    <subfield code="g">fre</subfield>
+  </datafield>
+  <datafield tag="049" ind1=" " ind2=" ">
+    <subfield code="a">NRCC</subfield>
+    <subfield code="x">fb</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">GV1469.35.E42</subfield>
+    <subfield code="b">E42 2022b</subfield>
+  </datafield>
+  <datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">Elden Ring /</subfield>
+    <subfield code="c">[developed by FromSoftware].</subfield>
+  </datafield>
+  <datafield tag="250" ind1=" " ind2=" ">
+    <subfield code="a">Xbox Series X, Xbox One.</subfield>
+  </datafield>
+  <datafield tag="264" ind1=" " ind2="1">
+    <subfield code="a">Irvine, CA :</subfield>
+    <subfield code="b">Bandai Namco Entertainment America,</subfield>
+    <subfield code="c">[2022]</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">1 computer disc :</subfield>
+    <subfield code="b">sound, color ;</subfield>
+    <subfield code="c">4 3/4 in.</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">computer program</subfield>
+    <subfield code="b">cop</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">two-dimensional moving image</subfield>
+    <subfield code="b">tdi</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">computer</subfield>
+    <subfield code="b">c</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">computer disc</subfield>
+    <subfield code="b">cd</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="344" ind1=" " ind2=" ">
+    <subfield code="a">digital</subfield>
+    <subfield code="2">rdatr</subfield>
+  </datafield>
+  <datafield tag="344" ind1=" " ind2=" ">
+    <subfield code="b">optical</subfield>
+    <subfield code="2">rdarm</subfield>
+  </datafield>
+  <datafield tag="380" ind1=" " ind2=" ">
+    <subfield code="a">Video game</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="b">4 3/4 in.</subfield>
+  </datafield>
+  <datafield tag="340" ind1=" " ind2=" ">
+    <subfield code="g">polychrome</subfield>
+    <subfield code="2">rdacc</subfield>
+    <subfield code="0">http://rdaregistry.info/termList/RDAColourContent/1003</subfield>
+  </datafield>
+  <datafield tag="347" ind1=" " ind2=" ">
+    <subfield code="a">data file</subfield>
+    <subfield code="2">rdaft</subfield>
+    <subfield code="0">http://rdaregistry.info/termList/fileType/1005</subfield>
+  </datafield>
+  <datafield tag="538" ind1=" " ind2=" ">
+    <subfield code="a">System requirements: Xbox One or Xbox Series X consoles with optical drive; Requires download(s) (significant storage, broadband internet connection and ISP fees apply); Xbox Game Pass Ultimate or Xbox Live Gold required for online multiplayer/co-op.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Title from disc label.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Single player ; 2-3 players, online co-op ; 2-4 players, online multiplayer.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Features supported: Optimized for Xbox Series X; smart delivery; 4K Ultra-HD; HDR10.</subfield>
+  </datafield>
+  <datafield tag="521" ind1=" " ind2=" ">
+    <subfield code="a">ESRB rating: M, Mature 17+ (violence, blood and gore, suggestive themes, language)</subfield>
+  </datafield>
+  <datafield tag="520" ind1=" " ind2=" ">
+    <subfield code="a">&quot;Create your character and charge into epic battle with dozens of powerful skills. Face the demigods and claim the shards of the Elden Ring known as the Great Runes&quot;--Container.</subfield>
+  </datafield>
+  <datafield tag="546" ind1=" " ind2=" ">
+    <subfield code="a">Container text in English and French.</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Imaginary wars and battles</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/subjects/sh85064465</subfield>
+    <subfield code="v">Computer games.</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001415</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Imaginary places</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/subjects/sh92002904</subfield>
+    <subfield code="v">Computer games.</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001415</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Quests (Expeditions)</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/subjects/sh96008101</subfield>
+    <subfield code="v">Computer games.</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/subjects/sh99001415</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Action adventure video games.</subfield>
+    <subfield code="2">olacvggt</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Role playing video games.</subfield>
+    <subfield code="2">olacvggt</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Fantasy video games.</subfield>
+    <subfield code="2">olacvggt</subfield>
+  </datafield>
+  <datafield tag="655" ind1=" " ind2="7">
+    <subfield code="a">Video games.</subfield>
+    <subfield code="2">olacvggt</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">FromSoftware,</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/names/no2018165869</subfield>
+    <subfield code="e">creator.</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Bandai Namco Entertainment America Inc.,</subfield>
+    <subfield code="0">http://id.loc.gov/authorities/names/no2017128009</subfield>
+    <subfield code="e">publisher.</subfield>
+  </datafield>
+  <datafield tag="917" ind1=" " ind2=" ">
+    <subfield code="a">u5351199</subfield>
+  </datafield>
+  <datafield tag="994" ind1=" " ind2=" ">
+    <subfield code="a">C0</subfield>
+    <subfield code="b">NRC</subfield>
+  </datafield>
+  <datafield tag="918" ind1=" " ind2=" ">
+    <subfield code="a">5351199</subfield>
+  </datafield>
+  <datafield tag="909" ind1=" " ind2=" ">
+    <subfield code="a">20220315</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">1 15</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">GV1469.35 .E42 E42 2022B</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S03277362U</subfield>
+    <subfield code="d">5/11/2022</subfield>
+    <subfield code="e">5/11/2022</subfield>
+    <subfield code="l">CIRCDESK</subfield>
+    <subfield code="m">DHHILL</subfield>
+    <subfield code="n">13</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">GAME-4HR</subfield>
+    <subfield code="u">3/7/2022</subfield>
+    <subfield code="x">GAME</subfield>
+  </datafield>
+  <datafield tag="999" ind1=" " ind2=" ">
+    <subfield code="a">GV1469.35 .E42 E42 2022B</subfield>
+    <subfield code="w">LC</subfield>
+    <subfield code="c">1</subfield>
+    <subfield code="i">S03277363V</subfield>
+    <subfield code="d">5/12/2022</subfield>
+    <subfield code="e">5/12/2022</subfield>
+    <subfield code="l">CIRCDESK</subfield>
+    <subfield code="m">HUNT</subfield>
+    <subfield code="n">3</subfield>
+    <subfield code="r">Y</subfield>
+    <subfield code="s">Y</subfield>
+    <subfield code="t">GAME-4HR</subfield>
+    <subfield code="u">3/7/2022</subfield>
+    <subfield code="x">GAME</subfield>
+  </datafield>
+</record>
+</collection>

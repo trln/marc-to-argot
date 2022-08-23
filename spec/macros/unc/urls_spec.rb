@@ -57,7 +57,14 @@ describe MarcToArgot::Macros::UNC::Urls do
   end
 
   describe 'proxied url' do
-    subject(:proxied_url) { 'http://libproxy.lib.unc.edu/login?url=https://blahblah' }
+    subject(:proxied_url) { 'https://login.libproxy.lib.unc.edu/login?url=https://blahblah' }
+    it_behaves_like '(UNC) a restricted url'
+    it_behaves_like '(UNC) a proxied url'
+    it_behaves_like '(UNC) a proxy-templatable url'
+  end
+
+  describe 'deprecated proxied url' do
+    subject(:deprecated_proxied_url) { 'http://libproxy.lib.unc.edu/login?url=https://blahblah' }
     it_behaves_like '(UNC) a restricted url'
     it_behaves_like '(UNC) a proxied url'
     it_behaves_like '(UNC) a proxy-templatable url'

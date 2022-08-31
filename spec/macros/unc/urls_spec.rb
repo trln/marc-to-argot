@@ -12,6 +12,90 @@ describe MarcToArgot::Macros::UNC::Urls do
     url_field = url_field.map{ |u| JSON.parse(u) } if url_field
   end
 
+  shared_examples '(UNC) a restricted url' do
+    it '(UNC) #is_restricted? returns true' do
+      expect(is_restricted?(subject)).to be true
+    end
+
+    it '(UNC) does not output restricted field' do
+      rec = make_rec
+      rec << MARC::DataField.new('856', '4', '0', ['u', subject])
+      url = return_argot_url_field(rec)
+      expect(url.first['restricted']).to be_nil
+    end
+  end
+
+  shared_examples '(UNC) an unrestricted url' do
+    it '(UNC) #is_restricted? returns false' do
+      expect(is_restricted?(subject)).to be false
+    end
+
+    it '(UNC) writes out url[restricted] = false' do
+      rec = make_rec
+      rec << MARC::DataField.new('856', '4', '0', ['u', subject])
+      url = return_argot_url_field(rec)
+      expect(url.first['restricted']).to eq('false')
+    end
+  end
+
+  shared_examples '(UNC) a proxied url' do
+    it '(UNC) #is_proxied? returns true' do
+      expect(is_proxied?(subject)).to be true
+    end
+  end
+
+  shared_examples '(UNC) an unproxied url' do
+    it '(UNC) #is_proxied? returns false' do
+      expect(is_proxied?(subject)).to be false
+    end
+  end
+
+  shared_examples '(UNC) a proxy-templatable url' do
+    it '(UNC) #template_proxy returns the URL with a template parameter' do
+      expect(template_proxy(subject)).to eq('{+proxyPrefix}https://blahblah')
+    end
+  end
+
+  describe 'proxied url' do
+    subject(:proxied_url) { 'https://login.libproxy.lib.unc.edu/login?url=https://blahblah' }
+    it_behaves_like '(UNC) a restricted url'
+    it_behaves_like '(UNC) a proxied url'
+    it_behaves_like '(UNC) a proxy-templatable url'
+  end
+
+  describe 'deprecated proxied url' do
+    subject(:deprecated_proxied_url) { 'http://libproxy.lib.unc.edu/login?url=https://blahblah' }
+    it_behaves_like '(UNC) a restricted url'
+    it_behaves_like '(UNC) a proxied url'
+    it_behaves_like '(UNC) a proxy-templatable url'
+  end
+
+  describe 'alternate-format proxied url' do
+    subject(:alt_proxied_url) { 'http://www-example-com.libproxy.lib.unc.edu/blahblah' }
+    it_behaves_like '(UNC) a restricted url'
+    it_behaves_like '(UNC) a proxied url'
+  end
+
+  describe 'law proxied url' do
+    subject(:law_proxied_url) { 'http://lawlibproxy2.unc.edu:2048/login?url=https://blahblah' }
+    it_behaves_like '(UNC) a restricted url'
+    it_behaves_like '(UNC) a proxied url'
+  end
+
+  describe 'unproxied url' do
+    context 'when unrestricted' do
+      subject(:unproxied_url) { 'https://www.example.com' }
+      it_behaves_like '(UNC) an unrestricted url'
+      it_behaves_like '(UNC) an unproxied url'
+    end
+
+    context 'when on the list of restricted exceptions' do
+      subject(:restricted_exception) { 'http://vb3lk7eb4t.search.serialssolutions.com/blahblah' }
+      it_behaves_like '(UNC) a restricted url'
+      it_behaves_like '(UNC) an unproxied url'
+    end
+  end
+
   describe 'url_unc' do
     it '(UNC) writes url[type]' do
       rec = make_rec
@@ -81,29 +165,16 @@ describe MarcToArgot::Macros::UNC::Urls do
   end
 
   describe 'is_proxied?' do
-    context 'URL begins with http://libproxy.lib.unc.edu/login?url=' do
+    context 'when URL begins with a proxy prefix' do
       it '(UNC) returns true' do
         url = 'http://libproxy.lib.unc.edu/login?url=https://blahblah'
         v = is_proxied?(url)
         expect(v).to eq(true)
       end
     end
-    context 'URL uses alternate libproxy URL construction' do
-      it '(UNC) returns true' do
-        url = 'http://www-example-com.libproxy.lib.unc.edu/blahblah'
-        v = is_proxied?(url)
-        expect(v).to eq(true)
-      end
-    end
-    context 'URL uses Law Library proxy' do
-      it '(UNC) returns true' do
-        url = 'http://lawlibproxy2.unc.edu:2048/login?url=https://blahblah'
-        v = is_proxied?(url)
-        expect(v).to eq(true)
-      end
-    end
-    context 'URL does not use a UNC proxy' do
-      it '(UNC) returns nil value' do
+
+    context 'when URL does not use a UNC proxy' do
+      it '(UNC) returns false' do
         url = 'https://blahblah'
         v = is_proxied?(url)
         expect(v).to eq(false)

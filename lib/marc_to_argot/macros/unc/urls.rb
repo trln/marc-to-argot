@@ -63,13 +63,13 @@ module MarcToArgot
         end
 
         def is_proxied?(url)
-          return true if url =~ %r{^http://[^/]*libproxy.lib.unc.edu}
+          return true if url =~ %r{^https?://[^/]*libproxy.lib.unc.edu}
           return true if url.start_with?('http://lawlibproxy2.unc.edu')
           false
         end
 
         def template_proxy(url)
-          return url.gsub('http://libproxy.lib.unc.edu/login?url=', '{+proxyPrefix}')
+          url.gsub(%r{https?://[^/]*libproxy.lib.unc.edu/login\?url=}, '{+proxyPrefix}')
         end
       end
     end

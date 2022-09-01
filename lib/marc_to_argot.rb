@@ -25,10 +25,6 @@ require 'ext/marc/data_field'
 require 'ext/marc/control_field'
 require 'ext/marc/record'
 
-# ActiveSupport - explicit requires for 6.0.x
-require 'active_support/core_ext/string/filters'
-require 'active_support/core_ext/object/blank'
-
 # Top-level module for conversion to Argot
 module MarcToArgot
   autoload :VERSION, 'marc_to_argot/version'

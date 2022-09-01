@@ -10,7 +10,7 @@ module MarcToArgot
         def physical_media
           # physical media type based on item type with one
           # small twist
-          lambda do |_rec, acc, ctx|
+          lambda do |rec, acc, ctx|
             physical_items = ctx.clipboard.fetch('items', []).reject { |i|
               i['loc_b'] == 'ONLINE'
             }
@@ -23,7 +23,9 @@ module MarcToArgot
               acc << t if t
             end
             acc.uniq!
-            acc << 'Print' if (acc.empty? && !physical_items.empty?)
+            if acc.empty? && !physical_items.empty?
+              acc << 'Print' unless MarcToArgot::Macros::Shared::ResourceType::ResourceTypeClassifier.new(rec).game?
+            end
           end
         end
       end

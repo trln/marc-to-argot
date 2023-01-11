@@ -47,15 +47,17 @@ module MarcToArgot
           if type == 'fulltext' &&
              ctx.clipboard.fetch(:shared_record_set, '').match(/\S/) &&
              url_restricted?(href, type)
-            "{+proxyPrefix}#{href.gsub('https://login.proxy.lib.duke.edu/login?url=', '')}"
+            "{+proxyPrefix}#{href.gsub(%r{http(s)?://(login.)?proxy\.lib\.duke\.edu/login\?url=}, '')}"
           else
-            href
+            # Send the full href, ensuring we have the correct proxy prefix.
+            # It's possible some older cataloged items have Duke's old proxy prefix.
+            href.gsub(%r{http(s)?://proxy\.lib\.duke\.edu}, 'https://login.proxy.lib.duke.edu')
           end
         end
 
         def url_restricted?(href, type)
           type == 'fulltext' &&
-            href.downcase.include?('https://login.proxy.lib.duke.edu/login?url=')
+            href.downcase.include?('proxy.lib.duke.edu')
         end
 
         # tests whether the field contains a URL for a finding aid

@@ -20,14 +20,14 @@ module MarcToArgot
         LOCATION_AVAILABILITY = {
           "AVAIL_SOON" => "Available",
           "BINDERY" => "Not Available",
-          "CHECKEDOUT" => "Checked Out",
+          "CHECKEDOUT" => "Not Available",
           "DISCARD" => "Not Available", #Check with NCCU what to display
           "EASY" => "Available", #Check with NCCU what to display
           "HOLDS" => "On Hold", 
           "ILL" => "Not Available", 
           "ILLNCIP" => "Not Available", 
           "INPROCESS" => "Available", 
-          "INSHIPPING" => "Checked Out", 
+          "INSHIPPING" => "Not Available", 
           "INTRANSIT" => "Available",
           "LAWDISPLAY" => "Available", #Check with NCCU what to display
           "LONGOVRDUE" => "Not Available",

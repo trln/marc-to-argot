@@ -132,7 +132,8 @@ module MarcToArgot
         def index_only_246?(field)
           # DUKE catalogers interpret "ind1='3'" differently
           # Also, DUKE is ignoring the value in "indicator 2"
-          !%w[0 1 3].include?(field.indicator1) || %w[0].include?(field.indicator2)
+          !%w[0 1 3].include?(field.indicator1)
+          # !%w[0 1 3].include?(field.indicator1) || %w[0].include?(field.indicator2)
           # !%w[0 1].include?(field.indicator1) || %w[0 1].include?(field.indicator2)
         end
 

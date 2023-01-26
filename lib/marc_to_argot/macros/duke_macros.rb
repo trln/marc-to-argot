@@ -6,6 +6,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/duke/physical_media'
       require 'marc_to_argot/macros/duke/resource_type'
       require 'marc_to_argot/macros/duke/urls'
+      require 'marc_to_argot/macros/duke/title_variant'
 
       # Include this first. Then load Duke Macros.
       include MarcToArgot::Macros::Shared
@@ -14,6 +15,7 @@ module MarcToArgot
       include MarcToArgot::Macros::Duke::PhysicalMedia
       include MarcToArgot::Macros::Duke::ResourceType
       include MarcToArgot::Macros::Duke::Urls
+      include MarcToArgot::Macros::Duke::TitleVariant
 
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?

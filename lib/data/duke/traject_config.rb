@@ -28,6 +28,12 @@ end
 to_field "url", url
 
 ################################################
+# Title variant handling (also for shared records)
+######
+
+to_field 'title_variant', title_variant
+
+################################################
 # OCLC Number
 ######
 

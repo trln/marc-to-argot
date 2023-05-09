@@ -4,6 +4,10 @@ require 'spec_helper'
 describe MarcToArgot::Macros::Shared::Notes do
   include Util
   let(:note_access_restrictions) { run_traject_json('duke', 'note_access_restrictions', 'mrc') }
+  let(:note_accessibility_1) { run_traject_json('ncsu', 'note_accessibility_1', 'xml') }
+  let(:note_accessibility_2) { run_traject_json('ncsu', 'note_accessibility_2', 'xml') }
+  let(:note_accessibility_3) { run_traject_json('ncsu', 'note_accessibility_3', 'xml') }
+  let(:note_accessibility_4) { run_traject_json('ncsu', 'note_accessibility_4', 'xml') }
   let(:note_action) { run_traject_json('duke', 'DUKE001378390', 'xml') }
   let(:note_admin_history) { run_traject_json('duke', 'note_admin_history', 'mrc') }
   let(:note_binding) { run_traject_json('duke', 'note_binding', 'mrc') }
@@ -52,9 +56,37 @@ describe MarcToArgot::Macros::Shared::Notes do
                       )
   end
 
+  it '(MTA) sets note_accessibility 1' do
+    result = note_accessibility_1['note_accessibility']
+    expect(result).to include(
+                              'Accessibility technical details: Compatible with accessibility standards.'
+                              )
+  end
+
+  it '(MTA) sets note_accessibility 2' do
+    result = note_accessibility_2['note_accessibility']
+    expect(result).to include(
+                              'Accessibility features: Compatible with accessibility standards.'
+                              )
+  end
+
+  it '(MTA) sets note_accessibility 3' do
+    result = note_accessibility_3['note_accessibility']
+    expect(result).to include(
+                              'Accessibility deficiencies: Compatible with accessibility standards.'
+                              )
+  end
+
+  it '(MTA) sets note_accessibility 4' do
+    result = note_accessibility_4['note_accessibility']
+    expect(result).to include(
+                              "Compatible with accessibility standards.", 
+                               "Accessibility deficiencies: Compatible with accessibility standards."
+                              )
+  end
+
   it '(MTA) sets action note' do
     result = note_action['note_local']
-    puts result
     expect(result).to include({ 'label' => 'Action note: Rubenstein Library copy 2, copy 3', 
                                 'value' => 'former call number: E G514R'}, 
                               { 'label' => 'Action note', 

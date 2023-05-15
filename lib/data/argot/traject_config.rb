@@ -238,6 +238,10 @@ unless settings["override"].include?("note_access_restrictions")
   to_field "note_access_restrictions", note_access_restrictions
 end
 
+unless settings["override"].include?("note_accessibility")
+  to_field "note_accessibility", note_accessibility
+end
+
 unless settings["override"].include?("note_admin_history")
   to_field "note_admin_history", extract_marc(settings["specs"][:note_admin_history])
 end

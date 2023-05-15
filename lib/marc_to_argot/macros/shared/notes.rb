@@ -18,6 +18,29 @@ module MarcToArgot
         end
 
         ################################################
+        # Note Accessibility
+        ######
+        def note_accessibility
+          lambda do |rec, acc|
+            Traject::MarcExtractor.cached("532a").each_matching_line(rec) do |field, spec, extractor|
+              next unless subfield_5_absent_or_present_with_local_code?(field)
+              
+              case field.indicator1
+              when '0'              
+                typelabel = 'Accessibility technical details'
+              when '1'
+                typelabel = 'Accessibility features'
+              when '2'
+                typelabel = 'Accessibility deficiencies'
+              end
+              value = collect_and_join_subfield_values(field, 'a')
+              acc << [typelabel, value].compact.join(': ') if value
+            end
+          end
+        end
+
+
+        ################################################
         # Note Binding
         ######
         def note_binding

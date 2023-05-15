@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marcxml:collection xmlns:marcxml="http://www.loc.gov/MARC21/slim">
+  <marcxml:record>
+    <marcxml:leader>01515cam a22003378a 4500</marcxml:leader>
+    <marcxml:controlfield tag="008">900727s1990    wb a     b    10000 eng  </marcxml:controlfield>
+    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">   90009673</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="020" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">0387524738 (U.S.) :</marcxml:subfield>
+      <marcxml:subfield code="c">DM61.00 (W. Germany)</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">(OCoLC)21338035</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">DLC</marcxml:subfield>
+      <marcxml:subfield code="c">DLC</marcxml:subfield>
+      <marcxml:subfield code="d">NRC</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="082" ind1="0" ind2="0">
+      <marcxml:subfield code="a">338.5/42</marcxml:subfield>
+      <marcxml:subfield code="2">20</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="245" ind1="0" ind2="0">
+      <marcxml:subfield code="a">Life cycles and long waves /</marcxml:subfield>
+      <marcxml:subfield code="c">T. Vasko, R. Ayres, L. Fontvieille, (eds.).</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="260" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">Berlin ;</marcxml:subfield>
+      <marcxml:subfield code="a">New York :</marcxml:subfield>
+      <marcxml:subfield code="b">Springer-Verlag,</marcxml:subfield>
+      <marcxml:subfield code="c">c1990.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="300" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">xiv, 292 p. :</marcxml:subfield>
+      <marcxml:subfield code="b">ill. ;</marcxml:subfield>
+      <marcxml:subfield code="c">25 cm.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="490" ind1="1" ind2=" ">
+      <marcxml:subfield code="a">Lecture notes in economics and mathematical systems ;</marcxml:subfield>
+      <marcxml:subfield code="v">340</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="500" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">A Selection of papers presented at a workshop held in Montpellier, France in July 1987, jointly organized by the Centre régional de la productivité et des études économiques (CRPEE) and IIASA.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="504" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">Includes bibliographical references.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="596" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">1</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="650" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Long waves (Economics)</marcxml:subfield>
+      <marcxml:subfield code="v">Congresses.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="650" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Business cycles</marcxml:subfield>
+      <marcxml:subfield code="v">Congresses.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="650" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Product life cycle</marcxml:subfield>
+      <marcxml:subfield code="v">Congresses.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="700" ind1="1" ind2="0">
+      <marcxml:subfield code="a">Vasko, Tibor,</marcxml:subfield>
+      <marcxml:subfield code="d">1931-</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="700" ind1="1" ind2="0">
+      <marcxml:subfield code="a">Ayres, Robert U.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="700" ind1="1" ind2="0">
+      <marcxml:subfield code="a">Fontvieille, Louis.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="710" ind1="2" ind2="0">
+      <marcxml:subfield code="a">Université de Montpellier I.</marcxml:subfield>
+      <marcxml:subfield code="b">Centre régional de la productivité et des études économiques.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="830" ind1=" " ind2="0">
+      <marcxml:subfield code="a">Lecture notes in economics and mathematical systems ;</marcxml:subfield>
+      <marcxml:subfield code="v">340.</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="948" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">06/15/1993</marcxml:subfield>
+      <marcxml:subfield code="b">03/21/1995</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="919" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">ACN-6493</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="918" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">758395</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="999" ind1=" " ind2=" ">
+      <marcxml:subfield code="a">HB3729 .L54 1990</marcxml:subfield>
+      <marcxml:subfield code="w">LC</marcxml:subfield>
+      <marcxml:subfield code="c">1</marcxml:subfield>
+      <marcxml:subfield code="i">S00231469P</marcxml:subfield>
+      <marcxml:subfield code="d">9/30/1991</marcxml:subfield>
+      <marcxml:subfield code="l">STACKS</marcxml:subfield>
+      <marcxml:subfield code="m">DHHILL</marcxml:subfield>
+      <marcxml:subfield code="n">1</marcxml:subfield>
+      <marcxml:subfield code="r">Y</marcxml:subfield>
+      <marcxml:subfield code="s">Y</marcxml:subfield>
+      <marcxml:subfield code="t">BOOK</marcxml:subfield>
+      <marcxml:subfield code="u">8/2/1993</marcxml:subfield>
+    </marcxml:datafield>
+    <marcxml:datafield tag="532" ind1="1" ind2=" ">
+      <marcxml:subfield code="a">Compatible with accessibility standards.</marcxml:subfield>
+    </marcxml:datafield>
+  </marcxml:record>
+</marcxml:collection>

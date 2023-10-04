@@ -55,9 +55,27 @@ module MarcToArgot
           end
         end
 
+        # This idea is borrowed from UNC
+        # Domains or substrings for URLs that are not proxied but are
+        # nevertheless restricted to Duke affiliates (via Shib/SSO)
+        def unproxied_restricted
+          %w[scifinder.cas.org
+             sciencedirect.com
+             osapublishing.org
+             escj.org
+             nature.com
+             scientificamerican.com
+             link.springer.com
+             journals.iop.org
+             www.elr.info/about-elr
+             traditiononline.org/my-account]
+        end
+
         def url_restricted?(href, type)
-          type == 'fulltext' &&
-            href.downcase.include?('proxy.lib.duke.edu')
+          url = href.downcase
+          return true if unproxied_restricted.select { |e| url.include?(e) }.any?
+          return true if type == 'fulltext' && url.include?('proxy.lib.duke.edu')
+          false
         end
 
         # tests whether the field contains a URL for a finding aid

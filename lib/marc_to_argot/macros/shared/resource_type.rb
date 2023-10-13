@@ -53,10 +53,10 @@ module MarcToArgot
           # OR
           # 006/00 = d, f, p,  t
           def archival_manuscript?
-            marc_leader_06_match = %w[d f p t].include?(record.leader.byteslice(6))
+            marc_leader_06_match = %w[b d f p t].include?(record.leader.byteslice(6))
 
             marc_006_00_match = record.fields('006').find do |field|
-              %w[d f p t].include?(field.value.byteslice(0))
+              %w[b d f p t].include?(field.value.byteslice(0))
             end
 
             return true if marc_leader_06_match || marc_006_00_match

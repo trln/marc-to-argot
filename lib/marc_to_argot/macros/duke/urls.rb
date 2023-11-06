@@ -18,8 +18,7 @@ module MarcToArgot
               url[:type] = type
               url[:text] = text unless text.empty?
               url[:note] = note unless note.empty?
-              url[:restricted] = 'false' unless url_restricted?(raw_href, type)
-
+              url[:restricted] = url_restricted?(raw_href, type) ? 'true' : 'false'
               acc << url.to_json
             end
           end
@@ -68,13 +67,19 @@ module MarcToArgot
              link.springer.com
              journals.iop.org
              www.elr.info/about-elr
-             traditiononline.org/my-account]
+             traditiononline.org/my-account
+             go.oreilly.com
+             aapgbulletin.datapages.com
+             library.fuqua.duke.edu/databases/zephyr-info.htm
+             library.fuqua.duke.edu/databases/orbis-info.htm
+             zephyr.bvdinfo.com]
         end
 
         def url_restricted?(href, type)
           url = href.downcase
           return true if unproxied_restricted.select { |e| url.include?(e) }.any?
           return true if type == 'fulltext' && url.include?('proxy.lib.duke.edu')
+
           false
         end
 

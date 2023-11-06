@@ -58,21 +58,8 @@ module MarcToArgot
         # Domains or substrings for URLs that are not proxied but are
         # nevertheless restricted to Duke affiliates (via Shib/SSO)
         def unproxied_restricted
-          %w[scifinder.cas.org
-             sciencedirect.com
-             osapublishing.org
-             escj.org
-             nature.com
-             scientificamerican.com
-             link.springer.com
-             journals.iop.org
-             www.elr.info/about-elr
-             traditiononline.org/my-account
-             go.oreilly.com
-             aapgbulletin.datapages.com
-             library.fuqua.duke.edu/databases/zephyr-info.htm
-             library.fuqua.duke.edu/databases/orbis-info.htm
-             zephyr.bvdinfo.com]
+          yaml_data = YAML.load_file('lib/data/duke/unproxied_restricted.yaml')
+          yaml_data['domains_and_urls']
         end
 
         def url_restricted?(href, type)

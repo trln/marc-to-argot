@@ -18,7 +18,7 @@ module MarcToArgot
               url[:type] = type
               url[:text] = text unless text.empty?
               url[:note] = note unless note.empty?
-              url[:restricted] = url_restricted?(raw_href, type) ? 'true' : 'false'
+              url[:restricted] = 'false' unless url_restricted?(raw_href, type)
               acc << url.to_json
             end
           end

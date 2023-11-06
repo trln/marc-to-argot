@@ -1,0 +1,260 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+  <collection xmlns="http://www.loc.gov/MARC21/slim"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <record xmlns="http://www.loc.gov/MARC21/slim"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.loc.gov/MARC21/slim
+http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+      <leader>     cai a2200685 i 4500</leader>
+      <controlfield tag="001">009155858</controlfield>
+      <controlfield tag="005">20230831145012.0</controlfield>
+      <controlfield tag="006">m     o  d</controlfield>
+      <controlfield tag="007">cr cn|||||||||</controlfield>
+      <controlfield tag="008">020703c20019999cauuu d o     0    2eng c</controlfield>
+      <datafield tag="010" ind1=" " ind2=" ">
+        <subfield code="a">2011238562</subfield>
+      </datafield>
+      <datafield tag="019" ind1=" " ind2=" ">
+        <subfield code="a">56518578</subfield>
+        <subfield code="a">70701586</subfield>
+        <subfield code="a">230749755</subfield>
+        <subfield code="a">427535677</subfield>
+        <subfield code="a">660626401</subfield>
+        <subfield code="a">690103683</subfield>
+        <subfield code="a">1109956633</subfield>
+        <subfield code="a">1110176936</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+        <subfield code="a">50120090</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+        <subfield code="a">GZM</subfield>
+        <subfield code="b">eng</subfield>
+        <subfield code="e">rda</subfield>
+        <subfield code="c">GZM</subfield>
+        <subfield code="d">OCLCQ</subfield>
+        <subfield code="d">WAU</subfield>
+        <subfield code="d">CS1</subfield>
+        <subfield code="d">COO</subfield>
+        <subfield code="d">WAU</subfield>
+        <subfield code="d">OCLCA</subfield>
+        <subfield code="d">UMC</subfield>
+        <subfield code="d">ZCU</subfield>
+        <subfield code="d">HNK</subfield>
+        <subfield code="d">DEBBG</subfield>
+        <subfield code="d">CEF</subfield>
+        <subfield code="d">WCL</subfield>
+        <subfield code="d">OVY</subfield>
+        <subfield code="d">OCLCQ</subfield>
+        <subfield code="d">GWDNB</subfield>
+        <subfield code="d">IUL</subfield>
+        <subfield code="d">PAU</subfield>
+        <subfield code="d">OCLCQ</subfield>
+        <subfield code="d">GZM</subfield>
+        <subfield code="d">OCLCQ</subfield>
+        <subfield code="d">COD</subfield>
+        <subfield code="d">OCLCO</subfield>
+        <subfield code="d">OCLCF</subfield>
+        <subfield code="d">OCLCQ</subfield>
+        <subfield code="d">HUL</subfield>
+        <subfield code="d">NDD</subfield>
+      </datafield>
+      <datafield tag="042" ind1=" " ind2=" ">
+        <subfield code="a">pcc</subfield>
+      </datafield>
+      <datafield tag="049" ind1=" " ind2=" ">
+        <subfield code="a">NDDP</subfield>
+      </datafield>
+      <datafield tag="050" ind1=" " ind2="4">
+        <subfield code="a">T58.5</subfield>
+        <subfield code="b">.S24</subfield>
+      </datafield>
+      <datafield tag="084" ind1=" " ind2=" ">
+        <subfield code="a">300</subfield>
+        <subfield code="a">330</subfield>
+        <subfield code="a">004</subfield>
+        <subfield code="a">600</subfield>
+        <subfield code="a">795</subfield>
+        <subfield code="2">zdbs</subfield>
+      </datafield>
+      <datafield tag="130" ind1="0" ind2=" ">
+        <subfield code="a">O&apos;Reilly (Database)</subfield>
+      </datafield>
+      <datafield tag="245" ind1="1" ind2="0">
+        <subfield code="a">O&apos;Reilly.</subfield>
+      </datafield>
+      <datafield tag="246" ind1="1" ind2=" ">
+        <subfield code="a">O&apos;Reilly for higher education</subfield>
+      </datafield>
+      <datafield tag="246" ind1="1" ind2=" ">
+        <subfield code="a">O&apos;Reilly Safari books online</subfield>
+      </datafield>
+      <datafield tag="246" ind1="1" ind2=" ">
+        <subfield code="a">ProQuest safari books online</subfield>
+      </datafield>
+      <datafield tag="246" ind1="1" ind2=" ">
+        <subfield code="a">Safari bookshelf</subfield>
+      </datafield>
+      <datafield tag="246" ind1="1" ind2=" ">
+        <subfield code="a">Safari tech books online</subfield>
+      </datafield>
+      <datafield tag="246" ind1="1" ind2=" ">
+        <subfield code="a">Safari business books online</subfield>
+      </datafield>
+      <datafield tag="247" ind1="1" ind2="0">
+        <subfield code="a">Safari books online</subfield>
+        <subfield code="f">2001-2014</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="1">
+        <subfield code="a">Sebastopol, Calif. :</subfield>
+        <subfield code="b">O&apos;Reilly Media</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+        <subfield code="a">1 online resource</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+        <subfield code="a">text</subfield>
+        <subfield code="b">txt</subfield>
+        <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+        <subfield code="a">computer</subfield>
+        <subfield code="b">c</subfield>
+        <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+        <subfield code="a">online resource</subfield>
+        <subfield code="b">cr</subfield>
+        <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="340" ind1=" " ind2=" ">
+        <subfield code="g">polychrome</subfield>
+        <subfield code="2">rdacc</subfield>
+        <subfield code="0">http://rdaregistry.info/termList/RDAColourContent/1003</subfield>
+      </datafield>
+      <datafield tag="347" ind1=" " ind2=" ">
+        <subfield code="a">text file</subfield>
+        <subfield code="2">rdaft</subfield>
+        <subfield code="0">http://rdaregistry.info/termList/fileType/1002</subfield>
+      </datafield>
+      <datafield tag="362" ind1="1" ind2=" ">
+        <subfield code="a">Began in 2001.</subfield>
+      </datafield>
+      <datafield tag="588" ind1="0" ind2=" ">
+        <subfield code="a">Online resource; title from home page (O&apos;Reilly, viewed October 27, 2021).</subfield>
+      </datafield>
+      <datafield tag="520" ind1=" " ind2=" ">
+        <subfield code="a">&quot;O&apos;Reilly delivers highly topical and comprehensive technology and business learning solutions to millions of users across enterprise, consumer, and university channels.&quot;</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+        <subfield code="a">&quot;45K+ titles including early release books, 30K+ hours of video, live online courses, case studies, expert playlists, and more.&quot;</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+        <subfield code="a">&quot;In 2001, O&apos;Reilly launched Safari Books Online, a subscription-based service providing access to ebooks as a joint venture with the Pearson Technology Group. In 2014, O&apos;Reilly acquired Pearson interest in the joint venture, rebranding it O&apos;Reilly online learning, which is now a wholly owned subsidiary of O&apos;Reilly Media, based in Sebastopol, California.&quot;</subfield>
+      </datafield>
+      <datafield tag="530" ind1=" " ind2=" ">
+        <subfield code="a">Individual titles also issued in print.</subfield>
+      </datafield>
+      <datafield tag="506" ind1=" " ind2=" ">
+        <subfield code="a">Restricted to institutions with a site license.</subfield>
+      </datafield>
+      <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Information technology</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh87002293</subfield>
+        <subfield code="x">Electronic information resources</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001159</subfield>
+        <subfield code="v">Databases.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001528</subfield>
+      </datafield>
+      <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Computer programming</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh85107310</subfield>
+        <subfield code="x">Electronic information resources</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001159</subfield>
+        <subfield code="v">Databases.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001528</subfield>
+      </datafield>
+      <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Computer software</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh85029534</subfield>
+        <subfield code="x">Electronic information resources</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001159</subfield>
+        <subfield code="v">Databases.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001528</subfield>
+      </datafield>
+      <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Business</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh85018260</subfield>
+        <subfield code="x">Electronic information resources</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001159</subfield>
+        <subfield code="v">Databases.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001528</subfield>
+      </datafield>
+      <datafield tag="650" ind1=" " ind2="0">
+        <subfield code="a">Management</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh85080336</subfield>
+        <subfield code="x">Electronic information resources</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001159</subfield>
+        <subfield code="v">Databases.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001528</subfield>
+      </datafield>
+      <datafield tag="650" ind1=" " ind2="7">
+        <subfield code="a">Business</subfield>
+        <subfield code="x">Electronic information resources.</subfield>
+        <subfield code="2">fast</subfield>
+        <subfield code="0">https://id.worldcat.org/fast/842320</subfield>
+      </datafield>
+      <datafield tag="655" ind1=" " ind2="4">
+        <subfield code="a">Electronic reference sources.</subfield>
+      </datafield>
+      <datafield tag="655" ind1=" " ind2="7">
+        <subfield code="a">Databases.</subfield>
+        <subfield code="2">fast</subfield>
+        <subfield code="0">https://id.worldcat.org/fast/1411643</subfield>
+      </datafield>
+      <datafield tag="655" ind1=" " ind2="7">
+        <subfield code="a">Databases.</subfield>
+        <subfield code="2">lcgft</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/genreForms/gf2014026081</subfield>
+      </datafield>
+      <datafield tag="655" ind1=" " ind2="0">
+        <subfield code="a">Online databases.</subfield>
+      </datafield>
+      <datafield tag="710" ind1="2" ind2=" ">
+        <subfield code="a">O&apos;Reilly (Firm)</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/names/no2019114919</subfield>
+      </datafield>
+      <datafield tag="710" ind1="2" ind2=" ">
+        <subfield code="a">Safari Books Online (Firm)</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/names/no2006036095</subfield>
+      </datafield>
+      <datafield tag="710" ind1="2" ind2=" ">
+        <subfield code="a">ProQuest Information and Learning Company.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/names/n2001062548</subfield>
+      </datafield>
+      <datafield tag="710" ind1="2" ind2=" ">
+        <subfield code="a">O&apos;Reilly &amp; Associates.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/names/n86038796</subfield>
+      </datafield>
+      <datafield tag="710" ind1="2" ind2=" ">
+        <subfield code="a">Pearson Education, Inc.</subfield>
+        <subfield code="0">https://id.loc.gov/authorities/names/no2003058210</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="0">
+        <subfield code="u">https://go.oreilly.com/duke-university</subfield>
+        <subfield code="y">get it@Duke</subfield>
+      </datafield>
+      <datafield tag="901" ind1=" " ind2=" ">
+        <subfield code="a">OODEK</subfield>
+      </datafield>
+      <datafield tag="905" ind1=" " ind2=" ">
+        <subfield code="a">MARCIVE 20211029</subfield>
+      </datafield>
+      <datafield tag="905" ind1=" " ind2=" ">
+        <subfield code="a">MARCIVE 20221020</subfield>
+      </datafield>
+    </record>
+
+</collection>  

@@ -58,8 +58,10 @@ module MarcToArgot
         # Domains or substrings for URLs that are not proxied but are
         # nevertheless restricted to Duke affiliates (via Shib/SSO)
         def unproxied_restricted
-          yaml_data = YAML.load_file('lib/data/duke/unproxied_restricted.yaml')
-          yaml_data['domains_and_urls']
+          return @unproxied_restricted if defined? @unproxied_restricted
+
+          yaml_data = YAML.load_file(File.expand_path('../../../data/duke/unproxied_restricted.yml', __dir__))
+          @unproxied_restricted = yaml_data['domains_and_urls']
         end
 
         def url_restricted?(href, type)

@@ -220,9 +220,12 @@ module MarcToArgot
             item_id = item['item_id'].to_s
             location_code = item['location_code'].to_s
             type = item['type'].to_s
+            call_no = item['call_no'].to_s
 
             if !due_date.empty? && process_state != 'IT'
               status = 'Checked Out'
+            elsif !due_date.empty? && call_no.empty?
+              status = 'On Order'
             elsif status_code == '00'
               status = 'Not Available'
             elsif status_code == 'P3'

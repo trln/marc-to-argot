@@ -5,24 +5,17 @@ to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
   acc.collect! do |s|
     id = s.to_s.strip
 
-    # This is where we need to parse the old-style Aleph ID from the 
-    # new style (Alma) MME id
+    # "scan" will attempt to match the MMS id string by a 
+    # pattern we "believe" represents all Aleph-born records 
+    # migrated into Alma
+    #
+    # If we do match (and you'll see this below), the 3rd element of our
+    # capture will hold the old-style Aleph 'sysid'
     mms_splits = id.scan(/^(DUKE)?(\d{2})(\d{9})(\d{7})/)
 
     # If the split result is empty, this represents a new Alma-born record
     # Otherwise, get the old Aleph id from the split string
     id = mms_splits.empty? ? id[2..] : mms_splits[0][2]
-
-    #if mms_splits.empty?
-      ## NOTE - this is an ALMA-born record, so merely
-      ## remove the leading '99' and use the rest of the string
-    #  id = id[2..]
-    #else
-    #  id = mms_splits[0][2]
-    #end
-
-    ## TODO -- we need to account for Alma-born records
-
     id.match(/DUKE.*/) ? id : "DUKE#{id}"
   end
   Logging.mdc['record_id'] = acc.first

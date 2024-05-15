@@ -161,6 +161,9 @@ module MarcToArgot
                 when 'z'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
+                # per Stewart Engart
+                when 'x'
+                  holding['availability'] = sf.value
                 when 'E'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value

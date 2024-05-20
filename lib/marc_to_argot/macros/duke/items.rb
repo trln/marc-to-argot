@@ -139,6 +139,8 @@ module MarcToArgot
 
         def extract_holdings
           lambda do |rec, acc, ctx|
+            # adding a 'holdings' list (dlc32)
+            holdings = []
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
               holding = {}
@@ -185,8 +187,10 @@ module MarcToArgot
                 ctx.clipboard['special_collections'] = true
               end
 
-              acc << holding.to_json if holding.any?
+              holdings << holding
+              # acc << holding.to_json if holding.any?
             end
+            acc.concat(holdings.map(&:to_json))
           end
         end
 

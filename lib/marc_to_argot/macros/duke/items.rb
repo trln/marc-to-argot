@@ -144,6 +144,7 @@ module MarcToArgot
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
               holding = {}
+              # puts field.subfields
               field.subfields.each do |sf|
                 case sf.code
                 when 'b'
@@ -163,9 +164,9 @@ module MarcToArgot
                 when 'z'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
-                # per Stewart Engart
                 when 'x'
-                  holding['availability'] = sf.value
+                # per Stewart Engart (changed 'availability' key to 'status' - dlc32
+                  holding['status'] = sf.value
                 when 'E'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
@@ -205,6 +206,18 @@ module MarcToArgot
                 .reject { |i| i[1].nil? }
                 .map { |e| e.join(': ') }
                 .join('; ')
+        end
+
+        ################################################
+        # HoldingStatus
+        ######
+        module HoldingStatus
+          def self.is_available?(holdings)
+            holdings.any{ |h| h['status'].downcase.start_with?('available') rescue false }
+          end
+
+          def self.set_status(rec, holding)
+          end
         end
 
         ################################################

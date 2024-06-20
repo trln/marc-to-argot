@@ -13,13 +13,13 @@ to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
     # capture will hold the old-style Aleph 'sysid'
     # mms_splits = id.scan(/^(DUKE)?(\d{2})(\d{9})(\d{7})/)
 
-    mms_splits = id.scan(/^(DUKE)?(99)(\d+)(0108501)/)
+    mms_splits = id.scan(/^(DUKE)?(99)(\d{9})(0108501)/)
 
     # If the split result is empty, this represents a new Alma-born record
     # Otherwise, get the old Aleph id from the split string.
     # -
     # We'll maintain the entire MMS ID string
-    id = mms_splits.empty? ? id : mms_splits[0][2].rjust(9, '0')
+    id = mms_splits.empty? ? id : mms_splits[0][2]
     id.match(/DUKE.*/) ? id : "DUKE#{id}"
   end
   Logging.mdc['record_id'] = acc.first

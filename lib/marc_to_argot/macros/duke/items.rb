@@ -7,6 +7,7 @@ module MarcToArgot
         ######
 
         def extract_items
+          puts "---------- [extract items] ----------"
           lambda do |rec, acc, ctx|
             lcc_top = Set.new
             items = []
@@ -138,11 +139,13 @@ module MarcToArgot
         ######
 
         def extract_holdings
+          puts "---------- [extract holdings] ----------"
           lambda do |rec, acc, ctx|
             # adding a 'holdings' list (dlc32)
             holdings = []
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
+              puts field.subfields
               holding = {}
               # puts field.subfields
               field.subfields.each do |sf|
@@ -165,7 +168,8 @@ module MarcToArgot
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
                 when 'x'
-                # per Stewart Engart (changed 'availability' key to 'status' - dlc32
+                # per Stewart Engart
+                # (changed 'availability' key to 'status' - dlc32)
                   holding['status'] = sf.value
                 when 'E'
                   holding['notes'] ||= []

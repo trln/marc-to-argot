@@ -50,6 +50,15 @@ module MarcToArgot
         end
       end
 
+      def mms_id
+        lambda do |rec, acc|
+          if (field001 = Traject::MarcExtractor.cached('001'))
+            extracted_mms_id = field001.extract(rec).first
+            acc << extracted_mms_id unless extracted_mms_id.nil? || extracted_mms_id.empty?
+          end
+        end
+      end
+
       def primary_oclc
         lambda do |rec, acc|
           if field_035q = Traject::MarcExtractor.cached("035q")

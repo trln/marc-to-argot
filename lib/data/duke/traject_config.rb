@@ -115,6 +115,7 @@ to_field 'holdings', extract_holdings
 
 to_field 'items', extract_items
 
+to_field 'holding_summaries', extract_holding_summaries
 
 # ################################################
 # # Physical Media

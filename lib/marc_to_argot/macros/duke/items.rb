@@ -142,10 +142,37 @@ module MarcToArgot
         # Holdings
         ######
 
+        def extract_holding_summaries
+          lambda do |rec, acc, ctx|
+            summaries = {}
+            Traject::MarcExtractor.cached('866', alternate_script: false)
+                                  .each_matching_line(rec) do |field, spec, extractor|
+              holding_id = ''
+              summary = ''
+              alt_summary = ''
+              field.subfields.each do |sf|
+                case sf.code
+                when '8'
+                  holding_id = sf.value.strip
+                when 'a'
+                  summary = sf.value.strip
+                when 'z'
+                  alt_summary = sf.value.strip
+                end
+              end
+              summaries[holding_id] = [] unless summaries.key?(holding_id)
+              summaries[holding_id] << summary unless summary.empty?
+              summaries[holding_id] << alt_summary if summary.empty?
+            end
+            acc.concat(summaries.map(&:to_json))
+          end
+        end
+
         def extract_holdings
           lambda do |rec, acc, ctx|
             # adding a 'holdings' list (dlc32)
             holdings = []
+
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
               # puts field.subfields
@@ -181,6 +208,17 @@ module MarcToArgot
                   holding['notes'] << sf.value
                 end
               end
+            
+              #holding_summaries = ItemStatus::select_fields(rec, '866')
+              #summaries = []
+              #holding_summaries = holding_summaries.each do |h_field|
+              #  h_field.subfields.each do |h_subfield|
+              #    puts "this is one of #{holding['holding_id']}'s summary entries" if h_subfield.value == holding['holding_id']
+              #    summaries << h_subfield.value.trim if h_subfield.code == 'b' && h_subfield.value.trim == holding['holding_id'].trim
+              #  end
+              #end
+              #puts "summaries\n#{summaries.join("\n")}"
+              #holding['summary'] = summaries.join("\n")
 
               call_number = [holding.delete('class_number'),
                              holding.delete('cutter_number')].compact.join(' ')

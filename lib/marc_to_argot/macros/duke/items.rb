@@ -190,8 +190,6 @@ module MarcToArgot
                   holding['class_number'] = sf.value
                 when 'i'
                   holding['cutter_number'] = sf.value
-                when 'A'
-                  holding['summary'] = sf.value
                 when 'B'
                   holding['supplement'] = sf.value
                 when 'C'
@@ -207,6 +205,8 @@ module MarcToArgot
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
                 end
+                #when 'A'
+                #  holding['summary'] = sf.value
               end
             
               #holding_summaries = ItemStatus::select_fields(rec, '866')

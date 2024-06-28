@@ -7,7 +7,6 @@ module MarcToArgot
         ######
 
         def extract_items
-          puts "---------- [extract items] ----------"
           lambda do |rec, acc, ctx|
             lcc_top = Set.new
             items = []
@@ -42,14 +41,19 @@ module MarcToArgot
                 when 'r'
                   item['type'] = subfield.value
                 when 'x'
-                  item['due_date'] = subfield.value
+                  # NOTE (legacy) -- for Alma, items no longer have a "due date"
+                  # as was the case with Aleph
+                  # --
+                  # item['due_date'] = subfield.value
+                  item['status'] = subfield.value
                 when 'z'
                   item['notes'] ||= []
                   item['notes'] << subfield.value
                 end
               end
 
-              item['status'] = ItemStatus.set_status(rec, item)
+              # NOTE - I believe we no longer need to call ItemStatus.set_status
+              item['status'] = ItemStatus.set_status(rec, item, ctx)
 
               # Add all normalized LC Call Nos to lc_call_nos_normed field
               # for searching.
@@ -139,17 +143,18 @@ module MarcToArgot
         ######
 
         def extract_holdings
-          puts "---------- [extract holdings] ----------"
           lambda do |rec, acc, ctx|
             # adding a 'holdings' list (dlc32)
             holdings = []
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
-              puts field.subfields
+              # puts field.subfields
               holding = {}
               # puts field.subfields
               field.subfields.each do |sf|
                 case sf.code
+                when '8'
+                  holding['holding_id'] = sf.value.strip
                 when 'b'
                   holding['loc_b'] = sf.value.strip
                 when 'c'
@@ -237,92 +242,14 @@ module MarcToArgot
           # This method duplicates the logic in aleph_to_endeca.pl
           # that determines item status.
           # Refactoring would help, but let's just get it working.
-          def self.set_status(rec, item)
-            status_code = item['status_code'].to_s
-            process_state = item['process_state'].to_s
-            due_date = item['due_date'].to_s
-            item_id = item['item_id'].to_s
-            location_code = item['location_code'].to_s
-            type = item['type'].to_s
-            call_no = item['call_no'].to_s
-
-            if !due_date.empty? && process_state != 'IT'
-              status = 'Checked Out'
-            elsif !due_date.empty? && call_no.empty?
-              status = 'On Order'
-            elsif status_code == '00'
-              status = 'Not Available'
-            elsif status_code == 'P3'
-              status = 'Ask at Reference Desk'
-            elsif !process_state.empty?
-              if process_state == 'NC'
-                if newspaper?(rec) || periodical?(rec)
-                  if status_code == '03' || status_code == '08' || status_code == '02'
-                    status = 'Available - Library Use Only'
-                  else
-                    status = 'Available'
-                  end
-                elsif microform?(rec)
-                  status = 'Ask at Circulation Desk'
-                elsif item_id =~ /^B\d{6}/
-                  status = 'Ask at Circulation Desk'
-                elsif location_state_map[location_code] == 'C' || location_state_map[location_code] == 'B'
-                  if status_code == '03' || status_code == '08' || status_code == '02'
-                    status = 'Available - Library Use Only'
-                  else
-                    status = 'Available'
-                  end
-                elsif location_state_map[location_code] == 'N'
-                  status = 'Not Available'
-                else
-                  if status_code == '03' || status_code == '08' || status_code == '02'
-                    status = 'Available - Library Use Only'
-                  else
-                    status = 'Ask at Circulation Desk'
-                  end
-                end
-              else
-                if status_map[process_state]
-                  status = status_map[process_state]
-                else
-                  status = 'UNKNOWN'
-                end
-              end
-            elsif status_code == 'NI' || item_id =~ /^B\d{6}/
-              if type == 'MAP' && status_code != 'NI'
-                status = 'Available'
-              elsif location_state_map[location_code] == 'A' || location_state_map[location_code] == 'B'
-                if status_code == '03' || status_code == '08' || status_code == '02'
-                  status = 'Available - Library Use Only'
-                else
-                  status = 'Available'
-                end
-              elsif location_state_map[location_code] == 'N'
-                status = 'Not Available'
-              else
-                # NOTE! There's a whole set of additional elsif conditions in the Perl script,
-                # the result of which seems to be to set the status to 'Ask at Circulation Desk'
-                # no matter whether any condition is met.
-                # It also sets %serieshash and $hasLocNote vars.
-                # Skipping all that for now.
-                # See line 5014 of aleph_to_endeca.pl
-                status = 'Ask at Circulation Desk'
-              end
-            else
-              if status_code == '03' || status_code == '08' || status_code == '02'
-                status = 'Available - Library Use Only'
-              else
-                status = 'Available'
-              end
+          #
+          # The legacy version of 'set_status' can be inspected at this URL:
+          # https://gitlab.oit.duke.edu/alma-integrations/discovery-integration/-/wikis/Home/Code-Snippets/Marc-To-Argot
+          def self.set_status(rec, item, ctx)
+            status = item.key?('status') ? item['status'] : ''
+            if ctx.clipboard['special_collections'] || %w[SCL ARCH].include?(item['loc_b'])
+              status = 'Available - Library Use Only'
             end
-
-            if online?(rec) && status == 'Ask at Circulation Desk'
-              status = 'Available'
-              # NOTE! In the aleph_to_endeca.pl script (line 5082) there's some code
-              #       about switching the location to PEI. But let's pretend
-              #       that's not happening for now.
-            end
-
             status
           end
 

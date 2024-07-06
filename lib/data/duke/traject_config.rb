@@ -60,7 +60,7 @@ to_field "oclc_number", oclc_number
 # MMS ID
 ######
 
-to_field "mms_id", mms_id
+to_field "mms_id", extract_marc('001')
 
 ################################################
 # Serials Solutions Number
@@ -115,7 +115,7 @@ to_field 'holdings', extract_holdings
 
 to_field 'items', extract_items
 
-to_field 'holding_summaries', extract_holding_summaries
+#to_field 'holding_summaries', extract_holding_summaries
 
 # ################################################
 # # Physical Media

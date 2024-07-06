@@ -27,6 +27,8 @@ module MarcToArgot
                   item['loc_n'] = subfield.value.strip
                 when 'd'
                   item['cn_scheme'] = subfield.value.strip
+                when 'e'
+                  item['holding_id'] = subfield.value.strip
                 when 'h'
                   item['call_no'] = subfield.value
                 when 'n'
@@ -141,9 +143,10 @@ module MarcToArgot
         ################################################
         # Holdings
         ######
-
-        def extract_holding_summaries
+        def extract_holdings
           lambda do |rec, acc, ctx|
+            # adding a 'holdings' list (dlc32)
+            holdings = []
             summaries = {}
             Traject::MarcExtractor.cached('866', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
@@ -164,14 +167,6 @@ module MarcToArgot
               summaries[holding_id] << summary unless summary.empty?
               summaries[holding_id] << alt_summary if summary.empty?
             end
-            acc.concat(summaries.map(&:to_json))
-          end
-        end
-
-        def extract_holdings
-          lambda do |rec, acc, ctx|
-            # adding a 'holdings' list (dlc32)
-            holdings = []
 
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
@@ -208,32 +203,20 @@ module MarcToArgot
                 #when 'A'
                 #  holding['summary'] = sf.value
               end
-            
-              #holding_summaries = ItemStatus::select_fields(rec, '866')
-              #summaries = []
-              #holding_summaries = holding_summaries.each do |h_field|
-              #  h_field.subfields.each do |h_subfield|
-              #    puts "this is one of #{holding['holding_id']}'s summary entries" if h_subfield.value == holding['holding_id']
-              #    summaries << h_subfield.value.trim if h_subfield.code == 'b' && h_subfield.value.trim == holding['holding_id'].trim
-              #  end
-              #end
-              #puts "summaries\n#{summaries.join("\n")}"
-              #holding['summary'] = summaries.join("\n")
 
               call_number = [holding.delete('class_number'),
                              holding.delete('cutter_number')].compact.join(' ')
 
               holding['call_no'] = call_number unless call_number.empty?
 
-              summary = holdings_summary_with_labels(holding)
+              # summary = holdings_summary_with_labels(holding)
 
-              holding['summary'] = summary unless summary.empty?
+              holding_summaries = summaries[holding['holding_id']]
+              holding['summary'] = holding_summaries.nil? ? '' : holding_summaries.join('; ')
 
               # Add special_collections = true to clipboard to use
               # later to remove rollup_id for special collections items.
-              if holding['loc_b'] =~ /^(SCL|ARCH)$/
-                ctx.clipboard['special_collections'] = true
-              end
+              holding['loc_b'] =~ /^(SCL|ARCH)$/ && ctx.clipboard['special_collections'] = true
 
               holdings << holding
               # acc << holding.to_json if holding.any?
@@ -243,9 +226,7 @@ module MarcToArgot
         end
 
         def holdings_summary_with_labels(holding)
-          labels = ['Holdings',
-                    'Indexes',
-                    'Supplements']
+          labels = %w[Holdings Indexes Supplements]
           summaries = [holding.delete('summary'),
                        holding.delete('index'),
                        holding.delete('supplement')]
@@ -263,14 +244,14 @@ module MarcToArgot
             holdings.any{ |h| h['status'].downcase.start_with?('available') rescue false }
           end
 
-          def self.set_status(rec, holding)
-          end
+          def self.set_status(rec, holding) end
         end
 
         ################################################
         # ItemStatus
         ######
 
+        # ItemStatus contains methods for determing an item's status, etc
         module ItemStatus
           def self.is_available?(items)
             items.any? { |i| i['status'].downcase.start_with?('available') rescue false }

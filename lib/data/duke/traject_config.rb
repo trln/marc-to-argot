@@ -11,8 +11,6 @@ to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
     #
     # If we do match (and you'll see this below), the 3rd element of our
     # capture will hold the old-style Aleph 'sysid'
-    # mms_splits = id.scan(/^(DUKE)?(\d{2})(\d{9})(\d{7})/)
-
     mms_splits = id.scan(/^(DUKE)?(99)(\d{9})(0108501)/)
 
     # If the split result is empty, this represents a new Alma-born record

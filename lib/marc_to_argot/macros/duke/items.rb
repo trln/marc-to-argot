@@ -46,7 +46,7 @@ module MarcToArgot
                   # NOTE (legacy) -- for Alma, items no longer have a "due date"
                   # as was the case with Aleph
                   # --
-                  # item['due_date'] = subfield.value
+                  item['due_date'] = subfield.value
                   item['status'] = subfield.value
                 when 'z'
                   item['notes'] ||= []
@@ -143,6 +143,7 @@ module MarcToArgot
         ################################################
         # Holdings
         ######
+        # rubocop:disable Metrics/PerceivedComplexity
         def extract_holdings
           lambda do |rec, acc, ctx|
             # adding a 'holdings' list (dlc32)
@@ -168,6 +169,9 @@ module MarcToArgot
               summaries[holding_id] << alt_summary if summary.empty?
             end
 
+            # Known issues regarding the processing of 852s:
+            # - There may be multiple "x" subfields (not ideal)
+            #   but those fields will have the same string "value"
             Traject::MarcExtractor.cached('852', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
               # puts field.subfields
@@ -193,8 +197,9 @@ module MarcToArgot
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
                 when 'x'
-                # per Stewart Engart
-                # (changed 'availability' key to 'status' - dlc32)
+                  # We need to retain the 'availability' key for displaying
+                  # holdings data (backwards-compatibility for partner schools)
+                  holding['availability'] = sf.value
                   holding['status'] = sf.value
                 when 'E'
                   holding['notes'] ||= []
@@ -224,6 +229,7 @@ module MarcToArgot
             acc.concat(holdings.map(&:to_json))
           end
         end
+        # rubocop:enable Metrics/PerceivedComplexity
 
         def holdings_summary_with_labels(holding)
           labels = %w[Holdings Indexes Supplements]

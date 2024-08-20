@@ -335,6 +335,7 @@ module MarcToArgot
           end
 
           def self.online?(rec)
+            puts "**** [ running 'online?' ] ****"
             indicator_2_has_value?(rec, '856', ' ') ||
             indicator_2_has_value?(rec, '856', '0') ||
             indicator_2_has_value?(rec, '856', '1')

@@ -17,6 +17,22 @@ module MarcToArgot
       include MarcToArgot::Macros::Duke::Urls
       include MarcToArgot::Macros::Duke::TitleVariant
 
+      # values to look for in the 856 that indicate
+      # a record has online access.
+      ELOC_IND2 = Set.new([' ', '0', '1'])
+
+      # tests whether the record has an 856[ind2] that matches
+      # any of the values in ELOC_IND2
+      # @param rec [MARC::Record] the record to be checked.
+      # @param _ctx [Object] extra context or data to be used in the test
+      #   (for overrides)
+      def online_access?(rec, _ctx = {})
+        l = rec.fields('856')
+        return false if l.nil?
+
+        !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
+      end
+
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?
       def local_marc_org_codes
@@ -26,9 +42,12 @@ module MarcToArgot
       # If there's anything present in the physical_items
       # clipboard array then there ought to be at least
       # one physical item on the record.
+      # rubocop:disable Lint/UnusedMethodArgument
       def physical_access?(rec, ctx = {})
-        return true if ctx.clipboard.fetch(:physical_items, []).any?
+        # return true if ctx.clipboard.fetch(:physical_items, []).any?
+        ctx.clipboard.fetch(:physical_items, []).any?
       end
+      # rubocop:enable Lint/UnusedMethodArgument
 
       # OCLC Number & Rollup ID
 

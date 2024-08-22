@@ -26,12 +26,33 @@ module MarcToArgot
       # @param rec [MARC::Record] the record to be checked.
       # @param _ctx [Object] extra context or data to be used in the test
       #   (for overrides)
+      
+      # rubocop:disable Metrics/MethodLength
       def online_access?(rec, _ctx = {})
         l = rec.fields('856')
         return false if l.nil?
 
+        l.each do |field|
+          next unless field.indicator2.strip
+
+          puts "field.indicator2 = [#{field.indicator2}]"
+
+          # Stewart -- use the boolean return value of field.subfields.any?
+          # to set your values for "toc_found" (first block) and "loc_toc_url_found"
+          # (second block)
+          #
+          # Hint: toc_found = field.subfields.any? ...
+          field.subfields.any? do |subfield|
+            puts 'we have a \'u\' subfield...' if subfield.code == 'u'
+          end
+          field.subfields.any? do |subfield|
+            puts 'we have a \'3\' subfield...' if subfield.code == '3'
+          end
+        end
+
         !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
       end
+      # rubocop:enable Metrics/MethodLength
 
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?

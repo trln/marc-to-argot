@@ -40,7 +40,7 @@ end
 ################################################
 # URL handling (also for shared records)
 ######
-to_field "url", url
+to_field 'url', url
 
 ################################################
 # Title variant handling (also for shared records)
@@ -52,13 +52,14 @@ to_field 'title_variant', title_variant
 # OCLC Number
 ######
 
-to_field "oclc_number", oclc_number
+to_field 'oclc_number', oclc_number
 
 ################################################
 # MMS ID
 ######
 
-to_field "mms_id", extract_marc('001')
+to_field 'mms_id', extract_marc('001')
+
 
 ################################################
 # Serials Solutions Number
@@ -70,19 +71,19 @@ to_field 'sersol_number', sersol_number
 # Rollup ID
 ######
 
-to_field "rollup_id", rollup_id
+to_field 'rollup_id', rollup_id
 
 ################################################
 # Primary OCLC
 ######
 
-to_field "primary_oclc", primary_oclc
+to_field 'primary_oclc', primary_oclc
 
 ################################################
 # Internet Archive ID
 ######
 
-to_field "internet_archive_id", extract_marc('955q')
+to_field 'internet_archive_id', extract_marc('955q')
 
 ################################################
 # Institutiuon

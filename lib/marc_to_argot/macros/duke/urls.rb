@@ -3,8 +3,31 @@ module MarcToArgot
     module Duke
       module Urls
         def url
+          data_dir = File.expand_path('../../../data',File.dirname(__FILE__))
+          soa_url_conf = YAML.load_file("#{data_dir}/duke/soa_url_conf.yml")
+
+          journal_resource_types = %w[JOURNAL NEWSPAPER]
+
+          # rubocop:disable Metrics/BlockLength
           lambda do |rec, acc, ctx|
-            Traject::MarcExtractor.cached("856uy3").each_matching_line(rec) do |field, spec, extractor|
+            Traject::MarcExtractor.cached('943bdhqy8').each_matching_line(rec) do |field, spec, extractor|
+              url = {}
+
+              raw_href = collect_and_join_subfield_values(field, 'd').strip
+              resource_type = collect_and_join_subfield_values(field, 'q')
+              portfolio_id = collect_and_join_subfield_values(field, '8')
+              resource_note = collect_and_join_subfield_values(field, 'y').strip
+
+              url[:href] = add_duke_proxy(raw_href, resource_type, ctx)
+              url[:href] = "#{soa_url_conf['soa_url']}#{portfolio_id}" if journal_resource_types.include?(resource_type)
+
+              url[:type] = resource_type
+              url[:note] = resource_note unless resource_note.empty?
+              url[:restricted] = 'false'
+              acc << url.to_json
+            end
+
+            Traject::MarcExtractor.cached('856uy3').each_matching_line(rec) do |field, spec, extractor|
               url = {}
               raw_href = url_href_value(field)
 
@@ -22,6 +45,7 @@ module MarcToArgot
               acc << url.to_json
             end
           end
+          # rubocop:enable Metrics/BlockLength
         end
 
         def url_href_value(field)

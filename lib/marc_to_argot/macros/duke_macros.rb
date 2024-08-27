@@ -26,7 +26,7 @@ module MarcToArgot
       # @param rec [MARC::Record] the record to be checked.
       # @param _ctx [Object] extra context or data to be used in the test
       #   (for overrides)
-      
+
       # rubocop:disable Metrics/MethodLength
       def online_access?(rec, _ctx = {})
         l = rec.fields('856')
@@ -35,21 +35,26 @@ module MarcToArgot
         l.each do |field|
           next unless field.indicator2.strip
 
-          puts "field.indicator2 = [#{field.indicator2}]"
+          # puts "field.indicator2 = [#{field.indicator2}]"
 
-          # Stewart -- use the boolean return value of field.subfields.any?
-          # to set your values for "toc_found" (first block) and "loc_toc_url_found"
-          # (second block)
-          #
-          # Hint: toc_found = field.subfields.any? ...
+          loc_toc_url_found = false
+          toc_found = false
+
           field.subfields.any? do |subfield|
-            puts 'we have a \'u\' subfield...' if subfield.code == 'u'
+            if field.indicator2 == '1' && subfield.code == 'u'
+              if subfield.value =~ /loc.gov\/catdir\/toc/
+                loc_toc_url_found = true
+              end
+            elsif field.indicator2 == '1' && subfield.code == '3'
+              if subfield.value =~ /Table of contents/i
+                toc_found = true
+              end
+            end
           end
-          field.subfields.any? do |subfield|
-            puts 'we have a \'3\' subfield...' if subfield.code == '3'
+          if loc_toc_url_found || toc_found
+            return false
           end
         end
-
         !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
       end
       # rubocop:enable Metrics/MethodLength

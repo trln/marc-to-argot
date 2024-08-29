@@ -114,7 +114,6 @@ to_field 'holdings', extract_holdings
 
 to_field 'items', extract_items
 
-#to_field 'holding_summaries', extract_holding_summaries
 
 # ################################################
 # # Physical Media
@@ -151,6 +150,14 @@ to_field 'date_cataloged' do |rec, acc|
     Logging.mdc.delete('field')
   end
 end
+
+# ################################################
+# # Doc-level availability
+# ######
+
+# to_field 'available' do |rec, acc, ctx|
+#   acc.concat "Available" if ctx.clipboard[:holdings_present]
+# end
 
 # ################################################
 # # Final each_record block

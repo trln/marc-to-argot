@@ -3,6 +3,7 @@ require 'spec_helper'
 describe MarcToArgot::Macros::Duke::Items do
   include described_class
   let(:item_sort) { run_traject_json('duke', 'item_sort', 'xml') }
+  let(:rec_with_holding) { run_traject_json('duke', 'record_with_holding', 'xml') }
 
 
   context 'Duke' do
@@ -12,11 +13,31 @@ describe MarcToArgot::Macros::Duke::Items do
       )
     end
 
-    it 'extracts items' do
+    it 'extracts items (940, no \'x\' subfield)' do
       result = run_traject_json('duke', 'items', 'mrc')
       expect(result['items']).to(
         eq(["{\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"cn_scheme\":\"LC\",\"call_no\":\"DF229.T6 C8 1969\","\
-            "\"copy_no\":\"c.1\",\"type\":\"BOOK\",\"item_id\":\"D03223637Q\",\"status\":\"Available\"}"])
+            "\"copy_no\":\"c.1\",\"type\":\"BOOK\",\"item_id\":\"D03223637Q\",\"status\":\"\"}"])
+      )
+    end
+
+    it 'extracts holdings' do
+      expect(rec_with_holding['holdings']).to(
+        eq(["{\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"holding_id\":\"22912285300008501\","\
+            "\"availability\":\"Unavailable\",\"status\":\"Unavailable\","\
+            "\"call_no\":\"PR9619.4.M38355 H54 2024\",\"summary\":\"\"}"])
+      )
+    end
+
+    it 'correctly sets holding status based on 852x' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN'],
+                                ['x', 'Unavailable']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Unavailable")
       )
     end
 
@@ -33,11 +54,13 @@ describe MarcToArgot::Macros::Duke::Items do
                                  ['h', 'Some Call Number'])
       result = run_traject_on_record('duke', rec)['items']
       expect(result).to(
-        eq(['{"cn_scheme":"LC","call_no":"Some Call Number","status":"Available"}',
-            '{"cn_scheme":"DDC","call_no":"Some Call Number","status":"Available"}',
-            '{"call_no":"Some Call Number","status":"Available"}',])
+        eq(['{"cn_scheme":"LC","call_no":"Some Call Number","status":""}',
+            '{"cn_scheme":"DDC","call_no":"Some Call Number","status":""}',
+            '{"call_no":"Some Call Number","status":""}',])
       )
     end
+
+    it 'sets the status when 9'
 
     it 'extracts barcodes' do
       result = run_traject_json('duke', 'items', 'mrc')
@@ -60,16 +83,17 @@ describe MarcToArgot::Macros::Duke::Items do
       )
     end
 
-    it 'generates holdings data' do
-      result = run_traject_json('duke', 'holdings', 'mrc')
-      expect(result['holdings']).to(
-        eq(["{\"loc_b\":\"LAW\"," \
-            "\"loc_n\":\"LGEN\"," \
-            "\"notes\":[\"Currently received\"]," \
-            "\"call_no\":\"KD135 .H3 4th\"," \
-            "\"summary\":\"Holdings: v.1-v.52; Supplements: Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
-      )
-    end
+    # DEPRECATED (see 'extract holdings' above)
+    # it 'generates holdings data' do
+    #   result = run_traject_json('duke', 'holdings', 'mrc')
+    #   expect(result['holdings']).to(
+    #     eq(["{\"loc_b\":\"LAW\"," \
+    #         "\"loc_n\":\"LGEN\"," \
+    #         "\"notes\":[\"Currently received\"]," \
+    #         "\"call_no\":\"KD135 .H3 4th\"," \
+    #         "\"summary\":\"Holdings: v.1-v.52; Supplements: Current Statutes Service v.1-v.6 Noter Up Binder\"}"])
+    #   )
+    # end
 
     it 'generates the location hierarchy' do
       result = run_traject('duke', 'holdings', 'mrc')

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<leader>-----cas-a22-----z--4500</leader>
+<controlfield tag="001">99119265699808501</controlfield>
+<controlfield tag="008">210505uuuuuuuuuuuuuu-p-o----u|----|eng-d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(MiAaPQ)706350</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(CKB)3360000000351737</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(EXLCZ)993360000000351737</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a">SeeNews Asia Pacific</subfield>
+</datafield>
+<datafield tag="246" ind1=" " ind2=" ">
+<subfield code="a">SeeNews Asia/Pacific</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+<subfield code="b">AII Data Processing OOD</subfield>
+</datafield>
+<datafield tag="906" ind1=" " ind2=" ">
+<subfield code="a">JOURNAL</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53910363050008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62797748480008501</subfield>
+<subfield code="b">DEFAULT</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119265699808501
+</subfield>
+<subfield code="c">true</subfield>
+<subfield code="a">param</subfield>
+<subfield code="q">NEWSPAPER</subfield>
+<subfield code="8">53910363050008501</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53805167450008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62797730310008501</subfield>
+<subfield code="b">DEFAULT</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119265699808501
+</subfield>
+<subfield code="c">true</subfield>
+<subfield code="a">param</subfield>
+<subfield code="q">NEWSPAPER</subfield>
+<subfield code="8">53805167450008501</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53911284120008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62797732080008501</subfield>
+<subfield code="b">DEFAULT</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119265699808501
+</subfield>
+<subfield code="c">true</subfield>
+<subfield code="a">param</subfield>
+<subfield code="q">JOURNAL</subfield>
+<subfield code="8">53911284120008501</subfield>
+</datafield>
+</record>
+</collection>
+

@@ -226,11 +226,14 @@ module MarcToArgot
               holdings << holding
               # acc << holding.to_json if holding.any?
             end
+            ctx.clipboard[:holdings_present] = !holdings.empty?
             acc.concat(holdings.map(&:to_json))
           end
         end
         # rubocop:enable Metrics/PerceivedComplexity
 
+        # I don't think we (Duke) are using this any longer
+        # see above processing of 866
         def holdings_summary_with_labels(holding)
           labels = %w[Holdings Indexes Supplements]
           summaries = [holding.delete('summary'),

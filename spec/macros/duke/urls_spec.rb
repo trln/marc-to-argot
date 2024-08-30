@@ -8,6 +8,8 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:open_access) { run_traject_json('duke', 'open_access', 'xml') }
   let(:dc_urls) { run_traject_json('duke', 'dc_urls', 'xml') }
   let(:link_in_subfield_a) { run_traject_json('duke', 'link_in_subfield_a', 'xml') }
+  let(:url_943_journal_case) { run_traject_json('duke', 'url_943_journal_case', 'xml') }
+  let(:url_943_newspaper_case) { run_traject_json('duke', 'url_943_newspaper_case', 'xml') }
 
   context 'Duke' do
     it 'restricted is not set to false for fulltext URLs with the proxy prefix' do
@@ -33,6 +35,18 @@ describe MarcToArgot::Macros::Duke::Urls do
     it 'sets the href value from subfield a if there is no subfield u' do
       expect(JSON.parse(link_in_subfield_a['url'][0])['href']).to(
         eq('https://library.fuqua.duke.edu/fuquaonly/capiqreg.htm')
+      )
+    end
+
+    it 'sets the url type to \'JOURNAL\' when processing 943q' do
+      expect(JSON.parse(url_943_journal_case['url'][0])['type']).to(
+        eq('JOURNAL')
+      )
+    end
+
+    it 'sets the url type to \'NEWSPAPER\' when processing 943q when value is \NEWSPAPER\'' do
+      expect(JSON.parse(url_943_newspaper_case['url'][0])['type']).to(
+        eq('NEWSPAPER')
       )
     end
   end

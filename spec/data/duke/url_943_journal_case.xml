@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<leader>-----cgm-a22-----z--4500</leader>
+<controlfield tag="001">99119491488508501</controlfield>
+<controlfield tag="008">240618u1945uuuuuuuuu-|-o----uo---v|eng-d</controlfield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(CKB)5460000000018734</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(EXLCZ)995460000000018734</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+<subfield code="a">Dick Tracy, Detective</subfield>
+</datafield>
+<datafield tag="246" ind1=" " ind2=" ">
+<subfield code="a">Dick Tracy</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+<subfield code="b">Cinedigm Entertainment Corp.</subfield>
+</datafield>
+<datafield tag="906" ind1=" " ind2=" ">
+<subfield code="a">VIDEO</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53880950230008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62797795060008501</subfield>
+<subfield code="b">DEFAULT</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119491488508501
+</subfield>
+<subfield code="c">true</subfield>
+<subfield code="a">param</subfield>
+<subfield code="q">JOURNAL</subfield>
+<subfield code="8">53880950230008501</subfield>
+</datafield>
+</record>
+</collection>

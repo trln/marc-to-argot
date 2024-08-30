@@ -4,6 +4,20 @@
 to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
   acc.collect! do |s|
     id = s.to_s.strip
+
+    # "scan" will attempt to match the MMS id string by a 
+    # pattern we "believe" represents all Aleph-born records 
+    # migrated into Alma
+    #
+    # If we do match (and you'll see this below), the 3rd element of our
+    # capture will hold the old-style Aleph 'sysid'
+    mms_splits = id.scan(/^(DUKE)?(99)(\d{9})(0108501)/)
+
+    # If the split result is empty, this represents a new Alma-born record
+    # Otherwise, get the old Aleph id from the split string.
+    # -
+    # We'll maintain the entire MMS ID string
+    id = mms_splits.empty? ? id : mms_splits[0][2]
     id.match(/DUKE.*/) ? id : "DUKE#{id}"
   end
   Logging.mdc['record_id'] = acc.first
@@ -13,6 +27,7 @@ end
 # Local ID
 ######
 
+# NOTE is this where we set 'local_id' to the MMS ID?
 to_field 'local_id' do |rec, acc, context|
   local_id = {
     value: context.output_hash.fetch('id', []).first,
@@ -25,7 +40,7 @@ end
 ################################################
 # URL handling (also for shared records)
 ######
-to_field "url", url
+to_field 'url', url
 
 ################################################
 # Title variant handling (also for shared records)
@@ -37,7 +52,14 @@ to_field 'title_variant', title_variant
 # OCLC Number
 ######
 
-to_field "oclc_number", oclc_number
+to_field 'oclc_number', oclc_number
+
+################################################
+# MMS ID
+######
+
+to_field 'mms_id', extract_marc('001')
+
 
 ################################################
 # Serials Solutions Number
@@ -49,19 +71,19 @@ to_field 'sersol_number', sersol_number
 # Rollup ID
 ######
 
-to_field "rollup_id", rollup_id
+to_field 'rollup_id', rollup_id
 
 ################################################
 # Primary OCLC
 ######
 
-to_field "primary_oclc", primary_oclc
+to_field 'primary_oclc', primary_oclc
 
 ################################################
 # Internet Archive ID
 ######
 
-to_field "internet_archive_id", extract_marc('955q')
+to_field 'internet_archive_id', extract_marc('955q')
 
 ################################################
 # Institutiuon
@@ -80,19 +102,17 @@ to_field 'names', names
 #########
 to_field 'donor', extract_marc("796z")
 
+# ################################################
+# # Holdings
+# ######
+
+to_field 'holdings', extract_holdings
 
 # ################################################
 # # Items
 # ######
 
 to_field 'items', extract_items
-
-
-# ################################################
-# # Holdings
-# ######
-
-to_field 'holdings', extract_holdings
 
 
 # ################################################
@@ -130,6 +150,14 @@ to_field 'date_cataloged' do |rec, acc|
     Logging.mdc.delete('field')
   end
 end
+
+# ################################################
+# # Doc-level availability
+# ######
+
+# to_field 'available' do |rec, acc, ctx|
+#   acc.concat "Available" if ctx.clipboard[:holdings_present]
+# end
 
 # ################################################
 # # Final each_record block

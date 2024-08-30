@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier/>
+    </header>
+    <leader>01721cam a22003978i 4500</leader>
+    <controlfield tag="005">20240823015451.0</controlfield>
+    <controlfield tag="008">240223s2024    nyu           000 1 eng  </controlfield>
+    <controlfield tag="001">99119582243608501</controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">  2024008114</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9780374606268</subfield>
+      <subfield code="q">(hardcover)</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">0374606269</subfield>
+      <subfield code="q">(hardcover)</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)1425246921</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)on1425246921</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">DLC</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="e">rda</subfield>
+      <subfield code="c">DLC</subfield>
+      <subfield code="d">OCLCO</subfield>
+      <subfield code="d">BDX</subfield>
+      <subfield code="d">CWJ</subfield>
+      <subfield code="d">UAP</subfield>
+    </datafield>
+    <datafield tag="042" ind1=" " ind2=" ">
+      <subfield code="a">pcc</subfield>
+    </datafield>
+    <datafield tag="049" ind1=" " ind2=" ">
+      <subfield code="a">NDDP</subfield>
+    </datafield>
+    <datafield tag="050" ind1="0" ind2="0">
+      <subfield code="a">PR9619.4.M38355</subfield>
+      <subfield code="b">H54 2024</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">McFarlane, Fiona,</subfield>
+      <subfield code="d">1978-</subfield>
+      <subfield code="e">author.</subfield>
+      <subfield code="1">https://id.oclc.org/worldcat/entity/E39PBJqbfDGBw9tFx9MdQgFdwC</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Highway thirteen :</subfield>
+      <subfield code="b">stories /</subfield>
+      <subfield code="c">Fiona McFarlane.</subfield>
+    </datafield>
+    <datafield tag="246" ind1="3" ind2=" ">
+      <subfield code="a">Highway 13</subfield>
+    </datafield>
+    <datafield tag="250" ind1=" " ind2=" ">
+      <subfield code="a">First American edition.</subfield>
+    </datafield>
+    <datafield tag="263" ind1=" " ind2=" ">
+      <subfield code="a">2408</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Farrar, Straus and Giroux,</subfield>
+      <subfield code="c">2024.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">258 pages ;</subfield>
+      <subfield code="c">22 cm.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="505" ind1="0" ind2=" ">
+      <subfield code="a">Tourists (2008) -- Hunter on the highway (1996) -- Abroad (2011) -- Demolition (2003) -- Hostess (1986) -- Hostel (1995) -- Democracy sausage (1998) -- Chaperone (1995) -- Fat suit (2024) -- Podcast (2028) -- The wake (2020) -- Lucy (1950).</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+      <subfield code="a">"A gripping, enigmatic collection of linked short stories about the reverberations of a serial killer's crimes in the lives of everyday people"--</subfield>
+      <subfield code="c">Provided by publisher.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Serial murders</subfield>
+      <subfield code="v">Fiction.</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Thrillers (Fiction)</subfield>
+      <subfield code="2">lcgft</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Linked stories.</subfield>
+      <subfield code="2">lcgft</subfield>
+    </datafield>
+    <datafield tag="852" ind1="0" ind2=" ">
+      <subfield code="h">PR9619.4.M38355</subfield>
+      <subfield code="i">H54 2024</subfield>
+      <subfield code="b">PERKN</subfield>
+      <subfield code="c">PK</subfield>
+      <subfield code="8">22912285300008501</subfield>
+      <subfield code="x">Unavailable</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22912285300008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PK</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">alma-16001</subfield>
+      <subfield code="w">PK</subfield>
+      <subfield code="k">23912285290008501</subfield>
+      <subfield code="s">2024-08-23 13:55:10 US/Eastern</subfield>
+      <subfield code="h">PR9619.4.M38355 H54 2024</subfield>
+      <subfield code="v">PERKN</subfield>
+      <subfield code="u">2024-08-23 13:55:28 US/Eastern</subfield>
+      <subfield code="b">PERKN</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="t">1</subfield>
+    </datafield>
+  </record>
+</collection>
+

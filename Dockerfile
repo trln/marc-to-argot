@@ -1,4 +1,4 @@
-ARG RUBY_VERSION=2.7
+ARG RUBY_VERSION=3.1
 FROM ruby:${RUBY_VERSION} AS base
 
 RUN apt-get update && apt-get -y upgrade && apt-get -y install git jq

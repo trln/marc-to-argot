@@ -27,6 +27,8 @@ module MarcToArgot
                   item['loc_n'] = subfield.value.strip
                 when 'd'
                   item['cn_scheme'] = subfield.value.strip
+                when 'e'
+                  item['holding_id'] = subfield.value.strip
                 when 'h'
                   item['call_no'] = subfield.value
                 when 'n'
@@ -41,14 +43,19 @@ module MarcToArgot
                 when 'r'
                   item['type'] = subfield.value
                 when 'x'
+                  # NOTE (legacy) -- for Alma, items no longer have a "due date"
+                  # as was the case with Aleph
+                  # --
                   item['due_date'] = subfield.value
+                  item['status'] = subfield.value
                 when 'z'
                   item['notes'] ||= []
                   item['notes'] << subfield.value
                 end
               end
 
-              item['status'] = ItemStatus.set_status(rec, item)
+              # NOTE - I believe we no longer need to call ItemStatus.set_status
+              item['status'] = ItemStatus.set_status(rec, item, ctx)
 
               # Add all normalized LC Call Nos to lc_call_nos_normed field
               # for searching.
@@ -136,14 +143,44 @@ module MarcToArgot
         ################################################
         # Holdings
         ######
-
+        # rubocop:disable Metrics/PerceivedComplexity
         def extract_holdings
           lambda do |rec, acc, ctx|
-            Traject::MarcExtractor.cached('852', alternate_script: false)
+            # adding a 'holdings' list (dlc32)
+            holdings = []
+            summaries = {}
+            Traject::MarcExtractor.cached('866', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
-              holding = {}
+              holding_id = ''
+              summary = ''
+              alt_summary = ''
               field.subfields.each do |sf|
                 case sf.code
+                when '8'
+                  holding_id = sf.value.strip
+                when 'a'
+                  summary = sf.value.strip
+                when 'z'
+                  alt_summary = sf.value.strip
+                end
+              end
+              summaries[holding_id] = [] unless summaries.key?(holding_id)
+              summaries[holding_id] << summary unless summary.empty?
+              summaries[holding_id] << alt_summary if summary.empty?
+            end
+
+            # Known issues regarding the processing of 852s:
+            # - There may be multiple "x" subfields (not ideal)
+            #   but those fields will have the same string "value"
+            Traject::MarcExtractor.cached('852', alternate_script: false)
+                                  .each_matching_line(rec) do |field, spec, extractor|
+              # puts field.subfields
+              holding = {}
+              # puts field.subfields
+              field.subfields.each do |sf|
+                case sf.code
+                when '8'
+                  holding['holding_id'] = sf.value.strip
                 when 'b'
                   holding['loc_b'] = sf.value.strip
                 when 'c'
@@ -152,8 +189,6 @@ module MarcToArgot
                   holding['class_number'] = sf.value
                 when 'i'
                   holding['cutter_number'] = sf.value
-                when 'A'
-                  holding['summary'] = sf.value
                 when 'B'
                   holding['supplement'] = sf.value
                 when 'C'
@@ -161,10 +196,17 @@ module MarcToArgot
                 when 'z'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
+                when 'x'
+                  # We need to retain the 'availability' key for displaying
+                  # holdings data (backwards-compatibility for partner schools)
+                  holding['availability'] = sf.value
+                  holding['status'] = sf.value
                 when 'E'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
                 end
+                #when 'A'
+                #  holding['summary'] = sf.value
               end
 
               call_number = [holding.delete('class_number'),
@@ -172,25 +214,31 @@ module MarcToArgot
 
               holding['call_no'] = call_number unless call_number.empty?
 
-              summary = holdings_summary_with_labels(holding)
+              # summary = holdings_summary_with_labels(holding)
 
-              holding['summary'] = summary unless summary.empty?
+              holding_summaries = summaries[holding['holding_id']]
+              holding['summary'] = holding_summaries.nil? ? '' : holding_summaries.join('; ')
 
               # Add special_collections = true to clipboard to use
               # later to remove rollup_id for special collections items.
-              if holding['loc_b'] =~ /^(SCL|ARCH)$/
-                ctx.clipboard['special_collections'] = true
-              end
+              holding['loc_b'] =~ /^(SCL|ARCH)$/ && ctx.clipboard['special_collections'] = true
 
-              acc << holding.to_json if holding.any?
+              holdings << holding
             end
+
+            # This line is intended to be the first piece of the puzzle 
+            # in providing a "top (document)-level" availability answer.
+            ctx.clipboard[:holdings_present] = !holdings.empty?
+
+            acc.concat(holdings.map(&:to_json))
           end
         end
+        # rubocop:enable Metrics/PerceivedComplexity
 
+        # I don't think we (Duke) are using this any longer
+        # see above processing of 866
         def holdings_summary_with_labels(holding)
-          labels = ['Holdings',
-                    'Indexes',
-                    'Supplements']
+          labels = %w[Holdings Indexes Supplements]
           summaries = [holding.delete('summary'),
                        holding.delete('index'),
                        holding.delete('supplement')]
@@ -201,9 +249,21 @@ module MarcToArgot
         end
 
         ################################################
+        # HoldingStatus
+        ######
+        module HoldingStatus
+          def self.is_available?(holdings)
+            holdings.any{ |h| h['status'].downcase.start_with?('available') rescue false }
+          end
+
+          def self.set_status(rec, holding) end
+        end
+
+        ################################################
         # ItemStatus
         ######
 
+        # ItemStatus contains methods for determing an item's status, etc
         module ItemStatus
           def self.is_available?(items)
             items.any? { |i| i['status'].downcase.start_with?('available') rescue false }
@@ -213,89 +273,14 @@ module MarcToArgot
           # This method duplicates the logic in aleph_to_endeca.pl
           # that determines item status.
           # Refactoring would help, but let's just get it working.
-          def self.set_status(rec, item)
-            status_code = item['status_code'].to_s
-            process_state = item['process_state'].to_s
-            due_date = item['due_date'].to_s
-            item_id = item['item_id'].to_s
-            location_code = item['location_code'].to_s
-            type = item['type'].to_s
-
-            if !due_date.empty? && process_state != 'IT'
-              status = 'Checked Out'
-            elsif status_code == '00'
-              status = 'Not Available'
-            elsif status_code == 'P3'
-              status = 'Ask at Reference Desk'
-            elsif !process_state.empty?
-              if process_state == 'NC'
-                if newspaper?(rec) || periodical?(rec)
-                  if status_code == '03' || status_code == '08' || status_code == '02'
-                    status = 'Available - Library Use Only'
-                  else
-                    status = 'Available'
-                  end
-                elsif microform?(rec)
-                  status = 'Ask at Circulation Desk'
-                elsif item_id =~ /^B\d{6}/
-                  status = 'Ask at Circulation Desk'
-                elsif location_state_map[location_code] == 'C' || location_state_map[location_code] == 'B'
-                  if status_code == '03' || status_code == '08' || status_code == '02'
-                    status = 'Available - Library Use Only'
-                  else
-                    status = 'Available'
-                  end
-                elsif location_state_map[location_code] == 'N'
-                  status = 'Not Available'
-                else
-                  if status_code == '03' || status_code == '08' || status_code == '02'
-                    status = 'Available - Library Use Only'
-                  else
-                    status = 'Ask at Circulation Desk'
-                  end
-                end
-              else
-                if status_map[process_state]
-                  status = status_map[process_state]
-                else
-                  status = 'UNKNOWN'
-                end
-              end
-            elsif status_code == 'NI' || item_id =~ /^B\d{6}/
-              if type == 'MAP' && status_code != 'NI'
-                status = 'Available'
-              elsif location_state_map[location_code] == 'A' || location_state_map[location_code] == 'B'
-                if status_code == '03' || status_code == '08' || status_code == '02'
-                  status = 'Available - Library Use Only'
-                else
-                  status = 'Available'
-                end
-              elsif location_state_map[location_code] == 'N'
-                status = 'Not Available'
-              else
-                # NOTE! There's a whole set of additional elsif conditions in the Perl script,
-                # the result of which seems to be to set the status to 'Ask at Circulation Desk'
-                # no matter whether any condition is met.
-                # It also sets %serieshash and $hasLocNote vars.
-                # Skipping all that for now.
-                # See line 5014 of aleph_to_endeca.pl
-                status = 'Ask at Circulation Desk'
-              end
-            else
-              if status_code == '03' || status_code == '08' || status_code == '02'
-                status = 'Available - Library Use Only'
-              else
-                status = 'Available'
-              end
+          #
+          # The legacy version of 'set_status' can be inspected at this URL:
+          # https://gitlab.oit.duke.edu/alma-integrations/discovery-integration/-/wikis/Home/Code-Snippets/Marc-To-Argot
+          def self.set_status(rec, item, ctx)
+            status = item.key?('status') ? item['status'] : ''
+            if ctx.clipboard['special_collections'] || %w[SCL ARCH].include?(item['loc_b'])
+              status = 'Available - Library Use Only'
             end
-
-            if online?(rec) && status == 'Ask at Circulation Desk'
-              status = 'Available'
-              # NOTE! In the aleph_to_endeca.pl script (line 5082) there's some code
-              #       about switching the location to PEI. But let's pretend
-              #       that's not happening for now.
-            end
-
             status
           end
 
@@ -355,6 +340,7 @@ module MarcToArgot
             subfield_has_value?(rec, '942', 'b', 'Microform')
           end
 
+          # DEPRECATED -- I don't believe we're using this "test" function
           def self.online?(rec)
             indicator_2_has_value?(rec, '856', ' ') ||
             indicator_2_has_value?(rec, '856', '0') ||

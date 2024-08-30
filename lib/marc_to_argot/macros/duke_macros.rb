@@ -17,6 +17,48 @@ module MarcToArgot
       include MarcToArgot::Macros::Duke::Urls
       include MarcToArgot::Macros::Duke::TitleVariant
 
+      # values to look for in the 856 that indicate
+      # a record has online access.
+      ELOC_IND2 = Set.new([' ', '0', '1'])
+
+      # tests whether the record has an 856[ind2] that matches
+      # any of the values in ELOC_IND2
+      # @param rec [MARC::Record] the record to be checked.
+      # @param _ctx [Object] extra context or data to be used in the test
+      #   (for overrides)
+
+      # rubocop:disable Metrics/MethodLength
+      def online_access?(rec, _ctx = {})
+        l = rec.fields('856')
+        return false if l.nil?
+
+        l.each do |field|
+          next unless field.indicator2.strip
+
+          # puts "field.indicator2 = [#{field.indicator2}]"
+
+          loc_toc_url_found = false
+          toc_found = false
+
+          field.subfields.any? do |subfield|
+            if field.indicator2 == '1' && subfield.code == 'u'
+              if subfield.value =~ /loc.gov\/catdir\/toc/
+                loc_toc_url_found = true
+              end
+            elsif field.indicator2 == '1' && subfield.code == '3'
+              if subfield.value =~ /Table of contents/i
+                toc_found = true
+              end
+            end
+          end
+          if loc_toc_url_found || toc_found
+            return false
+          end
+        end
+        !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
+      end
+      # rubocop:enable Metrics/MethodLength
+
       # Sets the list of MARC org codes that are local.
       # Used by #subfield_5_present_with_local_code?
       def local_marc_org_codes
@@ -26,9 +68,12 @@ module MarcToArgot
       # If there's anything present in the physical_items
       # clipboard array then there ought to be at least
       # one physical item on the record.
+      # rubocop:disable Lint/UnusedMethodArgument
       def physical_access?(rec, ctx = {})
-        return true if ctx.clipboard.fetch(:physical_items, []).any?
+        # return true if ctx.clipboard.fetch(:physical_items, []).any?
+        ctx.clipboard.fetch(:physical_items, []).any?
       end
+      # rubocop:enable Lint/UnusedMethodArgument
 
       # OCLC Number & Rollup ID
 
@@ -46,6 +91,15 @@ module MarcToArgot
           Traject::MarcExtractor.cached("035|  |a").each_matching_line(rec) do |field|
             first_oclc_number = fetch_oclc_numbers(field).first
             acc << "OCLC#{first_oclc_number}" unless first_oclc_number.nil? || first_oclc_number.empty?
+          end
+        end
+      end
+
+      def mms_id
+        lambda do |rec, acc|
+          if (field001 = Traject::MarcExtractor.cached('001'))
+            extracted_mms_id = field001.extract(rec).first
+            acc << extracted_mms_id unless extracted_mms_id.nil? || extracted_mms_id.empty?
           end
         end
       end

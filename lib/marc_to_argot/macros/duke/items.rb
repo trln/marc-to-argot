@@ -224,9 +224,12 @@ module MarcToArgot
               holding['loc_b'] =~ /^(SCL|ARCH)$/ && ctx.clipboard['special_collections'] = true
 
               holdings << holding
-              # acc << holding.to_json if holding.any?
             end
+
+            # This line is intended to be the first piece of the puzzle 
+            # in providing a "top (document)-level" availability answer.
             ctx.clipboard[:holdings_present] = !holdings.empty?
+
             acc.concat(holdings.map(&:to_json))
           end
         end
@@ -337,8 +340,8 @@ module MarcToArgot
             subfield_has_value?(rec, '942', 'b', 'Microform')
           end
 
+          # DEPRECATED -- I don't believe we're using this "test" function
           def self.online?(rec)
-            puts "**** [ running 'online?' ] ****"
             indicator_2_has_value?(rec, '856', ' ') ||
             indicator_2_has_value?(rec, '856', '0') ||
             indicator_2_has_value?(rec, '856', '1')

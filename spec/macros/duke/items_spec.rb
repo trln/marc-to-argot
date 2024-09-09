@@ -30,7 +30,19 @@ describe MarcToArgot::Macros::Duke::Items do
       )
     end
 
-    it 'correctly sets holding status based on 852x' do
+    it 'correctly sets holding "status" to "Available" when "Available" is the only "x" (subfield) value present' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN'],
+                                ['x', 'Available']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Available")
+      )
+    end
+
+    it 'correctly sets holding "status" to "Unavailable" when "Unavailable" is the only "x" (subfield) value present' do
       rec = make_rec
       rec << MARC::DataField.new('852', '0', ' ',
                                 ['b', 'PERKN'],
@@ -39,6 +51,30 @@ describe MarcToArgot::Macros::Duke::Items do
       result = run_traject_on_record('duke', rec)
       expect(JSON.parse(result['holdings'][0])['status']).to(
         eq("Unavailable")
+      )
+    end
+
+    it 'correctly sets holding status to "Check holdings" when multiple "x" subfields exists and one has "Check holdings"' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN'],
+                                ['x', 'Unavailable'],
+                                ['x', 'Check holdings']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Check holdings")
+      )
+    end
+
+    it 'correctly sets holding status to "Check holdings" when no "x" subfields exists' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Check holdings")
       )
     end
 

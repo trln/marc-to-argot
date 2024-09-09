@@ -152,14 +152,6 @@ to_field 'date_cataloged' do |rec, acc|
 end
 
 # ################################################
-# # Doc-level availability
-# ######
-
-# to_field 'available' do |rec, acc, ctx|
-#   acc.concat "Available" if ctx.clipboard[:holdings_present]
-# end
-
-# ################################################
 # # Final each_record block
 # ######
 
@@ -171,6 +163,5 @@ each_record do |rec, ctx|
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
   set_entity_ids!(ctx)
-  determine_doc_availability(ctx)
   Logging.mdc.clear
 end

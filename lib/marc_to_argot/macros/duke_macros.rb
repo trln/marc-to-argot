@@ -178,12 +178,6 @@ module MarcToArgot
         end
       end
 
-      def determine_doc_availability(ctx) end
-
-      #def determine_doc_availability(ctx)
-      #  ctx.output_hash['available'] = ctx.clipboard.fetch('holding_status')
-      #end
-
       # # Example of how to re-open the ResourceTypeClassifier
       # # You can add to or completely override the formats method as needed.
       # # You can also override the default classifying methods e.g. book?

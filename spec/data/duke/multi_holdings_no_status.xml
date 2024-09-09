@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier/>
+    </header>
+    <leader>00998cam a2200277I  4500</leader>
+    <controlfield tag="005">20240725023427.0</controlfield>
+    <controlfield tag="008">750825s1954    nyu           000 0 eng c</controlfield>
+    <controlfield tag="001">990026807820108501</controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">a 55001953</subfield>
+    </datafield>
+    <datafield tag="019" ind1=" " ind2=" ">
+      <subfield code="a">19431117</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NcD)002680782DUK01</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)01571914</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">Michigan University Library</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">FUB</subfield>
+      <subfield code="d">OCL</subfield>
+      <subfield code="d">MLL</subfield>
+      <subfield code="d">NDL</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">KF 337 N4</subfield>
+      <subfield code="b">T97 1954</subfield>
+    </datafield>
+    <datafield tag="099" ind1=" " ind2=" ">
+      <subfield code="a">Pamph. v.683 etc.</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">Tweed, Harrison,</subfield>
+      <subfield code="d">1885-1969.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n79131088</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="4">
+      <subfield code="a">The Legal Aid Society,</subfield>
+      <subfield code="b">New York City, 1876-1951.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">[New York]</subfield>
+      <subfield code="c">c1954.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">ix, 122 p.</subfield>
+      <subfield code="b">illus. (on cover) map, diagrs.</subfield>
+      <subfield code="c">23cm.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">unspecified</subfield>
+      <subfield code="b">z</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">unspecified</subfield>
+      <subfield code="b">zu</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Text on p. [2] of cover.</subfield>
+    </datafield>
+    <datafield tag="504" ind1=" " ind2=" ">
+      <subfield code="a">Bibliography: p. 111-122.</subfield>
+    </datafield>
+    <datafield tag="610" ind1="2" ind2="0">
+      <subfield code="a">Legal Aid Society (New York, N.Y.)</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n82116940</subfield>
+    </datafield>
+    <datafield tag="773" ind1="1" ind2="8">
+      <subfield code="w">990026807800108501</subfield>
+    </datafield>
+    <datafield tag="852" ind1=" " ind2="0">
+      <subfield code="b">LAW</subfield>
+      <subfield code="c">LARCH</subfield>
+      <subfield code="8">22699803380008501</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22699803380008501</subfield>
+      <subfield code="d">#</subfield>
+      <subfield code="c">LARCH</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">HBAR-9799-00001</subfield>
+      <subfield code="w">LARCH</subfield>
+      <subfield code="k">23699803370008501</subfield>
+      <subfield code="n">c.2</subfield>
+      <subfield code="o">03</subfield>
+      <subfield code="s">2000-03-23 19:00:00 US/Eastern</subfield>
+      <subfield code="v">LAW</subfield>
+      <subfield code="u">2024-06-23 16:33:53 US/Eastern</subfield>
+      <subfield code="b">LAW</subfield>
+    </datafield>
+    <datafield tag="RELATED" ind1="1" ind2="0">
+      <subfield code="a">Communal land tenure :</subfield>
+      <subfield code="a">990026807800108501</subfield>
+    </datafield>
+    <datafield tag="TYPE" ind1=" " ind2=" ">
+      <subfield code="a">990026807800108501</subfield>
+      <subfield code="8">Contains</subfield>
+    </datafield>
+    <datafield tag="852" ind1=" " ind2="0">
+      <subfield code="h">Pamph. v.683</subfield>
+      <subfield code="b">LAW</subfield>
+      <subfield code="c">LUNCL</subfield>
+      <subfield code="8">22699803600008501</subfield>
+      <subfield code="A">01DUKE_INST</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22699803600008501</subfield>
+      <subfield code="d">#</subfield>
+      <subfield code="c">LUNCL</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">L00400114A</subfield>
+      <subfield code="w">LUNCL</subfield>
+      <subfield code="k">23699803590008501</subfield>
+      <subfield code="n">c.1</subfield>
+      <subfield code="o">03</subfield>
+      <subfield code="s">2000-03-23 19:00:00 US/Eastern</subfield>
+      <subfield code="h">Pamph. v.683</subfield>
+      <subfield code="u">2024-06-23 16:33:53 US/Eastern</subfield>
+    </datafield>
+  </record>
+</collection>

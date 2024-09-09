@@ -55,6 +55,7 @@ module MarcToArgot
             return false
           end
         end
+
         !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
       end
       # rubocop:enable Metrics/MethodLength

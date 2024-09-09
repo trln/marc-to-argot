@@ -1,0 +1,1096 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier/>
+    </header>
+    <leader>03909cam a22005171  4500</leader>
+    <controlfield tag="005">20240724144838.0</controlfield>
+    <controlfield tag="008">700525m19689999enkf          000 0 eng  </controlfield>
+    <controlfield tag="001">990000043630108501</controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">71356658 //r78</subfield>
+    </datafield>
+    <datafield tag="015" ind1=" " ind2=" ">
+      <subfield code="a">GB68-15389 (v. 1)</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NcD)000004363DUK01</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)00038045</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">DLC</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">DLC</subfield>
+      <subfield code="d">m.c.</subfield>
+      <subfield code="d">NDD</subfield>
+    </datafield>
+    <datafield tag="041" ind1="0" ind2=" ">
+      <subfield code="a">eng</subfield>
+      <subfield code="a">fre</subfield>
+    </datafield>
+    <datafield tag="050" ind1="0" ind2=" ">
+      <subfield code="a">BM487</subfield>
+      <subfield code="b">.A1 1968</subfield>
+    </datafield>
+    <datafield tag="050" ind1="9" ind2="9">
+      <subfield code="a">BM487.A62</subfield>
+      <subfield code="b">D573 v.5-7, 9-16, 18, etc.</subfield>
+    </datafield>
+    <datafield tag="082" ind1=" " ind2=" ">
+      <subfield code="a">221.4/4</subfield>
+    </datafield>
+    <datafield tag="130" ind1="0" ind2=" ">
+      <subfield code="a">Dead Sea scrolls.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n79071139</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Qumr&#xE2;n cave 4.</subfield>
+    </datafield>
+    <datafield tag="246" ind1="3" ind2=" ">
+      <subfield code="a">Qumr&#xE2;n grotte 4</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">Oxford,</subfield>
+      <subfield code="b">Clarendon P.,</subfield>
+      <subfield code="c">1968-</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">v.</subfield>
+      <subfield code="b">plates.</subfield>
+      <subfield code="c">32 cm.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">Discoveries in the Judaean desert of Jordan ;</subfield>
+      <subfield code="v">5-6</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">v. 3- : Discoveries in the Judaean desert ;</subfield>
+      <subfield code="v">v. 7, 9-22, 25-26, 28-30, 33-37</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Vols. 2-3, 18, 37 have title: Qumr&#xE2;n grotte 4.</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">At head of title of v.1: Palestine Archaeological Museum. &#xC9;cole biblique et arch&#xE9;ologique fran&#xE7;aise.</subfield>
+    </datafield>
+    <datafield tag="505" ind1="0" ind2=" ">
+      <subfield code="a">1. 4Q158-4Q186, by John M. Allegro with the collaboration of Arnold A. Anderson.--2. I. Arch&#xE9;ologie, par R. de Vaux avec des contributions de J. W. B. Barns et J. Carswell, II. Tefillin Muzuzot et Targums (4Q128-4Q157)par J. T. Milik.--3. 4Q482-4Q520, par Maurice Baillet. -- 4. Palaeo-Hebrew and Greek Biblical manuscripts. -- 5. Miq&#x1E63;at Ma&#xE0;&#x15B;e Ha-Torah. -- 6. Poetical and liturgical texts (pt. 1) / by Esther Eshel ... [et al.] -- 7. Genesis to Numbers. -- 8. Parabiblical texts, pt. 1 -- 9. Deuteronomy, Joshua, Judges, Kings. -- 10. The prophets -- 11. Psalms to Chronicles -- 12. 1-2 Samuel -- 13. The Damascus document (4Q266-273) / by Joseph M. Baumgarten -- 14. Parabiblical texts, pt. 2 -- 15. Sapiential texts, pt. 1 -- 16. Calendrical texts -- 17. Parabiblical texts, pt. 3. -- 18. Textes H&#xE9;breux -- 19. Serekh ha-Ya&#x1E25;ad and two related texts / by Philip S. Alexander and Geza Vermes.</subfield>
+    </datafield>
+    <datafield tag="505" ind1="1" ind2=" ">
+      <subfield code="a">20. Poetical and liturgical texts (pt. 2) / Esther Chazon ... [et.al] -- 21. Parabiblical texts, pt. 4 / Devorah Dimant -- 22. Textes Aram&#xE9;ens, 1st pt. / &#xC9;mile Puech -- 23. Unidentified fragments -- 24. Sapiential texts (pt. 2.) -- 25. Halakhic texts / by Joseph Baumgarten -- 26. Cryptic texts and miscellanea, pt. 1 -- 28. Miscellanea, pt. 2.</subfield>
+    </datafield>
+    <datafield tag="630" ind1="0" ind2="0">
+      <subfield code="a">Dead Sea scrolls</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n79071139</subfield>
+      <subfield code="x">Criticism, interpretation, etc.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh99004866</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Tefillin.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh85133240</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Mezuzah.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh85084637</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Allegro, John Marco,</subfield>
+      <subfield code="d">1923-</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n50034520</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Vaux, Roland de,</subfield>
+      <subfield code="d">1903-1971.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n50014202</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Milik, J. T.</subfield>
+      <subfield code="q">(J&#xF3;zef Tadeusz),</subfield>
+      <subfield code="d">1922-2006.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86016886</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Baillet, Maurice.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/no95023071</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">Palestine Archaeological Museum.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86049394</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">Ecole biblique et arch&#xE9;ologique fran&#xE7;aise.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n83216702</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Discoveries in the Judaean desert ;</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86726166</subfield>
+      <subfield code="v">5-7.</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Discoveries in the Judaean desert ;</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86726166</subfield>
+      <subfield code="v">9-22.</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Discoveries in the Judaean desert ;</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86726166</subfield>
+      <subfield code="v">25-26.</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Discoveries in the Judaean desert ;</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86726166</subfield>
+      <subfield code="v">28-30.</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Discoveries in the Judaean desert ;</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n86726166</subfield>
+      <subfield code="v">33-37.</subfield>
+    </datafield>
+    <datafield tag="852" ind1="0" ind2=" ">
+      <subfield code="h">BM487.A62</subfield>
+      <subfield code="i">D573</subfield>
+      <subfield code="b">DIV</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="8">22685741970008501</subfield>
+      <subfield code="x">Available</subfield>
+      <subfield code="x">Check holdings</subfield>
+    </datafield>
+    <datafield tag="866" ind1="3" ind2="1">
+      <subfield code="a">v.5-v.7,v.9-v.22,v.25-v.26,v.28-v.31,v.33-v.37</subfield>
+      <subfield code="8">22685741970008501</subfield>
+    </datafield>
+    <datafield tag="852" ind1="0" ind2=" ">
+      <subfield code="h">BM487.A62</subfield>
+      <subfield code="i">D573</subfield>
+      <subfield code="b">LSC</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="8">22685741590008501</subfield>
+      <subfield code="x">Available</subfield>
+      <subfield code="x">Check holdings</subfield>
+    </datafield>
+    <datafield tag="866" ind1="3" ind2="1">
+      <subfield code="a">v.5-v.7,v.9-v.22,v.25-v.26,v.28-v.31,v.33-v.37</subfield>
+      <subfield code="8">22685741590008501</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01554805S</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741440008501</subfield>
+      <subfield code="n">v.28=v.28 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01260475P</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741610008501</subfield>
+      <subfield code="n">v.9=v.4 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2008-04-09 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D03058572U</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741620008501</subfield>
+      <subfield code="n">v.17=v.12 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2006-03-19 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D03962196-</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741600008501</subfield>
+      <subfield code="n">v.37=v.27 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2009-05-20 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01668761Z</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741420008501</subfield>
+      <subfield code="n">v.31=v.22 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01515620K</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741450008501</subfield>
+      <subfield code="n">v.33=v.23 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01515417O</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741460008501</subfield>
+      <subfield code="n">v.21=v.16 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D03058573V</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741410008501</subfield>
+      <subfield code="n">v.17=v.12 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2006-03-19 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01668181V</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741430008501</subfield>
+      <subfield code="n">v.30=v.21 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2001-07-29 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01095391S</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741810008501</subfield>
+      <subfield code="n">v.15=v.10 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1997-10-29 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01095388Y</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741830008501</subfield>
+      <subfield code="n">v.20=v.15 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1997-10-29 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01095390R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741820008501</subfield>
+      <subfield code="n">v.15=v.10 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1997-10-29 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-07-07 23:57:36 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01098374W</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741800008501</subfield>
+      <subfield code="n">v.22=v.17 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1997-04-07 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00908088X</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741840008501</subfield>
+      <subfield code="n">v.6=v.2 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1996-02-06 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01554804R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741680008501</subfield>
+      <subfield code="n">v.28=v.28 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00822771R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741850008501</subfield>
+      <subfield code="n">v.14=v.9 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1996-05-30 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01668180U</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741670008501</subfield>
+      <subfield code="n">v.30=v.21 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2001-07-29 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01515619S</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741690008501</subfield>
+      <subfield code="n">v.33=v.23 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01668760Y</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741660008501</subfield>
+      <subfield code="n">v.31=v.22 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01387063S</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741490008501</subfield>
+      <subfield code="n">v.35=v.25 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2000-07-13 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D03962197.</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741400008501</subfield>
+      <subfield code="n">v.37=v.27 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2009-05-20 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01406308M</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741480008501</subfield>
+      <subfield code="n">v.34=v.24 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2000-07-13 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01474100H</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741470008501</subfield>
+      <subfield code="n">v.36=v.26 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2001-01-01 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01708096V</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741650008501</subfield>
+      <subfield code="n">v.16=v.11 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2001-02-22 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D02505490P</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741630008501</subfield>
+      <subfield code="n">v.6=v.2 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2004-04-08 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01708097W</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741640008501</subfield>
+      <subfield code="n">v.16=v.11 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2001-02-22 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01116696U</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741790008501</subfield>
+      <subfield code="n">v.7=v.3 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1998-08-20 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00739808Z</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741880008501</subfield>
+      <subfield code="n">v.7=v.3 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1995-05-18 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00822770Q</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741860008501</subfield>
+      <subfield code="n">v.14=v.9 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1996-05-30 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00623381N</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741930008501</subfield>
+      <subfield code="n">v.13=v.8 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1995-05-10 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00592164R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741950008501</subfield>
+      <subfield code="n">v.12=v.7 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1995-05-10 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01160326J</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741520008501</subfield>
+      <subfield code="n">v.26=v.19 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1998-11-16 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01474099Y</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741710008501</subfield>
+      <subfield code="n">v.36=v.26 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2001-01-01 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01515418P</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741700008501</subfield>
+      <subfield code="n">v.21=v.16 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2002-04-03 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01406309N</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741720008501</subfield>
+      <subfield code="n">v.34=v.24 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2000-07-13 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01387062R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741730008501</subfield>
+      <subfield code="n">v.35=v.25 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2000-07-13 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00730395R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741900008501</subfield>
+      <subfield code="n">v.5=v.1 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1993-08-07 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-07-23 09:11:02 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00705597X</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741910008501</subfield>
+      <subfield code="n">v.9=v.4 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">2001-01-21 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01250199R</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741760008501</subfield>
+      <subfield code="n">v.11=v.6 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1998-11-16 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01250198Q</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741770008501</subfield>
+      <subfield code="n">v.11=v.6 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1998-11-16 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01250200A</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741750008501</subfield>
+      <subfield code="n">v.25=v.18 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1998-11-16 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01387060P</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741740008501</subfield>
+      <subfield code="n">v.29=v.20 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2000-07-13 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01160325I</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741780008501</subfield>
+      <subfield code="n">v.26=v.19 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1998-11-16 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01095389Z</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741560008501</subfield>
+      <subfield code="n">v.20=v.15 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1997-10-29 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01098275W</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741540008501</subfield>
+      <subfield code="n">v.18=v.13 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1997-03-17 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01250201B</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741510008501</subfield>
+      <subfield code="n">v.25=v.18 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1998-11-16 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01387061Q</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741500008501</subfield>
+      <subfield code="n">v.29=v.20 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2000-07-13 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01098375X</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741530008501</subfield>
+      <subfield code="n">v.22=v.17 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1997-04-07 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D01098274V</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741550008501</subfield>
+      <subfield code="n">v.18=v.13 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1997-03-17 19:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00821992V</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741570008501</subfield>
+      <subfield code="n">v.19=v.14 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1996-07-28 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741590008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PSDQ</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00586436W</subfield>
+      <subfield code="w">PSDQ</subfield>
+      <subfield code="k">23685741580008501</subfield>
+      <subfield code="n">v.10=v.5 c.1</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1994-07-20 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00586437X</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741960008501</subfield>
+      <subfield code="n">v.10=v.5 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1994-07-20 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00738969%</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741890008501</subfield>
+      <subfield code="n">v.5=v.1 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1995-04-14 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-07-22 11:23:53 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00821993W</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741870008501</subfield>
+      <subfield code="n">v.19=v.14 c.1</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1996-07-28 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00592165S</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741940008501</subfield>
+      <subfield code="n">v.12=v.7 c.2</subfield>
+      <subfield code="o">02</subfield>
+      <subfield code="s">1995-05-10 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22685741970008501</subfield>
+      <subfield code="d">0</subfield>
+      <subfield code="c">PD</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D00623382O</subfield>
+      <subfield code="w">PD</subfield>
+      <subfield code="k">23685741920008501</subfield>
+      <subfield code="n">v.13=v.8 c.2</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">1995-05-10 20:00:00 US/Eastern</subfield>
+      <subfield code="h">BM487.A62 D573</subfield>
+      <subfield code="v">DIV</subfield>
+      <subfield code="u">2024-06-23 15:25:18 US/Eastern</subfield>
+      <subfield code="b">DIV</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="t">19</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="t">19</subfield>
+    </datafield>
+  </record>
+</collection>

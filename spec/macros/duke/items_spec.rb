@@ -4,7 +4,9 @@ describe MarcToArgot::Macros::Duke::Items do
   include described_class
   let(:item_sort) { run_traject_json('duke', 'item_sort', 'xml') }
   let(:rec_with_holding) { run_traject_json('duke', 'record_with_holding', 'xml') }
-
+  let(:single_holding_one_status) { run_traject_json('duke', 'single_holding_one_status') }
+  let(:multi_holdings_multi_status) { run_traject_json('duke', 'multi_holdings_multi_status') }
+  let(:multi_holdings_no_status) { run_traject_json('duke', 'multi_holdings_no_status') }
 
   context 'Duke' do
     it 'puts items in a sensible order' do
@@ -23,13 +25,24 @@ describe MarcToArgot::Macros::Duke::Items do
 
     it 'extracts holdings' do
       expect(rec_with_holding['holdings']).to(
-        eq(["{\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"holding_id\":\"22912285300008501\","\
-            "\"availability\":\"Unavailable\",\"status\":\"Unavailable\","\
+        eq(["{\"status\":\"Unavailable\",\"loc_b\":\"PERKN\",\"loc_n\":\"PK\",\"holding_id\":\"22912285300008501\","\
             "\"call_no\":\"PR9619.4.M38355 H54 2024\",\"summary\":\"\"}"])
       )
     end
 
-    it 'correctly sets holding status based on 852x' do
+    it 'correctly sets holding "status" to "Available" when "Available" is the only "x" (subfield) value present' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN'],
+                                ['x', 'Available']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Available")
+      )
+    end
+
+    it 'correctly sets holding "status" to "Unavailable" when "Unavailable" is the only "x" (subfield) value present' do
       rec = make_rec
       rec << MARC::DataField.new('852', '0', ' ',
                                 ['b', 'PERKN'],
@@ -39,6 +52,46 @@ describe MarcToArgot::Macros::Duke::Items do
       expect(JSON.parse(result['holdings'][0])['status']).to(
         eq("Unavailable")
       )
+    end
+
+    it 'correctly sets holding status to "Check holdings" when multiple "x" subfields exists and one has "Check holdings"' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN'],
+                                ['x', 'Unavailable'],
+                                ['x', 'Check holdings']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Check holdings")
+      )
+    end
+
+    it 'correctly sets holding status to "Check holdings" when no "x" subfields exists' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Check holdings")
+      )
+    end
+
+    it 'correctly sets doc-level "available" value for record, 1 holding that is available' do
+      expect(single_holding_one_status['available']).to(
+        eq('Available')
+      )
+    end
+
+    it 'sets doc-level "available" value for multi-holding + multi-status per holding record' do
+      expect(multi_holdings_multi_status['available']).to(
+        eq('Available')
+      )
+    end
+
+    it 'does not set doc-level "available" no holdings are available' do
+      expect(multi_holdings_no_status['available']).to be_nil
     end
 
     it 'sets the cn_scheme' do

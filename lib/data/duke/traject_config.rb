@@ -152,14 +152,6 @@ to_field 'date_cataloged' do |rec, acc|
 end
 
 # ################################################
-# # Doc-level availability
-# ######
-
-# to_field 'available' do |rec, acc, ctx|
-#   acc.concat "Available" if ctx.clipboard[:holdings_present]
-# end
-
-# ################################################
 # # Final each_record block
 # ######
 

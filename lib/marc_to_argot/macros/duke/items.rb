@@ -140,6 +140,11 @@ module MarcToArgot
           item['loc_n'] == 'database'
         end
 
+        def online_holding?(holding)
+          ['DUKIR', 'ONLINE', ''].include?(holding['loc_b']) ||
+            %w[PEI FRDE PENTL MELEC LINRE holding].include?(holding['loc_n'])
+        end
+
         ################################################
         # Holdings
         ######
@@ -149,6 +154,7 @@ module MarcToArgot
             # adding a 'holdings' list (dlc32)
             holdings = []
             summaries = {}
+
             Traject::MarcExtractor.cached('866', alternate_script: false)
                                   .each_matching_line(rec) do |field, spec, extractor|
               holding_id = ''
@@ -177,6 +183,17 @@ module MarcToArgot
               # puts field.subfields
               holding = {}
               # puts field.subfields
+
+              # process 852x separately due to the possibility of 
+              # multiple values (known issue for Duke's local availability transformation)
+              availabilities = collect_subfield_values_by_code(field, 'x')
+              if availabilities.length() > 1
+                holding['status'] = availabilities.include?('Available') ? 'Available' : 'Check holdings'
+              else
+                # set status to the first element, or 'Check holdings' if no element exists
+                holding['status'] = availabilities.empty? ? 'Check holdings' : availabilities[0]
+              end
+
               field.subfields.each do |sf|
                 case sf.code
                 when '8'
@@ -196,11 +213,11 @@ module MarcToArgot
                 when 'z'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
-                when 'x'
+                #when 'x'
                   # We need to retain the 'availability' key for displaying
                   # holdings data (backwards-compatibility for partner schools)
-                  holding['availability'] = sf.value
-                  holding['status'] = sf.value
+                  # holding['availability'] = sf.value
+                  # holding['status'] = sf.value
                 when 'E'
                   holding['notes'] ||= []
                   holding['notes'] << sf.value
@@ -214,6 +231,7 @@ module MarcToArgot
 
               holding['call_no'] = call_number unless call_number.empty?
 
+              # DEPRECATED
               # summary = holdings_summary_with_labels(holding)
 
               holding_summaries = summaries[holding['holding_id']]
@@ -226,9 +244,11 @@ module MarcToArgot
               holdings << holding
             end
 
+            ctx.output_hash['available'] = 'Available' if HoldingStatus.is_available?(holdings)
+
             # This line is intended to be the first piece of the puzzle 
             # in providing a "top (document)-level" availability answer.
-            ctx.clipboard[:holdings_present] = !holdings.empty?
+            # ctx.clipboard['holding_status'] = 'Available' if holdings.any? { |n| n['status'] == 'Available' }
 
             acc.concat(holdings.map(&:to_json))
           end
@@ -253,10 +273,8 @@ module MarcToArgot
         ######
         module HoldingStatus
           def self.is_available?(holdings)
-            holdings.any{ |h| h['status'].downcase.start_with?('available') rescue false }
+            holdings.any? { |h| h['status'].downcase.eql?('available') rescue false }
           end
-
-          def self.set_status(rec, holding) end
         end
 
         ################################################

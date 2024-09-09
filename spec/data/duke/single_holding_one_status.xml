@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier/>
+    </header>
+    <leader>01438cam a2200313Ia 4500</leader>
+    <controlfield tag="005">20240724183021.0</controlfield>
+    <controlfield tag="008">871208s1962    enk           000 0 eng d</controlfield>
+    <controlfield tag="001">990012413210108501</controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">62058113</subfield>
+    </datafield>
+    <datafield tag="019" ind1=" " ind2=" ">
+      <subfield code="a">2919127</subfield>
+      <subfield code="a">17202094</subfield>
+      <subfield code="a">560149261</subfield>
+      <subfield code="a">867802892</subfield>
+      <subfield code="a">960207791</subfield>
+      <subfield code="a">993247645</subfield>
+      <subfield code="a">1016671154</subfield>
+      <subfield code="a">1052749082</subfield>
+      <subfield code="a">1057594571</subfield>
+      <subfield code="a">1061892553</subfield>
+      <subfield code="a">1062031017</subfield>
+      <subfield code="a">1063888016</subfield>
+      <subfield code="a">1069358017</subfield>
+      <subfield code="a">1078518307</subfield>
+      <subfield code="a">1080176968</subfield>
+      <subfield code="a">1144902820</subfield>
+      <subfield code="a">1152788430</subfield>
+      <subfield code="a">1154286793</subfield>
+      <subfield code="a">1156203746</subfield>
+      <subfield code="a">1158410667</subfield>
+      <subfield code="a">1171003805</subfield>
+      <subfield code="a">1172853251</subfield>
+      <subfield code="a">1179405147</subfield>
+      <subfield code="a">1204548810</subfield>
+      <subfield code="a">1221511802</subfield>
+      <subfield code="a">1223284753</subfield>
+      <subfield code="a">1226563372</subfield>
+      <subfield code="a">1229261575</subfield>
+      <subfield code="a">1243862144</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NcD)001241321DUK01</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)35568585</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">KKS</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">KKS</subfield>
+      <subfield code="d">VHC</subfield>
+      <subfield code="d">NDD</subfield>
+    </datafield>
+    <datafield tag="082" ind1=" " ind2=" ">
+      <subfield code="a">821.912</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">PR6013.R35</subfield>
+      <subfield code="b">A17 1962b</subfield>
+    </datafield>
+    <datafield tag="092" ind1=" " ind2=" ">
+      <subfield code="a">823.91</subfield>
+      <subfield code="b">G776NE</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">Graves, Robert,</subfield>
+      <subfield code="d">1895-1985.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n79018421</subfield>
+    </datafield>
+    <datafield tag="240" ind1="1" ind2="0">
+      <subfield code="a">Poems</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/no96017150</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">New poems, 1962 /</subfield>
+      <subfield code="c">Robert Graves.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">London :</subfield>
+      <subfield code="b">Cassell,</subfield>
+      <subfield code="c">[1962?]</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">42 p. ;</subfield>
+      <subfield code="c">23 cm.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">In two parts, numbered 13 and 14 in continuation of Collected poems 1959.</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">"Publication date: 18th October, 1962." "Proof only."--cover.</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">With dust jacket, 23 cm.</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">Fred H. and Jeannette Higginson Robert Graves Collection.</subfield>
+    </datafield>
+    <datafield tag="852" ind1="1" ind2="0">
+      <subfield code="h">823.91</subfield>
+      <subfield code="i">G776NE</subfield>
+      <subfield code="b">LSC</subfield>
+      <subfield code="c">KEEPR</subfield>
+      <subfield code="8">22586113520008501</subfield>
+      <subfield code="x">Available</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22586113520008501</subfield>
+      <subfield code="d">1</subfield>
+      <subfield code="c">KEEPR</subfield>
+      <subfield code="r">BOOK</subfield>
+      <subfield code="p">D902728690</subfield>
+      <subfield code="w">KEEPR</subfield>
+      <subfield code="k">23586113510008501</subfield>
+      <subfield code="o">01</subfield>
+      <subfield code="s">2003-07-16 20:00:00 US/Eastern</subfield>
+      <subfield code="h">823.91 G776NE</subfield>
+      <subfield code="v">LSC</subfield>
+      <subfield code="u">2024-06-23 07:23:35 US/Eastern</subfield>
+      <subfield code="b">LSC</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="t">1</subfield>
+    </datafield>
+  </record>
+</collection>
+

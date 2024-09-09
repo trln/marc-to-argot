@@ -171,5 +171,6 @@ each_record do |rec, ctx|
   finalize_rollup_id(ctx)
   finalize_values_for_online_resources(ctx)
   set_entity_ids!(ctx)
+  determine_doc_availability(ctx)
   Logging.mdc.clear
 end

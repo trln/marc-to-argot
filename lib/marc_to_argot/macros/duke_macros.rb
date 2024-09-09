@@ -55,6 +55,7 @@ module MarcToArgot
             return false
           end
         end
+
         !l.find { |f| ELOC_IND2.include?(f.indicator2) }.nil?
       end
       # rubocop:enable Metrics/MethodLength
@@ -176,6 +177,12 @@ module MarcToArgot
                                                        assemble_id_hash(zero_padded_id, display: 'false')])
         end
       end
+
+      def determine_doc_availability(ctx) end
+
+      #def determine_doc_availability(ctx)
+      #  ctx.output_hash['available'] = ctx.clipboard.fetch('holding_status')
+      #end
 
       # # Example of how to re-open the ResourceTypeClassifier
       # # You can add to or completely override the formats method as needed.

@@ -54,6 +54,19 @@ describe MarcToArgot::Macros::Duke::Items do
       )
     end
 
+    it 'correctly sets holding "status" to "Unavailable" when multiple "x" subfields all contain "Unavailable"' do
+      rec = make_rec
+      rec << MARC::DataField.new('852', '0', ' ',
+                                ['b', 'PERKN'],
+                                ['x', 'Unavailable'],
+                                ['x', 'Unavailable']
+                                )
+      result = run_traject_on_record('duke', rec)
+      expect(JSON.parse(result['holdings'][0])['status']).to(
+        eq("Unavailable")
+      )
+    end
+
     it 'correctly sets holding status to "Check holdings" when multiple "x" subfields exists and one has "Check holdings"' do
       rec = make_rec
       rec << MARC::DataField.new('852', '0', ' ',

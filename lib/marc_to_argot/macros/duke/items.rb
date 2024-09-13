@@ -188,11 +188,16 @@ module MarcToArgot
               # multiple values (known issue for Duke's local availability transformation)
               availabilities = collect_subfield_values_by_code(field, 'x')
               if availabilities.length() > 1
-                holding['status'] = availabilities.include?('Available') ? 'Available' : 'Check holdings'
+                holding['status'] = 'Check holdings'
+                holding['status'] = 'Available' if availabilities.include?('Available')
+                holding['status'] = 'Unavailable' if availabilities.all? { |a| a.eql?('Unavailable') }
               else
                 # The availablities list has either 1 or no elements (empty).
                 # No elements? Default to "Check Holdings"
                 # 1 element? Use that one.
+                #
+                # And remember, for Duke, it's "Live Circulation Status Update" facility will
+                # provide a real-time answer.
                 holding['status'] = availabilities.empty? ? 'Check holdings' : availabilities[0]
               end
 

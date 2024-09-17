@@ -7,6 +7,7 @@ module MarcToArgot
       require 'marc_to_argot/macros/duke/resource_type'
       require 'marc_to_argot/macros/duke/urls'
       require 'marc_to_argot/macros/duke/title_variant'
+      require 'marc_to_argot/macros/duke/date_cataloged'
 
       # Include this first. Then load Duke Macros.
       include MarcToArgot::Macros::Shared
@@ -16,6 +17,7 @@ module MarcToArgot
       include MarcToArgot::Macros::Duke::ResourceType
       include MarcToArgot::Macros::Duke::Urls
       include MarcToArgot::Macros::Duke::TitleVariant
+      include MarcToArgot::Macros::Duke::DateCataloged
 
       # values to look for in the 856 that indicate
       # a record has online access.

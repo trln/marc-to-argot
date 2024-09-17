@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<leader>02539cam a2200361 i 4500</leader>
+<controlfield tag="005">20240726075638.0</controlfield>
+<controlfield tag="008">221130t20232023fr b 000 0 fre d</controlfield>
+<controlfield tag="001">990108797850108501</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">9782374913131</subfield>
+<subfield code="q">(paperback)</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">2374913139</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(NcD)010879785DUK01</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(OCoLC)1369646718</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">AUXAM</subfield>
+<subfield code="b">eng</subfield>
+<subfield code="e">rda</subfield>
+<subfield code="c">AUXAM</subfield>
+<subfield code="d">ERASP</subfield>
+<subfield code="d">MNU</subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+<subfield code="a">PQ2605.O28</subfield>
+<subfield code="b">P35 2023</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+<subfield code="a">Palma, Paola,</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/n2021010958</subfield>
+<subfield code="e">author.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+<subfield code="a">Colette et le cinéma /</subfield>
+<subfield code="c">Paola Palma.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+<subfield code="a">Meudon :</subfield>
+<subfield code="b">Quidam,</subfield>
+<subfield code="c">[2023]</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="4">
+<subfield code="c">©2023</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">100 pages ;</subfield>
+<subfield code="c">21 cm.</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+<subfield code="a">text</subfield>
+<subfield code="b">txt</subfield>
+<subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+<subfield code="a">unmediated</subfield>
+<subfield code="b">n</subfield>
+<subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+<subfield code="a">volume</subfield>
+<subfield code="b">nc</subfield>
+<subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+<subfield code="a">Le cinéma des poètes,</subfield>
+<subfield code="x">2490-6352</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+<subfield code="a">Includes bibliographical references (pages 87-92)</subfield>
+</datafield>
+<datafield tag="520" ind1="8" ind2=" ">
+<subfield code="a">
+Dans tous les domaines de son activité débordante, Colette (1873-1954) se signale par la modernité de sa démarche. Animée d'une grande curiosité intellectuelle et artistique, et dotée d'une clairvoyance fascinante aujourd'hui encore, c'est naturellement qu'elle s'est tournée vers le cinéma. Même si les contacts de l'écrivaine avec l'univers du 7e art restent peu connus. Pourtant, dès les années 1910, Colette est parmi les rares intellectuels qui cherchent à comprendre le phénomène historique, culturel et artistique qu'il est destiné à devenir. Comme des premiers écrivains à faire entrer le cinéma dans son univers romanesque et à avoir aussi une activité de scénariste et de dialoguiste."Paola Palma est maîtresse de conférences en études cinématographiques à l'université Caen Normandie, membre statutaire du laboratoire HisTeMé (Histoire Territoires Mémoires) et chercheuse associée à l'UMR Thalim. Spécialiste notamment des relations entre le cinéma et les autres arts, elle a publié plusieurs livres et textes sur Colette, ainsi que la traduction en italien de ses écrits sur le cinéma.
+</subfield>
+</datafield>
+<datafield tag="600" ind1="0" ind2="0">
+<subfield code="a">Colette,</subfield>
+<subfield code="d">1873-1954</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/n79097475</subfield>
+<subfield code="x">Criticism and interpretation.</subfield>
+<subfield code="0">https://id.loc.gov/authorities/subjects/sh99005576</subfield>
+</datafield>
+<datafield tag="796" ind1="2" ind2="3">
+<subfield code="a">Mary Few</subfield>
+<subfield code="e">donor.</subfield>
+<subfield code="x">Gift of</subfield>
+<subfield code="z">
+Gift of the Mary R. Few International Studies Endowment Fund
+</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+<subfield code="a">Collection Le cinéma des poètes.</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/no2016020685</subfield>
+</datafield>
+<datafield tag="914" ind1=" " ind2=" ">
+<subfield code="a">BSC26</subfield>
+<subfield code="b">PERKN</subfield>
+<subfield code="d">20230523</subfield>
+<subfield code="e">COPY</subfield>
+<subfield code="p">NONE</subfield>
+</datafield>
+<datafield tag="946" ind1="1" ind2=" ">
+<subfield code="b">20230627</subfield>
+</datafield>
+<datafield tag="946" ind1="2" ind2=" ">
+<subfield code="a">PS</subfield>
+<subfield code="b">20230627</subfield>
+</datafield>
+<datafield tag="946" ind1="3" ind2=" ">
+<subfield code="a">PERKN</subfield>
+<subfield code="b">20230627</subfield>
+</datafield>
+<datafield tag="951" ind1=" " ind2=" ">
+<subfield code="a">NDD</subfield>
+<subfield code="b">20230702</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+<subfield code="d">2024-06-23 16:15:51 US/Eastern</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+<subfield code="h">PQ2605.O28</subfield>
+<subfield code="i">P35 2023</subfield>
+<subfield code="b">PERKN</subfield>
+<subfield code="c">PK</subfield>
+<subfield code="8">22696441960008501</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+<subfield code="e">22696441960008501</subfield>
+<subfield code="i">1</subfield>
+<subfield code="d">0</subfield>
+<subfield code="c">PK</subfield>
+<subfield code="r">BOOK</subfield>
+<subfield code="p">D05680428X</subfield>
+<subfield code="w">PK</subfield>
+<subfield code="a">1</subfield>
+<subfield code="k">23696441950008501</subfield>
+<subfield code="o">01</subfield>
+<subfield code="s">2023-04-09 20:00:00 US/Eastern</subfield>
+<subfield code="f">2023-04-10 06:59:00 US/Eastern</subfield>
+<subfield code="h">PQ2605.O28 P35 2023</subfield>
+<subfield code="v">PERKN</subfield>
+<subfield code="u">2024-06-23 16:16:41 US/Eastern</subfield>
+<subfield code="b">PERKN</subfield>
+</datafield>
+</record>
+</collection>

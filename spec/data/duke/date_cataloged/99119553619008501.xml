@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<leader>02097nam a2200313 i 4500</leader>
+<controlfield tag="001">99119553619008501</controlfield>
+<controlfield tag="005">20240220120706.0</controlfield>
+<controlfield tag="006">m|||||o||d||||||||</controlfield>
+<controlfield tag="007">cr||||||||||||</controlfield>
+<controlfield tag="008">221222s2024||||enk o ||1 0|eng|d</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">1-009-39672-2</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">1-009-39673-0</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">1-009-39669-2</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(CKB)30365773800041</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(MiAaPQ)EBC31187151</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(Au-PeEL)EBL31187151</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(UkCbUP)CR9781009396691</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(EXLCZ)9930365773800041</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">UkCbUP</subfield>
+<subfield code="b">eng</subfield>
+<subfield code="e">rda</subfield>
+<subfield code="c">UkCbUP</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+<subfield code="a">PN1995.3</subfield>
+<subfield code="b">.W57 2024</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2="0">
+<subfield code="a">791.43/6142</subfield>
+<subfield code="2">23/eng/20230831</subfield>
+</datafield>
+<datafield tag="100" ind1="1" ind2=" ">
+<subfield code="a">Winkler, Martin M.,</subfield>
+<subfield code="e">author.</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+<subfield code="a">
+Classical antiquity and the cinematic imagination /
+</subfield>
+<subfield code="c">Martin M. Winkler.</subfield>
+</datafield>
+<datafield tag="250" ind1=" " ind2=" ">
+<subfield code="a">First edition.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+<subfield code="a">Cambridge :</subfield>
+<subfield code="b">Cambridge University Press,</subfield>
+<subfield code="c">2024.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">1 online resource (xxi, 530 pages) :</subfield>
+<subfield code="b">digital, PDF file(s).</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+<subfield code="a">text</subfield>
+<subfield code="b">txt</subfield>
+<subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+<subfield code="a">computer</subfield>
+<subfield code="b">c</subfield>
+<subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+<subfield code="a">online resource</subfield>
+<subfield code="b">cr</subfield>
+<subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+<subfield code="a">
+Cover -- Half-title -- Title page -- Imprints page -- Dedication -- Contents -- List of Illustrations -- Preface -- I Prolegomena -- Chapter 1 Fade-In -- 1 Antiquity, the Cinema, and New Ways of Seeing -- 2 Film Directors on Antiquity -- 3 On Reading and Viewing -- II Progymnasmata: Ways of Seeing -- Chapter 2 Douris' Jason: Reckless Interpretations and the Ongoing Moment -- 1 The Literary Background of Douris' Image -- 2 Gerhard, Welcker, Robert: Clashes of Academic Titans -- 3 From Lycophron to Simon and Giangrande -- 4 Douris' Visual Narrative and the Aristotelian Now -- 5 The Now as kairos: Lessing's "Fruitful Moment -- 6 Enter Photography: Cartier-Bresson's "Decisive Moment -- 7 Ways of Seeing the Ongoing Moment -- Chapter 3 Classical Cinematism -- 1 Aristotle and the camera obscura -- 2 Francastel and the Birth of Pre-Cinema -- 3 Word and Image: A Pre-Cinema Survey -- 4 Heron, the camera obscura, and Damascius -- 5 Homo cinematographicus: The Cinema as Aristotelian Thought Machine -- III Complex Cinematism -- Chapter 4 Motion Images in Ecphrases -- 1 Homer the Painter, Homer the Filmmaker -- 2 Lessing on Text and Image -- 3 After Lessing: Eisenstein's Homer -- 4 Catullus and Virgil -- Chapter 5 Shadows and Caves: The Cinema as Platonic Idea and Reality -- 1 In Plato's Cave -- 2 Shadow Play: Mistaking the False for the True -- 3 Bergson and the Philosophy of the Cinematographic Mind -- 4 Plato's Cave on Screen: La Jetée, The Conformist, and Related Films -- 5 The Cinema Returns to and from Plato's Cave -- 6 Light and Shadows -- 7 The Platonic, Cinematically -- 8 "The Like Real World -- 9 Varda and Ophuls on Memory and History -- Chapter 6 Static Flight: Zeno's Arrow and Cinematographic Motion -- 1 The Filmstrip and the Arrow's Flight -- 2 Zeno and Motion on Film: Pro and Con -- 3 High-Speed Photography, Bullet Time, and Beyond.
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+4 Zeno's Onscreen Comedy Cameo -- Chapter 7 Lucretius: Dream Images and Beyond the Infinite -- 1 Cinematic Illusions: Lucretius on Dreams -- 2 Sinsteden and Plateau on Lucretius -- 3 The Aftermath -- 4 Lucretius and Screen Media: Varieties and Vicissitudes -- 5 2001: A Space Odyssey as Lucretian Film -- Chapter 8 The Cinematic Nature of the Opening Scene in Heliodorus' An Ethiopian Story -- 1 Heliodorus' Opening and Cinematic Technique -- 2 Heliodorus' Opening as Screenplay -- 3 Comments -- 4 Cinematic Parallels: Welles's Touch of Evil and Hitchcock's Psycho -- 5 Classical Rhetoric and Cinematic Style -- 6 Complex Flashbacks -- 7 Lying Flashbacks -- Chapter 9 The Face of Tragedy: Mask and Close-Up -- 1 Tragedy on Stage and Screen -- 2 Masks and Faces in Tragedy -- 3 The Emotional Power of Mask and Close-Up -- 4 The Close-Up: Revelation of the Invisible -- 5 Garbo's Face: A Beautiful Zero -- IV The Cinema Imagines Difficult Texts -- Chapter 10 Apollonius and the Golden Fleece -- or, The Case of the Missing Ecphrasis -- 1 The Golden Fleece in Apollonius' Argonautica -- 2 Neo-Mythologism: Hercules, The Giants of Thessaly, Jason and the Argonauts (1963) -- 3 CGI: Jason and the Argonauts (2000) and Percy Jackson: Sea of Monsters -- 4 Film Technology and the Supernatural -- 5 Medea -- 6 The Golden Thing -- Chapter 11 Arrow and Axes in the Odyssey -- or, The Case of the Insoluble Enigma -- 1 The Textual Problem -- 2 From the Verbal to the Visual -- 3 No Clear Picture -- 4 Odissea (1911) -- 5 Ulysses (1954) -- 6 Odissea (1968) -- 7 The Odyssey (1997) -- 8 Animation and CGI -- 9 Homeric Surprises -- Chapter 12 Peckinpah's Aristotle -- or, How Well Does The Wild Bunch Fit The Poetics? -- 1 Peckinpah and the Greeks -- 2 Peckinpah Scholars on Catharsis -- 3 Aristotelian Catharsis -- 4 Styles of Violence: Euripides and Peckinpah.
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+5 Peckinpah's Tragic Protagonist -- 6 Summation: Visual Poetry -- V Epilegomena -- Chapter 13 Fade-Out -- 1 Cleopatra's Zoetrope -- 2 The Cinema's Paths to the Greeks -- Bibliography -- Index.
+</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+<subfield code="a">Includes bibliographical references and index.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+<subfield code="a">
+Title from publisher's bibliographic system (viewed on 15 Feb 2024).
+</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+<subfield code="a">
+This book aims to enhance our appreciation of the modernity of the classical cultures and, conversely, of cinema's debt to ancient Greece and Rome. It explores filmic perspectives on the ancient verbal and visual arts and applies what is often referred to as pre-cinema and what Sergei Eisenstein called cinematism: that paintings, statues, and literature anticipate modern visual technologies. The motion of bodies depicted in static arts and the vividness of epic ecphrases point to modern features of storytelling, while Plato's Cave Allegory and Zeno's Arrow Paradox have been related to film exhibition and projection since the early days of cinema. The book additionally demonstrates the extensive influence of antiquity on an age dominated by moving-image media, as with stagings of Odysseus' arrow shot through twelve axes or depictions of the Golden Fleece. Chapters interpret numerous European and American silent and sound films and some television productions and digital videos.
+</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Motion pictures and literature.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Classical literature</subfield>
+<subfield code="x">Influence.</subfield>
+</datafield>
+<datafield tag="776" ind1=" " ind2=" ">
+<subfield code="z">1-009-39671-4</subfield>
+</datafield>
+<datafield tag="906" ind1=" " ind2=" ">
+<subfield code="a">BOOK</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+<subfield code="d">2024-02-16 08:46:14 US/Eastern</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="m">2024-07-14 18:29:49 US/Eastern</subfield>
+<subfield code="k">System</subfield>
+<subfield code="a">param</subfield>
+<subfield code="j">2024-07-14 18:28:24 US/Eastern</subfield>
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53902104860008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62797780310008501</subfield>
+<subfield code="i">NON_SFX_CREATOR</subfield>
+<subfield code="b">DEFAULT</subfield>
+<subfield code="n">2024-07-14 22:28:24</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119553619008501
+</subfield>
+<subfield code="c">true</subfield>
+<subfield code="8">53902104860008501</subfield>
+</datafield>
+</record>
+</collection>

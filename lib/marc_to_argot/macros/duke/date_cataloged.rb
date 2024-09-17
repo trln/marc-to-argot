@@ -23,7 +23,7 @@ module MarcToArgot
 
             # receiving date (legacy fallback)
             d = receiving_date(rec)
-            acc << d unless d.nil?
+            acc << d && return unless d.nil?
           end
         end
 
@@ -34,7 +34,8 @@ module MarcToArgot
                                              .sort
           Time.parse(dates_914d.first.to_s.strip).utc.iso8601 unless dates_914d.empty?
         rescue ArgumentError => e
-          raise MarcToArgot::Macros::Duke::MyParserError, e
+          logger.warn("date_cataloged (physical item) value cannot be parsed: #{e}")
+          nil
         end
 
         def eresource_item_date(rec)
@@ -43,7 +44,9 @@ module MarcToArgot
                                              .sort_by { |w| Time.parse(w) }
           Time.parse(dates_943n.first.to_s.strip).utc.iso8601 unless dates_943n.empty?
         rescue ArgumentError => e
-          raise MarcToArgot::Macros::Duke::MyParserError, e
+          logger.warn("date_cataloged (e-resource) value cannot be parsed: #{e}")
+          # return nil so the we can look for the fallback date
+          nil
         end
 
         def receiving_date(rec)
@@ -52,7 +55,9 @@ module MarcToArgot
                                              .sort_by { |w| Time.parse(w) }
           Time.parse(dates_940f.first.to_s.strip).utc.iso8601 unless dates_940f.empty?
         rescue ArgumentError => e
-          raise MarcToArgot::Macros::Duke::MyParserError, e
+          logger.warn("date_cataloged (receiving date) value cannot be parsed: #{e}")
+          # return nil so no date returns at all
+          nil
         end
       end
     end

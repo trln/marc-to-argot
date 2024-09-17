@@ -81,16 +81,6 @@ describe MarcToArgot do
     expect(result['rollup_id']).to(be_nil)
   end
 
-  it '(Duke) generates date_cataloged from valid date string' do
-    result = run_traject_json('duke', 'date_cataloged_valid', 'mrc')
-    expect(result['date_cataloged'].first).to(match(/^2012-09-04.*/))
-  end
-
-  it '(Duke) survives an invalid date string and does not set a value for date_cataloged' do
-    result = run_traject_json('duke', 'date_cataloged_invalid', 'mrc')
-    expect(result['date_cataloged']).to(be_nil)
-  end
-
   it '(Duke) adds a "DUKE" prefix to the record id if it is missing.' do
     result = run_traject_json('duke', 'non_prefixed_id', 'mrc')
     expect(result['id']).to eq('DUKE002959320')

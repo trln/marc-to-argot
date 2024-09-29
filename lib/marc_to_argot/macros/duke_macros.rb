@@ -170,14 +170,28 @@ module MarcToArgot
         end
       end
 
+      # Index various forms of the bib ID in Misc ID
+      # E.g., DUKE001241321, 001241321, 1241321
       def index_bib_id(ctx)
-        if ctx.output_hash.key?('id')
-          zero_padded_id = ctx.output_hash['id'].first.gsub(/^DUKE/, '')
-          id = zero_padded_id.gsub(/^[0]+/,'')
-          misc_id = ctx.output_hash.fetch('misc_id', [])
-          ctx.output_hash['misc_id'] = misc_id.concat([assemble_id_hash(id, display: 'false'),
-                                                       assemble_id_hash(zero_padded_id, display: 'false')])
-        end
+        return unless ctx.output_hash.key?('id')
+
+        id = ctx.output_hash['id'].first
+        zero_padded_id = id.gsub(/^DUKE/, '')
+        short_id = zero_padded_id.gsub(/^0+/, '')
+        misc_id = ctx.output_hash.fetch('misc_id', [])
+        ctx.output_hash['misc_id'] = misc_id.concat([assemble_id_hash(id, display: 'false'),
+                                                      assemble_id_hash(zero_padded_id, display: 'false'),
+                                                      assemble_id_hash(short_id, display: 'false')])
+
+      end
+
+      # Index Alma MMS ID in Misc ID, e.g., 990012413210108501
+      def index_mms_id(ctx)
+        return unless ctx.output_hash.key?('mms_id')
+
+        mms_id = ctx.output_hash['mms_id'].first
+        misc_id = ctx.output_hash.fetch('misc_id', [])
+        ctx.output_hash['misc_id'] = misc_id.concat([assemble_id_hash(mms_id, display: 'false')]).uniq
       end
 
       # # Example of how to re-open the ResourceTypeClassifier

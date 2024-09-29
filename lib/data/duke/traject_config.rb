@@ -5,8 +5,8 @@ to_field 'id', extract_marc(settings['specs'][:id], first: true) do |rec, acc|
   acc.collect! do |s|
     id = s.to_s.strip
 
-    # "scan" will attempt to match the MMS id string by a 
-    # pattern we "believe" represents all Aleph-born records 
+    # "scan" will attempt to match the MMS id string by a
+    # pattern we "believe" represents all Aleph-born records
     # migrated into Alma
     #
     # If we do match (and you'll see this below), the 3rd element of our
@@ -146,6 +146,7 @@ to_field 'date_cataloged', date_cataloged
 
 each_record do |rec, ctx|
   index_bib_id(ctx)
+  index_mms_id(ctx)
   remove_print_from_archival_material(ctx)
   add_donor_to_indexed_note_local(ctx)
   add_holdings_note_to_indexed_note_local(rec, ctx)

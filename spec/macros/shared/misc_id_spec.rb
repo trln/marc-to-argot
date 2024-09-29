@@ -10,7 +10,7 @@ describe MarcToArgot::Macros::Shared::MiscId do
   let(:misc_id_010) { run_traject_json('unc', 'misc_id_010', 'mrc') }
   let(:misc_id_015) { run_traject_json('unc', 'misc_id_015', 'mrc') }
   let(:misc_id_024) { run_traject_json('unc', 'misc_id_024', 'mrc') }
-  
+
   it '(MTA) sets misc_id' do
     result = misc_id['misc_id']
     expect(result).to eq(
@@ -68,8 +68,9 @@ describe MarcToArgot::Macros::Shared::MiscId do
         'qual' => 'microfiche'},
        {'value' => 'Serial no. 107-25 (United States. Congress. House. Committee on Financial Services)',
         'type' => 'Report Number'},
-        {"display"=>"false", "value"=>"3047014"},
-        {"display"=>"false", "value"=>"003047014"}]
+        {"display"=>"false", "value"=>"DUKE003047014"},
+        {"display"=>"false", "value"=>"003047014"},
+        {"display"=>"false", "value"=>"3047014"}]
     )
   end
 
@@ -101,7 +102,7 @@ describe MarcToArgot::Macros::Shared::MiscId do
 
     it '(MTA) sets misc_id from 015' do
       result = misc_id_015['misc_id']
-      #=015  \\$a123 (a)$qb$a234$q(c)$z666 (d)$qf$z777$q(e)$2can 
+      #=015  \\$a123 (a)$qb$a234$q(c)$z666 (d)$qf$z777$q(e)$2can
       expect(result).to eq([
                              {'value' => '123',
                               'qual' => 'a; b',
@@ -156,7 +157,7 @@ describe MarcToArgot::Macros::Shared::MiscId do
                         )
     end
 
-    
+
     it '(MTA) skips setting misc_id from 028 if no $a present' do
     result = misc_id02['misc_id']
     expect(result).to eq(

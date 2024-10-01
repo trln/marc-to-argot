@@ -112,10 +112,22 @@ describe MarcToArgot::Macros::Duke do
     expect(result['physical_media']).to be_nil
   end
 
-  it 'adds the bib number as an indexed only misc_id' do
+  it 'adds variants of the bib number as an indexed-only misc_id' do
     result = run_traject_json('duke', 'archival_print', 'xml')
+    expect(result['misc_id']).to include({"display"=>"false", "value"=>"DUKE005314421"})
     expect(result['misc_id']).to include({"display"=>"false", "value"=>"005314421"})
     expect(result['misc_id']).to include({"display"=>"false", "value"=>"5314421"})
+  end
+
+  it 'adds Alma MMS ID for an Aleph-born record as an indexed-only misc_id' do
+    result = run_traject_json('duke', 'single_holding_one_status', 'xml')
+    expect(result['misc_id']).to eq(
+      [{"type"=>"LCCN", "value"=>"62058113"},
+       {"display"=>"false", "value"=>"DUKE001241321"},
+       {"display"=>"false", "value"=>"001241321"},
+       {"display"=>"false", "value"=>"1241321"},
+       {"display"=>"false", "value"=>"990012413210108501"}]
+    )
   end
 
   it 'sets primary_oclc when $q does not contain the string ‘exclude’' do

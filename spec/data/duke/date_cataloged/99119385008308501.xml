@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<leader>06809nam a22006493i 4500</leader>
+<controlfield tag="001">99119385008308501</controlfield>
+<controlfield tag="005">20240501005544.0</controlfield>
+<controlfield tag="006">m o d |</controlfield>
+<controlfield tag="007">cr#-n---------</controlfield>
+<controlfield tag="008">231110t20162016enkao ob 001 0 eng d</controlfield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">1-317-24741-8</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">1-315-63056-7</subfield>
+</datafield>
+<datafield tag="020" ind1=" " ind2=" ">
+<subfield code="a">1-317-24740-X</subfield>
+</datafield>
+<datafield tag="024" ind1="7" ind2=" ">
+<subfield code="a">10.4324/9781315630564</subfield>
+<subfield code="2">doi</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(CKB)3710000000635462</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(EBL)4470568</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(SSID)ssj0001638878</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(PQKBManifestationID)16397190</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(PQKBTitleCode)TC0001638878</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(PQKBWorkID)14800203</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(PQKB)11460132</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(MiAaPQ)EBC4470568</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(OCoLC)945771729</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">
+(oapen)https://directory.doabooks.org/handle/20.500.12854/38963
+</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(MiAaPQ)EBC7245641</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(Au-PeEL)EBL7245641</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(EXLCZ)993710000000635462</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">MiAaPQ</subfield>
+<subfield code="b">eng</subfield>
+<subfield code="e">rda</subfield>
+<subfield code="e">pn</subfield>
+<subfield code="c">MiAaPQ</subfield>
+<subfield code="d">MiAaPQ</subfield>
+</datafield>
+<datafield tag="041" ind1=" " ind2=" ">
+<subfield code="a">eng</subfield>
+</datafield>
+<datafield tag="050" ind1=" " ind2="4">
+<subfield code="a">PN1995.9.S6</subfield>
+<subfield code="b">.M485 2016</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2=" ">
+<subfield code="a">302.23/43</subfield>
+<subfield code="2">23</subfield>
+</datafield>
+<datafield tag="245" ind1="0" ind2="0">
+<subfield code="a">Middlebrow cinema /</subfield>
+<subfield code="c">edited by Sally Faulkner.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="1">
+<subfield code="a">London, [England] ;</subfield>
+<subfield code="a">New York :</subfield>
+<subfield code="b">Routledge,</subfield>
+<subfield code="c">2016.</subfield>
+</datafield>
+<datafield tag="264" ind1=" " ind2="4">
+<subfield code="c">©2016</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">1 online resource (238 p.)</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+<subfield code="a">text</subfield>
+<subfield code="b">txt</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+<subfield code="a">computer</subfield>
+<subfield code="b">c</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+<subfield code="a">online resource</subfield>
+<subfield code="b">cr</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+<subfield code="a">
+Remapping World Cinema: Regional Tensions and Global Transformations
+</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+<subfield code="a">Description based upon print version of record.</subfield>
+</datafield>
+<datafield tag="505" ind1="0" ind2=" ">
+<subfield code="a">
+Middlebrow Cinema; Series Page; Title; Copyright; Contents; List of Figures; List of Tables; Acknowledgements; Textual Note; List of Contributors; Introduction. Approaching the Middlebrow: Audience; Text; Institution; PART I Mapping Middlebrow; 1 Hollywood Middlebrow: A Dialectical approach to 1940s Cinema; Middlebrow/Middle-Class/Moyen; Canonical/Non-Canonical Film History; Screenplay/Direction; Drama/Melodrama; Conclusion: Then/Now; Bibliography; 2 Middlebrow Taste: Towards a New Middle Class - a Certain Tendency of 1950s French Cinema; A New Middle Class; 1950s Film Attendance
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+Middlebrow1950s Film: Genres, Stars, Prizes; Literary Adaptations; Adaptations of the Classical Literary Tradition; Adaptations of Modern Classics; Adaptations of Middlebrow Texts: Thrillers; Adaptations of Middlebrow Texts: Comedies; Adaptations of Middlebrow Texts: Dramas; Adaptations of Middlebrow Texts: Social-Realism; Conclusion; Notes; Bibliography; 3 Mumbai Middlebrow: Ways of Thinking about the Middle Ground in Hindi Cinema; Defining the Middlebrow; Hindi Cinema and its Other Brows; Middlebrow and the Middle Classes: Class and Language; The History of the Middlebrow in Hindi Cinema
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+The Middlebrow in Today's BollywoodThe Upper Middlebrow; Example 1: Aamir Khan and PK - Challenging Beliefs; Example 2: Sanjay Leela Bhansali and Black - Addressing Social Issues; Example 3: Anurag Kashyap and Gangs of Wasseypur - Knowing Intertextuality; Example 4: Vikramaditya Motwane and Lootera / The Robber* (2013) - Heritage Film; Example 5: Karan Johar, Zoya Akhtar, Dibakar Banerjee, Anurag Kashyap and Bombay Talkies - Self-reflectivity; Conclusion; Notes; Bibliography; PART II Case Studies; 4 Time and the Middlebrow in 1940s British Cinema; Ealing Films; Gainsborough Costume Cycle
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+MusicalConclusion; Bibliography; 5 Rehearsing for Democracy in Dictatorship Spain: Middlebrow Period Drama 1970-77; Cycle of Middlebrow Period Drama 1970-77; Middlebrow Audience: 'Raising Up a Dejected Spanish Cinema'; Middlebrow Film and its Pedagogical Role: 'A Mirror for Today's Realities'; Conclusion; Notes; Bibliography; 6 The Mexican Romantic Sex Comedy: The Emergence of Mexican Middlebrow Filmmaking in the 1990s; The middlebrow and Mexican Film Culture: An Introduction; Mexican Film Culture of the 1990s; Case Study 1: Love in the Time of Hysteria; Case Study 2: Sex, Shame and Tears
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+ConclusionNotes; Bibliography; 7 Wealth and Justice: Contemporary Chinese Middlebrow Cinema; Introduction; Conclusion; Notes; Bibliography; 8 Counter-Heritage, Middlebrow and the Fiction Patrimoniale: Reframing 'Middleness' in the Contemporary French Historical Film; Counter-Heritage and the Middlebrow; Days of Glory: The Immediacy and Allegiance of the Middlebrow; Black Venus: Entrenching Hierarchies of Film Art and Cultural Value; Conclusion; Notes; Bibliography; 9 Radical Politics, Middlebrow Cinema: Salvador (Puig Antich) and the Search for a New Consensus
+</subfield>
+</datafield>
+<datafield tag="505" ind1="8" ind2=" ">
+<subfield code="a">
+The Return of Politics as History in European Heritage Cinema
+</subfield>
+</datafield>
+<datafield tag="546" ind1=" " ind2=" ">
+<subfield code="a">English</subfield>
+</datafield>
+<datafield tag="520" ind1=" " ind2=" ">
+<subfield code="a">
+"Middlebrow Cinema challenges an often uninterrogated hostility to middlebrow culture that frequently dismisses it as conservative, which it often is not, and feminized or middle-class, which it often is. The volume defines the term relationally against shifting concepts of ‘high’ and ‘low’, and considers its deployment in connection with text, audience and institution. In exploring the concept of the middlebrow, this book recovers films that were widely meaningful to contemporary audiences, yet sometimes overlooked by critics interested in popular and arthouse extremes. It also addresses the question of socially-mobile audiences, who might express their aspirations through film-watching; and traces the cultural consequences of the movement of films across borders and between institutions. The first study of its kind, the volume comprises 11 original essays that test the purchase of the term ‘middlebrow’ across cultures, including those of Europe, Asia and the Americas, from the 1930s to the present day. Middlebrow Cinema brings into view a popular and aspirational - and thus especially relevant and dynamic - area of film and film culture. Ideal for students and researchers in this area, this book: Remaps ‘Popular’ and ‘arthouse’ approaches Explores British, Chinese, French, Indian, Mexican, Spanish ‘national’ cinemas alongside Continental, Hollywood, Queer, Transnational cinemas Analyses Biopic, Heritage, Historical Film, Melodrama, Musical, Sex Comedy genres."
+</subfield>
+</datafield>
+<datafield tag="540" ind1=" " ind2=" ">
+<subfield code="a">
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+</subfield>
+<subfield code="f">CC BY-NC-ND 4.0</subfield>
+<subfield code="u">
+https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+</subfield>
+</datafield>
+<datafield tag="506" ind1="0" ind2=" ">
+<subfield code="f">Unrestricted online access</subfield>
+<subfield code="2">star</subfield>
+</datafield>
+<datafield tag="504" ind1=" " ind2=" ">
+<subfield code="a">
+Includes bibliographical references at the end of each chapters and index.
+</subfield>
+</datafield>
+<datafield tag="588" ind1=" " ind2=" ">
+<subfield code="a">
+Description based on online resource; title from PDF title page (EBook Central, viewed February 13, 2024).
+</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Motion pictures</subfield>
+<subfield code="x">Social aspects.</subfield>
+</datafield>
+<datafield tag="776" ind1=" " ind2=" ">
+<subfield code="z">1-138-77713-7</subfield>
+</datafield>
+<datafield tag="776" ind1=" " ind2=" ">
+<subfield code="z">1-138-77712-9</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+<subfield code="a">Faulkner, Sally,</subfield>
+<subfield code="d">1974-</subfield>
+<subfield code="e">editor.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+<subfield code="a">Remapping world cinema (Routledge (Firm))</subfield>
+</datafield>
+<datafield tag="906" ind1=" " ind2=" ">
+<subfield code="a">BOOK</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+<subfield code="d">2016-04-11 22:07:06 US/Eastern</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="m">2024-07-10 08:53:00 US/Eastern</subfield>
+<subfield code="k">System</subfield>
+<subfield code="a">param</subfield>
+<subfield code="j">2024-06-28 16:54:04 US/Eastern</subfield>
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53890764390008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62884286050008501</subfield>
+<subfield code="i">System</subfield>
+<subfield code="b">EZProxy</subfield>
+<subfield code="n">2024-06-28 20:54:04</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119385008308501
+</subfield>
+<subfield code="c">false</subfield>
+<subfield code="q">BOOK</subfield>
+<subfield code="8">53890764390008501</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="m">2024-06-26 01:53:54 US/Eastern</subfield>
+<subfield code="k">System</subfield>
+<subfield code="a">param</subfield>
+<subfield code="j">2024-06-26 01:53:45 US/Eastern</subfield>
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53846098970008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62797758430008501</subfield>
+<subfield code="i">NON_SFX_CREATOR</subfield>
+<subfield code="b">EZProxy</subfield>
+<subfield code="n">2024-06-26 05:53:45</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119385008308501
+</subfield>
+<subfield code="c">false</subfield>
+<subfield code="q">BOOK</subfield>
+<subfield code="8">53846098970008501</subfield>
+</datafield>
+<datafield tag="943" ind1=" " ind2=" ">
+<subfield code="m">2024-07-14 14:15:33 US/Eastern</subfield>
+<subfield code="k">System</subfield>
+<subfield code="a">param</subfield>
+<subfield code="j">2024-07-14 14:13:23 US/Eastern</subfield>
+<subfield code="d">
+https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53895120230008501&amp;Force_direct=true
+</subfield>
+<subfield code="g">62894552020008501</subfield>
+<subfield code="i">NON_SFX_CREATOR</subfield>
+<subfield code="b">EZProxy</subfield>
+<subfield code="n">2024-07-14 18:13:23</subfield>
+<subfield code="u">
+e?u.ignore_date_coverage=true&amp;rft.mms_id=99119385008308501
+</subfield>
+<subfield code="c">false</subfield>
+<subfield code="q">BOOK</subfield>
+<subfield code="8">53895120230008501</subfield>
+</datafield>
+</record>
+</collection>

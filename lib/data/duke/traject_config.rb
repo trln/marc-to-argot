@@ -138,18 +138,7 @@ end
 # ################################################
 # # Date Cataloged
 # ######
-
-to_field 'date_cataloged' do |rec, acc|
-  cataloged = Traject::MarcExtractor.cached(settings['specs'][:date_cataloged])
-                                    .extract(rec).first.to_s.strip
-  begin
-    acc << Time.parse(cataloged).utc.iso8601 if cataloged =~ /\A?[0-9]*\.?[0-9]+\Z/
-  rescue ArgumentError => e
-    Logging.mdc['field'] = settings['specs'][:date_cataloged].to_s
-    logger.warn("date_cataloged value cannot be parsed: #{e}")
-    Logging.mdc.delete('field')
-  end
-end
+to_field 'date_cataloged', date_cataloged
 
 # ################################################
 # # Final each_record block

@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+<leader>01580cas a2200409 a 4500</leader>
+<controlfield tag="005">20240725112121.0</controlfield>
+<controlfield tag="008">920413c19769999it ar o 0 0ita</controlfield>
+<controlfield tag="001">990006699880108501</controlfield>
+<datafield tag="010" ind1=" " ind2=" ">
+<subfield code="a">86647012 //r88</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(NcD)000669988DUK01</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" ">
+<subfield code="a">(OCoLC)12986409</subfield>
+</datafield>
+<datafield tag="040" ind1=" " ind2=" ">
+<subfield code="a">DLC</subfield>
+<subfield code="b">eng</subfield>
+<subfield code="c">DLC</subfield>
+<subfield code="d">NST</subfield>
+<subfield code="d">IUL</subfield>
+<subfield code="d">NST</subfield>
+<subfield code="d">NDD</subfield>
+</datafield>
+<datafield tag="042" ind1=" " ind2=" ">
+<subfield code="a">lc</subfield>
+</datafield>
+<datafield tag="050" ind1="9" ind2="9">
+<subfield code="a">PN1995</subfield>
+<subfield code="b">.C4855</subfield>
+</datafield>
+<datafield tag="050" ind1="0" ind2="0">
+<subfield code="a">PN1995</subfield>
+<subfield code="b">.C4855</subfield>
+</datafield>
+<datafield tag="082" ind1="0" ind2=" ">
+<subfield code="a">791.43/75/05</subfield>
+<subfield code="2">19</subfield>
+</datafield>
+<datafield tag="130" ind1="0" ind2=" ">
+<subfield code="a">Collection Cinéma (Rome, Italy)</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/nr2004022933</subfield>
+</datafield>
+<datafield tag="245" ind1="1" ind2="0">
+<subfield code="a">Cinema.</subfield>
+</datafield>
+<datafield tag="260" ind1=" " ind2=" ">
+<subfield code="a">Roma ;</subfield>
+<subfield code="a">Bari :</subfield>
+<subfield code="b">Ed. Laterza.</subfield>
+</datafield>
+<datafield tag="300" ind1=" " ind2=" ">
+<subfield code="a">v. ;</subfield>
+<subfield code="c">18 cm.</subfield>
+</datafield>
+<datafield tag="310" ind1=" " ind2=" ">
+<subfield code="a">Annual</subfield>
+</datafield>
+<datafield tag="336" ind1=" " ind2=" ">
+<subfield code="a">text</subfield>
+<subfield code="b">txt</subfield>
+<subfield code="2">rdacontent</subfield>
+</datafield>
+<datafield tag="337" ind1=" " ind2=" ">
+<subfield code="a">unmediated</subfield>
+<subfield code="b">n</subfield>
+<subfield code="2">rdamedia</subfield>
+</datafield>
+<datafield tag="338" ind1=" " ind2=" ">
+<subfield code="a">volume</subfield>
+<subfield code="b">nc</subfield>
+<subfield code="2">rdacarrier</subfield>
+</datafield>
+<datafield tag="362" ind1="1" ind2=" ">
+<subfield code="a">Began with vol. for 1976.</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+<subfield code="a">'76-'87: Universale Laterza</subfield>
+</datafield>
+<datafield tag="490" ind1="1" ind2=" ">
+<subfield code="a">'88- : Biblioteca universale Laterza</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+<subfield code="a">Description based on: '77.</subfield>
+</datafield>
+<datafield tag="500" ind1=" " ind2=" ">
+<subfield code="a">Editor, 1976- Giovanni Grazzini.</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Motion pictures</subfield>
+<subfield code="v">Reviews</subfield>
+<subfield code="v">Periodicals.</subfield>
+<subfield code="0">
+https://id.loc.gov/authorities/subjects/sh2008108038
+</subfield>
+</datafield>
+<datafield tag="650" ind1=" " ind2="0">
+<subfield code="a">Motion pictures</subfield>
+<subfield code="x">Awards</subfield>
+<subfield code="v">Periodicals.</subfield>
+<subfield code="0">
+https://id.loc.gov/authorities/subjects/sh2009009988
+</subfield>
+</datafield>
+<datafield tag="700" ind1="1" ind2=" ">
+<subfield code="a">Grazzini, Giovanni.</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/n79060379</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+<subfield code="a">Universale Laterza.</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/n42025652</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+<subfield code="a">Biblioteca universale Laterza.</subfield>
+<subfield code="0">https://id.loc.gov/authorities/names/n42004860</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+<subfield code="a">'76-'87: Universale Laterza.</subfield>
+</datafield>
+<datafield tag="830" ind1=" " ind2="0">
+<subfield code="a">'88- : Biblioteca universale Laterza.</subfield>
+</datafield>
+<datafield tag="951" ind1=" " ind2=" ">
+<subfield code="a">NDD</subfield>
+<subfield code="b">20051111</subfield>
+</datafield>
+<datafield tag="942" ind1=" " ind2=" ">
+<subfield code="d">2024-06-23 20:49:17 US/Eastern</subfield>
+</datafield>
+<datafield tag="852" ind1="0" ind2=" ">
+<subfield code="h">PN1995</subfield>
+<subfield code="i">.C4855</subfield>
+<subfield code="b">LSC</subfield>
+<subfield code="c">PSL</subfield>
+<subfield code="8">22752482600008501</subfield>
+</datafield>
+<datafield tag="866" ind1=" " ind2="0">
+<subfield code="a">LIBRARY HAS: 1983-1984 1989-1991</subfield>
+<subfield code="8">22752482600008501</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+<subfield code="e">22752482600008501</subfield>
+<subfield code="i">1</subfield>
+<subfield code="d">0</subfield>
+<subfield code="c">PSL</subfield>
+<subfield code="r">ISSUE</subfield>
+<subfield code="p">D03812563S</subfield>
+<subfield code="w">PSL</subfield>
+<subfield code="a">1</subfield>
+<subfield code="k">23752482550008501</subfield>
+<subfield code="n">1991 c.1</subfield>
+<subfield code="o">01</subfield>
+<subfield code="s">2005-12-10 19:00:00 US/Eastern</subfield>
+<subfield code="f">2005-12-11 05:59:00 US/Eastern</subfield>
+<subfield code="h">PN1995 .C4855</subfield>
+<subfield code="v">LSC</subfield>
+<subfield code="u">2024-06-23 20:50:07 US/Eastern</subfield>
+<subfield code="b">LSC</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+<subfield code="e">22752482600008501</subfield>
+<subfield code="i">1</subfield>
+<subfield code="d">0</subfield>
+<subfield code="c">PSL</subfield>
+<subfield code="r">ISSUE</subfield>
+<subfield code="p">D02599575%</subfield>
+<subfield code="w">PSL</subfield>
+<subfield code="a">1</subfield>
+<subfield code="k">23752482570008501</subfield>
+<subfield code="n">1989 c.1</subfield>
+<subfield code="o">01</subfield>
+<subfield code="s">2005-12-10 19:00:00 US/Eastern</subfield>
+<subfield code="f">2005-12-11 05:59:00 US/Eastern</subfield>
+<subfield code="h">PN1995 .C4855</subfield>
+<subfield code="v">LSC</subfield>
+<subfield code="u">2024-06-23 20:50:07 US/Eastern</subfield>
+<subfield code="b">LSC</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+<subfield code="e">22752482600008501</subfield>
+<subfield code="i">1</subfield>
+<subfield code="d">0</subfield>
+<subfield code="c">PSL</subfield>
+<subfield code="r">ISSUE</subfield>
+<subfield code="p">D03810575T</subfield>
+<subfield code="w">PSL</subfield>
+<subfield code="a">1</subfield>
+<subfield code="k">23752482560008501</subfield>
+<subfield code="n">1990 c.1</subfield>
+<subfield code="o">01</subfield>
+<subfield code="s">2005-12-10 19:00:00 US/Eastern</subfield>
+<subfield code="f">2005-12-11 05:59:00 US/Eastern</subfield>
+<subfield code="h">PN1995 .C4855</subfield>
+<subfield code="v">LSC</subfield>
+<subfield code="u">2024-06-23 20:50:07 US/Eastern</subfield>
+<subfield code="b">LSC</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+<subfield code="e">22752482600008501</subfield>
+<subfield code="i">1</subfield>
+<subfield code="d">0</subfield>
+<subfield code="c">PSL</subfield>
+<subfield code="r">ISSUE</subfield>
+<subfield code="p">D02786753</subfield>
+<subfield code="w">PSL</subfield>
+<subfield code="a">1</subfield>
+<subfield code="k">23752482580008501</subfield>
+<subfield code="n">1984 c.1</subfield>
+<subfield code="o">01</subfield>
+<subfield code="s">2005-12-10 19:00:00 US/Eastern</subfield>
+<subfield code="f">2005-12-11 05:59:00 US/Eastern</subfield>
+<subfield code="h">PN1995 .C4855</subfield>
+<subfield code="v">LSC</subfield>
+<subfield code="u">2024-06-23 20:50:07 US/Eastern</subfield>
+<subfield code="b">LSC</subfield>
+</datafield>
+<datafield tag="940" ind1=" " ind2=" ">
+<subfield code="e">22752482600008501</subfield>
+<subfield code="i">1</subfield>
+<subfield code="d">0</subfield>
+<subfield code="c">PSL</subfield>
+<subfield code="r">ISSUE</subfield>
+<subfield code="p">D00004654J</subfield>
+<subfield code="w">PSL</subfield>
+<subfield code="a">1</subfield>
+<subfield code="k">23752482590008501</subfield>
+<subfield code="n">1983 c.1</subfield>
+<subfield code="o">01</subfield>
+<subfield code="s">1994-01-05 19:00:00 US/Eastern</subfield>
+<subfield code="f">1994-01-06 05:59:00 US/Eastern</subfield>
+<subfield code="h">PN1995 .C4855</subfield>
+<subfield code="v">LSC</subfield>
+<subfield code="u">2024-06-23 20:50:07 US/Eastern</subfield>
+<subfield code="b">LSC</subfield>
+</datafield>
+</record>
+</collection>

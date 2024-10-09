@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier/>
+    </header>
+    <leader>01418cbc a2200313Ia 4500</leader>
+    <controlfield tag="005">20240725035809.0</controlfield>
+    <controlfield tag="007">hd af-----aca       </controlfield>
+    <controlfield tag="008">010817s10uu    xx      a           grc d</controlfield>
+    <controlfield tag="001">990030057850108501</controlfield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NcD)003005785DUK01</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)47799283</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">NDD</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">NDD</subfield>
+    </datafield>
+    <datafield tag="099" ind1=" " ind2=" ">
+      <subfield code="a">M9414</subfield>
+    </datafield>
+    <datafield tag="100" ind1="0" ind2=" ">
+      <subfield code="a">Gregory,</subfield>
+      <subfield code="c">of Nazianzus, Saint.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n50082276</subfield>
+    </datafield>
+    <datafield tag="240" ind1="1" ind2="0">
+      <subfield code="a">Orations</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n95092638</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">16 Logoi.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="c">[10--]</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">246 leaves</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">unspecified</subfield>
+      <subfield code="b">zzz</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">microform</subfield>
+      <subfield code="b">h</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">microfilm reel</subfield>
+      <subfield code="b">hd</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="340" ind1=" " ind2=" ">
+      <subfield code="b">35 mm</subfield>
+    </datafield>
+    <datafield tag="340" ind1=" " ind2=" ">
+      <subfield code="j">service copy</subfield>
+      <subfield code="2">rdagen</subfield>
+      <subfield code="0">http://rdaregistry.info/termList/RDAGeneration/1014</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Illuminated manuscript, title from title frame on microfilm.</subfield>
+    </datafield>
+    <datafield tag="510" ind1="4" ind2=" ">
+      <subfield code="a">Kenneth W. Clark, Checklist of manuscripts in St. Catherine's Monastery, Mount Sinai,</subfield>
+      <subfield code="c">p. 5.</subfield>
+    </datafield>
+    <datafield tag="533" ind1=" " ind2=" ">
+      <subfield code="a">Microfilm.</subfield>
+      <subfield code="b">[Washington, D.C.?] :</subfield>
+      <subfield code="c">Library of Congress Photoduplication Service, in cooperation with the American Foundation for the Study of Man and Farouk 1 University,</subfield>
+      <subfield code="d">[1950].</subfield>
+      <subfield code="e">1 microfilm reel ; 35 mm.</subfield>
+      <subfield code="7">s1950 dcun a</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Manuscripts, Greek</subfield>
+      <subfield code="v">Facsimiles.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh2008107351</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">Saint Catherine (Monastery : Mount Sinai).</subfield>
+      <subfield code="k">Manuscript.</subfield>
+      <subfield code="n">Greek 341.</subfield>
+    </datafield>
+    <datafield tag="852" ind1=" " ind2="0">
+      <subfield code="h">M9414</subfield>
+      <subfield code="b">PERKN</subfield>
+      <subfield code="c">PKM2</subfield>
+      <subfield code="8">22663872110008501</subfield>
+    </datafield>
+    <datafield tag="940" ind1=" " ind2=" ">
+      <subfield code="e">22663872110008501</subfield>
+      <subfield code="d">#</subfield>
+      <subfield code="c">PKM2</subfield>
+      <subfield code="r">FILM</subfield>
+      <subfield code="p">HBIZ-3565-00001</subfield>
+      <subfield code="w">PKM2</subfield>
+      <subfield code="k">23663872100008501</subfield>
+      <subfield code="o">18</subfield>
+      <subfield code="s">2001-08-19 20:00:00 US/Eastern</subfield>
+      <subfield code="h">M9414</subfield>
+      <subfield code="v">PERKN</subfield>
+      <subfield code="u">2024-06-23 13:39:08 US/Eastern</subfield>
+      <subfield code="b">PERKN</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="t">1</subfield>
+    </datafield>
+  </record>
+</collection>

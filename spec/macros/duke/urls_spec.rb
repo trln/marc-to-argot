@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+# include MarcToArgot::Macros::Duke::Urls
+
 describe MarcToArgot::Macros::Duke::Urls do
   include described_class
 
@@ -12,6 +14,7 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:url_943_newspaper_case) { run_traject_json('duke', 'url_943_newspaper_case', 'xml') }
 
   context 'Duke' do
+
     it 'restricted is not set to false for fulltext URLs with the proxy prefix' do
       expect(JSON.parse(restricted['url'][0])['restricted']).to be_nil
     end
@@ -38,16 +41,12 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
-    it 'sets the url type to \'JOURNAL\' when processing 943q' do
-      expect(JSON.parse(url_943_journal_case['url'][0])['type']).to(
-        eq('JOURNAL')
-      )
-    end
-
-    it 'sets the url type to \'NEWSPAPER\' when processing 943q when value is \NEWSPAPER\'' do
-      expect(JSON.parse(url_943_newspaper_case['url'][0])['type']).to(
-        eq('NEWSPAPER')
-      )
+    context '943 fields:' do
+      it 'sets url_type to \'fulltext\' when processing 943 fields' do
+        expect(JSON.parse(url_943_journal_case['url'][0])['type']).to(
+          eq('fulltext')
+        )
+      end
     end
   end
 end

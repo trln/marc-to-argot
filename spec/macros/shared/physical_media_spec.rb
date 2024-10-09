@@ -165,7 +165,7 @@ end
   let(:physical_media_dvd) { run_traject_json('duke', 'physical_media_dvd', 'mrc') }
   let(:physical_media_flash_card) { run_traject_json('duke', 'physical_media_flash_card', 'mrc') }
   let(:physical_media_microfiche) { run_traject_json('duke', 'physical_media_microfiche', 'mrc') }
-  let(:physical_media_microfilm) { run_traject_json('duke', 'physical_media_microfilm', 'mrc') }
+  let(:physical_media_microfilm) { run_traject_json('duke', 'physical_media_microfilm_alma', 'xml') }
   let(:physical_media_microopaque) { run_traject_json('duke', 'physical_media_microopaque', 'mrc') }
   let(:physical_media_record_10) { run_traject_json('duke', 'physical_media_record_10', 'mrc') }
   let(:physical_media_record_12) { run_traject_json('duke', 'physical_media_record_12', 'mrc') }

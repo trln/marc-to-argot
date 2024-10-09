@@ -115,7 +115,7 @@ describe MarcToArgot::Macros::Duke do
 
   it 'removes Print from Archival records' do
     result = run_traject_json('duke', 'archival_print', 'xml')
-    expect(result['physical_media']).not_to include('Print')
+    expect(result['physical_media']).to be_nil
   end
 
   it 'adds variants of the bib number as an indexed-only misc_id' do

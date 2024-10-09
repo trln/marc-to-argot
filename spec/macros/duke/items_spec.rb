@@ -7,8 +7,8 @@ describe MarcToArgot::Macros::Duke::Items do
   let(:item_sort) { run_traject_json('duke', 'item_sort', 'xml') }
   let(:rec_with_holding) { run_traject_json('duke', 'record_with_holding', 'xml') }
   let(:single_holding_one_status) { run_traject_json('duke', 'single_holding_one_status') }
-  let(:multi_holdings_multi_status) { run_traject_json('duke', 'multi_holdings_multi_status') }
-  let(:multi_holdings_no_status) { run_traject_json('duke', 'multi_holdings_no_status') }
+  let(:multi_holdings_multi_status) { run_traject_json('duke', 'multi_holdings_multi_status', 'xml') }
+  let(:multi_holdings_no_status) { run_traject_json('duke', 'multi_holdings_no_status', 'xml') }
 
   context 'Duke' do
     it 'puts items in a sensible order' do

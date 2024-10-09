@@ -7,6 +7,7 @@ describe MarcToArgot::Macros::Duke do
 
   let(:indexer) { MarcToArgot::Indexers::Duke.new }
   let(:url_recs) { MARC::Reader.new(find_marc('duke', 'url', 'mrc')).to_a }
+  let(:url_943_online) { run_traject_json('duke', 'url_943_journal_case', 'xml') }
   let(:expected_note) do
     [['Duke law journal, v. 50, no. 6',
       'Duke law journal, v. 50, no. 6',
@@ -42,6 +43,11 @@ describe MarcToArgot::Macros::Duke do
       expect(output.length).to eq(exp.length), "Record #{idx + 1} in error\nExpected:\n#{exp}\nOutput:\n #{output}"
       expect(output).to eq(exp)
     end
+  end
+
+  it '(MTA) expects access_types to include "Online" when 943 fields exist' do
+    puts url_943_online['access_type']
+    expect(url_943_online['access_type']).to include("Online")
   end
 
   it 'extracts link text' do
@@ -109,7 +115,7 @@ describe MarcToArgot::Macros::Duke do
 
   it 'removes Print from Archival records' do
     result = run_traject_json('duke', 'archival_print', 'xml')
-    expect(result['physical_media']).to be_nil
+    expect(result['physical_media']).not_to include('Print')
   end
 
   it 'adds variants of the bib number as an indexed-only misc_id' do

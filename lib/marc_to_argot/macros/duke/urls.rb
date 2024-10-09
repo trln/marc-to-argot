@@ -10,20 +10,27 @@ module MarcToArgot
 
           # rubocop:disable Metrics/BlockLength
           lambda do |rec, acc, ctx|
-            Traject::MarcExtractor.cached('943bdhqy8').each_matching_line(rec) do |field, spec, extractor|
+            Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, spec, extractor|
               url = {}
 
               raw_href = collect_and_join_subfield_values(field, 'd').strip
+
+              # UPDATE: We don't really care about the 'q' subfield in
+              # determining 'url_type', but
+              # we DO care about it when deciding with URL to use
               resource_type = collect_and_join_subfield_values(field, 'q')
+
               portfolio_id = collect_and_join_subfield_values(field, '8')
               resource_note = collect_and_join_subfield_values(field, 'y').strip
 
-              url[:href] = add_duke_proxy(raw_href, resource_type, ctx)
+              # For Duke's use of Alma, all 943 fields are considered 'fulltext'
+              url[:type] = 'fulltext'
+              url[:href] = add_duke_proxy(raw_href, 'fulltext', ctx)
+              # override the HREF when subfield 'q' (resource_type) is JOURNAL or NEWSPAPER
               url[:href] = "#{soa_url_conf['soa_url']}#{portfolio_id}" if journal_resource_types.include?(resource_type)
 
-              url[:type] = resource_type
               url[:note] = resource_note unless resource_note.empty?
-              url[:restricted] = 'false'
+              url[:restricted] = 'false' unless url_restricted?(raw_href, 'fulltext')
               acc << url.to_json
             end
 

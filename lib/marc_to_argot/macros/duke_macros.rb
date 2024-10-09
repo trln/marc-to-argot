@@ -30,9 +30,17 @@ module MarcToArgot
       #   (for overrides)
 
       # rubocop:disable Metrics/MethodLength
+      #
+      # MARC 943 has precedent over MARC 856 now, and 
+      # doesn't require complicated logic to determine "online" or not.
       def online_access?(rec, _ctx = {})
+        # eres_inv stands for e-resource inventory
+        # return "true" when any 943 fields are present in the record
+        eres_inv = rec.fields('943')
+        return true if !eres_inv.nil? && eres_inv.length.positive?
+
         l = rec.fields('856')
-        return false if l.nil?
+        return false if l.nil? || l.empty?
 
         l.each do |field|
           next unless field.indicator2.strip

@@ -118,7 +118,11 @@ module MarcToArgot
             locations = LocationMap.map_locations_to_hierarchy(items)
 
             ctx.output_hash['lcc_top'] = lcc_top.to_a
-            ctx.output_hash['available'] = 'Available' if ItemStatus.is_available?(items)
+
+            # DEPRECATED (and commented out) since document-level availability 
+            # is no longer dictated by item status
+            # (I don't know how this was missed during the coding exercise.... dlc32)
+            # ctx.output_hash['available'] = 'Available' if ItemStatus.is_available?(items)
             ctx.output_hash['location_hierarchy'] = arrays_to_hierarchy(locations) if locations
             ctx.output_hash['barcodes'] = barcodes if barcodes.any?
             ctx.output_hash['shelf_numbers'] = shelf_numbers.uniq.compact if shelf_numbers.any?

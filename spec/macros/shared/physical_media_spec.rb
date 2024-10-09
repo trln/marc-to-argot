@@ -220,12 +220,6 @@ end
     expect(result).to eq(['Microform','Microfiche'])
   end
 
-  # This test spec needs further review
-  # --
-  # It is currently failing because this test record:
-  # a) is an ALEPH-born (Duke) record, and it's
-  # b) it includes a 943 field that is used differently
-  #    from how Duke is using a 943 field in ALMA
   it '(MTA) Sets physical_media to Microfilm' do
     result = physical_media_microfilm['physical_media']
     expect(result).to eq(['Microform','Microfilm'])

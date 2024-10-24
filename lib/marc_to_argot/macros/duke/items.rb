@@ -96,12 +96,12 @@ module MarcToArgot
               item.delete('status_code')
               item.delete('due_date')
 
-              unless online_item?(item) # Filter out online items.
-                items << item
-                # Save physical items to clipboard for use later.
-                ctx.clipboard[:physical_items] ||= []
-                ctx.clipboard[:physical_items] << item
-              end
+              # unless online_item?(item) # Filter out online items.
+              next if online_item?(item) || lost_item?(item) || withdrawn_item?(item)
+              items << item
+              # Save physical items to clipboard for use later.
+              ctx.clipboard[:physical_items] ||= []
+              ctx.clipboard[:physical_items] << item
             end
 
             if items.length > 1
@@ -130,6 +130,16 @@ module MarcToArgot
 
             map_call_numbers!(ctx, items)
           end
+        end
+
+        # return true if loc_b == LOSTITEM && loc_n == DULLOST
+        def lost_item?(item)
+          item['loc_b'] == 'LOSTITEM' && item['loc_n'] == 'DULLOST'
+        end
+
+        # return true if loc_b == WITHDRAWN && loc_n == WITHDRAWN
+        def withdrawn_item?(item)
+          item['loc_b'] == 'WITHDRAWN' && item['loc_n'] == 'WITHDRAWN'
         end
 
         def online_item?(item)

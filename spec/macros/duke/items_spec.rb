@@ -44,6 +44,17 @@ describe MarcToArgot::Macros::Duke::Items do
       )
     end
 
+    it 'ensures a record does not include "lost" or "withdrawn" items' do
+      rec = make_rec
+      rec << MARC::DataField.new('940', '0', ' ', %w[b LOSTITEM], %w[c DULLOST])
+      rec << MARC::DataField.new('940', '0', ' ', %w[b WITHDRAWN], %w[c WITHDRAWN])
+      rec << MARC::DataField.new('940', '0', ' ', %w[b PERKN], %w[c PK])
+      result = run_traject_on_record('duke', rec)
+      expect(result['items']).not_to(
+        match(/LOSTITEM/)
+      )
+    end
+
     it 'correctly sets holding "status" to "Unavailable" when "Unavailable" is the only "x" (subfield) value present' do
       rec = make_rec
       rec << MARC::DataField.new('852', '0', ' ',

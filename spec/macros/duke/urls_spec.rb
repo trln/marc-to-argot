@@ -47,6 +47,12 @@ describe MarcToArgot::Macros::Duke::Urls do
           eq('fulltext')
         )
       end
+
+      it 'has a url that includes \'duke.userservices.exlibrisgroup\'' do
+        expect(JSON.parse(url_943_journal_case['url'][0])['href']).to(
+          include('duke.userservices.exlibrisgroup')
+        )
+      end
     end
   end
 end

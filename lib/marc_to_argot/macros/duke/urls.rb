@@ -10,7 +10,8 @@ module MarcToArgot
 
           # rubocop:disable Metrics/BlockLength
           lambda do |rec, acc, ctx|
-            Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, spec, extractor|
+            # process MARC 943 fields
+            Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, _spec, _extractor|
               url = {}
 
               raw_href = collect_and_join_subfield_values(field, 'd').strip
@@ -34,7 +35,18 @@ module MarcToArgot
               acc << url.to_json
             end
 
-            Traject::MarcExtractor.cached('856uy3').each_matching_line(rec) do |field, spec, extractor|
+            # Then process MARC 944 fields
+            Traject::MarcExtractor.cached('944').each_matching_line(rec) do |field, _spec, _extractor|
+              url = {}
+              collection_id = collect_and_join_subfield_values(field, 'b').strip
+              next if collection_id.empty?
+
+              url[:href] = "#{soa_url_conf['soa_url']}#{collection_id}"
+              acc << url.to_json
+            end
+
+            # Finally, process any holdover (from ALEPH) MARC 856 fields
+            Traject::MarcExtractor.cached('856uy3').each_matching_line(rec) do |field, _spec, _extractor|
               url = {}
               raw_href = url_href_value(field)
 

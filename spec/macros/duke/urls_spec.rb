@@ -12,6 +12,11 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:link_in_subfield_a) { run_traject_json('duke', 'link_in_subfield_a', 'xml') }
   let(:url_943_journal_case) { run_traject_json('duke', 'url_943_journal_case', 'xml') }
   let(:url_943_newspaper_case) { run_traject_json('duke', 'url_943_newspaper_case', 'xml') }
+  let(:soa_url) {
+    data_dir = File.expand_path('../../../lib/data',File.dirname(__FILE__))
+    soa_url_conf = YAML.load_file("#{data_dir}/duke/soa_url_conf.yml")
+    soa_url_conf['soa_url']
+  }
 
   context 'Duke' do
 
@@ -41,6 +46,12 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
+    context 'SOA URL:' do
+      it 'correctly loads the :soa_url from YAML' do
+        expect(soa_url).to be
+      end
+    end
+
     context '943 fields:' do
       it 'sets url_type to \'fulltext\' when processing 943 fields' do
         expect(JSON.parse(url_943_journal_case['url'][0])['type']).to(
@@ -52,6 +63,17 @@ describe MarcToArgot::Macros::Duke::Urls do
         expect(JSON.parse(url_943_journal_case['url'][0])['href']).to(
           include('duke.userservices.exlibrisgroup')
         )
+      end
+    end
+
+    context '944 fields:' do
+      it 'correctly detects a MARC 944 field and sets the URL correctly' do
+        rec = make_rec
+        rec << MARC::DataField.new('944', '0', ' ',
+                                  ['b', '61903212100008501']
+                                  )
+        result = run_traject_on_record('duke', rec)
+        expect(JSON.parse(result['url'][0])['href']).to start_with(soa_url).and end_with('61903212100008501')
       end
     end
   end

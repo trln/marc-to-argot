@@ -54,5 +54,18 @@ describe MarcToArgot::Macros::Duke::Urls do
         )
       end
     end
+
+    context '944 fields:' do
+      it 'correctly detects a MARC 944 field and sets the URL correctly' do
+        rec = make_rec
+        rec << MARC::DataField.new('944', '0', ' ',
+                                  ['b', '61903212100008501']
+                                  )
+        result = run_traject_on_record('duke', rec)
+        expect(JSON.parse(result['url'][0])['href']).to(
+          include('61903212100008501')
+        )
+      end
+    end
   end
 end

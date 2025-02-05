@@ -38,7 +38,7 @@ module MarcToArgot
             # Then process MARC 944 fields
             Traject::MarcExtractor.cached('944').each_matching_line(rec) do |field, _spec, _extractor|
               url = {}
-              collection_id = collect_and_join_subfield_values(field, 'b')
+              collection_id = collect_and_join_subfield_values(field, 'b').strip
               next if collection_id.empty?
 
               url[:href] = "#{soa_url_conf['soa_url']}#{collection_id}"

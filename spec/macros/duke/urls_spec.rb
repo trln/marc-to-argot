@@ -64,6 +64,15 @@ describe MarcToArgot::Macros::Duke::Urls do
           include('duke.userservices.exlibrisgroup')
         )
       end
+
+      it 'does not include a URL when 943$s has a value of "Not Available"' do
+        rec = make_rec
+        rec << MARC::DataField.new('943', '0', ' ',
+                                  ['s', 'Not Available']
+                                  )
+        result = run_traject_on_record('duke', rec)
+        expect(result['url']).not_to be
+      end
     end
 
     context '944 fields:' do

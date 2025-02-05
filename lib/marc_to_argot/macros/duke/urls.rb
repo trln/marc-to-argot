@@ -14,6 +14,10 @@ module MarcToArgot
             Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, _spec, _extractor|
               url = {}
 
+              # inspect 943$s, moving to the next field if s = "Not Available"
+              label = collect_and_join_subfield_values(field, 's').strip
+              next if label.downcase.eql? 'not available'
+
               raw_href = collect_and_join_subfield_values(field, 'd').strip
 
               # UPDATE: We don't really care about the 'q' subfield in

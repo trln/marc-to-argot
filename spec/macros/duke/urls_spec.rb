@@ -46,6 +46,18 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
+    context 'DUKE-BMCK-13-intelligize' do
+      it 'does not set restricted=false when the URL includes app.intelligize.com' do
+        rec = make_rec
+        rec << MARC::DataField.new('856', '4', '0',
+                                  ['y', 'Law School users click here to access Intelligize'],
+                                  ['u', 'apps.intelligize.com']
+                                  )
+        result = run_traject_on_record('duke', rec)
+        expect(JSON.parse(result['url'][0])['restricted']).to be_nil
+      end
+    end
+
     context 'SOA URL:' do
       it 'correctly loads the :soa_url from YAML' do
         expect(soa_url).to be

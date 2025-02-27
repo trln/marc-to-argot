@@ -47,7 +47,7 @@ describe MarcToArgot::Macros::Duke::Urls do
     end
 
     context 'DUKE-BMCK-13-intelligize' do
-      it 'does not set restricted=false when the URL includes app.intelligize.com' do
+      it 'does not set restricted=false when the URL includes apps.intelligize.com' do
         rec = make_rec
         rec << MARC::DataField.new('856', '4', '0',
                                   ['y', 'Law School users click here to access Intelligize'],

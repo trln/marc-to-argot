@@ -19,7 +19,6 @@ describe MarcToArgot::Macros::Duke::Urls do
   }
 
   context 'Duke' do
-
     it 'restricted is not set to false for fulltext URLs with the proxy prefix' do
       expect(JSON.parse(restricted['url'][0])['restricted']).to be_nil
     end
@@ -46,8 +45,16 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
+    context 'DUKE-AK-285-add-url' do
+      it 'does not set \'restricted: false\' when the URL includes \'duke.userservices.exlibrisgroup.com\'' do
+        expect(JSON.parse(url_943_journal_case['url'][0])['restricted']).to(
+          eq('false')
+        )
+      end
+    end
+
     context 'DUKE-BMCK-13-intelligize' do
-      it 'does not set restricted=false when the URL includes apps.intelligize.com' do
+      it 'does not set \'restricted: false\' when the URL includes \'apps.intelligize.com\'' do
         rec = make_rec
         rec << MARC::DataField.new('856', '4', '0',
                                   ['y', 'Law School users click here to access Intelligize'],

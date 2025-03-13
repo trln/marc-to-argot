@@ -35,7 +35,7 @@ module MarcToArgot
               url[:href] = "#{soa_url_conf['soa_url']}#{portfolio_id}" if journal_resource_types.include?(resource_type)
 
               url[:note] = resource_note unless resource_note.empty?
-              url[:restricted] = 'false' unless url_restricted?(raw_href, 'fulltext')
+              url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
               acc << url.to_json
             end
 

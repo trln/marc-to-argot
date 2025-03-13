@@ -45,11 +45,11 @@ describe MarcToArgot::Macros::Duke::Urls do
       )
     end
 
-    context 'DUKE-AK-285-add-url' do
+    # For this spec, we're using a record that represents a 943 field from Alma
+    # that has a 'raw href' from the 943d, and is expected to be changed.
+    context 'DUKE-AK-285-add-duke-userservices' do
       it 'does not set \'restricted: false\' when the URL includes \'duke.userservices.exlibrisgroup.com\'' do
-        expect(JSON.parse(url_943_journal_case['url'][0])['restricted']).to(
-          eq('false')
-        )
+        expect(JSON.parse(url_943_journal_case['url'][0])['restricted']).to be_nil
       end
     end
 

@@ -87,15 +87,17 @@ describe MarcToArgot::Macros::Duke::Urls do
         expect(parsed_url['href']).to match("#{soa_url}#{parsed_url['portfolio_id']}")
       end
 
-      # The above tests ensures that whatever value exists in 'soa_url'
-      # matches correctly -- no need to hardcode URL strings here.
-      #
-      # DEPRECATED
-      # it 'has a url that includes \'duke.userservices.exlibrisgroup\'' do
-      #  expect(JSON.parse(url_943_journal_case['url'][0])['href']).to(
-      #    include('duke.userservices.exlibrisgroup')
-      #  )
-      # end
+      it 'changes the URL href correctly when original URL include \'na05-psb\'' do
+        rec = make_rec
+        rec << MARC::DataField.new('943', '0', ' ',
+                                  ['d', 'https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53880950230008501&amp;Force_direct=true'],
+                                  ['q', 'JOURNAL'],
+                                  ['8', '53880950230008501']
+                                  )
+        result = run_traject_on_record('duke', rec)
+        parsed_url = JSON.parse(result['url'][0])
+        expect(parsed_url['href']).to match("#{soa_url}#{parsed_url['portfolio_id']}")
+      end
 
       it 'does not set \'restricted: false\'' do
         parsed_url = JSON.parse(url_943_journal_case['url'][0])
@@ -120,10 +122,22 @@ describe MarcToArgot::Macros::Duke::Urls do
       end
     end
 
-    context 'MARC 943 where url:href is not replaced' do
+    context 'MARC 943 where url:href is not replaced (BOOKS)' do
       it 'does not set href value to soa_url for e-resources that are not JOURNAL or NEWSPAPER' do
         parsed_url = JSON.parse(url_943_non_journal_case['url'][0])
         expect(parsed_url['href']).not_to include(soa_url)
+      end
+
+      it 'does not change the URL href correctly when original URL include \'na05-psb\'' do
+        rec = make_rec
+        rec << MARC::DataField.new('943', '0', ' ',
+                                  ['d', 'https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53896265270008501&amp;Force_direct=true'],
+                                  ['q', 'BOOK'],
+                                  ['8', '53896265270008501']
+                                  )
+        result = run_traject_on_record('duke', rec)
+        parsed_url = JSON.parse(result['url'][0])
+        expect(parsed_url['href']).not_to match("#{soa_url}#{parsed_url['portfolio_id']}")
       end
 
       it 'does not set \'restricted: false\' for e-resources that are not JOURNAL or NEWSPAPER' do

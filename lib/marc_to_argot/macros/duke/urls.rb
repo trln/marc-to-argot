@@ -29,7 +29,9 @@ module MarcToArgot
               resource_note = collect_and_join_subfield_values(field, 'y').strip
 
               # For Duke's use of Alma, all 943 fields are considered 'fulltext'
+              url[:marc_source] = '943'
               url[:type] = 'fulltext'
+              url[:portfolio_id] = portfolio_id
               url[:href] = add_duke_proxy(raw_href, 'fulltext', ctx)
               # override the HREF when subfield 'q' (resource_type) is JOURNAL or NEWSPAPER
               url[:href] = "#{soa_url_conf['soa_url']}#{portfolio_id}" if journal_resource_types.include?(resource_type)
@@ -60,6 +62,7 @@ module MarcToArgot
               text = url_text(field)
               note = url_note(field)
 
+              url[:marc_source] = '856'
               url[:href] = add_duke_proxy(raw_href, type, ctx)
               url[:type] = type
               url[:text] = text unless text.empty?

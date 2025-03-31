@@ -122,6 +122,13 @@ describe MarcToArgot::Macros::Duke::Urls do
       end
     end
 
+    context 'DUKE-AK-427-ignore-date' do
+      it 'includes \'ignore_date_coverage=true\' for JOURNAL e-resource' do
+        parsed_url = JSON.parse(url_943_journal_case['url'][0])
+        expect(parsed_url['href']).to include('ignore_date_coverage=true')
+      end
+    end
+
     context 'MARC 943 where url:href is not replaced (BOOKS)' do
       it 'does not set href value to soa_url for e-resources that are not JOURNAL or NEWSPAPER' do
         parsed_url = JSON.parse(url_943_non_journal_case['url'][0])

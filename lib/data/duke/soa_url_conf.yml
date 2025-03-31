@@ -2,4 +2,4 @@
 # A portfolio or collection id will be appended to the URL below
 # see lib/marc_to_argot/macros/duke/urls.rb
 # -----
-soa_url: https://duke.userservices.exlibrisgroup.com/discovery/openurl?institution=01DUKE_INST&vid=01DUKE_INST:Services&rfr_id=info:sid%2Fsummon&rft_dat=ie%3D
+soa_url: https://duke.userservices.exlibrisgroup.com/discovery/openurl?institution=01DUKE_INST&u.ignore_date_coverage=true&vid=01DUKE_INST:Services&rfr_id=info:sid%2Fsummon&rft_dat=ie%3D

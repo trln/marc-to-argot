@@ -60,7 +60,7 @@ describe MarcToArgot::Macros::Duke::Urls do
     end
 
     context 'DUKE-AK-445-use-941-fields' do
-      context 'Record with one(1) journal resource' do
+      context 'Record with one(1) journal portfolio' do
         it "sets a 'url' with an href that includes 'soa_url'" do
           parsed_url = JSON.parse(iee_journal_rec['url'][0])
           expect(parsed_url['href']).to include(soa_url)
@@ -73,7 +73,7 @@ describe MarcToArgot::Macros::Duke::Urls do
         end
       end
 
-      context 'Record with only multiple journal items' do
+      context 'Record with only multiple journal portfolios' do
         it 'sets a `url` with an href that includes `soa_url`' do
           parsed_url = JSON.parse(iee_multi_journals_rec['url'][0])
           expect(parsed_url['href']).to include(soa_url)
@@ -86,14 +86,14 @@ describe MarcToArgot::Macros::Duke::Urls do
         end
       end
 
-      context 'Record with one(1) non-journal resource' do
+      context 'Record with one(1) non-journal portfolio' do
         it 'sets a `url` href that uses value from 943d field' do
           parsed_url = JSON.parse(iee_nonjournal_rec['url'][0])
           expect(parsed_url['href']).not_to include(soa_url)
         end
       end
 
-      context 'Record with only multiple non-journal items' do
+      context 'Record with only multiple non-journal portfolios' do
         it 'sets a `url` href that includes `soa_url`' do
           parsed_url = JSON.parse(iee_multi_nonjournals_rec['url'][0])
           expect(parsed_url['href']).to include(soa_url)
@@ -106,7 +106,7 @@ describe MarcToArgot::Macros::Duke::Urls do
         end
       end
 
-      context 'Record with multiple online items, one journal' do
+      context 'Record with multiple online portfolios, one journal' do
         it 'sets a `url` href that includes `soa_url`' do
           parsed_url = JSON.parse(iee_multi_items_one_journal_rec['url'][0])
           expect(parsed_url['href']).to include(soa_url)

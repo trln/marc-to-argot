@@ -2,6 +2,7 @@ require 'spec_helper'
 
 # include MarcToArgot::Macros::Duke::Urls
 
+# rubocop:disable Layout/LineLength
 describe MarcToArgot::Macros::Duke::Urls do
   include described_class
 
@@ -13,12 +14,18 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:url_943_journal_case) { run_traject_json('duke', 'url_943_journal_case', 'xml') }
   let(:url_943_newspaper_case) { run_traject_json('duke', 'url_943_newspaper_case', 'xml') }
   let(:url_943_non_journal_case) { run_traject_json('duke', 'url_943_non_journal_case', 'xml') }
+  let(:iee_nonjournal_rec) { run_traject_json('duke', 'iee_records_with_941_field/one_nonjournal', 'xml') }
+  let(:iee_journal_rec) { run_traject_json('duke', 'iee_records_with_941_field/one_journal', 'xml') }
+  let(:iee_multi_nonjournals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_nonjournals', 'xml') }
+  let(:iee_multi_items_one_journal_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_items_one_journal', 'xml') }
+  let(:iee_multi_journals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_journals', 'xml') }
   let(:soa_url) {
     data_dir = File.expand_path('../../../lib/data',File.dirname(__FILE__))
     soa_url_conf = YAML.load_file("#{data_dir}/duke/soa_url_conf.yml")
     soa_url_conf['soa_url']
   }
 
+  # rubocop:disable Metrics/BlockLength
   context 'Duke' do
     it 'restricted is not set to false for fulltext URLs with the proxy prefix' do
       expect(JSON.parse(restricted['url'][0])['restricted']).to be_nil
@@ -49,6 +56,67 @@ describe MarcToArgot::Macros::Duke::Urls do
     context 'SOA URL:' do
       it 'correctly loads the :soa_url from YAML' do
         expect(soa_url).to be
+      end
+    end
+
+    context 'DUKE-AK-445-use-941-fields' do
+      context 'Record with one(1) journal resource' do
+        it "sets a 'url' with an href that includes 'soa_url'" do
+          parsed_url = JSON.parse(iee_journal_rec['url'][0])
+          expect(parsed_url['href']).to include(soa_url)
+        end
+
+        it "expects 'url' to include the record's ALMA number" do
+          alma_number = JSON.parse(iee_journal_rec['alma_number']).to_s
+          parsed_url = JSON.parse(iee_journal_rec['url'][0])
+          expect(parsed_url['href']).to include(alma_number)
+        end
+      end
+
+      context 'Record with only multiple journal items' do
+        it 'sets a `url` with an href that includes `soa_url`' do
+          parsed_url = JSON.parse(iee_multi_journals_rec['url'][0])
+          expect(parsed_url['href']).to include(soa_url)
+        end
+
+        it "expects `url` to include the record's ALMA number" do
+          alma_number = JSON.parse(iee_multi_journals_rec['alma_number']).to_s
+          parsed_url = JSON.parse(iee_multi_journals_rec['url'][0])
+          expect(parsed_url['href']).to include(alma_number)
+        end
+      end
+
+      context 'Record with one(1) non-journal resource' do
+        it 'sets a `url` href that does not include `soa_url`' do
+          parsed_url = JSON.parse(iee_nonjournal_rec['url'][0])
+          expect(parsed_url['href']).not_to include(soa_url)
+        end
+      end
+
+      context 'Record with only multiple non-journal items' do
+        it 'sets a `url` href that includes `soa_url`' do
+          parsed_url = JSON.parse(iee_multi_nonjournals_rec['url'][0])
+          expect(parsed_url['href']).to include(soa_url)
+        end
+
+        it "expects `url` to include the record's ALMA number" do
+          alma_number = JSON.parse(iee_multi_nonjournals_rec['alma_number']).to_s
+          parsed_url = JSON.parse(iee_multi_nonjournals_rec['url'][0])
+          expect(parsed_url['href']).to include(alma_number)
+        end
+      end
+
+      context 'Record with multiple online items, one journal' do
+        it 'sets a `url` href that includes `soa_url`' do
+          parsed_url = JSON.parse(iee_multi_items_one_journal_rec['url'][0])
+          expect(parsed_url['href']).to include(soa_url)
+        end
+
+        it "expects `url` to include the record's ALMA number" do
+          alma_number = JSON.parse(iee_multi_items_one_journal_rec['alma_number']).to_s
+          parsed_url = JSON.parse(iee_multi_items_one_journal_rec['url'][0])
+          expect(parsed_url['href']).to include(alma_number)
+        end
       end
     end
 
@@ -175,4 +243,6 @@ describe MarcToArgot::Macros::Duke::Urls do
       end
     end
   end
+  # rubocop:enable Metrics/BlockLength
 end
+# rubocop:enable Layout/LineLength

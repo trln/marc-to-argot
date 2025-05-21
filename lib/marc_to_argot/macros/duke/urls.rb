@@ -1,53 +1,67 @@
 module MarcToArgot
   module Macros
     module Duke
+      # Add a 'url' hash to the data "accumalator"
       module Urls
         def url
           data_dir = File.expand_path('../../../data',File.dirname(__FILE__))
           soa_url_conf = YAML.load_file("#{data_dir}/duke/soa_url_conf.yml")
-
-          journal_resource_types = %w[JOURNAL NEWSPAPER]
+          journal_resource_types = YAML.load_file("#{data_dir}/duke/valid_journal_types.yml")
 
           # rubocop:disable Metrics/BlockLength
           lambda do |rec, acc, ctx|
             # process MARC 943 fields
-            Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, _spec, _extractor|
-              url = {}
 
+            # create some preliminary variables we'll use when 
+            # 943 fields are present.
+            alma_number = alma_number_for_rec(rec)
+            ctx.output_hash['alma_number'] = alma_number unless alma_number.nil?
+
+            journals_present = false
+            resources = []
+
+            # iterate over all known 943 fields, tripping the "journals_present" flag when a
+            # 'journal_resource_type' is detected
+            Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, _spec, _extractor|
               # inspect 943$s, moving to the next field if s = "Not Available"
               label = collect_and_join_subfield_values(field, 's').strip
               next if label.downcase.eql? 'not available'
 
-              raw_href = collect_and_join_subfield_values(field, 'd').strip
-
-              # UPDATE: We don't really care about the 'q' subfield in
-              # determining 'url_type', but
-              # we DO care about it when deciding with URL to use
               resource_type = collect_and_join_subfield_values(field, 'q')
+              resources << field
+              journal_resource_types.include?(resource_type) && journals_present = true
+            end
 
-              portfolio_id = collect_and_join_subfield_values(field, '8')
-              resource_note = collect_and_join_subfield_values(field, 'y').strip
-
-              # For Duke's use of Alma, all 943 fields are considered 'fulltext'
+            # We found 943 field(s) and we'll craft the url here.
+            url = {}
+            unless resources.empty?
               url[:marc_source] = '943'
               url[:type] = 'fulltext'
-              url[:portfolio_id] = portfolio_id
-              url[:href] = add_duke_proxy(raw_href, 'fulltext', ctx)
-              # override the HREF when subfield 'q' (resource_type) is JOURNAL or NEWSPAPER
-              url[:href] = "#{soa_url_conf['soa_url']}#{portfolio_id}" if journal_resource_types.include?(resource_type)
-
-              url[:note] = resource_note unless resource_note.empty?
+              if resources.length > 1
+                # create one url entry using soa_url with alma_number appended
+                url[:href] = "#{soa_url_conf['soa_url']}#{alma_number}"
+              else
+                url[:href] = "#{soa_url_conf['soa_url']}#{alma_number}" if journals_present
+                unless journals_present
+                  raw_href = collect_and_join_subfield_values(resources.first, 'd').strip
+                  url[:href] = add_duke_proxy(raw_href, 'fulltext', ctx)
+                end
+              end
               url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
               acc << url.to_json
             end
+            ## end of MARC 943 section ##
 
-            # Then process MARC 944 fields
+            # There are no 943 fields present when 944 fields exists
+            # I believe this is a rare case, but must be accounted for.
             Traject::MarcExtractor.cached('944').each_matching_line(rec) do |field, _spec, _extractor|
               url = {}
               collection_id = collect_and_join_subfield_values(field, 'b').strip
               next if collection_id.empty?
 
               url[:href] = "#{soa_url_conf['soa_url']}#{collection_id}"
+              url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
+              url[:marc_source] = '944'
               acc << url.to_json
             end
 
@@ -72,6 +86,16 @@ module MarcToArgot
             end
           end
           # rubocop:enable Metrics/BlockLength
+        end
+
+        # soa_url_for_rec - assemble an soa_url for "rec" from its 941e subfield
+        def alma_number_for_rec(rec)
+          iee_subfield = rec.fields.select { |f|
+            next unless f.tag == '941'
+
+            !f.subfields.select { |s| s.code == 'e' }.empty?
+          }.first
+          collect_and_join_subfield_values(iee_subfield, 'e') unless iee_subfield.nil?
         end
 
         def url_href_value(field)

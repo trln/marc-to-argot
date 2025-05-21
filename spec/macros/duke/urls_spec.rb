@@ -87,7 +87,7 @@ describe MarcToArgot::Macros::Duke::Urls do
       end
 
       context 'Record with one(1) non-journal resource' do
-        it 'sets a `url` href that does not include `soa_url`' do
+        it 'sets a `url` href that uses value from 943d field' do
           parsed_url = JSON.parse(iee_nonjournal_rec['url'][0])
           expect(parsed_url['href']).not_to include(soa_url)
         end

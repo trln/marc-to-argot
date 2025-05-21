@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier></identifier>
+    </header>
+    <leader>03417nam  2200625 i 4500</leader>
+    <controlfield tag="001">99119524608108501</controlfield>
+    <controlfield tag="005">20250514012627.0</controlfield>
+    <controlfield tag="006">m     o  d |      </controlfield>
+    <controlfield tag="007">cr#-n---------</controlfield>
+    <controlfield tag="008">150227t19981998kyuab   ob    001 0 ger d</controlfield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">0-8131-0950-7</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">0-8131-4909-6</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CKB)3710000000333954</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EBL)1915085</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(SSID)ssj0001402861</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(PQKBManifestationID)11788819</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(PQKBTitleCode)TC0001402861</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(PQKBWorkID)11365041</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(PQKB)11587046</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)605571236</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(MdBmJHUP)muse43864</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(Au-PeEL)EBL1915085</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CaPaEBR)ebr11011682</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CaONFJC)MIL690842</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(MiAaPQ)EBC1915085</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EXLCZ)993710000000333954</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">MiAaPQ</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="e">rda</subfield>
+      <subfield code="e">pn</subfield>
+      <subfield code="c">MiAaPQ</subfield>
+      <subfield code="d">MiAaPQ</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">eng</subfield>
+    </datafield>
+    <datafield tag="043" ind1=" " ind2=" ">
+      <subfield code="a">n-uso--</subfield>
+    </datafield>
+    <datafield tag="050" ind1=" " ind2="4">
+      <subfield code="a">PR129.I7</subfield>
+      <subfield code="b">.T768 1998</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2=" ">
+      <subfield code="a">820.9/32417/09031</subfield>
+      <subfield code="2">21</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">Trotter, Joe William,</subfield>
+      <subfield code="c">Jr.,</subfield>
+      <subfield code="d">1945-</subfield>
+      <subfield code="e">author.</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">River Jordan :</subfield>
+      <subfield code="b">African American urban life in the Ohio Valley /</subfield>
+      <subfield code="c">Joe William Trotter, Jr.</subfield>
+    </datafield>
+    <datafield tag="250" ind1=" " ind2=" ">
+      <subfield code="a">1st ed.</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Lexington, Kentucky :</subfield>
+      <subfield code="b">The University Press of Kentucky,</subfield>
+      <subfield code="c">1998.</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="4">
+      <subfield code="c">©1998</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 online resource (217 p.)</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">Ohio River Valley Series</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Description based upon print version of record.</subfield>
+    </datafield>
+    <datafield tag="505" ind1="0" ind2=" ">
+      <subfield code="a">Cover; Title; Copyright; Contents; List of Figures, Maps, and Tables; Series Foreword; Preface; Part 1: African Americans and the Expansion of Commercial and Early Industrial Capitalism, 1790-1860; 1. African Americans, Work, and the &#34;&#34;Urban Frontier&#34;&#34;; 2. Disfranchisement, Racial Inequality, and the Rise of Black Urban Communities; Part 2: Emancipation, Race, and Industrialization, 1861-1914; 3. Occupational Change and the Emergence of a Free Black Proletariat; 4. The Persistence of Racial and Class Inequality: The Limits of Citizenship</subfield>
+    </datafield>
+    <datafield tag="505" ind1="8" ind2=" ">
+      <subfield code="a">Part 3: African Americans in the Industrial Age, 1915-19455. The Expansion of the Black Urban-Industrial Working Class; 6. African Americans, Depression, and World War II; Epilogue; Notes; Bibliography; Index; A; B; C; D; E; F; G; H; I; J; K; L; M; N; O; P; R; S; T; U; V; W; Y</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+      <subfield code="a">Since the nineteenth century, the Ohio River has represented a great divide for African Americans. It provided a passage to freedom along the underground railroad, and during the industrial age, it was a boundary between the Jim Crow South and the urban North. The Ohio became known as the &#34;&#34;River Jordan,&#34;&#34; symbolizing the path to the promised land. In the urban centers of Pittsburgh, Cincinnati, Louisville, and Evansville, blacks faced racial hostility from outside their immediate neighborhoods as well as class, color, and cultural fragmentation among themselves. Yet despite these pressures, A</subfield>
+    </datafield>
+    <datafield tag="546" ind1=" " ind2=" ">
+      <subfield code="a">English</subfield>
+    </datafield>
+    <datafield tag="504" ind1=" " ind2=" ">
+      <subfield code="a">Includes bibliographical references and index.</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Description based on print version record.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">African Americans</subfield>
+      <subfield code="z">Ohio River Valley</subfield>
+      <subfield code="x">Social conditions.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">City and town life</subfield>
+      <subfield code="z">Ohio River Valley</subfield>
+      <subfield code="x">History.</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="0">
+      <subfield code="a">Ohio River Valley</subfield>
+      <subfield code="x">Social conditions.</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="0">
+      <subfield code="a">Ohio River Valley</subfield>
+      <subfield code="x">Race relations.</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="z">1-322-59560-7</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="z">0-8131-2065-9</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Ohio River Valley series.</subfield>
+    </datafield>
+    <datafield tag="906" ind1=" " ind2=" ">
+      <subfield code="a">BOOK</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2015-01-31 15:58:14 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-07-10 12:11:58 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-28 16:58:32 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53891453500008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62884286050008501</subfield>
+      <subfield code="i">System</subfield>
+      <subfield code="b">EZProxy</subfield>
+      <subfield code="n">2024-06-28 20:58:32</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119524608108501</subfield>
+      <subfield code="c">false</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">BOOK</subfield>
+      <subfield code="8">53891453500008501</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51891418140008501</subfield>
+    </datafield>
+  </record>
+</collection>

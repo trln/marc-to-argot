@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier></identifier>
+    </header>
+    <leader>02500cas a2200565 a 4500</leader>
+    <controlfield tag="001">99119345153208501</controlfield>
+    <controlfield tag="005">20250421213018.0</controlfield>
+    <controlfield tag="006">m     o  d        </controlfield>
+    <controlfield tag="007">cr |||||||||||</controlfield>
+    <controlfield tag="008">130108c20089999pl qr p o     0   b0pol c</controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">  2013238345</subfield>
+    </datafield>
+    <datafield tag="022" ind1=" " ind2=" ">
+      <subfield code="a">1899-5772</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)ZDB2647239-9</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)823689216</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CONSER)  2013238345</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CKB)2670000000263889</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EXLCZ)992670000000263889</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">HUA</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="e">pn</subfield>
+      <subfield code="c">HUA</subfield>
+      <subfield code="d">OCLCO</subfield>
+      <subfield code="d">CNCGM</subfield>
+      <subfield code="d">IUL</subfield>
+      <subfield code="d">OCLCF</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">OCLCO</subfield>
+      <subfield code="d">CUS</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">UAB</subfield>
+      <subfield code="d">BWN</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">AUD</subfield>
+      <subfield code="d">DLC</subfield>
+    </datafield>
+    <datafield tag="041" ind1="0" ind2=" ">
+      <subfield code="a">pol</subfield>
+      <subfield code="a">eng</subfield>
+    </datafield>
+    <datafield tag="042" ind1=" " ind2=" ">
+      <subfield code="a">pcc</subfield>
+    </datafield>
+    <datafield tag="050" ind1="0" ind2="0">
+      <subfield code="a">HD1401</subfield>
+    </datafield>
+    <datafield tag="210" ind1="0" ind2=" ">
+      <subfield code="a">J. Agribus. Rural Dev.</subfield>
+      <subfield code="b">(Online)</subfield>
+    </datafield>
+    <datafield tag="222" ind1=" " ind2="0">
+      <subfield code="a">Journal of Agribusiness and Rural Development</subfield>
+      <subfield code="b">(Online)</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">Journal of agribusiness and rural development.</subfield>
+    </datafield>
+    <datafield tag="246" ind1="1" ind2=" ">
+      <subfield code="a">JARD</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">Poznań :</subfield>
+      <subfield code="b">Uniwersytet Przyrodniczy w Poznaniu</subfield>
+    </datafield>
+    <datafield tag="260" ind1="3" ind2=" ">
+      <subfield code="3">&lt;2024-&gt; :</subfield>
+      <subfield code="a">[Warsaw, Poland] :</subfield>
+      <subfield code="b">Sciendo, de Gruyter Poland</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">Online resource</subfield>
+    </datafield>
+    <datafield tag="310" ind1=" " ind2=" ">
+      <subfield code="a">Quarterly</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="362" ind1="1" ind2=" ">
+      <subfield code="a">Began in 2008.</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Refereed/Peer-reviewed</subfield>
+    </datafield>
+    <datafield tag="506" ind1="0" ind2=" ">
+      <subfield code="f">Unrestricted online access</subfield>
+      <subfield code="2">star</subfield>
+    </datafield>
+    <datafield tag="515" ind1=" " ind2=" ">
+      <subfield code="a">Some earlier issues bear also whole numbering of earlier title.</subfield>
+    </datafield>
+    <datafield tag="515" ind1=" " ind2=" ">
+      <subfield code="a">Beginning in 2024, issue enumeration stops starting over with each volume and instead issues only have volume enumeration, with four volumes being released each year.</subfield>
+    </datafield>
+    <datafield tag="546" ind1=" " ind2=" ">
+      <subfield code="a">Polish and English.</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Description based on: Zeszyt 1 (7) 2008; title from PDF header (publisher&#39;s Web site, viewed March 15, 2013).</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Latest issue consulted: Volume 75 (February 2025) (Sciendo website, viewed April 21, 2025).</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Agriculture</subfield>
+      <subfield code="x">Economic aspects</subfield>
+      <subfield code="v">Periodicals.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Agriculture</subfield>
+      <subfield code="x">Finance</subfield>
+      <subfield code="v">Periodicals.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Rural development</subfield>
+      <subfield code="x">Economic aspects.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">Agriculture</subfield>
+      <subfield code="x">Economic aspects.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00801415</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">Agriculture</subfield>
+      <subfield code="x">Finance.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00801513</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">Rural development</subfield>
+      <subfield code="x">Economic aspects.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01101507</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Periodicals.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411641</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="x">1899-5241</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">Uniwersytet Przyrodniczy w Poznaniu,</subfield>
+      <subfield code="e">issuing body.</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DLC</subfield>
+    </datafield>
+    <datafield tag="906" ind1=" " ind2=" ">
+      <subfield code="a">JOURNAL</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2012-11-18 06:42:58 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-08-19 11:24:06 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-08-19 11:24:06 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53911857610008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797757350008501</subfield>
+      <subfield code="i">System</subfield>
+      <subfield code="b">EZProxy</subfield>
+      <subfield code="n">2024-08-19 15:24:06</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119345153208501</subfield>
+      <subfield code="l"> Available from 2014 until 2015.</subfield>
+      <subfield code="c">false</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53911857610008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2025-05-15 03:48:08 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-25 23:28:59 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53832770730008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797755010008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">EZProxy</subfield>
+      <subfield code="n">2024-06-26 03:28:59</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119345153208501</subfield>
+      <subfield code="l"> Available from 2008.</subfield>
+      <subfield code="c">false</subfield>
+      <subfield code="s">Not Available</subfield>
+      <subfield code="8">53832770730008501</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51832763370008501</subfield>
+    </datafield>
+  </record>
+</collection>

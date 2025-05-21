@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier></identifier>
+    </header>
+    <leader>01850nas--2200529-a-4500</leader>
+    <controlfield tag="001">99119298448108501</controlfield>
+    <controlfield tag="005">20250514151318.0</controlfield>
+    <controlfield tag="006">m-----o--d--------</controlfield>
+    <controlfield tag="007">cr-mnu||||||||</controlfield>
+    <controlfield tag="008">990729c19169999ne-qr-p-o-----0---a0eng-c</controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">  2004233057</subfield>
+    </datafield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="a">2019538-2</subfield>
+      <subfield code="2">DE-600</subfield>
+    </datafield>
+    <datafield tag="022" ind1=" " ind2=" ">
+      <subfield code="a">1572-8668</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)ZDB2019538-2</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)41975962</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CKB)954925427244</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CONSER)--2004233057</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EXLCZ)99954925427244</subfield>
+    </datafield>
+    <datafield tag="042" ind1=" " ind2=" ">
+      <subfield code="a">pcc</subfield>
+    </datafield>
+    <datafield tag="050" ind1="0" ind2="0">
+      <subfield code="a">PB5</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2="4">
+      <subfield code="a">410</subfield>
+    </datafield>
+    <datafield tag="210" ind1="0" ind2=" ">
+      <subfield code="a">Neophilologus</subfield>
+      <subfield code="b">(Dordr., Online)</subfield>
+    </datafield>
+    <datafield tag="222" ind1=" " ind2="0">
+      <subfield code="a">Neophilologus</subfield>
+      <subfield code="b">(Dordrecht. Online)</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">Neophilologus.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">Dordrecht :</subfield>
+      <subfield code="b">Kluwer Academic Publishers,</subfield>
+      <subfield code="c">1916-</subfield>
+    </datafield>
+    <datafield tag="260" ind1="3" ind2=" ">
+      <subfield code="3">&lt;2005-&gt; :</subfield>
+      <subfield code="a">[Dordrecht] :</subfield>
+      <subfield code="b">Springer Netherlands</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 online resource</subfield>
+    </datafield>
+    <datafield tag="310" ind1=" " ind2=" ">
+      <subfield code="a">Four no. a year</subfield>
+    </datafield>
+    <datafield tag="321" ind1=" " ind2=" ">
+      <subfield code="a">Annual</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="362" ind1="1" ind2=" ">
+      <subfield code="a">Began with: Vol. 1, issue 1 (Dec. 1916).</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Refereed/Peer-reviewed</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">&#34;An international journal of modern and mediaeval language and literature.&#34;</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Description based on: Vol. 1, issue 1 (Dec. 1916); title from journal contents page (SpringerLink, viewed Oct. 28, 2009).</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Latest issue consulted: Vol. 103, issue 4 (Oct. 2019) (SpringerLink, viewed Feb. 15, 2020).</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Philology, Modern</subfield>
+      <subfield code="v">Periodicals.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="6">
+      <subfield code="a">Philologie</subfield>
+      <subfield code="x">Périodiques.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="6">
+      <subfield code="a">Philologie médiévale</subfield>
+      <subfield code="x">Périodiques.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">Philology, Modern.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01060716</subfield>
+    </datafield>
+    <datafield tag="650" ind1="1" ind2="7">
+      <subfield code="a">Filologie.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Periodicals.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411641</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Periodicals.</subfield>
+      <subfield code="2">lcgft</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">Filologia moderna</subfield>
+      <subfield code="2">thub</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Revistes electròniques</subfield>
+      <subfield code="2">thub</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="x">0028-2677</subfield>
+    </datafield>
+    <datafield tag="906" ind1=" " ind2=" ">
+      <subfield code="a">JOURNAL</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2012-02-25 17:34:56 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-26 04:13:21 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-26 04:13:18 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53860112330008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797750520008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 08:13:18</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1916 volume: 1 issue: 1 until 10/31/1996 volume: 80 issue: 4.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53860112330008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-26 01:52:47 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-26 01:52:38 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53846006580008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797763140008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 05:52:38</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1997 volume: 81 issue: 1.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53846006580008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-11-29 00:50:10 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-25 20:53:25 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53816202110008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797748480008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 00:53:25</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1997 volume: 81 issue: 1. Most recent 1 year(s) not available.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53816202110008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-11-26 19:56:05 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-26 02:15:17 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53848244080008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797740470008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 06:15:17</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1997 volume: 81 issue: 1. Most recent 1 year(s) not available.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53848244080008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-11-26 19:08:46 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-26 03:00:21 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53853033570008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797741340008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 07:00:21</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1997 volume: 81 issue: 1. Most recent 1 year(s) not available.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53853033570008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-25 23:42:18 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-25 23:42:16 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53834156090008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797733160008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 03:42:16</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1946 until 10/31/2000. Available from 01/01/1915 until 12/31/1944.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53834156090008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-26 00:36:43 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-26 00:36:27 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53838932180008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797751330008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 04:36:27</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/2010 until 12/31/2021.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53838932180008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-25 21:52:01 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-25 21:51:56 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53822313050008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797733340008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 01:51:56</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/28/2008. Most recent 1 year(s) not available.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53822313050008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2025-01-29 13:45:33 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2025-01-29 13:45:33 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53931863210008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62928587880008501</subfield>
+      <subfield code="i">System</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2025-01-29 18:45:33</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119298448108501</subfield>
+      <subfield code="l"> Available from 01/01/1997 volume: 81 issue: 1. Most recent 1 year(s) not available.</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">JOURNAL</subfield>
+      <subfield code="8">53931863210008501</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51816207050008501</subfield>
+    </datafield>
+  </record>
+</collection>

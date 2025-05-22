@@ -45,6 +45,12 @@ module MarcToArgot
                 unless journals_present
                   raw_href = collect_and_join_subfield_values(resources.first, 'd').strip
                   url[:href] = add_duke_proxy(raw_href, 'fulltext', ctx)
+
+                  # we'll capture this 'raw_href' and use it in the rspec that 
+                  # verifies the the value in 943d is included in url['href']
+                  tmp_hash = {}
+                  tmp_hash['raw_href'] = raw_href
+                  ctx.output_hash['943d'] = tmp_hash.to_json
                 end
               end
               url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')

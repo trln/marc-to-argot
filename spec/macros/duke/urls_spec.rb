@@ -88,8 +88,20 @@ describe MarcToArgot::Macros::Duke::Urls do
 
       context 'Record with one(1) non-journal portfolio' do
         it 'sets a `url` href that uses value from 943d field' do
+
+          # see lib/marc_to_argot/macro/duke/urls.rb
+          # we use ctx.output_hash['943d'] to capture the 'raw_href'
+          # value from a non-journal 943 (portfolio) field 
+          #
+          # this happens only when we have one(1) 943 portfolio field
+          # and it's a non-journal
+          parsed_943d = JSON.parse(iee_nonjournal_rec['943d'])
+
           parsed_url = JSON.parse(iee_nonjournal_rec['url'][0])
-          expect(parsed_url['href']).not_to include(soa_url)
+
+          # we don't want to use 'eq' here due to the possiblity of 
+          # url['href'] starting with our proxy prefix string.
+          expect(parsed_url['href']).to include(parsed_943d['raw_href'])
         end
       end
 

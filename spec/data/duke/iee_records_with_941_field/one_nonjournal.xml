@@ -171,6 +171,9 @@
     <datafield tag="906" ind1=" " ind2=" ">
       <subfield code="a">BOOK</subfield>
     </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51891418140008501</subfield>
+    </datafield>
     <datafield tag="942" ind1=" " ind2=" ">
       <subfield code="d">2015-01-31 15:58:14 US/Eastern</subfield>
     </datafield>
@@ -189,9 +192,6 @@
       <subfield code="s">Available</subfield>
       <subfield code="q">BOOK</subfield>
       <subfield code="8">53891453500008501</subfield>
-    </datafield>
-    <datafield tag="941" ind1=" " ind2=" ">
-      <subfield code="e">51891418140008501</subfield>
     </datafield>
   </record>
 </collection>

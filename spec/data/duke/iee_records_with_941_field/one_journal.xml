@@ -179,6 +179,9 @@
     <datafield tag="906" ind1=" " ind2=" ">
       <subfield code="a">JOURNAL</subfield>
     </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51832763370008501</subfield>
+    </datafield>
     <datafield tag="942" ind1=" " ind2=" ">
       <subfield code="d">2012-11-18 06:42:58 US/Eastern</subfield>
     </datafield>
@@ -214,9 +217,6 @@
       <subfield code="c">false</subfield>
       <subfield code="s">Not Available</subfield>
       <subfield code="8">53832770730008501</subfield>
-    </datafield>
-    <datafield tag="941" ind1=" " ind2=" ">
-      <subfield code="e">51832763370008501</subfield>
     </datafield>
   </record>
 </collection>

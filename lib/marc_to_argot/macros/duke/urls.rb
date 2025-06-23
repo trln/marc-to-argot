@@ -20,7 +20,9 @@ module MarcToArgot
             journals_present = false
             resources = []
 
-            # iterate over all known 943 fields, tripping the "journals_present" flag when a
+            ctx.clipboard[:urls_sent] ||= []
+            
+            # iterate over all known 943 fields, flipping the "journals_present" flag when a
             # 'journal_resource_type' is detected
             Traject::MarcExtractor.cached('943').each_matching_line(rec) do |field, _spec, _extractor|
               # inspect 943$s, moving to the next field if s = "Not Available"
@@ -31,10 +33,9 @@ module MarcToArgot
               resources << field
               journal_resource_types.include?(resource_type) && journals_present = true
             end
-
             # We found 943 field(s) and we'll craft the url here.
-            url = {}
             unless resources.empty?
+              url = {}
               url[:marc_source] = '943'
               url[:type] = 'fulltext'
               if resources.length > 1
@@ -49,40 +50,58 @@ module MarcToArgot
               end
               url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
               acc << url.to_json
+              ctx.clipboard[:urls_sent] << url
             end
             ## end of MARC 943 section ##
 
+            # (Jun 18, 2025 -- AK-492)
+            # For these next two logic blocks, we need to verify the "url" is empty
+            # Attempt to create a "url" entry from either the (newer) 944 field 
+            # or the (older -- ALEPH) 856 field
+            # -------
+
             # There are no 943 fields present when 944 fields exists
             # I believe this is a rare case, but must be accounted for.
-            Traject::MarcExtractor.cached('944').each_matching_line(rec) do |field, _spec, _extractor|
-              url = {}
-              collection_id = collect_and_join_subfield_values(field, 'b').strip
-              next if collection_id.empty?
+            if ctx.clipboard[:urls_sent].empty?
+              Traject::MarcExtractor.cached('944').each_matching_line(rec) do |field, _spec, _extractor|
+                collection_id = collect_and_join_subfield_values(field, 'b').strip
+                next if collection_id.empty?
 
-              url[:href] = "#{soa_url_conf['soa_url']}#{collection_id}"
-              url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
-              url[:marc_source] = '944'
-              acc << url.to_json
+                url = {}
+                url[:href] = "#{soa_url_conf['soa_url']}#{collection_id}"
+                url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
+                url[:marc_source] = '944'
+                acc << url.to_json
+                ctx.clipboard[:urls_sent] << url
+              end
             end
 
             # Finally, process any holdover (from ALEPH) MARC 856 fields
-            Traject::MarcExtractor.cached('856uy3').each_matching_line(rec) do |field, _spec, _extractor|
-              url = {}
-              raw_href = url_href_value(field)
+            # ONLY WHEN urls_sent is (still) empty -- meaning, the record didn't have 
+            # any 943 fields or (rare case) 944 fields
+            if ctx.clipboard[:urls_sent].empty?
+              Traject::MarcExtractor.cached('856uy3').each_matching_line(rec) do |field, _spec, _extractor|
+                url = {}
+                raw_href = url_href_value(field)
 
-              next if raw_href.nil? || raw_href.empty?
+                next if raw_href.nil? || raw_href.empty?
 
-              type = url_type_value(field)
-              text = url_text(field)
-              note = url_note(field)
+                type = url_type_value(field)
+                text = url_text(field)
+                note = url_note(field)
 
-              url[:marc_source] = '856'
-              url[:href] = add_duke_proxy(raw_href, type, ctx)
-              url[:type] = type
-              url[:text] = text unless text.empty?
-              url[:note] = note unless note.empty?
-              url[:restricted] = 'false' unless url_restricted?(raw_href, type)
-              acc << url.to_json
+                url[:marc_source] = '856'
+                url[:href] = add_duke_proxy(raw_href, type, ctx)
+                url[:type] = type
+                url[:text] = text unless text.empty?
+                url[:note] = note unless note.empty?
+                url[:restricted] = 'false' unless url_restricted?(raw_href, type)
+                acc << url.to_json
+
+                # If a record has any 856 data fields, it will only have (or should have)
+                # one occurence -- so with that, we'll break this loop
+                break
+              end
             end
           end
           # rubocop:enable Metrics/BlockLength

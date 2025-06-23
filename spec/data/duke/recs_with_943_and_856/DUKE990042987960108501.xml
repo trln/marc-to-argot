@@ -1,0 +1,161 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier></identifier>
+    </header>
+    <leader>02990nam a2200421   4500</leader>
+    <controlfield tag="005">20240726004347.0</controlfield>
+    <controlfield tag="006">m        d        </controlfield>
+    <controlfield tag="007">cr cnu---unuuu</controlfield>
+    <controlfield tag="008">080812s2007    nju     sf    001 0 eng d</controlfield>
+    <controlfield tag="001">990042987960108501</controlfield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9781435659278</subfield>
+      <subfield code="q">electronic book</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">1435659279</subfield>
+      <subfield code="q">electronic book</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NcD)004298796DUK01</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">NT</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">NT</subfield>
+    </datafield>
+    <datafield tag="050" ind1="1" ind2="4">
+      <subfield code="a">HF5383</subfield>
+      <subfield code="b">.E47894 2007eb</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2="4">
+      <subfield code="a">650.14/2</subfield>
+      <subfield code="2">22</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">Enelow, Wendy,</subfield>
+      <subfield code="d">1956-</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n97018860</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">No-nonsense cover letters :</subfield>
+      <subfield code="b">the essential guide to creating attention-grabbing cover letters that get interviews &amp; job offers /</subfield>
+      <subfield code="c">Wendy S. Enelow, Arnold G. Boldt.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">Franklin Lakes, NJ :</subfield>
+      <subfield code="b">Career Press,</subfield>
+      <subfield code="c">c2007.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">240 p. ;</subfield>
+      <subfield code="c">26 cm.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="340" ind1=" " ind2=" ">
+      <subfield code="g">polychrome</subfield>
+      <subfield code="2">rdacc</subfield>
+      <subfield code="0">http://rdaregistry.info/termList/RDAColourContent/1003</subfield>
+    </datafield>
+    <datafield tag="347" ind1=" " ind2=" ">
+      <subfield code="a">text file</subfield>
+      <subfield code="2">rdaft</subfield>
+      <subfield code="0">http://rdaregistry.info/termList/fileType/1002</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Includes index.</subfield>
+    </datafield>
+    <datafield tag="505" ind1="0" ind2=" ">
+      <subfield code="a">Simple truths about cover letters -- Simple truths about cover letter formatting and design -- Simple truths about writing your cover letters -- Simple truths about electronic cover letters -- Cover letters for accounting, banking and finance careers -- Cover letters for administrative and clerical careers -- Cover letters for government careers -- Cover letters for health care and social service careers -- Cover letters for hospitality and food service careers -- Cover letters for human resources &amp; training careers -- Cover letters for law enforcement and legal careers -- Cover letters for manufacturing and operations careers -- Cover letters for sales, marketing and customer service careers -- Cover letters for skilled trades careers -- Cover letters for teaching and education careers -- Cover letters for technology, science and engineering careers.</subfield>
+    </datafield>
+    <datafield tag="504" ind1=" " ind2=" ">
+      <subfield code="a">Includes bibliographical references and index.</subfield>
+    </datafield>
+    <datafield tag="533" ind1=" " ind2=" ">
+      <subfield code="a">Electronic reproduction.</subfield>
+      <subfield code="b">Boulder, Colo. :</subfield>
+      <subfield code="c">NetLibrary,</subfield>
+      <subfield code="d">2008.</subfield>
+      <subfield code="n">Available via World Wide Web.</subfield>
+      <subfield code="n">Access may be limited to NetLibrary affiliated libraries.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Cover letters</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh86002455</subfield>
+      <subfield code="v">Handbooks, manuals, etc.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh99001300</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Applications for positions</subfield>
+      <subfield code="v">Handbooks, manuals, etc.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh2009115144</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Electronic books.</subfield>
+      <subfield code="2">local</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Boldt, Arnold G.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n2006028261</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">NetLibrary, Inc.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/no99080690</subfield>
+    </datafield>
+    <datafield tag="776" ind1="1" ind2=" ">
+      <subfield code="c">Original</subfield>
+      <subfield code="z">1564149064</subfield>
+      <subfield code="z">9781564149060</subfield>
+      <subfield code="w">(DLC) 2006022101</subfield>
+      <subfield code="w">(OCoLC)70407670</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="y">get it@Duke</subfield>
+      <subfield code="u">https://login.proxy.lib.duke.edu/login?url=http://www.netLibrary.com/urlapi.asp?action=summary&amp;v=1&amp;bookid=231088</subfield>
+    </datafield>
+    <datafield tag="901" ind1=" " ind2=" ">
+      <subfield code="a">ocn243597103</subfield>
+    </datafield>
+    <datafield tag="946" ind1="1" ind2=" ">
+      <subfield code="b">20100317</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2024-06-23 19:55:10 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-25 06:18:23 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">static</subfield>
+      <subfield code="j">2024-06-25 06:18:19 US/Eastern</subfield>
+      <subfield code="d">https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53781931120008501&amp;Force_direct=true</subfield>
+      <subfield code="g">52781931130008501</subfield>
+      <subfield code="i">P2E_JOB</subfield>
+      <subfield code="b">EZProxy</subfield>
+      <subfield code="n">2024-06-25 10:18:19</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=990042987960108501</subfield>
+      <subfield code="c">false</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">BOOK</subfield>
+      <subfield code="h">https://login.proxy.lib.duke.edu/login?url=http://www.netLibrary.com/urlapi.asp?action=summary%26v=1%26bookid=231088</subfield>
+      <subfield code="8">53781931120008501</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51781931140008501</subfield>
+    </datafield>
+  </record>
+</collection>

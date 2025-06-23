@@ -1,0 +1,160 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier></identifier>
+    </header>
+    <leader>02096nam a2200433   4500</leader>
+    <controlfield tag="005">20240726034315.0</controlfield>
+    <controlfield tag="006">m        d        </controlfield>
+    <controlfield tag="007">cr cnu   unuuu</controlfield>
+    <controlfield tag="008">070711s2006    nyua    sb    001 0 eng d</controlfield>
+    <controlfield tag="001">990039415900108501</controlfield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9780230625815</subfield>
+      <subfield code="q">electronic book</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">0230625819</subfield>
+      <subfield code="q">electronic book</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="z">9780230002203</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NcD)003941590DUK01</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">NT</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="c">NT</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">YDXCP</subfield>
+    </datafield>
+    <datafield tag="050" ind1="1" ind2="4">
+      <subfield code="a">HD60</subfield>
+      <subfield code="b">.H3935 2006eb</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2="4">
+      <subfield code="a">658.4/08</subfield>
+      <subfield code="2">22</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">Hawkins, David E.,</subfield>
+      <subfield code="d">1947-</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/n2004101181</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Corporate social responsibility :</subfield>
+      <subfield code="b">balancing tomorrow&#39;s sustainability and today&#39;s profitability /</subfield>
+      <subfield code="c">David E. Hawkins.</subfield>
+    </datafield>
+    <datafield tag="260" ind1=" " ind2=" ">
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Palgrave Macmillan,</subfield>
+      <subfield code="c">2006.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 online resource (xvi, 280 p.) :</subfield>
+      <subfield code="b">ill.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="340" ind1=" " ind2=" ">
+      <subfield code="g">polychrome</subfield>
+      <subfield code="2">rdacc</subfield>
+      <subfield code="0">http://rdaregistry.info/termList/RDAColourContent/1003</subfield>
+    </datafield>
+    <datafield tag="347" ind1=" " ind2=" ">
+      <subfield code="a">text file</subfield>
+      <subfield code="2">rdaft</subfield>
+      <subfield code="0">http://rdaregistry.info/termList/fileType/1002</subfield>
+    </datafield>
+    <datafield tag="504" ind1=" " ind2=" ">
+      <subfield code="a">Includes bibliographical references (p. 275) and index.</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Description based on print version record.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Social responsibility of business.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh90005735</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Strategic planning.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh85128511</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Sustainable development.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/subjects/sh92005743</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Electronic books.</subfield>
+      <subfield code="2">lcgft</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">NetLibrary, Inc.</subfield>
+      <subfield code="0">https://id.loc.gov/authorities/names/no99080690</subfield>
+    </datafield>
+    <datafield tag="710" ind1="2" ind2=" ">
+      <subfield code="a">Ford Library E-Book Collection.</subfield>
+      <subfield code="5">NcD-B</subfield>
+    </datafield>
+    <datafield tag="776" ind1="0" ind2="8">
+      <subfield code="i">Print version:</subfield>
+      <subfield code="a">Hawkins, David E., 1947-</subfield>
+      <subfield code="t">Corporate social responsibility</subfield>
+      <subfield code="d">New York : Palgrave Macmillan, 2006.</subfield>
+      <subfield code="z">023000220X</subfield>
+      <subfield code="w">(DLC) 2006043159</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="y">get it@Duke</subfield>
+      <subfield code="u">https://login.proxy.lib.duke.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=194592</subfield>
+    </datafield>
+    <datafield tag="901" ind1=" " ind2=" ">
+      <subfield code="a">ocn154306618</subfield>
+    </datafield>
+    <datafield tag="915" ind1=" " ind2=" ">
+      <subfield code="a">eBooks on EBSCOhost</subfield>
+    </datafield>
+    <datafield tag="946" ind1="1" ind2=" ">
+      <subfield code="b">20080221</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2024-06-23 17:49:20 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-25 07:10:43 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">static</subfield>
+      <subfield code="j">2024-06-25 07:10:37 US/Eastern</subfield>
+      <subfield code="d">https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53790082260008501&amp;Force_direct=true</subfield>
+      <subfield code="g">52790082270008501</subfield>
+      <subfield code="i">P2E_JOB</subfield>
+      <subfield code="b">EZProxy</subfield>
+      <subfield code="n">2024-06-25 11:10:37</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=990039415900108501</subfield>
+      <subfield code="c">false</subfield>
+      <subfield code="s">Available</subfield>
+      <subfield code="q">BOOK</subfield>
+      <subfield code="h">https://login.proxy.lib.duke.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true%26scope=site%26db=nlebk%26db=nlabk%26AN=194592</subfield>
+      <subfield code="8">53790082260008501</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">51790082280008501</subfield>
+    </datafield>
+  </record>
+</collection>

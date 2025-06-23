@@ -19,6 +19,10 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:iee_multi_nonjournals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_nonjournals', 'xml') }
   let(:iee_multi_items_one_journal_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_items_one_journal', 'xml') }
   let(:iee_multi_journals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_journals', 'xml') }
+
+  # [DUKE] Jira AK-492
+  let(:rec_with_943_856_a) { run_traject_json('duke', 'recs_with_943_and_856/DUKE990039415900108501', 'xml') }
+
   let(:soa_url) {
     data_dir = File.expand_path('../../../lib/data',File.dirname(__FILE__))
     soa_url_conf = YAML.load_file("#{data_dir}/duke/soa_url_conf.yml")
@@ -117,6 +121,24 @@ describe MarcToArgot::Macros::Duke::Urls do
           parsed_url = JSON.parse(iee_multi_items_one_journal_rec['url'][0])
           expect(parsed_url['href']).to include(alma_number)
         end
+      end
+    end
+
+    context 'DUKE-AK-492' do
+      it 'expects `url` to have one element when a 943 and 856 field are present' do
+        expect(rec_with_943_856_a['url'].length).to(
+          eq(1)
+        )
+      end
+
+      it 'expects 856 field to be processed as `url` in the absence of a 943 field' do
+        rec = make_rec
+        rec << MARC::DataField.new('856', '4', ' ',
+                                  ['y', 'get it @Duke'],
+                                  ['u', 'https://login.proxy.lib.duke.edu/login?url=http://www.netLibrary.com/urlapi.asp?action=summary&amp;v=1&amp;bookid=231088'])
+
+        result = run_traject_on_record('duke', rec)
+        expect(result['url'].length).to be(1)
       end
     end
 

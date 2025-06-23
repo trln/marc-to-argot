@@ -30,7 +30,7 @@ describe MarcToArgot::Macros::Duke do
      %w[fulltext other]]
   end
 
-  it 'extracts link note' do
+  it 'extracts link note', skip: '856 fields (ALEPH) no longer expected' do
     indexer.instance_eval do
       to_field 'url', url
     end
@@ -50,7 +50,7 @@ describe MarcToArgot::Macros::Duke do
     expect(url_943_online['access_type']).to include("Online")
   end
 
-  it 'extracts link text' do
+  it 'extracts link text', skip: '856 fields (ALEPH) no longer expected' do
     indexer.instance_eval do
       to_field 'url', url
     end
@@ -65,7 +65,7 @@ describe MarcToArgot::Macros::Duke do
     end
   end
 
-  it 'extracts link type' do
+  it 'extracts link type', skip: '856 fields (ALEPH) no longer expected' do
     indexer.instance_eval do
       to_field 'url', url
     end

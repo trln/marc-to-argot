@@ -100,7 +100,7 @@ module MarcToArgot
 
                 # If a record has any 856 data fields, it will only have (or should have)
                 # one occurence -- so with that, we'll break this loop
-                break
+                #break
               end
             end
           end

@@ -40,7 +40,7 @@ module MarcToArgot
               url[:type] = 'fulltext'
               if resources.length > 1
                 # create one url entry using soa_url with identifier appended
-                identifier = alma_number || extract_portfolio_id_from_resources(resources)
+                identifier = (alma_number && !alma_number.empty?) ? alma_number : extract_portfolio_id_from_resources(resources)
                 if identifier
                   url[:href] = "#{soa_url_conf['soa_url']}#{identifier}"
                   # Add portfolio_id to the URL data for test compatibility
@@ -48,7 +48,7 @@ module MarcToArgot
                 end
               else
                 if journals_present
-                  identifier = alma_number || extract_portfolio_id_from_resource(resources.first)
+                  identifier = (alma_number && !alma_number.empty?) ? alma_number : extract_portfolio_id_from_resource(resources.first)
                   if identifier
                     url[:href] = "#{soa_url_conf['soa_url']}#{identifier}"
                     # Add portfolio_id to the URL data for test compatibility

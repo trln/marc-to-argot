@@ -19,6 +19,8 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:iee_multi_nonjournals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_nonjournals', 'xml') }
   let(:iee_multi_items_one_journal_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_items_one_journal', 'xml') }
   let(:iee_multi_journals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_journals', 'xml') }
+  let(:no_alma_number) { run_traject_json('duke', 'no_alma_number', 'xml') }
+  let(:empty_alma_number) { run_traject_json('duke', 'empty_alma_number', 'xml') }
 
   # [DUKE] Jira AK-492
   let(:rec_with_943_856_a) { run_traject_json('duke', 'recs_with_943_and_856/DUKE990039415900108501', 'xml') }
@@ -139,6 +141,24 @@ describe MarcToArgot::Macros::Duke::Urls do
 
         result = run_traject_on_record('duke', rec)
         expect(result['url'].length).to be(1)
+      end
+    end
+
+    context 'when 941$e Alma number is missing but portfolio id is in 943$d' do
+      it 'sets the URL href using the portfolio id of the first resource' do
+        parsed_url = JSON.parse(no_alma_number['url'][0])
+        expect(parsed_url['href']).to include(soa_url)
+        expect(parsed_url['href']).not_to include('53866778090008501')
+        expect(parsed_url['href']).to end_with('53885032860008501')
+      end
+    end
+
+    context 'when 941$e Alma number is empty but portfolio id is in 943$d' do
+      it 'sets the URL href using the portfolio id of the first resource' do
+        parsed_url = JSON.parse(empty_alma_number['url'][0])
+        expect(parsed_url['href']).to include(soa_url)
+        expect(parsed_url['href']).not_to include('53866778090008501')
+        expect(parsed_url['href']).to end_with('53885032860008501')
       end
     end
 

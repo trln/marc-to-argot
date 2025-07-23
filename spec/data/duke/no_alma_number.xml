@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <header status="">
+      <identifier/>
+    </header>
+    <leader>06270nam  2200577 i 4500</leader>
+    <controlfield tag="001">99119448069208501</controlfield>
+    <controlfield tag="005">20230126215352.0</controlfield>
+    <controlfield tag="006">m     o  d |      </controlfield>
+    <controlfield tag="007">cr -n---------</controlfield>
+    <controlfield tag="008">200123s2015    be      ob    100 0 fre d</controlfield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">2-8066-3346-X</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CKB)3790000000018711</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EBL)2085918</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(MiAaPQ)EBC2085918</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(Au-PeEL)EBL2085918</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)914152622</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EXLCZ)993790000000018711</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">MiAaPQ</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="e">rda</subfield>
+      <subfield code="e">pn</subfield>
+      <subfield code="c">MiAaPQ</subfield>
+      <subfield code="d">MiAaPQ</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">fre</subfield>
+      <subfield code="a">eng</subfield>
+    </datafield>
+    <datafield tag="050" ind1=" " ind2="4">
+      <subfield code="a">BL624</subfield>
+      <subfield code="b">.T453 2015</subfield>
+    </datafield>
+    <datafield tag="082" ind1="0" ind2=" ">
+      <subfield code="a">200.71</subfield>
+      <subfield code="2">14</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">The&#x301;oriser le spirituel :</subfield>
+      <subfield code="b">approches : transdisciplinaires de la spiritualite&#x301; dans les arts et les sciences = Theorizing the spiritual : transdisciplinary approaches to spirituality in the arts and sciences /</subfield>
+      <subfield code="c">sous la direction de Claude Le Fustec, Franc&#x327;oise &amp; Jeff Storey.</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Bruxelles ;</subfield>
+      <subfield code="a">Fernelmont, [Belgium] :</subfield>
+      <subfield code="b">EME,</subfield>
+      <subfield code="c">2015.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 online resource (419 p.)</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="490" ind1="0" ind2=" ">
+      <subfield code="a">Esthe&#x301;tique et spiritualit</subfield>
+    </datafield>
+    <datafield tag="505" ind1="0" ind2=" ">
+      <subfield code="a">Dans la collection &#xAB; Esthe&#x301;tique et Spiritualite&#x301; &#xBB; :; Introduction; PREMIE&#x300;RE PARTIE - The&#x301;oriser le spirituel ? Theorizing Spirituality?; Quid le spirituel ? Ge&#x301;ne&#x301;alogie et tour d'horizon euro-ame&#x301;ricain; Ge&#x301;ne&#x301;alogie sommaire du spirituel; Radiographie du spirituel &#xAB; post-soixante-huitard &#xBB;; Conclusion; Bibliographie; Sources disponibles sur internet :; Le renouveau du dialogue entre science, the&#x301;ologie et spiritualite&#x301; en occident; La question du sens a&#x300; partir des sciences; Le physicien &#xAB; a&#x300; la recherche du re&#x301;el &#xBB;; Conse&#x301;quences sur la question du rapport cerveau (corps)-esprit</subfield>
+    </datafield>
+    <datafield tag="505" ind1="8" ind2=" ">
+      <subfield code="a">Le myste&#x300;re du connai&#x302;treLa the&#x301;ologie chre&#x301;tienne et le Myste&#x300;re; L'incomple&#x301;tude, une chance pour le physicien et le the&#x301;ologien; Bibliographie; Agnosticisme, Science et &#xAB; e&#x301;motion cosmique &#xBB; : quelques jalons de W.K Clifford a&#x300; Andre&#x301; Comte-Sponville; Quelques e&#x301;le&#x301;ments biographiques; Agnosticisme et &#xAB; e&#x301;motion cosmique &#xBB;; Origines partiellement religieuses de l'agnosticisme; Un mysticisme se&#x301;cularise&#x301; fonde&#x301; sur les connaissances scientifi-ques les plus re&#x301;centes; Bibliographie</subfield>
+    </datafield>
+    <datafield tag="505" ind1="8" ind2=" ">
+      <subfield code="a">Recent Behaviourist Approaches to Mystical Experience and the Heuristic Function of the Humanities in the Future Study of SpiritualityBibliography; Electronic Reference Sources; The&#x301;oriser le spirituel en sciences humaines : l'apport de la the&#x301;orie politique par l'e&#x301;tude des &#xAB; politiques spirituelles &#xBB;; L'alliance d'un certain abord du religieux et de la de&#x301;mocratie; Des re&#x301;formateurs politiques et religieux pluralistes; Pour une transformation personnelle et socie&#x301;tale; Pragmatisme et actions bivalentes; De l'he&#x301;te&#x301;ronomie religieuse a&#x300; l'autonomie spirituelle... et politique ?</subfield>
+    </datafield>
+    <datafield tag="505" ind1="8" ind2=" ">
+      <subfield code="a">Conclusion : un objet a&#x300; (re)de&#x301;couvrir pour les sciences humaines ?Bibliographie; La spiritualite&#x301; dans la pense&#x301;e d'Arthur Schopenhauer : pour une re&#x301;conciliation entre science, art et me&#x301;taphysique; Une spiritualite&#x301; sans Dieu; Le besoin me&#x301;taphysique de l'humanite&#x301;; L'art comme sommet de la connaissance de soi de la Volonte&#x301;; Pour une re&#x301;conciliation entre science, art et me&#x301;taphysique; Conclusion; Bibliographie; DEUXIE&#x300;ME PARTIE - Le spirituel dans les pratiques acade&#x301;miques : questions spe&#x301;cifiques Spirituality and Academia : a few instances of practical study</subfield>
+    </datafield>
+    <datafield tag="505" ind1="8" ind2=" ">
+      <subfield code="a">Le spirituel a&#x300; la lumie&#x300;re de l'anthropologie du croire Contrastes et re&#x301;sonancesConscience d'une expe&#x301;rience relationnelle; Le spirituel encha&#x302;sse&#x301; dans le politique; Croire et savoir, ou la que&#x302;te de sens; L'expe&#x301;rience spirituelle : oscillation entre de&#x301;sirs et doutes; E&#x301;panouissement personnel et justice sociale; Conclusion; Bibliographie; Sources disponibles sur internet :; La pratique cre&#x301;atrice comme voie de connaissance : Art et recherche spirituelle; La recherche en pratique artistique; Art et voyance; Pense&#x301;e herme&#x301;tique et pense&#x301;e scientifique; L'art comme mode du spirituel</subfield>
+    </datafield>
+    <datafield tag="505" ind1="8" ind2=" ">
+      <subfield code="a">Recherche spirituelle par l'art</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+      <subfield code="a"> Que veut-on dire quand on parle de &#xAB; spiritualite&#x301; &#xBB; ? Quelle diffe&#x301;rence entre &#xAB; spirituel &#xBB;, &#xAB; religieux &#xBB; et &#xAB; mystique &#xBB; ? C'est pour tenter de re&#x301;pondre a&#x300; ces questions en s'efforc&#x327;ant de de&#x301;finir les contours du &#xAB; spirituel &#xBB; - comblant ainsi une lacune majeure dans le discours lai&#x308;c acade&#x301;mique franc&#x327;ais - qu'une trentaine de chercheurs se sont re&#x301;unis a&#x300; l'Universite&#x301; de Nice Sophia-Antipolis en juin 2011. Issus de champs disciplinaires tre&#x300;s divers, allant de la the&#x301;ologie a&#x300; la chanson populaire en passant par la physique quantique, la science politique, la philosophie, la litte&#x301;rature et l'art, c</subfield>
+    </datafield>
+    <datafield tag="546" ind1=" " ind2=" ">
+      <subfield code="a">Texts in French or English.</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Papers presented at a conference held at l'Universite&#x301; de Nice Sophia-Antipolis in June 2011.</subfield>
+    </datafield>
+    <datafield tag="504" ind1=" " ind2=" ">
+      <subfield code="a">Includes bibliographical references.</subfield>
+    </datafield>
+    <datafield tag="588" ind1=" " ind2=" ">
+      <subfield code="a">Description based on print version record.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Spirituality</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Spirituality</subfield>
+      <subfield code="x">Study and teaching</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Spirituality</subfield>
+      <subfield code="x">Social aspects</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Arts and religion</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Spirituality in art</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Spirituality in literature</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Spirituality in music</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Le Fustec, Claude,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Storey, Franc&#x327;oise,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="a">Storey, Jeff,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+    <datafield tag="776" ind1=" " ind2=" ">
+      <subfield code="z">2-8066-3345-1</subfield>
+    </datafield>
+    <datafield tag="776" ind1=" " ind2=" ">
+      <subfield code="z">2-8066-3328-1</subfield>
+    </datafield>
+    <datafield tag="906" ind1=" " ind2=" ">
+      <subfield code="a">BOOK</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2015-08-08 15:46:39 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-07-10 09:12:30 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-28 12:20:17 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53885032860008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62884286050008501</subfield>
+      <subfield code="i">System</subfield>
+      <subfield code="b">EZProxy</subfield>
+      <subfield code="n">2024-06-28 16:20:17</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119448069208501</subfield>
+      <subfield code="c">false</subfield>
+      <subfield code="q">BOOK</subfield>
+      <subfield code="8">53885032860008501</subfield>
+    </datafield>
+    <datafield tag="943" ind1=" " ind2=" ">
+      <subfield code="m">2024-06-26 05:33:42 US/Eastern</subfield>
+      <subfield code="k">System</subfield>
+      <subfield code="a">param</subfield>
+      <subfield code="j">2024-06-26 05:33:32 US/Eastern</subfield>
+      <subfield code="d">https://na05.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&amp;portfolio_pid=53866778090008501&amp;Force_direct=true</subfield>
+      <subfield code="g">62797763620008501</subfield>
+      <subfield code="i">NON_SFX_CREATOR</subfield>
+      <subfield code="b">DEFAULT</subfield>
+      <subfield code="n">2024-06-26 09:33:32</subfield>
+      <subfield code="u">e?u.ignore_date_coverage=true&amp;rft.mms_id=99119448069208501</subfield>
+      <subfield code="c">true</subfield>
+      <subfield code="q">BOOK</subfield>
+      <subfield code="8">53866778090008501</subfield>
+    </datafield>
+  </record>
+</collection>

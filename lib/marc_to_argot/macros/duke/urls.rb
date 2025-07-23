@@ -39,18 +39,33 @@ module MarcToArgot
               url[:marc_source] = '943'
               url[:type] = 'fulltext'
               if resources.length > 1
-                # create one url entry using soa_url with alma_number appended
-                url[:href] = "#{soa_url_conf['soa_url']}#{alma_number}"
+                # create one url entry using soa_url with identifier appended
+                identifier = (alma_number && !alma_number.empty?) ? alma_number : extract_portfolio_id_from_resources(resources)
+                if identifier
+                  url[:href] = "#{soa_url_conf['soa_url']}#{identifier}"
+                  # Add portfolio_id to the URL data for test compatibility
+                  url[:portfolio_id] = identifier unless alma_number
+                end
               else
-                url[:href] = "#{soa_url_conf['soa_url']}#{alma_number}" if journals_present
-                unless journals_present
+                if journals_present
+                  identifier = (alma_number && !alma_number.empty?) ? alma_number : extract_portfolio_id_from_resource(resources.first)
+                  if identifier
+                    url[:href] = "#{soa_url_conf['soa_url']}#{identifier}"
+                    # Add portfolio_id to the URL data for test compatibility
+                    url[:portfolio_id] = identifier unless alma_number
+                  end
+                else
                   raw_href = collect_and_join_subfield_values(resources.first, 'd').strip
                   url[:href] = add_duke_proxy(raw_href, 'fulltext', ctx)
                 end
               end
-              url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
-              acc << url.to_json
-              ctx.clipboard[:urls_sent] << url
+              
+              # Only add the URL if we have a valid href
+              if url[:href] && !url[:href].empty?
+                url[:restricted] = 'false' unless url_restricted?(url[:href], 'fulltext')
+                acc << url.to_json
+                ctx.clipboard[:urls_sent] << url
+              end
             end
             ## end of MARC 943 section ##
 
@@ -115,6 +130,28 @@ module MarcToArgot
             !f.subfields.select { |s| s.code == 'e' }.empty?
           }.first
           collect_and_join_subfield_values(iee_subfield, 'e') unless iee_subfield.nil?
+        end
+
+        # Extract portfolio ID from a single MARC 943 resource field
+        # This is used as a fallback when alma_number is not available
+        def extract_portfolio_id_from_resource(resource)
+          raw_href = collect_and_join_subfield_values(resource, 'd').strip
+          return nil if raw_href.empty?
+          
+          # Extract portfolio_pid from URLs like:
+          # https://na05-psb.alma.exlibrisgroup.com/view/uresolver/01DUKE_INST/openurl?u.ignore_date_coverage=true&portfolio_pid=53896265270008501&Force_direct=true
+          match = raw_href.match(/portfolio_pid=([^&]+)/)
+          match ? match[1] : nil
+        end
+
+        # Extract portfolio ID from multiple MARC 943 resource fields
+        # For multiple resources, use the first available portfolio ID
+        def extract_portfolio_id_from_resources(resources)
+          resources.each do |resource|
+            portfolio_id = extract_portfolio_id_from_resource(resource)
+            return portfolio_id if portfolio_id
+          end
+          nil
         end
 
         def url_href_value(field)

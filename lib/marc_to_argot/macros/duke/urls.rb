@@ -112,10 +112,6 @@ module MarcToArgot
                 url[:note] = note unless note.empty?
                 url[:restricted] = 'false' unless url_restricted?(raw_href, type)
                 acc << url.to_json
-
-                # If a record has any 856 data fields, it will only have (or should have)
-                # one occurence -- so with that, we'll break this loop
-                break
               end
             end
           end

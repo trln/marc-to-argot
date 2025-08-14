@@ -115,6 +115,17 @@ module MarcToArgot
         end
       end
 
+      # Attempt to capture a record's job id (TIMESTAMP_DIR)
+      # from 941$d
+      def timestamp_dir
+        lambda do |rec, acc, ctx|
+          if field941 = Traject::MarcExtractor.cached('941d')
+            first_field = field941.extract(rec).first
+            ctx.output_hash['timestamp_dir'] = collect_and_join_subfield_values(first_field, 'd')
+          end
+        end
+      end
+
       def primary_oclc
         lambda do |rec, acc|
           if field_035q = Traject::MarcExtractor.cached("035q")

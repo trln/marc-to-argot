@@ -21,8 +21,10 @@ describe MarcToArgot::Macros::Duke::Urls do
   let(:iee_multi_journals_rec) { run_traject_json('duke', 'iee_records_with_941_field/multi_journals', 'xml') }
   let(:no_alma_number) { run_traject_json('duke', 'no_alma_number', 'xml') }
   let(:empty_alma_number) { run_traject_json('duke', 'empty_alma_number', 'xml') }
+  let(:urls_only_856_fields) { run_traject_json('duke', 'DUKE002981387', 'xml') }
 
   # [DUKE] Jira AK-492
+  # [DUKE] Also used for testing AK-520
   let(:rec_with_943_856_a) { run_traject_json('duke', 'recs_with_943_and_856/DUKE990039415900108501', 'xml') }
 
   let(:soa_url) {
@@ -62,6 +64,16 @@ describe MarcToArgot::Macros::Duke::Urls do
     context 'SOA URL:' do
       it 'correctly loads the :soa_url from YAML' do
         expect(soa_url).to be
+      end
+    end
+
+    context 'DUKE-AK-520 -- multiple 856 fields (no 943 fields)' do
+      it 'shows multiple url entries for each 856 field' do
+        expect(urls_only_856_fields['url'].length).to be > 1
+      end
+
+      it 'expects url array to have length of 1 when a 943 field is present' do
+        expect(rec_with_943_856_a['url'].length).to eq(1)
       end
     end
 

@@ -9,28 +9,35 @@ describe MarcToArgot::Macros::Duke do
   let(:url_recs) { MARC::Reader.new(find_marc('duke', 'url', 'mrc')).to_a }
   let(:url_943_online) { run_traject_json('duke', 'url_943_journal_case', 'xml') }
   let(:expected_note) do
-    [['Duke law journal, v. 50, no. 6'],
-     [nil],
-     ['Text version:'],
-     [nil]]
+    [['Duke law journal, v. 50, no. 6', 'Duke law journal, v. 50, no. 6', 'Duke law journal, v. 50, no. 6'],
+     [nil, nil],
+     ['Text version:', 'PDF version:'],
+     [nil, nil]]
   end
   let(:expected_text) do
-    [[nil],
-     ['Collection guide'],
-     [nil],
-     [nil]]
+    [[nil, nil, nil],
+     ['Collection guide', 'Finding aid'],
+     [nil, nil],
+     [nil, nil]]
   end
 
   let(:expected_type) do
-    [%w[other],
-     %w[findingaid],
-     %w[fulltext],
-     %w[fulltext]]
+    [%w[other other other],
+     %w[findingaid findingaid],
+     %w[fulltext fulltext],
+     %w[fulltext other]]
   end
 
   it 'extracts link note' do
     indexer.instance_eval do
       to_field 'url', url
+    end
+    # perhaps we approach this test from the idea of
+    # verifying at least one of the URL entries (of the 3 in the fixture)
+    # has a link "note"
+
+    link_note_found = false
+    url_recs.each_with_index do |rec, idx|
     end
     url_recs.each_with_index do |rec, idx|
       exp = expected_note[idx]

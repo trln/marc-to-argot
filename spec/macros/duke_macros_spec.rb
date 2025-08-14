@@ -38,8 +38,6 @@ describe MarcToArgot::Macros::Duke do
 
     link_note_found = false
     url_recs.each_with_index do |rec, idx|
-    end
-    url_recs.each_with_index do |rec, idx|
       exp = expected_note[idx]
       next if exp.nil?
       argotout = indexer.map_record(rec)

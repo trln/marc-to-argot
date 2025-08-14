@@ -36,7 +36,6 @@ describe MarcToArgot::Macros::Duke do
     # verifying at least one of the URL entries (of the 3 in the fixture)
     # has a link "note"
 
-    link_note_found = false
     url_recs.each_with_index do |rec, idx|
       exp = expected_note[idx]
       next if exp.nil?

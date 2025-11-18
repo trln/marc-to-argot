@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+<record>
+    <header status="">
+      <identifier></identifier>
+    </header>
+    <leader>00618nai  2200133 u 4500</leader>
+    <controlfield tag="001">99119242691708501</controlfield>
+    <controlfield tag="005">20241108132903.0</controlfield>
+    <controlfield tag="008">170212s        xx k  d o     000 02mul |</controlfield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(CKB)7472022800041</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(EXLCZ)997472022800041</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">AATA Online</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">Collection</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">Database</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+      <subfield code="a">A free research database containing abstracts of literature related to the preservation and conservation of material cultural heritage. It has been managed and published by the Getty since 1983. AATA Online contains over 170,000 records and adds approximately 4,000 new records each year through regular updates.</subfield>
+    </datafield>
+    <datafield tag="695" ind1=" " ind2=" ">
+      <subfield code="a">Online databases</subfield>
+      <subfield code="9">local</subfield>
+    </datafield>
+    <datafield tag="904" ind1="0" ind2="0">
+      <subfield code="a">(CKB)6114036490000041</subfield>
+    </datafield>
+    <datafield tag="942" ind1=" " ind2=" ">
+      <subfield code="d">2024-06-25 10:36:20 US/Eastern</subfield>
+    </datafield>
+    <datafield tag="941" ind1=" " ind2=" ">
+      <subfield code="e">61797803510008501</subfield>
+    </datafield>
+    <datafield tag="856" ind1=" " ind2=" ">
+      <subfield code="u">http://aata.getty.edu/Home</subfield>
+    </datafield>
+  </record>
+  </collection>

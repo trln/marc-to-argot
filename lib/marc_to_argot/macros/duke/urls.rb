@@ -77,7 +77,7 @@ module MarcToArgot
 
             # There are no 943 fields present when 944 fields exists
             # I believe this is a rare case, but must be accounted for.
-            if ctx.clipboard[:urls_sent].empty?
+            if ctx.clipboard[:urls_sent].empty? || resources.empty?
               Traject::MarcExtractor.cached('944').each_matching_line(rec) do |field, _spec, _extractor|
                 collection_id = collect_and_join_subfield_values(field, 'b').strip
                 next if collection_id.empty?

@@ -12,18 +12,18 @@ module MarcToArgot
 
         class UncResourceTypeClassifier < ResourceTypeClassifier
           attr_reader :record
-          
+
           def get_general_formats
             UncResourceTypeClassifier.new(record).formats
           end
-          
+
           def unc_formats
             formats = get_general_formats
 
             # General logic sets these on way more things than they should
             formats.delete('Dataset -- Statistical')
             formats.delete('Dataset -- Geospatial')
-            
+
             if unc_archival?
               formats << 'Archival and manuscript material'
             end
@@ -50,7 +50,7 @@ module MarcToArgot
               formats << 'Thesis/Dissertation'
               formats << 'Book' unless has_502?
             end
-            
+
             formats.uniq
           end
 
@@ -100,7 +100,7 @@ module MarcToArgot
           def unc_dataset_geospatial?
             return true if get_iii_mattype == '7'
           end
-                    
+
           def unc_manuscript?
             return true if manuscript_lang_rec_type? unless has_502?
           end
@@ -112,6 +112,7 @@ module MarcToArgot
           end
 
           def byte_of_008_equals(position, value)
+            return false unless record['008']
             return true if record['008'].value.byteslice(position) == value
           end
 
@@ -130,7 +131,7 @@ module MarcToArgot
             val919s = any919s.map { |field| field.value.strip } unless any919s.empty?
             return true if val919s && val919s.include?('EQUIP')
           end
-          
+
           # Text corpus
           # LDR/06 = m AND 008/26 = d AND 006/00 = a AND 336 contains dataset or cod
           def unc_text_corpus?
@@ -140,7 +141,7 @@ module MarcToArgot
                             the_336_contains('dataset|cod')
                            )
           end
-          
+
           # Thesis/Dissertation
           # LDR/06 = a AND 008/24-27(any) = m
           # OR

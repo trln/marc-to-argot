@@ -16,7 +16,7 @@ describe MarcToArgot::Macros::UNC::ResourceType do
   let(:stats1) { run_traject_json('unc', 'stats1', 'mrc') }
   let(:stats2) { run_traject_json('unc', 'stats2', 'mrc') }
   let(:stats_not1) { run_traject_json('unc', 'stats_not1', 'mrc') }
-  
+
   context 'LDR/06 (rec type) is computer file (m)' do
     context 'AND 008/26 (type of computer file) is numeric data (a)' do
       context 'AND III mattype is NOT 8' do
@@ -36,27 +36,39 @@ describe MarcToArgot::Macros::UNC::ResourceType do
         end
       end
     end
+
+    context 'AND lacks an 008' do
+      it '(UNC) proceeds without error' do
+        rec = make_rec
+        rec.fields.delete(rec['008'])
+        rec.leader[6] = 'm'
+
+        expect(rec['008']).to be_nil
+
+        expect { run_traject_on_record('unc', rec) }.not_to raise_error
+      end
+    end
   end
-  
+
   context 'LDR/06 (rec type) is manuscript language material (t)' do
     context 'AND 008/24-27 (nature of contents) does not contain m (thesis)' do
-      context 'AND 502 field present' do 
+      context 'AND 502 field present' do
         it '(UNC) resource_type = Thesis/Dissertation' do
           a = thesis2['resource_type']
           expect(a).to eq(['Thesis/Dissertation'])
         end
       end
 
-      context 'AND 502 field NOT present' do 
+      context 'AND 502 field NOT present' do
         it '(UNC) resource_type = Archival and manuscript material' do
           a = manuscript1['resource_type']
           expect(a).to eq(['Archival and manuscript material'])
         end
       end
     end
-    
+
     context 'AND 008/24-27 (nature of contents) includes  m (thesis)' do
-      context 'AND 502 field present' do 
+      context 'AND 502 field present' do
         it '(UNC) resource_type = Thesis/Dissertation' do
           a = thesis3['resource_type']
           expect(a).to eq(['Thesis/Dissertation'])

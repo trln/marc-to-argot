@@ -104,11 +104,6 @@ each_record do |rec, cxt|
     add_record_data_source(cxt, 'Shared Records')
     add_record_data_source(cxt, 'DWS')
     add_virtual_collection(cxt, 'TRLN Shared Records. Documents without shelves.')
-  when 'oupp'
-    add_institutions(cxt, ['duke', 'nccu', 'ncsu'])
-    add_record_data_source(cxt, 'Shared Records')
-    add_record_data_source(cxt, 'OUPP')
-    add_virtual_collection(cxt, 'TRLN Shared Records. Oxford University Press print titles.')
   end
 
   if filmfinder?(rec)

@@ -4,7 +4,7 @@ module MarcToArgot
       module SharedRecords
 
         # shared record sets that include print/physical items
-        PHYSICAL_SETS = ['oupp']
+        PHYSICAL_SETS = []
 
         # If record is part of a shared record set, set the code for the set
         # Further processing is based on this code value
@@ -21,8 +21,6 @@ module MarcToArgot
             case value
             when 'dwsgpo'
               shared_set = 'dws'
-            when 'troup'
-              shared_set = 'oupp'
             when /^center for research libraries \(crl\) eresources \(online collection\)/
               shared_set = 'crl'
             end

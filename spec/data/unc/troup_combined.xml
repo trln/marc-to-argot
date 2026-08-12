@@ -1,0 +1,173 @@
+<record>
+  <leader>02338cam a2200457Ma 4500</leader>
+  <controlfield tag='001'>775026825</controlfield>
+  <controlfield tag='003'>OCoLC</controlfield>
+  <controlfield tag='005'>20260407101243.0</controlfield>
+  <controlfield tag='008'>120123t20122012enka     b    001 0 eng d</controlfield>
+  <datafield tag='020' ind1=' ' ind2=' '>
+    <subfield code='a'>9780199698059</subfield>
+    <subfield code='q'>paperback</subfield>
+  </datafield>
+  <datafield tag='020' ind1=' ' ind2=' '>
+    <subfield code='a'>0199698058</subfield>
+    <subfield code='q'>paperback</subfield>
+  </datafield>
+  <datafield tag='035' ind1=' ' ind2=' '>
+    <subfield code='a'>(OCoLC)775026825</subfield>
+  </datafield>
+  <datafield tag='040' ind1=' ' ind2=' '>
+    <subfield code='a'>UKMGB</subfield>
+    <subfield code='b'>eng</subfield>
+    <subfield code='c'>UKMGB</subfield>
+    <subfield code='d'>YDXCP</subfield>
+    <subfield code='d'>BWK</subfield>
+    <subfield code='d'>CDX</subfield>
+    <subfield code='d'>NhCcYBP</subfield>
+    <subfield code='d'>UtOrBLW</subfield>
+  </datafield>
+  <datafield tag='043' ind1=' ' ind2=' '>
+    <subfield code='a'>e-uk-en</subfield>
+    <subfield code='0'>http://id.loc.gov/vocabulary/geographicAreas/e-uk-en</subfield>
+    <subfield code='a'>e-uk-wl</subfield>
+    <subfield code='0'>http://id.loc.gov/vocabulary/geographicAreas/e-uk-wl</subfield>
+  </datafield>
+  <datafield tag='050' ind1=' ' ind2='4'>
+    <subfield code='a'>KD1629.6</subfield>
+    <subfield code='b'>.R628 2012</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/classification/KD1-KD9500.24</subfield>
+  </datafield>
+  <datafield tag='082' ind1='0' ind2='4'>
+    <subfield code='a'>346.42065</subfield>
+    <subfield code='2'>23</subfield>
+  </datafield>
+  <datafield tag='100' ind1='1' ind2=' '>
+    <subfield code='a'>Roach, Lee</subfield>
+    <subfield code='c'>(College teacher)</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n2009041190</subfield>
+    <subfield code='1'>http://viaf.org/viaf/91029301</subfield>
+    <subfield code='1'>http://isni.org/isni/0000000066096114</subfield>
+  </datafield>
+  <datafield tag='245' ind1='1' ind2='0'>
+    <subfield code='a'>Card &amp; James&apos; business law for business, accounting, &amp; finance students /</subfield>
+    <subfield code='c'>Lee Roach.</subfield>
+  </datafield>
+  <datafield tag='246' ind1='3' ind2='0'>
+    <subfield code='a'>Business law for business, accounting, &amp; finance students</subfield>
+  </datafield>
+  <datafield tag='250' ind1=' ' ind2=' '>
+    <subfield code='a'>2nd ed.</subfield>
+  </datafield>
+  <datafield tag='264' ind1=' ' ind2='1'>
+    <subfield code='a'>Oxford :</subfield>
+    <subfield code='b'>Oxford University Press,</subfield>
+    <subfield code='c'>[2012]</subfield>
+  </datafield>
+  <datafield tag='264' ind1=' ' ind2='4'>
+    <subfield code='c'>©2012</subfield>
+  </datafield>
+  <datafield tag='300' ind1=' ' ind2=' '>
+    <subfield code='a'>1 volume (various pagings) :</subfield>
+    <subfield code='b'>illustrations ;</subfield>
+    <subfield code='c'>25 cm</subfield>
+  </datafield>
+  <datafield tag='336' ind1=' ' ind2=' '>
+    <subfield code='a'>text</subfield>
+    <subfield code='b'>txt</subfield>
+    <subfield code='2'>rdacontent</subfield>
+    <subfield code='0'>http://rdaregistry.info/termList/RDAContentType/1020</subfield>
+  </datafield>
+  <datafield tag='337' ind1=' ' ind2=' '>
+    <subfield code='a'>unmediated</subfield>
+    <subfield code='b'>n</subfield>
+    <subfield code='2'>rdamedia</subfield>
+    <subfield code='0'>http://rdaregistry.info/termList/RDAMediaType/1007</subfield>
+  </datafield>
+  <datafield tag='338' ind1=' ' ind2=' '>
+    <subfield code='a'>volume</subfield>
+    <subfield code='b'>nc</subfield>
+    <subfield code='2'>rdacarrier</subfield>
+    <subfield code='0'>http://rdaregistry.info/termList/RDACarrierType/1049</subfield>
+  </datafield>
+  <datafield tag='340' ind1=' ' ind2=' '>
+    <subfield code='p'>illustration</subfield>
+    <subfield code='2'>rdaill</subfield>
+    <subfield code='0'>http://rdaregistry.info/termList/IllusContent/1014</subfield>
+  </datafield>
+  <datafield tag='500' ind1=' ' ind2=' '>
+    <subfield code='a'>Previous ed.: 2009.</subfield>
+  </datafield>
+  <datafield tag='504' ind1=' ' ind2=' '>
+    <subfield code='a'>Includes bibliographical references and index.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Commercial law</subfield>
+    <subfield code='z'>England.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='0'>
+    <subfield code='a'>Commercial law</subfield>
+    <subfield code='z'>Wales.</subfield>
+  </datafield>
+  <datafield tag='650' ind1=' ' ind2='7'>
+    <subfield code='a'>Commercial law.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>http://id.worldcat.org/fast/869502</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='7'>
+    <subfield code='a'>Wales.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>http://id.worldcat.org/fast/1207649</subfield>
+  </datafield>
+  <datafield tag='651' ind1=' ' ind2='7'>
+    <subfield code='a'>England.</subfield>
+    <subfield code='2'>fast</subfield>
+    <subfield code='0'>http://id.worldcat.org/fast/1219920</subfield>
+  </datafield>
+  <datafield tag='700' ind1='1' ind2=' '>
+    <subfield code='a'>Card, Richard.</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n80161670</subfield>
+    <subfield code='1'>http://viaf.org/viaf/51860746</subfield>
+    <subfield code='1'>http://isni.org/isni/0000000110624739</subfield>
+  </datafield>
+  <datafield tag='700' ind1='1' ind2=' '>
+    <subfield code='a'>Ghandhi, Jennifer,</subfield>
+    <subfield code='d'>1949-</subfield>
+    <subfield code='0'>http://id.loc.gov/authorities/names/n78086882</subfield>
+    <subfield code='1'>http://viaf.org/viaf/284404855</subfield>
+  </datafield>
+  <datafield tag='919' ind1=' ' ind2=' '>
+    <subfield code='a'>TROUP</subfield>
+  </datafield>
+  <datafield tag='907' ind1=' ' ind2=' '>
+    <subfield code='a'>b7190893</subfield>
+  </datafield>
+  <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i9703136</subfield>
+    <subfield code='l'>troup</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>0</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>1</subfield>
+    <subfield code='h'>0</subfield>
+    <subfield code='b'>00044336147</subfield>
+    <subfield code='p'>050#4</subfield>
+    <subfield code='q'>|aKD1629.6 .R628 2012</subfield>
+  </datafield>
+    <datafield tag='999' ind1='9' ind2='1'>
+    <subfield code='i'>i1234567</subfield>
+    <subfield code='l'>ddda</subfield>
+    <subfield code='s'>-</subfield>
+    <subfield code='t'>0</subfield>
+    <subfield code='c'>1</subfield>
+    <subfield code='o'>1</subfield>
+    <subfield code='h'>0</subfield>
+    <subfield code='b'>00012345678</subfield>
+    <subfield code='p'>050#4</subfield>
+    <subfield code='q'>|aKD1629.6 .R628 2012</subfield>
+  </datafield>
+  <datafield tag='999' ind1='0' ind2='0'>
+    <subfield code='a'>2012-08-08 00:00:00-04</subfield>
+    <subfield code='c'>2012-08-08 13:53:22-04</subfield>
+    <subfield code='u'>2026-04-08 12:39:39-04</subfield>
+    <subfield code='m'>a</subfield>
+  </datafield>
+</record>
